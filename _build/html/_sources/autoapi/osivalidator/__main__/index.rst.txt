@@ -1,6 +1,0 @@
-:mod:`osivalidator.__main__`
-============================
-
-.. py:module:: osivalidator.__main__
-
-
