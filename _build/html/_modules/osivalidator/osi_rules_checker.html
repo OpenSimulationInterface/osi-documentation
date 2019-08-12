@@ -1,0 +1,300 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_rules_checker &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>osivalidator.osi_rules_checker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for osivalidator.osi_rules_checker</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains all the rules which a message or an attribute of a message</span>
+<span class="sd">from an OSI scenario can comply.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">types</span> <span class="k">import</span> <span class="n">MethodType</span>
+
+<span class="kn">from</span> <span class="nn">.osi_rules</span> <span class="k">import</span> <span class="n">Severity</span>
+<span class="kn">from</span> <span class="nn">.osi_validator_logger</span> <span class="k">import</span> <span class="n">SEVERITY</span><span class="p">,</span> <span class="n">OSIValidatorLogger</span>
+<span class="kn">from</span> <span class="nn">.osi_id_manager</span> <span class="k">import</span> <span class="n">OSIIDManager</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">osi_rules_implementations</span> <span class="k">as</span> <span class="n">rule_implementations</span>
+
+
+<div class="viewcode-block" id="OSIRulesChecker"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_checker.OSIRulesChecker">[docs]</a><span class="k">class</span> <span class="nc">OSIRulesChecker</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This class contains all the available rules to write OSI requirements and</span>
+<span class="sd">    the necessary methods to check their compliance.</span>
+
+<span class="sd">    The rule methods are marked with \*Rule\*.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span> <span class="ow">or</span> <span class="n">OSIValidatorLogger</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span> <span class="o">=</span> <span class="n">OSIIDManager</span><span class="p">(</span><span class="n">logger</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamp_ns</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">rule_implementations</span><span class="p">):</span>
+            <span class="n">method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">rule_implementations</span><span class="p">,</span> <span class="n">module_name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="s2">&quot;is_rule&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">MethodType</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+
+    <span class="c1"># Rules implementation</span>
+<div class="viewcode-block" id="OSIRulesChecker.log"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_checker.OSIRulesChecker.log">[docs]</a>    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">severity</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Wrapper for the logger of the Validation Software</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">severity</span><span class="p">,</span> <span class="n">Severity</span><span class="p">):</span>
+            <span class="n">severity_method</span> <span class="o">=</span> <span class="n">SEVERITY</span><span class="p">[</span><span class="n">severity</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">severity</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">severity_method</span> <span class="o">=</span> <span class="n">severity</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type not accepted: must be Severity enum or str&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">,</span> <span class="n">severity_method</span><span class="p">)(</span><span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIRulesChecker.set_timestamp"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_checker.OSIRulesChecker.set_timestamp">[docs]</a>    <span class="k">def</span> <span class="nf">set_timestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">ts_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the timestamp for the analysis&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp_ns</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">timestamp</span><span class="o">.</span><span class="n">nanos</span> <span class="o">+</span> <span class="n">timestamp</span><span class="o">.</span><span class="n">seconds</span> <span class="o">*</span> <span class="mf">10e9</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">ts_id</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">ts_id</span></div>
+
+<div class="viewcode-block" id="OSIRulesChecker.check_rule"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_checker.OSIRulesChecker.check_rule">[docs]</a>    <span class="k">def</span> <span class="nf">check_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check if a field comply with a rule given the \*parent\* field&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">rule_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="o">.</span><span class="n">verb</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+                <span class="s1">&#39;Rule &#39;</span> <span class="o">+</span> <span class="n">rule</span><span class="o">.</span><span class="n">verb</span> <span class="o">+</span> <span class="s1">&#39; not implemented yet</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">rule</span><span class="o">.</span><span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">parent_field</span> <span class="o">=</span> <span class="n">parent_field</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">rule_method</span><span class="p">,</span> <span class="s2">&quot;pre_check&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="c1"># We do NOT know if the child exists</span>
+            <span class="n">checked_field</span> <span class="o">=</span> <span class="n">parent_field</span>
+        <span class="k">elif</span> <span class="n">parent_field</span><span class="o">.</span><span class="n">has_field</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">targeted_field</span><span class="p">):</span>
+            <span class="c1"># We DO know that the child exists</span>
+            <span class="n">checked_field</span> <span class="o">=</span> <span class="n">parent_field</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">targeted_field</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">checked_field</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">checked_field</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">rule_method</span><span class="p">(</span><span class="n">checked_field</span><span class="p">,</span> <span class="n">rule</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">False</span></div></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>

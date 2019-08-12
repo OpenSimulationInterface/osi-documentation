@@ -1,0 +1,282 @@
+:mod:`osivalidator.osi_rules`
+=============================
+
+.. py:module:: osivalidator.osi_rules
+
+.. autoapi-nested-parse::
+
+   This module contains all the useful classes to describe the tree of the
+   validation rules tree.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: OSIRules
+
+   This class collects validation rules 
+
+   
+   .. method:: from_yaml_directory(self, path=None)
+
+      Collect validation rules found in the directory. 
+
+
+
+   
+   .. method:: from_yaml_file(self, path)
+
+      Import from a file
+              
+
+
+
+   
+   .. method:: from_yaml(self, yaml_content)
+
+      Import from a string
+              
+
+
+
+   
+   .. method:: from_xml_doxygen(self)
+
+      Parse the Doxygen XML documentation to get the rules
+              
+
+
+
+   
+   .. method:: get_rules(self)
+
+      Return the rules
+              
+
+
+
+   
+   .. method:: from_dict(self, rules_dict=None, rules_container=None)
+
+      Translate dict rules into objects rules
+
+
+
+
+.. py:class:: ProtoMessagePath(path=None)
+
+   Represents a path to a message object
+
+   
+   .. method:: __repr__(self)
+
+
+
+   
+   .. method:: __getitem__(self, parent)
+
+
+
+   
+   .. method:: pretty_html(self)
+
+      Return a pretty html version of the message path
+
+
+
+   
+   .. method:: child_path(self, child)
+
+      Return a new path for the child
+
+
+
+
+.. py:class:: OSIRuleNode(path=None)
+
+   Represents any node in the tree of OSI rules
+
+   .. attribute:: path
+      
+
+      Return the path of the node
+
+
+
+.. py:class:: TypeRulesContainer(nested_types=None, root=None)
+
+   Bases: :class:`osivalidator.osi_rules.OSIRuleNode`
+
+   This class defines either a MessageType or a list of MessageTypes
+
+   
+   .. method:: add_type(self, message_type)
+
+      Add a message type in the TypeContainer
+
+
+
+   
+   .. method:: add_type_from_path(self, path, fields=None)
+
+      Add a message type in the TypeContainer by giving a path
+
+      The path must be a list and the last element of the list is the name of
+      the message type.
+
+      If the message type already exists, it is not added.
+
+
+
+   
+   .. method:: get_type(self, message_path)
+
+      Get a MessageType by name or path
+
+
+
+   
+   .. method:: __getitem__(self, name)
+
+
+
+   
+   .. method:: __repr__(self)
+
+
+
+
+.. py:class:: MessageTypeRules(name, fields=None, root=None)
+
+   Bases: :class:`osivalidator.osi_rules.TypeRulesContainer`
+
+   This class manages the fields of a Message Type
+
+   
+   .. method:: add_field(self, field)
+
+      Add a field with or without rules to a Message Type
+
+
+
+   
+   .. method:: get_field(self, field_name)
+
+
+
+   
+   .. method:: __getitem__(self, field_name)
+
+
+
+   
+   .. method:: __repr__(self)
+
+
+
+
+.. py:class:: FieldRules(name, rules=None, path=None)
+
+   Bases: :class:`osivalidator.osi_rules.OSIRuleNode`
+
+   This class manages the rules of a Field in a Message Type
+
+   
+   .. method:: add_rule(self, rule)
+
+      Add a new rule of verb rule to a field with the parameters params.
+      rule can also be a dictionary containing one key (the verb) with one
+      value (the parameters).
+
+
+
+   
+   .. method:: has_rule(self, rule)
+
+      Check if a field has the rule `rule`
+
+
+
+   
+   .. method:: list_rules(self)
+
+      List the rules of a field
+
+
+
+   
+   .. method:: get_rule(self, verb)
+
+      Return the rule object for the verb rule_verb in this field.
+              
+
+
+
+   
+   .. method:: __getitem__(self, verb)
+
+
+
+   
+   .. method:: __repr__(self)
+
+
+
+
+.. py:class:: Rule(**kwargs)
+
+   Bases: :class:`osivalidator.osi_rules.OSIRuleNode`
+
+   This class manages one rule
+
+   .. attribute:: path
+      
+
+      
+
+   .. attribute:: targeted_field
+      
+
+      
+
+   
+   .. method:: from_dict(self, rule_dict:dict)
+
+      Instanciate Rule object from a dictionary
+
+
+
+   
+   .. method:: __repr__(self)
+
+
+
+   
+   .. method:: __eq__(self, other)
+
+
+
+
+.. py:class:: Severity
+
+   Bases: :class:`enum.Enum`
+
+   Descript the severity of the raised error if a rule does not comply.
+
+   .. attribute:: INFO
+      :annotation: = 20
+
+      
+
+   .. attribute:: WARN
+      :annotation: = 30
+
+      
+
+   .. attribute:: ERROR
+      :annotation: = 40
+
+      
+
+

@@ -1,0 +1,407 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_general_validator &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>osivalidator.osi_general_validator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for osivalidator.osi_general_validator</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Main class and entry point of the OSI Validator.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="k">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">Manager</span>
+
+<span class="kn">from</span> <span class="nn">progress.bar</span> <span class="k">import</span> <span class="n">Bar</span>
+
+<span class="kn">from</span> <span class="nn">osivalidator.osi_rules</span> <span class="k">import</span> <span class="n">OSIRules</span>
+<span class="kn">from</span> <span class="nn">osivalidator.osi_validator_logger</span> <span class="k">import</span> <span class="n">OSIValidatorLogger</span>
+<span class="kn">from</span> <span class="nn">osivalidator.osi_scenario</span> <span class="k">import</span> <span class="n">OSIScenario</span>
+<span class="kn">from</span> <span class="nn">osivalidator.osi_rules_checker</span> <span class="k">import</span> <span class="n">OSIRulesChecker</span>
+
+
+<div class="viewcode-block" id="command_line_arguments"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_general_validator.command_line_arguments">[docs]</a><span class="k">def</span> <span class="nf">command_line_arguments</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Define and handle command line interface &quot;&quot;&quot;</span>
+
+    <span class="n">dir_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Validate data defined at the input&#39;</span><span class="p">,</span>
+        <span class="n">prog</span><span class="o">=</span><span class="s1">&#39;osivalidator&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Path to the file with OSI-serialized data.&#39;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--rules&#39;</span><span class="p">,</span> <span class="s1">&#39;-r&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Directory with text files containig rules. &#39;</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s1">&#39;requirements-osi-3&#39;</span><span class="p">),</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--type&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Name of the type used to serialize data.&#39;</span><span class="p">,</span>
+                        <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SensorView&#39;</span><span class="p">,</span> <span class="s1">&#39;GroundTruth&#39;</span><span class="p">,</span> <span class="s1">&#39;SensorData&#39;</span><span class="p">],</span>
+                        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;SensorView&#39;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                        <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--output&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Output folder of the log files.&#39;</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;output_logs&#39;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                        <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--timesteps&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Number of timesteps to analyze. If -1, all.&#39;</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+                        <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--debug&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Set the debug mode to ON.&#39;</span><span class="p">,</span>
+                        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--verbose&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Set the verbose mode to ON.&#39;</span><span class="p">,</span>
+                        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Handle comand line arguments</span>
+    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span></div>
+
+
+<span class="n">MANAGER</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+<span class="n">LOGS</span> <span class="o">=</span> <span class="n">MANAGER</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="n">BLAST_SIZE</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">MESSAGE_TYPE</span> <span class="o">=</span> <span class="n">MANAGER</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">TIMESTAMP_ANALYZED</span> <span class="o">=</span> <span class="n">MANAGER</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="n">LOGGER</span> <span class="o">=</span> <span class="n">OSIValidatorLogger</span><span class="p">()</span>
+<span class="n">VALIDATION_RULES</span> <span class="o">=</span> <span class="n">OSIRules</span><span class="p">()</span>
+<span class="n">DATA</span> <span class="o">=</span> <span class="n">OSIScenario</span><span class="p">()</span>
+<span class="n">ID_TO_TS</span> <span class="o">=</span> <span class="n">MANAGER</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+<span class="n">BAR_SUFFIX</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%(index)d</span><span class="s1">/</span><span class="si">%(max)d</span><span class="s1"> [</span><span class="si">%(elapsed_td)s</span><span class="s1">]&#39;</span>
+<span class="n">BAR</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="n">BAR_SUFFIX</span><span class="p">)</span>
+<span class="n">MESSAGE_CACHE</span> <span class="o">=</span> <span class="n">MANAGER</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_general_validator.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Main method&quot;&quot;&quot;</span>
+
+    <span class="c1"># Handling of command line arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">command_line_arguments</span><span class="p">()</span>
+
+    <span class="c1"># Set message type</span>
+    <span class="n">MESSAGE_TYPE</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">type</span>
+
+    <span class="c1"># Instanciate Logger</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Instanciate logger&quot;</span><span class="p">)</span>
+    <span class="n">directory</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">output</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="n">directory</span><span class="p">)</span>
+
+    <span class="c1"># Read data</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Read data&quot;</span><span class="p">)</span>
+    <span class="n">DATA</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">type_name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                   <span class="n">max_index</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">timesteps</span><span class="p">)</span>
+
+    <span class="c1"># Collect Validation Rules</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Collect validation rules&quot;</span><span class="p">)</span>
+    <span class="c1"># VALIDATION_RULES.from_xml_doxygen()</span>
+    <span class="n">VALIDATION_RULES</span><span class="o">.</span><span class="n">from_yaml_directory</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">rules</span><span class="p">)</span>
+
+    <span class="c1"># Pass all timesteps or the number specified</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">timesteps</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">max_timestep</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">timesteps</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;Pass the </span><span class="si">{max_timestep}</span><span class="s2"> first timesteps&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Pass all timesteps&quot;</span><span class="p">)</span>
+        <span class="n">max_timestep</span> <span class="o">=</span> <span class="n">DATA</span><span class="o">.</span><span class="n">timestep_count</span>
+
+    <span class="c1"># Dividing in several blast to not overload the memory</span>
+    <span class="n">max_timestep_blast</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">BAR</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">max_timestep</span>
+
+    <span class="k">while</span> <span class="n">max_timestep_blast</span> <span class="o">&lt;</span> <span class="n">max_timestep</span><span class="p">:</span>
+        <span class="c1"># Clear log queue</span>
+        <span class="n">LOGS</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Recreate the pool</span>
+        <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">()</span>
+
+        <span class="c1"># Increment the max-timestep to analyze</span>
+        <span class="n">max_timestep_blast</span> <span class="o">+=</span> <span class="n">BLAST_SIZE</span>
+        <span class="n">first_of_blast</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_timestep_blast</span><span class="o">-</span><span class="n">BLAST_SIZE</span><span class="p">)</span>
+        <span class="n">last_of_blast</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">max_timestep_blast</span><span class="p">,</span> <span class="n">max_timestep</span><span class="p">)</span>
+
+        <span class="c1"># Cache messages</span>
+        <span class="n">DATA</span><span class="o">.</span><span class="n">cache_messages_in_index_range</span><span class="p">(</span><span class="n">first_of_blast</span><span class="p">,</span> <span class="n">last_of_blast</span><span class="p">)</span>
+        <span class="n">MESSAGE_CACHE</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DATA</span><span class="o">.</span><span class="n">message_cache</span><span class="p">)</span>
+
+        <span class="c1"># Launch computation</span>
+        <span class="c1"># TODO Change this to parallel processing</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">first_of_blast</span><span class="p">,</span> <span class="n">last_of_blast</span><span class="p">):</span>
+            <span class="n">process_timestep</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="c1"># pool.map(process_timestep, range(first_of_blast, last_of_blast))</span>
+
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">flush</span><span class="p">(</span><span class="n">LOGS</span><span class="p">)</span>
+
+        <span class="n">MESSAGE_CACHE</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">close_pool</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
+
+    <span class="n">BAR</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+    <span class="c1"># Grab major OSI version</span>
+
+    <span class="c1"># Synthetize</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">synthetize_results_from_sqlite</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="close_pool"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_general_validator.close_pool">[docs]</a><span class="k">def</span> <span class="nf">close_pool</span><span class="p">(</span><span class="n">pool</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Cleanly close a pool to free the memory&quot;&quot;&quot;</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
+    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="process_timestep"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_general_validator.process_timestep">[docs]</a><span class="k">def</span> <span class="nf">process_timestep</span><span class="p">(</span><span class="n">timestep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Process one timestep&quot;&quot;&quot;</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">MESSAGE_CACHE</span><span class="p">[</span><span class="n">timestep</span><span class="p">]</span>
+    <span class="n">rule_checker</span> <span class="o">=</span> <span class="n">OSIRulesChecker</span><span class="p">(</span><span class="n">LOGGER</span><span class="p">)</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">rule_checker</span><span class="o">.</span><span class="n">set_timestamp</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">timestep</span><span class="p">)</span>
+    <span class="n">ID_TO_TS</span><span class="p">[</span><span class="n">timestep</span><span class="p">]</span> <span class="o">=</span> <span class="n">timestamp</span>
+
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">log_messages</span><span class="p">[</span><span class="n">timestep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">debug_messages</span><span class="p">[</span><span class="n">timestep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">LOGGER</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">f</span><span class="s1">&#39;Analyze message of timestamp </span><span class="si">{timestamp}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Check if timestamp already exists</span>
+    <span class="k">if</span> <span class="n">timestamp</span> <span class="ow">in</span> <span class="n">TIMESTAMP_ANALYZED</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">timestep</span><span class="p">,</span> <span class="n">f</span><span class="s2">&quot;Timestamp already exists&quot;</span><span class="p">)</span>
+    <span class="n">TIMESTAMP_ANALYZED</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+
+    <span class="n">BAR</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">TIMESTAMP_ANALYZED</span><span class="p">))</span>
+
+    <span class="c1"># Check common rules</span>
+    <span class="nb">getattr</span><span class="p">(</span><span class="n">rule_checker</span><span class="p">,</span> <span class="s1">&#39;is_valid&#39;</span><span class="p">)(</span>
+        <span class="n">message</span><span class="p">,</span> <span class="n">VALIDATION_RULES</span><span class="o">.</span><span class="n">get_rules</span><span class="p">()</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="n">MESSAGE_TYPE</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="n">LOGS</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">LOGGER</span><span class="o">.</span><span class="n">log_messages</span><span class="p">[</span><span class="n">timestep</span><span class="p">])</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>

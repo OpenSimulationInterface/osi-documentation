@@ -1,0 +1,29 @@
+:mod:`osivalidator`
+===================
+
+.. py:module:: osivalidator
+
+.. autoapi-nested-parse::
+
+   OSI Validator
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   __main__/index.rst
+   linked_proto_field/index.rst
+   osi_doxygen_xml/index.rst
+   osi_general_validator/index.rst
+   osi_id_manager/index.rst
+   osi_rules/index.rst
+   osi_rules_checker/index.rst
+   osi_rules_implementations/index.rst
+   osi_scenario/index.rst
+   osi_validator_logger/index.rst
+
+

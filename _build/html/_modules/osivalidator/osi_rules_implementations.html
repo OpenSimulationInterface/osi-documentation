@@ -1,0 +1,547 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_rules_implementations &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>osivalidator.osi_rules_implementations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for osivalidator.osi_rules_implementations</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the implementation of each rule to be used in the</span>
+<span class="sd">requirements or in the Doxygen documentation.</span>
+
+<span class="sd">All these rules are bounded into &quot;OSIRulesChecker&quot;, so they have access to all</span>
+<span class="sd">its attributes and methods.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">iso3166</span> <span class="k">import</span> <span class="n">countries</span>
+
+<span class="kn">from</span> <span class="nn">.osi_rules</span> <span class="k">import</span> <span class="n">MessageTypeRules</span><span class="p">,</span> <span class="n">FieldRules</span><span class="p">,</span> <span class="n">Severity</span><span class="p">,</span> <span class="n">Rule</span>
+
+
+<div class="viewcode-block" id="add_default_rules_to_subfields"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.add_default_rules_to_subfields">[docs]</a><span class="k">def</span> <span class="nf">add_default_rules_to_subfields</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">type_rules</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add default rules to fields of message fields (subfields)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">descriptor</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">all_field_descriptors</span><span class="p">:</span>
+        <span class="n">field_rules</span> <span class="o">=</span> <span class="p">(</span><span class="n">type_rules</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="n">descriptor</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                       <span class="k">if</span> <span class="n">descriptor</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">type_rules</span><span class="o">.</span><span class="n">fields</span>
+                       <span class="k">else</span> <span class="n">type_rules</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">FieldRules</span><span class="p">(</span><span class="n">descriptor</span><span class="o">.</span><span class="n">name</span><span class="p">)))</span>
+
+        <span class="k">if</span> <span class="n">descriptor</span><span class="o">.</span><span class="n">message_type</span><span class="p">:</span>
+            <span class="n">field_rules</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="n">Rule</span><span class="p">(</span><span class="n">verb</span><span class="o">=</span><span class="s1">&#39;is_valid&#39;</span><span class="p">))</span>
+
+        <span class="n">is_set_severity</span> <span class="o">=</span> <span class="p">(</span><span class="n">Severity</span><span class="o">.</span><span class="n">WARN</span>
+                           <span class="k">if</span> <span class="n">field_rules</span><span class="o">.</span><span class="n">has_rule</span><span class="p">(</span><span class="s1">&#39;is_optional&#39;</span><span class="p">)</span>
+                           <span class="k">else</span> <span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+
+        <span class="n">field_rules</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="n">Rule</span><span class="p">(</span><span class="n">verb</span><span class="o">=</span><span class="s1">&#39;is_set&#39;</span><span class="p">,</span> <span class="n">severity</span><span class="o">=</span><span class="n">is_set_severity</span><span class="p">))</span></div>
+
+
+<span class="c1"># DECORATORS</span>
+<span class="c1"># These functions are no rule implementation, but decorators to characterize</span>
+<span class="c1"># rules. These decorators can also be used to make grouped checks like</span>
+<span class="c1"># benchmarks.</span>
+
+
+<div class="viewcode-block" id="pre_check"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.pre_check">[docs]</a><span class="k">def</span> <span class="nf">pre_check</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decorator for rules that need to be checked before knowing that the field</span>
+<span class="sd">    exists or not</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">pre_check</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">func</span></div>
+
+
+<div class="viewcode-block" id="repeated_selector"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.repeated_selector">[docs]</a><span class="k">def</span> <span class="nf">repeated_selector</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decorator for selector-rules that take</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">repeated_selector</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">func</span></div>
+
+
+<div class="viewcode-block" id="rule_implementation"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.rule_implementation">[docs]</a><span class="k">def</span> <span class="nf">rule_implementation</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decorator to label rules method implementations</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">is_rule</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rule</span><span class="p">,</span> <span class="n">FieldRules</span><span class="p">):</span>
+            <span class="n">rule</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+                <span class="ow">and</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="s1">&#39;repeated_selector&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unique_field</span><span class="p">,</span> <span class="n">rule</span><span class="p">)</span>
+                          <span class="k">for</span> <span class="n">unique_field</span> <span class="ow">in</span> <span class="n">field</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rule</span><span class="p">,</span> <span class="n">Rule</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">path</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">path</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">severity</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+                     <span class="o">+</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">params</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+                     <span class="o">+</span> <span class="s1">&#39; does not comply in &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">return</span> <span class="n">wrapper</span></div>
+
+
+<span class="c1"># RULES</span>
+<span class="c1"># TODO Refactor this code into a seperate class so it can be easy parsed by sphinx</span>
+
+<div class="viewcode-block" id="is_valid"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_valid">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a field message is valid, that is all the inner rules of the</span>
+<span class="sd">    message in the field are complying.</span>
+
+<span class="sd">    :param params: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">subfield_rules</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">message_type</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="c1"># Add default rules for each subfield that can be validated (default)</span>
+    <span class="n">add_default_rules_to_subfields</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">subfield_rules</span><span class="p">)</span>
+
+    <span class="c1"># loop over the fields in the rules</span>
+    <span class="k">for</span> <span class="n">subfield_rules</span> <span class="ow">in</span> <span class="n">subfield_rules</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+
+        <span class="k">for</span> <span class="n">subfield_rule</span> <span class="ow">in</span> <span class="n">subfield_rules</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_rule</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">subfield_rule</span><span class="p">)</span> <span class="ow">and</span> <span class="n">result</span>
+
+        <span class="c1"># Resolve ID and references</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">field</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span><span class="o">.</span><span class="n">resolve_unicity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span><span class="o">.</span><span class="n">resolve_references</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="is_less_than_or_equal_to"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_less_than_or_equal_to">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_less_than_or_equal_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number is under or equal a maximum.</span>
+
+<span class="sd">    :param params: the maximum (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_less_than"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_less_than">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_less_than</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number is under a maximum.</span>
+
+<span class="sd">    :param params: the maximum (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_greater_than_or_equal_to"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_greater_than_or_equal_to">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_greater_than_or_equal_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number is over or equal a minimum.</span>
+
+<span class="sd">    :param params: the minimum (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_greater_than"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_greater_than">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_greater_than</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number is over a minimum.</span>
+
+<span class="sd">    :param params: the minimum (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_equal"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_equal">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number equals the parameter.</span>
+
+<span class="sd">    :param params: the equality to check (float or bool)</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    ```</span>
+<span class="sd">    - is_equal: 1</span>
+<span class="sd">    ```</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_different"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_different">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_different</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a number is different from the parameter.</span>
+
+<span class="sd">    :param params: the inequality to check (float or bool)</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    ```</span>
+<span class="sd">    - is_different: 1</span>
+<span class="sd">    ```</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span> <span class="o">!=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span></div>
+
+
+<div class="viewcode-block" id="is_global_unique"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_global_unique">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_global_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Register an ID in the OSI ID manager to later perform a ID</span>
+<span class="sd">    consistency validation.</span>
+
+<span class="sd">    Must be set to an Identifier.</span>
+
+<span class="sd">    :param params: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">object_of_id</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">identifier</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span><span class="o">.</span><span class="n">register_message</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="n">object_of_id</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="refers"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.refers">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">refers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add a reference to another message by ID.</span>
+
+<span class="sd">    :param params: Type name of the refered object (string)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">expected_type</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span>
+
+    <span class="n">referer</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">identifier</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">condition</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span><span class="o">.</span><span class="n">refer</span><span class="p">(</span><span class="n">referer</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">expected_type</span><span class="p">,</span> <span class="n">condition</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="is_iso_country_code"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_iso_country_code">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_iso_country_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a string is a ISO country code.</span>
+
+<span class="sd">    :param params: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">iso_code</span> <span class="o">=</span> <span class="n">field</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">countries</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">iso_code</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="first_element"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.first_element">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="nd">@repeated_selector</span>
+<span class="k">def</span> <span class="nf">first_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check rule for first message of a repeated field.</span>
+
+<span class="sd">    :param params: dictionary of rules to be checked for the first message</span>
+<span class="sd">                   (mapping)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nested_fields_rules</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span>
+
+    <span class="c1"># Note: Here, the virtual message type get its field name as a name</span>
+    <span class="n">virtual_message_rules</span> <span class="o">=</span> <span class="n">MessageTypeRules</span><span class="p">(</span>
+        <span class="n">rule</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span> <span class="n">nested_fields_rules</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">virtual_message_rules</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="last_element"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.last_element">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="nd">@repeated_selector</span>
+<span class="k">def</span> <span class="nf">last_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check rule for last message of a repeated field.</span>
+
+<span class="sd">    :param params: dictionary of rules to be checked for the last message</span>
+<span class="sd">                   (mapping)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nested_fields_rules</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">virtual_message_rules</span> <span class="o">=</span> <span class="n">MessageTypeRules</span><span class="p">(</span>
+        <span class="n">rule</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span> <span class="n">nested_fields_rules</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">field</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">virtual_message_rules</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="is_optional"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_optional">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="k">def</span> <span class="nf">is_optional</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This rule set the is_set one on a &quot;Warning&quot; severity.</span>
+
+<span class="sd">    :param params: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="is_set"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.is_set">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="nd">@pre_check</span>
+<span class="k">def</span> <span class="nf">is_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a field is set or if a repeated field has at least one element.</span>
+
+<span class="sd">    :param params: none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">has_field</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="check_if"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules_implementations.check_if">[docs]</a><span class="nd">@rule_implementation</span>
+<span class="nd">@pre_check</span>
+<span class="k">def</span> <span class="nf">check_if</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Evaluate rules if some statements are verified:</span>
+
+<span class="sd">    :param params: statements</span>
+<span class="sd">    :param extra_params: `do_check`: rules to validate if statements are true</span>
+
+<span class="sd">    Structure:</span>
+
+<span class="sd">    a_field:</span>
+<span class="sd">    - check_if:</span>
+<span class="sd">    {params: statements}</span>
+<span class="sd">    do_check:</span>
+<span class="sd">    {extra_params: rules to validate if statements are true}</span>
+
+
+<span class="sd">    Example:</span>
+
+<span class="sd">    a_field:</span>
+<span class="sd">    - check_if:</span>
+<span class="sd">    - is_set: # Statements</span>
+<span class="sd">    target: parent.environment.temperature</span>
+<span class="sd">    - another_statement: statement parameter</span>
+<span class="sd">    do_check: # Check that will be performed only if the statements are True</span>
+<span class="sd">    - is_less_than_or_equal_to: 0.5</span>
+<span class="sd">    - is_greater_than_or_equal_to: 0</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">statements</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">do_checks</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">extra_params</span><span class="p">[</span><span class="s1">&#39;do_check&#39;</span><span class="p">]</span>
+    <span class="n">statement_true</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Check if all the statements are true</span>
+    <span class="k">for</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">statements</span><span class="p">:</span>
+        <span class="n">statement_rule</span> <span class="o">=</span> <span class="n">Rule</span><span class="p">(</span><span class="n">dictionary</span><span class="o">=</span><span class="n">statement</span><span class="p">,</span>
+                              <span class="n">field_name</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span>
+                              <span class="n">severity</span><span class="o">=</span><span class="n">Severity</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">statement_rule</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">child_path</span><span class="p">(</span><span class="n">statement_rule</span><span class="o">.</span><span class="n">verb</span><span class="p">)</span>
+        <span class="n">statement_true</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_rule</span><span class="p">(</span>
+            <span class="n">field</span><span class="p">,</span> <span class="n">statement_rule</span><span class="p">)</span> <span class="ow">and</span> <span class="n">statement_true</span>
+
+    <span class="c1"># If the statements are true, check the do_check rules</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">statement_true</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">return</span> <span class="nb">all</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">check_rule</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">Rule</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">child_path</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">check</span><span class="o">.</span><span class="n">keys</span><span class="p">()))),</span>
+                                            <span class="n">dictionary</span><span class="o">=</span><span class="n">check</span><span class="p">,</span>
+                                            <span class="n">field_name</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">field_name</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">check</span> <span class="ow">in</span> <span class="n">do_checks</span><span class="p">))</span></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>

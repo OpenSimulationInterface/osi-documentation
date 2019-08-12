@@ -1,0 +1,269 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_doxygen_xml &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing-rules.html">How to write rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rules.html">Available rules for the OSI validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">osivalidator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">osivalidator.osi_doxygen_xml</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/autoapi/osivalidator/osi_doxygen_xml/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-osivalidator.osi_doxygen_xml">
+<span id="osivalidator-osi-doxygen-xml"></span><h1><a class="reference internal" href="../../../osivalidator.html#module-osivalidator.osi_doxygen_xml" title="osivalidator.osi_doxygen_xml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">osivalidator.osi_doxygen_xml</span></code></a><a class="headerlink" href="#module-osivalidator.osi_doxygen_xml" title="Permalink to this headline">¶</a></h1>
+<p><p>This module carry the XML version of Doxygen documentation to parse the rules
+into it.</p>
+</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_doxygen_xml.</code><code class="sig-name descname">OSIDoxygenXML</code><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class creates XML from *.proto Files Documentation of OSI and can parse the rules from it.</p>
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.generate_osi_doxygen_xml">
+<code class="sig-name descname">generate_osi_doxygen_xml</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.generate_osi_doxygen_xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the Doxygen XML documentation in the OSI path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.get_files">
+<code class="sig-name descname">get_files</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.get_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path of the fields in OSI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.parse_rules">
+<code class="sig-name descname">parse_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.parse_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the Doxygen XML documentation to get the rules</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="osivalidator.osi_doxygen_xml.osidx">
+<code class="sig-prename descclassname">osivalidator.osi_doxygen_xml.</code><code class="sig-name descname">osidx</code><a class="headerlink" href="#osivalidator.osi_doxygen_xml.osidx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>

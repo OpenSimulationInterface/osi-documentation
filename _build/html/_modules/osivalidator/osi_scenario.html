@@ -1,0 +1,452 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_scenario &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>osivalidator.osi_scenario</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for osivalidator.osi_scenario</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module that contain OSIDataContainer class to handle and manager OSI scenarios</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">deque</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="k">import</span> <span class="n">Manager</span>
+
+<span class="kn">from</span> <span class="nn">progress.bar</span> <span class="k">import</span> <span class="n">Bar</span>
+<span class="kn">from</span> <span class="nn">osi3.osi_sensorview_pb2</span> <span class="k">import</span> <span class="n">SensorView</span>
+<span class="kn">from</span> <span class="nn">osi3.osi_groundtruth_pb2</span> <span class="k">import</span> <span class="n">GroundTruth</span>
+<span class="kn">from</span> <span class="nn">osi3.osi_sensordata_pb2</span> <span class="k">import</span> <span class="n">SensorData</span>
+
+<span class="kn">from</span> <span class="nn">.linked_proto_field</span> <span class="k">import</span> <span class="n">LinkedProtoField</span>
+
+<span class="n">SEPARATOR</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;$$__$$&#39;</span>
+<span class="n">SEPARATOR_LENGTH</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">SEPARATOR</span><span class="p">)</span>
+<span class="n">BUFFER_SIZE</span> <span class="o">=</span> <span class="mi">1000000</span>
+
+
+<div class="viewcode-block" id="get_size_from_file_stream"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.get_size_from_file_stream">[docs]</a><span class="k">def</span> <span class="nf">get_size_from_file_stream</span><span class="p">(</span><span class="n">file_object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a file size from a file stream given in parameters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">current_position</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+    <span class="n">file_object</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+    <span class="n">file_object</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">current_position</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">size</span></div>
+
+
+<span class="n">MESSAGES_TYPE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;SensorView&quot;</span><span class="p">:</span> <span class="n">SensorView</span><span class="p">,</span>
+    <span class="s2">&quot;GroundTruth&quot;</span><span class="p">:</span> <span class="n">GroundTruth</span><span class="p">,</span>
+    <span class="s2">&quot;SensorData&quot;</span><span class="p">:</span> <span class="n">SensorData</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="OSIScenario"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario">[docs]</a><span class="k">class</span> <span class="nc">OSIScenario</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This class wrap OSI data. It can import and decode OSI scenarios.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">type_name</span><span class="o">=</span><span class="s2">&quot;SensorView&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_name</span> <span class="o">=</span> <span class="n">type_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manager</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestep_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span> <span class="o">=</span> <span class="n">show_progress</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retrieved_scenario_size</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">type_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="c1"># Open and Read text file</span>
+
+<div class="viewcode-block" id="OSIScenario.from_file"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.from_file">[docs]</a>    <span class="k">def</span> <span class="nf">from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">type_name</span><span class="o">=</span><span class="s2">&quot;SensorView&quot;</span><span class="p">,</span> <span class="n">max_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Import a scenario from a file&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_name</span> <span class="o">=</span> <span class="n">type_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestep_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retrieve_message_offsets</span><span class="p">(</span><span class="n">max_index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIScenario.retrieve_message_offsets"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.retrieve_message_offsets">[docs]</a>    <span class="k">def</span> <span class="nf">retrieve_message_offsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve the offsets of all the messages of the scenario and store them</span>
+<span class="sd">        in the `message_offsets` attribute of the object</span>
+
+<span class="sd">        It returns the number of discovered timesteps</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scenario_size</span> <span class="o">=</span> <span class="n">get_size_from_file_stream</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">max_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">max_index</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="n">progress_bar</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="nb">max</span><span class="o">=</span><span class="n">scenario_size</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrieving message offsets in scenario file until &quot;</span> <span class="o">+</span>
+                  <span class="nb">str</span><span class="p">(</span><span class="n">max_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">progress_bar</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">buffer_deque</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">eof</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">eof</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">max_index</span><span class="p">:</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># SEP offset in buffer</span>
+            <span class="n">buffer_deque</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+            <span class="k">while</span> <span class="n">found</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">eof</span><span class="p">:</span>
+                <span class="n">new_read</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">BUFFER_SIZE</span><span class="p">)</span>
+                <span class="n">buffer_deque</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_read</span><span class="p">)</span>
+                <span class="n">buffer</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buffer_deque</span><span class="p">)</span>
+                <span class="n">found</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">SEPARATOR</span><span class="p">)</span>
+                <span class="n">eof</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_read</span><span class="p">)</span> <span class="o">!=</span> <span class="n">BUFFER_SIZE</span>
+
+            <span class="n">buffer_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+            <span class="n">message_offset</span> <span class="o">=</span> <span class="n">found</span> <span class="o">+</span> <span class="n">buffer_offset</span> <span class="o">+</span> <span class="n">SEPARATOR_LENGTH</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message_offset</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">progress_bar</span><span class="p">,</span> <span class="n">message_offset</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">message_offset</span><span class="p">)</span>
+
+            <span class="k">while</span> <span class="n">eof</span> <span class="ow">and</span> <span class="n">found</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">[</span><span class="n">found</span> <span class="o">+</span> <span class="n">SEPARATOR_LENGTH</span><span class="p">:]</span>
+                <span class="n">found</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">SEPARATOR</span><span class="p">)</span>
+
+                <span class="n">buffer_offset</span> <span class="o">=</span> <span class="n">scenario_size</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+
+                <span class="n">message_offset</span> <span class="o">=</span> <span class="n">found</span> <span class="o">+</span> <span class="n">buffer_offset</span> <span class="o">+</span> <span class="n">SEPARATOR_LENGTH</span>
+
+                <span class="k">if</span> <span class="n">message_offset</span> <span class="o">&gt;=</span> <span class="n">scenario_size</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message_offset</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">progress_bar</span><span class="p">,</span> <span class="n">message_offset</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">eof</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">retrieved_scenario_size</span> <span class="o">=</span> <span class="n">scenario_size</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">retrieved_scenario_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="n">progress_bar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">),</span> <span class="s2">&quot;messages has been discovered in&quot;</span><span class="p">,</span>
+                  <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIScenario.get_message_by_index"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.get_message_by_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_message_by_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a message by its index. Try first to get it from the cache made</span>
+<span class="sd">        by the method `cache_messages_in_index_range`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">message</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="n">message_end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">SEPARATOR_LENGTH</span> \
+            <span class="k">if</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">)</span> \
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">retrieved_scenario_size</span>
+
+        <span class="n">message_length</span> <span class="o">=</span> <span class="n">message_end</span> <span class="o">-</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">-</span> <span class="n">SEPARATOR_LENGTH</span>
+        <span class="n">serialized_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">message_length</span><span class="p">)</span>
+
+        <span class="n">message</span> <span class="o">=</span> <span class="n">MESSAGES_TYPE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type_name</span><span class="p">]()</span>
+        <span class="n">message</span><span class="o">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">serialized_message</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">LinkedProtoField</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIScenario.get_messages_in_index_range"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range">[docs]</a>    <span class="k">def</span> <span class="nf">get_messages_in_index_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Yield an iterator over messages of indexes between begin and end non</span>
+<span class="sd">        included.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="n">progress_bar</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span><span class="nb">max</span><span class="o">=</span><span class="n">end</span><span class="o">-</span><span class="n">begin</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Importing messages from scenario file...&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">progress_bar</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">begin</span><span class="p">])</span>
+        <span class="n">abs_first_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">begin</span><span class="p">]</span>
+        <span class="n">abs_last_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> \
+            <span class="k">if</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">)</span> \
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">retrieved_scenario_size</span>
+
+        <span class="n">rel_message_offsets</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">abs_message_offset</span> <span class="o">-</span> <span class="n">abs_first_offset</span>
+            <span class="k">for</span> <span class="n">abs_message_offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_offsets</span><span class="p">[</span><span class="n">begin</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+        <span class="p">]</span>
+
+        <span class="n">message_sequence_len</span> <span class="o">=</span> <span class="n">abs_last_offset</span> <span class="o">-</span> \
+            <span class="n">abs_first_offset</span> <span class="o">-</span> <span class="n">SEPARATOR_LENGTH</span>
+        <span class="n">serialized_messages_extract</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scenario_file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+            <span class="n">message_sequence_len</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">rel_index</span><span class="p">,</span> <span class="n">rel_message_offset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rel_message_offsets</span><span class="p">):</span>
+            <span class="n">rel_begin</span> <span class="o">=</span> <span class="n">rel_message_offset</span>
+            <span class="n">rel_end</span> <span class="o">=</span> <span class="n">rel_message_offsets</span><span class="p">[</span><span class="n">rel_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">SEPARATOR_LENGTH</span> \
+                <span class="k">if</span> <span class="n">rel_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rel_message_offsets</span><span class="p">)</span> \
+                <span class="k">else</span> <span class="n">message_sequence_len</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">MESSAGES_TYPE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type_name</span><span class="p">]()</span>
+            <span class="n">serialized_message</span> <span class="o">=</span> <span class="n">serialized_messages_extract</span><span class="p">[</span><span class="n">rel_begin</span><span class="p">:</span><span class="n">rel_end</span><span class="p">]</span>
+            <span class="n">message</span><span class="o">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">serialized_message</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">progress_bar</span><span class="p">,</span> <span class="n">rel_index</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">LinkedProtoField</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">progress_bar</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+            <span class="n">progress_bar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OSIScenario.cache_messages_in_index_range"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range">[docs]</a>    <span class="k">def</span> <span class="nf">cache_messages_in_index_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Put all messages from index begin to index end in the cache. Then the</span>
+<span class="sd">        method `get_message_by_index` can access to it in a faster way.</span>
+
+<span class="sd">        Using this method again clear the last cache and replace it with a new</span>
+<span class="sd">        one.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Caching...&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">dict</span><span class="p">({</span>
+            <span class="n">index</span> <span class="o">+</span> <span class="n">begin</span><span class="p">:</span> <span class="n">message</span>
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">message</span>
+            <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_messages_in_index_range</span><span class="p">(</span><span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+        <span class="p">})</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Caching done!&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIScenario.update_bar"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_scenario.OSIScenario.update_bar">[docs]</a>    <span class="k">def</span> <span class="nf">update_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="n">new_index</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_progress</span> <span class="ow">and</span> <span class="n">progress_bar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">progress_bar</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_index</span>
+            <span class="n">progress_bar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+:mod:`osivalidator.osi_doxygen_xml`
+===================================
+
+.. py:module:: osivalidator.osi_doxygen_xml
+
+.. autoapi-nested-parse::
+
+   This module carry the XML version of Doxygen documentation to parse the rules
+   into it.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: OSIDoxygenXML
+
+   This class creates XML from \*.proto Files Documentation of OSI and can parse the rules from it.
+
+   
+   .. method:: generate_osi_doxygen_xml(self)
+
+      Generate the Doxygen XML documentation in the OSI path
+
+
+
+   
+   .. method:: get_files(self)
+
+      Return the path of the fields in OSI
+
+
+
+   
+   .. method:: parse_rules(self)
+
+      Parse the Doxygen XML documentation to get the rules
+
+
+
+
+.. data:: osidx
+   
+
+   
+

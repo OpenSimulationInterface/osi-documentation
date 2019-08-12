@@ -1,0 +1,579 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator.osi_rules &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/jquery.fancybox.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/glpi.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Open Simulation Interface v3.1.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>osivalidator.osi_rules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for osivalidator.osi_rules</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains all the useful classes to describe the tree of the</span>
+<span class="sd">validation rules tree.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
+
+<span class="kn">import</span> <span class="nn">ruamel.yaml</span> <span class="k">as</span> <span class="nn">yaml</span>
+
+<span class="kn">from</span> <span class="nn">.osi_doxygen_xml</span> <span class="k">import</span> <span class="n">OSIDoxygenXML</span>
+
+
+<div class="viewcode-block" id="OSIRules"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules">[docs]</a><span class="k">class</span> <span class="nc">OSIRules</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; This class collects validation rules &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rules</span> <span class="o">=</span> <span class="n">TypeRulesContainer</span><span class="p">()</span>
+
+<div class="viewcode-block" id="OSIRules.from_yaml_directory"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.from_yaml_directory">[docs]</a>    <span class="k">def</span> <span class="nf">from_yaml_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Collect validation rules found in the directory. &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
+            <span class="n">dir_path</span> <span class="o">=</span> <span class="n">dir_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="s1">&#39;requirements-osi-3&#39;</span><span class="p">)</span>
+
+        <span class="n">exts</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;.yaml&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;osi_&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">exts</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">from_yaml_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+
+        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error while reading files OSI-rules. Exiting!&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSIRules.from_yaml_file"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.from_yaml_file">[docs]</a>    <span class="k">def</span> <span class="nf">from_yaml_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Import from a file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rules_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">rules_dict</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="n">rules_file</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">SafeLoader</span><span class="p">))</span>
+        <span class="n">rules_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="OSIRules.from_yaml"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.from_yaml">[docs]</a>    <span class="k">def</span> <span class="nf">from_yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">yaml_content</span><span class="p">,):</span>
+        <span class="sd">&quot;&quot;&quot;Import from a string</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">rules_dict</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="n">yaml_content</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">SafeLoader</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="OSIRules.from_xml_doxygen"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.from_xml_doxygen">[docs]</a>    <span class="k">def</span> <span class="nf">from_xml_doxygen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parse the Doxygen XML documentation to get the rules</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dox_xml</span> <span class="o">=</span> <span class="n">OSIDoxygenXML</span><span class="p">()</span>
+        <span class="n">dox_xml</span><span class="o">.</span><span class="n">generate_osi_doxygen_xml</span><span class="p">()</span>
+        <span class="n">rules</span> <span class="o">=</span> <span class="n">dox_xml</span><span class="o">.</span><span class="n">parse_rules</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">field_rules_tuple</span> <span class="ow">in</span> <span class="n">rules</span><span class="p">:</span>
+            <span class="n">message_t_path</span> <span class="o">=</span> <span class="n">field_rules_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">field_name</span> <span class="o">=</span> <span class="n">field_rules_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">field_rules</span> <span class="o">=</span> <span class="n">field_rules_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="n">message_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">add_type_from_path</span><span class="p">(</span><span class="n">message_t_path</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">field_rule</span> <span class="ow">in</span> <span class="n">field_rules</span><span class="p">:</span>
+                <span class="n">message_t</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">FieldRules</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">field_name</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="n">field_rule</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="OSIRules.get_rules"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.get_rules">[docs]</a>    <span class="k">def</span> <span class="nf">get_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the rules</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span></div>
+
+<div class="viewcode-block" id="OSIRules.from_dict"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRules.from_dict">[docs]</a>    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rules_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rules_container</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Translate dict rules into objects rules&quot;&quot;&quot;</span>
+
+        <span class="n">rules_container</span> <span class="o">=</span> <span class="n">rules_container</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">rules_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>  <span class="c1"># it&#39;s a nested type</span>
+                <span class="n">new_message_t</span> <span class="o">=</span> <span class="n">rules_container</span><span class="o">.</span><span class="n">add_type</span><span class="p">(</span>
+                    <span class="n">MessageTypeRules</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">new_message_t</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>  <span class="c1"># it&#39;s a field</span>
+                <span class="n">field</span> <span class="o">=</span> <span class="n">rules_container</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">FieldRules</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">rule_dict</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>  <span class="c1"># iterate over rules</span>
+                    <span class="n">field</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="n">Rule</span><span class="p">(</span><span class="n">dictionary</span><span class="o">=</span><span class="n">rule_dict</span><span class="p">))</span>
+
+            <span class="k">elif</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                    <span class="s1">&#39;must be dict or list, got &#39;</span>
+                    <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">rules_dict</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ProtoMessagePath"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.ProtoMessagePath">[docs]</a><span class="k">class</span> <span class="nc">ProtoMessagePath</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a path to a message object&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">path</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">path</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s1">&#39;Path must be str list, found &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="n">parent</span><span class="p">]</span>
+
+<div class="viewcode-block" id="ProtoMessagePath.pretty_html"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.ProtoMessagePath.pretty_html">[docs]</a>    <span class="k">def</span> <span class="nf">pretty_html</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a pretty html version of the message path&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="s2">&quot;&lt;b&gt;&quot;</span><span class="o">+</span><span class="n">l</span><span class="o">+</span><span class="s2">&quot;&lt;/b&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> \
+            <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="ProtoMessagePath.child_path"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.ProtoMessagePath.child_path">[docs]</a>    <span class="k">def</span> <span class="nf">child_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a new path for the child&quot;&quot;&quot;</span>
+        <span class="n">new_path</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">new_path</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">new_path</span></div></div>
+
+
+<div class="viewcode-block" id="OSIRuleNode"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.OSIRuleNode">[docs]</a><span class="k">class</span> <span class="nc">OSIRuleNode</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents any node in the tree of OSI rules&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the path of the node&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
+
+    <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="n">new_path</span> <span class="o">=</span> <span class="n">ProtoMessagePath</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">new_path</span></div>
+
+
+<div class="viewcode-block" id="TypeRulesContainer"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.TypeRulesContainer">[docs]</a><span class="k">class</span> <span class="nc">TypeRulesContainer</span><span class="p">(</span><span class="n">OSIRuleNode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class defines either a MessageType or a list of MessageTypes&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nested_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">ProtoMessagePath</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span> <span class="o">=</span> <span class="n">nested_types</span> <span class="ow">or</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span> <span class="k">if</span> <span class="n">root</span> <span class="k">else</span> <span class="bp">self</span>
+
+<div class="viewcode-block" id="TypeRulesContainer.add_type"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.TypeRulesContainer.add_type">[docs]</a>    <span class="k">def</span> <span class="nf">add_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_type</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a message type in the TypeContainer&quot;&quot;&quot;</span>
+        <span class="n">message_type</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">child_path</span><span class="p">(</span><span class="n">message_type</span><span class="o">.</span><span class="n">type_name</span><span class="p">)</span>
+        <span class="n">message_type</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span><span class="p">[</span><span class="n">message_type</span><span class="o">.</span><span class="n">type_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">message_type</span>
+        <span class="k">return</span> <span class="n">message_type</span></div>
+
+<div class="viewcode-block" id="TypeRulesContainer.add_type_from_path"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.TypeRulesContainer.add_type_from_path">[docs]</a>    <span class="k">def</span> <span class="nf">add_type_from_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a message type in the TypeContainer by giving a path</span>
+
+<span class="sd">        The path must be a list and the last element of the list is the name of</span>
+<span class="sd">        the message type.</span>
+
+<span class="sd">        If the message type already exists, it is not added.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">new_message_t</span> <span class="o">=</span> <span class="n">MessageTypeRules</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="n">fields</span><span class="p">)</span>
+
+        <span class="n">child</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">nested_types</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">add_type</span><span class="p">(</span><span class="n">MessageTypeRules</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+
+        <span class="n">child</span><span class="o">.</span><span class="n">add_type</span><span class="p">(</span><span class="n">new_message_t</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">new_message_t</span></div>
+
+<div class="viewcode-block" id="TypeRulesContainer.get_type"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.TypeRulesContainer.get_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a MessageType by name or path&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">message_path</span><span class="p">,</span> <span class="n">ProtoMessagePath</span><span class="p">):</span>
+            <span class="n">message_t</span> <span class="o">=</span> <span class="bp">self</span>
+            <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">message_path</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">message_t</span> <span class="o">=</span> <span class="n">message_t</span><span class="o">.</span><span class="n">nested_types</span><span class="p">[</span><span class="n">component</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">&#39;Type not found: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">message_path</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">message_t</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">message_path</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span><span class="p">[</span><span class="n">message_path</span><span class="p">]</span>
+
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;type must be ProtoMessagePath or str&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;TypeContainer({len(self.nested_types)}):</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> \
+               <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MessageTypeRules"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.MessageTypeRules">[docs]</a><span class="k">class</span> <span class="nc">MessageTypeRules</span><span class="p">(</span><span class="n">TypeRulesContainer</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class manages the fields of a Message Type&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fields</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">field_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fields</span> <span class="o">=</span> <span class="n">fields</span>
+
+<div class="viewcode-block" id="MessageTypeRules.add_field"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.MessageTypeRules.add_field">[docs]</a>    <span class="k">def</span> <span class="nf">add_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a field with or without rules to a Message Type&quot;&quot;&quot;</span>
+        <span class="n">field</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">child_path</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">field</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">field_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span>
+        <span class="k">return</span> <span class="n">field</span></div>
+
+<div class="viewcode-block" id="MessageTypeRules.get_field"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.MessageTypeRules.get_field">[docs]</a>    <span class="k">def</span> <span class="nf">get_field</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{self.type_name}</span><span class="s1">:&#39;</span> <span class="o">+</span> \
+            <span class="n">f</span><span class="s1">&#39;MessageType({len(self.fields)}):</span><span class="si">{self.fields}</span><span class="s1">,&#39;</span> <span class="o">+</span> \
+            <span class="n">f</span><span class="s1">&#39;Nested types({len(self.nested_types)})&#39;</span> <span class="o">+</span> \
+            <span class="p">(</span><span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_types</span>
+             <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FieldRules"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.FieldRules">[docs]</a><span class="k">class</span> <span class="nc">FieldRules</span><span class="p">(</span><span class="n">OSIRuleNode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class manages the rules of a Field in a Message Type&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rules</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="n">name</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rules</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">rules</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="n">rule</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FieldRules.add_rule"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.FieldRules.add_rule">[docs]</a>    <span class="k">def</span> <span class="nf">add_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a new rule of verb rule to a field with the parameters params.</span>
+<span class="sd">        rule can also be a dictionary containing one key (the verb) with one</span>
+<span class="sd">        value (the parameters).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rule</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">child_path</span><span class="p">(</span><span class="n">rule</span><span class="o">.</span><span class="n">verb</span><span class="p">)</span>
+        <span class="n">rule</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="n">rule</span><span class="o">.</span><span class="n">verb</span><span class="p">]</span> <span class="o">=</span> <span class="n">rule</span></div>
+
+<div class="viewcode-block" id="FieldRules.has_rule"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.FieldRules.has_rule">[docs]</a>    <span class="k">def</span> <span class="nf">has_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check if a field has the rule `rule`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">rule</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span></div>
+
+<div class="viewcode-block" id="FieldRules.list_rules"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.FieldRules.list_rules">[docs]</a>    <span class="k">def</span> <span class="nf">list_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List the rules of a field&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span></div>
+
+<div class="viewcode-block" id="FieldRules.get_rule"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.FieldRules.get_rule">[docs]</a>    <span class="k">def</span> <span class="nf">get_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verb</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the rule object for the verb rule_verb in this field.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="n">verb</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verb</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">verb</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nested_rules</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.field_name}</span><span class="s2">:Field({len(self.rules)}):</span><span class="si">{nested_rules}</span><span class="s2">&quot;</span></div>
+
+
+<div class="viewcode-block" id="Rule"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.Rule">[docs]</a><span class="k">class</span> <span class="nc">Rule</span><span class="p">(</span><span class="n">OSIRuleNode</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class manages one rule&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">severity</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;severity&quot;</span><span class="p">,</span> <span class="n">Severity</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">,</span> <span class="n">ProtoMessagePath</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;field_name&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;params&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra_params</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extra_params&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verb</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;verb&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">dictionary</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dictionary&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+
+        <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">osi_rules_implementations</span> <span class="k">as</span> <span class="n">rule_implementations</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rule_implementations</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verb</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">verb</span> <span class="o">+</span> <span class="s1">&#39; rule does not exist</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Rule.from_dict"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.Rule.from_dict">[docs]</a>    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Instanciate Rule object from a dictionary&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">verb</span><span class="p">,</span> <span class="n">params</span><span class="p">),</span> <span class="o">*</span><span class="n">extra_params</span> <span class="o">=</span> <span class="n">rule_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">verb</span> <span class="o">=</span> <span class="n">verb</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="n">params</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">extra_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">extra_params</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_params</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s1">&#39;rule must be YAML mapping, got: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rule_dict</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">targeted_field</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span>
+
+    <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">ProtoMessagePath</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;field_name&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="s2">&quot;UnknownField&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.verb}</span><span class="s2">(</span><span class="si">{self.params}</span><span class="s2">) target=</span><span class="si">{self.target}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">verb</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">verb</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">params</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">severity</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">severity</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Severity"><a class="viewcode-back" href="../../osivalidator.html#osivalidator.osi_rules.Severity">[docs]</a><span class="k">class</span> <span class="nc">Severity</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Descript the severity of the raised error if a rule does not comply.&quot;&quot;&quot;</span>
+    <span class="n">INFO</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">WARN</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">ERROR</span> <span class="o">=</span> <span class="mi">40</span></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v3.1.2',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.fancybox.min.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $('.image-reference').fancybox();
+    })
+  </script>
+
+</body>
+</html>
