@@ -8,8 +8,8 @@ sys.path.append('/home/vkreschenski/Documents/Projects/OSIValidation/osi-validat
 # -- Project information -----------------------------------------------------
 
 project = 'Open Simulation Interface'
-copyright = '2019, Viktor Kreschenski'
-author = 'Viktor Kreschenski'
+copyright = '2019, Carlo van Driesten, Timo Hanke, Nils Hirsenkorn, Pilar Gracias Ramos, Mark Schiementz, Sebastian Schneider'
+author = 'Carlo van Driesten, Timo Hanke, Nils Hirsenkorn, Pilar Gracias Ramos, Mark Schiementz, Sebastian Schneider'
 
 # The short X.Y version
 # version = ''
@@ -92,3 +92,5 @@ import sphinx_glpi_theme
 
 html_theme = "glpi"
 html_theme_path = sphinx_glpi_theme.get_html_themes_path()
+
+
