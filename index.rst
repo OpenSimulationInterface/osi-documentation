@@ -38,42 +38,49 @@ The authors' vision is to be able to connect any automated driving function to a
 
 `TUM Department of Electrical and Computer Engineering <https://www.hot.ei.tum.de/forschung/automotive-veroeffentlichungen/>`_
 
-.. toctree::    
+.. toctree::
+   :maxdepth: 2
+
+   includeme
+
+.. toctree::
     :maxdepth: 2
     :caption: Building and Installation:
-    
+
     osi/installation
 
 
-.. toctree::    
+.. toctree::
     :maxdepth: 2
     :caption: Introduction tutorials
 
     osi/coordinatesystem
 
-.. toctree::    
+.. toctree::
     :maxdepth: 2
     :caption: OSI Validation
 
     osi-validator/osivalidator-module
 
 
-.. toctree::    
+.. toctree::
     :maxdepth: 2
     :caption: OSI Visualizer
 
 
-.. toctree::    
+.. toctree::
     :maxdepth: 2
     :caption: OSI Model Packaging
 
-.. toctree::    
+.. toctree::
     :maxdepth: 2
     :caption: Contributer's Guidelines
 
     osi/workflow
     osi/commenting
     osi/versioning
+
+
 
 
 API Reference
