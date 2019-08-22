@@ -1,3 +1,5 @@
+.. _how-to-write-rules:
+
 How to write rules
 ===================
 

@@ -1,3 +1,5 @@
+.. _how-to-install:
+
 How to install
 ===============
 

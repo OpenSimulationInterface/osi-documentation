@@ -1,8 +1,10 @@
+.. _osi-validation:
+
 OSI Validation
 ===============
 
 The OSI Validator recursively checks the compliance of an OSI message of type
-`SensorData`, `SensorView` or `GroundTruth` according to predefined or
+``SensorData``, ``SensorView`` or ``GroundTruth`` according to predefined or
 personalized rules.
 
 The basic requirements for OSI 3 are gathered in the
@@ -11,9 +13,9 @@ The basic requirements for OSI 3 are gathered in the
 
 .. toctree::
    :maxdepth: 2
-   
+
+   setup
    usage
-   rules
    writing-rules
    osivalidator
    

@@ -1,3 +1,5 @@
+.. _osivalidator-package:
+
 osivalidator package
 =====================
 

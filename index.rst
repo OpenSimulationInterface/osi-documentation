@@ -40,10 +40,12 @@ The authors' vision is to be able to connect any automated driving function to a
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Introduction:
 
    osi/README
+   osi/osifiles
+   osi/releases
 
 
 .. toctree::
@@ -87,7 +89,9 @@ The authors' vision is to be able to connect any automated driving function to a
     osi/commenting
     osi/versioning
 
-
+.. toctree::
+    :maxdepth: 2
+    :caption: Contributer's Guidelines:
 
 
 API Reference

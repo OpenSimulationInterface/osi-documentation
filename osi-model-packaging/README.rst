@@ -22,14 +22,14 @@ Kinds of Models
 The current specification supports the following kinds of models, that
 can be packaged as FMUs:
 
--  Environmental effect models, which consume osi::SensorView as input
-   and produce osi::SensorView as output,
+-  Environmental effect models, which consume ``osi::SensorView`` as input
+   and produce ``osi::SensorView`` as output,
 
--  Sensor models, which consume osi::SensorView as input and generate
-   osi::SensorData as output, and
+-  Sensor models, which consume ``osi::SensorView`` as input and generate
+   ``osi::SensorData`` as output, and
 
 -  Logical models, like e.g. sensor fusion models, which consume
-   osi::SensorData as input and produce osi::SensorData as output.
+   ``osi::SensorData`` as input and produce ``osi::SensorData`` as output.
 
 Additionally complex models that combine various aspects of the model
 kinds above are possible, however configuration and setup of such FMUs
@@ -158,7 +158,7 @@ the following convention is used to define such variables for FMI 2.0:
    ``application/x-open-simulation-interface; type=SensorView; version=3.0.0``
    indicating that the binary content is conformant to a given OSI
    version (3.0.0 in this example), containing a message of the type
-   given in the ``type`` parameter (``osi::SensorView`` in this
+   given in the ``type`` parameter (````osi::SensorView```` in this
    example).
 
    The version parameter given for the MIME type
@@ -200,7 +200,7 @@ Sensor View Inputs
    e.g.
    ``application/x-open-simulation-interface; type=SensorView; version=3.0.0``.
 
--  The sensor view MUST be encoded as osi::SensorView (see the OSI
+-  The sensor view MUST be encoded as ``osi::SensorView`` (see the OSI
    specification documentation for more details).
 
 -  The guaranteed lifetime of the sensor view protocol buffer pointer
@@ -239,7 +239,7 @@ Sensor View Input Configuration
    ``type=SensorViewConfiguration``, e.g.
    ``application/x-open-simulation-interface; type=SensorViewConfiguration; version=3.0.0``.
 
--  The variables values MUST be encoded as osi::SensorViewConfiguration
+-  The variables values MUST be encoded as ``osi::SensorViewConfiguration``
    (see the OSI specification documentation for more details).
 
 -  As long as no non-zero value has been assigned to the corresponding
@@ -257,7 +257,7 @@ Sensor View Input Configuration
    query the ``OSMPSensorViewInConfigRequest`` calculatedParameter
    value, and, taking this value into account, determine a suitable and
    supported SensorView configuration. The simulation environment MUST set this
-   configuration using the corresponding `OSMPSensorViewInConfig` parameter
+   configuration using the corresponding ``OSMPSensorViewInConfig`` parameter
    before exiting initialization mode.
 
 Sensor View Outputs
@@ -281,7 +281,7 @@ Sensor View Outputs
    e.g.
    ``application/x-open-simulation-interface; type=SensorView; version=3.0.0``.
 
--  The sensor view MUST be encoded as osi::SensorView (see the OSI
+-  The sensor view MUST be encoded as ``osi::SensorView`` (see the OSI
    specification documentation for more details).
 
 -  The guaranteed lifetime of the sensor view protocol buffer pointer
@@ -321,7 +321,7 @@ Sensor Data Outputs
    e.g.
    ``application/x-open-simulation-interface; type=SensorData; version=3.0.0``.
 
--  The sensor data MUST be encoded as osi::SensorData (see the OSI
+-  The sensor data MUST be encoded as ``osi::SensorData`` (see the OSI
    specification documentation for more details).
 
 -  The guaranteed lifetime of the sensor data protocol buffer pointer
@@ -362,7 +362,7 @@ Sensor Data Inputs
    e.g.
    ``application/x-open-simulation-interface; type=SensorData; version=3.0.0``.
 
--  The sensor data MUST be encoded as osi::SensorData (see the OSI
+-  The sensor data MUST be encoded as ``osi::SensorData`` (see the OSI
    specification documentation for more details).
 
 -  The guaranteed lifetime of the sensor data protocol buffer pointer

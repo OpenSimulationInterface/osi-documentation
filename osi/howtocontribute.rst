@@ -1,3 +1,5 @@
+.. _how-to-contribute:
+
 How to contribute
 ===================
 
@@ -12,15 +14,15 @@ Reporting issues
 ----------------
 
 The simplest way to contribute to OSI is to report issues that you may
-find with the software on `github <https://github.com/OpenSimulationInterface/open-simulation-interface>`__. Everyone can create issues.
+find with the project on `github <https://github.com/OpenSimulationInterface/open-simulation-interface>`__. Everyone can create issues.
 Always make sure to search the existing issues before reporting a new one.
 Issues may be created to discuss:
 
-- problems
-- bugs
-- feature requests
-- ideas
-- I am sad -> please help me :)
+- Problems
+- Bugs
+- Feature requests
+- Ideas
+- I am sad :( -> please help me :)
 
 If practicable issues should be closed by a referenced pull request or commit `here <https://help.github.com/en/articles/closing-issues-using-keywords>`_ you can find keywords to close issues automatically).
 
@@ -32,72 +34,79 @@ website https://developers.google.com/protocol-buffers/ is a great place to star
 You may want to make sure that you master these `advanced concepts <https://developers.google.com/protocol-buffers/docs/proto3>`_.
 
 Download and install the protocol buffer on your computer, pick up your favorite programming language and try to encode and decode your custom made osi messages.
-It is a good idea to read the `tutorials <https://developers.google.com/protocol-buffers/docs/tutorials>`_ for that.
+It is a good idea to read the `tutorials <https://developers.google.com/protocol-buffers/docs/tutorials>`_ for that in your favorite programming language.
 
 For contribution you also need be proficient in Git. You can download and read the book Pro Git by Scott Chacon and Ben Straub `here <https://link.springer.com/book/10.1007%2F978-1-4842-0076-6>`_ for free.
 Learn `how to fork a repository <https://help.github.com/en/articles/fork-a-repo#platform-linux>`_ and follow the suggested `fork workflow <https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow>`_ by Atlassian.
+Become a github guru :).
 
 Where to start
 --------------
 
 While you familiarize yourself with the basics as suggested above, you
-can have a look at the `doxgen API reference <https://opensimulationinterface.github.io/open-simulation-interface/>`_. of OSI. It will
-give you an overview of the OSI messages, their main components and their meaning.
+can have a look at the `doxgen API reference <https://opensimulationinterface.github.io/open-simulation-interface/annotated.html>`_. of OSI. It will
+give you an overview of the OSI messages, fields, their main components and their meaning.
 
 Our git workflow
 ----------------
 
 First, the main repository of the OSI Organization is https://github.com/OpenSimulationInterface/open-simulation-interface.
-The other repositories are subcomponents which add functionality to OSI like `validation <https://github.com/OpenSimulationInterface/osi-validation>`_, `visualization <https://github.com/OpenSimulationInterface/osi-visualizer>`_ and `model packaging <https://github.com/OpenSimulationInterface/osi-sensor-model-packaging>`_.
-The repository `proto2cpp <https://github.com/OpenSimulationInterface/proto2cpp>`_ is a fork which is used in this project to convert *.proto files into *.cpp files which can be parsed by doxygen to create a `reference documentation <https://opensimulationinterface.github.io/open-simulation-interface/>`_.
+The other repositories are optional extensions which add functionality to OSI like `validation <https://github.com/OpenSimulationInterface/osi-validation>`_, `visualization <https://github.com/OpenSimulationInterface/osi-visualizer>`_ and `model packaging <https://github.com/OpenSimulationInterface/osi-sensor-model-packaging>`_.
+The repository `proto2cpp <https://github.com/OpenSimulationInterface/proto2cpp>`_ is a fork which is used in this organization to convert \*.proto files into \*.cpp files which can be parsed by doxygen to create a `reference documentation <https://opensimulationinterface.github.io/open-simulation-interface/>`_.
 
 Then, there are many ways to use Git, here is ours:
 
-We mostly use merge requests for master, meaning that nobody should be pushing
-into master directly. Once a merge request is ready, it is reviewed and
-approved, then merged using the ``--fast-forward`` option of Git in order to
-maintain a linear history without merge commits.
+After you have opened an issue, with the tag ``feature request`` or ``idea``
+explaining your enhancement to the project, you should
+also provide a possible approach or suggest a possible solution.
+After a discussion if the feature is plausible or adds value
+to the project you can create a pull request
+and reference it to your opened issue.
 
-For that to work, it means that merge requests must be direct suffixes
-of the master branch. So whenever ``origin/master`` changes, you have to
-rebase your branch on it, so that your patches always sit on top of
-master. When that happens, you may have to edit your patches during the
-rebase, and then use ``push -f`` in your branch to rewrite the history.
+We mostly use squash and merge for pull requests for master.
+Instead of seeing all of a
+contributor's individual commits from a topic branch,
+the commits are combined
+into one commit and merged into the master branch.
+Once a pull request is ready, it is reviewed and
+approved, then squashed using the ``--fast-forward`` option of Git in order to
+maintain a streamlined Git history.
 
-We also enforce a few hygiene rules, so make sure your MR respects them:
+**We also enforce a few hygiene rules**:
 
 -  Prefer small atomic commits over a large one that do many things.
 -  Don’t mix refactoring and new features.
 -  Never mix reindentation, whitespace deletion, or other style changes
    with actual code changes.
--  Try as much as possible to make every patch compile, not only the last one.
--  If you add new functions into a documented interface, don’t forget to
-   extend the documentation for your addition.
--  For parts that have specifications in the repository,
-   make sure to keep it in sync with the implementation.
+-  If you add new osi messages into a \*.proto file, don’t forget to
+   extend the documentation and comment on the message and on each field (for more information see :ref:`commenting`).
+-  Don't forget to run 
+   `test_cases.py <https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py>`_ to check if you followed the correct syntax guidelines for \*.proto files
+-  If you rebuild the doyxgen documentation run `test_cases_doc.py <https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases_doc.py>`_
 -  Try and mimic the style of commit messages, and for non trivial
    commits, add an extended commit message.
 
-As per the hygiene of MRs themselves:
+**As per the hygiene of commits themselves**:
 
--  Give appropriate titles to the MRs, and when non-trivial add a
+-  Give appropriate titles to the commits, and when non-trivial add a
    detailed motivated explanation.
 -  Give meaningful and consistent names to branches.
 -  Don’t forget to put a ``WIP:`` flag when it is a work in progress
 
-Our branching Workflow (member):
 
-- Create issues for **fundamental** changes!
+**Our branching workflow summary (member)**:
+
+- Create issues for changes, improvements and ideas!
 - Clone repository on your local machine
 - Create a branch with a meaningfull name: ``prefix/name``, ``feature/new-environmental-conditions``
 - prefixes: feature, experimental, bug, etc.
 - Add your suggestions to the code Do not use: ``*git add -A *git commit -A``
-- The code should compile for a pull-request! ^_^
+- The code should compile and pass `test_cases.py <https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py>`_  for a pull-request!
 - Try to make small changes for easier discussions
-- The person willing to merge needs to change the InterfaceVersion according to :ref:`versioning` before hitting merge
+- The person willing to merge needs to adjust the version according to :ref:`versioning` before hitting merge
 
 
-Our forking workflow (no member):
+**Our forking workflow summary (no member)**:
 
 - Create a personal fork on your account
 - Clone to your local machine
@@ -106,10 +115,11 @@ Our forking workflow (no member):
 - Discuss with issues and with comments in the pull-request
 - !!! Consider becoming a member !!!
 
-Documentations changes:
+**Documentation changes**:
 
-- Can be performed by any member
-- Consider adding stuff :)
+- Can be performed by any member.
+- Consider adding stuff to the `osi-documentation <https://github.com/vkresch/osi-documentation>`_.
+- When new changes are made the documentation will be rebuild and the new changes can be seen.
 
 Code Review
 -----------
@@ -133,19 +143,12 @@ painful for everybody. The reviewer is your ally, not your enemy.
 - Commented code: Did I remove any commented out lines?
   Did I leave a ``TODO`` or an old comment?
 
-- Docstrings: Did I export a new message? Each exported
-  message should be documented.
-
 - Readability: Is the code easy to understand? Is it worth adding
   a comment to the code to explain a particular operation and its
   repercussion on the rest of the code?
 
 - Variable and function names: These should be meaningful and in line
   with the convention adopted in the code base.
-
-- Testing: Are the tests thoughtful? Do they cover the failure conditions? Are
-  they easy to read? How fragile are they? How big are the tests?
-  Are they slow?
 
 - Are your Commit messages meaningful? (i.e., https://chris.beams.io/posts/git-commit/ )
 
@@ -157,7 +160,7 @@ Reviewer Perspective
 Code review can be challenging at times. These are suggestions and common
 pitfalls a code reviewer should avoid.
 
-- Ask questions: How does this function work? If this requirement changes,
+- Ask questions: What is the purpose of this message? If this requirement changes,
   what else would have to change? How could we make this more maintainable?
 
 - Discuss in person for more detailed points: Online comments are useful for
@@ -241,4 +244,4 @@ it easier for the reviewer to keep interacting till each discussion is
 resolved. When the reviewer is satisfied, he/she will mark the discussion resolved.
 
 When all discussions are resolved, the reviewer will rebase the branch,
-possibly squash commits and merge the MR in the master branch.
+squash commits and merge the MR in the master branch.
