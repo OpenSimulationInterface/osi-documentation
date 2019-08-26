@@ -87,10 +87,11 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 # html_theme = "default"
-# html_theme = "sphinx_rtd_theme"
-import sphinx_glpi_theme
+html_theme = "sphinx_rtd_theme"
 
-html_theme = "glpi"
-html_theme_path = sphinx_glpi_theme.get_html_themes_path()
+# import sphinx_glpi_theme
+
+# html_theme = "glpi"
+# html_theme_path = sphinx_glpi_theme.get_html_themes_path()
 
 
