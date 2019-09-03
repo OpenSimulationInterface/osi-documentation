@@ -32,9 +32,10 @@ before_script:
 
 # Run the build script and generate documentation.
 script:
-    # Debug 
-    - which python3
-    - which python
+    - git clone https://github.com/OpenSimulationInterface/osi-validation.git
+    - cd osi-validation
+    - git checkout development
+    - cd ..
     - make html
 
 # Deploy the documentation on github (only for master branch).
