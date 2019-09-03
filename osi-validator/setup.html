@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation Guide &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="OSI Validation" href="osivalidator-module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="osivalidator-module.html">OSI Validation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-for-linux-users">Setup for linux users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-for-linux-developers">Setup for linux developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-for-windows-users">Setup for windows users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-for-windows-developers">Setup for windows developers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-rules.html">How to write rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="osivalidator-module.html">OSI Validation</a> &raquo;</li>
+        
+      <li>Installation Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi-validator/setup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-guide">
+<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
+<p>The <em>OSI Validator</em> has been developed with <strong>Python 3.6</strong> with virtual environment environment. It is the only version of Python that is supported now. <em>OSI Validator</em> should only be used with <strong>Python 3.6</strong>.</p>
+<div class="section" id="setup-for-linux-users">
+<h2>Setup for linux users<a class="headerlink" href="#setup-for-linux-users" title="Permalink to this headline">¶</a></h2>
+<p>This setup guide is for users who want to</p>
+<p>Clone repository osi-validation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p>Install osi-validation into the global root directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p>
+</div>
+<div class="section" id="setup-for-linux-developers">
+<h2>Setup for linux developers<a class="headerlink" href="#setup-for-linux-developers" title="Permalink to this headline">¶</a></h2>
+<p>This setup guide is for developers who want to contribute to osi-validation.</p>
+<p>Clone repository osi-validation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p>Change directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">osi-validation</span></code></p>
+<p>Change the branch to development:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">development</span></code></p>
+<p>Clone repository open-simulation-interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
+<p>Clone repository proto2cpp:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
+<p>It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don’t mess around with your global python environment.
+Install virutal environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
+<p>Create virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">-p</span> <span class="pre">/usr/bin/python3</span> <span class="pre">vpython</span></code></p>
+<p>Activate your virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">vpython/bin/activate</span></code></p>
+<p>Install open-simulation-interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">open-simulation-interface;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p>Install last requirements:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+<p>Install osi-validator:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p>Last step copy <code class="docutils literal notranslate"><span class="pre">requirements-osi-3</span></code> to <code class="docutils literal notranslate"><span class="pre">vpython/lib/python3.6/site-packages</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">requirements-osi-3</span> <span class="pre">vpython/lib/python3.6/site-packages/</span></code></p>
+<p>or <strong>install with virtual environment via script</strong></p>
+<p>Just run the script:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">bash</span> <span class="pre">installation.sh</span></code></p>
+</div>
+<div class="section" id="setup-for-windows-users">
+<h2>Setup for windows users<a class="headerlink" href="#setup-for-windows-users" title="Permalink to this headline">¶</a></h2>
+<p>In Progress …</p>
+</div>
+<div class="section" id="setup-for-windows-developers">
+<h2>Setup for windows developers<a class="headerlink" href="#setup-for-windows-developers" title="Permalink to this headline">¶</a></h2>
+<p>In Progress …</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="osivalidator-module.html" class="btn btn-neutral float-left" title="OSI Validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

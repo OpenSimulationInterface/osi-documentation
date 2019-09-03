@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to write rules &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="osivalidator package" href="osivalidator.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="osivalidator-module.html">OSI Validation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Installation Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to write rules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#folder-structure">Folder structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-structure">File structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#child-message-type">Child message type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rules">Rules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#severity">Severity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="osivalidator-module.html">OSI Validation</a> &raquo;</li>
+        
+      <li>How to write rules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi-validator/writing-rules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-write-rules">
+<span id="id1"></span><h1>How to write rules<a class="headerlink" href="#how-to-write-rules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="folder-structure">
+<h2>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h2>
+<p>The rules are contained into YAML files into one folder. The organization of
+the files in this folder follows the architecture of OSI for consistency.</p>
+</div>
+<div class="section" id="file-structure">
+<h2>File structure<a class="headerlink" href="#file-structure" title="Permalink to this headline">¶</a></h2>
+<p>We will take this example of the <cite>osi_detectedlane.yml</cite> file:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">DetectedLane</span><span class="p">:</span>
+  <span class="nt">header</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
+  <span class="nt">CandidateLane</span><span class="p">:</span>
+    <span class="nt">probability</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">in_range</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
+    <span class="nt">classification</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
+
+<span class="nt">DetectedLaneBoundary</span><span class="p">:</span>
+  <span class="nt">header</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
+  <span class="nt">boundary_line</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">each</span><span class="p">:</span>
+        <span class="nt">position</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
+</pre></div>
+</div>
+<p>According to the Python module used, YAML <strong>version 1.1</strong> is used. In this
+document, we will try to make associations between the <cite>YAML</cite> vocabulary
+according to its specifications and the <cite>Protocol Buffers</cite> one.</p>
+<p>Each root (at the top level) <cite>scalar</cite> represent a root message type (ex:
+<code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code>, <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>).</p>
+<p>The children <cite>scalars</cite> of each <cite>root scalar</cite> represent its fields if they are
+not camel-case (ex: <code class="docutils literal notranslate"><span class="pre">header</span></code> is a field of <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> ; <code class="docutils literal notranslate"><span class="pre">header</span></code> and
+<code class="docutils literal notranslate"><span class="pre">boundary_line</span></code> are fields of <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>). See <a class="reference internal" href="#child-message-type">Child message
+type</a> for the camel-case scalars.</p>
+<p>Each field has a <cite>sequence</cite> (starting with an hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>) of scalar
+representing the <a class="reference internal" href="#rules">rules</a> that apply on.</p>
+</div>
+<div class="section" id="child-message-type">
+<h2>Child message type<a class="headerlink" href="#child-message-type" title="Permalink to this headline">¶</a></h2>
+<p>A message type can have included message type. For example <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> has
+a <code class="docutils literal notranslate"><span class="pre">CandidateLane</span></code> included message type. They first seem similar has field
+but they are not: they contain, exactly like top-level message type, fields
+with rules.</p>
+</div>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<p>The rules can either be without any parameter (ex: <code class="docutils literal notranslate"><span class="pre">is_set</span></code>) or with a
+parameter.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">in_range</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In the case a rule has a parameter, it is written as a <cite>mapping</cite> (a <cite>scalar</cite>
+followed by a column “:”). What comes after the column is totally free and
+depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">in_range</span></code> accept a sequence
+of double ; the rule <code class="docutils literal notranslate"><span class="pre">each</span></code> ask for mappings. Other rules accept string,
+number, etc.</p>
+<p>The available rule and their usage are explained here: <span class="xref std std-doc">rules</span>.</p>
+</div>
+</div>
+<div class="section" id="severity">
+<h2>Severity<a class="headerlink" href="#severity" title="Permalink to this headline">¶</a></h2>
+<p>When an attribute does not comply with a rule, a Warning is throw. An Error
+will be throw if an exclamation mark is written at the end of the verb of a
+rule.</p>
+<div class="section" id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>in_range!: [0, 1]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="osivalidator.html" class="btn btn-neutral float-right" title="osivalidator package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1117 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>osivalidator package &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OSI Visualizer" href="../osi-visualizer/README.html" />
+    <link rel="prev" title="How to write rules" href="writing-rules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="osivalidator-module.html">OSI Validation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Installation Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-rules.html">How to write rules</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">osivalidator package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.linked_proto_field">osivalidator.linked_proto_field module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_doxygen_xml">osivalidator.osi_doxygen_xml module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_general_validator">osivalidator.osi_general_validator module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_id_manager">osivalidator.osi_id_manager module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_rules">osivalidator.osi_rules module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_rules_checker">osivalidator.osi_rules_checker module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_rules_implementations">osivalidator.osi_rules_implementations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_scenario">osivalidator.osi_scenario module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator.osi_validator_logger">osivalidator.osi_validator_logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-osivalidator">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="osivalidator-module.html">OSI Validation</a> &raquo;</li>
+        
+      <li>osivalidator package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi-validator/osivalidator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="osivalidator-package">
+<span id="id1"></span><h1>osivalidator package<a class="headerlink" href="#osivalidator-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-osivalidator.linked_proto_field">
+<span id="osivalidator-linked-proto-field-module"></span><h2>osivalidator.linked_proto_field module<a class="headerlink" href="#module-osivalidator.linked_proto_field" title="Permalink to this headline">¶</a></h2>
+<p>This class describe a wrapper on protobuf fields that add a link
+with parent message and bind message to some additional informations.</p>
+<dl class="class">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.linked_proto_field.</code><code class="sig-name descname">LinkedProtoField</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class describe a wrapper on protobuf fields that add a link
+with parent message and bind message to some additional informations.</p>
+<p>The Protobuf’s RepeatedCompositeContainer that describes repeated field are
+replaced with Python lists.
+The field informations (parent message and field name) for the repeated
+field are here bounded to each element of the list.</p>
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.all_field_descriptors">
+<em class="property">property </em><code class="sig-name descname">all_field_descriptors</code><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.all_field_descriptors" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the fields descriptors, i.e even the one that are not set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.fields">
+<em class="property">property </em><code class="sig-name descname">fields</code><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloading of protobuf ListFields function that return
+a list of LinkedProtoFields.</p>
+<p>Only works if the field is composite, raise an AttributeError otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.get_field">
+<code class="sig-name descname">get_field</code><span class="sig-paren">(</span><em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.get_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the LinkedProtoField wraps a message, return the field of this
+message. Otherwise, raise an AttributeError.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.has_field">
+<code class="sig-name descname">has_field</code><span class="sig-paren">(</span><em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.has_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a protobuf message message have an attribute/field even if this
+is a repeated field.</p>
+<p>If it is a repeated field, this function returns false if there is no
+element into it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.is_message">
+<em class="property">property </em><code class="sig-name descname">is_message</code><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.is_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the field contain a message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.message_type">
+<em class="property">property </em><code class="sig-name descname">message_type</code><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.message_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a path to the message type in OSI3 as a ProtoMessagePath</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">parent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a LinkedProtoField from a path.</p>
+<p>Example of path: ./global_ground_truth/moving_object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.linked_proto_field.LinkedProtoField.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict version of the protobuf message.</p>
+<p>Compute the dict only once, then store it and retrieve it.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_doxygen_xml">
+<span id="osivalidator-osi-doxygen-xml-module"></span><h2>osivalidator.osi_doxygen_xml module<a class="headerlink" href="#module-osivalidator.osi_doxygen_xml" title="Permalink to this headline">¶</a></h2>
+<p>This module carry the XML version of Doxygen documentation to parse the rules
+into it.</p>
+<dl class="class">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_doxygen_xml.</code><code class="sig-name descname">OSIDoxygenXML</code><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class creates XML from *.proto Files Documentation of OSI and can parse the rules from it.</p>
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.generate_osi_doxygen_xml">
+<code class="sig-name descname">generate_osi_doxygen_xml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.generate_osi_doxygen_xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the Doxygen XML documentation in the OSI path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.get_files">
+<code class="sig-name descname">get_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.get_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path of the fields in OSI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_doxygen_xml.OSIDoxygenXML.parse_rules">
+<code class="sig-name descname">parse_rules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_doxygen_xml.OSIDoxygenXML.parse_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the Doxygen XML documentation to get the rules</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_general_validator">
+<span id="osivalidator-osi-general-validator-module"></span><h2>osivalidator.osi_general_validator module<a class="headerlink" href="#module-osivalidator.osi_general_validator" title="Permalink to this headline">¶</a></h2>
+<p>Main class and entry point of the OSI Validator.</p>
+<dl class="function">
+<dt id="osivalidator.osi_general_validator.close_pool">
+<code class="sig-prename descclassname">osivalidator.osi_general_validator.</code><code class="sig-name descname">close_pool</code><span class="sig-paren">(</span><em class="sig-param">pool</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.close_pool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleanly close a pool to free the memory</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_general_validator.command_line_arguments">
+<code class="sig-prename descclassname">osivalidator.osi_general_validator.</code><code class="sig-name descname">command_line_arguments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.command_line_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define and handle command line interface</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_general_validator.main">
+<code class="sig-prename descclassname">osivalidator.osi_general_validator.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_general_validator.process_timestep">
+<code class="sig-prename descclassname">osivalidator.osi_general_validator.</code><code class="sig-name descname">process_timestep</code><span class="sig-paren">(</span><em class="sig-param">timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.process_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process one timestep</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_id_manager">
+<span id="osivalidator-osi-id-manager-module"></span><h2>osivalidator.osi_id_manager module<a class="headerlink" href="#module-osivalidator.osi_id_manager" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the OSIIDManager which manage IDs and check for references
+and unicity according to the OSI KPIs.</p>
+<dl class="class">
+<dt id="osivalidator.osi_id_manager.OSIIDManager">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_id_manager.</code><code class="sig-name descname">OSIIDManager</code><span class="sig-paren">(</span><em class="sig-param">logger</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manage the ID of OSI Messages for verification of unicity and references</p>
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.get_all_messages_by_id">
+<code class="sig-name descname">get_all_messages_by_id</code><span class="sig-paren">(</span><em class="sig-param">message_id</em>, <em class="sig-param">message_t=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_all_messages_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all the message by giving an id</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.get_message_by_id">
+<code class="sig-name descname">get_message_by_id</code><span class="sig-paren">(</span><em class="sig-param">message_id</em>, <em class="sig-param">message_t=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_message_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve only one message by giving an id</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.refer">
+<code class="sig-name descname">refer</code><span class="sig-paren">(</span><em class="sig-param">referer</em>, <em class="sig-param">identifier</em>, <em class="sig-param">expected_type</em>, <em class="sig-param">condition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.refer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a reference
+Condition is a function that will be applied on the found object if the
+reference is resolved</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.register_message">
+<code class="sig-name descname">register_message</code><span class="sig-paren">(</span><em class="sig-param">message_id</em>, <em class="sig-param">message</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.register_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register one message in the ID manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erase all data in the ID manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.resolve_references">
+<code class="sig-name descname">resolve_references</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_references" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if references are compliant</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_id_manager.OSIIDManager.resolve_unicity">
+<code class="sig-name descname">resolve_unicity</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_unicity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for double ID</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_id_manager.message_t_filter">
+<code class="sig-prename descclassname">osivalidator.osi_id_manager.</code><code class="sig-name descname">message_t_filter</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">message_t</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.message_t_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a message is of type message_t</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_rules">
+<span id="osivalidator-osi-rules-module"></span><h2>osivalidator.osi_rules module<a class="headerlink" href="#module-osivalidator.osi_rules" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all the useful classes to describe the tree of the
+validation rules tree.</p>
+<dl class="class">
+<dt id="osivalidator.osi_rules.FieldRules">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">FieldRules</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#osivalidator.osi_rules.OSIRuleNode" title="osivalidator.osi_rules.OSIRuleNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">osivalidator.osi_rules.OSIRuleNode</span></code></a></p>
+<p>This class manages the rules of a Field in a Message Type</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.FieldRules.add_rule">
+<code class="sig-name descname">add_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.add_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new rule of verb rule to a field with the parameters params.
+rule can also be a dictionary containing one key (the verb) with one
+value (the parameters).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.FieldRules.get_rule">
+<code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">verb</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.get_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rule object for the verb rule_verb in this field.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.FieldRules.has_rule">
+<code class="sig-name descname">has_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.has_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a field has the rule <cite>rule</cite></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.FieldRules.list_rules">
+<code class="sig-name descname">list_rules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.list_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the rules of a field</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.MessageTypeRules">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">MessageTypeRules</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.MessageTypeRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#osivalidator.osi_rules.TypeRulesContainer" title="osivalidator.osi_rules.TypeRulesContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">osivalidator.osi_rules.TypeRulesContainer</span></code></a></p>
+<p>This class manages the fields of a Message Type</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.MessageTypeRules.add_field">
+<code class="sig-name descname">add_field</code><span class="sig-paren">(</span><em class="sig-param">field</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.MessageTypeRules.add_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a field with or without rules to a Message Type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.MessageTypeRules.get_field">
+<code class="sig-name descname">get_field</code><span class="sig-paren">(</span><em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.MessageTypeRules.get_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.OSIRuleNode">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">OSIRuleNode</code><span class="sig-paren">(</span><em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRuleNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents any node in the tree of OSI rules</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRuleNode.path">
+<em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#osivalidator.osi_rules.OSIRuleNode.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path of the node</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.OSIRules">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">OSIRules</code><a class="headerlink" href="#osivalidator.osi_rules.OSIRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class collects validation rules</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.from_dict">
+<code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">rules_dict=None</em>, <em class="sig-param">rules_container=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate dict rules into objects rules</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.from_xml_doxygen">
+<code class="sig-name descname">from_xml_doxygen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.from_xml_doxygen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse the Doxygen XML documentation to get the rules</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.from_yaml">
+<code class="sig-name descname">from_yaml</code><span class="sig-paren">(</span><em class="sig-param">yaml_content</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.from_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import from a string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.from_yaml_directory">
+<code class="sig-name descname">from_yaml_directory</code><span class="sig-paren">(</span><em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.from_yaml_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect validation rules found in the directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.from_yaml_file">
+<code class="sig-name descname">from_yaml_file</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.from_yaml_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import from a file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.OSIRules.get_rules">
+<code class="sig-name descname">get_rules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.OSIRules.get_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rules</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.ProtoMessagePath">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">ProtoMessagePath</code><span class="sig-paren">(</span><em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.ProtoMessagePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a path to a message object</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.ProtoMessagePath.child_path">
+<code class="sig-name descname">child_path</code><span class="sig-paren">(</span><em class="sig-param">child</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.ProtoMessagePath.child_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new path for the child</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.ProtoMessagePath.pretty_html">
+<code class="sig-name descname">pretty_html</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.ProtoMessagePath.pretty_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a pretty html version of the message path</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.Rule">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#osivalidator.osi_rules.OSIRuleNode" title="osivalidator.osi_rules.OSIRuleNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">osivalidator.osi_rules.OSIRuleNode</span></code></a></p>
+<p>This class manages one rule</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.Rule.from_dict">
+<code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">rule_dict: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.Rule.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instanciate Rule object from a dictionary</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.Rule.path">
+<em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#osivalidator.osi_rules.Rule.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path of the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.Rule.targeted_field">
+<em class="property">property </em><code class="sig-name descname">targeted_field</code><a class="headerlink" href="#osivalidator.osi_rules.Rule.targeted_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.Severity">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">Severity</code><a class="headerlink" href="#osivalidator.osi_rules.Severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Descript the severity of the raised error if a rule does not comply.</p>
+<dl class="attribute">
+<dt id="osivalidator.osi_rules.Severity.ERROR">
+<code class="sig-name descname">ERROR</code><em class="property"> = 40</em><a class="headerlink" href="#osivalidator.osi_rules.Severity.ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="osivalidator.osi_rules.Severity.INFO">
+<code class="sig-name descname">INFO</code><em class="property"> = 20</em><a class="headerlink" href="#osivalidator.osi_rules.Severity.INFO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="osivalidator.osi_rules.Severity.WARN">
+<code class="sig-name descname">WARN</code><em class="property"> = 30</em><a class="headerlink" href="#osivalidator.osi_rules.Severity.WARN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_rules.TypeRulesContainer">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules.</code><code class="sig-name descname">TypeRulesContainer</code><span class="sig-paren">(</span><em class="sig-param">nested_types=None</em>, <em class="sig-param">root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.TypeRulesContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#osivalidator.osi_rules.OSIRuleNode" title="osivalidator.osi_rules.OSIRuleNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">osivalidator.osi_rules.OSIRuleNode</span></code></a></p>
+<p>This class defines either a MessageType or a list of MessageTypes</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules.TypeRulesContainer.add_type">
+<code class="sig-name descname">add_type</code><span class="sig-paren">(</span><em class="sig-param">message_type</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.TypeRulesContainer.add_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a message type in the TypeContainer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.TypeRulesContainer.add_type_from_path">
+<code class="sig-name descname">add_type_from_path</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.TypeRulesContainer.add_type_from_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a message type in the TypeContainer by giving a path</p>
+<p>The path must be a list and the last element of the list is the name of
+the message type.</p>
+<p>If the message type already exists, it is not added.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules.TypeRulesContainer.get_type">
+<code class="sig-name descname">get_type</code><span class="sig-paren">(</span><em class="sig-param">message_path</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.TypeRulesContainer.get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a MessageType by name or path</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_rules_checker">
+<span id="osivalidator-osi-rules-checker-module"></span><h2>osivalidator.osi_rules_checker module<a class="headerlink" href="#module-osivalidator.osi_rules_checker" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all the rules which a message or an attribute of a message
+from an OSI scenario can comply.</p>
+<dl class="class">
+<dt id="osivalidator.osi_rules_checker.OSIRulesChecker">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_rules_checker.</code><code class="sig-name descname">OSIRulesChecker</code><span class="sig-paren">(</span><em class="sig-param">logger=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_checker.OSIRulesChecker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains all the available rules to write OSI requirements and
+the necessary methods to check their compliance.</p>
+<p>The rule methods are marked with *Rule*.</p>
+<dl class="method">
+<dt id="osivalidator.osi_rules_checker.OSIRulesChecker.check_rule">
+<code class="sig-name descname">check_rule</code><span class="sig-paren">(</span><em class="sig-param">parent_field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_checker.OSIRulesChecker.check_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a field comply with a rule given the *parent* field</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules_checker.OSIRulesChecker.log">
+<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param">severity</em>, <em class="sig-param">message</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_checker.OSIRulesChecker.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for the logger of the Validation Software</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_rules_checker.OSIRulesChecker.set_timestamp">
+<code class="sig-name descname">set_timestamp</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">ts_id</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_checker.OSIRulesChecker.set_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the timestamp for the analysis</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_rules_implementations">
+<span id="osivalidator-osi-rules-implementations-module"></span><h2>osivalidator.osi_rules_implementations module<a class="headerlink" href="#module-osivalidator.osi_rules_implementations" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the implementation of each rule to be used in the
+requirements or in the Doxygen documentation.</p>
+<p>All these rules are bounded into “OSIRulesChecker”, so they have access to all
+its attributes and methods.</p>
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.add_default_rules_to_subfields">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">add_default_rules_to_subfields</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">type_rules</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.add_default_rules_to_subfields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add default rules to fields of message fields (subfields)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.check_if">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">check_if</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.check_if" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate rules if some statements are verified:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> – statements</p></li>
+<li><p><strong>extra_params</strong> – <cite>do_check</cite>: rules to validate if statements are true</p></li>
+</ul>
+</dd>
+</dl>
+<p>Structure:</p>
+<p>a_field:
+- check_if:
+{params: statements}
+do_check:
+{extra_params: rules to validate if statements are true}</p>
+<p>Example:</p>
+<p>a_field:
+- check_if:
+- is_set: # Statements
+target: parent.environment.temperature
+- another_statement: statement parameter
+do_check: # Check that will be performed only if the statements are True
+- is_less_than_or_equal_to: 0.5
+- is_greater_than_or_equal_to: 0</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.first_element">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">first_element</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.first_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check rule for first message of a repeated field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – dictionary of rules to be checked for the first message
+(mapping)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_different">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_different</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_different" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number is different from the parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the inequality to check (float or bool)</p>
+</dd>
+</dl>
+<p>Example:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">-</span> <span class="pre">is_different:</span> <span class="pre">1</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_equal">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_equal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number equals the parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the equality to check (float or bool)</p>
+</dd>
+</dl>
+<p>Example:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">-</span> <span class="pre">is_equal:</span> <span class="pre">1</span>
+<span class="pre">`</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_global_unique">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_global_unique</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_global_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an ID in the OSI ID manager to later perform a ID
+consistency validation.</p>
+<p>Must be set to an Identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_greater_than">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_greater_than</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_greater_than" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number is over a minimum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the minimum (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_greater_than_or_equal_to">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_greater_than_or_equal_to</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_greater_than_or_equal_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number is over or equal a minimum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the minimum (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_iso_country_code">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_iso_country_code</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_iso_country_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a string is a ISO country code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_less_than">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_less_than</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_less_than" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number is under a maximum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the maximum (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_less_than_or_equal_to">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_less_than_or_equal_to</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_less_than_or_equal_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a number is under or equal a maximum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – the maximum (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_optional">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_optional</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd><p>This rule set the is_set one on a “Warning” severity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_set">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_set</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a field is set or if a repeated field has at least one element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.is_valid">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">is_valid</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a field message is valid, that is all the inner rules of the
+message in the field are complying.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.last_element">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">last_element</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.last_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check rule for last message of a repeated field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> – Field to which the rule needs to comply</p></li>
+<li><p><strong>rule</strong> – dictionary of rules to be checked for the last message
+(mapping)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.pre_check">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">pre_check</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.pre_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for rules that need to be checked before knowing that the field
+exists or not</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.refers">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">refers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.refers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a reference to another message by ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> – Type name of the refered object (string)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.repeated_selector">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">repeated_selector</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.repeated_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for selector-rules that take</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_rules_implementations.rule_implementation">
+<code class="sig-prename descclassname">osivalidator.osi_rules_implementations.</code><code class="sig-name descname">rule_implementation</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.rule_implementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to label rules method implementations</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_scenario">
+<span id="osivalidator-osi-scenario-module"></span><h2>osivalidator.osi_scenario module<a class="headerlink" href="#module-osivalidator.osi_scenario" title="Permalink to this headline">¶</a></h2>
+<p>Module that contain OSIDataContainer class to handle and manager OSI scenarios</p>
+<dl class="class">
+<dt id="osivalidator.osi_scenario.OSIScenario">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_scenario.</code><code class="sig-name descname">OSIScenario</code><span class="sig-paren">(</span><em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class wrap OSI data. It can import and decode OSI scenarios.</p>
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range">
+<code class="sig-name descname">cache_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put all messages from index begin to index end in the cache. Then the
+method <cite>get_message_by_index</cite> can access to it in a faster way.</p>
+<p>Using this method again clear the last cache and replace it with a new
+one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.from_file">
+<code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">type_name='SensorView'</em>, <em class="sig-param">max_index=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import a scenario from a file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.get_message_by_index">
+<code class="sig-name descname">get_message_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_message_by_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a message by its index. Try first to get it from the cache made
+by the method <cite>cache_messages_in_index_range</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range">
+<code class="sig-name descname">get_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield an iterator over messages of indexes between begin and end non
+included.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.retrieve_message_offsets">
+<code class="sig-name descname">retrieve_message_offsets</code><span class="sig-paren">(</span><em class="sig-param">max_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.retrieve_message_offsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the offsets of all the messages of the scenario and store them
+in the <cite>message_offsets</cite> attribute of the object</p>
+<p>It returns the number of discovered timesteps</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_scenario.OSIScenario.update_bar">
+<code class="sig-name descname">update_bar</code><span class="sig-paren">(</span><em class="sig-param">progress_bar</em>, <em class="sig-param">new_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.update_bar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_scenario.get_size_from_file_stream">
+<code class="sig-prename descclassname">osivalidator.osi_scenario.</code><code class="sig-name descname">get_size_from_file_stream</code><span class="sig-paren">(</span><em class="sig-param">file_object</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.get_size_from_file_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a file size from a file stream given in parameters</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator.osi_validator_logger">
+<span id="osivalidator-osi-validator-logger-module"></span><h2>osivalidator.osi_validator_logger module<a class="headerlink" href="#module-osivalidator.osi_validator_logger" title="Permalink to this headline">¶</a></h2>
+<p>Module which contains OSIValidatorLogger and some logging filters who wrap the
+Python logging module.</p>
+<dl class="class">
+<dt id="osivalidator.osi_validator_logger.ErrorFilter">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">ErrorFilter</code><span class="sig-paren">(</span><em class="sig-param">name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.ErrorFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
+<p>Filter for the logger which take INFO and ERROR messages</p>
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.ErrorFilter.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.ErrorFilter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the specified record is to be logged.</p>
+<p>Is the specified record to be logged? Returns 0 for no, nonzero for
+yes. If deemed appropriate, the record may be modified in-place.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_validator_logger.InfoFilter">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">InfoFilter</code><span class="sig-paren">(</span><em class="sig-param">name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.InfoFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
+<p>Filter which only take INFO messages</p>
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.InfoFilter.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.InfoFilter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the specified record is to be logged.</p>
+<p>Is the specified record to be logged? Returns 0 for no, nonzero for
+yes. If deemed appropriate, the record may be modified in-place.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">OSIValidatorLogger</code><span class="sig-paren">(</span><em class="sig-param">debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper for the Python logger</p>
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.create_database">
+<code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">output_path</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.create_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an SQLite database and set the table for logs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.debug">
+<code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for python debug logger</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.error">
+<code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for python error logger</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.flush">
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><em class="sig-param">log_queue=None</em>, <em class="sig-param">timestamp=None</em>, <em class="sig-param">from_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush the ouput to the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_queue</strong> – list of tuple of messages that have to be flushed</p></li>
+<li><p><strong>timestamp</strong> – if not None, only the timestamp given will be flushed</p></li>
+<li><p><strong>from_id</strong> – if None, the timestamp will be in millisecond,
+otherwhise it will be the id of the timestamp according
+to the lookup table given in this parameter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.info">
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for python info logger</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param">debug</em>, <em class="sig-param">verbose</em>, <em class="sig-param">output_path</em>, <em class="sig-param">files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the OSI Validator Logger. Useful to reinit the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.init_cli_output">
+<code class="sig-name descname">init_cli_output</code><span class="sig-paren">(</span><em class="sig-param">verbose</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.init_cli_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the CLI output</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.init_logging_storage">
+<code class="sig-name descname">init_logging_storage</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">output_path</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.init_logging_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize (create or set handler) for the specified logging storage</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.synthetize_results_from_sqlite">
+<code class="sig-name descname">synthetize_results_from_sqlite</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.synthetize_results_from_sqlite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aggregate the sqlite log and output a synthetized version of the
+result</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.OSIValidatorLogger.warning">
+<code class="sig-name descname">warning</code><span class="sig-paren">(</span><em class="sig-param">timestamp</em>, <em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.OSIValidatorLogger.warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for python warning logger</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="osivalidator.osi_validator_logger.WarningFilter">
+<em class="property">class </em><code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">WarningFilter</code><span class="sig-paren">(</span><em class="sig-param">name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.WarningFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Filter</span></code></p>
+<p>Filter for the logger which take INFO and WARNING messages</p>
+<dl class="method">
+<dt id="osivalidator.osi_validator_logger.WarningFilter.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.WarningFilter.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the specified record is to be logged.</p>
+<p>Is the specified record to be logged? Returns 0 for no, nonzero for
+yes. If deemed appropriate, the record may be modified in-place.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_validator_logger.log">
+<code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for logging function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="osivalidator.osi_validator_logger.print_synthesis">
+<code class="sig-prename descclassname">osivalidator.osi_validator_logger.</code><code class="sig-name descname">print_synthesis</code><span class="sig-paren">(</span><em class="sig-param">title</em>, <em class="sig-param">color</em>, <em class="sig-param">ranges_messages_table</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_validator_logger.print_synthesis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the (range, messages) table in a nice way, precessed with title and
+the number of messages</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-osivalidator">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-osivalidator" title="Permalink to this headline">¶</a></h2>
+<p>OSI Validator</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../osi-visualizer/README.html" class="btn btn-neutral float-right" title="OSI Visualizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="writing-rules.html" class="btn btn-neutral float-left" title="How to write rules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

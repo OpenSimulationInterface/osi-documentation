@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>v2.1.0 - OSI “Agile Andretti” &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="v2.2.0 - OSI “Brave Brabham”" href="v02.02.00.html" />
+    <link rel="prev" title="v2.0.0 - OSI Initial Commit" href="v02.00.00.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osifiles.html">OSI files description</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../releases.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="v02.00.00.html">v2.0.0 - OSI Initial Commit</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v2.1.0 - OSI “Agile Andretti”</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#purpose">Purpose:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Content/Changes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remarks">Remarks:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html">v2.2.0 - OSI “Brave Brabham”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html#v2-2-1-osi-brave-brabham-update-1">v2.2.1 - OSI “Brave Brabham”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html">v3.0.0 - OSI “Cosmic Coulthard”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html#v3-0-1-osi-cosmic-coulthard-update-1">v3.0.1 - OSI “Cosmic Coulthard”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html">v3.1.0 - OSI “Dynamic Duncan”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-1-osi-dynamic-duncan-update-1">v3.1.1 - OSI “Dynamic Duncan”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-2-osi-dynamic-duncan-update-2">v3.1.2 - OSI “Dynamic Duncan”, Update 2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">How to install</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coordinatesystem.html">Coordinate systems and reference points</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howtocontribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../releases.html">Releases</a> &raquo;</li>
+        
+      <li>v2.1.0 - OSI “Agile Andretti”</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/osi/releases/v02.01.00.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="v2-1-0-osi-agile-andretti">
+<h1>v2.1.0 - OSI “Agile Andretti”<a class="headerlink" href="#v2-1-0-osi-agile-andretti" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/commit/db6dd3fabcca340e2aaf98c34d4959b63fb2b712">4fbc2e9</a></p>
+<div class="section" id="purpose">
+<h2>Purpose:<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>This is the initial BASE VERSION for Tool Development.</p>
+</div>
+<div class="section" id="id1">
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/1?closed=1">Content/Changes</a>:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="remarks">
+<h2>Remarks:<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h2>
+<p>We will now release the versions using the name of a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_Formula_One_drivers">Formula 1 driver</a>!
+Naming convention: “adjective + last name driver” -&gt; Alliteration necessary!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="v02.02.00.html" class="btn btn-neutral float-right" title="v2.2.0 - OSI “Brave Brabham”" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="v02.00.00.html" class="btn btn-neutral float-left" title="v2.0.0 - OSI Initial Commit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
