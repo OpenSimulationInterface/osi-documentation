@@ -72,7 +72,7 @@ When adding rules to \*.proto files make sure that the rules are encapsulated be
         // is_less_than_or_equal_to: 10
         // \endrules
         // 
-        optional int ExampleField = 1;
+        optional int64 ExampleField = 1;
     }
     
 The rule defintion must follow the syntax which is defined by a regex search which you can see below:
@@ -92,7 +92,7 @@ The rule defintion must follow the syntax which is defined by a regex search whi
     'last_element':                 r'\b(last_element)\b: \{.*: \d+\.\d+\}'                                                 # last_element: {is_equal: 0.13, is_greater_than: 0.13}
     'is_optional':                  r'\b(is_optional)\b'                                                                    # is_optional
     'check_if':                     r'\b(check_if)\b: \[\{.*: \d+(\.\d+)?, target: .*}, \{do_check: \{.*: \d+(\.\d+)?}}]'   # check_if: [{is_equal: 2, is_greater_than: 3, target: this.y}, {do_check: {is_equal: 1, is_less_than: 3}}]
-    'is_set':                       r'\b(is_set)\b'}                                                                        # is_set
+    'is_set':                       r'\b(is_set)\b'                                                                         # is_set
 
 You can check the correctness of these regular expression on `regex101 <https://regex101.com/r/6tomm6/16>`_.
 

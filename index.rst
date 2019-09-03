@@ -83,15 +83,11 @@ The authors' vision is to be able to connect any automated driving function to a
 
 .. toctree::
     :maxdepth: 2
-    :caption: Contributer's Guidelines:
+    :caption: General Contributer's Guidelines:
 
     osi/howtocontribute
     osi/commenting
     osi/versioning
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Contributer's Guidelines:
 
 
 API Reference

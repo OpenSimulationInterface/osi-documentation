@@ -1,0 +1,48 @@
+# Use distribution Ubuntu 18.04 Bionic
+dist: bionic
+
+# Handle dependencies in separate directory.
+before_install:
+    - DEPS_DIR="${HOME}/deps"
+    - mkdir -p "${DEPS_DIR}"
+    - cd "${DEPS_DIR}"
+
+# Install necessary packages.
+install:
+    - sudo apt-get install python3-pip
+    - sudo pip3 install sphinx_rtd_theme
+    - sudo pip3 install sphinx_git
+
+# Environment variables.
+env:
+  global:
+    - GH_REPO_ORG=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 1`
+    - GH_REPO_NAME=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 2`
+    - GH_REPO_REF="github.com/$GH_REPO_ORG/$GH_REPO_NAME.git"
+
+# Addons necessary for documentation.
+addons:
+    apt:
+        packages:
+            - python3-sphinx
+
+# Change directory back to default build directory.
+before_script:
+    - cd "${TRAVIS_BUILD_DIR}"
+
+# Run the build script and generate documentation.
+script:
+    # Debug 
+    - which python3
+    - which python
+    - make html
+
+# Deploy the documentation on github (only for master branch).
+deploy:
+    provider: pages
+    skip_cleanup: true
+    local_dir: doc/html
+    keep-history: true
+    github_token: ${GH_REPO_TOKEN}
+    on: 
+      branch: master 

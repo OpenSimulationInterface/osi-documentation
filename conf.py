@@ -8,8 +8,8 @@ sys.path.append('/home/vkreschenski/Documents/Projects/OSIValidation/osi-validat
 # -- Project information -----------------------------------------------------
 
 project = 'Open Simulation Interface'
-copyright = '2019, Carlo van Driesten, Timo Hanke, Nils Hirsenkorn, Pilar Gracias Ramos, Mark Schiementz, Sebastian Schneider'
-author = 'Carlo van Driesten, Timo Hanke, Nils Hirsenkorn, Pilar Gracias Ramos, Mark Schiementz, Sebastian Schneider'
+copyright = '2019, Carlo van Driesten'
+author = 'Carlo van Driesten'
 
 # The short X.Y version
 # version = ''
@@ -38,8 +38,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
