@@ -35,6 +35,7 @@ script:
     - git clone https://github.com/OpenSimulationInterface/osi-validation.git
     - cd osi-validation
     - git checkout development
+    - sudo python3 setup.py install
     - cd ..
     - make html
 
