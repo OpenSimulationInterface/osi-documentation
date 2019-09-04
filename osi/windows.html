@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -188,57 +197,63 @@
 <h1>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h1>
 <p>All the following steps are to be executed with admin rights:</p>
 <ol class="arabic simple">
-<li><p>Install cmake (v3.7 or higher required):</p></li>
+<li>Install cmake (v3.7 or higher required):</li>
 </ol>
 <ul class="simple">
-<li><p>Go to the <a class="reference external" href="https://cmake.org/download/">cmake download page</a></p></li>
-<li><p>Download and install <a class="reference external" href="https://cmake.org/files/v3.8/cmake-3.8.0-rc2-win64-x64.msi">cmake 3.8.0</a></p></li>
+<li>Go to the <a class="reference external" href="https://cmake.org/download/">cmake download page</a></li>
+<li>Download and install <a class="reference external" href="https://cmake.org/files/v3.8/cmake-3.8.0-rc2-win64-x64.msi">cmake 3.8.0</a></li>
 </ul>
 <ol class="arabic simple" start="2">
-<li><p>Install Protobuf (v2.6.1 or higher required):</p></li>
+<li>Install Protobuf (v2.6.1 or higher required):</li>
 </ol>
 <ul>
-<li><p>Go to the <a class="reference external" href="https://github.com/protocolbuffers/protobuf/releases/tag/v2.6.1">ProtoBuffer Download Page</a></p></li>
-<li><p>Download and unzip <a class="reference external" href="https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.zip">protobuf-2.6.1.zip</a></p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">protobuf.sln</span></code> file in the unzipped <code class="docutils literal notranslate"><span class="pre">protobuf-2.6.1\vsprojects</span></code> with Visual Studio</p></li>
-<li><p>Build <code class="docutils literal notranslate"><span class="pre">libprotobuf</span></code>, <code class="docutils literal notranslate"><span class="pre">libprotobuf-lite</span></code> , <code class="docutils literal notranslate"><span class="pre">libprotoc</span> <span class="pre">and</span> <span class="pre">protoc</span></code></p></li>
-<li><p>Set the environmental variables:</p>
+<li><p class="first">Go to the <a class="reference external" href="https://github.com/protocolbuffers/protobuf/releases/tag/v2.6.1">ProtoBuffer Download Page</a></p>
+</li>
+<li><p class="first">Download and unzip <a class="reference external" href="https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.zip">protobuf-2.6.1.zip</a></p>
+</li>
+<li><p class="first">Open the <code class="docutils literal"><span class="pre">protobuf.sln</span></code> file in the unzipped <code class="docutils literal"><span class="pre">protobuf-2.6.1\vsprojects</span></code> with Visual Studio</p>
+</li>
+<li><p class="first">Build <code class="docutils literal"><span class="pre">libprotobuf</span></code>, <code class="docutils literal"><span class="pre">libprotobuf-lite</span></code> , <code class="docutils literal"><span class="pre">libprotoc</span> <span class="pre">and</span> <span class="pre">protoc</span></code></p>
+</li>
+<li><p class="first">Set the environmental variables:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">path-to-the-directory-containing-the-just-created-protoc.exe-file</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PROTOBUF</span> <span class="pre">=</span> <span class="pre">path-to-the-unzipped-protobuf-2.6.1-directory</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PROTOBUF_SRC_ROOT_FOLDER</span> <span class="pre">=</span> <span class="pre">%PROTOBUF%</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_INCLUDE_PATH</span> <span class="pre">=</span> <span class="pre">path-to-the-directory-protobuf-2.6.1\src-containing-the-folder-google</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CMAKE_LIBRARY_PATH</span> <span class="pre">=</span> <span class="pre">path-to-the-directory-containing-the-three-created-library-files</span></code></p></li>
+<li><code class="docutils literal"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">path-to-the-directory-containing-the-just-created-protoc.exe-file</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROTOBUF</span> <span class="pre">=</span> <span class="pre">path-to-the-unzipped-protobuf-2.6.1-directory</span></code></li>
+<li><code class="docutils literal"><span class="pre">PROTOBUF_SRC_ROOT_FOLDER</span> <span class="pre">=</span> <span class="pre">%PROTOBUF%</span></code></li>
+<li><code class="docutils literal"><span class="pre">CMAKE_INCLUDE_PATH</span> <span class="pre">=</span> <span class="pre">path-to-the-directory-protobuf-2.6.1\src-containing-the-folder-google</span></code></li>
+<li><code class="docutils literal"><span class="pre">CMAKE_LIBRARY_PATH</span> <span class="pre">=</span> <span class="pre">path-to-the-directory-containing-the-three-created-library-files</span></code></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
 <ol class="arabic simple" start="3">
-<li><p>Now you are ready to build and install OSI (v2.1.1 or higher required):</p></li>
+<li>Now you are ready to build and install OSI (v2.1.1 or higher required):</li>
 </ol>
 <ul>
-<li><p>Clone <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open simulation interface</a> from GitHub and navigate to this directory using a terminal.</p></li>
-<li><p>Create a new directory <code class="docutils literal notranslate"><span class="pre">build</span></code> and navigate into it using the following command:`` mkdir build &amp; cd build``</p></li>
-<li><p>Generate a Visual Studio solution file suitable for your version and set the <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> to a directory where the OSI library and headers should be installed.</p>
+<li><p class="first">Clone <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open simulation interface</a> from GitHub and navigate to this directory using a terminal.</p>
+</li>
+<li><p class="first">Create a new directory <code class="docutils literal"><span class="pre">build</span></code> and navigate into it using the following command:`` mkdir build &amp; cd build``</p>
+</li>
+<li><p class="first">Generate a Visual Studio solution file suitable for your version and set the <code class="docutils literal"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> to a directory where the OSI library and headers should be installed.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>When no generator is mentioned: cmake would opt for the newest version of Visual Studio available. To see all supported generators please run: <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-–help</span></code>.</p></li>
-<li><p>To build a 64-bit OSI library, please add to the generator name the desired target platform Win64. In this case please make sure that the <code class="docutils literal notranslate"><span class="pre">protoc.exe</span></code> executable and protobuf libraries are also 64-bit and set the environmental variables to the appropriate paths.</p></li>
-<li><p>When <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> is not set: cmake would opt for the configured default install directory.</p></li>
+<li>When no generator is mentioned: cmake would opt for the newest version of Visual Studio available. To see all supported generators please run: <code class="docutils literal"><span class="pre">cmake</span> <span class="pre">-–help</span></code>.</li>
+<li>To build a 64-bit OSI library, please add to the generator name the desired target platform Win64. In this case please make sure that the <code class="docutils literal"><span class="pre">protoc.exe</span></code> executable and protobuf libraries are also 64-bit and set the environmental variables to the appropriate paths.</li>
+<li>When <code class="docutils literal"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> is not set: cmake would opt for the configured default install directory.</li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake .. <span class="o">[</span>-G &lt;generator&gt;<span class="o">]</span> <span class="o">[</span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;osi-install-directory&gt;<span class="o">]</span>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake .. <span class="o">[</span>-G &lt;generator&gt;<span class="o">]</span> <span class="o">[</span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;osi-install-directory&gt;<span class="o">]</span>
 </pre></div>
 </div>
 <p>Example using Visual Studio 12 2013 and C:/Libraries/open_simulation_interface as an install directory:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake .. -G <span class="s2">&quot;Visual Studio 12 2013&quot;</span> -DCMAKE_INSTALL_PREFIX<span class="o">=</span>C:/Libraries/open_simulation_interface
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake .. -G <span class="s2">&quot;Visual Studio 12 2013&quot;</span> -DCMAKE_INSTALL_PREFIX<span class="o">=</span>C:/Libraries/open_simulation_interface
 </pre></div>
 </div>
 <p>Now you can build and install OSI using the following commands:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake --build . <span class="o">[</span>--config Release<span class="o">]</span>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake --build . <span class="o">[</span>--config Release<span class="o">]</span>
 cmake --build . --target install
 </pre></div>
 </div>
@@ -247,11 +262,11 @@ P.S.: If you build in a Release configuration, please make sure that the protobu
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Go to the python download page and download the executable installer.</p></li>
-<li><p>Run the installer (with admin rights).</p></li>
-<li><p>In the first step of the installer check ‘Add Python 3.6 to PATH’, then finish installation.</p></li>
-<li><p>Clone open simulation interface from GitHub and navigate to this directory using a terminal.</p></li>
-<li><p>Run the following command: python setup.py install</p></li>
+<li>Go to the python download page and download the executable installer.</li>
+<li>Run the installer (with admin rights).</li>
+<li>In the first step of the installer check ‘Add Python 3.6 to PATH’, then finish installation.</li>
+<li>Clone open simulation interface from GitHub and navigate to this directory using a terminal.</li>
+<li>Run the following command: python setup.py install</li>
 </ol>
 </div>
 </div>

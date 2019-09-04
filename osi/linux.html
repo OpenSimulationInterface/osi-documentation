@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -187,43 +196,43 @@
   <div class="section" id="linux">
 <h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic simple">
-<li><p>Install <code class="docutils literal notranslate"><span class="pre">cmake</span></code> (minimum required version 3.7):</p></li>
+<li>Install <code class="docutils literal"><span class="pre">cmake</span></code> (minimum required version 3.7):</li>
 </ol>
 <ul class="simple">
-<li><p>Download cmake 3.7.2</p></li>
-<li><p>Unzip it and navigate to the unzipped folder.</p></li>
-<li><p>Run the following commands:</p></li>
+<li>Download cmake 3.7.2</li>
+<li>Unzip it and navigate to the unzipped folder.</li>
+<li>Run the following commands:</li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./bootstrap
+<div class="highlight-shell"><div class="highlight"><pre><span></span>./bootstrap
 make
 sudo make install
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Install Protobuf 2.6.1: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></p></li>
-<li><p>Clone open simulation interface from GitHub and navigate to this directory using a terminal.</p></li>
-<li><p>Create a new directory build and navigate into it using the following command:</p></li>
+<li>Install Protobuf 2.6.1: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></li>
+<li>Clone open simulation interface from GitHub and navigate to this directory using a terminal.</li>
+<li>Create a new directory build and navigate into it using the following command:</li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir build
+<div class="highlight-shell"><div class="highlight"><pre><span></span>mkdir build
 <span class="nb">cd</span> build
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>Run the following commands to build and install OSI (v2.1.1 or higher required):</p></li>
+<li>Run the following commands to build and install OSI (v2.1.1 or higher required):</li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake .. <span class="o">[</span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/usr/local<span class="o">]</span>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake .. <span class="o">[</span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/usr/local<span class="o">]</span>
 make
 sudo make install
 </pre></div>
 </div>
-<p>P.S.: To build a 32-bit target under 64-bit linux, please add <code class="docutils literal notranslate"><span class="pre">-DCMAKE_CXX_FLAGS=&quot;-m32&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command. In this case, please make sure that <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> is in a 32-bit mode too.</p>
+<p>P.S.: To build a 32-bit target under 64-bit linux, please add <code class="docutils literal"><span class="pre">-DCMAKE_CXX_FLAGS=&quot;-m32&quot;</span></code> to the <code class="docutils literal"><span class="pre">cmake</span></code> command. In this case, please make sure that <code class="docutils literal"><span class="pre">protobuf</span></code> is in a 32-bit mode too.</p>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Get protobuf compiler 2.6.1: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></p></li>
-<li><p>Install the missing python packages: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-setuptools</span></code></p></li>
-<li><p>Clone <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open simulation interface</a>  and navigate to this directory using a terminal.</p></li>
-<li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p></li>
+<li>Get protobuf compiler 2.6.1: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></li>
+<li>Install the missing python packages: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-setuptools</span></code></li>
+<li>Clone <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open simulation interface</a>  and navigate to this directory using a terminal.</li>
+<li>Run the following command: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></li>
 </ol>
 </div>
 </div>

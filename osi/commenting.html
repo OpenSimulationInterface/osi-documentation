@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -190,12 +199,12 @@
 <p>For any additional comment styles see <a class="reference external" href="http://www.doxygen.nl/manual/commands.html">list</a> of doxygen commands.</p>
 <div class="section" id="commenting-with-block-syntax">
 <h2>Commenting with block syntax<a class="headerlink" href="#commenting-with-block-syntax" title="Permalink to this headline">¶</a></h2>
-<p>Please start every comment with <code class="docutils literal notranslate"><span class="pre">//</span></code> and do not use <code class="docutils literal notranslate"><span class="pre">///</span></code>.</p>
+<p>Please start every comment with <code class="docutils literal"><span class="pre">//</span></code> and do not use <code class="docutils literal"><span class="pre">///</span></code>.</p>
 </div>
 <div class="section" id="commenting-on-messages">
 <h2>Commenting on messages<a class="headerlink" href="#commenting-on-messages" title="Permalink to this headline">¶</a></h2>
 <p>When writing comments specifying messages please use the following template:</p>
-<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
+<div class="highlight-protobuf"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">ExampleMessage</span>
 <span class="p">{</span>
@@ -208,7 +217,7 @@
 <h2>Commenting on fields and enums<a class="headerlink" href="#commenting-on-fields-and-enums" title="Permalink to this headline">¶</a></h2>
 <p>Doxygen will interpret a comment consisting just of one single line as a brief description.
 However to keep the style of the documentation coherent there should not be any brief description when commenting on fields and enums. That is why adding one more empty line when commenting just one line becomes necessary.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
+<div class="highlight-proto"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">ExampleMessage</span>
 <span class="p">{</span>
@@ -217,7 +226,7 @@ However to keep the style of the documentation coherent there should not be any 
 </pre></div>
 </div>
 <p>There is no need for an extra empty line if you are commenting more than one line anyways.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;If you write two or more lines of comments...&gt;</span>
+<div class="highlight-proto"><div class="highlight"><pre><span></span><span class="c1">// &lt;If you write two or more lines of comments...&gt;</span>
 <span class="c1">// &lt;... you do not need to add an empty line&gt;</span>
 <span class="kd">message</span> <span class="nc">ExampleMessage</span>
 <span class="p">{</span>
@@ -228,8 +237,8 @@ However to keep the style of the documentation coherent there should not be any 
 </div>
 <div class="section" id="commenting-on-fields-with-rules">
 <span id="commenting-with-rules"></span><h2>Commenting on fields with rules<a class="headerlink" href="#commenting-on-fields-with-rules" title="Permalink to this headline">¶</a></h2>
-<p>When adding rules to *.proto files make sure that the rules are encapsulated between the <code class="docutils literal notranslate"><span class="pre">\rules</span></code> and <code class="docutils literal notranslate"><span class="pre">\endrules</span></code> tags. The rule <code class="docutils literal notranslate"><span class="pre">is_set</span></code> needs always to be provided.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// Description ExampleMessage</span>
+<p>When adding rules to *.proto files make sure that the rules are encapsulated between the <code class="docutils literal"><span class="pre">\rules</span></code> and <code class="docutils literal"><span class="pre">\endrules</span></code> tags. The rule <code class="docutils literal"><span class="pre">is_set</span></code> needs always to be provided.</p>
+<div class="highlight-proto"><div class="highlight"><pre><span></span><span class="c1">// Description ExampleMessage</span>
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">ExampleMessage</span>
 <span class="p">{</span>
@@ -246,7 +255,7 @@ However to keep the style of the documentation coherent there should not be any 
 </pre></div>
 </div>
 <p>The rule defintion must follow the syntax which is defined by a regex search which you can see below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;is_greater_than&#39;</span><span class="p">:</span>              <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than)\b: \d+(\.\d+)?&#39;</span>                                                   <span class="c1"># is_greater_than: 1</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="s1">&#39;is_greater_than&#39;</span><span class="p">:</span>              <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than)\b: \d+(\.\d+)?&#39;</span>                                                   <span class="c1"># is_greater_than: 1</span>
 <span class="s1">&#39;is_greater_than_or_equal_to&#39;</span><span class="p">:</span>  <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                       <span class="c1"># is_greater_than_or_equal_to: 1</span>
 <span class="s1">&#39;is_less_than_or_equal_to&#39;</span><span class="p">:</span>     <span class="sa">r</span><span class="s1">&#39;\b(is_less_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                          <span class="c1"># is_less_than_or_equal_to: 10</span>
 <span class="s1">&#39;is_less_than&#39;</span><span class="p">:</span>                 <span class="sa">r</span><span class="s1">&#39;\b(is_less_than)\b: \d+(\.\d+)?&#39;</span>                                                      <span class="c1"># is_less_than: 2</span>
@@ -267,23 +276,23 @@ However to keep the style of the documentation coherent there should not be any 
 <div class="section" id="commenting-with-doxygen-references">
 <h2>Commenting with doxygen references<a class="headerlink" href="#commenting-with-doxygen-references" title="Permalink to this headline">¶</a></h2>
 <p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put ‘c’ in front of the message name.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
+<div class="highlight-proto"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
 </pre></div>
 </div>
 <p>If you want to reference a nested message, use ‘::’ instead of ‘.’ as separators in comments.</p>
 <p>If you want to reference message fields and enums add ‘#’ to the enum/field name.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
+<div class="highlight-proto"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="commenting-with-links">
 <h2>Commenting with links<a class="headerlink" href="#commenting-with-links" title="Permalink to this headline">¶</a></h2>
-<p>With <code class="docutils literal notranslate"><span class="pre">[&lt;add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;](&lt;add</span> <span class="pre">url</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;)</span></code> you can integrate a link to a certain homepage while commenting.</p>
+<p>With <code class="docutils literal"><span class="pre">[&lt;add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;](&lt;add</span> <span class="pre">url</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;)</span></code> you can integrate a link to a certain homepage while commenting.</p>
 </div>
 <div class="section" id="commenting-with-images">
 <h2>Commenting with images<a class="headerlink" href="#commenting-with-images" title="Permalink to this headline">¶</a></h2>
-<p>To include images write your comment similar to this <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">\image</span> <span class="pre">html</span> <span class="pre">&lt;Add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">image&gt;</span> <span class="pre">&quot;&lt;Add</span> <span class="pre">optional</span> <span class="pre">caption</span> <span class="pre">here&gt;&quot;</span></code>
-Please place all your included images in <code class="docutils literal notranslate"><span class="pre">./open-simulation-interface/docs/images</span></code>.</p>
+<p>To include images write your comment similar to this <code class="docutils literal"><span class="pre">//</span> <span class="pre">\image</span> <span class="pre">html</span> <span class="pre">&lt;Add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">image&gt;</span> <span class="pre">&quot;&lt;Add</span> <span class="pre">optional</span> <span class="pre">caption</span> <span class="pre">here&gt;&quot;</span></code>
+Please place all your included images in <code class="docutils literal"><span class="pre">./open-simulation-interface/docs/images</span></code>.</p>
 </div>
 </div>
 

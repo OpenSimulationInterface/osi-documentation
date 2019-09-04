@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -207,36 +216,37 @@ We are aligned with the ongoing discussions for the upcoming ISO 23150 standard 
 <div class="section" id="id1">
 <h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?page=1&amp;q=is%3Apr+is%3Aclosed+milestone%3Av3.0.0">Content/Changes</a>:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Added major version to package label (osi3), allowing concurrent use of OSI 2.x and OSI 3.x in one process.</p></li>
-<li><dl class="simple">
-<dt>Added new top-level messages (new concept SensorView (Configuration),etc.).</dt><dd><ul>
-<li><p>GroundTruth.</p></li>
-<li><p>SensorView.</p></li>
-<li><p>SensorData / FeatureData.</p></li>
-<li><p>SensorViewConfiguration (used for auto-configuration of SensorView).</p></li>
+<li>Added major version to package label (osi3), allowing concurrent use of OSI 2.x and OSI 3.x in one process.</li>
+<li><dl class="first docutils">
+<dt>Added new top-level messages (new concept SensorView (Configuration),etc.).</dt>
+<dd><ul class="first last">
+<li>GroundTruth.</li>
+<li>SensorView.</li>
+<li>SensorData / FeatureData.</li>
+<li>SensorViewConfiguration (used for auto-configuration of SensorView).</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Added technology-specific SensorView sub-messages to aid physical models.</p></li>
-<li><p>Introduced conceptual separation of “SensorModels” and “LogicModels”.</p></li>
-<li><p>Extended enumerations (e.g. traffic sign Type according to StVO, vehicle Type, etc.).</p></li>
-<li><p>Improved messages and definitions (additional RoadConditions, country code in GT, AmbientIllumination, etc.).</p></li>
-<li><p>Use ISO 8855 coordinate systems (incompatible with earlier OSI versions).</p></li>
-<li><p>Redefined DetectedXXX messages.</p></li>
-<li><p>Introduced DetectedStationaryObjects.</p></li>
-<li><p>Merged MovingObjects and Vehicle messages.</p></li>
-<li><p>Redefined Lane messages (with separated lane boundary messages and intersections).</p></li>
-<li><p>Redefined TrafficLight messages.</p></li>
-<li><p>Redefined TrafficSigns (1 x MainSign + n x SupplementarySign inclusive BaseStationary).</p></li>
-<li><p>New FeatureData messages (rework of previous LowLevelData message) - aligned with an upcoming standard ISO 23150.</p></li>
-<li><p>FeatureData usable for fusion units.</p></li>
-<li><p>Extension and clarification of the existing doxygen documentation.</p></li>
-<li><p>Improved doxygen collaboration diagrams.</p></li>
-<li><p>Build process improvements, added install targets.</p></li>
-<li><p>Made proto definitions compatible with proto3 restrictions to allow concurrent use with proto3-only implementations in the future.</p></li>
-<li><p>Fixed version-checking of transmitted data.</p></li>
-<li><p>AND MUCH MORE ENJOY!!!</p></li>
+<li>Added technology-specific SensorView sub-messages to aid physical models.</li>
+<li>Introduced conceptual separation of “SensorModels” and “LogicModels”.</li>
+<li>Extended enumerations (e.g. traffic sign Type according to StVO, vehicle Type, etc.).</li>
+<li>Improved messages and definitions (additional RoadConditions, country code in GT, AmbientIllumination, etc.).</li>
+<li>Use ISO 8855 coordinate systems (incompatible with earlier OSI versions).</li>
+<li>Redefined DetectedXXX messages.</li>
+<li>Introduced DetectedStationaryObjects.</li>
+<li>Merged MovingObjects and Vehicle messages.</li>
+<li>Redefined Lane messages (with separated lane boundary messages and intersections).</li>
+<li>Redefined TrafficLight messages.</li>
+<li>Redefined TrafficSigns (1 x MainSign + n x SupplementarySign inclusive BaseStationary).</li>
+<li>New FeatureData messages (rework of previous LowLevelData message) - aligned with an upcoming standard ISO 23150.</li>
+<li>FeatureData usable for fusion units.</li>
+<li>Extension and clarification of the existing doxygen documentation.</li>
+<li>Improved doxygen collaboration diagrams.</li>
+<li>Build process improvements, added install targets.</li>
+<li>Made proto definitions compatible with proto3 restrictions to allow concurrent use with proto3-only implementations in the future.</li>
+<li>Fixed version-checking of transmitted data.</li>
+<li>AND MUCH MORE ENJOY!!!</li>
 </ul>
 </div>
 </div>
@@ -251,15 +261,15 @@ We are aligned with the ongoing discussions for the upcoming ISO 23150 standard 
 <div class="section" id="id4">
 <h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?page=1&amp;q=is%3Apr+is%3Aclosed+milestone%3Av3.0.1">Content/Changes</a>:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Added script to automatically convert the messages from proto2 to proto3 with on the wire compatibility</p></li>
-<li><p>cmake enhancements to enable multi-version support of OSI 2 and OSI 3</p></li>
-<li><p>Added Python 3 support</p></li>
-<li><p>Clarification of multiple comments</p></li>
-<li><p>Added explanatory images in the documentation</p></li>
-<li><p>centerline definition improved</p></li>
-<li><p>signal_strength definition in LidarSensorView corrected</p></li>
-<li><p>FeatureData::ambiguity_id definition clarified</p></li>
-<li><p>RadarSensorViewConfiguration::AntennaDiagram::response definition clarified</p></li>
+<li>Added script to automatically convert the messages from proto2 to proto3 with on the wire compatibility</li>
+<li>cmake enhancements to enable multi-version support of OSI 2 and OSI 3</li>
+<li>Added Python 3 support</li>
+<li>Clarification of multiple comments</li>
+<li>Added explanatory images in the documentation</li>
+<li>centerline definition improved</li>
+<li>signal_strength definition in LidarSensorView corrected</li>
+<li>FeatureData::ambiguity_id definition clarified</li>
+<li>RadarSensorViewConfiguration::AntennaDiagram::response definition clarified</li>
 </ul>
 </div>
 </div>

@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -206,21 +215,21 @@ the files in this folder follows the architecture of OSI for consistency.</p>
 <div class="section" id="file-structure">
 <h2>File structure<a class="headerlink" href="#file-structure" title="Permalink to this headline">¶</a></h2>
 <p>We will take this example of the <cite>osi_detectedlane.yml</cite> file:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">DetectedLane</span><span class="p">:</span>
-  <span class="nt">header</span><span class="p">:</span>
+<div class="highlight-YAML"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">DetectedLane</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">header</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
-  <span class="nt">CandidateLane</span><span class="p">:</span>
-    <span class="nt">probability</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">in_range</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
-    <span class="nt">classification</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">CandidateLane</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">probability</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">in_range</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
+    <span class="l l-Scalar l-Scalar-Plain">classification</span><span class="p p-Indicator">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
 
-<span class="nt">DetectedLaneBoundary</span><span class="p">:</span>
-  <span class="nt">header</span><span class="p">:</span>
+<span class="l l-Scalar l-Scalar-Plain">DetectedLaneBoundary</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">header</span><span class="p p-Indicator">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
-  <span class="nt">boundary_line</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">each</span><span class="p">:</span>
-        <span class="nt">position</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">boundary_line</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">each</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">position</span><span class="p p-Indicator">:</span>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
 </pre></div>
 </div>
@@ -228,34 +237,34 @@ the files in this folder follows the architecture of OSI for consistency.</p>
 document, we will try to make associations between the <cite>YAML</cite> vocabulary
 according to its specifications and the <cite>Protocol Buffers</cite> one.</p>
 <p>Each root (at the top level) <cite>scalar</cite> represent a root message type (ex:
-<code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code>, <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>).</p>
+<code class="docutils literal"><span class="pre">DetectedLane</span></code>, <code class="docutils literal"><span class="pre">DetectedLaneBoundary</span></code>).</p>
 <p>The children <cite>scalars</cite> of each <cite>root scalar</cite> represent its fields if they are
-not camel-case (ex: <code class="docutils literal notranslate"><span class="pre">header</span></code> is a field of <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> ; <code class="docutils literal notranslate"><span class="pre">header</span></code> and
-<code class="docutils literal notranslate"><span class="pre">boundary_line</span></code> are fields of <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>). See <a class="reference internal" href="#child-message-type">Child message
+not camel-case (ex: <code class="docutils literal"><span class="pre">header</span></code> is a field of <code class="docutils literal"><span class="pre">DetectedLane</span></code> ; <code class="docutils literal"><span class="pre">header</span></code> and
+<code class="docutils literal"><span class="pre">boundary_line</span></code> are fields of <code class="docutils literal"><span class="pre">DetectedLaneBoundary</span></code>). See <a class="reference internal" href="#child-message-type">Child message
 type</a> for the camel-case scalars.</p>
-<p>Each field has a <cite>sequence</cite> (starting with an hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>) of scalar
+<p>Each field has a <cite>sequence</cite> (starting with an hyphen <code class="docutils literal"><span class="pre">-</span></code>) of scalar
 representing the <a class="reference internal" href="#rules">rules</a> that apply on.</p>
 </div>
 <div class="section" id="child-message-type">
 <h2>Child message type<a class="headerlink" href="#child-message-type" title="Permalink to this headline">¶</a></h2>
-<p>A message type can have included message type. For example <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> has
-a <code class="docutils literal notranslate"><span class="pre">CandidateLane</span></code> included message type. They first seem similar has field
+<p>A message type can have included message type. For example <code class="docutils literal"><span class="pre">DetectedLane</span></code> has
+a <code class="docutils literal"><span class="pre">CandidateLane</span></code> included message type. They first seem similar has field
 but they are not: they contain, exactly like top-level message type, fields
 with rules.</p>
 </div>
 <div class="section" id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
-<p>The rules can either be without any parameter (ex: <code class="docutils literal notranslate"><span class="pre">is_set</span></code>) or with a
+<p>The rules can either be without any parameter (ex: <code class="docutils literal"><span class="pre">is_set</span></code>) or with a
 parameter.</p>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">in_range</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">in_range</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>In the case a rule has a parameter, it is written as a <cite>mapping</cite> (a <cite>scalar</cite>
 followed by a column “:”). What comes after the column is totally free and
-depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">in_range</span></code> accept a sequence
-of double ; the rule <code class="docutils literal notranslate"><span class="pre">each</span></code> ask for mappings. Other rules accept string,
+depends on the rule used. For instance, the rule <code class="docutils literal"><span class="pre">in_range</span></code> accept a sequence
+of double ; the rule <code class="docutils literal"><span class="pre">each</span></code> ask for mappings. Other rules accept string,
 number, etc.</p>
 <p>The available rule and their usage are explained here: <span class="xref std std-doc">rules</span>.</p>
 </div>
@@ -267,7 +276,7 @@ will be throw if an exclamation mark is written at the end of the verb of a
 rule.</p>
 <div class="section" id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>in_range!: [0, 1]
+<div class="highlight-default"><div class="highlight"><pre><span></span>in_range!: [0, 1]
 </pre></div>
 </div>
 </div>

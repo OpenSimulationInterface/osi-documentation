@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -206,12 +215,12 @@ document are to be interpreted as described in <a class="reference external" hre
 <p>The current specification supports the following kinds of models, that
 can be packaged as FMUs:</p>
 <ul class="simple">
-<li><p>Environmental effect models, which consume <code class="docutils literal notranslate"><span class="pre">osi::SensorView</span></code> as input
-and produce <code class="docutils literal notranslate"><span class="pre">osi::SensorView</span></code> as output,</p></li>
-<li><p>Sensor models, which consume <code class="docutils literal notranslate"><span class="pre">osi::SensorView</span></code> as input and generate
-<code class="docutils literal notranslate"><span class="pre">osi::SensorData</span></code> as output, and</p></li>
-<li><p>Logical models, like e.g. sensor fusion models, which consume
-<code class="docutils literal notranslate"><span class="pre">osi::SensorData</span></code> as input and produce <code class="docutils literal notranslate"><span class="pre">osi::SensorData</span></code> as output.</p></li>
+<li>Environmental effect models, which consume <code class="docutils literal"><span class="pre">osi::SensorView</span></code> as input
+and produce <code class="docutils literal"><span class="pre">osi::SensorView</span></code> as output,</li>
+<li>Sensor models, which consume <code class="docutils literal"><span class="pre">osi::SensorView</span></code> as input and generate
+<code class="docutils literal"><span class="pre">osi::SensorData</span></code> as output, and</li>
+<li>Logical models, like e.g. sensor fusion models, which consume
+<code class="docutils literal"><span class="pre">osi::SensorData</span></code> as input and produce <code class="docutils literal"><span class="pre">osi::SensorData</span></code> as output.</li>
 </ul>
 <p>Additionally complex models that combine various aspects of the model
 kinds above are possible, however configuration and setup of such FMUs
@@ -227,13 +236,13 @@ document all specifications in the FMI 2.0 standard apply as-is.</p>
 <h2>Basic Conventions<a class="headerlink" href="#basic-conventions" title="Permalink to this headline">¶</a></h2>
 <p>The following basic conventions apply:</p>
 <ul>
-<li><p>In order to mark the FMU as being conformant to this version of the
+<li><p class="first">In order to mark the FMU as being conformant to this version of the
 specification the following annotation MUST be placed into the
-<code class="docutils literal notranslate"><span class="pre">VendorAnnotations</span></code> element of the <code class="docutils literal notranslate"><span class="pre">modelDescription.xml</span></code>:</p>
-<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+<code class="docutils literal"><span class="pre">VendorAnnotations</span></code> element of the <code class="docutils literal"><span class="pre">modelDescription.xml</span></code>:</p>
+<div class="code XML highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Tool</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;net.pmsf.osmp&quot;</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">osmp</span><span class="o">=</span><span class="s2">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="o">&gt;&lt;</span><span class="n">osmp</span><span class="p">:</span><span class="n">osmp</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span> <span class="n">osi</span><span class="o">-</span><span class="n">version</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="o">/&gt;&lt;/</span><span class="n">Tool</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>where the <code class="docutils literal notranslate"><span class="pre">osi-version</span></code> attribute SHOULD contain the major, minor
+<p>where the <code class="docutils literal"><span class="pre">osi-version</span></code> attribute SHOULD contain the major, minor
 and patch version number of the open simulation interface
 specification that this model was compiled against. This is to ensure
 that the importing environment can determine which OSI version to use
@@ -242,21 +251,24 @@ cases of major version changes.</p>
 <p>In case this specification is used without OSI data being transported
 across binary variables, this attribute SHOULD be left unspecified.</p>
 </li>
-<li><p>The variable naming convention of the FMU MUST be <code class="docutils literal notranslate"><span class="pre">structured</span></code>.</p></li>
-<li><p>The default experiment step size SHOULD be supplied and SHOULD
+<li><p class="first">The variable naming convention of the FMU MUST be <code class="docutils literal"><span class="pre">structured</span></code>.</p>
+</li>
+<li><p class="first">The default experiment step size SHOULD be supplied and SHOULD
 indicate the actual model refresh rate (for the input side) in
 seconds, i.e. it is OK for the simulation to only call the FMU
 fmi2DoStep routine at this implied rate. If it is not supplied the
 configuration of the model communication rate is determined from any
 input configuration data the model provides (see below) or has to be
-performed manually.</p></li>
-<li><p>Besides the model parameters, inputs and outputs specified below the
+performed manually.</p>
+</li>
+<li><p class="first">Besides the model parameters, inputs and outputs specified below the
 model can have additional inputs, outputs, and parameters (i.e. all
 kinds of variables as specified in the FMI 2.0 standard), as long as
 the sensor model can be run correctly with all of those variables
 left unconnected and at their default values. The sensor model MUST
 NOT rely on other connections (beside the specified data connections)
-being made.</p></li>
+being made.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="definition-of-binary-variables">
@@ -265,17 +277,17 @@ being made.</p></li>
 binary data as provided for by the OSI [ProtocolBuffer][] definitions,
 the following convention is used to define such variables for FMI 2.0:</p>
 <ul>
-<li><p>For a notional binary variable of a name given by <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code>, which
+<li><p class="first">For a notional binary variable of a name given by <code class="docutils literal"><span class="pre">&lt;prefix&gt;</span></code>, which
 MUST be a valid structured name according to FMI 2.0, three actual
 FMU integer variables MUST be defined:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;.base.lo</span></code> (Integer)</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">&lt;prefix&gt;.base.lo</span></code> (Integer)</p>
 <p>This is the lower (i.e. least significant) 32bit address of the
 binary data buffer to be passed into or out of the model, cast
 into a signed 32bit integer (without changing bit values, i.e. as
 by reinterpret_cast in C++).</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;.base.hi</span></code> (Integer)</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">&lt;prefix&gt;.base.hi</span></code> (Integer)</p>
 <p>This is the higher (i.e. most significant) 32bit address of the
 binary data buffer to be passed into or out of the model, cast
 into a signed 32bit integer (without changing bit values, i.e. as
@@ -285,7 +297,7 @@ by reinterpret_cast in C++).</p>
 order to support FMUs including both 32bit and 64bit
 implementations).</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;.size</span></code> (Integer)</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">&lt;prefix&gt;.size</span></code> (Integer)</p>
 <p>This is the size of the binary data buffer to be passed into or
 out of the model as a signed 32bit integer (restricting the
 maximum size of binary data buffers being passed around to &lt; 2GB
@@ -293,10 +305,11 @@ of size).</p>
 </li>
 </ul>
 </li>
-<li><p>The three actual variables MUST have matching causality and
+<li><p class="first">The three actual variables MUST have matching causality and
 variability, which will be the causality and variability of the
-notional binary variable.</p></li>
-<li><p>Unless the causality and variability combination of the actual
+notional binary variable.</p>
+</li>
+<li><p class="first">Unless the causality and variability combination of the actual
 variables precludes this (i.e. for fixed or tunable
 calculatedParameters), the variables MUST have a start value of 0,
 indicating that no valid binary data buffer is available.</p>
@@ -305,138 +318,151 @@ indicating that no valid binary data buffer is available.</p>
 valid binary data buffer is available and must handle this case
 safely.</p>
 </li>
-<li><p>The three actual variables MUST contain an annotation of the
-following form in the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> child element of their
-<code class="docutils literal notranslate"><span class="pre">ScalarVariable</span></code> element of the <code class="docutils literal notranslate"><span class="pre">modelDescription.xml</span></code>:</p>
-<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;&lt;prefix&gt;&quot;</span> <span class="na">role=</span><span class="s">&quot;&lt;role&gt;&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;&lt;mime-type&gt;&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+<li><p class="first">The three actual variables MUST contain an annotation of the
+following form in the <code class="docutils literal"><span class="pre">Annotations</span></code> child element of their
+<code class="docutils literal"><span class="pre">ScalarVariable</span></code> element of the <code class="docutils literal"><span class="pre">modelDescription.xml</span></code>:</p>
+<div class="code XML highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Tool</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;net.pmsf.osmp&quot;</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">osmp</span><span class="o">=</span><span class="s2">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="o">&gt;&lt;</span><span class="n">osmp</span><span class="p">:</span><span class="n">osmp</span><span class="o">-</span><span class="n">binary</span><span class="o">-</span><span class="n">variable</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&lt;prefix&gt;&quot;</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;&lt;role&gt;&quot;</span> <span class="n">mime</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;&lt;mime-type&gt;&quot;</span><span class="o">/&gt;&lt;/</span><span class="n">Tool</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code> is the prefix as defined above, and <code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code> is
-either <code class="docutils literal notranslate"><span class="pre">base.lo</span></code>, <code class="docutils literal notranslate"><span class="pre">base.hi</span></code> or <code class="docutils literal notranslate"><span class="pre">size</span></code>, depending on the
+<p>where <code class="docutils literal"><span class="pre">&lt;prefix&gt;</span></code> is the prefix as defined above, and <code class="docutils literal"><span class="pre">&lt;role&gt;</span></code> is
+either <code class="docutils literal"><span class="pre">base.lo</span></code>, <code class="docutils literal"><span class="pre">base.hi</span></code> or <code class="docutils literal"><span class="pre">size</span></code>, depending on the
 variable.</p>
 <p>This annotation marks the variable as belonging to a notional binary
-variable named <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code>, with the given variable having the
-specified <code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>, and the transported binary content being
-specified by the <code class="docutils literal notranslate"><span class="pre">mime-type</span></code> attribute, as given by
-<code class="docutils literal notranslate"><span class="pre">&lt;mime-type&gt;</span></code>, which MUST be a valid MIME type specification.</p>
+variable named <code class="docutils literal"><span class="pre">&lt;prefix&gt;</span></code>, with the given variable having the
+specified <code class="docutils literal"><span class="pre">&lt;role&gt;</span></code>, and the transported binary content being
+specified by the <code class="docutils literal"><span class="pre">mime-type</span></code> attribute, as given by
+<code class="docutils literal"><span class="pre">&lt;mime-type&gt;</span></code>, which MUST be a valid MIME type specification.</p>
 <p>In the case of OSI-specified data, the MIME type MUST be of the form
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>
 indicating that the binary content is conformant to a given OSI
 version (3.0.0 in this example), containing a message of the type
-given in the <code class="docutils literal notranslate"><span class="pre">type</span></code> parameter (<code class="docutils literal notranslate"><span class="pre">``osi::SensorView``</span></code> in this
+given in the <code class="docutils literal"><span class="pre">type</span></code> parameter (<code class="docutils literal"><span class="pre">``osi::SensorView``</span></code> in this
 example).</p>
 <p>The version parameter given for the MIME type
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface</span></code> will default to the
-version specified in the <code class="docutils literal notranslate"><span class="pre">osi-version</span></code> attribute as part of the
-top-level <code class="docutils literal notranslate"><span class="pre">osmp:osmp</span></code> annotation. It is an error if a version
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface</span></code> will default to the
+version specified in the <code class="docutils literal"><span class="pre">osi-version</span></code> attribute as part of the
+top-level <code class="docutils literal"><span class="pre">osmp:osmp</span></code> annotation. It is an error if a version
 number is specified neither as part of the MIME type nor using the
-<code class="docutils literal notranslate"><span class="pre">osi-version</span></code> attribute.</p>
+<code class="docutils literal"><span class="pre">osi-version</span></code> attribute.</p>
 <p>It is an error if the mime-type specified in the annotations for one
 notional binary variable (i.e. with identical name attribute) differ,
 or if there is not exactly one variable of each role for the same
 name.</p>
 </li>
-<li><p>The FMU MUST NOT contain any variable that is named <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code>:
+<li><p class="first">The FMU MUST NOT contain any variable that is named <code class="docutils literal"><span class="pre">&lt;prefix&gt;</span></code>:
 This restriction ensures that there is no conflict between the
-notional binary variable defined and another variable.</p></li>
-<li><p>The guaranteed lifetime of the binary data buffer pointer transported
+notional binary variable defined and another variable.</p>
+</li>
+<li><p class="first">The guaranteed lifetime of the binary data buffer pointer transported
 through the actual variables is defined for each kind of variable
-specified below.</p></li>
+specified below.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="sensor-view-inputs">
 <h2>Sensor View Inputs<a class="headerlink" href="#sensor-view-inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Sensor view inputs MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn</span></code>. If more than one sensor view input is to be
+<li>Sensor view inputs MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorViewIn</span></code>. If more than one sensor view input is to be
 configured, the prefix MUST be extended by an array index designator,
-i.e. two inputs will use the prefixes <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn[1]</span></code> and
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn[2]</span></code>. The indices MUST start at 1 and MUST be
+i.e. two inputs will use the prefixes <code class="docutils literal"><span class="pre">OSMPSensorViewIn[1]</span></code> and
+<code class="docutils literal"><span class="pre">OSMPSensorViewIn[2]</span></code>. The indices MUST start at 1 and MUST be
 consecutive. If only one sensor view input is needed the prefix MUST
-be just <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn</span></code>.</p></li>
-<li><p>Each sensor view input MUST be defined as a notional discrete binary
-input variable, as specified above, with <code class="docutils literal notranslate"><span class="pre">causality=&quot;input&quot;</span></code> and
-<code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
-<li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorView</span></code>,
+be just <code class="docutils literal"><span class="pre">OSMPSensorViewIn</span></code>.</li>
+<li>Each sensor view input MUST be defined as a notional discrete binary
+input variable, as specified above, with <code class="docutils literal"><span class="pre">causality=&quot;input&quot;</span></code> and
+<code class="docutils literal"><span class="pre">variability=&quot;discrete&quot;</span></code>.</li>
+<li>The MIME type of the variable MUST specify the <code class="docutils literal"><span class="pre">type=SensorView</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>.</p></li>
-<li><p>The sensor view MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi::SensorView</span></code> (see the OSI
-specification documentation for more details).</p></li>
-<li><p>The guaranteed lifetime of the sensor view protocol buffer pointer
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>.</li>
+<li>The sensor view MUST be encoded as <code class="docutils literal"><span class="pre">osi::SensorView</span></code> (see the OSI
+specification documentation for more details).</li>
+<li>The guaranteed lifetime of the sensor view protocol buffer pointer
 provided as input to the FMU MUST be from the time of the call to
-<code class="docutils literal notranslate"><span class="pre">fmi2SetInteger</span></code> that provides those values until the end of the
-following <code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> call, i.e. the sensor model can rely on the
+<code class="docutils literal"><span class="pre">fmi2SetInteger</span></code> that provides those values until the end of the
+following <code class="docutils literal"><span class="pre">fmi2DoStep</span></code> call, i.e. the sensor model can rely on the
 provided buffer remaining valid from the moment it is passed in until
 the end of the corresponding calculation, and thus does not need to
-copy the contents in that case (zero copy input).</p></li>
-<li><p>The sensor view passed to the model must contain data as specified by
-the corresponding <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfiguration</span></code> parameter.</p></li>
+copy the contents in that case (zero copy input).</li>
+<li>The sensor view passed to the model must contain data as specified by
+the corresponding <code class="docutils literal"><span class="pre">OSMPSensorViewInConfiguration</span></code> parameter.</li>
 </ul>
 </div>
 <div class="section" id="sensor-view-input-configuration">
 <h2>Sensor View Input Configuration<a class="headerlink" href="#sensor-view-input-configuration" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>For each notional sensor view input variable (named with the base
-prefix <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn</span></code>) a corresponding calculatedParameter
-(named with base prefix <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfigRequest</span></code>) and a
-parameter (named with base prefix <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code>) CAN
+<li><p class="first">For each notional sensor view input variable (named with the base
+prefix <code class="docutils literal"><span class="pre">OSMPSensorViewIn</span></code>) a corresponding calculatedParameter
+(named with base prefix <code class="docutils literal"><span class="pre">OSMPSensorViewInConfigRequest</span></code>) and a
+parameter (named with base prefix <code class="docutils literal"><span class="pre">OSMPSensorViewInConfig</span></code>) CAN
 exist. If the calculatedParameter exists, then the corresponding
-parameter MUST exist.</p></li>
-<li><p>If the calculatedParameter exists it MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfigRequest</span></code>, and MUST have a <code class="docutils literal notranslate"><span class="pre">causality</span></code> of
-<code class="docutils literal notranslate"><span class="pre">calculatedParameter</span></code> and a variability of either <code class="docutils literal notranslate"><span class="pre">fixed</span></code> or
-<code class="docutils literal notranslate"><span class="pre">tunable</span></code>.</p></li>
-<li><p>If the parameter exists it MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code>, and MUST have a <code class="docutils literal notranslate"><span class="pre">causality</span></code> of
-<code class="docutils literal notranslate"><span class="pre">parameter</span></code> and a variability of either <code class="docutils literal notranslate"><span class="pre">fixed</span></code> or <code class="docutils literal notranslate"><span class="pre">tunable</span></code>,
+parameter MUST exist.</p>
+</li>
+<li><p class="first">If the calculatedParameter exists it MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorViewInConfigRequest</span></code>, and MUST have a <code class="docutils literal"><span class="pre">causality</span></code> of
+<code class="docutils literal"><span class="pre">calculatedParameter</span></code> and a variability of either <code class="docutils literal"><span class="pre">fixed</span></code> or
+<code class="docutils literal"><span class="pre">tunable</span></code>.</p>
+</li>
+<li><p class="first">If the parameter exists it MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorViewInConfig</span></code>, and MUST have a <code class="docutils literal"><span class="pre">causality</span></code> of
+<code class="docutils literal"><span class="pre">parameter</span></code> and a variability of either <code class="docutils literal"><span class="pre">fixed</span></code> or <code class="docutils literal"><span class="pre">tunable</span></code>,
 where the variability MUST match the variability of the corresponding
-calculatedParameter.</p></li>
-<li><p>The MIME type of both variables MUST specify the
-<code class="docutils literal notranslate"><span class="pre">type=SensorViewConfiguration</span></code>, e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorViewConfiguration;</span> <span class="pre">version=3.0.0</span></code>.</p></li>
-<li><p>The variables values MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi::SensorViewConfiguration</span></code>
-(see the OSI specification documentation for more details).</p></li>
-<li><p>As long as no non-zero value has been assigned to the corresponding
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code> parameter, the calculated parameter value
+calculatedParameter.</p>
+</li>
+<li><p class="first">The MIME type of both variables MUST specify the
+<code class="docutils literal"><span class="pre">type=SensorViewConfiguration</span></code>, e.g.
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorViewConfiguration;</span> <span class="pre">version=3.0.0</span></code>.</p>
+</li>
+<li><p class="first">The variables values MUST be encoded as <code class="docutils literal"><span class="pre">osi::SensorViewConfiguration</span></code>
+(see the OSI specification documentation for more details).</p>
+</li>
+<li><p class="first">As long as no non-zero value has been assigned to the corresponding
+<code class="docutils literal"><span class="pre">OSMPSensorViewInConfig</span></code> parameter, the calculated parameter value
 MUST be the desired sensor view configuration for the corresponding
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewIn</span></code> variable, based on model internal requirements
+<code class="docutils literal"><span class="pre">OSMPSensorViewIn</span></code> variable, based on model internal requirements
 and any other parameters on which this calculated parameter depends.</p>
 <p>Once a non-zero value has been assigned to the corresponding
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code> parameter, the value of this calculated
+<code class="docutils literal"><span class="pre">OSMPSensorViewInConfig</span></code> parameter, the value of this calculated
 parameter MUST be an encoded OSI protocol buffer containing the same
 data as the parameter.</p>
 </li>
-<li><p>The simulation environment SHOULD, during FMI initialization mode,
-query the <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfigRequest</span></code> calculatedParameter
+<li><p class="first">The simulation environment SHOULD, during FMI initialization mode,
+query the <code class="docutils literal"><span class="pre">OSMPSensorViewInConfigRequest</span></code> calculatedParameter
 value, and, taking this value into account, determine a suitable and
 supported SensorView configuration. The simulation environment MUST set this
-configuration using the corresponding <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code> parameter
-before exiting initialization mode.</p></li>
+configuration using the corresponding <code class="docutils literal"><span class="pre">OSMPSensorViewInConfig</span></code> parameter
+before exiting initialization mode.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="sensor-view-outputs">
 <h2>Sensor View Outputs<a class="headerlink" href="#sensor-view-outputs" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Sensor view outputs are present in environmental effect models.</p></li>
-<li><p>Sensor view outputs MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewOut</span></code>. If more than one sensor view output is to be
+<li><p class="first">Sensor view outputs are present in environmental effect models.</p>
+</li>
+<li><p class="first">Sensor view outputs MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorViewOut</span></code>. If more than one sensor view output is to be
 provided, the prefix MUST be extended by an array index designator,
-i.e. two outputs will use the prefixes <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewOut[1]</span></code> and
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorViewOut[2]</span></code>. The indices MUST start at 1 and MUST be
+i.e. two outputs will use the prefixes <code class="docutils literal"><span class="pre">OSMPSensorViewOut[1]</span></code> and
+<code class="docutils literal"><span class="pre">OSMPSensorViewOut[2]</span></code>. The indices MUST start at 1 and MUST be
 consecutive. If only one sensor view output is needed the prefix MUST
-be just <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewOut</span></code>.</p></li>
-<li><p>Each sensor view output MUST be defined as a notional discrete binary
-output variable, as specified above, with <code class="docutils literal notranslate"><span class="pre">causality=&quot;output&quot;</span></code> and
-<code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
-<li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorView</span></code>,
+be just <code class="docutils literal"><span class="pre">OSMPSensorViewOut</span></code>.</p>
+</li>
+<li><p class="first">Each sensor view output MUST be defined as a notional discrete binary
+output variable, as specified above, with <code class="docutils literal"><span class="pre">causality=&quot;output&quot;</span></code> and
+<code class="docutils literal"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p>
+</li>
+<li><p class="first">The MIME type of the variable MUST specify the <code class="docutils literal"><span class="pre">type=SensorView</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>.</p></li>
-<li><p>The sensor view MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi::SensorView</span></code> (see the OSI
-specification documentation for more details).</p></li>
-<li><p>The guaranteed lifetime of the sensor view protocol buffer pointer
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.0.0</span></code>.</p>
+</li>
+<li><p class="first">The sensor view MUST be encoded as <code class="docutils literal"><span class="pre">osi::SensorView</span></code> (see the OSI
+specification documentation for more details).</p>
+</li>
+<li><p class="first">The guaranteed lifetime of the sensor view protocol buffer pointer
 provided as output by the FMU MUST be from the end of the call to
-<code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> that calculated this buffer until the beginning of the
-<strong>second</strong> <code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> call after that, i.e. the simulation engine
+<code class="docutils literal"><span class="pre">fmi2DoStep</span></code> that calculated this buffer until the beginning of the
+<strong>second</strong> <code class="docutils literal"><span class="pre">fmi2DoStep</span></code> call after that, i.e. the simulation engine
 can rely on the provided buffer remaining valid from the moment it is
 passed out until the end of the next Co-Simulation calculation cycle,
 and thus does not need to copy the contents in that case (zero copy
@@ -454,25 +480,29 @@ engine like e.g. MATLAB/Simulink, and get valid results.</p>
 <div class="section" id="sensor-data-outputs">
 <h2>Sensor Data Outputs<a class="headerlink" href="#sensor-data-outputs" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Sensor data outputs MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorDataOut</span></code>. If more than one sensor data output is to be
+<li><p class="first">Sensor data outputs MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorDataOut</span></code>. If more than one sensor data output is to be
 provided, the prefix MUST be extended by an array index designator,
-i.e. two outputs will use the prefixes <code class="docutils literal notranslate"><span class="pre">OSMPSensorDataOut[1]</span></code> and
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorDataOut[2]</span></code>. The indices MUST start at 1 and MUST be
+i.e. two outputs will use the prefixes <code class="docutils literal"><span class="pre">OSMPSensorDataOut[1]</span></code> and
+<code class="docutils literal"><span class="pre">OSMPSensorDataOut[2]</span></code>. The indices MUST start at 1 and MUST be
 consecutive. If only one sensor data output is needed the prefix MUST
-be just <code class="docutils literal notranslate"><span class="pre">OSMPSensorDataOut</span></code>.</p></li>
-<li><p>Each sensor data output MUST be defined as a notional discrete binary
-output variable, as specified above, with <code class="docutils literal notranslate"><span class="pre">causality=&quot;output&quot;</span></code> and
-<code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
-<li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorData</span></code>,
+be just <code class="docutils literal"><span class="pre">OSMPSensorDataOut</span></code>.</p>
+</li>
+<li><p class="first">Each sensor data output MUST be defined as a notional discrete binary
+output variable, as specified above, with <code class="docutils literal"><span class="pre">causality=&quot;output&quot;</span></code> and
+<code class="docutils literal"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p>
+</li>
+<li><p class="first">The MIME type of the variable MUST specify the <code class="docutils literal"><span class="pre">type=SensorData</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.0.0</span></code>.</p></li>
-<li><p>The sensor data MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi::SensorData</span></code> (see the OSI
-specification documentation for more details).</p></li>
-<li><p>The guaranteed lifetime of the sensor data protocol buffer pointer
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.0.0</span></code>.</p>
+</li>
+<li><p class="first">The sensor data MUST be encoded as <code class="docutils literal"><span class="pre">osi::SensorData</span></code> (see the OSI
+specification documentation for more details).</p>
+</li>
+<li><p class="first">The guaranteed lifetime of the sensor data protocol buffer pointer
 provided as output by the FMU MUST be from the end of the call to
-<code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> that calculated this buffer until the beginning of the
-<strong>second</strong> <code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> call after that, i.e. the simulation engine
+<code class="docutils literal"><span class="pre">fmi2DoStep</span></code> that calculated this buffer until the beginning of the
+<strong>second</strong> <code class="docutils literal"><span class="pre">fmi2DoStep</span></code> call after that, i.e. the simulation engine
 can rely on the provided buffer remaining valid from the moment it is
 passed out until the end of the next Co-Simulation calculation cycle,
 and thus does not need to copy the contents in that case (zero copy
@@ -490,32 +520,32 @@ engine like e.g. MATLAB/Simulink, and get valid results.</p>
 <div class="section" id="sensor-data-inputs">
 <h2>Sensor Data Inputs<a class="headerlink" href="#sensor-data-inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Sensor data inputs are present in logical models.</p></li>
-<li><p>Sensor data inputs MUST be named with the prefix
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorDataIn</span></code>. If more than one sensor data input is to be
+<li>Sensor data inputs are present in logical models.</li>
+<li>Sensor data inputs MUST be named with the prefix
+<code class="docutils literal"><span class="pre">OSMPSensorDataIn</span></code>. If more than one sensor data input is to be
 configured, the prefix MUST be extended by an array index designator,
-i.e. two inputs will use the prefixes <code class="docutils literal notranslate"><span class="pre">OSMPSensorDataIn[1]</span></code> and
-<code class="docutils literal notranslate"><span class="pre">OSMPSensorDataIn[2]</span></code>. The indices MUST start at 1 and MUST be
+i.e. two inputs will use the prefixes <code class="docutils literal"><span class="pre">OSMPSensorDataIn[1]</span></code> and
+<code class="docutils literal"><span class="pre">OSMPSensorDataIn[2]</span></code>. The indices MUST start at 1 and MUST be
 consecutive. If only one sensor data input is needed the prefix MUST
-be just <code class="docutils literal notranslate"><span class="pre">OSMPSensorDataIn</span></code>.</p></li>
-<li><p>Each sensor data input MUST be defined as a notional discrete binary
-input variable, as specified above, with <code class="docutils literal notranslate"><span class="pre">causality=&quot;input&quot;</span></code> and
-<code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
-<li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorData</span></code>,
+be just <code class="docutils literal"><span class="pre">OSMPSensorDataIn</span></code>.</li>
+<li>Each sensor data input MUST be defined as a notional discrete binary
+input variable, as specified above, with <code class="docutils literal"><span class="pre">causality=&quot;input&quot;</span></code> and
+<code class="docutils literal"><span class="pre">variability=&quot;discrete&quot;</span></code>.</li>
+<li>The MIME type of the variable MUST specify the <code class="docutils literal"><span class="pre">type=SensorData</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.0.0</span></code>.</p></li>
-<li><p>The sensor data MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi::SensorData</span></code> (see the OSI
-specification documentation for more details).</p></li>
-<li><p>The guaranteed lifetime of the sensor data protocol buffer pointer
+<code class="docutils literal"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.0.0</span></code>.</li>
+<li>The sensor data MUST be encoded as <code class="docutils literal"><span class="pre">osi::SensorData</span></code> (see the OSI
+specification documentation for more details).</li>
+<li>The guaranteed lifetime of the sensor data protocol buffer pointer
 provided as input to the FMU MUST be from the time of the call to
-<code class="docutils literal notranslate"><span class="pre">fmi2SetInteger</span></code> that provides those values until the end of the
-following <code class="docutils literal notranslate"><span class="pre">fmi2DoStep</span></code> call, i.e. the logical model can rely on the
+<code class="docutils literal"><span class="pre">fmi2SetInteger</span></code> that provides those values until the end of the
+following <code class="docutils literal"><span class="pre">fmi2DoStep</span></code> call, i.e. the logical model can rely on the
 provided buffer remaining valid from the moment it is passed in until
 the end of the corresponding calculation, and thus does not need to
-copy the contents in that case (zero copy input).</p></li>
-<li><p>The sensor data passed to the model depends on any prior models or
+copy the contents in that case (zero copy input).</li>
+<li>The sensor data passed to the model depends on any prior models or
 processes that generated the data, i.e. the exact details of the
-contents will depend on the processing pipeline.</p></li>
+contents will depend on the processing pipeline.</li>
 </ul>
 </div>
 <div class="section" id="examples">
@@ -525,65 +555,65 @@ OSMPDummySensor sub-directory of the examples directory of this
 repository. Below you can find an example modelDescription.xml file that
 would satisfy the requirements of this document for a sensor model FMU
 with one input and output and no additional features:</p>
-<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;fmiModelDescription</span>
-  <span class="na">fmiVersion=</span><span class="s">&quot;2.0&quot;</span>
-  <span class="na">modelName=</span><span class="s">&quot;OSI Sensor Model Packaging Demo FMU&quot;</span>
-  <span class="na">guid=</span><span class="s">&quot;aabc2174e20f08597cfae6947c96bf86&quot;</span>
-  <span class="na">variableNamingConvention=</span><span class="s">&quot;structured&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;CoSimulation</span>
-    <span class="na">modelIdentifier=</span><span class="s">&quot;OSMPDemoFMU&quot;</span>
-    <span class="na">canNotUseMemoryManagementFunctions=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;DefaultExperiment</span> <span class="na">startTime=</span><span class="s">&quot;0.0&quot;</span> <span class="na">stepSize=</span><span class="s">&quot;0.020&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;VendorAnnotations&gt;</span>
-    <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-  <span class="nt">&lt;/VendorAnnotations&gt;</span>
-  <span class="nt">&lt;ModelVariables&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;0&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;1&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;2&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;3&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;4&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;5&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-  <span class="nt">&lt;/ModelVariables&gt;</span>
-  <span class="nt">&lt;ModelStructure&gt;</span>
-    <span class="nt">&lt;Outputs&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/Outputs&gt;</span>
-  <span class="nt">&lt;/ModelStructure&gt;</span>
-<span class="nt">&lt;/fmiModelDescription&gt;</span>
+<div class="code XML highlight-default"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;fmiModelDescription
+  fmiVersion=&quot;2.0&quot;
+  modelName=&quot;OSI Sensor Model Packaging Demo FMU&quot;
+  guid=&quot;aabc2174e20f08597cfae6947c96bf86&quot;
+  variableNamingConvention=&quot;structured&quot;&gt;
+  &lt;CoSimulation
+    modelIdentifier=&quot;OSMPDemoFMU&quot;
+    canNotUseMemoryManagementFunctions=&quot;true&quot;/&gt;
+  &lt;DefaultExperiment startTime=&quot;0.0&quot; stepSize=&quot;0.020&quot;/&gt;
+  &lt;VendorAnnotations&gt;
+    &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp version=&quot;1.0.0&quot; osi-version=&quot;3.0.0&quot;/&gt;&lt;/Tool&gt;
+  &lt;/VendorAnnotations&gt;
+  &lt;ModelVariables&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorViewIn.base.lo&quot; valueReference=&quot;0&quot; causality=&quot;input&quot; variability=&quot;discrete&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorViewIn&quot; role=&quot;base.lo&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorViewIn.base.hi&quot; valueReference=&quot;1&quot; causality=&quot;input&quot; variability=&quot;discrete&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorViewIn&quot; role=&quot;base.hi&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorViewIn.size&quot; valueReference=&quot;2&quot; causality=&quot;input&quot; variability=&quot;discrete&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorViewIn&quot; role=&quot;size&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorDataOut.base.lo&quot; valueReference=&quot;3&quot; causality=&quot;output&quot; variability=&quot;discrete&quot; initial=&quot;exact&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorDataOut&quot; role=&quot;base.lo&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorDataOut.base.hi&quot; valueReference=&quot;4&quot; causality=&quot;output&quot; variability=&quot;discrete&quot; initial=&quot;exact&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorDataOut&quot; role=&quot;base.hi&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+    &lt;ScalarVariable name=&quot;OSMPSensorDataOut.size&quot; valueReference=&quot;5&quot; causality=&quot;output&quot; variability=&quot;discrete&quot; initial=&quot;exact&quot;&gt;
+      &lt;Integer start=&quot;0&quot;/&gt;
+      &lt;Annotations&gt;
+        &lt;Tool name=&quot;net.pmsf.osmp&quot; xmlns:osmp=&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;&gt;&lt;osmp:osmp-binary-variable name=&quot;OSMPSensorDataOut&quot; role=&quot;size&quot; mime-type=&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;/&gt;&lt;/Tool&gt;
+      &lt;/Annotations&gt;
+    &lt;/ScalarVariable&gt;
+  &lt;/ModelVariables&gt;
+  &lt;ModelStructure&gt;
+    &lt;Outputs&gt;
+      &lt;Unknown index=&quot;4&quot;/&gt;
+      &lt;Unknown index=&quot;5&quot;/&gt;
+      &lt;Unknown index=&quot;6&quot;/&gt;
+    &lt;/Outputs&gt;
+  &lt;/ModelStructure&gt;
+&lt;/fmiModelDescription&gt;
 </pre></div>
 </div>
 </div>

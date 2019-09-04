@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -176,25 +185,25 @@
             
   <div class="section" id="versioning">
 <span id="id1"></span><h1>Versioning<a class="headerlink" href="#versioning" title="Permalink to this headline">¶</a></h1>
-<p>The version number is defined in <code class="docutils literal notranslate"><span class="pre">InterfaceVersion::version_number</span></code> in <code class="docutils literal notranslate"><span class="pre">osi_common.proto</span></code> as the field’s default value.</p>
+<p>The version number is defined in <code class="docutils literal"><span class="pre">InterfaceVersion::version_number</span></code> in <code class="docutils literal"><span class="pre">osi_common.proto</span></code> as the field’s default value.</p>
 <p><a class="reference external" href="https://semver.org/">Link to Semantic Versioning</a></p>
 <p><strong>Major</strong>: A change of the major version results in an incompatibility of code and recorded proto messages.</p>
 <ul class="simple">
-<li><p>An existing field with a number changes its meaning <code class="docutils literal notranslate"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field</span> <span class="pre">=</span> <span class="pre">1;</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">field</span> <span class="pre">=</span> <span class="pre">1;</span></code> Changing the definition of units or interpretation of a field</p></li>
-<li><p>Deleting a field and reusing the field number</p></li>
-<li><p>Changing the technology ProtoBuffer -&gt; FlatBuffer</p></li>
+<li>An existing field with a number changes its meaning <code class="docutils literal"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field</span> <span class="pre">=</span> <span class="pre">1;</span></code> -&gt; <code class="docutils literal"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">field</span> <span class="pre">=</span> <span class="pre">1;</span></code> Changing the definition of units or interpretation of a field</li>
+<li>Deleting a field and reusing the field number</li>
+<li>Changing the technology ProtoBuffer -&gt; FlatBuffer</li>
 </ul>
 <p><strong>Minor</strong>: A change of the minor version indicates remaining compatibility to previously recorded files. The code on the other hand needs fixing.</p>
 <ul class="simple">
-<li><p>Renaming of a field without changing the field number</p></li>
-<li><p>Changing the names of messages</p></li>
-<li><p>Adding a new field in a message without changing the numbering of other fields</p></li>
+<li>Renaming of a field without changing the field number</li>
+<li>Changing the names of messages</li>
+<li>Adding a new field in a message without changing the numbering of other fields</li>
 </ul>
 <p><strong>Patch</strong>: The compatibility of both recorded files and code remains.</p>
 <ul class="simple">
-<li><p>File or folder structure which does not affect including the code in other projects</p></li>
-<li><p>Changing or adding comments</p></li>
-<li><p>Clarification of text passages explaining the message content</p></li>
+<li>File or folder structure which does not affect including the code in other projects</li>
+<li>Changing or adding comments</li>
+<li>Clarification of text passages explaining the message content</li>
 </ul>
 </div>
 

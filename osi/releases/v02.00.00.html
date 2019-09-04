@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -208,13 +217,13 @@
 <div class="section" id="detailed-description">
 <h2>Detailed description:<a class="headerlink" href="#detailed-description" title="Permalink to this headline">¶</a></h2>
 <p><strong>Top level interfaces</strong>:
-OSI consists of two individual top level interfaces for object data: The <code class="docutils literal notranslate"><span class="pre">OSI::GroundTruth</span></code> and the <code class="docutils literal notranslate"><span class="pre">OSI::SensorData</span></code> interface.</p>
+OSI consists of two individual top level interfaces for object data: The <code class="docutils literal"><span class="pre">OSI::GroundTruth</span></code> and the <code class="docutils literal"><span class="pre">OSI::SensorData</span></code> interface.</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">OSI::GroundTruth</span></code> interface provides an exact view on the simulated objects in a global coordinate system. This message is populated using the internally available data of the used (driving)-simulation framework and is afterwards published to external subscribers with an exporter plugin.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">OSI::SensorData</span></code> interface describes the objects in the reference frame of a sensor for environmental perception. It is generated from a <code class="docutils literal notranslate"><span class="pre">OSI::GroundTruth</span></code> message and can either be used to directly connect to an automated driving function using ideal simulated data, or may serve as input for a sensor model simulating limited perception as a replication of real world sensor behavior.</p></li>
+<li>The <code class="docutils literal"><span class="pre">OSI::GroundTruth</span></code> interface provides an exact view on the simulated objects in a global coordinate system. This message is populated using the internally available data of the used (driving)-simulation framework and is afterwards published to external subscribers with an exporter plugin.</li>
+<li>The <code class="docutils literal"><span class="pre">OSI::SensorData</span></code> interface describes the objects in the reference frame of a sensor for environmental perception. It is generated from a <code class="docutils literal"><span class="pre">OSI::GroundTruth</span></code> message and can either be used to directly connect to an automated driving function using ideal simulated data, or may serve as input for a sensor model simulating limited perception as a replication of real world sensor behavior.</li>
 </ul>
 <p><strong>Low level interfaces</strong>:
-Additionally to the two top level interfaces, OSI contains an <code class="docutils literal notranslate"><span class="pre">OSI::LowLevelData</span></code> message. This message describes the output of a (physical) model of the measurement process before tracking and object hypothesis. It does not deal with object data, but may comprise the geometrical influence of 3D simulations e.g. generating Lidar point clouds with a ray-tracer plugin. In addition this message supports generic radar reflection lists and will be extended to supporting low level camera data in the future.</p>
+Additionally to the two top level interfaces, OSI contains an <code class="docutils literal"><span class="pre">OSI::LowLevelData</span></code> message. This message describes the output of a (physical) model of the measurement process before tracking and object hypothesis. It does not deal with object data, but may comprise the geometrical influence of 3D simulations e.g. generating Lidar point clouds with a ray-tracer plugin. In addition this message supports generic radar reflection lists and will be extended to supporting low level camera data in the future.</p>
 </div>
 </div>
 

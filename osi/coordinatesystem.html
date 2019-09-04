@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'v3.1.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -186,15 +195,15 @@
 <h2>Coordinate systems<a class="headerlink" href="#coordinate-systems" title="Permalink to this headline">¶</a></h2>
 <p>Currently three coordinate systems exist.</p>
 <ul class="simple">
-<li><p>world frame (for all quantities which are part of groundtruth)</p></li>
-<li><p>sensor frame (for all quantities which are part of sensordata)</p></li>
-<li><p>object frame (for local object coordinates like axle offset vectors)</p></li>
+<li>world frame (for all quantities which are part of groundtruth)</li>
+<li>sensor frame (for all quantities which are part of sensordata)</li>
+<li>object frame (for local object coordinates like axle offset vectors)</li>
 </ul>
 <p>The transformation between frames for a specific vehicle/sensor is performed using the information in</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::base::position</span> <span class="pre">and</span> <span class="pre">::orientation</span></code>: These define the position and orientation of the vehicle’s reference point, i.e. center of bounding box.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::vehicle_attributes::bbcenter_to_rear</span></code>: This defines the vehicle frame origin resp. the relative frame of the vehicle, i.e. it defines the offset of the rear axis center relative to the vehicle’s reference point (center of bounding box). This offset is static and given in vehicle coordinates.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SensorData::mounting_position</span></code>: This defines the sensor’s position and orientation relative to the vehicle frame’s origin, i.e. rear axis center, and therefore defines sensor frame origin resp. the relative frame of the sensor.</p></li>
+<li><code class="docutils literal"><span class="pre">GroundTruth::moving_object::base::position</span> <span class="pre">and</span> <span class="pre">::orientation</span></code>: These define the position and orientation of the vehicle’s reference point, i.e. center of bounding box.</li>
+<li><code class="docutils literal"><span class="pre">GroundTruth::moving_object::vehicle_attributes::bbcenter_to_rear</span></code>: This defines the vehicle frame origin resp. the relative frame of the vehicle, i.e. it defines the offset of the rear axis center relative to the vehicle’s reference point (center of bounding box). This offset is static and given in vehicle coordinates.</li>
+<li><code class="docutils literal"><span class="pre">SensorData::mounting_position</span></code>: This defines the sensor’s position and orientation relative to the vehicle frame’s origin, i.e. rear axis center, and therefore defines sensor frame origin resp. the relative frame of the sensor.</li>
 </ul>
 </div>
 <div class="section" id="reference-points">
