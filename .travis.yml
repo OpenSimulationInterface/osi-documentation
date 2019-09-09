@@ -1,6 +1,11 @@
 # Use distribution Ubuntu 18.04 Bionic
 dist: bionic
 
+language: python
+
+python:
+    - "3.6"
+
 # Handle dependencies in separate directory.
 before_install:
     - DEPS_DIR="${HOME}/deps"
@@ -9,10 +14,20 @@ before_install:
 
 # Install necessary packages.
 install:
-    - sudo apt-get install python3-pip
-    - sudo pip3 install sphinx_rtd_theme
-    - sudo pip3 install sphinx_git
-    - sudo apt-get install protobuf-compiler
+    # Install a recent version of the Protobuf
+    - |
+        PROTOBUF_URL="https://github.com/google/protobuf/releases/download/v3.2.0/protobuf-cpp-3.2.0.tar.gz"
+        if [ ! -f ${DEPS_DIR}/protobuf/install/bin/protoc ] ; then mkdir -p protobuf ; travis_retry wget --no-check-certificate --quiet -O - ${PROTOBUF_URL} | tar --strip-components=1 -xz -C protobuf ; cd protobuf ; ./configure --prefix=${DEPS_DIR}/protobuf/install ; make ; make install ; fi
+        export PATH=${DEPS_DIR}/protobuf/install/bin:${PATH}
+
+    # Install proto2cpp for doxygen
+    - |
+        PROTO2CPP_URL="https://github.com/OpenSimulationInterface/proto2cpp.git"
+        if [ ! -f ${DEPS_DIR}/proto2cpp ] ; then mkdir -p proto2cpp ; git clone ${PROTO2CPP_URL} ${DEPS_DIR}/proto2cpp ; fi
+        
+    - sudo apt-get install python3-pip protobuf-compiler
+    - pip install sphinx_rtd_theme
+    - pip install sphinx_git
 
 # Environment variables.
 env:
@@ -33,13 +48,18 @@ before_script:
 
 # Run the build script and generate documentation.
 script:
-    # - git clone https://github.com/OpenSimulationInterface/osi-validation.git
-    # - cd osi-validation
-    # - git checkout development
-    # - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
-    # - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
-    # - sudo python3 setup.py install
-    # - cd ..
+    # Install osi-validation to be parsed by sphinx
+    - git clone https://github.com/OpenSimulationInterface/osi-validation.git
+    - cd osi-validation
+    - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+    - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
+    - cd open-simulation-interface
+    - pip install .
+    - cd ..
+    - pip install .
+
+    # Build the html pages
+    - cd ..
     - make html
 
 # Deploy the documentation on github (only for master branch).

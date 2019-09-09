@@ -7,9 +7,10 @@ During the building process of open simulation interface (using the `proto2cpp <
 
 For any additional comment styles see `list <http://www.doxygen.nl/manual/commands.html>`_ of doxygen commands.
 
+
 Commenting with block syntax
 -----------------------------
-Please start every comment with ``//`` and do not use ``///``.
+Start every comment with ``//`` and do not use ``///``.
 
 
 Commenting on messages
@@ -22,26 +23,10 @@ When writing comments specifying messages please use the following template:
     //
     message ExampleMessage
     {
-    ...
     }
 
-
-Commenting on fields and enums
----------------------------------
 Doxygen will interpret a comment consisting just of one single line as a brief description.
-However to keep the style of the documentation coherent there should not be any brief description when commenting on fields and enums. That is why adding one more empty line when commenting just one line becomes necessary.
-
-.. code-block:: proto
-
-    // <Add your single line comment like this>
-    //
-    message ExampleMessage
-    {
-    ...
-    }
-
-
-There is no need for an extra empty line if you are commenting more than one line anyways.
+However to keep the style of the documentation coherent there should not be any brief description when commenting on fields and enums. That is why adding one more empty line when commenting becomes necessary. There is no need for an extra empty line if you are commenting more than one line anyways.
 
 .. code-block:: proto
     
@@ -49,32 +34,226 @@ There is no need for an extra empty line if you are commenting more than one lin
     // <... you do not need to add an empty line>
     message ExampleMessage
     {
-    ...
     }
 
-.. _commenting-with-rules:
+The commenting for messages follows the following order:
 
-Commenting on fields with rules
---------------------------------
-When adding rules to \*.proto files make sure that the rules are encapsulated between the ``\rules`` and ``\endrules`` tags. The rule ``is_set`` needs always to be provided.
+1. Brief description
+2. Image
+3. Detailed description
+4. Note
 
-.. code-block:: proto
-    
-    // Description ExampleMessage
-    //
-    message ExampleMessage
+First you define the message.
+
+.. code-block:: protobuf
+
+    message EnvironmentalConditions
     {
-        // Description ExampleField
+    }
+
+Next provide a brief description of the message with ``\brief``.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    message EnvironmentalConditions
+    {
+    }
+
+Then you can optionally provide an image to explain the message better. A picture is worth a thousand words.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    message EnvironmentalConditions
+    {
+    }
+
+You can optionally add a detailed description which can have multiple lines.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    message EnvironmentalConditions
+    {
+    }
+
+Lastly you can add a small note about the message and have a completely commented message.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+    }
+
+Commenting on fields and enums
+-----------------------------
+The commenting for fields and enums follows the following order:
+
+1. Explanation
+2. Unit
+3. Note
+4. Reference
+5. Rule
+
+First you add a field into a message with an appropriate index number.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        optional double atmospheric_pressure = 1;
+    }
+
+    
+
+Then you describe the field by adding an explanation. 
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        // Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).
+        //
+        optional double atmospheric_pressure = 1;
+    }
+
+Next you decide the unit of the field. 
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        // Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).
+        //
+        // Unit: [Pa]
+        //
+        optional double atmospheric_pressure = 1;
+    }
+
+You can optionally add a note to the field to describe the field better. 
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        // Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).
+        //
+        // Unit: [Pa]
+        //
+        // \note 100000 Pa = 1 bar
+        //
+        optional double atmospheric_pressure = 1;
+    }
+
+If you want to provide a reference to a DIN or to webpage which helps in understanding the field you can add a reference.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        // Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).
+        //
+        // Unit: [Pa]
+        //
+        // \note 100000 Pa = 1 bar
+        //
+        // \par Reference:
+        // - [1] [Definition atmospheric pressure](https://en.wikipedia.org/wiki/Atmospheric_pressure)
+        //
+        optional double atmospheric_pressure = 1;
+    }
+
+Finally you can provide a set of rules which this field needs to be followed. The available rules can be found below. When adding rules to \*.proto files make sure that the rules are encapsulated between the ``\rules`` and ``\endrules`` tags. Now you have a fully commented message with a fully commented field.
+
+.. code-block:: protobuf
+
+    // \brief The conditions of the environment.
+    //
+    // \image html EnvironmentalConditions.svg
+    //
+    // Definition of light, weather conditions and other environmental conditions.
+    //
+    // \note These conditions apply locally around the host vehicle.
+    //
+    message EnvironmentalConditions
+    {
+        // Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).
+        //
+        // Unit: [Pa]
+        //
+        // \note 100000 Pa = 1 bar
+        //
+        // \par Reference:
+        // - [1] [Definition atmospheric pressure](https://en.wikipedia.org/wiki/Atmospheric_pressure)
         //
         // \rules
-        // is_set
+        // is_optional
         // is_greater_than_or_equal_to: 3
         // is_less_than_or_equal_to: 10
         // \endrules
-        // 
-        optional int64 ExampleField = 1;
+        //
+        optional double atmospheric_pressure = 1;
     }
-    
+
+
 The rule defintion must follow the syntax which is defined by a regex search which you can see below:
 
 .. code-block:: python
@@ -92,9 +271,9 @@ The rule defintion must follow the syntax which is defined by a regex search whi
     'last_element':                 r'\b(last_element)\b: \{.*: \d+\.\d+\}'                                                 # last_element: {is_equal: 0.13, is_greater_than: 0.13}
     'is_optional':                  r'\b(is_optional)\b'                                                                    # is_optional
     'check_if':                     r'\b(check_if)\b: \[\{.*: \d+(\.\d+)?, target: .*}, \{do_check: \{.*: \d+(\.\d+)?}}]'   # check_if: [{is_equal: 2, is_greater_than: 3, target: this.y}, {do_check: {is_equal: 1, is_less_than: 3}}]
-    'is_set':                       r'\b(is_set)\b'                                                                         # is_set
 
 You can check the correctness of these regular expression on `regex101 <https://regex101.com/r/6tomm6/16>`_.
+
 
 .. is_greater_than: 2
 .. is_greater_than: 2.23
