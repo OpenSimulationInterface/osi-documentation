@@ -20,20 +20,11 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'v3.1.2',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -199,8 +190,8 @@
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>After installation you can call the command <code class="docutils literal"><span class="pre">osivalidator</span></code> in your terminal which has the following usage:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>usage: osivalidator [-h] [--rules RULES] --data DATA
+<p>After installation you can call the command <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> in your terminal which has the following usage:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: osivalidator [-h] [--rules RULES] --data DATA
                     [--type {SensorView,GroundTruth,SensorData}]
                     [--output OUTPUT] [--timesteps TIMESTEPS] [--debug]
                     [--verbose]
@@ -219,12 +210,12 @@ optional arguments:
 --verbose                                       Set the verbose mode to ON (display in console).
 </pre></div>
 </div>
-<p>To run the validation first you need to record an osi-message. Here we already have an osi-message which is called <code class="docutils literal"><span class="pre">osi_message_test.txt</span></code>. To validate the osi-message you simply call <code class="docutils literal"><span class="pre">osivalidator</span></code> and provide the path to the stored osi-message which is here in the folder <code class="docutils literal"><span class="pre">osi_message_data</span></code>:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>osivalidator --data osi_message_data/osi_message_test.txt
+<p>To run the validation first you need to record an osi-message. Here we already have an osi-message which is called <code class="docutils literal notranslate"><span class="pre">osi_message_test.txt</span></code>. To validate the osi-message you simply call <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> and provide the path to the stored osi-message which is here in the folder <code class="docutils literal notranslate"><span class="pre">osi_message_data</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>osivalidator --data osi_message_data/osi_message_test.txt
 </pre></div>
 </div>
 <p>After sucessfully running the validation the following output is generated:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>Instanciate logger
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Instanciate logger
 Read data
 Retrieving message offsets in scenario file until inf...
 |################################| 172098454/172098454
@@ -277,8 +268,8 @@ Ranges of timestamps    Message
 [0, 260]                SensorView.global_ground_truth.is_valid(None) does not comply in SensorView.global_ground_truth
 </pre></div>
 </div>
-<p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/development/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <a class="reference internal" href="../osi/commenting.html#commenting-with-rules"><span class="std std-ref">Commenting on fields with rules</span></a>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>Errors (NUMBER_ERRORS)
+<p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal notranslate"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/development/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <span class="xref std std-ref">commenting-with-rules</span>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Errors (NUMBER_ERRORS)
 Ranges of timestamps                Message
 --------------------------------    --------------------------------------------------------
 [START_TIMESTAMP, END_TIMESTAMP]    PATH_TO_RULE(VALUE) does not comply in PATH_TO_OSI_FIELD

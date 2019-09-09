@@ -20,20 +20,11 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'v3.1.2',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -237,22 +228,22 @@ component, i.e. it takes a SensorData message as input and returns a
 modified SensorData message as output. Specific errors should be handled
 as follows:</p>
 <ul class="simple">
-<li>Ghost objects / false positive: An additional SensorDataObject is
+<li><p>Ghost objects / false positive: An additional SensorDataObject is
 added to the list of objects in SensorData.object with
 SensorDataObject.model_internal_object.ground_truth_type set to
-kTypeGhost.</li>
-<li>False negative: The object is marked as not seen by the sensor by
+kTypeGhost.</p></li>
+<li><p>False negative: The object is marked as not seen by the sensor by
 setting the property SensorDataObject.model_internal_object.is_seen
 to false. The implementation of field-of-view calculation modules
 should respect this flag and never reset an object marked as not-seen
-to seen.</li>
+to seen.</p></li>
 </ul>
 </div>
 <div class="section" id="proto3-support">
 <h2>Proto3 Support<a class="headerlink" href="#proto3-support" title="Permalink to this headline">¶</a></h2>
 <p>For users that need to use proto3 syntax, for example because the
 language binding of choice only supports proto3 syntax out of the box, a
-shell script called <code class="docutils literal"><span class="pre">convert-to-proto3.sh</span></code> is supplied that converts
+shell script called <code class="docutils literal notranslate"><span class="pre">convert-to-proto3.sh</span></code> is supplied that converts
 all proto files to proto3 syntax. If this is run prior to building, the
 resulting libaries will use proto3, with the on-the-wire format
 remaining compatible between proto2 and proto3 libraries.</p>
@@ -272,25 +263,25 @@ the <a class="reference external" href="https://github.com/OpenSimulationInterfa
 <p>In order to generate the doxygen documentation for OSI, please follow
 the following steps:</p>
 <ol class="arabic simple">
-<li>Install <a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/download.html">Doxygen</a>, set an environmental variable ‘doxygen’ with the
+<li><p>Install <a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/download.html">Doxygen</a>, set an environmental variable ‘doxygen’ with the
 path to the binary file and add it to the PATH variable:
-<code class="docutils literal"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">%doxygen%</span></code>.</li>
-<li>Download the <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> repo. Copy the content of the repo
-proto2cpp to your desired <code class="docutils literal"><span class="pre">&lt;path-to-proto2cpp.py&gt;</span></code></li>
-<li>Install <a class="reference external" href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html">graphviz</a>, set an environmental variable ‘graphviz’ with
+<code class="docutils literal notranslate"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">%doxygen%</span></code>.</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> repo. Copy the content of the repo
+proto2cpp to your desired <code class="docutils literal notranslate"><span class="pre">&lt;path-to-proto2cpp.py&gt;</span></code></p></li>
+<li><p>Install <a class="reference external" href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html">graphviz</a>, set an environmental variable ‘graphviz’ with
 the path to the binary file and add it to the PATH variable:
-<code class="docutils literal"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">%graphviz%</span></code>.</li>
-<li>From the cmd navigate to the build directory and run:
-<code class="docutils literal"><span class="pre">cmd</span> <span class="pre">cmake</span> <span class="pre">-DFILTER_PROTO2CPP_PY_PATH=&lt;path-to-proto2cpp.py&gt;</span> <span class="pre">&lt;path-to-CMakeLists.txt&gt;</span></code></li>
-<li>The build process will then generate the doxygen documentation under
-the directory doc.</li>
+<code class="docutils literal notranslate"><span class="pre">PATH</span> <span class="pre">+=</span> <span class="pre">%graphviz%</span></code>.</p></li>
+<li><p>From the cmd navigate to the build directory and run:
+<code class="docutils literal notranslate"><span class="pre">cmd</span> <span class="pre">cmake</span> <span class="pre">-DFILTER_PROTO2CPP_PY_PATH=&lt;path-to-proto2cpp.py&gt;</span> <span class="pre">&lt;path-to-CMakeLists.txt&gt;</span></code></p></li>
+<li><p>The build process will then generate the doxygen documentation under
+the directory doc.</p></li>
 </ol>
 </div>
 <div class="section" id="citing">
 <h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
 <p>Use the following citation for referencing the OSI interface in your
 scientific work:</p>
-<div class="highlight-latex"><div class="highlight"><pre><span></span>@misc<span class="nb">{</span>osi.2017, author = <span class="nb">{</span>Hanke, Timo and
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>@misc<span class="nb">{</span>osi.2017, author = <span class="nb">{</span>Hanke, Timo and
 Hirsenkorn, Nils and <span class="nb">{</span>van[STRIKEOUT:Driesten<span class="nb">}</span>, Carlo and
 <span class="nb">{</span>Garcia]<span class="k">\ </span>Ramos<span class="nb">}</span>, Pilar and Schiementz, Mark and Schneider, Sebastian<span class="nb">}</span>,
 year = <span class="nb">{</span>2017<span class="nb">}</span>, title = <span class="nb">{{</span>Open Simulation Interface: A generic interface

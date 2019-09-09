@@ -20,20 +20,11 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'v3.1.2',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -205,41 +196,41 @@
 <h2>Setup for linux users<a class="headerlink" href="#setup-for-linux-users" title="Permalink to this headline">¶</a></h2>
 <p>This setup guide is for users who want to</p>
 <p>Clone repository osi-validation:</p>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
 <p>Install osi-validation into the global root directory:</p>
-<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p>
 </div>
 <div class="section" id="setup-for-linux-developers">
 <h2>Setup for linux developers<a class="headerlink" href="#setup-for-linux-developers" title="Permalink to this headline">¶</a></h2>
 <p>This setup guide is for developers who want to contribute to osi-validation.</p>
 <p>Clone repository osi-validation:</p>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
 <p>Change directory:</p>
-<p><code class="docutils literal"><span class="pre">cd</span> <span class="pre">osi-validation</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">osi-validation</span></code></p>
 <p>Change the branch to development:</p>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">development</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">development</span></code></p>
 <p>Clone repository open-simulation-interface:</p>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
 <p>Clone repository proto2cpp:</p>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
 <p>It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don’t mess around with your global python environment.
 Install virutal environment:</p>
-<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
 <p>Create virtual environment:</p>
-<p><code class="docutils literal"><span class="pre">virtualenv</span> <span class="pre">-p</span> <span class="pre">/usr/bin/python3</span> <span class="pre">vpython</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">-p</span> <span class="pre">/usr/bin/python3</span> <span class="pre">vpython</span></code></p>
 <p>Activate your virtual environment:</p>
-<p><code class="docutils literal"><span class="pre">source</span> <span class="pre">vpython/bin/activate</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">vpython/bin/activate</span></code></p>
 <p>Install open-simulation-interface:</p>
-<p><code class="docutils literal"><span class="pre">cd</span> <span class="pre">open-simulation-interface;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">open-simulation-interface;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
 <p>Install last requirements:</p>
-<p><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
 <p>Install osi-validator:</p>
-<p><code class="docutils literal"><span class="pre">cd</span> <span class="pre">..;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
-<p>Last step copy <code class="docutils literal"><span class="pre">requirements-osi-3</span></code> to <code class="docutils literal"><span class="pre">vpython/lib/python3.6/site-packages</span></code></p>
-<p><code class="docutils literal"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">requirements-osi-3</span> <span class="pre">vpython/lib/python3.6/site-packages/</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p>Last step copy <code class="docutils literal notranslate"><span class="pre">requirements-osi-3</span></code> to <code class="docutils literal notranslate"><span class="pre">vpython/lib/python3.6/site-packages</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">requirements-osi-3</span> <span class="pre">vpython/lib/python3.6/site-packages/</span></code></p>
 <p>or <strong>install with virtual environment via script</strong></p>
 <p>Just run the script:</p>
-<p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">bash</span> <span class="pre">installation.sh</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">bash</span> <span class="pre">installation.sh</span></code></p>
 </div>
 <div class="section" id="setup-for-windows-users">
 <h2>Setup for windows users<a class="headerlink" href="#setup-for-windows-users" title="Permalink to this headline">¶</a></h2>

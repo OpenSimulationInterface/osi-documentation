@@ -20,20 +20,11 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'v3.1.2',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -211,11 +202,11 @@ find with the project on <a class="reference external" href="https://github.com/
 Always make sure to search the existing issues before reporting a new one.
 Issues may be created to discuss:</p>
 <ul class="simple">
-<li>Problems</li>
-<li>Bugs</li>
-<li>Feature requests</li>
-<li>Ideas</li>
-<li>I am sad :( -&gt; please help me :)</li>
+<li><p>Problems</p></li>
+<li><p>Bugs</p></li>
+<li><p>Feature requests</p></li>
+<li><p>Ideas</p></li>
+<li><p>I am sad :( -&gt; please help me :)</p></li>
 </ul>
 <p>If practicable issues should be closed by a referenced pull request or commit <a class="reference external" href="https://help.github.com/en/articles/closing-issues-using-keywords">here</a> you can find keywords to close issues automatically).</p>
 </div>
@@ -242,7 +233,7 @@ give you an overview of the OSI messages, fields, their main components and thei
 The other repositories are optional extensions which add functionality to OSI like <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">validation</a>, <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">visualization</a> and <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging">model packaging</a>.
 The repository <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> is a fork which is used in this organization to convert *.proto files into *.cpp files which can be parsed by doxygen to create a <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/">reference documentation</a>.</p>
 <p>Then, there are many ways to use Git, here is ours:</p>
-<p>After you have opened an issue, with the tag <code class="docutils literal"><span class="pre">feature</span> <span class="pre">request</span></code> or <code class="docutils literal"><span class="pre">idea</span></code>
+<p>After you have opened an issue, with the tag <code class="docutils literal notranslate"><span class="pre">feature</span> <span class="pre">request</span></code> or <code class="docutils literal notranslate"><span class="pre">idea</span></code>
 explaining your enhancement to the project, you should
 also provide a possible approach or suggest a possible solution.
 After a discussion if the feature is plausible or adds value
@@ -254,54 +245,54 @@ contributor’s individual commits from a topic branch,
 the commits are combined
 into one commit and merged into the master branch.
 Once a pull request is ready, it is reviewed and
-approved, then squashed using the <code class="docutils literal"><span class="pre">--fast-forward</span></code> option of Git in order to
+approved, then squashed using the <code class="docutils literal notranslate"><span class="pre">--fast-forward</span></code> option of Git in order to
 maintain a streamlined Git history.</p>
 <p><strong>We also enforce a few hygiene rules</strong>:</p>
 <ul class="simple">
-<li>Prefer small atomic commits over a large one that do many things.</li>
-<li>Don’t mix refactoring and new features.</li>
-<li>Never mix reindentation, whitespace deletion, or other style changes
-with actual code changes.</li>
-<li>If you add new osi messages into a *.proto file, don’t forget to
-extend the documentation and comment on the message and on each field (for more information see <a class="reference internal" href="commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).</li>
-<li>Don’t forget to run
-<a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py">test_cases.py</a> to check if you followed the correct syntax guidelines for *.proto files</li>
-<li>If you rebuild the doyxgen documentation run <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases_doc.py">test_cases_doc.py</a></li>
-<li>Try and mimic the style of commit messages, and for non trivial
-commits, add an extended commit message.</li>
+<li><p>Prefer small atomic commits over a large one that do many things.</p></li>
+<li><p>Don’t mix refactoring and new features.</p></li>
+<li><p>Never mix reindentation, whitespace deletion, or other style changes
+with actual code changes.</p></li>
+<li><p>If you add new osi messages into a *.proto file, don’t forget to
+extend the documentation and comment on the message and on each field (for more information see <a class="reference internal" href="commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).</p></li>
+<li><p>Don’t forget to run
+<a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py">test_cases.py</a> to check if you followed the correct syntax guidelines for *.proto files</p></li>
+<li><p>If you rebuild the doyxgen documentation run <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases_doc.py">test_cases_doc.py</a></p></li>
+<li><p>Try and mimic the style of commit messages, and for non trivial
+commits, add an extended commit message.</p></li>
 </ul>
 <p><strong>As per the hygiene of commits themselves</strong>:</p>
 <ul class="simple">
-<li>Give appropriate titles to the commits, and when non-trivial add a
-detailed motivated explanation.</li>
-<li>Give meaningful and consistent names to branches.</li>
-<li>Don’t forget to put a <code class="docutils literal"><span class="pre">WIP:</span></code> flag when it is a work in progress</li>
+<li><p>Give appropriate titles to the commits, and when non-trivial add a
+detailed motivated explanation.</p></li>
+<li><p>Give meaningful and consistent names to branches.</p></li>
+<li><p>Don’t forget to put a <code class="docutils literal notranslate"><span class="pre">WIP:</span></code> flag when it is a work in progress</p></li>
 </ul>
 <p><strong>Our branching workflow summary (member)</strong>:</p>
 <ul class="simple">
-<li>Create issues for changes, improvements and ideas!</li>
-<li>Clone repository on your local machine</li>
-<li>Create a branch with a meaningfull name: <code class="docutils literal"><span class="pre">prefix/name</span></code>, <code class="docutils literal"><span class="pre">feature/new-environmental-conditions</span></code></li>
-<li>prefixes: feature, experimental, bug, etc.</li>
-<li>Add your suggestions to the code Do not use: <code class="docutils literal"><span class="pre">*git</span> <span class="pre">add</span> <span class="pre">-A</span> <span class="pre">*git</span> <span class="pre">commit</span> <span class="pre">-A</span></code></li>
-<li>The code should compile and pass <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py">test_cases.py</a>  for a pull-request!</li>
-<li>Try to make small changes for easier discussions</li>
-<li>The person willing to merge needs to adjust the version according to <a class="reference internal" href="versioning.html#versioning"><span class="std std-ref">Versioning</span></a> before hitting merge</li>
+<li><p>Create issues for changes, improvements and ideas!</p></li>
+<li><p>Clone repository on your local machine</p></li>
+<li><p>Create a branch with a meaningfull name: <code class="docutils literal notranslate"><span class="pre">prefix/name</span></code>, <code class="docutils literal notranslate"><span class="pre">feature/new-environmental-conditions</span></code></p></li>
+<li><p>prefixes: feature, experimental, bug, etc.</p></li>
+<li><p>Add your suggestions to the code Do not use: <code class="docutils literal notranslate"><span class="pre">*git</span> <span class="pre">add</span> <span class="pre">-A</span> <span class="pre">*git</span> <span class="pre">commit</span> <span class="pre">-A</span></code></p></li>
+<li><p>The code should compile and pass <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py">test_cases.py</a>  for a pull-request!</p></li>
+<li><p>Try to make small changes for easier discussions</p></li>
+<li><p>The person willing to merge needs to adjust the version according to <a class="reference internal" href="versioning.html#versioning"><span class="std std-ref">Versioning</span></a> before hitting merge</p></li>
 </ul>
 <p><strong>Our forking workflow summary (no member)</strong>:</p>
 <ul class="simple">
-<li>Create a personal fork on your account</li>
-<li>Clone to your local machine</li>
-<li>Make changes</li>
-<li>Create pull-request</li>
-<li>Discuss with issues and with comments in the pull-request</li>
-<li>!!! Consider becoming a member !!!</li>
+<li><p>Create a personal fork on your account</p></li>
+<li><p>Clone to your local machine</p></li>
+<li><p>Make changes</p></li>
+<li><p>Create pull-request</p></li>
+<li><p>Discuss with issues and with comments in the pull-request</p></li>
+<li><p>!!! Consider becoming a member !!!</p></li>
 </ul>
 <p><strong>Documentation changes</strong>:</p>
 <ul class="simple">
-<li>Can be performed by any member.</li>
-<li>Consider adding stuff to the <a class="reference external" href="https://github.com/vkresch/osi-documentation">osi-documentation</a>.</li>
-<li>When new changes are made the documentation will be rebuild and the new changes can be seen.</li>
+<li><p>Can be performed by any member.</p></li>
+<li><p>Consider adding stuff to the <a class="reference external" href="https://github.com/vkresch/osi-documentation">osi-documentation</a>.</p></li>
+<li><p>When new changes are made the documentation will be rebuild and the new changes can be seen.</p></li>
 </ul>
 </div>
 <div class="section" id="code-review">
@@ -319,14 +310,14 @@ learn from each other.</p>
 Addressing these points beforehand makes the reviewing process easier and less
 painful for everybody. The reviewer is your ally, not your enemy.</p>
 <ul class="simple">
-<li>Commented code: Did I remove any commented out lines?
-Did I leave a <code class="docutils literal"><span class="pre">TODO</span></code> or an old comment?</li>
-<li>Readability: Is the code easy to understand? Is it worth adding
+<li><p>Commented code: Did I remove any commented out lines?
+Did I leave a <code class="docutils literal notranslate"><span class="pre">TODO</span></code> or an old comment?</p></li>
+<li><p>Readability: Is the code easy to understand? Is it worth adding
 a comment to the code to explain a particular operation and its
-repercussion on the rest of the code?</li>
-<li>Variable and function names: These should be meaningful and in line
-with the convention adopted in the code base.</li>
-<li>Are your Commit messages meaningful? (i.e., <a class="reference external" href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a> )</li>
+repercussion on the rest of the code?</p></li>
+<li><p>Variable and function names: These should be meaningful and in line
+with the convention adopted in the code base.</p></li>
+<li><p>Are your Commit messages meaningful? (i.e., <a class="reference external" href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a> )</p></li>
 </ul>
 <p>Review your own code before calling for a peer review from a college.</p>
 </div>
@@ -335,39 +326,39 @@ with the convention adopted in the code base.</li>
 <p>Code review can be challenging at times. These are suggestions and common
 pitfalls a code reviewer should avoid.</p>
 <ul class="simple">
-<li>Ask questions: What is the purpose of this message? If this requirement changes,
-what else would have to change? How could we make this more maintainable?</li>
-<li>Discuss in person for more detailed points: Online comments are useful for
+<li><p>Ask questions: What is the purpose of this message? If this requirement changes,
+what else would have to change? How could we make this more maintainable?</p></li>
+<li><p>Discuss in person for more detailed points: Online comments are useful for
 focused technical questions. In many occasions it is more productive to
 discuss it in person rather than in the comments. Similarly, if discussion
 about a point goes back and forth, It will be often more productive to pick
-it up in person and finish out the discussion.</li>
-<li>Explain reasoning: Sometimes it is best to both ask if there is a better
+it up in person and finish out the discussion.</p></li>
+<li><p>Explain reasoning: Sometimes it is best to both ask if there is a better
 alternative and at the same time justify why a problem in the code is worth
 fixing. Sometimes it can feel like the changes suggested are nit-picky
-without context or explanation.</li>
-<li>Make it about the code: It is easy to take notes from code reviews
+without context or explanation.</p></li>
+<li><p>Make it about the code: It is easy to take notes from code reviews
 personally, especially if we take pride in our work. It is best to make
 discussions about the code than about the developer. It lowers resistance and
 it is not about the developer anyway, it is about improving the quality of
-the code.</li>
-<li>Suggest importance of fixes: While offering many suggestions at once, it is
+the code.</p></li>
+<li><p>Suggest importance of fixes: While offering many suggestions at once, it is
 important to also clarify that not all of them need to be acted upon and some
 are more important than others. It gives an important guidance to the developer
-to improve their work incrementally.</li>
-<li>Take the developer’s opinion into consideration: Imposing a particular design
+to improve their work incrementally.</p></li>
+<li><p>Take the developer’s opinion into consideration: Imposing a particular design
 choice out of personal preferences and without a real explanation will
-incentivize the developer to be a passive executor instead of a creative agent.</li>
-<li>Do not re-write, remove or re-do all the work: Sometimes it is easier to
+incentivize the developer to be a passive executor instead of a creative agent.</p></li>
+<li><p>Do not re-write, remove or re-do all the work: Sometimes it is easier to
 re-do the work yourself discarding the work of the developer. This can give
 the impression that the work of the developer is worthless and adds
 additional work for the reviewer that effectively takes responsibility for
-the code.</li>
-<li>Consider the person you are reviewing: Each developer is a person. If you
+the code.</p></li>
+<li><p>Consider the person you are reviewing: Each developer is a person. If you
 know the person, consider their personality and experience while reviewing their
 code. Sometime it is possible with somebody to be more direct and terse, while
-other people require a more thorough explaination.</li>
-<li>Avoid confrontational and authoritative language: The way we communicate has
+other people require a more thorough explaination.</p></li>
+<li><p>Avoid confrontational and authoritative language: The way we communicate has
 an impact on the receiver. If communicating a problem in the code or a
 suggestion is the goal, making an effort to remove all possible noise from
 the message is important. Consider these two statements to communicate about
@@ -377,7 +368,7 @@ review it?”. The first one implies you made an error (confrontational), and
 you should fix it (authority). The second suggest to review the code because
 there might be a mistake. Despite the message being the same, the recipient might
 have a different reactions to it and impact on the quality of this work. This
-general remark is valid for any comment.</li>
+general remark is valid for any comment.</p></li>
 </ul>
 </div>
 <div class="section" id="practicalities-how-to-ask-for-a-code-review">
@@ -385,14 +376,14 @@ general remark is valid for any comment.</li>
 <p>Our code review process uses Github. First a developer creates a new
 branch (it is often useful to prefix the name of the branch with the name of
 the developer to make it clear at glance who is working on what : e.g.
-<code class="docutils literal"><span class="pre">john&#64;new-feature</span></code>). This is a private new branch, the developer is free to
-rebase, squash commits, rewrite history (<code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--force</span></code>), etc. at will.</p>
+<code class="docutils literal notranslate"><span class="pre">john&#64;new-feature</span></code>). This is a private new branch, the developer is free to
+rebase, squash commits, rewrite history (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--force</span></code>), etc. at will.</p>
 <p>Once the code is ready to be shared with the rest of the team, the developer
 opens a Merge Request. It is useful to add a precise description of the code
 changes while opening the MR and check if those are in line with the initial
 requirements.</p>
 <p>If the code is still not ready to be peer reviewed, but it is merely a
-RFC, we prefix the MR with <code class="docutils literal"><span class="pre">WIP:</span></code> (work in progress). This will tell everybody
+RFC, we prefix the MR with <code class="docutils literal notranslate"><span class="pre">WIP:</span></code> (work in progress). This will tell everybody
 they can look at the code, comment, but there is still work to be done and the
 branch can change and history be rewritten.</p>
 <p>Finally, when the code is ready to be audited, we remove the WIP status of the
