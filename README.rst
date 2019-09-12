@@ -1,4 +1,4 @@
-OSI-Documentation (Work in progress)
+`OSI-Documentation <https://opensimulationinterface.github.io/osi-documentation/>`_ (Work in progress)
 =====================================
 
 .. image:: https://travis-ci.org/OpenSimulationInterface/osi-documentation.svg?branch=master
