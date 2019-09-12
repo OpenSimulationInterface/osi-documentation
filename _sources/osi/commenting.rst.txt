@@ -3,7 +3,7 @@
 Commenting
 ===========
 
-During the building process of open simulation interface (using the `proto2cpp <https://github.com/OpenSimulationInterface/proto2cpp>`_ filter), doxygen is creating a documentation processing all comments written in the code of the interface. In order to do that doxygen needs the comments to be written in a certain way. Please follow these rules to achieve that the documentation is created correctly. You will find further information on doxygen `here <http://www.doxygen.nl/manual/docblocks.html>`_.
+During the building process of open simulation interface (using the `proto2cpp <https://github.com/OpenSimulationInterface/proto2cpp>`_ filter), doxygen is creating a `reference documentation <https://opensimulationinterface.github.io/open-simulation-interface/>`_ processing all comments written in the code of the interface. In order to do that doxygen needs the comments to be written in a certain way. Please follow these rules to achieve that the reference documentation is created correctly. You will find further information on doxygen `here <http://www.doxygen.nl/manual/docblocks.html>`_.
 
 For any additional comment styles see `list <http://www.doxygen.nl/manual/commands.html>`_ of doxygen commands.
 
@@ -246,8 +246,8 @@ Finally you can provide a set of rules which this field needs to be followed. Th
         //
         // \rules
         // is_optional
-        // is_greater_than_or_equal_to: 3
-        // is_less_than_or_equal_to: 10
+        // is_greater_than_or_equal_to: 90000
+        // is_less_than_or_equal_to: 200000
         // \endrules
         //
         optional double atmospheric_pressure = 1;

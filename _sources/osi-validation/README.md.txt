@@ -1,5 +1,5 @@
 # OSI Validator
-
+[![Travis Build Status](https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master)](https://travis-ci.org/OpenSimulationInterface/osi-validation)
 ## Presentation
 
 The *OSI Validator* checks the compliance of the OSI messages with the KPI
