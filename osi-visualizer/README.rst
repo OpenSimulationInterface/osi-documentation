@@ -1,13 +1,16 @@
 OSI Visualizer
 ==============
 
+.. image:: https://travis-ci.org/OpenSimulationInterface/osi-visualizer.svg?branch=master
+    :target: https://travis-ci.org/OpenSimulationInterface/osi-visualizer
+
 OSI Visualizer serves as visualization tool for the current implementation of `OSI (Open
 Simulation Interface)`_ messages. The osi-visualizer supports to visualize
 the OSI GroundTruth and SensorData messages. It visualizes the ``GroundTruth``, ``SensorView`` and ``SensorData`` messages. It also supports two independent visual channels with two different input types (file and network stream).
 
 
 Usage
---------------
+-------
 
 In the configuration panel at the right (see Screenshot below) load for channel 1 a scenario as a playback and choose a port to which it will send. In the panel below at channel 2 type in the host and the output port. Select the data type it will output (here `SensorData`). Make sure the appropriate communication server for data exchange is up and running. 
 

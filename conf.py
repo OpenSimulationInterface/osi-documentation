@@ -67,7 +67,14 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'vpython', '.github']
+exclude_patterns = ['_build', 
+                    'Thumbs.db', 
+                    '.DS_Store', 
+                    'vpython', 
+                    '.github',
+                    'osi-validation/open-simulation-interface',
+                    'osi-validation/README.rst',
+                    'osi-validation/proto2cpp']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

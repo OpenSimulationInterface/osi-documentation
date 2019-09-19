@@ -14,3 +14,4 @@ sensorviewconfiguration
 sensorspecific
 kTypeGhost
 modelDescription
+doxyfile

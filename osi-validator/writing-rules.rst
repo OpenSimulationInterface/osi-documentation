@@ -62,6 +62,7 @@ Rules
 The rules can either be without any parameter (ex: ``is_set``) or with a
 parameter.
 
+
 Example
 ^^^^^^^
 ::
@@ -74,7 +75,7 @@ depends on the rule used. For instance, the rule ``in_range`` accept a sequence
 of double ; the rule ``each`` ask for mappings. Other rules accept string,
 number, etc.
 
-The available rule and their usage are explained here: :doc:`rules`.
+The available rule and their usage are explained here.
 
 Severity
 --------
