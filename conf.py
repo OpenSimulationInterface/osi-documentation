@@ -2,6 +2,7 @@
 #
 import os
 import sys
+import sphinxcontrib.spelling
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.append('/home/travis/build/OpenSimulationInterface/osi-validation')
 
@@ -29,8 +30,20 @@ release = 'v3.1.2'
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinxcontrib.spelling'
 ]
+
+# Show spelling suggestions
+# spelling_show_suggestions = True
+spelling_word_list_filename = ['spelling/spelling_wordlist.txt', 
+                               'spelling/abbreviations.txt',
+                               'spelling/file_endings.txt',
+                               'spelling/human_names.txt',
+                               'spelling/general_names.txt',
+                               'spelling/file_names.txt',
+                               'spelling/function_names.txt']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -54,7 +67,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'vpython']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'vpython', '.github']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

@@ -31,7 +31,7 @@ To run the validation first you need to record an osi-message. Here we already h
 
     osivalidator --data osi_message_data/osi_message_test.txt
 
-After sucessfully running the validation the following output is generated:
+After successfully running the validation the following output is generated:
 
 .. code-block:: text
 
@@ -87,7 +87,7 @@ After sucessfully running the validation the following output is generated:
     [0, 260]                GroundTruth.environmental_conditions.is_valid(None) does not comply in SensorView.global_ground_truth.environmental_conditions
     [0, 260]                SensorView.global_ground_truth.is_valid(None) does not comply in SensorView.global_ground_truth
 
-The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag ``\rules`` in the \*.proto files from the `osi github <https://github.com/OpenSimulationInterface/open-simulation-interface>`_ or in the `requirements folder <https://github.com/OpenSimulationInterface/osi-validation/tree/development/requirements-osi-3>`_ from osi-validation as \*.yml files (for more information see :ref:`commenting-with-rules`).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:
+The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag ``\rules`` in the \*.proto files from the `osi github <https://github.com/OpenSimulationInterface/open-simulation-interface>`_ or in the `requirements folder <https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3>`_ from osi-validation as \*.yml files (for more information see :ref:`commenting-with-rules`).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:
 
 .. code-block:: text
 

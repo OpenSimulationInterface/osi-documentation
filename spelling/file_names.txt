@@ -1,0 +1,16 @@
+datarecording
+detectedtrafficsign
+detectedtrafficlight
+detectedroadmarking
+detectedobject
+detectedoccupant
+detectedlane
+hostvehicledata
+trafficsign
+trafficlight
+roadmarking
+featuredata
+sensorviewconfiguration
+sensorspecific
+kTypeGhost
+modelDescription

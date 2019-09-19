@@ -44,7 +44,7 @@ higher minor and patch versions of the same major version.
 Fault injection: how-to
 -----------------------
 
-Injection of pre-defined sensor errors should be handled by a
+Injection of predefined sensor errors should be handled by a
 specialized "fault injector" component that acts like a sensor model
 component, i.e. it takes a SensorData message as input and returns a
 modified SensorData message as output. Specific errors should be handled
@@ -67,7 +67,7 @@ For users that need to use proto3 syntax, for example because the
 language binding of choice only supports proto3 syntax out of the box, a
 shell script called ``convert-to-proto3.sh`` is supplied that converts
 all proto files to proto3 syntax. If this is run prior to building, the
-resulting libaries will use proto3, with the on-the-wire format
+resulting libraries will use proto3, with the on-the-wire format
 remaining compatible between proto2 and proto3 libraries.
 
 Packaging
@@ -122,7 +122,7 @@ scientific work:
 .. _here: https://github.com/OpenSimulationInterface/osi-sensor-model-packaging
 .. _online: https://opensimulationinterface.github.io/open-simulation-interface/
 .. _Wiki: https://github.com/OpenSimulationInterface/open-simulation-interface/wiki
-.. _Doxygen: http://www.stack.nl/~dimitri/doxygen/download.html
+.. _Doxygen: http://www.doxygen.nl/download.html
 .. _proto2cpp: https://github.com/OpenSimulationInterface/proto2cpp
 .. _graphviz: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
 .. _`http://www.hot.ei.tum.de/forschung/automotive-veroeffentlichungen/}`: http://www.hot.ei.tum.de/forschung/automotive-veroeffentlichungen/}

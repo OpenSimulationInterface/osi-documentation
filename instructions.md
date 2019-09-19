@@ -1,3 +1,0 @@
-# Sphinx Instructions
-
-`sphinx-quickstart`

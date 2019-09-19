@@ -3,7 +3,7 @@ Installation Guide
 The *OSI Validator* has been developed with **Python 3.6** with virtual environment environment. It is the only version of Python that is supported now. *OSI Validator* should only be used with **Python 3.6**.
 
 Setup for linux users
------------------
+----------------------
 This setup guide is for users who want to 
 
 Clone repository osi-validation:
@@ -16,7 +16,7 @@ Install osi-validation into the global root directory:
 
 
 Setup for linux developers
----------------------
+----------------------------
 This setup guide is for developers who want to contribute to osi-validation.
 
 Clone repository osi-validation:
@@ -40,7 +40,7 @@ Clone repository proto2cpp:
 ``git clone https://github.com/OpenSimulationInterface/proto2cpp.git``
 
 It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don't mess around with your global python environment. 
-Install virutal environment:
+Install virtual environment:
 
 ``sudo apt-get install virtualenv``
 
@@ -76,9 +76,9 @@ Just run the script:
 
 
 Setup for windows users
------------------
+-------------------------
 In Progress ...
 
 Setup for windows developers
----------------------
+-----------------------------
 In Progress ...
