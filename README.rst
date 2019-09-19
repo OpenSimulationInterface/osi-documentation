@@ -9,30 +9,29 @@ The documentation is based on `sphinx <https://pypi.org/project/Sphinx/>`_. See 
 
 Organization Build Overview
 ----------------------------
-`Open Simulation Interface`_
+|osi_build| - `Open Simulation Interface`_
 
-.. image:: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface.svg?branch=master
-    :target: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface
+|osi_validation_build| - `OSI Validation`_
 
-`OSI Validation`_
+|osi_visualizer_build| - `OSI Visualizer`_
 
-.. image:: https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master
-    :target: https://travis-ci.org/OpenSimulationInterface/osi-validation
+|osi_sensor_model_packaging_build| - `OSI Model Packaging`_
 
-
-`OSI Visualizer`_
-
-.. image:: https://travis-ci.org/OpenSimulationInterface/osi-visualizer.svg?branch=master
-    :target: https://travis-ci.org/OpenSimulationInterface/osi-visualizer
-
-
-`OSI Model Packaging`_
-
-.. image:: https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master
-    :target: https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging
 
 
 .. _Open Simulation Interface: https://opensimulationinterface.github.io/osi-documentation/osi/README.html
 .. _OSI Validation: https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator-module.html
 .. _OSI Visualizer: https://opensimulationinterface.github.io/osi-documentation/osi-visualizer/README.html
 .. _OSI Model Packaging: https://opensimulationinterface.github.io/osi-documentation/osi-model-packaging/README.html
+
+.. |osi_build| image:: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface.svg?branch=master
+    :target: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface
+
+.. |osi_validation_build| image:: https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master
+    :target: https://travis-ci.org/OpenSimulationInterface/osi-validation
+
+.. |osi_visualizer_build| image:: https://travis-ci.org/OpenSimulationInterface/osi-visualizer.svg?branch=master
+    :target: https://travis-ci.org/OpenSimulationInterface/osi-visualizer
+
+.. |osi_sensor_model_packaging_build| image:: https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master
+    :target: https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging

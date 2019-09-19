@@ -6,8 +6,6 @@
 Welcome to Open Simulation Interface's documentation!
 =====================================================
 
-
-
 The Project
 -----------
 The Open Simulation Interface (OSI) is a generic interface for the environmental perception of automated driving functions in virtual scenarios.
@@ -83,3 +81,4 @@ Indices and tables
 -------------------
 * :ref:`genindex`
 * :ref:`search`
+
