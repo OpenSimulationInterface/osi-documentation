@@ -36,6 +36,8 @@ We are aligned with the ongoing discussions for the upcoming ISO 23150 standard 
 - Fixed version-checking of transmitted data.
 - AND MUCH MORE ENJOY!!!
 
+See for more information the `changelog <https://github.com/OpenSimulationInterface/open-simulation-interface/files/2297162/osi_overview_v2.2_vs_v3.0.pdf>`_.
+
 v3.0.1 - OSI "Cosmic Coulthard", Update 1
 ==========================================
 `d144f0c <https://github.com/OpenSimulationInterface/open-simulation-interface/commit/d144f0c8e5cde5471c8c3cdd5d43facfe37e4a08>`_

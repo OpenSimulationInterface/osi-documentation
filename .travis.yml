@@ -30,6 +30,7 @@ install:
     - pip install sphinx_git
     - pip install sphinxcontrib.spelling
     - pip install progress
+    - pip install doxygen-interface
 
 # Environment variables.
 env:

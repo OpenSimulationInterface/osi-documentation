@@ -1,5 +1,7 @@
 Windows
 =======
+C++
+------
 All the following steps are to be executed with admin rights:
 
 1. Install cmake (v3.7 or higher required):

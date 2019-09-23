@@ -8,6 +8,7 @@ Please keep in mind that the C++ installing process and the cmake install prefix
 .. toctree::
    :maxdepth: 1
    
-   windows
    linux
+   windows
+   
    
