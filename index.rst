@@ -70,6 +70,7 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Model Packaging:
 
     osi-model-packaging/README
+    osi-model-packaging/examples
 
 
 API Reference

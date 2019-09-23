@@ -89,7 +89,7 @@ Definition of Binary Variables
 ------------------------------
 
 In order to support the efficient exchange of binary data, especially
-binary data as provided for by the OSI [ProtocolBuffer][] definitions,
+binary data as provided for by the OSI `Protocol Buffer <https://developers.google.com/protocol-buffers>`_ definitions,
 the following convention is used to define such variables for FMI 2.0:
 
 -  For a notional binary variable of a name given by ``<prefix>``, which

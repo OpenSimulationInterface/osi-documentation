@@ -17,6 +17,7 @@ author = 'Carlo van Driesten'
 # The full version, including alpha/beta/rc tags
 release = 'v3.1.2'
 
+add_module_names = False
 
 # -- General configuration ---------------------------------------------------
 
