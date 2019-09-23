@@ -89,7 +89,7 @@ Definition of Binary Variables
 ------------------------------
 
 In order to support the efficient exchange of binary data, especially
-binary data as provided for by the OSI [ProtocolBuffer][] definitions,
+binary data as provided for by the OSI `Protocol Buffer <https://developers.google.com/protocol-buffers>`_ definitions,
 the following convention is used to define such variables for FMI 2.0:
 
 -  For a notional binary variable of a name given by ``<prefix>``, which
@@ -128,7 +128,7 @@ the following convention is used to define such variables for FMI 2.0:
 
 -  Unless the causality and variability combination of the actual
    variables precludes this (i.e. for fixed or tunable
-   calculatedParameters), the variables MUST have a start value of 0,
+   calculatedParameter), the variables MUST have a start value of 0,
    indicating that no valid binary data buffer is available.
 
    Model FMUs MUST interpret values of 0 for either the base address
@@ -469,7 +469,7 @@ released.
 .. _Open Simulation Interface: https://github.com/OpenSimulationInterface/open-simulation-interface
 .. _Semantic Versioning Specification (SemVer) 2.0.0: http://semver.org/spec/v2.0.0.html
 .. _RFC 2119: https://www.ietf.org/rfc/rfc2119.txt
-.. _FMI: https://www.fmi-standard.org/
+.. _FMI: https://fmi-standard.org/
 .. _FMI 2.0 standard: https://svn.modelica.org/fmi/branches/public/specifications/v2.0/FMI_for_ModelExchange_and_CoSimulation_v2.0.pdf
 
 .. |Build Status| image:: https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master

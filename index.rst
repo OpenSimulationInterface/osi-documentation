@@ -6,8 +6,6 @@
 Welcome to Open Simulation Interface's documentation!
 =====================================================
 
-
-
 The Project
 -----------
 The Open Simulation Interface (OSI) is a generic interface for the environmental perception of automated driving functions in virtual scenarios.
@@ -30,9 +28,9 @@ The ``GroundTruth`` interface provides an exact view on the simulated objects in
 
 The ``FeatureData`` interface provides a list of simple features in the reference frame of the respective sensor of a vehicle for environmental perception. It is generated from a ``GroundTruth`` message and may serve as input for a sensor model that simulates object detection or feature fusion of multiple sensors.
 
-The SensorData interface describes the objects in the reference frame of a vehicle for environmental perception. It is generated from a ``GroundTruth`` message or from one or several ``FeatureData`` messages and can either be used to directly connect to an automated driving function using ideal simulated data, or may serve as input for a sensor model simulating limited perception as a replication of real world sensor behaviour.
+The ``SensorData`` interface describes the objects in the reference frame of a vehicle for environmental perception. It is generated from a ``GroundTruth`` message or from one or several ``FeatureData`` messages and can either be used to directly connect to an automated driving function using ideal simulated data, or may serve as input for a sensor model simulating limited perception as a replication of real world sensor behaviour.
 
-The ``SensorView`` Configuration interface is the configuration setting for the ``SensorView`` to be provided by the environment simulation. This message can be provided by the sensor model to the environment simulation, in which case it describes the input configuration that is desired by the sensor model. In response the environment simulation will configure the input and provide a new message of this type, which describes the actual configuration that it is going to employ. The two can and will differ, when either the environment simulation does not support a given requested configuration, and/or when the requested configuration allowed for multiple alternatives, in which case the set configuration will only contain the alternative chosen. It should be noted that this message is not intended to provide for parametrization of a generic sensor model, but rather for the automatic configuration of an environment simulation in order to supply the necessary input to it, depending on its actual configuration.
+The ``SensorView`` Configuration interface is the configuration setting for the ``SensorView`` to be provided by the environment simulation. This message can be provided by the sensor model to the environment simulation, in which case it describes the input configuration that is desired by the sensor model. In response the environment simulation will configure the input and provide a new message of this type, which describes the actual configuration that it is going to employ. The two can and will differ, when either the environment simulation does not support a given requested configuration, and/or when the requested configuration allowed for multiple alternatives, in which case the set configuration will only contain the alternative chosen. It should be noted that this message is not intended to provide for parameterization of a generic sensor model, but rather for the automatic configuration of an environment simulation in order to supply the necessary input to it, depending on its actual configuration.
 
 The ``SensorView`` interface is derived from ``GroundTruth`` and used as input to sensor models. The ``SensorView`` information is supposed to provide input to sensor models for simulation of actual real sensors. All information regarding the environment is given with respect to the virtual sensor coordinate system, except for the individual physical technology-specific data, which is given with respect to the physical sensor coordinate system specified in the corresponding physical sensor's mounting position, and the global ground truth, which is given in global coordinates.
 
@@ -41,31 +39,23 @@ The authors' vision is to be able to connect any automated driving function to a
 
 .. toctree::
    :maxdepth: 1
-   :caption: Introduction:
+   :caption: Open Simulation Interface:
 
    osi/README
+   osi/installation
    osi/osifiles
+   osi/coordinatesystem
+   osi/commenting
+   osi/versioning
    osi/releases
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Building and Installation:
-
-    osi/installation
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Tutorials:
-
-    osi/coordinatesystem
+   osi/howtocontribute
 
 .. toctree::
     :maxdepth: 2
     :caption: OSI Validation:
 
     osi-validator/osivalidator-module
+    osi-validator/howtocontribute
 
 
 .. toctree::
@@ -73,6 +63,8 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Visualizer:
 
     osi-visualizer/README
+    osi-visualizer/nvidia-docker
+    osi-visualizer/howtocontribute
 
 
 .. toctree::
@@ -80,14 +72,7 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Model Packaging:
 
     osi-model-packaging/README
-
-.. toctree::
-    :maxdepth: 2
-    :caption: General Contributer's Guidelines:
-
-    osi/howtocontribute
-    osi/commenting
-    osi/versioning
+    osi-model-packaging/examples
 
 
 API Reference
@@ -99,3 +84,4 @@ Indices and tables
 -------------------
 * :ref:`genindex`
 * :ref:`search`
+

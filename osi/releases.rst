@@ -10,4 +10,3 @@ Releases
    releases/v02.02.00
    releases/v03.00.00
    releases/v03.01.00
-   releases/v03.02.00

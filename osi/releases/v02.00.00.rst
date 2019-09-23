@@ -1,12 +1,12 @@
 v2.0.0 - OSI Initial Commit
-===================
+============================
 `db6dd3f <https://github.com/OpenSimulationInterface/open-simulation-interface/commit/db6dd3fabcca340e2aaf98c34d4959b63fb2b712>`_
 
 This is the initial version of the Open Simulation Interface (OSI).
 
 Overview:
 -----------
-OSI is a generic interface for the environmental perception of automated driving functions in virtual scenarios. It is primarily conceived to enable easy and straightforward compatibility between automated driving functions and the variety of driving simulation frameworks available. The data description has been derived from the perspective of sensor modelling for automated test and validation of highly automated driving functions.
+OSI is a generic interface for the environmental perception of automated driving functions in virtual scenarios. It is primarily conceived to enable easy and straightforward compatibility between automated driving functions and the variety of driving simulation frameworks available. The data description has been derived from the perspective of sensor modeling for automated test and validation of highly automated driving functions.
 
 Implementation:
 ----------------

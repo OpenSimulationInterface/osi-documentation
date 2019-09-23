@@ -104,7 +104,7 @@ Lastly you can add a small note about the message and have a completely commente
     }
 
 Commenting on fields and enums
------------------------------
+--------------------------------
 The commenting for fields and enums follows the following order:
 
 1. Explanation
@@ -195,7 +195,7 @@ You can optionally add a note to the field to describe the field better.
         optional double atmospheric_pressure = 1;
     }
 
-If you want to provide a reference to a DIN or to webpage which helps in understanding the field you can add a reference.
+If you want to provide a reference to a DIN or to web page which helps in understanding the field you can add a reference.
 
 .. code-block:: protobuf
 
@@ -254,7 +254,7 @@ Finally you can provide a set of rules which this field needs to be followed. Th
     }
 
 
-The rule defintion must follow the syntax which is defined by a regex search which you can see below:
+The rule definition must follow the syntax which is defined by a regex search which you can see below:
 
 .. code-block:: python
     
