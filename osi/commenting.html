@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Versioning" href="versioning.html" />
-    <link rel="prev" title="How to contribute" href="howtocontribute.html" /> 
+    <link rel="prev" title="Coordinate systems and reference points" href="coordinatesystem.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,35 +80,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
-</ul>
-<p class="caption"><span class="caption-text">OSI Validation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
-</ul>
-<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Commenting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#commenting-with-block-syntax">Commenting with block syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commenting-on-messages">Commenting on messages</a></li>
@@ -119,6 +96,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -350,7 +345,7 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If you want to provide a reference to a DIN or to webpage which helps in understanding the field you can add a reference.</p>
+<p>If you want to provide a reference to a DIN or to web page which helps in understanding the field you can add a reference.</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
 <span class="c1">//</span>
 <span class="c1">// \image html EnvironmentalConditions.svg</span>
@@ -404,7 +399,7 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The rule defintion must follow the syntax which is defined by a regex search which you can see below:</p>
+<p>The rule definition must follow the syntax which is defined by a regex search which you can see below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;is_greater_than&#39;</span><span class="p">:</span>              <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than)\b: \d+(\.\d+)?&#39;</span>                                                   <span class="c1"># is_greater_than: 1</span>
 <span class="s1">&#39;is_greater_than_or_equal_to&#39;</span><span class="p">:</span>  <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                       <span class="c1"># is_greater_than_or_equal_to: 1</span>
 <span class="s1">&#39;is_less_than_or_equal_to&#39;</span><span class="p">:</span>     <span class="sa">r</span><span class="s1">&#39;\b(is_less_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                          <span class="c1"># is_less_than_or_equal_to: 10</span>
@@ -424,12 +419,12 @@ However to keep the style of the documentation coherent there should not be any 
 </div>
 <div class="section" id="commenting-with-doxygen-references">
 <h2>Commenting with doxygen references<a class="headerlink" href="#commenting-with-doxygen-references" title="Permalink to this headline">¶</a></h2>
-<p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put ‘c’ in front of the message name.</p>
+<p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put 'c' in front of the message name.</p>
 <div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
 </pre></div>
 </div>
-<p>If you want to reference a nested message, use ‘::’ instead of ‘.’ as separators in comments.</p>
-<p>If you want to reference message fields and enums add ‘#’ to the enum/field name.</p>
+<p>If you want to reference a nested message, use '::' instead of '.' as separators in comments.</p>
+<p>If you want to reference message fields and enums add '#' to the enum/field name.</p>
 <div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
 </pre></div>
 </div>
@@ -456,7 +451,7 @@ Please place all your included images in <code class="docutils literal notransla
         <a href="versioning.html" class="btn btn-neutral float-right" title="Versioning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="howtocontribute.html" class="btn btn-neutral float-left" title="How to contribute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate systems and reference points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

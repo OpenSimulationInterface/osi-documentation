@@ -34,4 +34,4 @@ A position vector consists of two points + orientation / coordinate system:
 
 **orientation**: captured by the coordinate system. (i.e. sensor frame or world frame).
 
-Open Simulation Interace uses DIN ISO 8855:2013-11 for coordinate systems and transformations between coorinate systems.
+Open Simulation Interface uses DIN ISO 8855:2013-11 for coordinate systems and transformations between coordinate systems.

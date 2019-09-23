@@ -80,19 +80,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -102,13 +99,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How to write rules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#folder-structure">Folder structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#file-structure">File structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#child-message-type">Child message type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rules">Rules</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#rules">Rules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#severity">Severity</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -116,20 +109,18 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -200,64 +191,54 @@
 <span id="id1"></span><h1>How to write rules<a class="headerlink" href="#how-to-write-rules" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="folder-structure">
 <h2>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h2>
-<p>The rules are contained into YAML files into one folder. The organization of
-the files in this folder follows the architecture of OSI for consistency.</p>
+<p>Currently the rules are contained in <code class="docutils literal notranslate"><span class="pre">*.yml</span></code> files in the folder <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3">requirements-osi-3</a>.
+The organization of the files in this folder follows the architecture of OSI for consistency. In the future the rules will be ported directly into the <code class="docutils literal notranslate"><span class="pre">*.proto</span></code> files of <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">OSI</a>.</p>
 </div>
 <div class="section" id="file-structure">
 <h2>File structure<a class="headerlink" href="#file-structure" title="Permalink to this headline">¶</a></h2>
-<p>We will take this example of the <cite>osi_detectedlane.yml</cite> file:</p>
+<p>Below you can see an example of the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/blob/master/requirements-osi-3/osi_detectedlane.yml">osi_detectedlane.yml</a> rule file for <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedlane.proto">osi_detectedlane.proto</a>:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">DetectedLane</span><span class="p">:</span>
   <span class="nt">header</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
   <span class="nt">CandidateLane</span><span class="p">:</span>
     <span class="nt">probability</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">in_range</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
+      <span class="p p-Indicator">-</span> <span class="nt">is_greater_than_or_equal_to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="p p-Indicator">-</span> <span class="nt">is_less_than_or_equal_to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">classification</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
 
 <span class="nt">DetectedLaneBoundary</span><span class="p">:</span>
   <span class="nt">header</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
   <span class="nt">boundary_line</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">each</span><span class="p">:</span>
-        <span class="nt">position</span><span class="p">:</span>
-          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">is_set</span>
+    <span class="nt">position</span><span class="p">:</span>
 </pre></div>
 </div>
-<p>According to the Python module used, YAML <strong>version 1.1</strong> is used. In this
-document, we will try to make associations between the <cite>YAML</cite> vocabulary
-according to its specifications and the <cite>Protocol Buffers</cite> one.</p>
-<p>Each root (at the top level) <cite>scalar</cite> represent a root message type (ex:
-<code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code>, <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>).</p>
-<p>The children <cite>scalars</cite> of each <cite>root scalar</cite> represent its fields if they are
-not camel-case (ex: <code class="docutils literal notranslate"><span class="pre">header</span></code> is a field of <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> ; <code class="docutils literal notranslate"><span class="pre">header</span></code> and
-<code class="docutils literal notranslate"><span class="pre">boundary_line</span></code> are fields of <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>). See <a class="reference internal" href="#child-message-type">Child message
-type</a> for the camel-case scalars.</p>
-<p>Each field has a <cite>sequence</cite> (starting with an hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>) of scalar
-representing the <a class="reference internal" href="#rules">rules</a> that apply on.</p>
-</div>
-<div class="section" id="child-message-type">
-<h2>Child message type<a class="headerlink" href="#child-message-type" title="Permalink to this headline">¶</a></h2>
-<p>A message type can have included message type. For example <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> has
-a <code class="docutils literal notranslate"><span class="pre">CandidateLane</span></code> included message type. They first seem similar has field
-but they are not: they contain, exactly like top-level message type, fields
-with rules.</p>
+<p>Each root at the top level represent a root message type <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> or <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>. The children of each root message represent its fields if they are
+not camel-case. For example <code class="docutils literal notranslate"><span class="pre">header</span></code> is a field of <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code> or <code class="docutils literal notranslate"><span class="pre">header</span></code> and <code class="docutils literal notranslate"><span class="pre">boundary_line</span></code> are fields of <code class="docutils literal notranslate"><span class="pre">DetectedLaneBoundary</span></code>. <code class="docutils literal notranslate"><span class="pre">CandidateLane</span></code> is a submessage of the message <code class="docutils literal notranslate"><span class="pre">DetectedLane</span></code>. Each field has a <code class="docutils literal notranslate"><span class="pre">sequence</span></code> (starting with an hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>) of rules that apply to that specific field. For example the probability of the message <code class="docutils literal notranslate"><span class="pre">CandidateLane</span></code> is between 0 and 1.</p>
 </div>
 <div class="section" id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
-<p>The rules can either be without any parameter (ex: <code class="docutils literal notranslate"><span class="pre">is_set</span></code>) or with a
-parameter.</p>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">in_range</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<p>The rules can either be with or without any parameters.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">is_greater_than_or_equal_to</span><span class="p">:</span> <span class="mf">0.0</span>
+<span class="n">is_optional</span>
+<span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>In the case a rule has a parameter, it is written as a <cite>mapping</cite> (a <cite>scalar</cite>
-followed by a column “:”). What comes after the column is totally free and
-depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">in_range</span></code> accept a sequence
-of double ; the rule <code class="docutils literal notranslate"><span class="pre">each</span></code> ask for mappings. Other rules accept string,
-number, etc.</p>
-<p>The available rule and their usage are explained here: <span class="xref std std-doc">rules</span>.</p>
+<p>In the case a rule has a parameter, it is written as a <cite>mapping</cite> ( a <cite>scalar</cite>
+followed by a colon &quot;:&quot;). What comes after the colon depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">is_greater_than_or_equal_to</span></code> accept a double.</p>
+<p>The available rules and their usage are explained in the osi-validator class <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator.html#module-osivalidator.osi_rules_implementations">osi_rules_implementations</a>. See also examples for available rules which can be defined in <code class="docutils literal notranslate"><span class="pre">*.yml</span></code> files below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_greater_than</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">is_greater_than_or_equal_to</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">is_less_than_or_equal_to</span><span class="p">:</span> <span class="mi">10</span>
+<span class="n">is_less_than</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">is_different</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">is_global_unique</span>
+<span class="n">refers</span>
+<span class="n">is_iso_country_code</span>
+<span class="n">first_element</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">}</span>
+<span class="n">last_element</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">}</span>
+<span class="n">is_optional</span>
+<span class="n">check_if</span><span class="p">:</span> <span class="p">[{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">this</span><span class="o">.</span><span class="n">y</span><span class="p">},</span> <span class="p">{</span><span class="n">do_check</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">is_less_than</span><span class="p">:</span> <span class="mi">3</span><span class="p">}}]</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="severity">
@@ -265,9 +246,9 @@ number, etc.</p>
 <p>When an attribute does not comply with a rule, a Warning is throw. An Error
 will be throw if an exclamation mark is written at the end of the verb of a
 rule.</p>
-<div class="section" id="id2">
-<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>in_range!: [0, 1]
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>is_greater_than!: 0
 </pre></div>
 </div>
 </div>

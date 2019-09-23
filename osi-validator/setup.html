@@ -80,19 +80,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -109,20 +106,18 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -191,7 +186,7 @@
             
   <div class="section" id="installation-guide">
 <h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
-<p>The <em>OSI Validator</em> has been developed with <strong>Python 3.6</strong> with virtual environment environment. It is the only version of Python that is supported now. <em>OSI Validator</em> should only be used with <strong>Python 3.6</strong>.</p>
+<p>The <em>OSI Validator</em> has been developed with <strong>Python 3.6</strong> with virtual environment. It is the only version of Python that is supported now. <em>OSI Validator</em> should only be used with <strong>Python 3.6</strong>.</p>
 <div class="section" id="setup-for-linux-users">
 <h2>Setup for linux users<a class="headerlink" href="#setup-for-linux-users" title="Permalink to this headline">¶</a></h2>
 <p>This setup guide is for users who want to</p>
@@ -213,8 +208,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
 <p>Clone repository proto2cpp:</p>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
-<p>It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don’t mess around with your global python environment.
-Install virutal environment:</p>
+<p>It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don't mess around with your global python environment.
+Install virtual environment:</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
 <p>Create virtual environment:</p>
 <p><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">-p</span> <span class="pre">/usr/bin/python3</span> <span class="pre">vpython</span></code></p>
@@ -234,11 +229,11 @@ Install virutal environment:</p>
 </div>
 <div class="section" id="setup-for-windows-users">
 <h2>Setup for windows users<a class="headerlink" href="#setup-for-windows-users" title="Permalink to this headline">¶</a></h2>
-<p>In Progress …</p>
+<p>In Progress ...</p>
 </div>
 <div class="section" id="setup-for-windows-developers">
 <h2>Setup for windows developers<a class="headerlink" href="#setup-for-windows-developers" title="Permalink to this headline">¶</a></h2>
-<p>In Progress …</p>
+<p>In Progress ...</p>
 </div>
 </div>
 

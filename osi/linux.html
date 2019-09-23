@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Coordinate systems and reference points" href="coordinatesystem.html" />
-    <link rel="prev" title="Windows" href="windows.html" /> 
+    <link rel="next" title="Windows" href="windows.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,44 +80,40 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="installation.html">How to install</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c">C++</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -163,7 +159,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="installation.html">How to install</a> &raquo;</li>
+          <li><a href="installation.html">Installation</a> &raquo;</li>
         
       <li>Linux</li>
     
@@ -186,45 +182,48 @@
             
   <div class="section" id="linux">
 <h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic simple">
-<li><p>Install <code class="docutils literal notranslate"><span class="pre">cmake</span></code> (minimum required version 3.7):</p></li>
-</ol>
-<ul class="simple">
-<li><p>Download cmake 3.7.2</p></li>
-<li><p>Unzip it and navigate to the unzipped folder.</p></li>
-<li><p>Run the following commands:</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./bootstrap
-make
-sudo make install
+<p>Install <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 3.10.2:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install cmake
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Install Protobuf 2.6.1: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></p></li>
-<li><p>Clone open simulation interface from GitHub and navigate to this directory using a terminal.</p></li>
-<li><p>Create a new directory build and navigate into it using the following command:</p></li>
-</ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir build
-<span class="nb">cd</span> build
+<p>Install <code class="docutils literal notranslate"><span class="pre">pip3</span></code> and missing python packages:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install python3-pip python-setuptools
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
-<li><p>Run the following commands to build and install OSI (v2.1.1 or higher required):</p></li>
-</ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake .. <span class="o">[</span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/usr/local<span class="o">]</span>
-make
-sudo make install
+<p>Install <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> 3.0.0:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libprotobuf-dev protobuf-compiler
+</pre></div>
+</div>
+<div class="section" id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ <span class="nb">cd</span> open-simulation-interface
+$ mkdir build
+$ <span class="nb">cd</span> build
+$ cmake ..
+$ make
+$ sudo make install
 </pre></div>
 </div>
 <p>P.S.: To build a 32-bit target under 64-bit linux, please add <code class="docutils literal notranslate"><span class="pre">-DCMAKE_CXX_FLAGS=&quot;-m32&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command. In this case, please make sure that <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> is in a 32-bit mode too.</p>
+</div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li><p>Get protobuf compiler 2.6.1: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">libprotobuf-dev</span> <span class="pre">protobuf-compiler</span></code></p></li>
-<li><p>Install the missing python packages: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-setuptools</span></code></p></li>
-<li><p>Clone <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open simulation interface</a>  and navigate to this directory using a terminal.</p></li>
-<li><p>Run the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p></li>
-</ol>
+<p><strong>Local</strong>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ <span class="nb">cd</span> open-simulation-interface
+$ sudo pip3 install virtualenv
+$ virtualenv -p python3 venv
+$ <span class="nb">source</span> venv/bin/activate
+$ pip install .
+</pre></div>
+</div>
+<p><strong>Global</strong>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ <span class="nb">cd</span> open-simulation-interface
+$ sudo pip3 install .
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -236,10 +235,10 @@ sudo make install
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="coordinatesystem.html" class="btn btn-neutral float-right" title="Coordinate systems and reference points" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="windows.html" class="btn btn-neutral float-right" title="Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="windows.html" class="btn btn-neutral float-left" title="Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

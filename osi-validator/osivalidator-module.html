@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Installation Guide" href="setup.html" />
-    <link rel="prev" title="Coordinate systems and reference points" href="../osi/coordinatesystem.html" /> 
+    <link rel="prev" title="Contributors&#39; Guidelines" href="../osi/howtocontribute.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,19 +80,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -103,20 +100,18 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -183,11 +178,8 @@
             
   <div class="section" id="osi-validation">
 <span id="id1"></span><h1>OSI Validation<a class="headerlink" href="#osi-validation" title="Permalink to this headline">¶</a></h1>
-<p>The OSI Validator recursively checks the compliance of an OSI message of type
-<code class="docutils literal notranslate"><span class="pre">SensorData</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> according to predefined or
-personalized rules.</p>
-<p>The basic requirements for OSI 3 are gathered in the
-<a class="reference external" href="./KPIs/index.html">KPIs documentation</a>.</p>
+<a class="reference external image-reference" href="https://travis-ci.org/OpenSimulationInterface/osi-validation"><img alt="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" src="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" /></a>
+<p>The OSI Validator is a validation framework for the field values of OSI messages. It recursively checks the compliance of an OSI message of type <code class="docutils literal notranslate"><span class="pre">SensorData</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> according to predefined rules. It was developed due to the need of validation of a huge amount of incoming OSI messages which cannot be validated by hand.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Installation Guide</a><ul>
@@ -204,7 +196,6 @@ personalized rules.</p>
 <li class="toctree-l1"><a class="reference internal" href="writing-rules.html">How to write rules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="writing-rules.html#folder-structure">Folder structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writing-rules.html#file-structure">File structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="writing-rules.html#child-message-type">Child message type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writing-rules.html#rules">Rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writing-rules.html#severity">Severity</a></li>
 </ul>
@@ -212,12 +203,12 @@ personalized rules.</p>
 <li class="toctree-l1"><a class="reference internal" href="osivalidator.html">osivalidator package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.linked_proto_field">osivalidator.linked_proto_field module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_doxygen_xml">osivalidator.osi_doxygen_xml module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="osivalidator.html#osivalidator-osi-general-validator-module">osivalidator.osi_general_validator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_general_validator">osivalidator.osi_general_validator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_id_manager">osivalidator.osi_id_manager module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_rules">osivalidator.osi_rules module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_rules_checker">osivalidator.osi_rules_checker module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_rules_implementations">osivalidator.osi_rules_implementations module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="osivalidator.html#osivalidator-osi-scenario-module">osivalidator.osi_scenario module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_scenario">osivalidator.osi_scenario module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator.osi_validator_logger">osivalidator.osi_validator_logger module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html#module-osivalidator">Module contents</a></li>
 </ul>
@@ -237,7 +228,7 @@ personalized rules.</p>
         <a href="setup.html" class="btn btn-neutral float-right" title="Installation Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../osi/coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate systems and reference points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../osi/howtocontribute.html" class="btn btn-neutral float-left" title="Contributors&#39; Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

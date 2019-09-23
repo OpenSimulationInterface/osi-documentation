@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to contribute" href="../osi/howtocontribute.html" />
-    <link rel="prev" title="OSI Visualizer" href="../osi-visualizer/README.html" /> 
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Contributors&#39; Guidelines" href="../osi-visualizer/howtocontribute.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,27 +80,27 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul class="current">
@@ -118,12 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#future-evolution">Future Evolution</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 
             
@@ -198,8 +193,8 @@ are to be packaged for their use in simulation environments using FMI
 <p>This is version 1.0.0 of this document. The version number is to be
 interpreted according to the <a class="reference external" href="http://semver.org/spec/v2.0.0.html">Semantic Versioning Specification (SemVer)
 2.0.0</a>.</p>
-<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
-“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+<p>The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;,
+&quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this
 document are to be interpreted as described in <a class="reference external" href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
 <div class="section" id="kinds-of-models">
 <h2>Kinds of Models<a class="headerlink" href="#kinds-of-models" title="Permalink to this headline">¶</a></h2>
@@ -219,7 +214,7 @@ will require manual intervention in those cases.</p>
 </div>
 <div class="section" id="fmi-2-0">
 <span id="fmi-20"></span><h2>FMI 2.0<a class="headerlink" href="#fmi-2-0" title="Permalink to this headline">¶</a></h2>
-<p>The model MUST be packaged as a valid <a class="reference external" href="https://www.fmi-standard.org/">FMI</a> 2.0 FMU for Co-Simulation,
+<p>The model MUST be packaged as a valid <a class="reference external" href="https://fmi-standard.org/">FMI</a> 2.0 FMU for Co-Simulation,
 as specified in the <a class="reference external" href="https://svn.modelica.org/fmi/branches/public/specifications/v2.0/FMI_for_ModelExchange_and_CoSimulation_v2.0.pdf">FMI 2.0 standard</a>. Unless otherwise noted in this
 document all specifications in the FMI 2.0 standard apply as-is.</p>
 </div>
@@ -262,7 +257,7 @@ being made.</p></li>
 <div class="section" id="definition-of-binary-variables">
 <h2>Definition of Binary Variables<a class="headerlink" href="#definition-of-binary-variables" title="Permalink to this headline">¶</a></h2>
 <p>In order to support the efficient exchange of binary data, especially
-binary data as provided for by the OSI [ProtocolBuffer][] definitions,
+binary data as provided for by the OSI <a class="reference external" href="https://developers.google.com/protocol-buffers">Protocol Buffer</a> definitions,
 the following convention is used to define such variables for FMI 2.0:</p>
 <ul>
 <li><p>For a notional binary variable of a name given by <code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code>, which
@@ -298,7 +293,7 @@ variability, which will be the causality and variability of the
 notional binary variable.</p></li>
 <li><p>Unless the causality and variability combination of the actual
 variables precludes this (i.e. for fixed or tunable
-calculatedParameters), the variables MUST have a start value of 0,
+calculatedParameter), the variables MUST have a start value of 0,
 indicating that no valid binary data buffer is available.</p>
 <p>Model FMUs MUST interpret values of 0 for either the base address
 (merged from lo and hi for 64bit) or the size to indicate that no
@@ -614,10 +609,10 @@ released.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../osi/howtocontribute.html" class="btn btn-neutral float-right" title="How to contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../osi-visualizer/README.html" class="btn btn-neutral float-left" title="OSI Visualizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../osi-visualizer/howtocontribute.html" class="btn btn-neutral float-left" title="Contributors&#39; Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -6,75 +6,65 @@ How to write rules
 Folder structure
 -----------------
 
-The rules are contained into YAML files into one folder. The organization of
-the files in this folder follows the architecture of OSI for consistency.
+Currently the rules are contained in ``*.yml`` files in the folder `requirements-osi-3 <https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3>`_. 
+The organization of the files in this folder follows the architecture of OSI for consistency. In the future the rules will be ported directly into the ``*.proto`` files of `OSI <https://github.com/OpenSimulationInterface/open-simulation-interface>`_.
 
 File structure
 ---------------
 
-We will take this example of the `osi_detectedlane.yml` file:
+Below you can see an example of the `osi_detectedlane.yml <https://github.com/OpenSimulationInterface/osi-validation/blob/master/requirements-osi-3/osi_detectedlane.yml>`_ rule file for `osi_detectedlane.proto <https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedlane.proto>`_:
 
 .. code-block:: YAML
 
   DetectedLane:
     header:
-      - is_set
     CandidateLane:
       probability:
-        - in_range: [0, 1]
+        - is_greater_than_or_equal_to: 0
+        - is_less_than_or_equal_to: 1
       classification:
-        - is_set
 
   DetectedLaneBoundary:
     header:
-      - is_set
     boundary_line:
-      - each:
-          position:
-            - is_set
+      position:
 
-According to the Python module used, YAML **version 1.1** is used. In this
-document, we will try to make associations between the `YAML` vocabulary
-according to its specifications and the `Protocol Buffers` one.
+Each root at the top level represent a root message type ``DetectedLane`` or ``DetectedLaneBoundary``. The children of each root message represent its fields if they are
+not camel-case. For example ``header`` is a field of ``DetectedLane`` or ``header`` and ``boundary_line`` are fields of ``DetectedLaneBoundary``. ``CandidateLane`` is a submessage of the message ``DetectedLane``. Each field has a ``sequence`` (starting with an hyphen ``-``) of rules that apply to that specific field. For example the probability of the message ``CandidateLane`` is between 0 and 1.
 
-Each root (at the top level) `scalar` represent a root message type (ex:
-``DetectedLane``, ``DetectedLaneBoundary``).
-
-The children `scalars` of each `root scalar` represent its fields if they are
-not camel-case (ex: ``header`` is a field of ``DetectedLane`` ; ``header`` and
-``boundary_line`` are fields of ``DetectedLaneBoundary``). See `Child message
-type`_ for the camel-case scalars.
-
-Each field has a `sequence` (starting with an hyphen ``-``) of scalar
-representing the `rules`_ that apply on.
-
-Child message type
-------------------
-
-A message type can have included message type. For example ``DetectedLane`` has
-a ``CandidateLane`` included message type. They first seem similar has field
-but they are not: they contain, exactly like top-level message type, fields
-with rules.
 
 Rules
 ------
 
-The rules can either be without any parameter (ex: ``is_set``) or with a
-parameter.
+The rules can either be with or without any parameters.
 
-Example
-^^^^^^^
 ::
 
-  in_range: [0, 1]
+  is_greater_than_or_equal_to: 0.0
+  is_optional
+  is_equal: 1
 
-In the case a rule has a parameter, it is written as a `mapping` (a `scalar`
-followed by a column ":"). What comes after the column is totally free and
-depends on the rule used. For instance, the rule ``in_range`` accept a sequence
-of double ; the rule ``each`` ask for mappings. Other rules accept string,
-number, etc.
+In the case a rule has a parameter, it is written as a `mapping` ( a `scalar`
+followed by a colon ":"). What comes after the colon depends on the rule used. For instance, the rule ``is_greater_than_or_equal_to`` accept a double.
 
-The available rule and their usage are explained here: :doc:`rules`.
+The available rules and their usage are explained in the osi-validator class `osi_rules_implementations <https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator.html#module-osivalidator.osi_rules_implementations>`_. See also examples for available rules which can be defined in ``*.yml`` files below:
+
+.. code-block:: python
+    
+    is_greater_than: 1
+    is_greater_than_or_equal_to: 1
+    is_less_than_or_equal_to: 10
+    is_less_than: 2
+    is_equal: 1
+    is_different: 2
+    is_global_unique
+    refers
+    is_iso_country_code
+    first_element: {is_equal: 0.13, is_greater_than: 0.13}
+    last_element: {is_equal: 0.13, is_greater_than: 0.13}
+    is_optional
+    check_if: [{is_equal: 2, is_greater_than: 3, target: this.y}, {do_check: {is_equal: 1, is_less_than: 3}}]
+
 
 Severity
 --------
@@ -87,4 +77,4 @@ Example
 ^^^^^^^
 ::
 
-  in_range!: [0, 1]
+  is_greater_than!: 0

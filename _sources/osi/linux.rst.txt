@@ -1,40 +1,56 @@
 Linux
 =====
-1. Install ``cmake`` (minimum required version 3.7):
-
-- Download cmake 3.7.2
-- Unzip it and navigate to the unzipped folder.
-- Run the following commands:
+Install ``cmake`` 3.10.2:
 
 .. code-block:: shell
 
-    ./bootstrap
-    make
-    sudo make install 
+    $ sudo apt-get install cmake
 
-2. Install Protobuf 2.6.1: ``sudo apt-get install libprotobuf-dev protobuf-compiler``
-3. Clone open simulation interface from GitHub and navigate to this directory using a terminal.
-4. Create a new directory build and navigate into it using the following command:
+Install ``pip3`` and missing python packages:
 
 .. code-block:: shell
 
-    mkdir build
-    cd build 
+    $ sudo apt-get install python3-pip python-setuptools
 
-5. Run the following commands to build and install OSI (v2.1.1 or higher required):
+Install ``protobuf`` 3.0.0:
 
 .. code-block:: shell
 
-    cmake .. [-DCMAKE_INSTALL_PREFIX=/usr/local]
-    make
-    sudo make install
+    $ sudo apt-get install libprotobuf-dev protobuf-compiler
+
+C++
+------
+
+.. code-block:: shell
+
+    $ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+    $ cd open-simulation-interface
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make
+    $ sudo make install
+
 
 P.S.: To build a 32-bit target under 64-bit linux, please add ``-DCMAKE_CXX_FLAGS="-m32"`` to the ``cmake`` command. In this case, please make sure that ``protobuf`` is in a 32-bit mode too.
 
 Python
 -----------
+**Local**:
 
-1. Get protobuf compiler 2.6.1: ``sudo apt-get install libprotobuf-dev protobuf-compiler``
-2. Install the missing python packages: ``sudo apt-get install python-setuptools``
-3. Clone `open simulation interface <https://github.com/OpenSimulationInterface/open-simulation-interface>`_  and navigate to this directory using a terminal.
-4. Run the following command: ``sudo python setup.py install``
+.. code-block:: shell
+
+    $ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+    $ cd open-simulation-interface
+    $ sudo pip3 install virtualenv 
+    $ virtualenv -p python3 venv
+    $ source venv/bin/activate
+    $ pip install .
+
+**Global**:
+
+.. code-block:: shell
+
+    $ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+    $ cd open-simulation-interface
+    $ sudo pip3 install .

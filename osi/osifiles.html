@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Releases" href="releases.html" />
-    <link rel="prev" title="Open Simulation Interface (OSI)" href="README.html" /> 
+    <link rel="next" title="Coordinate systems and reference points" href="coordinatesystem.html" />
+    <link rel="prev" title="Windows" href="windows.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,9 +80,10 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI files description</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#osi-version-proto">osi_version.proto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#osi-common-proto">osi_common.proto</a></li>
@@ -109,33 +110,27 @@
 <li class="toctree-l2"><a class="reference internal" href="#osi-sensorview-proto">osi_sensorview.proto</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -203,75 +198,75 @@
   <div class="section" id="osi-files-description">
 <h1>OSI files description<a class="headerlink" href="#osi-files-description" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="osi-version-proto">
-<h2>osi_version.proto<a class="headerlink" href="#osi-version-proto" title="Permalink to this headline">¶</a></h2>
-<p>This file gives you an interface for defininig the version number of the OSI code base.</p>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_version.proto.in">osi_version.proto</a><a class="headerlink" href="#osi-version-proto" title="Permalink to this headline">¶</a></h2>
+<p>This file gives you an interface for defining the version number of the OSI code base.</p>
 </div>
 <div class="section" id="osi-common-proto">
-<h2>osi_common.proto<a class="headerlink" href="#osi-common-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_common.proto">osi_common.proto</a><a class="headerlink" href="#osi-common-proto" title="Permalink to this headline">¶</a></h2>
 <p>OSI common provides the building blocks for the OSI field messages.</p>
 </div>
 <div class="section" id="osi-datarecording-proto">
-<h2>osi_datarecording.proto<a class="headerlink" href="#osi-datarecording-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_datarecording.proto">osi_datarecording.proto</a><a class="headerlink" href="#osi-datarecording-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedtrafficsign-proto">
-<h2>osi_detectedtrafficsign.proto<a class="headerlink" href="#osi-detectedtrafficsign-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-detectedtrafficsign-proto">osi_detectedtrafficsign.proto</a><a class="headerlink" href="#osi-detectedtrafficsign-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedtrafficlight-proto">
-<h2>osi_detectedtrafficlight.proto<a class="headerlink" href="#osi-detectedtrafficlight-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedtrafficlight.proto">osi_detectedtrafficlight.proto</a><a class="headerlink" href="#osi-detectedtrafficlight-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedroadmarking-proto">
-<h2>osi_detectedroadmarking.proto<a class="headerlink" href="#osi-detectedroadmarking-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedroadmarking.proto">osi_detectedroadmarking.proto</a><a class="headerlink" href="#osi-detectedroadmarking-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedobject-proto">
-<h2>osi_detectedobject.proto<a class="headerlink" href="#osi-detectedobject-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedobject.proto">osi_detectedobject.proto</a><a class="headerlink" href="#osi-detectedobject-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedoccupant-proto">
-<h2>osi_detectedoccupant.proto<a class="headerlink" href="#osi-detectedoccupant-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedoccupant.proto">osi_detectedoccupant.proto</a><a class="headerlink" href="#osi-detectedoccupant-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-detectedlane-proto">
-<h2>osi_detectedlane.proto<a class="headerlink" href="#osi-detectedlane-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/osi_detectedlane.proto">osi_detectedlane.proto</a><a class="headerlink" href="#osi-detectedlane-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-environment-proto">
-<h2>osi_environment.proto<a class="headerlink" href="#osi-environment-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-environment-proto">osi_environment.proto</a><a class="headerlink" href="#osi-environment-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-groundtruth-proto">
-<h2>osi_groundtruth.proto<a class="headerlink" href="#osi-groundtruth-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-groundtruth-proto">osi_groundtruth.proto</a><a class="headerlink" href="#osi-groundtruth-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-hostvehicledata-proto">
-<h2>osi_hostvehicledata.proto<a class="headerlink" href="#osi-hostvehicledata-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-hostvehicledata-proto">osi_hostvehicledata.proto</a><a class="headerlink" href="#osi-hostvehicledata-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-trafficsign-proto">
-<h2>osi_trafficsign.proto<a class="headerlink" href="#osi-trafficsign-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-trafficsign-proto">osi_trafficsign.proto</a><a class="headerlink" href="#osi-trafficsign-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-trafficlight-proto">
-<h2>osi_trafficlight.proto<a class="headerlink" href="#osi-trafficlight-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-trafficlight-proto">osi_trafficlight.proto</a><a class="headerlink" href="#osi-trafficlight-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-roadmarking-proto">
-<h2>osi_roadmarking.proto<a class="headerlink" href="#osi-roadmarking-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-roadmarking-proto">osi_roadmarking.proto</a><a class="headerlink" href="#osi-roadmarking-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-featuredata-proto">
-<h2>osi_featuredata.proto<a class="headerlink" href="#osi-featuredata-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-featuredata-proto">osi_featuredata.proto</a><a class="headerlink" href="#osi-featuredata-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-object-proto">
-<h2>osi_object.proto<a class="headerlink" href="#osi-object-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-object-proto">osi_object.proto</a><a class="headerlink" href="#osi-object-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-occupant-proto">
-<h2>osi_occupant.proto<a class="headerlink" href="#osi-occupant-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-occupant-proto">osi_occupant.proto</a><a class="headerlink" href="#osi-occupant-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-lane-proto">
-<h2>osi_lane.proto<a class="headerlink" href="#osi-lane-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-lane-proto">osi_lane.proto</a><a class="headerlink" href="#osi-lane-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-sensordata-proto">
-<h2>osi_sensordata.proto<a class="headerlink" href="#osi-sensordata-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-sensordata-proto">osi_sensordata.proto</a><a class="headerlink" href="#osi-sensordata-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-sensorviewconfiguration-proto">
-<h2>osi_sensorviewconfiguration.proto<a class="headerlink" href="#osi-sensorviewconfiguration-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-sensorviewconfiguration-proto">osi_sensorviewconfiguration.proto</a><a class="headerlink" href="#osi-sensorviewconfiguration-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-sensorspecific-proto">
-<h2>osi_sensorspecific.proto<a class="headerlink" href="#osi-sensorspecific-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-sensorspecific-proto">osi_sensorspecific.proto</a><a class="headerlink" href="#osi-sensorspecific-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="osi-sensorview-proto">
-<h2>osi_sensorview.proto<a class="headerlink" href="#osi-sensorview-proto" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference internal" href="#osi-sensorview-proto">osi_sensorview.proto</a><a class="headerlink" href="#osi-sensorview-proto" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -283,10 +278,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="releases.html" class="btn btn-neutral float-right" title="Releases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="coordinatesystem.html" class="btn btn-neutral float-right" title="Coordinate systems and reference points" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="README.html" class="btn btn-neutral float-left" title="Open Simulation Interface (OSI)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="windows.html" class="btn btn-neutral float-left" title="Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

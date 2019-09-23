@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>OSI-Documentation (Work in progress) &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>OSI-Documentation &mdash; Open Simulation Interface v3.1.2 documentation</title>
   
 
   
@@ -78,37 +78,32 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -154,7 +149,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>OSI-Documentation (Work in progress)</li>
+      <li>OSI-Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,11 +168,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="osi-documentation-work-in-progress">
-<h1><a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/">OSI-Documentation</a> (Work in progress)<a class="headerlink" href="#osi-documentation-work-in-progress" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/">OSI-Documentation</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="https://travis-ci.org/OpenSimulationInterface/osi-documentation"><img alt="https://travis-ci.org/OpenSimulationInterface/osi-documentation.svg?branch=master" src="https://travis-ci.org/OpenSimulationInterface/osi-documentation.svg?branch=master" /></a>
 <p>This is the main repository for the whole documentation of the osi-project.
-The documentation is based on <a class="reference external" href="https://pypi.org/project/Sphinx/">sphinx</a> Version v2.2.0 . See the documentation <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/">here</a>.</p>
+The documentation is based on <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a>. See the documentation <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/">here</a>.</p>
+<div class="section" id="organization-build-overview">
+<h2>Organization Build Overview<a class="headerlink" href="#organization-build-overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/open-simulation-interface"><img alt="osi_build" src="https://travis-ci.org/OpenSimulationInterface/open-simulation-interface.svg?branch=master" /></a> - <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi/README.html">Open Simulation Interface</a></p>
+<p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/osi-validation"><img alt="osi_validation_build" src="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" /></a> - <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator-module.html">OSI Validation</a></p>
+<p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/osi-visualizer"><img alt="osi_visualizer_build" src="https://travis-ci.org/OpenSimulationInterface/osi-visualizer.svg?branch=master" /></a> - <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-visualizer/README.html">OSI Visualizer</a></p>
+<p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging"><img alt="osi_sensor_model_packaging_build" src="https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master" /></a> - <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-model-packaging/README.html">OSI Model Packaging</a></p>
+</div>
 </div>
 
 

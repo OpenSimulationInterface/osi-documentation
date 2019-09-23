@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linux" href="linux.html" />
-    <link rel="prev" title="How to install" href="installation.html" /> 
+    <link rel="next" title="OSI files description" href="osifiles.html" />
+    <link rel="prev" title="Linux" href="linux.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,44 +80,40 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="installation.html">How to install</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linux.html">Linux</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c">C++</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="linux.html">Linux</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -163,7 +159,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="installation.html">How to install</a> &raquo;</li>
+          <li><a href="installation.html">Installation</a> &raquo;</li>
         
       <li>Windows</li>
     
@@ -186,6 +182,8 @@
             
   <div class="section" id="windows">
 <h1>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
 <p>All the following steps are to be executed with admin rights:</p>
 <ol class="arabic simple">
 <li><p>Install cmake (v3.7 or higher required):</p></li>
@@ -244,6 +242,7 @@ cmake --build . --target install
 </div>
 <p>As an alternative way you can use Visual Studio to build and install OSI.
 P.S.: If you build in a Release configuration, please make sure that the protobuf libraries and executable are also compiled with release settings.</p>
+</div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
@@ -264,10 +263,10 @@ P.S.: If you build in a Release configuration, please make sure that the protobu
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="linux.html" class="btn btn-neutral float-right" title="Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="osifiles.html" class="btn btn-neutral float-right" title="OSI files description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="installation.html" class="btn btn-neutral float-left" title="How to install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="linux.html" class="btn btn-neutral float-left" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OSI Validation" href="../osi-validator/osivalidator-module.html" />
-    <link rel="prev" title="Linux" href="linux.html" /> 
+    <link rel="next" title="Commenting" href="commenting.html" />
+    <link rel="prev" title="OSI files description" href="osifiles.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,42 +80,37 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Coordinate systems and reference points</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#coordinate-systems">Coordinate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reference-points">Reference points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-position-vectors-of-vehicles">Example: Position vectors of vehicles</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -192,9 +187,9 @@
 </ul>
 <p>The transformation between frames for a specific vehicle/sensor is performed using the information in</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::base::position</span> <span class="pre">and</span> <span class="pre">::orientation</span></code>: These define the position and orientation of the vehicle’s reference point, i.e. center of bounding box.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::vehicle_attributes::bbcenter_to_rear</span></code>: This defines the vehicle frame origin resp. the relative frame of the vehicle, i.e. it defines the offset of the rear axis center relative to the vehicle’s reference point (center of bounding box). This offset is static and given in vehicle coordinates.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SensorData::mounting_position</span></code>: This defines the sensor’s position and orientation relative to the vehicle frame’s origin, i.e. rear axis center, and therefore defines sensor frame origin resp. the relative frame of the sensor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::base::position</span> <span class="pre">and</span> <span class="pre">::orientation</span></code>: These define the position and orientation of the vehicle's reference point, i.e. center of bounding box.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::vehicle_attributes::bbcenter_to_rear</span></code>: This defines the vehicle frame origin resp. the relative frame of the vehicle, i.e. it defines the offset of the rear axis center relative to the vehicle's reference point (center of bounding box). This offset is static and given in vehicle coordinates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SensorData::mounting_position</span></code>: This defines the sensor's position and orientation relative to the vehicle frame's origin, i.e. rear axis center, and therefore defines sensor frame origin resp. the relative frame of the sensor.</p></li>
 </ul>
 </div>
 <div class="section" id="reference-points">
@@ -207,7 +202,7 @@
 <p><strong>start point</strong>: This is the origin of the coordinate system. (i.e. sensor frame or world frame).</p>
 <p><strong>end point</strong>: often referred to as reference point. It is always the middle of the bounding box.</p>
 <p><strong>orientation</strong>: captured by the coordinate system. (i.e. sensor frame or world frame).</p>
-<p>Open Simulation Interace uses DIN ISO 8855:2013-11 for coordinate systems and transformations between coorinate systems.</p>
+<p>Open Simulation Interface uses DIN ISO 8855:2013-11 for coordinate systems and transformations between coordinate systems.</p>
 </div>
 </div>
 
@@ -219,10 +214,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../osi-validator/osivalidator-module.html" class="btn btn-neutral float-right" title="OSI Validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="commenting.html" class="btn btn-neutral float-right" title="Commenting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="linux.html" class="btn btn-neutral float-left" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="osifiles.html" class="btn btn-neutral float-left" title="OSI files description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -80,19 +80,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Building and Installation:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">How to install</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -106,20 +103,18 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
-</ul>
-<p class="caption"><span class="caption-text">General Contributer's Guidelines:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">How to contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
 </ul>
 
             
@@ -214,7 +209,7 @@ optional arguments:
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>osivalidator --data osi_message_data/osi_message_test.txt
 </pre></div>
 </div>
-<p>After sucessfully running the validation the following output is generated:</p>
+<p>After successfully running the validation the following output is generated:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Instanciate logger
 Read data
 Retrieving message offsets in scenario file until inf...
@@ -268,7 +263,7 @@ Ranges of timestamps    Message
 [0, 260]                SensorView.global_ground_truth.is_valid(None) does not comply in SensorView.global_ground_truth
 </pre></div>
 </div>
-<p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal notranslate"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/development/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <span class="xref std std-ref">commenting-with-rules</span>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
+<p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal notranslate"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <a class="reference internal" href="../osi/commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Errors (NUMBER_ERRORS)
 Ranges of timestamps                Message
 --------------------------------    --------------------------------------------------------
