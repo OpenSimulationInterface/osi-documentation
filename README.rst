@@ -1,11 +1,11 @@
-`OSI-Documentation <https://opensimulationinterface.github.io/osi-documentation/>`_ (Work in progress)
-=========================================================================================================
+`OSI-Documentation <https://opensimulationinterface.github.io/osi-documentation/>`_
+======================================================================================
 
 .. image:: https://travis-ci.org/OpenSimulationInterface/osi-documentation.svg?branch=master
     :target: https://travis-ci.org/OpenSimulationInterface/osi-documentation
 
 This is the main repository for the whole documentation of the osi-project. 
-The documentation is based on `sphinx <https://pypi.org/project/Sphinx/>`_. See the documentation `here <https://opensimulationinterface.github.io/osi-documentation/>`_.
+The documentation is based on `sphinx <https://www.sphinx-doc.org/en/master/>`_. See the documentation `here <https://opensimulationinterface.github.io/osi-documentation/>`_.
 
 Organization Build Overview
 ----------------------------
