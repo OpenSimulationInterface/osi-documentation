@@ -1,6 +1,6 @@
 Installation Guide
 ====================
-The *OSI Validator* has been developed with **Python 3.6** with virtual environment environment. It is the only version of Python that is supported now. *OSI Validator* should only be used with **Python 3.6**.
+The *OSI Validator* has been developed with **Python 3.6** with virtual environment. It is the only version of Python that is supported now. *OSI Validator* should only be used with **Python 3.6**.
 
 Setup for linux users
 ----------------------

@@ -55,6 +55,7 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Validation:
 
     osi-validator/osivalidator-module
+    osi-validator/howtocontribute
 
 
 .. toctree::
@@ -63,6 +64,7 @@ The authors' vision is to be able to connect any automated driving function to a
 
     osi-visualizer/README
     osi-visualizer/nvidia-docker
+    osi-visualizer/howtocontribute
 
 
 .. toctree::
