@@ -25,7 +25,7 @@ install:
         PROTO2CPP_URL="https://github.com/OpenSimulationInterface/proto2cpp.git"
         if [ ! -f ${DEPS_DIR}/proto2cpp ] ; then mkdir -p proto2cpp ; git clone ${PROTO2CPP_URL} ${DEPS_DIR}/proto2cpp ; fi
         
-    - sudo apt-get install python3-pip protobuf-compiler libenchant1c2a
+    - sudo apt-get install python3-pip protobuf-compiler libenchant1c2a doxygen doxygen-doc doxygen-latex doxygen-gui graphviz
     - pip install sphinx_rtd_theme
     - pip install sphinx_git
     - pip install sphinxcontrib.spelling
@@ -54,7 +54,6 @@ script:
     - git clone https://github.com/OpenSimulationInterface/osi-validation.git
     - cd osi-validation
     - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
-    - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
     - cd open-simulation-interface
     - pip install .
     - cd ..

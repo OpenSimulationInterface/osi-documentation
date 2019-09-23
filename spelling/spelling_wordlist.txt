@@ -1,4 +1,5 @@
 Atlassian
+atlassian
 modularity
 integrability
 behaviour
@@ -27,8 +28,11 @@ parameterization
 repo
 graphviz
 groundtruth
+GroundTruth
 sensorview
+SensorView
 sensordata
+SensorData
 incentivize
 github
 rebase
@@ -38,3 +42,10 @@ logicmodels
 detections
 innoviz
 Nvidia
+unicity
+subfield
+subfields
+synthetized
+precessed
+assignees
+assignee

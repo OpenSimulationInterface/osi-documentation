@@ -41,24 +41,25 @@ to read old files" All files that have been recorded in the past with a
 specific major version are FAITHFULLY valid with all combinations of
 higher minor and patch versions of the same major version.
 
-Fault injection: how-to
------------------------
+.. # Old way of OSI 2 to inject errors
+.. Fault injection: how-to
+.. -----------------------
 
-Injection of predefined sensor errors should be handled by a
-specialized "fault injector" component that acts like a sensor model
-component, i.e. it takes a SensorData message as input and returns a
-modified SensorData message as output. Specific errors should be handled
-as follows:
+.. Injection of predefined sensor errors should be handled by a
+.. specialized "fault injector" component that acts like a sensor model
+.. component, i.e. it takes a SensorData message as input and returns a
+.. modified SensorData message as output. Specific errors should be handled
+.. as follows:
 
--  Ghost objects / false positive: An additional SensorDataObject is
-   added to the list of objects in SensorData.object with
-   SensorDataObject.model_internal_object.ground_truth_type set to
-   kTypeGhost.
--  False negative: The object is marked as not seen by the sensor by
-   setting the property SensorDataObject.model_internal_object.is_seen
-   to false. The implementation of field-of-view calculation modules
-   should respect this flag and never reset an object marked as not-seen
-   to seen.
+.. -  Ghost objects / false positive: An additional SensorDataObject is
+..    added to the list of objects in SensorData.object with
+..    SensorDataObject.model_internal_object.ground_truth_type set to
+..    kTypeGhost.
+.. -  False negative: The object is marked as not seen by the sensor by
+..    setting the property SensorDataObject.model_internal_object.is_seen
+..    to false. The implementation of field-of-view calculation modules
+..    should respect this flag and never reset an object marked as not-seen
+..    to seen.
 
 Proto3 Support
 --------------
@@ -77,30 +78,28 @@ A specification to package sensor models using OSI as (extended)
 Functional Mock-up Units (FMUs) for use in simulation environments is
 available `here`_.
 
-Documentation
--------------
+.. Doxygen Reference Documentation
+.. --------------------------------
 
-The actual documentation of the GitHub master branch is `online`_
-available.
+.. The doxygen reference documentation of the GitHub master branch is `online`_
+.. available.
 
-Detailed information about installation and usage of OSI can be found in
-the `Wiki`_
 
-In order to generate the doxygen documentation for OSI, please follow
-the following steps:
+.. In order to generate the doxygen documentation for OSI, please follow
+.. the following steps:
 
-1. Install `Doxygen`_, set an environmental variable 'doxygen' with the
-   path to the binary file and add it to the PATH variable:
-   ``PATH += %doxygen%``.
-2. Download the `proto2cpp`_ repo. Copy the content of the repo
-   proto2cpp to your desired ``<path-to-proto2cpp.py>``
-3. Install `graphviz`_, set an environmental variable 'graphviz' with
-   the path to the binary file and add it to the PATH variable:
-   ``PATH += %graphviz%``.
-4. From the cmd navigate to the build directory and run:
-   ``cmd cmake -DFILTER_PROTO2CPP_PY_PATH=<path-to-proto2cpp.py> <path-to-CMakeLists.txt>``
-5. The build process will then generate the doxygen documentation under
-   the directory doc.
+.. 1. Install `Doxygen`_, set an environmental variable 'doxygen' with the
+..    path to the binary file and add it to the PATH variable:
+..    ``PATH += %doxygen%``.
+.. 2. Download the `proto2cpp`_ repo. Copy the content of the repo
+..    proto2cpp to your desired ``<path-to-proto2cpp.py>``
+.. 3. Install `graphviz`_, set an environmental variable 'graphviz' with
+..    the path to the binary file and add it to the PATH variable:
+..    ``PATH += %graphviz%``.
+.. 4. From the cmd navigate to the build directory and run:
+..    ``cmd cmake -DFILTER_PROTO2CPP_PY_PATH=<path-to-proto2cpp.py> <path-to-CMakeLists.txt>``
+.. 5. The build process will then generate the doxygen documentation under
+..    the directory doc.
 
 Citing
 ------
@@ -121,7 +120,6 @@ scientific work:
 
 .. _here: https://github.com/OpenSimulationInterface/osi-sensor-model-packaging
 .. _online: https://opensimulationinterface.github.io/open-simulation-interface/
-.. _Wiki: https://github.com/OpenSimulationInterface/open-simulation-interface/wiki
 .. _Doxygen: http://www.doxygen.nl/download.html
 .. _proto2cpp: https://github.com/OpenSimulationInterface/proto2cpp
 .. _graphviz: https://graphviz.gitlab.io/_pages/Download/Download_windows.html

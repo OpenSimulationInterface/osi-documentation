@@ -63,7 +63,7 @@ OSI common provides the building blocks for the OSI field messages.
 ---------------------------------
 
 `osi_sensorviewconfiguration.proto`_
----------------------------------
+--------------------------------------
 
 `osi_sensorspecific.proto`_
 ---------------------------------

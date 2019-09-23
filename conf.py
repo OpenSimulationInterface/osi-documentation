@@ -36,7 +36,7 @@ extensions = [
 ]
 
 # Show spelling suggestions
-# spelling_show_suggestions = True
+spelling_show_suggestions = True
 spelling_word_list_filename = ['spelling/spelling_wordlist.txt', 
                                'spelling/abbreviations.txt',
                                'spelling/file_endings.txt',
@@ -73,8 +73,9 @@ exclude_patterns = ['_build',
                     'vpython', 
                     '.github',
                     'osi-validation/open-simulation-interface',
-                    'osi-validation/README.rst',
-                    'osi-validation/proto2cpp']
+                    'osi-validation/proto2cpp',
+                    'osi-validation/README.md',
+                    'osi-validation/.github']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

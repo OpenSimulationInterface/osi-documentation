@@ -10,6 +10,7 @@ trafficsign
 trafficlight
 roadmarking
 featuredata
+FeatureData
 sensorviewconfiguration
 sensorspecific
 kTypeGhost
