@@ -47,7 +47,7 @@ exhale_args = {
     # These arguments are required
     "containmentFolder":     "./osi",
     "rootFileName":          "library_root.rst",
-    "rootFileTitle":         "OSI Library Reference",
+    "rootFileTitle":         "OSI Reference",
     "doxygenStripFromPath":  "..",
     # Suggested optional arguments
     "createTreeView":        True,
