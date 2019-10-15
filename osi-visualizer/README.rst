@@ -12,12 +12,12 @@ the OSI GroundTruth and SensorData messages. It visualizes the ``GroundTruth``, 
 Usage
 -------
 
-In the configuration panel at the right (see Screenshot below) load for channel 1 a scenario as a playback and choose a port to which it will send. In the panel below at channel 2 type in the host and the output port. Select the data type it will output (here ``SensorData``). Make sure the appropriate communication server for data exchange is up and running. 
+Use the configuration panel at the right (see Screenshot below) to load e.g. a playback file for channel 1 at Playback and choose a port to which it will be send (here 5564). Select the data type ``SensorView`` according to the content of the file. After that enter into the IP field the localhost and into the port field the receiving port (here 5563) for channel 2 in the panel below at Connection. Select the data type it is expected to visualize (here ``SensorData``). In this example an intermediary on ``localhost`` processes the data from the input file using a `OSMP <https://github.com/OpenSimulationInterface/osi-sensor-model-packaging>`_ sensor model, transforms it into ``SensorData`` and sends it to port 5563.
 
 .. image:: ../_static/images/osi-visualizer/osi_visualizer.png
     :align: center
 
-Now you can click on play for channel 1 and 2 and you can visualize the communication between these two channels.  Channel 1 plays an OSI input file and sends out the OSI message to port 5564 at the same time. Channel 2 receives an OSI message from port 5564 and shows up on the canvas (see demo screenshot below).
+Now you can click on play for channel 1 and 2 and you can visualize the communication between these two channels. Channel 1 plays the selected OSI input file scenario and sends out the OSI message to port 5564 at the same time. Channel 2 visualizes the received OSI messages at ``localhost`` at port 5563 showing it on the canvas (see demo screenshot below).
 
 .. image:: ../_static/images/osi-visualizer/Demo.png
     :align: center
@@ -27,7 +27,7 @@ Installation
 
 **Environment and dependencies**
 
-Currently we strongly recommend users to use the osi-visualizer under Ubuntu Linux 16.04 LTS. You can see a working development environment based on Ubuntu 16.04 LTS in the Dockerfile in the repository.
+Currently we strongly recommend users to use the osi-visualizer under Ubuntu Linux 18.04 LTS. You can see a working development environment based on Ubuntu 18.04 LTS in the Dockerfile in the repository.
 
 * `cmake <https://cmake.org/>`_ (>= 3.5) 
 * `Qt <http://download.qt.io/official_releases/qt/>`_ (>= 5.5.0)
@@ -40,8 +40,15 @@ Currently we strongly recommend users to use the osi-visualizer under Ubuntu Lin
 
 .. code-block:: bash
 
+    $ bash install.sh
+
+or just manually if dependecies are already installed:
+
+.. code-block:: bash
+
     $ git clone https://github.com/OpenSimulationInterface/osi-visualizer
     $ cd osi-visualizer
+    $ git clone https://github.com/OpenSimulationInterface/open-simulation-interface
     $ mkdir build
     $ cd build
     $ cmake ..
