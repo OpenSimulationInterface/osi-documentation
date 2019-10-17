@@ -4,20 +4,32 @@ The *OSI Validator* has been developed with **Python 3.6** with virtual environm
 
 Setup for linux users
 ----------------------
-This setup guide is for users who want to 
+This setup guide is for users who want to just use the validator.
 
 Clone repository osi-validation:
 
 ``git clone https://github.com/OpenSimulationInterface/osi-validation.git``
 
+Change directory to osi-validation:
+
+``cd osi-validation``
+
+Clone the repository open-simulation-interface:
+
+``git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git``
+
+Clone repository proto2cpp:
+
+``git clone https://github.com/OpenSimulationInterface/proto2cpp.git``
+
 Install osi-validation into the global root directory:
 
-``sudo python3 setup.py install``
+``sudo pip3 install .``
 
 
 Setup for linux developers
 ----------------------------
-This setup guide is for developers who want to contribute to osi-validation.
+This setup guide is for developers who want to contribute to the OSI Validator.
 
 Clone repository osi-validation:
 
@@ -26,10 +38,6 @@ Clone repository osi-validation:
 Change directory:
 
 ``cd osi-validation``
-
-Change the branch to development:
-
-``git checkout development``
 
 Clone repository open-simulation-interface:
 
@@ -56,10 +64,6 @@ Install open-simulation-interface:
 
 ``cd open-simulation-interface; pip install .``
 
-Install last requirements:
-
-``pip install -r requirements.txt``
-
 Install osi-validator:
 
 ``cd ..; pip install .``
@@ -67,12 +71,6 @@ Install osi-validator:
 Last step copy ``requirements-osi-3`` to ``vpython/lib/python3.6/site-packages``
 
 ``cp -R requirements-osi-3 vpython/lib/python3.6/site-packages/``
-
-or **install with virtual environment via script**
-
-Just run the script:
-
-``sudo bash installation.sh``
 
 
 Setup for windows users

@@ -43,12 +43,12 @@ The authors' vision is to be able to connect any automated driving function to a
 
    osi/README
    osi/installation
-   osi/osifiles
    osi/coordinatesystem
    osi/commenting
    osi/versioning
    osi/releases
    osi/howtocontribute
+   osi/library_root
 
 .. toctree::
     :maxdepth: 2

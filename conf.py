@@ -3,8 +3,10 @@
 import os
 import sys
 import sphinxcontrib.spelling
+import textwrap
 # sys.path.insert(0, os.path.abspath('.'))
-sys.path.append('/home/travis/build/OpenSimulationInterface/osi-validation')
+sys.path.append('/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation')
+sys.path.append('/home/travis/build/OpenSimulationInterface/osi-documentation/breathe')
 
 # -- Project information -----------------------------------------------------
 
@@ -33,8 +35,32 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
-    'sphinxcontrib.spelling'
+    'sphinxcontrib.spelling',
+    'breathe',
+    'exhale'
 ]
+breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation/open-simulation-interface/doc/xml" }
+breathe_default_project = "open-simulation-interface"
+
+# Setup the exhale extension
+exhale_args = {
+    # These arguments are required
+    "containmentFolder":     "./osi",
+    "rootFileName":          "library_root.rst",
+    "rootFileTitle":         "OSI Reference",
+    "doxygenStripFromPath":  "..",
+    # Suggested optional arguments
+    "createTreeView":        True,
+    "afterTitleDescription": textwrap.dedent('''
+    .. WARNING::
+
+       Currently this reference is **work in progress** to port the doxygen 
+       documentation completely to the sphinx documentation. 
+       For the official reference see the current 
+       `OSI reference documentation <https://opensimulationinterface.github.io/open-simulation-interface/annotated.html>`_.
+    ''')
+}
+
 
 # Show spelling suggestions
 spelling_show_suggestions = True
@@ -76,7 +102,8 @@ exclude_patterns = ['_build',
                     'osi-validation/open-simulation-interface',
                     'osi-validation/proto2cpp',
                     'osi-validation/README.md',
-                    'osi-validation/.github']
+                    'osi-validation/.github',
+                    'breathe/*']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -115,5 +142,3 @@ html_theme = "sphinx_rtd_theme"
 
 # html_theme = "glpi"
 # html_theme_path = sphinx_glpi_theme.get_html_themes_path()
-
-
