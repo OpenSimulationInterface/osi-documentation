@@ -1,0 +1,13 @@
+.. _exhale_variable_osi__detectedoccupant_8proto_1adbedb258e13546cc707a6ebb073a3d8a:
+
+Variable syntax
+===============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedoccupant.proto`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: syntax

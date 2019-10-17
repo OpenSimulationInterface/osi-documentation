@@ -1,0 +1,13 @@
+.. _exhale_variable_osi__version_8proto_1a3ebc5a88ee2b408d549eb3cbcbfe0f27:
+
+Variable proto
+==============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_version.proto`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: proto

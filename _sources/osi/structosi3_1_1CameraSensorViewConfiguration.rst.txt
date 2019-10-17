@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1CameraSensorViewConfiguration:
+
+Struct CameraSensorViewConfiguration
+====================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorviewconfiguration.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::CameraSensorViewConfiguration
+   :members:
+   :protected-members:
+   :undoc-members:

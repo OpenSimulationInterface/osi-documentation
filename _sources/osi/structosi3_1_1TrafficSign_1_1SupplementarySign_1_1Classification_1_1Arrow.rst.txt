@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification_1_1Arrow:
+
+Struct Classification::Arrow
+============================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficsign.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::TrafficSign::SupplementarySign::Classification::Arrow
+   :members:
+   :protected-members:
+   :undoc-members:

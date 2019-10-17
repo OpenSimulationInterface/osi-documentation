@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct MovingObject::VehicleAttributes &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct MovingObject::VehicleClassification" href="structosi3_1_1MovingObject_1_1VehicleClassification.html" />
+    <link rel="prev" title="Struct MovingObject" href="structosi3_1_1MovingObject.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct MovingObject::VehicleAttributes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/structosi3_1_1MovingObject_1_1VehicleAttributes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-movingobject-vehicleattributes">
+<span id="exhale-struct-structosi3-1-1movingobject-1-1vehicleattributes"></span><h1>Struct MovingObject::VehicleAttributes<a class="headerlink" href="#struct-movingobject-vehicleattributes" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-object-proto"><span class="std std-ref">File osi_object.proto</span></a></p></li>
+</ul>
+<div class="section" id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
+<p>This struct is a nested type of <a class="reference internal" href="structosi3_1_1MovingObject.html#exhale-struct-structosi3-1-1movingobject"><span class="std std-ref">Struct MovingObject</span></a>.</p>
+</div>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi312MovingObject17VehicleAttributesE">
+<span id="_CPPv3N4osi312MovingObject17VehicleAttributesE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributesE"></span><span id="osi3::MovingObject::VehicleAttributes"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes"></span><em class="property">struct </em><code class="sig-name descname">VehicleAttributes</code><br /></dt>
+<dd><p>The vehicle attributes for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> (host or other). </p>
+<p>This is an extension to the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> with additional attributes, such as type and lights. The origin of the rear (front) axis coordinate system in world coordinates is calculated as: <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + R * <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code> (front) for the host vehicle (R rotates from vehicle to world frame, i.e. inverse orientation of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>).</p>
+<p>For all vehicles, including host vehicles, the position given in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> points to the center of the vehicle’s bounding box.</p>
+<p>The vehicle object coordinates are defined as x-axis is the direction from rear to front of the vehicle, y-axis corresponds to rear axle and z-axis points to vehicle ceiling [1]. The coordinate system is right-handed. Therefore the positive y-axis points to the left of the vehicle.</p>
+<p><dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[1] DIN ISO 8855:2013-11 </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1aba30c025ec374d4bcb9dead3913438ec"></span><code class="sig-name descname">optional Identifier osi3::MovingObject::VehicleAttributes::driver_id = 1</code></dt>
+<dd><p>The ID of the driver of the (host) vehicle.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a848ab52664318bb5f56acf5db0c21248"></span><code class="sig-name descname">optional double osi3::MovingObject::VehicleAttributes::radius_wheel = 2</code></dt>
+<dd><p>Median radius of the wheels measured from a center of the wheel including tire.</p>
+<p>Unit: [m] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a41139d820fbf7d590d68f09f5322a4e4"></span><code class="sig-name descname">optional uint32 osi3::MovingObject::VehicleAttributes::number_wheels = 3</code></dt>
+<dd><p>Number of independent wheels.</p>
+<p>Unit: [] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"></span><code class="sig-name descname">optional Vector3d osi3::MovingObject::VehicleAttributes::bbcenter_to_rear = 4</code></dt>
+<dd><p>The vector pointing from the bounding box center point (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code>) to the middle (in x, y and z) of the rear axle under neutral load conditions. In object coordinates. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a7f681fb05df13db0e9df73e664621ccf"></span><code class="sig-name descname">optional Vector3d osi3::MovingObject::VehicleAttributes::bbcenter_to_front = 5</code></dt>
+<dd><p>The vector pointing from the bounding box center point (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code>) to the middle (in x, y and z) of the front axle under neutral load conditions. In object coordinates. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname">optional double osi3::MovingObject::VehicleAttributes::ground_clearance = 6</code></dt>
+<dd><p>Static minimal distance in [m] of under-body plane to ground surface plane (i.e. disregarding driving dynamic effects or road surface effects) under neutral load conditions. Can be useful to approximate the clear area under a vehicle that a sensor can see through. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1MovingObject_1_1VehicleClassification.html" class="btn btn-neutral float-right" title="Struct MovingObject::VehicleClassification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1MovingObject.html" class="btn btn-neutral float-left" title="Struct MovingObject" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

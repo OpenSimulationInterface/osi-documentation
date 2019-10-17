@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File osi_detectedobject.proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File osi_detectedobject.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedobject.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-detectedobject-proto">
+<span id="program-listing-file-osi-documentation-osi-validation-open-simulation-interface-osi-detectedobject-proto"></span><h1>Program Listing for File osi_detectedobject.proto<a class="headerlink" href="#program-listing-for-file-osi-detectedobject-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedobject.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-detectedobject-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/osi-validation/open-simulation-interface/osi_detectedobject.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_object.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_sensorspecific.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The common information for a detected item as estimated by the</span>
+<span class="c1">// sensor.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">DetectedItemHeader</span>
+<span class="p">{</span>
+    <span class="c1">// Specific ID of the detected item as assigned by the sensor internally.</span>
+    <span class="c1">// Need not match with \c #ground_truth_id.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">tracking_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the original detected item in the ground truth.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">ground_truth_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The estimated probability that this detected item really exists, not</span>
+    <span class="c1">// based on history.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Use as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0,1]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// The amount of time that this detected object has been continuously</span>
+    <span class="c1">// observed/tracked.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note</span>
+    <span class="c1">// \f$ Timestamp - Age := \f$ &#39;point in time&#39; when the object has</span>
+    <span class="c1">// been observed for the first time.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [s]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The measurement state.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MeasurementState</span> <span class="n">measurement_state</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// A list of physical sensors which detected this detected item.</span>
+    <span class="c1">//</span>
+    <span class="c1">// If \c SensorData has detected entities and all detections are missing,</span>
+    <span class="c1">// then e.g. the number of sensors can confirm the</span>
+    <span class="c1">// \c #existence_probability.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This information can be determined via the detected entities&#39;</span>
+    <span class="c1">// detections ( \c ...Detection::object_id = &#39;this detected item&#39; ) and</span>
+    <span class="c1">// the sensors (their IDs) to which these detections belong.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Definition of measurement states.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">MeasurementState</span>
+    <span class="p">{</span>
+        <span class="c1">// Measurement state is unknown (must not be used in ground truth).</span>
+        <span class="c1">//</span>
+        <span class="n">MEASUREMENT_STATE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Measurement state is unspecified (but known, i.e. value is not part</span>
+        <span class="c1">// of this enum list).</span>
+        <span class="c1">//</span>
+        <span class="n">MEASUREMENT_STATE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Entity has been measured by the sensor in the current timestep.</span>
+        <span class="c1">//</span>
+        <span class="n">MEASUREMENT_STATE_MEASURED</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Entity has not been measured by the sensor in the current timestep.</span>
+        <span class="c1">// Values provided by tracking only.</span>
+        <span class="c1">//</span>
+        <span class="n">MEASUREMENT_STATE_PREDICTED</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief A stationary object (e.g. landmark) in the environment as detected by</span>
+<span class="c1">// the sensor.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_DetectedStationaryObject.svg</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">DetectedStationaryObject</span>
+<span class="p">{</span>
+    <span class="c1">// Common information of one detected item.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedItemHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The base parameters of the stationary object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseStationary</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the base parameters of the detected</span>
+    <span class="c1">// stationary object (e.g. landmark). \c StationaryObject::base has to be</span>
+    <span class="c1">// identical for all \c #candidate stationary objects.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseStationary</span> <span class="n">base_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// A list of candidates for this stationary object as estimated by the</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CandidateStationaryObject</span> <span class="n">candidate</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief A candidate for a detected stationary object as estimated</span>
+    <span class="c1">// by the sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">message</span> <span class="n">CandidateStationaryObject</span>
+    <span class="p">{</span>
+        <span class="c1">// The estimated probability that this candidate is the true value.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The sum of all \c #probability must be one. This probability is</span>
+        <span class="c1">// given under the condition of</span>
+        <span class="c1">// \c DetectedItemHeader::existence_probability.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Range: [0,1]</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// The classification of the stationary object (e.g. landmark).</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">StationaryObject</span><span class="p">.</span><span class="n">Classification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Moving object in the environment as detected and perceived by</span>
+<span class="c1">// the sensor.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">DetectedMovingObject</span>
+<span class="p">{</span>
+    <span class="c1">// Common information of one detected item.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedItemHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The base parameters of the moving object.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The bounding box does NOT includes mirrors for vehicles.</span>
+    <span class="c1">// \note The parent frame of \c base is the sensor&#39;s vehicle frame.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseMoving</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the base parameters of the detected</span>
+    <span class="c1">// moving object (e.g. car). \c MovingObject::base has to be</span>
+    <span class="c1">// identical for all \c #candidate moving objects.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The parent frame of \c base is the sensor&#39;s vehicle frame.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseMoving</span> <span class="n">base_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Reference point location specification of the sensor measurement</span>
+    <span class="c1">// (required to decouple sensor measurement, position and bounding box</span>
+    <span class="c1">// estimation) as used by the sensor (model).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Note that the value of this field has no impact on the value of</span>
+    <span class="c1">// object::position, which always references the center of the object /</span>
+    <span class="c1">// bounding box.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">ReferencePoint</span> <span class="n">reference_point</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Actual movement state w.r.t. the moving object history.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MovementState</span> <span class="n">movement_state</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Percentage side lane left.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Percentage value of the object width in the corresponding lane.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">percentage_side_lane_left</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Percentage side lane right.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Percentage value of the object width in the corresponding lane.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">percentage_side_lane_right</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// A list of candidates for this moving object as estimated by the</span>
+    <span class="c1">// sensor (e.g. pedestrian, car).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CandidateMovingObject</span> <span class="n">candidate</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Additional data that is specific to radar sensors.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Field need not be set if simulated sensor is not a radar</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">RadarSpecificObjectData</span> <span class="n">radar_specifics</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+    <span class="c1">// Additional data that is specific to lidar sensors.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Field need not be set if simulated sensor is not a lidar</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">LidarSpecificObjectData</span> <span class="n">lidar_specifics</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+
+    <span class="c1">// Additional data that is specific to camera sensors.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Field need not be set if simulated sensor is not a camera</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">CameraSpecificObjectData</span> <span class="n">camera_specifics</span> <span class="o">=</span> <span class="mi">102</span><span class="p">;</span>
+
+    <span class="c1">// Additional data that is specific to ultrasonic sensors.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Field need not be set if simulated sensor is not an ultrasonic</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">UltrasonicSpecificObjectData</span> <span class="n">ultrasonic_specifics</span> <span class="o">=</span> <span class="mi">103</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief A candidate for a detected moving object as estimated by the</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">message</span> <span class="n">CandidateMovingObject</span>
+    <span class="p">{</span>
+        <span class="c1">// The estimated probability that this candidate is the true value.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The sum of all \c #probability must be one. This probability is</span>
+        <span class="c1">// given under the condition of</span>
+        <span class="c1">// \c DetectedItemHeader::existence_probability.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Range: [0,1]</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// The description of the moving object (e.g. car).</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">MovingObject</span><span class="p">.</span><span class="n">Type</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Specific information about the classification of the vehicle.</span>
+        <span class="c1">//</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note This field is mandatory if the \c CandidateMovingObject::type</span>
+        <span class="c1">// is \c MovingObject::TYPE_VEHICLE .</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">MovingObject</span><span class="p">.</span><span class="n">VehicleClassification</span> <span class="n">vehicle_classification</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Pedestrian head pose for behavior prediction. Describes the head</span>
+        <span class="c1">// orientation w.r.t. the host vehicle orientation.</span>
+        <span class="c1">// The x-axis of the right-handed head frame is pointing along the</span>
+        <span class="c1">// pedestrian&#39;s straight ahead viewing direction and the z-axis is</span>
+        <span class="c1">// pointing upwards (cranial direction [1] i.e. to pedestrian&#39;s skull</span>
+        <span class="c1">// cap).</span>
+        <span class="c1">//</span>
+        <span class="c1">// ``View_normal_base_coord_system =</span>
+        <span class="c1">// Inverse_Rotation(#head_pose)*Unit_vector_x``</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note This field is mandatory if the \c CandidateMovingObject.type is</span>
+        <span class="c1">// \c MovingObject::TYPE_PEDESTRIAN</span>
+        <span class="c1">//</span>
+        <span class="c1">// \par References:</span>
+        <span class="c1">// - [1] https://en.wikipedia.org/wiki/Anatomical_terms_of_location</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Orientation3d</span> <span class="n">head_pose</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Pedestrian upper body pose for behavior prediction. Describes the</span>
+        <span class="c1">// upper body orientation w.r.t. the host vehicle orientation.</span>
+        <span class="c1">// The x-axis of the right-handed upper body frame is pointing along the</span>
+        <span class="c1">// pedestrian&#39;s upper body ventral direction [2] (i.e. usually</span>
+        <span class="c1">// pedestrian&#39;s intended moving direction) and the z-axis is pointing</span>
+        <span class="c1">// upwards (to pedestrian&#39;s head).</span>
+        <span class="c1">//</span>
+        <span class="c1">// ``View_normal_base_coord_system =</span>
+        <span class="c1">// Inverse_Rotation(#upper_body_pose)*Unit_vector_x``</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note This field is mandatory if the \c CandidateMovingObject::type</span>
+        <span class="c1">// is \c MovingObject::TYPE_PEDESTRIAN</span>
+        <span class="c1">//</span>
+        <span class="c1">// \par References:</span>
+        <span class="c1">// - [2] https://en.wikipedia.org/wiki/Anatomical_terms_of_location</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Orientation3d</span> <span class="n">upper_body_pose</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Definition of available reference points. Left/middle/right and</span>
+    <span class="c1">// front/middle/rear indicate the position in y- and x-direction</span>
+    <span class="c1">// respectively. The z position is always considered as middle.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">ReferencePoint</span>
+    <span class="p">{</span>
+        <span class="c1">// Reference point is unknown, i.e. sensor does not report a reference</span>
+        <span class="c1">// point for the position coordinate.</span>
+        <span class="c1">// Value must not be used in ground truth data.</span>
+        <span class="c1">// Usually this means that the reference point for the given position</span>
+        <span class="c1">// coordinates is a largely arbitrary point within the bounding volume</span>
+        <span class="c1">// unknown to the sensor. If this value is set, the center of the</span>
+        <span class="c1">// bounding box should be used as reference point by convention, unless</span>
+        <span class="c1">// the specific use case requires otherwise.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known) reference point.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Center of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_CENTER</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Middle-Left of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_MIDDLE_LEFT</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Middle-Right of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_MIDDLE_RIGHT</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Rear-Middle of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_REAR_MIDDLE</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Rear-Left of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_REAR_LEFT</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Rear-Right of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_REAR_RIGHT</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// Front-Middle of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_FRONT_MIDDLE</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+        <span class="c1">// Front-Left of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_FRONT_LEFT</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="c1">// Front-Right of the bounding box.</span>
+        <span class="c1">//</span>
+        <span class="n">REFERENCE_POINT_FRONT_RIGHT</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Information about a possible movement of the object during tracking.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">MovementState</span>
+    <span class="p">{</span>
+        <span class="c1">// Movement state is unknown.</span>
+        <span class="c1">//</span>
+        <span class="n">MOVEMENT_STATE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known).</span>
+        <span class="c1">//</span>
+        <span class="n">MOVEMENT_STATE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Until now no object movement was detected in tracking history.</span>
+        <span class="c1">//</span>
+        <span class="n">MOVEMENT_STATE_STATIONARY</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Object moves currently.</span>
+        <span class="c1">//</span>
+        <span class="n">MOVEMENT_STATE_MOVING</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Object movement was detected in tracking history, but object is</span>
+        <span class="c1">// currently not moving.</span>
+        <span class="c1">//</span>
+        <span class="n">MOVEMENT_STATE_STOPPED</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

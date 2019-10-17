@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1UltrasonicSpecificObjectData_1_1Signalway:
+
+Struct UltrasonicSpecificObjectData::Signalway
+==============================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorspecific.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1UltrasonicSpecificObjectData`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::UltrasonicSpecificObjectData::Signalway
+   :members:
+   :protected-members:
+   :undoc-members:

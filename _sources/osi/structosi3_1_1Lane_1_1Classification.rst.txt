@@ -1,0 +1,29 @@
+.. _exhale_struct_structosi3_1_1Lane_1_1Classification:
+
+Struct Lane::Classification
+===========================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_lane.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1Lane`.
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1LanePairing`
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1RoadCondition`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::Lane::Classification
+   :members:
+   :protected-members:
+   :undoc-members:

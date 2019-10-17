@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry:
+
+Struct RadarSensorViewConfiguration::AntennaDiagramEntry
+========================================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorviewconfiguration.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1RadarSensorViewConfiguration`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::RadarSensorViewConfiguration::AntennaDiagramEntry
+   :members:
+   :protected-members:
+   :undoc-members:

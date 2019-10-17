@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -33,9 +36,10 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="v2.1.0 - OSI &#34;Agile Andretti&#34;" href="v02.01.00.html" />
+    <link rel="next" title="v2.1.0 - OSI “Agile Andretti”" href="v02.01.00.html" />
     <link rel="prev" title="Releases" href="../releases.html" /> 
 </head>
 
@@ -84,7 +88,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../versioning.html">Versioning</a></li>
@@ -95,28 +98,29 @@
 <li class="toctree-l3"><a class="reference internal" href="#detailed-description">Detailed description:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="v02.01.00.html">v2.1.0 - OSI &quot;Agile Andretti&quot;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html">v2.2.0 - OSI &quot;Brave Brabham&quot;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html#v2-2-1-osi-brave-brabham-update-1">v2.2.1 - OSI &quot;Brave Brabham&quot;, Update 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html">v3.0.0 - OSI &quot;Cosmic Coulthard&quot;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html#v3-0-1-osi-cosmic-coulthard-update-1">v3.0.1 - OSI &quot;Cosmic Coulthard&quot;, Update 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html">v3.1.0 - OSI &quot;Dynamic Duncan&quot;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-1-osi-dynamic-duncan-update-1">v3.1.1 - OSI &quot;Dynamic Duncan&quot;, Update 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-2-osi-dynamic-duncan-update-2">v3.1.2 - OSI &quot;Dynamic Duncan&quot;, Update 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v02.01.00.html">v2.1.0 - OSI “Agile Andretti”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html">v2.2.0 - OSI “Brave Brabham”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v02.02.00.html#v2-2-1-osi-brave-brabham-update-1">v2.2.1 - OSI “Brave Brabham”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html">v3.0.0 - OSI “Cosmic Coulthard”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.00.00.html#v3-0-1-osi-cosmic-coulthard-update-1">v3.0.1 - OSI “Cosmic Coulthard”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html">v3.1.0 - OSI “Dynamic Duncan”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-1-osi-dynamic-duncan-update-1">v3.1.1 - OSI “Dynamic Duncan”, Update 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v03.01.00.html#v3-1-2-osi-dynamic-duncan-update-2">v3.1.2 - OSI “Dynamic Duncan”, Update 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validator/osivalidator-module.html">OSI Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -221,7 +225,7 @@ Additionally to the two top level interfaces, OSI contains an <code class="docut
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v02.01.00.html" class="btn btn-neutral float-right" title="v2.1.0 - OSI &#34;Agile Andretti&#34;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v02.01.00.html" class="btn btn-neutral float-right" title="v2.1.0 - OSI “Agile Andretti”" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../releases.html" class="btn btn-neutral float-left" title="Releases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

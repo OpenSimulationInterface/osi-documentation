@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,6 +36,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="osivalidator package" href="osivalidator.html" />
@@ -84,12 +88,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -109,13 +113,13 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -223,7 +227,7 @@ not camel-case. For example <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 <p>In the case a rule has a parameter, it is written as a <cite>mapping</cite> ( a <cite>scalar</cite>
-followed by a colon &quot;:&quot;). What comes after the colon depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">is_greater_than_or_equal_to</span></code> accept a double.</p>
+followed by a colon “:”). What comes after the colon depends on the rule used. For instance, the rule <code class="docutils literal notranslate"><span class="pre">is_greater_than_or_equal_to</span></code> accept a double.</p>
 <p>The available rules and their usage are explained in the osi-validator class <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator.html#module-osivalidator.osi_rules_implementations">osi_rules_implementations</a>. See also examples for available rules which can be defined in <code class="docutils literal notranslate"><span class="pre">*.yml</span></code> files below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_greater_than</span><span class="p">:</span> <span class="mi">1</span>
 <span class="n">is_greater_than_or_equal_to</span><span class="p">:</span> <span class="mi">1</span>

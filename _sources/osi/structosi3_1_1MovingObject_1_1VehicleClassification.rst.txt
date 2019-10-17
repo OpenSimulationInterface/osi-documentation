@@ -1,0 +1,28 @@
+.. _exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification:
+
+Struct MovingObject::VehicleClassification
+==========================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1MovingObject`.
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::MovingObject::VehicleClassification
+   :members:
+   :protected-members:
+   :undoc-members:

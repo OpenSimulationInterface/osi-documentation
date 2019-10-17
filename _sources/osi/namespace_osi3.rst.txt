@@ -1,0 +1,225 @@
+
+.. _namespace_osi3:
+
+Namespace osi3
+==============
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structosi3_1_1BaseMoving`
+
+- :ref:`exhale_struct_structosi3_1_1BaseStationary`
+
+- :ref:`exhale_struct_structosi3_1_1CameraDetection`
+
+- :ref:`exhale_struct_structosi3_1_1CameraDetectionData`
+
+- :ref:`exhale_struct_structosi3_1_1CameraDetectionSpecificHeader`
+
+- :ref:`exhale_struct_structosi3_1_1CameraPoint`
+
+- :ref:`exhale_struct_structosi3_1_1CameraSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1CameraSensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1CameraSpecificObjectData`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedEntityHeader`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedItemHeader`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedLane`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedLane_1_1CandidateLane`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedLaneBoundary`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedMovingObject`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedOccupant`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedOccupant_1_1CandidateOccupant`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedRoadMarking`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedStationaryObject`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficLight`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficLight_1_1CandidateTrafficLight`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficSign`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficSign_1_1DetectedMainSign`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficSign_1_1DetectedMainSign_1_1CandidateMainSign`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficSign_1_1DetectedSupplementarySign`
+
+- :ref:`exhale_struct_structosi3_1_1DetectedTrafficSign_1_1DetectedSupplementarySign_1_1CandidateSupplementarySign`
+
+- :ref:`exhale_struct_structosi3_1_1Dimension3d`
+
+- :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions`
+
+- :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions_1_1TimeOfDay`
+
+- :ref:`exhale_struct_structosi3_1_1FeatureData`
+
+- :ref:`exhale_struct_structosi3_1_1FileOptions`
+
+- :ref:`exhale_struct_structosi3_1_1GenericSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1GenericSensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1GroundTruth`
+
+- :ref:`exhale_struct_structosi3_1_1HostVehicleData`
+
+- :ref:`exhale_struct_structosi3_1_1Identifier`
+
+- :ref:`exhale_struct_structosi3_1_1InterfaceVersion`
+
+- :ref:`exhale_struct_structosi3_1_1Lane`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1LanePairing`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1RoadCondition`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1BoundaryPoint`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1LidarDetection`
+
+- :ref:`exhale_struct_structosi3_1_1LidarDetectionData`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSensorView_1_1Reflection`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSpecificObjectData`
+
+- :ref:`exhale_struct_structosi3_1_1MountingPosition`
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject`
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes`
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification`
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState`
+
+- :ref:`exhale_struct_structosi3_1_1Occupant`
+
+- :ref:`exhale_struct_structosi3_1_1Occupant_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1Orientation3d`
+
+- :ref:`exhale_struct_structosi3_1_1RadarDetection`
+
+- :ref:`exhale_struct_structosi3_1_1RadarDetectionData`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorView_1_1Reflection`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSpecificObjectData`
+
+- :ref:`exhale_struct_structosi3_1_1RoadMarking`
+
+- :ref:`exhale_struct_structosi3_1_1RoadMarking_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1SensorData`
+
+- :ref:`exhale_struct_structosi3_1_1SensorDataSeries`
+
+- :ref:`exhale_struct_structosi3_1_1SensorDataSeriesList`
+
+- :ref:`exhale_struct_structosi3_1_1SensorDetectionHeader`
+
+- :ref:`exhale_struct_structosi3_1_1SensorView`
+
+- :ref:`exhale_struct_structosi3_1_1SensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1Spherical3d`
+
+- :ref:`exhale_struct_structosi3_1_1StationaryObject`
+
+- :ref:`exhale_struct_structosi3_1_1StationaryObject_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1Timestamp`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficLight`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficLight_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1MainSign`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1MainSign_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification_1_1Arrow`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSignValue`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicDetection`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicDetectionData`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicDetectionSpecificHeader`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicIndirectDetection`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicSensorViewConfiguration`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicSpecificObjectData`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicSpecificObjectData_1_1Signalway`
+
+- :ref:`exhale_struct_structosi3_1_1Vector2d`
+
+- :ref:`exhale_struct_structosi3_1_1Vector3d`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07`

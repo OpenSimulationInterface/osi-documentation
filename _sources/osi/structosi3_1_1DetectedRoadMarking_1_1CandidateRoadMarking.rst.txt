@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking:
+
+Struct DetectedRoadMarking::CandidateRoadMarking
+================================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedroadmarking.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1DetectedRoadMarking`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::DetectedRoadMarking::CandidateRoadMarking
+   :members:
+   :protected-members:
+   :undoc-members:

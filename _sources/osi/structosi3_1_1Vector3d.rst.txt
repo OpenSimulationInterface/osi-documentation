@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1Vector3d:
+
+Struct Vector3d
+===============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_common.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::Vector3d
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1DetectedTrafficLight_1_1CandidateTrafficLight:
+
+Struct DetectedTrafficLight::CandidateTrafficLight
+==================================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedtrafficlight.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1DetectedTrafficLight`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::DetectedTrafficLight::CandidateTrafficLight
+   :members:
+   :protected-members:
+   :undoc-members:

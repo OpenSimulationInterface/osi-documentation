@@ -1,0 +1,52 @@
+
+.. _file_osi-documentation_osi-validation_open-simulation-interface_osi_occupant.proto:
+
+File osi_occupant.proto
+=======================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``osi-documentation/osi-validation/open-simulation-interface/osi_occupant.proto``)
+----------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_occupant.proto.rst
+
+
+
+
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_osi3`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structosi3_1_1Occupant`
+
+- :ref:`exhale_struct_structosi3_1_1Occupant_1_1Classification`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_osi__occupant_8proto_1a64e4fb51263015847909f47cb7aeea70`
+
+- :ref:`exhale_variable_osi__occupant_8proto_1adbedb258e13546cc707a6ebb073a3d8a`
+

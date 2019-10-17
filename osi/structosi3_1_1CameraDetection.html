@@ -1,0 +1,608 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct CameraDetection &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct CameraDetectionData" href="structosi3_1_1CameraDetectionData.html" />
+    <link rel="prev" title="Struct BaseStationary" href="structosi3_1_1BaseStationary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct CameraDetection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/structosi3_1_1CameraDetection.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-cameradetection">
+<span id="exhale-struct-structosi3-1-1cameradetection"></span><h1>Struct CameraDetection<a class="headerlink" href="#struct-cameradetection" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-featuredata-proto"><span class="std std-ref">File osi_featuredata.proto</span></a></p></li>
+</ul>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi315CameraDetectionE">
+<span id="_CPPv3N4osi315CameraDetectionE"></span><span id="_CPPv2N4osi315CameraDetectionE"></span><span id="osi3::CameraDetection"></span><span class="target" id="structosi3_1_1CameraDetection"></span><em class="property">struct </em><code class="sig-name descname">CameraDetection</code><a class="headerlink" href="#_CPPv4N4osi315CameraDetectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Camera detection from the sensor. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="enum">
+<dt id="_CPPv4N4osi315CameraDetection5ColorE">
+<span id="_CPPv3N4osi315CameraDetection5ColorE"></span><span id="_CPPv2N4osi315CameraDetection5ColorE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6"></span><em class="property">enum </em><code class="sig-name descname">Color</code><a class="headerlink" href="#_CPPv4N4osi315CameraDetection5ColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of shape dominant color. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection13COLOR_UNKNOWNE">
+<span id="_CPPv3N4osi315CameraDetection13COLOR_UNKNOWNE"></span><span id="_CPPv2N4osi315CameraDetection13COLOR_UNKNOWNE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a64d099000b5c9f87df244668517f5321"></span><code class="sig-name descname">COLOR_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi315CameraDetection13COLOR_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of the shape is unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection11COLOR_OTHERE">
+<span id="_CPPv3N4osi315CameraDetection11COLOR_OTHERE"></span><span id="_CPPv2N4osi315CameraDetection11COLOR_OTHERE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a47cd6961443480ef837c1d5300164878"></span><code class="sig-name descname">COLOR_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi315CameraDetection11COLOR_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with another (unspecified but known) color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection11COLOR_BLACKE">
+<span id="_CPPv3N4osi315CameraDetection11COLOR_BLACKE"></span><span id="_CPPv2N4osi315CameraDetection11COLOR_BLACKE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a055b67dbc8b1630ea6e8ea9a9fcaa496"></span><code class="sig-name descname">COLOR_BLACK</code> = 2<a class="headerlink" href="#_CPPv4N4osi315CameraDetection11COLOR_BLACKE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with black color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection10COLOR_GREYE">
+<span id="_CPPv3N4osi315CameraDetection10COLOR_GREYE"></span><span id="_CPPv2N4osi315CameraDetection10COLOR_GREYE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a092b3c6e9a997e7a26a62867d9b882bf"></span><code class="sig-name descname">COLOR_GREY</code> = 3<a class="headerlink" href="#_CPPv4N4osi315CameraDetection10COLOR_GREYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with grey color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection11COLOR_WHITEE">
+<span id="_CPPv3N4osi315CameraDetection11COLOR_WHITEE"></span><span id="_CPPv2N4osi315CameraDetection11COLOR_WHITEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6abae0559bc067122f243adc8eec12aca5"></span><code class="sig-name descname">COLOR_WHITE</code> = 4<a class="headerlink" href="#_CPPv4N4osi315CameraDetection11COLOR_WHITEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with white color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection12COLOR_YELLOWE">
+<span id="_CPPv3N4osi315CameraDetection12COLOR_YELLOWE"></span><span id="_CPPv2N4osi315CameraDetection12COLOR_YELLOWE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a6d50389e3e14e8b3ef12008c2d7b3e78"></span><code class="sig-name descname">COLOR_YELLOW</code> = 5<a class="headerlink" href="#_CPPv4N4osi315CameraDetection12COLOR_YELLOWE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with yellow color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection12COLOR_ORANGEE">
+<span id="_CPPv3N4osi315CameraDetection12COLOR_ORANGEE"></span><span id="_CPPv2N4osi315CameraDetection12COLOR_ORANGEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a1c4684fd52b6e50d4c2acc6d33f2ade1"></span><code class="sig-name descname">COLOR_ORANGE</code> = 6<a class="headerlink" href="#_CPPv4N4osi315CameraDetection12COLOR_ORANGEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with orange color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection9COLOR_REDE">
+<span id="_CPPv3N4osi315CameraDetection9COLOR_REDE"></span><span id="_CPPv2N4osi315CameraDetection9COLOR_REDE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6af35350d0fc968d463c51bd75ea0b0bfa"></span><code class="sig-name descname">COLOR_RED</code> = 7<a class="headerlink" href="#_CPPv4N4osi315CameraDetection9COLOR_REDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with red color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection12COLOR_VIOLETE">
+<span id="_CPPv3N4osi315CameraDetection12COLOR_VIOLETE"></span><span id="_CPPv2N4osi315CameraDetection12COLOR_VIOLETE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a5a5bcd587d6a9be62d699b0b2bc377bc"></span><code class="sig-name descname">COLOR_VIOLET</code> = 8<a class="headerlink" href="#_CPPv4N4osi315CameraDetection12COLOR_VIOLETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with violet color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection10COLOR_BLUEE">
+<span id="_CPPv3N4osi315CameraDetection10COLOR_BLUEE"></span><span id="_CPPv2N4osi315CameraDetection10COLOR_BLUEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6ab35828e2d211b119d537f2cb3b368142"></span><code class="sig-name descname">COLOR_BLUE</code> = 9<a class="headerlink" href="#_CPPv4N4osi315CameraDetection10COLOR_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with blue color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection11COLOR_GREENE">
+<span id="_CPPv3N4osi315CameraDetection11COLOR_GREENE"></span><span id="_CPPv2N4osi315CameraDetection11COLOR_GREENE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6ac4e340e995d09dd406adf82aa8996358"></span><code class="sig-name descname">COLOR_GREEN</code> = 10<a class="headerlink" href="#_CPPv4N4osi315CameraDetection11COLOR_GREENE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with green color. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection16COLOR_REFLECTIVEE">
+<span id="_CPPv3N4osi315CameraDetection16COLOR_REFLECTIVEE"></span><span id="_CPPv2N4osi315CameraDetection16COLOR_REFLECTIVEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a2b8d54b4aafe536e38dfe1d31e40d0c6a76f6589d4e6f5c4cf2d73b1868482918"></span><code class="sig-name descname">COLOR_REFLECTIVE</code> = 11<a class="headerlink" href="#_CPPv4N4osi315CameraDetection16COLOR_REFLECTIVEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape with reflective color. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N4osi315CameraDetection14ImageShapeTypeE">
+<span id="_CPPv3N4osi315CameraDetection14ImageShapeTypeE"></span><span id="_CPPv2N4osi315CameraDetection14ImageShapeTypeE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2e"></span><em class="property">enum </em><code class="sig-name descname">ImageShapeType</code><a class="headerlink" href="#_CPPv4N4osi315CameraDetection14ImageShapeTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of different image shape types. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_UNKNOWNE">
+<span id="_CPPv3N4osi315CameraDetection24IMAGE_SHAPE_TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi315CameraDetection24IMAGE_SHAPE_TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2ea89b28fe4976754119194298c7937119b"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shape type is unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection22IMAGE_SHAPE_TYPE_OTHERE">
+<span id="_CPPv3N4osi315CameraDetection22IMAGE_SHAPE_TYPE_OTHERE"></span><span id="_CPPv2N4osi315CameraDetection22IMAGE_SHAPE_TYPE_OTHERE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2eaf1307f2510ab5b36ea479c77f1447a1b"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi315CameraDetection22IMAGE_SHAPE_TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known) shape type. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection22IMAGE_SHAPE_TYPE_POINTE">
+<span id="_CPPv3N4osi315CameraDetection22IMAGE_SHAPE_TYPE_POINTE"></span><span id="_CPPv2N4osi315CameraDetection22IMAGE_SHAPE_TYPE_POINTE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2ea1c25fec4ac0b247f72fcf1ca65a5b94f"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_POINT</code> = 2<a class="headerlink" href="#_CPPv4N4osi315CameraDetection22IMAGE_SHAPE_TYPE_POINTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by a single point.</p>
+<p>Allowed number of referenced points: 1 </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection20IMAGE_SHAPE_TYPE_BOXE">
+<span id="_CPPv3N4osi315CameraDetection20IMAGE_SHAPE_TYPE_BOXE"></span><span id="_CPPv2N4osi315CameraDetection20IMAGE_SHAPE_TYPE_BOXE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2ea100dcb1319f518b71bdd35cd9e0f7d39"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_BOX</code> = 3<a class="headerlink" href="#_CPPv4N4osi315CameraDetection20IMAGE_SHAPE_TYPE_BOXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by a box.</p>
+<p>Allowed number of referenced points: 2 or 3</p>
+<p>Allowed number of referenced points = 2: first and third corner of the box. Box is alligned horizontal resp. vertical.</p>
+<p>Allowed number of referenced points = 3: first, second and third corner of the box. fourth corner is calculated by first+third-second corner. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_ELLIPSEE">
+<span id="_CPPv3N4osi315CameraDetection24IMAGE_SHAPE_TYPE_ELLIPSEE"></span><span id="_CPPv2N4osi315CameraDetection24IMAGE_SHAPE_TYPE_ELLIPSEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2ea7d78c599235029ae41e988c54deddd7b"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_ELLIPSE</code> = 4<a class="headerlink" href="#_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_ELLIPSEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by an ellipse.</p>
+<p>Allowed number of referenced points: 2 or 3</p>
+<p>Allowed number of referenced points = 2: center point of circle, point on circle</p>
+<p>Allowed number of referenced points = 3: center point of ellipse, point on ellipse at main axis of ellipse, point on ellipse at minor axis of ellipse </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_POLYGONE">
+<span id="_CPPv3N4osi315CameraDetection24IMAGE_SHAPE_TYPE_POLYGONE"></span><span id="_CPPv2N4osi315CameraDetection24IMAGE_SHAPE_TYPE_POLYGONE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2ea32c825d5f79b84c1353727823cd59a3c"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_POLYGON</code> = 5<a class="headerlink" href="#_CPPv4N4osi315CameraDetection24IMAGE_SHAPE_TYPE_POLYGONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by a polygon.</p>
+<p>Allowed number of referenced points: 3 .. n</p>
+<p>Polygon is defined by the first, second, third and so on points. The polygon shape is closed (last and first point are different). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection25IMAGE_SHAPE_TYPE_POLYLINEE">
+<span id="_CPPv3N4osi315CameraDetection25IMAGE_SHAPE_TYPE_POLYLINEE"></span><span id="_CPPv2N4osi315CameraDetection25IMAGE_SHAPE_TYPE_POLYLINEE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2eaa39bad38d501bea33fedab3635975544"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_POLYLINE</code> = 6<a class="headerlink" href="#_CPPv4N4osi315CameraDetection25IMAGE_SHAPE_TYPE_POLYLINEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by a polyline.</p>
+<p>Allowed number of referenced points: 2 .. n</p>
+<p>Polyline is defined by the first, second and so on points. The polyline shape is open. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi315CameraDetection28IMAGE_SHAPE_TYPE_POINT_CLOUDE">
+<span id="_CPPv3N4osi315CameraDetection28IMAGE_SHAPE_TYPE_POINT_CLOUDE"></span><span id="_CPPv2N4osi315CameraDetection28IMAGE_SHAPE_TYPE_POINT_CLOUDE"></span><span class="target" id="structosi3_1_1CameraDetection_1a901a067b6ce4597403bc343e8d0a6b2eacf437c6f13144e16308229411b3394c1"></span><code class="sig-name descname">IMAGE_SHAPE_TYPE_POINT_CLOUD</code> = 7<a class="headerlink" href="#_CPPv4N4osi315CameraDetection28IMAGE_SHAPE_TYPE_POINT_CLOUDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Image shape is defined by a point cloud.</p>
+<p>Allowed number of referenced points: 2 .. n</p>
+<p>Point cloud is defined by a number of points. The points are not connected in the point cloud. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a3623c6f12847875a2d0a0fb5cc7d173e"></span><code class="sig-name descname">optional double osi3::CameraDetection::existence_probability = 1</code></dt>
+<dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
+<p>Range: [0.0, 1.0]</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a16df8b3eb12f70983dc51879f8ddd6db"></span><code class="sig-name descname">optional Identifier osi3::CameraDetection::object_id = 2</code></dt>
+<dd><p>ID of the detected object this detection is associated to.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1abc39a3545ba1dd62d8740cc18727f24c"></span><code class="sig-name descname">optional Timestamp osi3::CameraDetection::time_difference = 3</code></dt>
+<dd><p>Difference to the base timestamp <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorDetectionHeader.html#structosi3_1_1SensorDetectionHeader_1a7276bbdf40b2da4fed4397df62f167aa"><span class="std std-ref"><span class="pre">SensorDetectionHeader::measurement_time</span></span></a></code>.</p>
+<p>The timestamp of this detection := <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorDetectionHeader.html#structosi3_1_1SensorDetectionHeader_1a7276bbdf40b2da4fed4397df62f167aa"><span class="std std-ref"><span class="pre">SensorDetectionHeader::measurement_time</span></span></a></code> + <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1abc39a3545ba1dd62d8740cc18727f24c"><span class="std std-ref"><span class="pre">time_difference</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1ae7e0e7683ada9c187d00390f92b3cb50"></span><code class="sig-name descname">optional ImageShapeType osi3::CameraDetection::image_shape_type = 4</code></dt>
+<dd><p>Definition of the image shape type of this detection. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a13209b8e5cec67d3a02ff82490eced40"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_background = 5</code></dt>
+<dd><p>The defined shape is background. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a6afcd0a4c1c7781044671441687fc9b4"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_foreground = 6</code></dt>
+<dd><p>The defined shape is foregroud. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a300670529a4cf6bfae234d0b3fbbad7a"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_flat = 7</code></dt>
+<dd><p>The defined shape is flat. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a188c9f43d2c483b45063ca098d2a8d1d"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_upright = 8</code></dt>
+<dd><p>The defined shape is upright. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1aa5768371c9de6852ccf9514625b9c722"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_ground = 9</code></dt>
+<dd><p>The defined shape is ground. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a19f01976b268f5f55be9f73cb9a9073f"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_sky = 10</code></dt>
+<dd><p>The defined shape is sky. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a7c0cd879ee2d7f2578dec2c60c983c81"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_vegetation = 11</code></dt>
+<dd><p>The defined shape is vegetation. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a5f59680a6d31e6a6c52030c059f88acc"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_road = 12</code></dt>
+<dd><p>The defined shape is a road. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a8ae6cf3abe7f51d069d699b62970b527"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_non_driving_lane = 13</code></dt>
+<dd><p>The defined shape is a non-driving lane (e.g. sidewalk). The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a5f185f1ac3964c84c85ebba8a7e1f15a"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_non_road = 14</code></dt>
+<dd><p>The defined shape is non-road (e.g. traffic island). The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1ae5c0424f4086f7cd860fe32ad704aa0e"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_stationary_object = 15</code></dt>
+<dd><p>The defined shape is a stationary object. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a609a6b65977c39d49ad6a29d6b77f98e"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_moving_object = 16</code></dt>
+<dd><p>The defined shape is a possible moving object. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1add8017080273aa6fcc0c3c11b26e21c0"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_landmark = 17</code></dt>
+<dd><p>The defined shape is a landmark. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a28d807be8025126fa5b53b4134883485"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_traffic_sign = 18</code></dt>
+<dd><p>The defined shape is a traffic sign. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1af4e5cb60108fa543ad6dd7659ffc6f95"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_traffic_light = 19</code></dt>
+<dd><p>The defined shape is a traffic light. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1aeffed1e681e4bd0a456f86ee0beae00c"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_road_marking = 20</code></dt>
+<dd><p>The defined shape is a road marking sign. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a3610c26e54d8f79bab3b4bb18004cba8"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_vehicle = 21</code></dt>
+<dd><p>The defined shape is a vehicle. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1af6bc83fe9d5ba07071a779a1c3a1461f"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_pedestrian = 22</code></dt>
+<dd><p>The defined shape is a pedestrian. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1afbf6a21f9f4e7aff26118aac63c4b8d9"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_animal = 23</code></dt>
+<dd><p>The defined shape is an animal. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a7ba944b0d4c45931f9611b1cc64c4b78"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_pedestrian_front = 24</code></dt>
+<dd><p>The defined shape is a pedestrian seen by the sensor from the front. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1afb1386edc836caa350c0e3fc967b48de"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_pedestrian_side = 25</code></dt>
+<dd><p>The defined shape is a pedestrian seen by the sensor from the side. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1ae15911f2ab7955a283517498e819fc6d"></span><code class="sig-name descname">optional bool osi3::CameraDetection::shape_classification_pedestrian_rear = 26</code></dt>
+<dd><p>The defined shape is a pedestrian seen by the sensor from the rear. The probability for this classification is at least <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"><span class="std std-ref"><span class="pre">shape_classification_probability</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"></span><code class="sig-name descname">optional double osi3::CameraDetection::shape_classification_probability = 27</code></dt>
+<dd><p>This probability defines the mininimum probability for each selected shape classification.</p>
+<p>Range: [0.0, 1.0] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1add1ad1673f0058fa83ee523ce1d1c98d"></span><code class="sig-name descname">optional Color osi3::CameraDetection::color = 28</code></dt>
+<dd><p>The dominant color of the shape. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a8392d735b4b85d8f85b79b143940d632"></span><code class="sig-name descname">optional double osi3::CameraDetection::color_probability = 29</code></dt>
+<dd><p>The probability of the shape’s color.</p>
+<p>Range: [0.0, 1.0] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a14fb94173024a3ec07233bc35a63979b"></span><code class="sig-name descname">optional Identifier osi3::CameraDetection::ambiguity_id = 30</code></dt>
+<dd><p>If one shape has different shape classifications and shape classification probability or color and color probability, all detections in this cycle have the same ambiguity ID.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1ae642a22b8cd90f8f99c828068a0e6daf"></span><code class="sig-name descname">optional uint32 osi3::CameraDetection::first_point_index = 31</code></dt>
+<dd><p>Index of the first point in the camera detection. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1CameraDetection_1a5ad0ca8d0c3d69ee054450eb58805d49"></span><code class="sig-name descname">optional uint32 osi3::CameraDetection::number_of_points = 32</code></dt>
+<dd><p>Number of points which defines the shape. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1ae7e0e7683ada9c187d00390f92b3cb50"><span class="std std-ref"><span class="pre">image_shape_type</span></span></a></code> may restrict the number of possible values. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1CameraDetectionData.html" class="btn btn-neutral float-right" title="Struct CameraDetectionData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1BaseStationary.html" class="btn btn-neutral float-left" title="Struct BaseStationary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

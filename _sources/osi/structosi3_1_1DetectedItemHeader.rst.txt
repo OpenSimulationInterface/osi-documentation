@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1DetectedItemHeader:
+
+Struct DetectedItemHeader
+=========================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedobject.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::DetectedItemHeader
+   :members:
+   :protected-members:
+   :undoc-members:

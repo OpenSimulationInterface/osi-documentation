@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct EnvironmentalConditions &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct EnvironmentalConditions::TimeOfDay" href="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay.html" />
+    <link rel="prev" title="Struct Dimension3d" href="structosi3_1_1Dimension3d.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct EnvironmentalConditions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/structosi3_1_1EnvironmentalConditions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-environmentalconditions">
+<span id="exhale-struct-structosi3-1-1environmentalconditions"></span><h1>Struct EnvironmentalConditions<a class="headerlink" href="#struct-environmentalconditions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_environment.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-environment-proto"><span class="std std-ref">File osi_environment.proto</span></a></p></li>
+</ul>
+<div class="section" id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay.html#exhale-struct-structosi3-1-1environmentalconditions-1-1timeofday"><span class="std std-ref">Struct EnvironmentalConditions::TimeOfDay</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi323EnvironmentalConditionsE">
+<span id="_CPPv3N4osi323EnvironmentalConditionsE"></span><span id="_CPPv2N4osi323EnvironmentalConditionsE"></span><span id="osi3::EnvironmentalConditions"></span><span class="target" id="structosi3_1_1EnvironmentalConditions"></span><em class="property">struct </em><code class="sig-name descname">EnvironmentalConditions</code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The conditions of the environment. </p>
+<p>Definition of light, weather conditions and other environmental conditions.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>These conditions apply locally around the host vehicle. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="enum">
+<dt id="_CPPv4N4osi323EnvironmentalConditions13PrecipitationE">
+<span id="_CPPv3N4osi323EnvironmentalConditions13PrecipitationE"></span><span id="_CPPv2N4osi323EnvironmentalConditions13PrecipitationE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040af"></span><em class="property">enum </em><code class="sig-name descname">Precipitation</code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions13PrecipitationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of discretized precipitation states according to [1]. (I = Intensity of precipitation in mm per hour [mm/h])</p>
+<p><dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[1] PAULAT, Marcus, et al. A gridded dataset of hourly precipitation in Germany: Its construction, climatology and application. Meteorologische Zeitschrift, 2008, 17. Jg. Nr. 6, S. 719-732. </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions21PRECIPITATION_UNKNOWNE">
+<span id="_CPPv3N4osi323EnvironmentalConditions21PRECIPITATION_UNKNOWNE"></span><span id="_CPPv2N4osi323EnvironmentalConditions21PRECIPITATION_UNKNOWNE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afa5273e6f45ad82928bf2c68d046e6b618"></span><code class="sig-name descname">PRECIPITATION_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions21PRECIPITATION_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Intensity of precipitation is unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_OTHERE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19PRECIPITATION_OTHERE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19PRECIPITATION_OTHERE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afa34bac5c0bb380425379ff8f9597c76e7"></span><code class="sig-name descname">PRECIPITATION_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known) intensity of precipitation. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions18PRECIPITATION_NONEE">
+<span id="_CPPv3N4osi323EnvironmentalConditions18PRECIPITATION_NONEE"></span><span id="_CPPv2N4osi323EnvironmentalConditions18PRECIPITATION_NONEE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afa1a11050634ed848a80efe441c1eace34"></span><code class="sig-name descname">PRECIPITATION_NONE</code> = 2<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions18PRECIPITATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>No precipitation, when I in [0,0.1[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions24PRECIPITATION_VERY_LIGHTE">
+<span id="_CPPv3N4osi323EnvironmentalConditions24PRECIPITATION_VERY_LIGHTE"></span><span id="_CPPv2N4osi323EnvironmentalConditions24PRECIPITATION_VERY_LIGHTE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afa634daeea73401871c45d3eb7c25d0751"></span><code class="sig-name descname">PRECIPITATION_VERY_LIGHT</code> = 3<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions24PRECIPITATION_VERY_LIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Very light intensity of precipitation, when I in [0.1,0.5[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_LIGHTE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19PRECIPITATION_LIGHTE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19PRECIPITATION_LIGHTE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040aface33c254338088a0f5adf1ddde5ffa19"></span><code class="sig-name descname">PRECIPITATION_LIGHT</code> = 4<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_LIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Light intensity of precipitation, when I in [0.5,1.9[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions22PRECIPITATION_MODERATEE">
+<span id="_CPPv3N4osi323EnvironmentalConditions22PRECIPITATION_MODERATEE"></span><span id="_CPPv2N4osi323EnvironmentalConditions22PRECIPITATION_MODERATEE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afa61b329c4db8a2836af0f37eaa405193d"></span><code class="sig-name descname">PRECIPITATION_MODERATE</code> = 5<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions22PRECIPITATION_MODERATEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Moderate intensity of precipitation, when I in [1.9,8.1[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_HEAVYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19PRECIPITATION_HEAVYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19PRECIPITATION_HEAVYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afaec3857664ea661c118114315a12a1c40"></span><code class="sig-name descname">PRECIPITATION_HEAVY</code> = 6<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19PRECIPITATION_HEAVYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Heavy intensity of precipitation, when I in [8.1,34[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions24PRECIPITATION_VERY_HEAVYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions24PRECIPITATION_VERY_HEAVYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions24PRECIPITATION_VERY_HEAVYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afab5077fd27d3f9988f7aa119ab2a64bf1"></span><code class="sig-name descname">PRECIPITATION_VERY_HEAVY</code> = 7<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions24PRECIPITATION_VERY_HEAVYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Very heavy intensity of precipitation, when I in [34,149[ [mm/h] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions21PRECIPITATION_EXTREMEE">
+<span id="_CPPv3N4osi323EnvironmentalConditions21PRECIPITATION_EXTREMEE"></span><span id="_CPPv2N4osi323EnvironmentalConditions21PRECIPITATION_EXTREMEE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ad80739a39034abc45bcf9941b47040afaf41ee9c2bb22eef1efebb9a3b80cc1a0"></span><code class="sig-name descname">PRECIPITATION_EXTREME</code> = 8<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions21PRECIPITATION_EXTREMEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extreme intensity of precipitation, when I in [149,infinity[ [mm/h] </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N4osi323EnvironmentalConditions3FogE">
+<span id="_CPPv3N4osi323EnvironmentalConditions3FogE"></span><span id="_CPPv2N4osi323EnvironmentalConditions3FogE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4"></span><em class="property">enum </em><code class="sig-name descname">Fog</code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions3FogE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of discretized fog states according to [2]. The bandwidth of thick and dense fog was adjusted to fit the German StVO regarding rear fog lights [3]. (V = Visibility in meters [m])</p>
+<p>Visibility is defined as the length of the atmosphere over which a beam of light travels before its luminous flux is reduced to 5% of its original value (definition used by the Meteorological Office [4]). This is approximately equivalent to visibility measured in terms of the contrast of a distant object against its background.</p>
+<p><dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[2] SHEPARD, Frank D. Reduced visibility due to fog on the highway. Transportation Research Board, 1996.</p></li>
+<li><p>[3] <a class="reference external" href="https://www.stvo.de/strassenverkehrsordnung/101-17-beleuchtung">StVO 17 chapter 3</a></p></li>
+<li><p>[4] <a class="reference external" href="http://www.metoffice.gov.uk/guide/weather/observations-guide/how-we-measure-visibility">Homepage of the Meteorological Office</a> </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions10FOG_UNKOWNE">
+<span id="_CPPv3N4osi323EnvironmentalConditions10FOG_UNKOWNE"></span><span id="_CPPv2N4osi323EnvironmentalConditions10FOG_UNKOWNE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4adc9f3cb9e3ded620db00bb2757a53d20"></span><code class="sig-name descname">FOG_UNKOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions10FOG_UNKOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Visibility is unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions9FOG_OTHERE">
+<span id="_CPPv3N4osi323EnvironmentalConditions9FOG_OTHERE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9FOG_OTHERE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a09d5d6482981492d8c48fb259b31edb2"></span><code class="sig-name descname">FOG_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9FOG_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known) fog intensity. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions24FOG_EXCELLENT_VISIBILITYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions24FOG_EXCELLENT_VISIBILITYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions24FOG_EXCELLENT_VISIBILITYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a480ecd3afd0430f70ccbd2d5c34b4ce6"></span><code class="sig-name descname">FOG_EXCELLENT_VISIBILITY</code> = 2<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions24FOG_EXCELLENT_VISIBILITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Excellent visibility, when V in [40000,infinity[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19FOG_GOOD_VISIBILITYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19FOG_GOOD_VISIBILITYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19FOG_GOOD_VISIBILITYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a1061424400aefb3aee499dae20be6eed"></span><code class="sig-name descname">FOG_GOOD_VISIBILITY</code> = 3<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19FOG_GOOD_VISIBILITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Good visibility, when V in [10000,40000[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions23FOG_MODERATE_VISIBILITYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions23FOG_MODERATE_VISIBILITYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions23FOG_MODERATE_VISIBILITYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4ae8fa9915fbbb4ba955d424eed28527aa"></span><code class="sig-name descname">FOG_MODERATE_VISIBILITY</code> = 4<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions23FOG_MODERATE_VISIBILITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Moderate visibility, when V in [4000,10000[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19FOG_POOR_VISIBILITYE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19FOG_POOR_VISIBILITYE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19FOG_POOR_VISIBILITYE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a8a9f171205a8b9ab0e87b3e53ec04491"></span><code class="sig-name descname">FOG_POOR_VISIBILITY</code> = 5<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19FOG_POOR_VISIBILITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Poor visibility, when V in [2000,4000[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions8FOG_MISTE">
+<span id="_CPPv3N4osi323EnvironmentalConditions8FOG_MISTE"></span><span id="_CPPv2N4osi323EnvironmentalConditions8FOG_MISTE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a751b95b0ed5df6bbdd35867fd2edede9"></span><code class="sig-name descname">FOG_MIST</code> = 6<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions8FOG_MISTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mist, when V in [1000,2000[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions9FOG_LIGHTE">
+<span id="_CPPv3N4osi323EnvironmentalConditions9FOG_LIGHTE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9FOG_LIGHTE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4ad3af4dd0b30e77b68680999104cebb1e"></span><code class="sig-name descname">FOG_LIGHT</code> = 7<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9FOG_LIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fog, when V in [200,1000[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions9FOG_THICKE">
+<span id="_CPPv3N4osi323EnvironmentalConditions9FOG_THICKE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9FOG_THICKE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a5387a537ed7986d142604a3f3f6f3544"></span><code class="sig-name descname">FOG_THICK</code> = 8<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9FOG_THICKE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Thick fog, when V in [50,200[ [m] </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions9FOG_DENSEE">
+<span id="_CPPv3N4osi323EnvironmentalConditions9FOG_DENSEE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9FOG_DENSEE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1ab2852476d757c57d3e3817e593b1fcc4a3110adaed0ef6a9b781a966572cd3704"></span><code class="sig-name descname">FOG_DENSE</code> = 9<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9FOG_DENSEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dense fog, when V in [0,50[ [m] (allowed to use rear fog light according to [3]) </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N4osi323EnvironmentalConditions19AmbientIlluminationE">
+<span id="_CPPv3N4osi323EnvironmentalConditions19AmbientIlluminationE"></span><span id="_CPPv2N4osi323EnvironmentalConditions19AmbientIlluminationE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4b"></span><em class="property">enum </em><code class="sig-name descname">AmbientIllumination</code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19AmbientIlluminationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of discretized ambient illumination states: Ambient light is any light in the vehicle’s environment that is not emitted by the vehicle itself. It can include sun/moon light, light from other cars, street lights etc.</p>
+<p>Lux [lx] is the SI unit of luminance or illumination of an area of exact one square meter, which is equal to one lumen per square meter 1 [lx] = 1 [lm/m^2] [5]. The lumen [lm] is the SI derived unit of luminous flux and a measure of the total quantity of visible light emitted by a source. The lumen is defined in relation to the candela [cd] as 1 [lm] =1 [cd sr] where [sr] denotes steradian, the unit of solid angle used in 3D geometry analogous to the radian.</p>
+<p>Categorization is done based on natural day/night time illuminance levels [6] and standards for required lighting levels on roads [6, 7, 8, 9].</p>
+<p><dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[5] <a class="reference external" href="https://physics.nist.gov/cuu/Units/units.html">The NIST Reference on Constants, Units, and Uncertainty</a></p></li>
+<li><p>[6] <a class="reference external" href="https://www.noao.edu/education/QLTkit/ACTIVITY_Documents/Safety/LightLevels_outdoor+indoor.pdf">National Optical Astronomy Observatory</a></p></li>
+<li><p>[7] <a class="reference external" href="http://www.wsdot.wa.gov/research/reports/fullreports/847.1.pdf">Standards for required street lighting in the USA</a></p></li>
+<li><p>[8] [Canadian IES-RP-8 standards for road lighting - municipality of Saint-Gedeon-de-. Beauce](<a class="reference external" href="http://sslnet.ca/wp-content/uploads/2011/10/LTE-RT-2011-0076-Anglais.pdf">http://sslnet.ca/wp-content/uploads/2011/10/LTE-RT-2011-0076-Anglais.pdf</a>)</p></li>
+<li><p>[9] <a class="reference external" href="http://courtneystrong.com/wp-content/uploads/2017/07/css-sl1-class-and-quality-of-street-lighting.pdf">European standards for road lighting</a> </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions28AMBIENT_ILLUMINATION_UNKNOWNE">
+<span id="_CPPv3N4osi323EnvironmentalConditions28AMBIENT_ILLUMINATION_UNKNOWNE"></span><span id="_CPPv2N4osi323EnvironmentalConditions28AMBIENT_ILLUMINATION_UNKNOWNE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4baded1d25e5eeb1b37dd6db4924995f11e"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions28AMBIENT_ILLUMINATION_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ambient illumination is unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions26AMBIENT_ILLUMINATION_OTHERE">
+<span id="_CPPv3N4osi323EnvironmentalConditions26AMBIENT_ILLUMINATION_OTHERE"></span><span id="_CPPv2N4osi323EnvironmentalConditions26AMBIENT_ILLUMINATION_OTHERE"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba79d0a203e727523fb7b1454af6209fb6"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions26AMBIENT_ILLUMINATION_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known) ambient illumination. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL1E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL1E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL1E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba971aa350d4d33410b9f9c6ede341e18e"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL1</code> = 2<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 1 illumination in ]0.001, 0.01[ [lx] E.g. Night with no artificial light.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba971aa350d4d33410b9f9c6ede341e18e"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL1</span></span></a></code> if illumination is less than 0.001 [lx] </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL2E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL2E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL2E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba1fbb769192bdc2f19229130f59041536"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL2</code> = 3<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 2 illumination in [0.01, 1[ [lx] E.g. Night full moon / Deep twilight. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL3E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL3E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL3E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4badd4cbdd8cb6e2fb24643df35ba99ce47"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL3</code> = 4<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL3E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 3 illumination in [1, 3[ [lx] E.g. Deep to average twilight / Minimum lighting on local low pedestrian conflict roads. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL4E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL4E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL4E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba7aedf9f4800d561de3d9a3b3584898e6"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL4</code> = 5<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 4 illumination in [3, 10[ [lx] E.g. Average to full twilight / Minimum lighting on collector roads / Minimum lighting on major and expressway roads with low to average pedestrian conflict. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL5E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL5E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL5E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba4c87fc794ecd2204f2afdb893cb4b802"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL5</code> = 6<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL5E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 5 illumination in [10, 20[ [lx] E.g. Minimum lighting on major and expressway roads with high pedestrian conflict. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL6E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL6E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL6E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4babfa9bc2252d335423e64a1472eb79503"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL6</code> = 7<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 6 illumination in [20, 400[ [lx] E.g. Roads with more lighting / Very dark overcast day to sunrise or sunset on a clear day. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL7E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL7E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL7E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba0ec785758b786300bb8df5e8456d2d77"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL7</code> = 8<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL7E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 7 illumination in [400, 1000[ [lx] E.g. Sunrise or sunset on a clear day / Overcast day. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL8E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL8E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL8E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba81b0a86a1062c84694bbc65b0de54446"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL8</code> = 9<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL8E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 8 illumination in [1000, 10000[ [lx] E.g. Average to full daylight. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL9E">
+<span id="_CPPv3N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL9E"></span><span id="_CPPv2N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL9E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4bae7c67175f6db7526d05fecdf66f97a6c"></span><code class="sig-name descname">AMBIENT_ILLUMINATION_LEVEL9</code> = 10<a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions27AMBIENT_ILLUMINATION_LEVEL9E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Level 9 illumination in [10000, 120000[ [lx] E.g. Full daylight to intense sunlight.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4bae7c67175f6db7526d05fecdf66f97a6c"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL9</span></span></a></code> if illumination is more than 120000 [lx] </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a3bbc4ecf60a1ec4afa94ed59df1b2f83"></span><code class="sig-name descname">optional AmbientIllumination osi3::EnvironmentalConditions::ambient_illumination = 1</code></dt>
+<dd><p>The ambient illumination of the environment. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1aebd011399675b0a3582e5a64a5f93be2"></span><code class="sig-name descname">optional TimeOfDay osi3::EnvironmentalConditions::time_of_day = 2</code></dt>
+<dd><p>The time of day at the host vehicles location. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"></span><code class="sig-name descname">optional int64 osi3::EnvironmentalConditions::unix_timestamp = 8</code></dt>
+<dd><p>The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601: 1970-01-01T00:00:00Z). Literally speaking the epoch is Unix time 0 (midnight 1/1/1970), but ‘epoch’ is often used as a synonym for ‘Unix time’. Many Unix systems store epoch dates as a signed 32-bit integer, which might cause problems on January 19, 2038 (known as the Year 2038 problem or Y2038).</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>You can convert the timestamp using the following <a class="reference external" href="https://www.epochconverter.com/#code">routines sorted by languages</a></p>
+</dd>
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[1] <a class="reference external" href="https://www.epochconverter.com/">Epoch &amp; Unix Timestamp Conversion Tools</a></p></li>
+<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Wikipedia: Coordinated Universal Time</a> </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a6d9bbc1bd9eea510498792ff09a9b23d"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::atmospheric_pressure = 3</code></dt>
+<dd><p>Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</p>
+<p>Unit: [Pa] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1afb975ad7dddedd8bfac0a38664ab908e"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::temperature = 4</code></dt>
+<dd><p>Temperature in Kelvin at z=0.0 in world frame.</p>
+<p>Unit: [K] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a05b6f530a842deef881608e131f3b98a"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::relative_humidity = 5</code></dt>
+<dd><p>Relative humidity in at z=0.0 in world frame.</p>
+<p>Note that physically more relevant measures, like absolute or specific humidity can be easily derived from relative_humidity, given that the temperature and atmospheric_pressure are known.</p>
+<p>Unit: [%] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a9bf9ca7c8f724860d0b8b6d0276d33d1"></span><code class="sig-name descname">optional Precipitation osi3::EnvironmentalConditions::precipitation = 6</code></dt>
+<dd><p>Description of the precipitation. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1a9da9ca8657ae124eb3daddfee3b52451"></span><code class="sig-name descname">optional Fog osi3::EnvironmentalConditions::fog = 7</code></dt>
+<dd><p>Description of the fog. </p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N4osi323EnvironmentalConditions9TimeOfDayE">
+<span id="_CPPv3N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="osi3::EnvironmentalConditions::TimeOfDay"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay"></span><em class="property">struct </em><code class="sig-name descname">TimeOfDay</code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9TimeOfDayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The time of day at a specified location. </p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>In general the global position of the parent frame should be obtainable in order to derive the local time. This information can be calculated from the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"><span class="std std-ref"><span class="pre">unix_timestamp</span></span></a></code> in combination with <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"><span class="std std-ref"><span class="pre">osi3::GroundTruth::proj_string</span></span></a></code> and the position of the corresponding <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary"><span class="std std-ref"><span class="pre">osi3::BaseStationary</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">osi3::BaseMoving</span></span></a></code> . </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay_1a6babaecd5662954155e8a846edbd8b72"></span><code class="sig-name descname">optional uint32 osi3::EnvironmentalConditions::TimeOfDay::seconds_since_midnight = 1</code></dt>
+<dd><p>The number of seconds [s] that have passed since midnight local time. Used e.g. for determining the current state of the circadian rhythm of a driver.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>No changes of daylight saving time or time zones are considered. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay.html" class="btn btn-neutral float-right" title="Struct EnvironmentalConditions::TimeOfDay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1Dimension3d.html" class="btn btn-neutral float-left" title="Struct Dimension3d" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1StationaryObject_1_1Classification:
+
+Struct StationaryObject::Classification
+=======================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1StationaryObject`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::StationaryObject::Classification
+   :members:
+   :protected-members:
+   :undoc-members:

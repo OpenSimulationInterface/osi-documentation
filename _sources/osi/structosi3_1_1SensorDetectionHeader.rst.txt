@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1SensorDetectionHeader:
+
+Struct SensorDetectionHeader
+============================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::SensorDetectionHeader
+   :members:
+   :protected-members:
+   :undoc-members:

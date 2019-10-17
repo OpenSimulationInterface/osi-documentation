@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct SensorDetectionHeader &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct SensorView" href="structosi3_1_1SensorView.html" />
+    <link rel="prev" title="Struct SensorDataSeriesList" href="structosi3_1_1SensorDataSeriesList.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct SensorDetectionHeader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/structosi3_1_1SensorDetectionHeader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-sensordetectionheader">
+<span id="exhale-struct-structosi3-1-1sensordetectionheader"></span><h1>Struct SensorDetectionHeader<a class="headerlink" href="#struct-sensordetectionheader" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-featuredata-proto"><span class="std std-ref">File osi_featuredata.proto</span></a></p></li>
+</ul>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi321SensorDetectionHeaderE">
+<span id="_CPPv3N4osi321SensorDetectionHeaderE"></span><span id="_CPPv2N4osi321SensorDetectionHeaderE"></span><span id="osi3::SensorDetectionHeader"></span><span class="target" id="structosi3_1_1SensorDetectionHeader"></span><em class="property">struct </em><code class="sig-name descname">SensorDetectionHeader</code><a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeaderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The header attributes of each sensor’s detection list. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="enum">
+<dt id="_CPPv4N4osi321SensorDetectionHeader13DataQualifierE">
+<span id="_CPPv3N4osi321SensorDetectionHeader13DataQualifierE"></span><span id="_CPPv2N4osi321SensorDetectionHeader13DataQualifierE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127"></span><em class="property">enum </em><code class="sig-name descname">DataQualifier</code><a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader13DataQualifierE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Data qualifier communicates the overall availability of the interface. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader22DATA_QUALIFIER_UNKNOWNE">
+<span id="_CPPv3N4osi321SensorDetectionHeader22DATA_QUALIFIER_UNKNOWNE"></span><span id="_CPPv2N4osi321SensorDetectionHeader22DATA_QUALIFIER_UNKNOWNE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127a81105c88383e132fece393d327e92acf"></span><code class="sig-name descname">DATA_QUALIFIER_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader22DATA_QUALIFIER_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader20DATA_QUALIFIER_OTHERE">
+<span id="_CPPv3N4osi321SensorDetectionHeader20DATA_QUALIFIER_OTHERE"></span><span id="_CPPv2N4osi321SensorDetectionHeader20DATA_QUALIFIER_OTHERE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127afa615ee87a5eee217b3593f9ece9f059"></span><code class="sig-name descname">DATA_QUALIFIER_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader20DATA_QUALIFIER_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader24DATA_QUALIFIER_AVAILABLEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader24DATA_QUALIFIER_AVAILABLEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader24DATA_QUALIFIER_AVAILABLEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127a49abe7eef83ff2bc995ec6b23ffe58f6"></span><code class="sig-name descname">DATA_QUALIFIER_AVAILABLE</code> = 2<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader24DATA_QUALIFIER_AVAILABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Data is available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader32DATA_QUALIFIER_AVAILABLE_REDUCEDE">
+<span id="_CPPv3N4osi321SensorDetectionHeader32DATA_QUALIFIER_AVAILABLE_REDUCEDE"></span><span id="_CPPv2N4osi321SensorDetectionHeader32DATA_QUALIFIER_AVAILABLE_REDUCEDE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127af9d0c41a779dddab3852f492f013263e"></span><code class="sig-name descname">DATA_QUALIFIER_AVAILABLE_REDUCED</code> = 3<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader32DATA_QUALIFIER_AVAILABLE_REDUCEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reduced data is available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader28DATA_QUALIFIER_NOT_AVAILABLEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader28DATA_QUALIFIER_NOT_AVAILABLEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader28DATA_QUALIFIER_NOT_AVAILABLEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127a08034bdafd4addf571e029cd63c25d44"></span><code class="sig-name descname">DATA_QUALIFIER_NOT_AVAILABLE</code> = 4<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader28DATA_QUALIFIER_NOT_AVAILABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Data is not available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader24DATA_QUALIFIER_BLINDNESSE">
+<span id="_CPPv3N4osi321SensorDetectionHeader24DATA_QUALIFIER_BLINDNESSE"></span><span id="_CPPv2N4osi321SensorDetectionHeader24DATA_QUALIFIER_BLINDNESSE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127aebdbffb1e4e61501920a78f89b87bb69"></span><code class="sig-name descname">DATA_QUALIFIER_BLINDNESS</code> = 5<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader24DATA_QUALIFIER_BLINDNESSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor is blind. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader34DATA_QUALIFIER_TEMPORARY_AVAILABLEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader34DATA_QUALIFIER_TEMPORARY_AVAILABLEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader34DATA_QUALIFIER_TEMPORARY_AVAILABLEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127a63d0a0a05db267f137b5f69ed0d2fec5"></span><code class="sig-name descname">DATA_QUALIFIER_TEMPORARY_AVAILABLE</code> = 6<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader34DATA_QUALIFIER_TEMPORARY_AVAILABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor temporary available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader22DATA_QUALIFIER_INVALIDE">
+<span id="_CPPv3N4osi321SensorDetectionHeader22DATA_QUALIFIER_INVALIDE"></span><span id="_CPPv2N4osi321SensorDetectionHeader22DATA_QUALIFIER_INVALIDE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a1ba6030af7bcf887d6e4c377861c5127a5e3aa51a219efd61c8fdafffbcaa738c"></span><code class="sig-name descname">DATA_QUALIFIER_INVALID</code> = 7<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader22DATA_QUALIFIER_INVALIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor invalid. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="_CPPv4N4osi321SensorDetectionHeader17ExtendedQualifierE">
+<span id="_CPPv3N4osi321SensorDetectionHeader17ExtendedQualifierE"></span><span id="_CPPv2N4osi321SensorDetectionHeader17ExtendedQualifierE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636b"></span><em class="property">enum </em><code class="sig-name descname">ExtendedQualifier</code><a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader17ExtendedQualifierE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The extended qualifier describes the reason (not the effect) why the event data qualifier, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a58f3c5dfbf1e4a04dd12c884a3f67cdb"><span class="std std-ref"><span class="pre">data_qualifier</span></span></a></code>, is reduced or not available. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader26EXTENDED_QUALIFIER_UNKNOWNE">
+<span id="_CPPv3N4osi321SensorDetectionHeader26EXTENDED_QUALIFIER_UNKNOWNE"></span><span id="_CPPv2N4osi321SensorDetectionHeader26EXTENDED_QUALIFIER_UNKNOWNE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636baa67fb146b5b0ffd936a9809952f224f6"></span><code class="sig-name descname">EXTENDED_QUALIFIER_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader26EXTENDED_QUALIFIER_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Unknown (must not be used in ground truth). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader24EXTENDED_QUALIFIER_OTHERE">
+<span id="_CPPv3N4osi321SensorDetectionHeader24EXTENDED_QUALIFIER_OTHERE"></span><span id="_CPPv2N4osi321SensorDetectionHeader24EXTENDED_QUALIFIER_OTHERE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba51ac4d4cb3c0a770771f563cd0dc85c9"></span><code class="sig-name descname">EXTENDED_QUALIFIER_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader24EXTENDED_QUALIFIER_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Other (unspecified but known). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_NORMAL_OPERATION_MODEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_NORMAL_OPERATION_MODEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_NORMAL_OPERATION_MODEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba02eb3c322eebc779bfda9c5f5cc0a30c"></span><code class="sig-name descname">EXTENDED_QUALIFIER_NORMAL_OPERATION_MODE</code> = 2<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_NORMAL_OPERATION_MODEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Normal operation mode. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader35EXTENDED_QUALIFIER_POWER_UP_OR_DOWNE">
+<span id="_CPPv3N4osi321SensorDetectionHeader35EXTENDED_QUALIFIER_POWER_UP_OR_DOWNE"></span><span id="_CPPv2N4osi321SensorDetectionHeader35EXTENDED_QUALIFIER_POWER_UP_OR_DOWNE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba11e11b1062cf42c7379de969b0a91411"></span><code class="sig-name descname">EXTENDED_QUALIFIER_POWER_UP_OR_DOWN</code> = 3<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader35EXTENDED_QUALIFIER_POWER_UP_OR_DOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Power up or down. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATEDE">
+<span id="_CPPv3N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATEDE"></span><span id="_CPPv2N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATEDE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba59806af59fc9aa84b81c4bb384d1c154"></span><code class="sig-name descname">EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATED</code> = 4<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor not calibrated. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader33EXTENDED_QUALIFIER_SENSOR_BLOCKEDE">
+<span id="_CPPv3N4osi321SensorDetectionHeader33EXTENDED_QUALIFIER_SENSOR_BLOCKEDE"></span><span id="_CPPv2N4osi321SensorDetectionHeader33EXTENDED_QUALIFIER_SENSOR_BLOCKEDE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636bac0c56b0d3c8f387fc06cf8fa85b427de"></span><code class="sig-name descname">EXTENDED_QUALIFIER_SENSOR_BLOCKED</code> = 5<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader33EXTENDED_QUALIFIER_SENSOR_BLOCKEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor blocked. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader36EXTENDED_QUALIFIER_SENSOR_MISALIGNEDE">
+<span id="_CPPv3N4osi321SensorDetectionHeader36EXTENDED_QUALIFIER_SENSOR_MISALIGNEDE"></span><span id="_CPPv2N4osi321SensorDetectionHeader36EXTENDED_QUALIFIER_SENSOR_MISALIGNEDE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636baf9fa590c755364be3c7a307bdebf77f9"></span><code class="sig-name descname">EXTENDED_QUALIFIER_SENSOR_MISALIGNED</code> = 6<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader36EXTENDED_QUALIFIER_SENSOR_MISALIGNEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor misaligned. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader53EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITIONE">
+<span id="_CPPv3N4osi321SensorDetectionHeader53EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITIONE"></span><span id="_CPPv2N4osi321SensorDetectionHeader53EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITIONE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba8d9126ec3008db318aec64dc4b64d41c"></span><code class="sig-name descname">EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITION</code> = 7<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader53EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bad sensor environmental condition (e.g. Darkness for vision). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEWE">
+<span id="_CPPv3N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEWE"></span><span id="_CPPv2N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEWE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba2e7833c77cc2cb3c8f57b12542f1bb65"></span><code class="sig-name descname">EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEW</code> = 8<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader40EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEWE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reduced field of view. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader38EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader38EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader38EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636ba9b274acacd19847eb783da3141aaad09"></span><code class="sig-name descname">EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLE</code> = 9<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader38EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Input not available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader34EXTENDED_QUALIFIER_INTERNAL_REASONE">
+<span id="_CPPv3N4osi321SensorDetectionHeader34EXTENDED_QUALIFIER_INTERNAL_REASONE"></span><span id="_CPPv2N4osi321SensorDetectionHeader34EXTENDED_QUALIFIER_INTERNAL_REASONE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636bad665251175861447e0c23f51e157182b"></span><code class="sig-name descname">EXTENDED_QUALIFIER_INTERNAL_REASON</code> = 10<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader34EXTENDED_QUALIFIER_INTERNAL_REASONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Internal reason (e.g. an internal HW or SW error has occurred). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader39EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader39EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader39EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636bad37357a35d2de54083d98be935fbb9b7"></span><code class="sig-name descname">EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCE</code> = 11<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader39EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>External disturbance, sensor specific for front radar (e.g. Interference of different radar sensors). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N4osi321SensorDetectionHeader37EXTENDED_QUALIFIER_BEGINNING_BLOCKAGEE">
+<span id="_CPPv3N4osi321SensorDetectionHeader37EXTENDED_QUALIFIER_BEGINNING_BLOCKAGEE"></span><span id="_CPPv2N4osi321SensorDetectionHeader37EXTENDED_QUALIFIER_BEGINNING_BLOCKAGEE"></span><span class="target" id="structosi3_1_1SensorDetectionHeader_1a379b9a86453a52b37af32f08a6dc636bab2f08e9e0e7d35d0390e03a26164da07"></span><code class="sig-name descname">EXTENDED_QUALIFIER_BEGINNING_BLOCKAGE</code> = 12<a class="headerlink" href="#_CPPv4N4osi321SensorDetectionHeader37EXTENDED_QUALIFIER_BEGINNING_BLOCKAGEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Beginning blockage, sensor specific for front radar. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a7276bbdf40b2da4fed4397df62f167aa"></span><code class="sig-name descname">optional Timestamp osi3::SensorDetectionHeader::measurement_time = 1</code></dt>
+<dd><p>Time stamp at which the measurement was taken (not the time at which it was processed or at which it is transmitted) in the global synchronized time.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>See <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"><span class="std std-ref"><span class="pre">SensorData::timestamp</span></span></a></code> and <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code> for detailed discussions on the semantics of time-related fields. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a66bcd17ab25dda7d4545e10472188e92"></span><code class="sig-name descname">optional uint64 osi3::SensorDetectionHeader::cycle_counter = 2</code></dt>
+<dd><p>Monotonous counter to identify the exact cycle. In general the detection function is called periodically and <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a66bcd17ab25dda7d4545e10472188e92"><span class="std std-ref"><span class="pre">cycle_counter</span></span></a></code> corresponds to the number of periods. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a3b73ec96c144a7e32094ddebe37cc4a8"></span><code class="sig-name descname">optional MountingPosition osi3::SensorDetectionHeader::mounting_position = 3</code></dt>
+<dd><p>Mounting position of the sensor (origin and orientation of the sensor frame). Both origin and orientation are given in and with respect to the host vehicle coordinate system (see: <code class="docutils literal notranslate"><span class="pre">MovingObject::Vehicle</span></code> vehicle reference point) [1].</p>
+<p>The sensor frame’s x-axis is pointing in the central viewing direction of the sensor. It is the angle bisector of the sensor’s horizontal and vertical field of view. The terms horizontal and vertical must be understood as names for the two principal planes of the sensor’s field of view (relative to the sensor frame’s orientation), which do not have to be horizontal or vertical in the strict sense of being parallel or perpendicular to the local gravitational vector. The horizontal field of view defines the sensor frame’s xy-plane and the vertical field of view defines the xz-plane. The sensor frame is right-handed and the z-axis is pointing in an upward direction.</p>
+<p>The sensor frame uses cartesian coordinates. The sensor frame’s origin is identical to sensor detection frame’s origin. Detections are defined in the sensor detection frame which uses e.g. spherical coordinates.</p>
+<p><dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[1] DIN ISO 8855:2013-11 </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a5087f8e26b2b52d6b2d9f727cf7e5684"></span><code class="sig-name descname">optional MountingPosition osi3::SensorDetectionHeader::mounting_position_rmse = 4</code></dt>
+<dd><p>The origin/orientation of the sensor frame represents the current mounting pose to the best knowledge of the sensor. The estimation of the 6D pose given by the calibration. The uncertainty of this estimation is given with the corresponding 6D root mean squared error. The estimation of the current origin does not include effects due to short-time dynamics, such as pitch angles from braking, but includes long-time calibration values, such as pitch angles from luggage in the trunk. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a58f3c5dfbf1e4a04dd12c884a3f67cdb"></span><code class="sig-name descname">optional DataQualifier osi3::SensorDetectionHeader::data_qualifier = 5</code></dt>
+<dd><p>Data Qualifier expresses to what extent the content of this event can be relied on. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a49fcf349c4dbda9b88d5784cd3cdb078"></span><code class="sig-name descname">optional uint32 osi3::SensorDetectionHeader::number_of_valid_detections = 6</code></dt>
+<dd><p>The current number of valid detections in the detections list.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This value has to be set if the list contains invalid detections. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a9c13b81d1462b146286921ca41f3661b"></span><code class="sig-name descname">optional Identifier osi3::SensorDetectionHeader::sensor_id = 7</code></dt>
+<dd><p>The ID of the sensor at host vehicle’s <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a3b73ec96c144a7e32094ddebe37cc4a8"><span class="std std-ref"><span class="pre">mounting_position</span></span></a></code>.</p>
+<p>This ID can equal <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1aba1532205c5abef2f8b439fc4c54d983"><span class="std std-ref"><span class="pre">SensorData::sensor_id</span></span></a></code>, if <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> holds only data from one sensor/sensor model. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1SensorDetectionHeader_1a3048b910775f81bb7628db42562f841f"></span><code class="sig-name descname">optional ExtendedQualifier osi3::SensorDetectionHeader::extended_qualifier = 8</code></dt>
+<dd><p>The extended qualifier describes the reason (not the effect) why the event data qualifier, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a58f3c5dfbf1e4a04dd12c884a3f67cdb"><span class="std std-ref"><span class="pre">data_qualifier</span></span></a></code>, is reduced or not available. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1SensorView.html" class="btn btn-neutral float-right" title="Struct SensorView" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1SensorDataSeriesList.html" class="btn btn-neutral float-left" title="Struct SensorDataSeriesList" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

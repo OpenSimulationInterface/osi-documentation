@@ -1,0 +1,13 @@
+.. _exhale_enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07:
+
+Enum DetectionClassification
+============================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: osi3::DetectionClassification

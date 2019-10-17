@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,9 +36,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributors&#39; Guidelines" href="howtocontribute.html" />
+    <link rel="next" title="Contributors’ Guidelines" href="howtocontribute.html" />
     <link rel="prev" title="How to write rules" href="writing-rules.html" /> 
 </head>
 
@@ -84,12 +88,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -112,13 +116,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -194,15 +198,15 @@
 <span id="id1"></span><h1>osivalidator package<a class="headerlink" href="#osivalidator-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-osivalidator.linked_proto_field">
 <span id="osivalidator-linked-proto-field-module"></span><h2>osivalidator.linked_proto_field module<a class="headerlink" href="#module-osivalidator.linked_proto_field" title="Permalink to this headline">¶</a></h2>
-<p>This class describe a wrapper on protobuf fields that add a link
+<p>This class describes a wrapper on protobuf fields that add a link
 with parent message and bind message to some additional information.</p>
 <dl class="class">
 <dt id="osivalidator.linked_proto_field.LinkedProtoField">
 <em class="property">class </em><code class="sig-name descname">LinkedProtoField</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class describe a wrapper on protobuf fields that add a link
+<p>This class describes a wrapper on protobuf fields that add a link
 with parent message and bind message to some additional information.</p>
-<p>The Protobuf's RepeatedCompositeContainer that describes repeated field are
+<p>The Protobuf’s RepeatedCompositeContainer that describes repeated field are
 replaced with Python lists.
 The field information (parent message and field name) for the repeated
 field are here bounded to each element of the list.</p>
@@ -230,7 +234,7 @@ message. Otherwise, raise an AttributeError.</p>
 <dl class="method">
 <dt id="osivalidator.linked_proto_field.LinkedProtoField.has_field">
 <code class="sig-name descname">has_field</code><span class="sig-paren">(</span><em class="sig-param">field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.linked_proto_field.LinkedProtoField.has_field" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a protobuf message message have an attribute/field even if this
+<dd><p>Check if a protobuf message has an attribute/field even if this
 is a repeated field.</p>
 <p>If it is a repeated field, this function returns false if there is no
 element into it.</p>
@@ -397,9 +401,17 @@ validation rules tree.</p>
 <dl class="method">
 <dt id="osivalidator.osi_rules.FieldRules.add_rule">
 <code class="sig-name descname">add_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.add_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a new rule of verb rule to a field with the parameters params.
-rule can also be a dictionary containing one key (the verb) with one
-value (the parameters).</p>
+<dd><p>Add a new rule to a field with the parameters.
+For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="n">Rule</span><span class="p">(</span><span class="n">verb</span><span class="o">=</span><span class="s2">&quot;is_less_than_or_equal_to&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The rule can also be a dictionary containing one key (the rule verb) with one
+value (the parameter).
+For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">add_rule</span><span class="p">({</span><span class="s2">&quot;is_less_than_or_equal_to&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -411,7 +423,7 @@ value (the parameters).</p>
 <dl class="method">
 <dt id="osivalidator.osi_rules.FieldRules.has_rule">
 <code class="sig-name descname">has_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules.FieldRules.has_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a field has the rule <cite>rule</cite></p>
+<dd><p>Check if a field has the rule <code class="docutils literal notranslate"><span class="pre">rule</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -626,7 +638,7 @@ the necessary methods to check their compliance.</p>
 <span id="osivalidator-osi-rules-implementations-module"></span><h2>osivalidator.osi_rules_implementations module<a class="headerlink" href="#module-osivalidator.osi_rules_implementations" title="Permalink to this headline">¶</a></h2>
 <p>This module contains the implementation of each rule to be used in the
 requirements or in the Doxygen documentation.</p>
-<p>All these rules are bounded into &quot;OSIRulesChecker&quot;, so they have access to all
+<p>All these rules are bounded into “OSIRulesChecker”, so they have access to all
 its attributes and methods.</p>
 <dl class="function">
 <dt id="osivalidator.osi_rules_implementations.add_default_rules_to_subfields">
@@ -641,8 +653,8 @@ its attributes and methods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>params</strong> -- statements</p></li>
-<li><p><strong>extra_params</strong> -- <cite>do_check</cite>: rules to validate if statements are true</p></li>
+<li><p><strong>params</strong> – statements</p></li>
+<li><p><strong>extra_params</strong> – <cite>do_check</cite>: rules to validate if statements are true</p></li>
 </ul>
 </dd>
 </dl>
@@ -669,51 +681,51 @@ do_check: # Check that will be performed only if the statements are True
 <dd><p>Check rule for first message of a repeated field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- dictionary of rules to be checked for the first message
+<dd class="field-odd"><p><strong>params</strong> – dictionary of rules to be checked for the first message
 (mapping)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="osivalidator.osi_rules_implementations.is_different">
-<code class="sig-name descname">is_different</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_different" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_rules_implementations.is_different_to">
+<code class="sig-name descname">is_different_to</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_different_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if a number is different from the parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the inequality to check (float or bool)</p>
+<dd class="field-odd"><p><strong>params</strong> – the inequality to check (float or bool)</p>
 </dd>
 </dl>
 <p>Example:
 <code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">-</span> <span class="pre">is_different:</span> <span class="pre">1</span>
+<span class="pre">-</span> <span class="pre">is_different_to:</span> <span class="pre">1</span>
 <span class="pre">`</span></code></p>
 </dd></dl>
 
 <dl class="function">
-<dt id="osivalidator.osi_rules_implementations.is_equal">
-<code class="sig-name descname">is_equal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_equal" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_rules_implementations.is_equal_to">
+<code class="sig-name descname">is_equal_to</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_equal_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if a number equals the parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the equality to check (float or bool)</p>
+<dd class="field-odd"><p><strong>params</strong> – the equality to check (float or bool)</p>
 </dd>
 </dl>
 <p>Example:
 <code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">-</span> <span class="pre">is_equal:</span> <span class="pre">1</span>
+<span class="pre">-</span> <span class="pre">is_equal_to:</span> <span class="pre">1</span>
 <span class="pre">`</span></code></p>
 </dd></dl>
 
 <dl class="function">
-<dt id="osivalidator.osi_rules_implementations.is_global_unique">
-<code class="sig-name descname">is_global_unique</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_global_unique" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_rules_implementations.is_globally_unique">
+<code class="sig-name descname">is_globally_unique</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_globally_unique" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register an ID in the OSI ID manager to later perform a ID
 consistency validation.</p>
 <p>Must be set to an Identifier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- none</p>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -724,7 +736,7 @@ consistency validation.</p>
 <dd><p>Check if a number is over a minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the minimum (float)</p>
+<dd class="field-odd"><p><strong>params</strong> – the minimum (float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -735,7 +747,7 @@ consistency validation.</p>
 <dd><p>Check if a number is over or equal a minimum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the minimum (float)</p>
+<dd class="field-odd"><p><strong>params</strong> – the minimum (float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -746,7 +758,7 @@ consistency validation.</p>
 <dd><p>Check if a string is a ISO country code.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- none</p>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -757,7 +769,7 @@ consistency validation.</p>
 <dd><p>Check if a number is under a maximum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the maximum (float)</p>
+<dd class="field-odd"><p><strong>params</strong> – the maximum (float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -768,7 +780,7 @@ consistency validation.</p>
 <dd><p>Check if a number is under or equal a maximum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- the maximum (float)</p>
+<dd class="field-odd"><p><strong>params</strong> – the maximum (float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -776,10 +788,10 @@ consistency validation.</p>
 <dl class="function">
 <dt id="osivalidator.osi_rules_implementations.is_optional">
 <code class="sig-name descname">is_optional</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.is_optional" title="Permalink to this definition">¶</a></dt>
-<dd><p>This rule set the is_set one on a &quot;Warning&quot; severity.</p>
+<dd><p>This rule set the is_set one on a “Warning” severity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- none</p>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -790,7 +802,7 @@ consistency validation.</p>
 <dd><p>Check if a field is set or if a repeated field has at least one element.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- none</p>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -802,7 +814,7 @@ consistency validation.</p>
 message in the field are complying.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- none</p>
+<dd class="field-odd"><p><strong>params</strong> – none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -814,8 +826,8 @@ message in the field are complying.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>field</strong> -- Field to which the rule needs to comply</p></li>
-<li><p><strong>rule</strong> -- dictionary of rules to be checked for the last message
+<li><p><strong>field</strong> – Field to which the rule needs to comply</p></li>
+<li><p><strong>rule</strong> – dictionary of rules to be checked for the last message
 (mapping)</p></li>
 </ul>
 </dd>
@@ -830,12 +842,12 @@ exists or not</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="osivalidator.osi_rules_implementations.refers">
-<code class="sig-name descname">refers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.refers" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_rules_implementations.refers_to">
+<code class="sig-name descname">refers_to</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">field</em>, <em class="sig-param">rule</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_implementations.refers_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a reference to another message by ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> -- Type name of the referred object (string)</p>
+<dd class="field-odd"><p><strong>params</strong> – Type name of the referred object (string)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -855,7 +867,7 @@ exists or not</p>
 </div>
 <div class="section" id="module-osivalidator.osi_scenario">
 <span id="osivalidator-osi-scenario-module"></span><h2>osivalidator.osi_scenario module<a class="headerlink" href="#module-osivalidator.osi_scenario" title="Permalink to this headline">¶</a></h2>
-<p>Module that contain OSIDataContainer class to handle and manager OSI scenarios</p>
+<p>Module that contains OSIDataContainer class to handle and manage OSI scenarios.</p>
 <dl class="class">
 <dt id="osivalidator.osi_scenario.OSIScenario">
 <em class="property">class </em><code class="sig-name descname">OSIScenario</code><span class="sig-paren">(</span><em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario" title="Permalink to this definition">¶</a></dt>
@@ -865,7 +877,7 @@ exists or not</p>
 <dt id="osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range">
 <code class="sig-name descname">cache_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Put all messages from index begin to index end in the cache. Then the
-method <cite>get_message_by_index</cite> can access to it in a faster way.</p>
+method <code class="docutils literal notranslate"><span class="pre">get_message_by_index</span></code> can access to it in a faster way.</p>
 <p>Using this method again clear the last cache and replace it with a new
 one.</p>
 </dd></dl>
@@ -880,14 +892,13 @@ one.</p>
 <dt id="osivalidator.osi_scenario.OSIScenario.get_message_by_index">
 <code class="sig-name descname">get_message_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_message_by_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a message by its index. Try first to get it from the cache made
-by the method <cite>cache_messages_in_index_range</cite>.</p>
+by the method <code class="docutils literal notranslate"><span class="pre">cache_messages_in_index_range</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range">
 <code class="sig-name descname">get_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
-<dd><p>Yield an iterator over messages of indexes between begin and end non
-included.</p>
+<dd><p>Yield an iterator over messages of indexes between begin and end included.</p>
 </dd></dl>
 
 <dl class="method">
@@ -976,9 +987,9 @@ yes. If deemed appropriate, the record may be modified in-place.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>log_queue</strong> -- list of tuple of messages that have to be flushed</p></li>
-<li><p><strong>timestamp</strong> -- if not None, only the timestamp given will be flushed</p></li>
-<li><p><strong>from_id</strong> -- if None, the timestamp will be in millisecond,
+<li><p><strong>log_queue</strong> – list of tuple of messages that have to be flushed</p></li>
+<li><p><strong>timestamp</strong> – if not None, only the timestamp given will be flushed</p></li>
+<li><p><strong>from_id</strong> – if None, the timestamp will be in millisecond,
 otherwise it will be the id of the timestamp according
 to the lookup table given in this parameter</p></li>
 </ul>
@@ -1068,7 +1079,7 @@ the number of messages</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="howtocontribute.html" class="btn btn-neutral float-right" title="Contributors&#39; Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="howtocontribute.html" class="btn btn-neutral float-right" title="Contributors’ Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="writing-rules.html" class="btn btn-neutral float-left" title="How to write rules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

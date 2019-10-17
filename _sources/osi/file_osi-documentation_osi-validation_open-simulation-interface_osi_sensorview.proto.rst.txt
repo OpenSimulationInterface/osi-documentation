@@ -1,0 +1,64 @@
+
+.. _file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorview.proto:
+
+File osi_sensorview.proto
+=========================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``osi-documentation/osi-validation/open-simulation-interface/osi_sensorview.proto``)
+------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorview.proto.rst
+
+
+
+
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_osi3`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structosi3_1_1CameraSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1GenericSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1LidarSensorView_1_1Reflection`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorView`
+
+- :ref:`exhale_struct_structosi3_1_1RadarSensorView_1_1Reflection`
+
+- :ref:`exhale_struct_structosi3_1_1SensorView`
+
+- :ref:`exhale_struct_structosi3_1_1UltrasonicSensorView`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_osi__sensorview_8proto_1a3eb9291264946dcb1f744ff29ba0f307`
+
+- :ref:`exhale_variable_osi__sensorview_8proto_1adbedb258e13546cc707a6ebb073a3d8a`
+

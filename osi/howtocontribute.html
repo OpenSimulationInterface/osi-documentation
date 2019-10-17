@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Contributors&#39; Guidelines &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Contributors’ Guidelines &mdash; Open Simulation Interface v3.1.2 documentation</title>
   
 
   
@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,10 +36,11 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OSI Validation" href="../osi-validator/osivalidator-module.html" />
-    <link rel="prev" title="v3.1.0 - OSI &#34;Dynamic Duncan&#34;" href="releases/v03.01.00.html" /> 
+    <link rel="next" title="OSI Reference" href="library_root.html" />
+    <link rel="prev" title="v3.1.0 - OSI “Dynamic Duncan”" href="releases/v03.01.00.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,12 +88,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributors' Guidelines</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributors’ Guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reporting-issues">Reporting issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-steps">First steps</a></li>
@@ -103,17 +106,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -164,7 +168,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Contributors' Guidelines</li>
+      <li>Contributors’ Guidelines</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,7 +188,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="contributors-guidelines">
-<span id="how-to-contribute"></span><h1>Contributors' Guidelines<a class="headerlink" href="#contributors-guidelines" title="Permalink to this headline">¶</a></h1>
+<span id="how-to-contribute"></span><h1>Contributors’ Guidelines<a class="headerlink" href="#contributors-guidelines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this document is to help contributors get started with
@@ -235,7 +239,7 @@ to the project you can create a pull request
 and reference it to your opened issue.</p>
 <p>We mostly use squash and merge for pull requests for master.
 Instead of seeing all of a
-contributor's individual commits from a topic branch,
+contributor’s individual commits from a topic branch,
 the commits are combined
 into one commit and merged into the master branch.
 Once a pull request is ready, it is reviewed and
@@ -249,7 +253,7 @@ maintain a streamlined Git history.</p>
 with actual code changes.</p></li>
 <li><p>If you add new osi messages into a *.proto file, don’t forget to
 extend the documentation and comment on the message and on each field (for more information see <a class="reference internal" href="commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).</p></li>
-<li><p>Don't forget to run
+<li><p>Don’t forget to run
 <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases.py">test_cases.py</a> to check if you followed the correct syntax guidelines for *.proto files</p></li>
 <li><p>If you rebuild the doxygen documentation run <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/test_cases_doc.py">test_cases_doc.py</a></p></li>
 <li><p>Try and mimic the style of commit messages, and for non trivial
@@ -340,7 +344,7 @@ the code.</p></li>
 important to also clarify that not all of them need to be acted upon and some
 are more important than others. It gives an important guidance to the developer
 to improve their work incrementally.</p></li>
-<li><p>Take the developer's opinion into consideration: Imposing a particular design
+<li><p>Take the developer’s opinion into consideration: Imposing a particular design
 choice out of personal preferences and without a real explanation will
 incentivize the developer to be a passive executor instead of a creative agent.</p></li>
 <li><p>Do not re-write, remove or re-do all the work: Sometimes it is easier to
@@ -356,9 +360,9 @@ other people require a more thorough explanation.</p></li>
 an impact on the receiver. If communicating a problem in the code or a
 suggestion is the goal, making an effort to remove all possible noise from
 the message is important. Consider these two statements to communicate about
-a problem in the code : &quot;This operation is wrong. Please fix it.&quot; and
-&quot;Doing this operation might result in an error, can you please
-review it?&quot;. The first one implies you made an error (confrontational), and
+a problem in the code : “This operation is wrong. Please fix it.” and
+“Doing this operation might result in an error, can you please
+review it?”. The first one implies you made an error (confrontational), and
 you should fix it (authority). The second suggest to review the code because
 there might be a mistake. Despite the message being the same, the recipient might
 have a different reactions to it and impact on the quality of this work. This
@@ -404,10 +408,10 @@ squash commits and merge the MR in the master branch.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../osi-validator/osivalidator-module.html" class="btn btn-neutral float-right" title="OSI Validation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="library_root.html" class="btn btn-neutral float-right" title="OSI Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="releases/v03.01.00.html" class="btn btn-neutral float-left" title="v3.1.0 - OSI &#34;Dynamic Duncan&#34;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="releases/v03.01.00.html" class="btn btn-neutral float-left" title="v3.1.0 - OSI “Dynamic Duncan”" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

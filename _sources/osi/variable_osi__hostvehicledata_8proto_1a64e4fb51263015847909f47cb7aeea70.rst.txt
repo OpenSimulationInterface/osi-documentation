@@ -1,0 +1,13 @@
+.. _exhale_variable_osi__hostvehicledata_8proto_1a64e4fb51263015847909f47cb7aeea70:
+
+Variable proto
+==============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_hostvehicledata.proto`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: proto

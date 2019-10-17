@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File osi_sensordata.proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File osi_sensordata.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_sensordata.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-sensordata-proto">
+<span id="program-listing-file-osi-documentation-osi-validation-open-simulation-interface-osi-sensordata-proto"></span><h1>Program Listing for File osi_sensordata.proto<a class="headerlink" href="#program-listing-for-file-osi-sensordata-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_sensordata.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-sensordata-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/osi-validation/open-simulation-interface/osi_sensordata.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;osi_version.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedtrafficsign.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedtrafficlight.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedroadmarking.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedlane.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedobject.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_detectedoccupant.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_sensorview.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_featuredata.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The header attributes of each detected entity.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">DetectedEntityHeader</span>
+<span class="p">{</span>
+    <span class="c1">// Time stamp at which the measurement was taken (not the time at which it</span>
+    <span class="c1">// was processed or at which it is transmitted) in the global synchronized</span>
+    <span class="c1">// time.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note See \c SensorData::timestamp and \c</span>
+    <span class="c1">// SensorData::last_measurement_time for detailed discussions on the</span>
+    <span class="c1">// semantics of time-related fields.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">measurement_time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Continuous up counter to identify the cycle.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint64</span> <span class="n">cycle_counter</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Data Qualifier expresses to what extent the content of this event can be</span>
+    <span class="c1">// relied on.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DataQualifier</span> <span class="n">data_qualifier</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// Data qualifier communicates the overall availability of the</span>
+    <span class="c1">// interface.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">DataQualifier</span>
+    <span class="p">{</span>
+        <span class="c1">// Unknown (must not be used in ground truth).</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known).</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Data is available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_AVAILABLE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Reduced data is available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_AVAILABLE_REDUCED</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Data is not available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_NOT_AVAILABLE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Sensor is blind.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_BLINDNESS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Sensor temporary available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_TEMPORARY_AVAILABLE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The sensor information derived from \c GroundTruth and processed by</span>
+<span class="c1">// sensor-models.</span>
+<span class="c1">//</span>
+<span class="c1">// The sensor information is supposed to imitate the output of real sensors.</span>
+<span class="c1">// All information regarding the environment is given with respect to</span>
+<span class="c1">// the virtual sensor coordinate system specified in</span>
+<span class="c1">// \c SensorData::mounting_position, except for feature data, which is given</span>
+<span class="c1">// with respect to the physical sensor coordinate system specified in the</span>
+<span class="c1">// corresponding physical sensor&#39;s coordinate system.</span>
+<span class="c1">//</span>
+<span class="c1">// When simulating multiple distinct sensors, each sensor can produce an</span>
+<span class="c1">// individual copy of the \c SensorData interface. This allows an independent</span>
+<span class="c1">// treatment of the sensors.</span>
+<span class="c1">//</span>
+<span class="c1">// Sensor fusion models can consolidate multiple \c SensorData interfaces into</span>
+<span class="c1">// one consolidated \c SensorData interface.  This can happen either in</span>
+<span class="c1">// seperate logical models, consuming and producing \c SensorData interfaces,</span>
+<span class="c1">// or it can happen as part of a combined sensor/logical model, that consumes</span>
+<span class="c1">// \c SensorView interfaces and directly produces one consolidated \c SensorData</span>
+<span class="c1">// output.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">SensorData</span>
+<span class="p">{</span>
+    <span class="c1">// The interface version used by the sender.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">InterfaceVersion</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The timestamp of the sensor data. Zero time is arbitrary but must be</span>
+    <span class="c1">// identical for all messages. Zero time does not need to coincide with</span>
+    <span class="c1">// the unix epoch. Recommended is the starting time point of the</span>
+    <span class="c1">// simulation.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is the point in time that the sensor data message becomes</span>
+    <span class="c1">// available to the rest of the system (i.e. the driving functions), so</span>
+    <span class="c1">// it corresponds with the sending time and thus takes the latency of</span>
+    <span class="c1">// internal processing of the sensor into account. Latencies of bus</span>
+    <span class="c1">// communications, etc., that occur after the sensor output have to be</span>
+    <span class="c1">// applied on top of this, if needed.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The time that the actual measurement was performed (which will usually</span>
+    <span class="c1">// correspond with the timestamp of the \c GroundTruth the sensor model</span>
+    <span class="c1">// processed to arrive at these results) can be found in the additional</span>
+    <span class="c1">// field \c SensorData::last_measurement_time.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For an ideal zero latency sensor the two timestamps would be the same</span>
+    <span class="c1">// and would correspond with the timestamp from the current \c GroundTruth</span>
+    <span class="c1">// message.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For a sensor model that does not know its own internal latencies (e.g.</span>
+    <span class="c1">// a dumb sensor with no internal time concept), the two timestamps might</span>
+    <span class="c1">// also be identical, but delayed from the \c GroundTruth timestamp.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The sensors estimated location of the host vehicle</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This value is only set by sensors that are able to</span>
+    <span class="c1">// provide an own estimation of the host vehicle location.</span>
+    <span class="c1">// \note Note that dimension and base_polygon need not be set.</span>
+    <span class="c1">// \note The parent frame of \c host_vehicle_location is the sensor frame.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseMoving</span> <span class="n">host_vehicle_location</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// The sensors estimated location error of the host vehicle</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This value is only set by sensors that are able to</span>
+    <span class="c1">// provide an own estimation of the host vehicle location.</span>
+    <span class="c1">// \note Note that dimension and base_polygon need not be set.</span>
+    <span class="c1">// \note The parent frame of \c host_vehicle_location_rmse is the sensor</span>
+    <span class="c1">// frame.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">BaseMoving</span> <span class="n">host_vehicle_location_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the virtual sensor, to be used in its detected</span>
+    <span class="c1">// object output; it is distinct from the IDs of its physical detectors,</span>
+    <span class="c1">// which are used in the detected features.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// The virtual mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The virtual position pertains to the sensor as a whole, regardless</span>
+    <span class="c1">// of the actual position of individual physical detectors, and governs</span>
+    <span class="c1">// the sensor-relative coordinates in detected objects of the sensor</span>
+    <span class="c1">// as a whole.  Individual features detected by individual physical</span>
+    <span class="c1">// detectors are governed by the actual physical mounting positions</span>
+    <span class="c1">// of the detectors, as indicated in the technology-specific sub-views</span>
+    <span class="c1">// and sub-view configurations.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This field is usually static during the simulation.</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// Sensor view w.r.t. the sensor coordinate system</span>
+    <span class="c1">//</span>
+    <span class="c1">// This provides a copy of the \c SensorView data received by the sensor</span>
+    <span class="c1">// for reference purposes.  For complex sensors or logic models this</span>
+    <span class="c1">// can be multiple copies.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">SensorView</span> <span class="n">sensor_view</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// The timestamp of the last real-world measurement (e.g. GT input) that</span>
+    <span class="c1">// this set of sensor data takes into account. This in effect is the last</span>
+    <span class="c1">// time instance of reality the measurements correspond to. See field</span>
+    <span class="c1">// \c SensorData::timestamp for a detailed discussion. This value is also</span>
+    <span class="c1">// the upper bound to the \c DetectedEntityHeader::measurement_time and the</span>
+    <span class="c1">// feature data \c SensorDetectionHeader::measurement_time fields.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">last_measurement_time</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedStationaryObject .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">stationary_object_header</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// The list of stationary objects (e.g. landmarks) detected by the sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedStationaryObject</span> <span class="n">stationary_object</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedMovingObject .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">moving_object_header</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+    <span class="c1">// The list of moving objects detected by the sensor as perceived by</span>
+    <span class="c1">// the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedMovingObject</span> <span class="n">moving_object</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedTrafficSign .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">traffic_sign_header</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+
+    <span class="c1">// The list of traffic signs detected by the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedTrafficSign</span> <span class="n">traffic_sign</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedTrafficLight .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">traffic_light_header</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+    <span class="c1">// The list of traffic lights detected by the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedTrafficLight</span> <span class="n">traffic_light</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedRoadMarking .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">road_marking_header</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+
+    <span class="c1">// The list of road markings detected by the sensor.</span>
+    <span class="c1">// This excludes lane boundary markings.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedRoadMarking</span> <span class="n">road_marking</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedLaneBoundary .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">lane_boundary_header</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+    <span class="c1">// The list of lane boundary markings detected by the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedLaneBoundary</span> <span class="n">lane_boundary</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedLane .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">lane_header</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+
+    <span class="c1">// The list of lanes detected by the sensor</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedLane</span> <span class="n">lane</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+
+    <span class="c1">// General information about the \c DetectedOccupant .</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectedEntityHeader</span> <span class="n">occupant_header</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+
+    <span class="c1">// The list of occupants of the host vehicle</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">DetectedOccupant</span> <span class="n">occupant</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+
+    <span class="c1">// Low level feature data interface.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Low Level feature data is optionally provided by sensor models that</span>
+    <span class="c1">// model sensors giving access to this low level data, i.e. data prior to</span>
+    <span class="c1">// object hypothesis and tracking.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">FeatureData</span> <span class="n">feature_data</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

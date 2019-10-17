@@ -1,0 +1,1006 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File osi_sensorviewconfiguration.proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File osi_sensorviewconfiguration.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorviewconfiguration.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-sensorviewconfiguration-proto">
+<span id="program-listing-file-osi-documentation-osi-validation-open-simulation-interface-osi-sensorviewconfiguration-proto"></span><h1>Program Listing for File osi_sensorviewconfiguration.proto<a class="headerlink" href="#program-listing-for-file-osi-sensorviewconfiguration-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorviewconfiguration.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-sensorviewconfiguration-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/osi-validation/open-simulation-interface/osi_sensorviewconfiguration.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_version.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the \c SensorView to be provided</span>
+<span class="c1">// by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="c1">// This message can be provided by the sensor model to the environment</span>
+<span class="c1">// simulation, in which case it describes the input configuration that</span>
+<span class="c1">// is desired by the sensor model. In response the environment simulation</span>
+<span class="c1">// will configure the input and provide a new message of this type, which</span>
+<span class="c1">// describes the actual configuration that it is going to employ. The two</span>
+<span class="c1">// can and will differ, when either the environment simulation does not</span>
+<span class="c1">// support a given requested configuration, and/or when the requested</span>
+<span class="c1">// configuration allowed for multiple alternatives, in which case the set</span>
+<span class="c1">// configuration will only contain the alternative chosen.</span>
+<span class="c1">//</span>
+<span class="c1">// It should be noted that this message is not intended to provide for</span>
+<span class="c1">// parametrization of a generic sensor model, but rather for the automatic</span>
+<span class="c1">// configuration of an environment simulation in order to supply the</span>
+<span class="c1">// necessary input to it, depending on its actual configuration.</span>
+<span class="c1">// Mechanisms to parametrize sensor models are currently packaging-specific,</span>
+<span class="c1">// i.e. they depend on the packaging mechanism chosen:  For FMU-packaging</span>
+<span class="c1">// the parametrization can be implemented using normal FMU parameters,</span>
+<span class="c1">// and the requested \c SensorViewConfiguration can depend on those parameter</span>
+<span class="c1">// values by being defined as a calculatedParameter.</span>
+<span class="c1">//</span>
+<span class="c1">// The sensor-technology specific configurations are intended to allow</span>
+<span class="c1">// sensor models to use useful sensor modeling base capabilities of the</span>
+<span class="c1">// environment simulation (e.g. ray tracing engines, camera/lens image</span>
+<span class="c1">// generation), which need configuration by the sensor model to supply</span>
+<span class="c1">// suitable data. The specified details are not directly related to</span>
+<span class="c1">// sensor details, but rather provide the necessary base machinery</span>
+<span class="c1">// setup so that the data provided is suitable to model the sensor to</span>
+<span class="c1">// a sufficient degree of fidelity internally. For example the number</span>
+<span class="c1">// of rays parameters for the Lidar configuration does not match one to</span>
+<span class="c1">// one with the number of laser rays a lidar sensor might cast, but</span>
+<span class="c1">// rather specifies the number of rays being cast by a ray</span>
+<span class="c1">// casting/tracing engine, which might be many more than the physical</span>
+<span class="c1">// rays being cast at any point in time.</span>
+<span class="c1">//</span>
+<span class="c1">// This also implies that for sensors that have dynamically varying</span>
+<span class="c1">// characteristics (e.g. switching between wide and narrow focus,</span>
+<span class="c1">// switching update rates, etc.), the basic approach is to specify</span>
+<span class="c1">// the maximum amount of data needed at all times here, and internally</span>
+<span class="c1">// select the data that is needed at any point in time.</span>
+<span class="c1">//</span>
+<span class="c1">// In order to optimize the workload and bandwidth needed for sensor</span>
+<span class="c1">// simulation, OSI packaging mechanisms can specify the ability to</span>
+<span class="c1">// exchange \c SensorViewConfiguration messages not only prior to</span>
+<span class="c1">// simulation startup, but also dynamically during simulation runs,</span>
+<span class="c1">// thereby allowing dynamic input configuration switching to only</span>
+<span class="c1">// request data that is needed in the current sensor mode. However</span>
+<span class="c1">// this is more or less only a resource optimization strategy, and</span>
+<span class="c1">// since providing fine-grained information like this can reveal</span>
+<span class="c1">// internal characteristics of the sensor and/or sensor model, will</span>
+<span class="c1">// not always be the preferred approach for reasons of IP protection.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">SensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The interface version used by the sender (simulation environment).</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">InterfaceVersion</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the virtual sensor, to be used in its detected</span>
+    <span class="c1">// object output; it is distinct from the IDs of its physical detectors,</span>
+    <span class="c1">// which are used in the detected features.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The virtual mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The virtual position pertains to the sensor as a whole, regardless</span>
+    <span class="c1">// of the actual position of individual physical detectors, and governs</span>
+    <span class="c1">// the sensor-relative coordinates in detected objects of the sensor</span>
+    <span class="c1">// as a whole. Individual features detected by individual physical</span>
+    <span class="c1">// detectors are governed by the actual physical mounting positions</span>
+    <span class="c1">// of the detectors, as indicated in the technology-specific sub-views</span>
+    <span class="c1">// and sub-view configurations.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This determines the limit of the cone of interest of ground truth</span>
+    <span class="c1">// that the simulation environment has to provide.</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d. Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This determines the limit of the cone of interest of ground truth</span>
+    <span class="c1">// that the simulation environment has to provide.</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Maximum range of the sensor</span>
+    <span class="c1">//</span>
+    <span class="c1">// This determines the limit of the cone of interest of ground truth</span>
+    <span class="c1">// that the simulation environment has to provide.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">range</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The update cycle time of the sensor model.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This specifies the rate at which the sensor model is provided with</span>
+    <span class="c1">// new input data.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [s]</span>
+    <span class="c1">// \note In the case of FMU packaging this will correspond to the</span>
+    <span class="c1">// communication step size.</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">update_cycle_time</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Initial update cycle offset of the sensor model.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This specifies the initial offset (i.e. initial delay) of the</span>
+    <span class="c1">// sensor model update cycle that the simulation should take into</span>
+    <span class="c1">// account. It is defined against a simulation start time of 0:</span>
+    <span class="c1">// i.e. an initial offset of 0.008s would mean, that the initial</span>
+    <span class="c1">// update of sensor input data to the model should occur at 0+0.008s,</span>
+    <span class="c1">// and then update_cycle_time after that, etc. If the simulation</span>
+    <span class="c1">// start time of the simulation is non-zero, then the offset still</span>
+    <span class="c1">// has to be interpreted against a 0 start time, and not simply</span>
+    <span class="c1">// added on top of the start time: e.g. if the simulation starts at</span>
+    <span class="c1">// 0.030s, and the update cycle time is 0.020s, then the first</span>
+    <span class="c1">// update to the sensor input should happen at 0.048s, or 0.018s</span>
+    <span class="c1">// after simulation start. This convention is needed to ensure</span>
+    <span class="c1">// stable phase position of the offset in the case of changing</span>
+    <span class="c1">// simulation start times, e.g. for partial resimulation.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [s]</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">update_cycle_offset</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Simulation Start time</span>
+    <span class="c1">//</span>
+    <span class="c1">// This specifies the simulation start time that the Simulation</span>
+    <span class="c1">// has chosen. This field has no defined meaning if provided by</span>
+    <span class="c1">// the sensor model.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [s]</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">simulation_start_time</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// Generic Sensor View Configuration(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">GenericSensorViewConfiguration</span> <span class="n">generic_sensor_view_configuration</span> <span class="o">=</span>
+        <span class="mi">1000</span><span class="p">;</span>
+
+    <span class="c1">// Radar-specific Sensor View Configuration(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">RadarSensorViewConfiguration</span> <span class="n">radar_sensor_view_configuration</span> <span class="o">=</span>
+        <span class="mi">1001</span><span class="p">;</span>
+
+    <span class="c1">// Lidar-specific Sensor View Configuration(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">LidarSensorViewConfiguration</span> <span class="n">lidar_sensor_view_configuration</span> <span class="o">=</span>
+        <span class="mi">1002</span><span class="p">;</span>
+
+    <span class="c1">// Camera-specific Sensor View Configuration(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CameraSensorViewConfiguration</span> <span class="n">camera_sensor_view_configuration</span> <span class="o">=</span>
+        <span class="mi">1003</span><span class="p">;</span>
+
+    <span class="c1">// Ultrasonic-specific Sensor View Configuration(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">UltrasonicSensorViewConfiguration</span>
+        <span class="n">ultrasonic_sensor_view_configuration</span> <span class="o">=</span> <span class="mi">1004</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the Generic Sensor View to be provided</span>
+<span class="c1">// by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">GenericSensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the physical sensor, to be used in its detected</span>
+    <span class="c1">// features output; it is distinct from the ID of its virtual sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The physical mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The physical position pertains to this detector individually, and</span>
+    <span class="c1">// governs the sensor-relative coordinates in features detected by this</span>
+    <span class="c1">// detector.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// TBD: Generic sensor specific configuration.</span>
+    <span class="c1">//</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the Radar Sensor View to be provided</span>
+<span class="c1">// by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">RadarSensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the physical sensor, to be used in its detected</span>
+    <span class="c1">// features output; it is distinct from the ID of its virtual sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The physical mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The physical position pertains to this detector individually, and</span>
+    <span class="c1">// governs the sensor-relative coordinates in features detected by this</span>
+    <span class="c1">// detector.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Number of rays to cast across horizontal field of view (azimuth).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Number of rays to cast across vertical field of view (elevation).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// Maximum number of interactions to take into account.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">max_number_of_interactions</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Emitter Frequency.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This information can be used by a ray tracing engine to calculate</span>
+    <span class="c1">// doppler shift information and take into account differences in</span>
+    <span class="c1">// refraction and reflection. For doppler shift calculations the</span>
+    <span class="c1">// sensor model can of course always provide a nominal frequency and</span>
+    <span class="c1">// adjust the resulting doppler shift information to actual frequency</span>
+    <span class="c1">// through frequency adjustments. For material and geometry interaction</span>
+    <span class="c1">// purposes the frequency is also relevant.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Hz]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">emitter_frequency</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// This represents the TX antenna diagram</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">AntennaDiagramEntry</span> <span class="n">tx_antenna_diagram</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// This represents the RX antenna diagram</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">AntennaDiagramEntry</span> <span class="n">rx_antenna_diagram</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief The radar antenna diagram.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Rotation is defined analog Spherical3d</span>
+    <span class="n">message</span> <span class="n">AntennaDiagramEntry</span>
+    <span class="p">{</span>
+        <span class="c1">// Horizontal deflection (azimuth) of entry in sensor/antenna</span>
+        <span class="c1">// coordinates.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Unit: [rad]</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">horizontal_angle</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Vertical deflection (elevation) of entry in sensor/antenna</span>
+        <span class="c1">// coordinates.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Unit: [rad]</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">vertical_angle</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Response of antenna at this point (positive dB is gain,</span>
+        <span class="c1">// negative dB is attenuation).</span>
+        <span class="c1">//</span>
+        <span class="c1">// Unit: [dB]</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">response</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the Lidar Sensor View to be provided</span>
+<span class="c1">// by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">LidarSensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the physical sensor, to be used in its detected</span>
+    <span class="c1">// features output; it is distinct from the ID of its virtual sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The physical mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The physical position pertains to this detector individually, and</span>
+    <span class="c1">// governs the sensor-relative coordinates in features detected by this</span>
+    <span class="c1">// detector.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Number of rays to cast across horizontal field of view.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Number of rays to cast across vertical field of view.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// Maximum number of interactions to take into account.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">max_number_of_interactions</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Emitter Frequency.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This information can be used by a ray tracing engine to calculate</span>
+    <span class="c1">// doppler shift information and take into account differences in</span>
+    <span class="c1">// refraction and reflection. For doppler shift calculations the</span>
+    <span class="c1">// sensor model can of course always provide a nominal frequency and</span>
+    <span class="c1">// adjust the resulting doppler shift information to actual frequency</span>
+    <span class="c1">// through frequency adjustments. For material and geometry interaction</span>
+    <span class="c1">// purposes the frequency is also relevant.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Hz]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">emitter_frequency</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Number of pixels in frame.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This field includes the number of pixels in each frame</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">num_of_pixels</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// Ray tracing data.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The directions unit vectors describing the Lidar&#39;s raster transmission</span>
+    <span class="c1">// directions. Length is num_of_pixels \note data is in Lidar&#39;s coordinate</span>
+    <span class="c1">// system</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">Vector3d</span> <span class="n">directions</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">// Ray tracing data.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The time offset in microseconds of every measurement from each frame</span>
+    <span class="c1">// timestamp. Length is num_of_pixels</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">uint32</span> <span class="n">timings</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the Camera Sensor View to be provided</span>
+<span class="c1">// by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">CameraSensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the physical sensor, to be used in its detected</span>
+    <span class="c1">// features output; it is distinct from the ID of its virtual sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The physical mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The physical position pertains to this detector individually, and</span>
+    <span class="c1">// governs the sensor-relative coordinates in features detected by this</span>
+    <span class="c1">// detector.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Number of pixels to produce across horizontal field of view.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the rendering engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_pixels_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Number of pixels to produce across horizontal field of view.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This is a characteristic of the rendering engine of the</span>
+    <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_pixels_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// Format for image data (includes number, kind and format of channels).</span>
+    <span class="c1">//</span>
+    <span class="c1">// In the message provided by the sensor model, this field can</span>
+    <span class="c1">// be repeated and all values are acceptable to the model, with</span>
+    <span class="c1">// the most acceptable value being listed first, and the remaining</span>
+    <span class="c1">// values indicating alternatives in descending order of preference.</span>
+    <span class="c1">//</span>
+    <span class="c1">// In the message provided to the sensor model, this field must</span>
+    <span class="c1">// contain exactly one value, indicating the format of the image</span>
+    <span class="c1">// data being provided by the simulation environment - which must</span>
+    <span class="c1">// be one of the values the sensor model requested - or there</span>
+    <span class="c1">// must be no value, indicating that the simulation environment</span>
+    <span class="c1">// cannot provide image data in one of the requested formats.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">ChannelFormat</span> <span class="n">channel_format</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Channel format.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">ChannelFormat</span>
+    <span class="p">{</span>
+        <span class="c1">// Type of channel format is unknown (must not be used).</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Unspecified but known channel format.</span>
+        <span class="c1">// Consider proposing an additional format if using</span>
+        <span class="c1">// \c #CHANNEL_FORMAT_OTHER.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Single Luminance Channel UINT8 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_MONO_U8_LIN</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Single Luminance Channel UINT16 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_MONO_U16_LIN</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Single Luminance Channel UINT32 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_MONO_U32_LIN</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Single Luminance Channel Single Precision FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_MONO_F32_LIN</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Packed RGB Channels (no padding) UINT8 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_RGB_U8_LIN</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Packed RGB Channels (no padding) UINT16 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_RGB_U16_LIN</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// Packed RGB Channels (no padding) UINT32 Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_RGB_U32_LIN</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+        <span class="c1">// Packed RGB Channels (no padding) Single Precision FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_RGB_F32_LIN</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="c1">// Bayer RGGB Channels UINT8 FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_BAYER_BGGR_U8_LIN</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+        <span class="c1">// Bayer RGGB Channels UINT16 FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_BAYER_BGGR_U16_LIN</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+        <span class="c1">// Bayer RGGB Channels UINT32 FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_BAYER_BGGR_U32_LIN</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+        <span class="c1">// Bayer RGGB Channels Single Precision FP Linear.</span>
+        <span class="c1">//</span>
+        <span class="n">CHANNEL_FORMAT_BAYER_BGGR_F32_LIN</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+        <span class="c1">// TBD: Further channel permutations and padding (e.g. RGBZ,</span>
+        <span class="c1">// BGR, BAYER_RGGB/GBRG/GRBG/...), non-BAYER filters, non-linear</span>
+        <span class="c1">// encodings, ...</span>
+    <span class="p">}</span>
+
+    <span class="c1">// TBD: Optical (and other) effects to apply to image, etc.</span>
+    <span class="c1">//</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The configuration settings for the Ultrasonic Sensor View to be</span>
+<span class="c1">// provided by the environment simulation.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">UltrasonicSensorViewConfiguration</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This is the ID of the physical sensor, to be used in its detected</span>
+    <span class="c1">// features output; it is distinct from the ID of its virtual sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The ID is to be provided by the environment simulation, the sensor</span>
+    <span class="c1">// model is not in a position to provide a useful default value.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The physical mounting position of the sensor (origin and orientation</span>
+    <span class="c1">// of the sensor coordinate system) given in vehicle coordinates [1].</span>
+    <span class="c1">// The physical position pertains to this detector individually, and</span>
+    <span class="c1">// governs the sensor-relative coordinates in features detected by this</span>
+    <span class="c1">// detector.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \arg \b x-direction of sensor coordinate system: sensor viewing direction</span>
+    <span class="c1">// \arg \b z-direction of sensor coordinate system: sensor (up)</span>
+    <span class="c1">// \arg \b y-direction of sensor coordinate system: perpendicular to x and z</span>
+    <span class="c1">// right hand system</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The origin of vehicle&#39;s coordinate system in world frame is</span>
+    <span class="c1">// ( \c MovingObject::base . \c BaseMoving::position +</span>
+    <span class="c1">// Inverse_Rotation_yaw_pitch_roll( \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation) * \c</span>
+    <span class="c1">// MovingObject::VehicleAttributes::bbcenter_to_rear) . The orientation of</span>
+    <span class="c1">// the vehicle&#39;s coordinate system is equal to the orientation of the</span>
+    <span class="c1">// vehicle&#39;s bounding box \c MovingObject::base . \c</span>
+    <span class="c1">// BaseMoving::orientation. \note A default position can be provided by the</span>
+    <span class="c1">// sensor model (e.g. to indicate the position the model was validated for),</span>
+    <span class="c1">// but this is optional; the environment simulation must provide a valid</span>
+    <span class="c1">// mounting position (based on the vehicle configuration) when setting the</span>
+    <span class="c1">// view configuration.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The root mean squared error of the mounting position.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in horizontal orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_horizontal/2,  \c</span>
+    <span class="c1">// #field_of_view_horizontal/2] azimuth in the sensor frame as defined in \c</span>
+    <span class="c1">// Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_horizontal</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Field of View in vertical orientation of the physical sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Viewing range: [- \c #field_of_view_vertical/2,  \c</span>
+    <span class="c1">// #field_of_view_vertical/2] elevation in the sensor frame at zero azimuth</span>
+    <span class="c1">// as defined in \c Spherical3d.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [rad]</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">field_of_view_vertical</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// TBD: Ultrasonic Sensor specific configuration.</span>
+    <span class="c1">//</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

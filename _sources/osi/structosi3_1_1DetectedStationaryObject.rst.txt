@@ -1,0 +1,26 @@
+.. _exhale_struct_structosi3_1_1DetectedStationaryObject:
+
+Struct DetectedStationaryObject
+===============================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedobject.proto`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::DetectedStationaryObject
+   :members:
+   :protected-members:
+   :undoc-members:

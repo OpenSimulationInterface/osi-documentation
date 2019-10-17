@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,9 +36,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributors&#39; Guidelines" href="howtocontribute.html" />
+    <link rel="next" title="Contributors’ Guidelines" href="howtocontribute.html" />
     <link rel="prev" title="OSI Visualizer" href="README.html" /> 
 </head>
 
@@ -84,17 +88,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul class="current">
@@ -106,7 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#note">Note</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -198,7 +202,7 @@ sh run-nvidia-docker.sh <span class="c1"># will run the visualizer for you</span
 </div>
 <div class="section" id="osi-visualizer-protobuf-files">
 <h2>OSI-Visualizer protobuf files<a class="headerlink" href="#osi-visualizer-protobuf-files" title="Permalink to this headline">¶</a></h2>
-<p>In order to load files into osi-visualizer, you need to place your <a href="#id1"><span class="problematic" id="id2">*</span></a>.pb files in &quot;osi_pb&quot; (mounted as a volume to the image).</p>
+<p>In order to load files into osi-visualizer, you need to place your <a href="#id1"><span class="problematic" id="id2">*</span></a>.pb files in “osi_pb” (mounted as a volume to the image).</p>
 </div>
 <div class="section" id="note">
 <h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
@@ -227,7 +231,7 @@ build the docker image again):</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="howtocontribute.html" class="btn btn-neutral float-right" title="Contributors&#39; Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="howtocontribute.html" class="btn btn-neutral float-right" title="Contributors’ Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="README.html" class="btn btn-neutral float-left" title="OSI Visualizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

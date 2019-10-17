@@ -1,0 +1,1206 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File osi_featuredata.proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-model-packaging/examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File osi_featuredata.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi/program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-featuredata-proto">
+<span id="program-listing-file-osi-documentation-osi-validation-open-simulation-interface-osi-featuredata-proto"></span><h1>Program Listing for File osi_featuredata.proto<a class="headerlink" href="#program-listing-for-file-osi-featuredata-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-featuredata-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/osi-validation/open-simulation-interface/osi_featuredata.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;osi_version.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Interface for sensor data containing information without a history</span>
+<span class="c1">// in contrast to interpreted data after object hypothesis and tracking.</span>
+<span class="c1">//</span>
+<span class="c1">// All information regarding the environment is given with respect to the sensor</span>
+<span class="c1">// coordinate system specified in \c SensorDetectionHeader::mounting_position.</span>
+<span class="c1">// When simulating multiple sensors, each sensor has an individual copy of</span>
+<span class="c1">// \c FeatureData in its own reference frame. This allows an independent</span>
+<span class="c1">// treatment of the sensors.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">FeatureData</span>
+<span class="p">{</span>
+    <span class="c1">// The interface version used by the sender (i.e. the simulation</span>
+    <span class="c1">// environment).</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">InterfaceVersion</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Radar detections for multiple radar sensors (sensor fusion).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">RadarDetectionData</span> <span class="n">radar_sensor</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Lidar detections for multiple lidar sensors (sensor fusion).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">LidarDetectionData</span> <span class="n">lidar_sensor</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Ultrasonic detections for multiple ultrasonic sensors (sensor fusion).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Required for ultrasonic sensors: Detections will be send by the</span>
+    <span class="c1">// emitting ultrasonic sensor, including all indirect detections received</span>
+    <span class="c1">// by neighbouring sensors.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">UltrasonicDetectionData</span> <span class="n">ultrasonic_sensor</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Camera detections for multiple camera sensors (sensor fusion).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CameraDetectionData</span> <span class="n">camera_sensor</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The header attributes of each sensor&#39;s detection list.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">SensorDetectionHeader</span>
+<span class="p">{</span>
+    <span class="c1">// Time stamp at which the measurement was taken (not the time at which it</span>
+    <span class="c1">// was processed or at which it is transmitted) in the global synchronized</span>
+    <span class="c1">// time.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note See \c SensorData::timestamp and</span>
+    <span class="c1">// \c SensorData::last_measurement_time for detailed discussions on the</span>
+    <span class="c1">// semantics of time-related fields.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">measurement_time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Monotonous counter to identify the exact cycle.</span>
+    <span class="c1">// In general the detection function is called periodically and</span>
+    <span class="c1">// \c #cycle_counter corresponds to the number of periods.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint64</span> <span class="n">cycle_counter</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Mounting position of the sensor (origin and orientation of the sensor</span>
+    <span class="c1">// frame). Both origin and orientation are given in and with respect to the</span>
+    <span class="c1">// host vehicle coordinate system (see: \c MovingObject::Vehicle vehicle</span>
+    <span class="c1">// reference point) [1].</span>
+    <span class="c1">//</span>
+    <span class="c1">// The sensor frame&#39;s x-axis is pointing in the central viewing direction of</span>
+    <span class="c1">// the sensor. It is the angle bisector of the sensor&#39;s horizontal and</span>
+    <span class="c1">// vertical field of view. The terms horizontal and vertical must be</span>
+    <span class="c1">// understood as names for the two principal planes of the sensor&#39;s field of</span>
+    <span class="c1">// view (relative to the sensor frame&#39;s orientation), which do not have to</span>
+    <span class="c1">// be horizontal or vertical in the strict sense of being parallel or</span>
+    <span class="c1">// perpendicular to the local gravitational vector. The horizontal field</span>
+    <span class="c1">// of view defines the sensor frame&#39;s xy-plane and the vertical field</span>
+    <span class="c1">// of view defines the xz-plane. The sensor frame is right-handed and the</span>
+    <span class="c1">// z-axis is pointing in an upward direction.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The sensor frame uses cartesian coordinates. The sensor frame&#39;s origin is</span>
+    <span class="c1">// identical to sensor detection frame&#39;s origin. Detections are defined in</span>
+    <span class="c1">// the sensor detection frame which uses e.g. spherical coordinates.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] DIN ISO 8855:2013-11</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// The origin/orientation of the sensor frame represents the current</span>
+    <span class="c1">// mounting pose to the best knowledge of the sensor. The estimation of the</span>
+    <span class="c1">// 6D pose given by the calibration. The uncertainty of this estimation is</span>
+    <span class="c1">// given with the corresponding 6D root mean squared error. The estimation</span>
+    <span class="c1">// of the current origin does not include effects due to short-time</span>
+    <span class="c1">// dynamics, such as pitch angles from braking, but includes long-time</span>
+    <span class="c1">// calibration values, such as pitch angles from luggage in the trunk.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">MountingPosition</span> <span class="n">mounting_position_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Data Qualifier expresses to what extent the content of this event can be</span>
+    <span class="c1">// relied on.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DataQualifier</span> <span class="n">data_qualifier</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// The current number of valid detections in the detections list.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This value has to be set if the list contains invalid detections.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_valid_detections</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the sensor at host vehicle&#39;s \c #mounting_position.</span>
+    <span class="c1">//</span>
+    <span class="c1">// This ID can equal \c SensorData::sensor_id, if \c SensorData holds only</span>
+    <span class="c1">// data from one sensor/sensor model.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The extended qualifier describes the reason (not the effect) why the</span>
+    <span class="c1">// event data qualifier, \c #data_qualifier, is reduced or not available.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">ExtendedQualifier</span> <span class="n">extended_qualifier</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Data qualifier communicates the overall availability of the</span>
+    <span class="c1">// interface.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">DataQualifier</span>
+    <span class="p">{</span>
+        <span class="c1">// Unknown (must not be used in ground truth).</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known).</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Data is available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_AVAILABLE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Reduced data is available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_AVAILABLE_REDUCED</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Data is not available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_NOT_AVAILABLE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Sensor is blind.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_BLINDNESS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Sensor temporary available.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_TEMPORARY_AVAILABLE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Sensor invalid.</span>
+        <span class="c1">//</span>
+        <span class="n">DATA_QUALIFIER_INVALID</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// The extended qualifier describes the reason (not the effect) why the</span>
+    <span class="c1">// event data qualifier, \c #data_qualifier, is reduced or not available.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">ExtendedQualifier</span>
+    <span class="p">{</span>
+        <span class="c1">// Unknown (must not be used in ground truth).</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known).</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Normal operation mode.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_NORMAL_OPERATION_MODE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Power up or down.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_POWER_UP_OR_DOWN</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Sensor not calibrated.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_SENSOR_NOT_CALIBRATED</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Sensor blocked.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_SENSOR_BLOCKED</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Sensor misaligned.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_SENSOR_MISALIGNED</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Bad sensor environmental condition (e.g. Darkness for vision).</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_BAD_SENSOR_ENVIRONMENTAL_CONDITION</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// Reduced field of view.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_REDUCED_FIELD_OF_VIEW</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+        <span class="c1">// Input not available.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_INPUT_NOT_AVAILABLE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="c1">// Internal reason (e.g. an internal HW or SW error has occurred).</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_INTERNAL_REASON</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+        <span class="c1">// External disturbance, sensor specific for front radar (e.g.</span>
+        <span class="c1">// Interference of different radar sensors).</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_EXTERNAL_DISTURBANCE</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+        <span class="c1">// Beginning blockage, sensor specific for front radar.</span>
+        <span class="c1">//</span>
+        <span class="n">EXTENDED_QUALIFIER_BEGINNING_BLOCKAGE</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Data from one radar sensor including a list of detections.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">RadarDetectionData</span>
+<span class="p">{</span>
+    <span class="c1">// Header attributes of radar detection from one radar sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">SensorDetectionHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// List of radar detections constituting the radar detection list.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">RadarDetection</span> <span class="n">detection</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief A radar detection.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">RadarDetection</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the detection not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Use as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// ID of the detected object this detection is associated to.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Measured position of the detection given in spherical coordinates in the</span>
+    <span class="c1">// sensor coordinate system.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Root mean squared error of the measured position of the detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">position_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Absolute radial (in direction to the sensor) velocity of the detection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m/s]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">radial_velocity</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Root mean squared error of the object measured radial velocity.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m/s]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">radial_velocity_rmse</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// The radar cross section (RCS) of the radar detection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [dB m^2]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">rcs</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The signal to noise ratio (SNR) of the radar detection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [dB]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">snr</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Describes the possibility whether more than one object may have led to</span>
+    <span class="c1">// this detection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">point_target_probability</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Ambiguity Information:</span>
+    <span class="c1">// Each ambiguous measurement generates one Ambiguity ID. Ambiguity is</span>
+    <span class="c1">// indicated by an identical ambiguity ID.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Unambiguous measurements have the ambiguity ID 0.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Multiple seperate detections, from e.g. a large object, do not</span>
+    <span class="c1">// necessarily on their own create any ambiguity. Therefore they do not</span>
+    <span class="c1">// usually share an ambiguity ID. They can however be ambiguous</span>
+    <span class="c1">// with other detections.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">ambiguity_id</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// Basic classification of the detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectionClassification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Data from one lidar sensor including a list of detections.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">LidarDetectionData</span>
+<span class="p">{</span>
+    <span class="c1">// Header attributes of lidar detection from one lidar sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">SensorDetectionHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// List of lidar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">LidarDetection</span> <span class="n">detection</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief A point or vertical line in a lidar point cloud.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">LidarDetection</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the detection not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// ID of the detected object this detection is associated to.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Measured position of the detection given in spherical coordinates in the</span>
+    <span class="c1">// sensor coordinate system.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Root mean squared error of the measured position of the detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">position_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The height value which is required when multiple scan points are</span>
+    <span class="c1">// vertically clustered. Only vertical clustering is allowed (z-axis).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// Root mean squared error of the object height.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">height_rmse</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// Intensity or equivalent value of the detection&#39;s echo.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [%]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">intensity</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The free space probability in the range [0.0, 1.0] from the origin of the</span>
+    <span class="c1">// sensor up to this detection, as given by the distance.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">free_space_probability</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// Basic classification of the detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">DetectionClassification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Lambertian reflectivity.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">reflectivity</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Specific header extension for ultrasonic sensors.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">UltrasonicDetectionSpecificHeader</span>
+<span class="p">{</span>
+    <span class="c1">// Maximal range of the ultrasonic sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">max_range</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The current number of valid indirect detections in the detections list.</span>
+    <span class="c1">// The detections are measured by a virtual sensor (i.e. sender and</span>
+    <span class="c1">// receiver are different sensors).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This value has to be set if the list contains invalid detections.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_valid_indirect_detections</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Data from one ultrasonic sensor including a list of detections.</span>
+<span class="c1">// This list is generated by the sending ultrasonic sensor. Indirectly received</span>
+<span class="c1">// signals from other ultrasonic sensors are included in this message.</span>
+<span class="c1">//</span>
+<span class="c1">// Direct detections:</span>
+<span class="c1">//</span>
+<span class="c1">// Sending: Ultrasonic Sensor ID 1</span>
+<span class="c1">//</span>
+<span class="c1">// Receiving:</span>
+<span class="c1">// - Direct: Ultrasonic Sensor ID 1</span>
+<span class="c1">// - Indirect: Ultrasonic Sensor ID 2 and 3</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_USSensor.svg</span>
+<span class="c1">//</span>
+<span class="c1">// \note Direct detecions lies on circles with the sending sensor as centre.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">UltrasonicDetectionData</span>
+<span class="p">{</span>
+    <span class="c1">// Header attributes of ultrasonic detection from one ultrasonic sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">SensorDetectionHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Additional header attributes of ultrasonic detection from one ultrasonic</span>
+    <span class="c1">// sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">UltrasonicDetectionSpecificHeader</span> <span class="n">specific_header</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// List of ultrasonic detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">UltrasonicDetection</span> <span class="n">detection</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// List of ultrasonic indirect detections (sender and receiver sensors are</span>
+    <span class="c1">// not the same).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">UltrasonicIndirectDetection</span> <span class="n">indirect_detection</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Ultrasonic detection from the sensor (same sensor as sender and</span>
+<span class="c1">// receiver).</span>
+<span class="c1">//</span>
+<span class="c1">// Direct detections:</span>
+<span class="c1">//</span>
+<span class="c1">// Sending: Ultrasonic Sensor ID 1</span>
+<span class="c1">//</span>
+<span class="c1">// Receiving: Ultrasonic Sensor ID 1</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_USSensor_direct.svg</span>
+<span class="c1">//</span>
+<span class="c1">// \note Direct detecions lies on circles with the sensor as centre.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">UltrasonicDetection</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the detection not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// ID of the detected object this detection is associated to.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Measured distance (radius) of the detection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Ultrasonic detection received by another ultrasonic sensor (different</span>
+<span class="c1">// sensors as sender and receiver).</span>
+<span class="c1">//</span>
+<span class="c1">// Indirect detections:</span>
+<span class="c1">//</span>
+<span class="c1">// Sending: Ultrasonic Sensor ID 1</span>
+<span class="c1">//</span>
+<span class="c1">// Receiving: Ultrasonic Sensor ID 2 and 3</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_USSensor_indirect.svg</span>
+<span class="c1">//</span>
+<span class="c1">// \note Indirect detecions lies on ellipses with the sending resp. receiving</span>
+<span class="c1">// sensor in the focal points.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">UltrasonicIndirectDetection</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the detection not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// ID of the detected object this detection is associated to.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// First parameter b of an ellipsoid equation.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">ellipsoid_radial</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Second parameter b of an ellipsoid equation.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [m]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">ellipsoid_axial</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the sensor&#39;s receiver. Sender ID is stored in the header \c</span>
+    <span class="c1">// SensorDetectionHeader.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">receiver_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// The vector to the receiver&#39;s origin in sending ultrasonic sensor frame.</span>
+    <span class="c1">// The vector is also the direction of \c #ellipsoid_axial.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Vector3d</span> <span class="n">receiver_origin</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Specific header extension for camera sensors.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">CameraDetectionSpecificHeader</span>
+<span class="p">{</span>
+    <span class="c1">// The current number of points which all detections in the detections list</span>
+    <span class="c1">// refer.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This value has to be set if the list contains invalid points.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_valid_points</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Data from one camera sensor including a list of detections.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">CameraDetectionData</span>
+<span class="p">{</span>
+    <span class="c1">// Header attributes of camera detection from one camera sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">SensorDetectionHeader</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Additional header attributes of camera detection from one camera sensor.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">CameraDetectionSpecificHeader</span> <span class="n">specific_header</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// List of camera detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CameraDetection</span> <span class="n">detection</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// List of points which are used by detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">CameraPoint</span> <span class="n">point</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Camera detection from the sensor.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">CameraDetection</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the detection not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// ID of the detected object this detection is associated to.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Difference to the base timestamp \c</span>
+    <span class="c1">// SensorDetectionHeader::measurement_time.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The timestamp of this detection :=</span>
+    <span class="c1">// \c SensorDetectionHeader::measurement_time + \c #time_difference.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">time_difference</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Definition of the image shape type of this detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">ImageShapeType</span> <span class="n">image_shape_type</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is background.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_background</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is foregroud.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_foreground</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is flat.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_flat</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is upright.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_upright</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is ground.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_ground</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is sky.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_sky</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is vegetation.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_vegetation</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a road.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_road</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a non-driving lane (e.g. sidewalk).</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_non_driving_lane</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is non-road (e.g. traffic island).</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_non_road</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a stationary object.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_stationary_object</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a possible moving object.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_moving_object</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a landmark.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_landmark</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a traffic sign.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_traffic_sign</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a traffic light.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_traffic_light</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a road marking sign.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_road_marking</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a vehicle.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_vehicle</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a pedestrian.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_pedestrian</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is an animal.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_animal</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a pedestrian seen by the sensor from the front.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_pedestrian_front</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a pedestrian seen by the sensor from the side.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_pedestrian_side</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+
+    <span class="c1">// The defined shape is a pedestrian seen by the sensor from the rear.</span>
+    <span class="c1">// The probability for this classification is at least</span>
+    <span class="c1">// \c #shape_classification_probability.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">bool</span> <span class="n">shape_classification_pedestrian_rear</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+
+    <span class="c1">// This probability defines the mininimum probability for each selected</span>
+    <span class="c1">// shape classification.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">shape_classification_probability</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
+
+    <span class="c1">// The dominant color of the shape.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Color</span> <span class="n">color</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>
+
+    <span class="c1">// The probability of the shape&#39;s color.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">color_probability</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span>
+
+    <span class="c1">// If one shape has different shape classifications and shape classification</span>
+    <span class="c1">// probability or color and color probability, all detections in this cycle</span>
+    <span class="c1">// have the same ambiguity ID.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">ambiguity_id</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+
+    <span class="c1">// Index of the first point in the camera detection.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">first_point_index</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span>
+
+    <span class="c1">// Number of points which defines the shape.</span>
+    <span class="c1">// \c #image_shape_type may restrict the number of possible values.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_points</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
+
+    <span class="c1">// Definition of shape dominant color.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">Color</span>
+    <span class="p">{</span>
+        <span class="c1">// Color of the shape is unknown (must not be used in ground</span>
+        <span class="c1">// truth).</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Shape with another (unspecified but known) color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Shape with black color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_BLACK</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Shape with grey color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_GREY</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Shape with white color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_WHITE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Shape with yellow color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_YELLOW</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Shape with orange color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_ORANGE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Shape with red color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_RED</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// Shape with violet color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_VIOLET</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+        <span class="c1">// Shape with blue color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_BLUE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="c1">// Shape with green color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_GREEN</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+        <span class="c1">// Shape with reflective color.</span>
+        <span class="c1">//</span>
+        <span class="n">COLOR_REFLECTIVE</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Definition of different image shape types.</span>
+    <span class="c1">//</span>
+    <span class="k">enum</span> <span class="n">ImageShapeType</span>
+    <span class="p">{</span>
+        <span class="c1">// Shape type is unknown (must not be used in ground truth).</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// Other (unspecified but known) shape type.</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by a single point.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 1</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_POINT</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by a box.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 2 or 3</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points = 2: first and third corner of</span>
+        <span class="c1">// the box. Box is alligned horizontal resp. vertical.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points = 3: first, second and third</span>
+        <span class="c1">// corner of the box. fourth corner is calculated by first+third-second</span>
+        <span class="c1">// corner.</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_BOX</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by an ellipse.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 2 or 3</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points = 2: center point of circle,</span>
+        <span class="c1">// point on circle</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points = 3: center point of ellipse,</span>
+        <span class="c1">// point on ellipse at main axis of ellipse, point on ellipse at minor</span>
+        <span class="c1">// axis of ellipse</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_ELLIPSE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by a polygon.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 3 .. n</span>
+        <span class="c1">//</span>
+        <span class="c1">// Polygon is defined by the first, second, third and so on points. The</span>
+        <span class="c1">// polygon shape is closed (last and first point are different).</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_POLYGON</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by a polyline.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 2 .. n</span>
+        <span class="c1">//</span>
+        <span class="c1">// Polyline is defined by the first, second and so on points. The</span>
+        <span class="c1">// polyline shape is open.</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_POLYLINE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// Image shape is defined by a point cloud.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Allowed number of referenced points: 2 .. n</span>
+        <span class="c1">//</span>
+        <span class="c1">// Point cloud is defined by a number of points. The points are not</span>
+        <span class="c1">// connected in the point cloud.</span>
+        <span class="c1">//</span>
+        <span class="n">IMAGE_SHAPE_TYPE_POINT_CLOUD</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief Camera point from the sensor.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">CameraPoint</span>
+<span class="p">{</span>
+    <span class="c1">// Existence probability of the point not based on history. Value does</span>
+    <span class="c1">// not depend on any past experience with similar points.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
+    <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Measured point refered by one camera detection given in spherical</span>
+    <span class="c1">// coordinates in the sensor coordinate system.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">point</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Root mean squared error of the measured point.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">point_rmse</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Definition of a basic detection classifications.</span>
+<span class="c1">//</span>
+<span class="k">enum</span> <span class="n">DetectionClassification</span>
+<span class="p">{</span>
+    <span class="c1">// Detection is unknown (must not be used in ground truth).</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="c1">// Other (unspecified but known) detection.</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// Invalid detection, not to be used for object tracking, of unspecified</span>
+    <span class="c1">// type (none of the other types applies).</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_INVALID</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// Clutter (noise, spray, rain, fog etc.).</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_CLUTTER</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// Over-drivable (ground etc.).</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_OVERDRIVABLE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// Under-drivable (sign gantry etc.).</span>
+    <span class="c1">//</span>
+    <span class="n">DETECTION_CLASSIFICATION_UNDERDRIVABLE</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

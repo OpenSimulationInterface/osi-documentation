@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1CameraDetectionSpecificHeader:
+
+Struct CameraDetectionSpecificHeader
+====================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_featuredata.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::CameraDetectionSpecificHeader
+   :members:
+   :protected-members:
+   :undoc-members:

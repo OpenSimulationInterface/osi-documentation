@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,10 +36,9 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Coordinate systems and reference points" href="coordinatesystem.html" />
-    <link rel="prev" title="Windows" href="windows.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,51 +83,26 @@
             
             
               <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">OSI files description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#osi-version-proto">osi_version.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-common-proto">osi_common.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-datarecording-proto">osi_datarecording.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedtrafficsign-proto">osi_detectedtrafficsign.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedtrafficlight-proto">osi_detectedtrafficlight.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedroadmarking-proto">osi_detectedroadmarking.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedobject-proto">osi_detectedobject.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedoccupant-proto">osi_detectedoccupant.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-detectedlane-proto">osi_detectedlane.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-environment-proto">osi_environment.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-groundtruth-proto">osi_groundtruth.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-hostvehicledata-proto">osi_hostvehicledata.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-trafficsign-proto">osi_trafficsign.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-trafficlight-proto">osi_trafficlight.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-roadmarking-proto">osi_roadmarking.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-featuredata-proto">osi_featuredata.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-object-proto">osi_object.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-occupant-proto">osi_occupant.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-lane-proto">osi_lane.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-sensordata-proto">osi_sensordata.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-sensorviewconfiguration-proto">osi_sensorviewconfiguration.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-sensorspecific-proto">osi_sensorspecific.proto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#osi-sensorview-proto">osi_sensorview.proto</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validator/osivalidator-module.html">OSI Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validator/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -275,15 +252,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="coordinatesystem.html" class="btn btn-neutral float-right" title="Coordinate systems and reference points" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="windows.html" class="btn btn-neutral float-left" title="Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

@@ -1,0 +1,30 @@
+.. _exhale_struct_structosi3_1_1TrafficSign:
+
+Struct TrafficSign
+==================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficsign.proto`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1MainSign`
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1MainSign_1_1Classification`
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign`
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification`
+- :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification_1_1Arrow`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::TrafficSign
+   :members:
+   :protected-members:
+   :undoc-members:

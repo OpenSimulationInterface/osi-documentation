@@ -1,0 +1,26 @@
+.. _exhale_struct_structosi3_1_1EnvironmentalConditions:
+
+Struct EnvironmentalConditions
+==============================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_environment.proto`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions_1_1TimeOfDay`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::EnvironmentalConditions
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_variable_osi__datarecording_8proto_1a4c413fcc2632dc98eb36f8ee6befdb12:
+
+Variable proto
+==============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_datarecording.proto`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: proto

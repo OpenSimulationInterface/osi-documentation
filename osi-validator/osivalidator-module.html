@@ -25,6 +25,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,10 +36,11 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Installation Guide" href="setup.html" />
-    <link rel="prev" title="Contributors&#39; Guidelines" href="../osi/howtocontribute.html" /> 
+    <link rel="prev" title="Variable syntax" href="../osi/variable_osi__version_8proto_1adbedb258e13546cc707a6ebb073a3d8a.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,12 +88,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/osifiles.html">OSI files description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/coordinatesystem.html">Coordinate systems and reference points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi/releases.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/library_root.html">OSI Reference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Validation:</span></p>
 <ul class="current">
@@ -100,13 +104,13 @@
 <li class="toctree-l2"><a class="reference internal" href="osivalidator.html">osivalidator package</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/nvidia-docker.html">Nvidia Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors' Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
 <p class="caption"><span class="caption-text">OSI Model Packaging:</span></p>
 <ul>
@@ -179,7 +183,7 @@
   <div class="section" id="osi-validation">
 <span id="id1"></span><h1>OSI Validation<a class="headerlink" href="#osi-validation" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="https://travis-ci.org/OpenSimulationInterface/osi-validation"><img alt="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" src="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" /></a>
-<p>The OSI Validator is a validation framework for the field values of OSI messages. It recursively checks the compliance of an OSI message of type <code class="docutils literal notranslate"><span class="pre">SensorData</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> according to predefined rules. It was developed due to the need of validation of a huge amount of incoming OSI messages which cannot be validated by hand.</p>
+<p>The OSI Validator is a validation framework for the field values of OSI messages. It recursively checks the compliance of an OSI message of type <code class="docutils literal notranslate"><span class="pre">SensorData</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> according to predefined rules. It was developed due to the need of validation of a huge amount of OSI messages which cannot be validated manually.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Installation Guide</a><ul>
@@ -228,7 +232,7 @@
         <a href="setup.html" class="btn btn-neutral float-right" title="Installation Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../osi/howtocontribute.html" class="btn btn-neutral float-left" title="Contributors&#39; Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../osi/variable_osi__version_8proto_1adbedb258e13546cc707a6ebb073a3d8a.html" class="btn btn-neutral float-left" title="Variable syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
