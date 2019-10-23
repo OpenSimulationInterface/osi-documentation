@@ -152,7 +152,7 @@ Program Listing for File osi_environment.proto
        {
            // Visibility is unknown (must not be used in ground truth).
            //
-           FOG_UNKOWN = 0;
+           FOG_UNKNOWN = 0;
    
            // Other (unspecified but known) fog intensity.
            //
