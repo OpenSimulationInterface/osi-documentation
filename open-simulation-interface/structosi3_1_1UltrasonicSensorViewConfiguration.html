@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct UltrasonicSensorViewConfiguration &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct UltrasonicSpecificObjectData" href="structosi3_1_1UltrasonicSpecificObjectData.html" />
+    <link rel="prev" title="Struct UltrasonicSensorView" href="structosi3_1_1UltrasonicSensorView.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct UltrasonicSensorViewConfiguration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/open-simulation-interface/structosi3_1_1UltrasonicSensorViewConfiguration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-ultrasonicsensorviewconfiguration">
+<span id="exhale-struct-structosi3-1-1ultrasonicsensorviewconfiguration"></span><h1>Struct UltrasonicSensorViewConfiguration<a class="headerlink" href="#struct-ultrasonicsensorviewconfiguration" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorviewconfiguration.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-sensorviewconfiguration-proto"><span class="std std-ref">File osi_sensorviewconfiguration.proto</span></a></p></li>
+</ul>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi333UltrasonicSensorViewConfigurationE">
+<span id="_CPPv3N4osi333UltrasonicSensorViewConfigurationE"></span><span id="_CPPv2N4osi333UltrasonicSensorViewConfigurationE"></span><span id="osi3::UltrasonicSensorViewConfiguration"></span><span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration"></span><em class="property">struct </em><code class="sig-name descname">UltrasonicSensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi333UltrasonicSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The configuration settings for the Ultrasonic Sensor View to be provided by the environment simulation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration_1a857ff0b1a82ae4e72b6b5cc4923243d9"></span><code class="sig-name descname">optional Identifier osi3::UltrasonicSensorViewConfiguration::sensor_id = 1</code></dt>
+<dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
+<p>This is the ID of the physical sensor, to be used in its detected features output; it is distinct from the ID of its virtual sensor.</p>
+<p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration_1a75effdf0ba9c72ffa74ea5f81783aea2"></span><code class="sig-name descname">optional MountingPosition osi3::UltrasonicSensorViewConfiguration::mounting_position = 2</code></dt>
+<dd><p>The physical mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The physical position pertains to this detector individually, and governs the sensor-relative coordinates in features detected by this detector.</p>
+<p><ul class="simple">
+<li><p><strong>x-direction</strong> of sensor coordinate system: sensor viewing direction </p></li>
+<li><p><strong>z-direction</strong> of sensor coordinate system: sensor (up) </p></li>
+<li><p><strong>y-direction</strong> of sensor coordinate system: perpendicular to x and z right hand system</p></li>
+</ul>
+<dl class="simple">
+<dt><strong>References:</strong></dt><dd><p><ul class="simple">
+<li><p>[1] DIN ISO 8855:2013-11</p></li>
+</ul>
+</p>
+</dd>
+<dt><strong>Note</strong></dt><dd><p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
+</dd>
+<dt><strong>Note</strong></dt><dd><p>A default position can be provided by the sensor model (e.g. to indicate the position the model was validated for), but this is optional; the environment simulation must provide a valid mounting position (based on the vehicle configuration) when setting the view configuration. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration_1a655f38c2a008a81b51e02674b2b4b701"></span><code class="sig-name descname">optional MountingPosition osi3::UltrasonicSensorViewConfiguration::mounting_position_rmse = 3</code></dt>
+<dd><p>The root mean squared error of the mounting position. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration_1ac576573013280863221640ee8f6286b6"></span><code class="sig-name descname">optional double osi3::UltrasonicSensorViewConfiguration::field_of_view_horizontal = 4</code></dt>
+<dd><p>Field of View in horizontal orientation of the physical sensor.</p>
+<p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1UltrasonicSensorViewConfiguration_1ac576573013280863221640ee8f6286b6"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1UltrasonicSensorViewConfiguration_1ac576573013280863221640ee8f6286b6"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>] azimuth in the sensor frame as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
+<p>Unit: [rad] </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1UltrasonicSensorViewConfiguration_1a61de58d0b99c513982cd83b7112c3b48"></span><code class="sig-name descname">optional double osi3::UltrasonicSensorViewConfiguration::field_of_view_vertical = 5</code></dt>
+<dd><p>Field of View in vertical orientation of the physical sensor.</p>
+<p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1UltrasonicSensorViewConfiguration_1a61de58d0b99c513982cd83b7112c3b48"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1UltrasonicSensorViewConfiguration_1a61de58d0b99c513982cd83b7112c3b48"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>] elevation in the sensor frame at zero azimuth as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
+<p>Unit: [rad] </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1UltrasonicSpecificObjectData.html" class="btn btn-neutral float-right" title="Struct UltrasonicSpecificObjectData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1UltrasonicSensorView.html" class="btn btn-neutral float-left" title="Struct UltrasonicSensorView" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

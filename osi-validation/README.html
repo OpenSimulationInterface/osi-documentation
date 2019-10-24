@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OSI Validator &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General description" href="doc/description.html" />
+    <link rel="prev" title="Variable syntax" href="../open-simulation-interface/variable_osi__version_8proto_1adbedb258e13546cc707a6ebb073a3d8a.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Validator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#local-recommended">Local (recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global">Global</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>OSI Validator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/osi-validation/README.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="osi-validator">
+<h1>OSI Validator<a class="headerlink" href="#osi-validator" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/osi-validation"><img alt="Travis Build Status" src="https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master" /></a></p>
+<p>OSI Validator checks the compliance of OSI messages with predefined <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator.html#module-osivalidator.osi_rules_implementations">rules</a>. The full documentation on usage and customization of the rules is available <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator-module.html">here</a>.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">osivalidator</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">rules</span> <span class="n">RULES</span><span class="p">]</span> <span class="o">--</span><span class="n">data</span> <span class="n">DATA</span>
+                    <span class="p">[</span><span class="o">--</span><span class="nb">type</span> <span class="p">{</span><span class="n">SensorView</span><span class="p">,</span><span class="n">GroundTruth</span><span class="p">,</span><span class="n">SensorData</span><span class="p">}]</span>
+                    <span class="p">[</span><span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">timesteps</span> <span class="n">TIMESTEPS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">debug</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span>
+
+<span class="n">Validate</span> <span class="n">data</span> <span class="n">defined</span> <span class="n">at</span> <span class="n">the</span> <span class="nb">input</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+<span class="o">--</span><span class="n">help</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span>                                      <span class="n">Show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+<span class="o">--</span><span class="n">rules</span> <span class="n">RULES</span><span class="p">,</span> <span class="o">-</span><span class="n">r</span> <span class="n">RULES</span>                         <span class="n">Directory</span> <span class="k">with</span> <span class="n">text</span> <span class="n">files</span> <span class="n">containig</span> <span class="n">rules</span><span class="o">.</span>
+<span class="o">--</span><span class="n">data</span> <span class="n">DATA</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span> <span class="n">DATA</span>                            <span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">file</span> <span class="k">with</span> <span class="n">OSI</span><span class="o">-</span><span class="n">serialized</span> <span class="n">data</span><span class="o">.</span>
+<span class="o">--</span><span class="nb">type</span> <span class="p">{</span><span class="n">SensorView</span><span class="p">,</span><span class="n">GroundTruth</span><span class="p">,</span><span class="n">SensorData</span><span class="p">},</span>     <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">message</span> <span class="nb">type</span> <span class="n">used</span> <span class="n">to</span> <span class="n">serialize</span> <span class="n">data</span><span class="o">.</span>
+    <span class="o">-</span><span class="n">t</span> <span class="p">{</span><span class="n">SensorView</span><span class="p">,</span><span class="n">GroundTruth</span><span class="p">,</span><span class="n">SensorData</span><span class="p">}</span>
+<span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span><span class="p">,</span> <span class="o">-</span><span class="n">o</span> <span class="n">OUTPUT</span>                      <span class="n">Output</span> <span class="n">folder</span> <span class="n">of</span> <span class="n">the</span> <span class="n">log</span> <span class="n">files</span><span class="o">.</span>
+<span class="o">--</span><span class="n">timesteps</span> <span class="n">TIMESTEPS</span>                           <span class="n">Number</span> <span class="n">of</span> <span class="n">timesteps</span> <span class="n">to</span> <span class="n">analyze</span><span class="o">.</span> <span class="n">If</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">all</span><span class="o">.</span>
+<span class="o">--</span><span class="n">debug</span>                                         <span class="n">Set</span> <span class="n">the</span> <span class="n">debug</span> <span class="n">mode</span> <span class="n">to</span> <span class="n">ON</span><span class="o">.</span>
+<span class="o">--</span><span class="n">verbose</span>                                       <span class="n">Set</span> <span class="n">the</span> <span class="n">verbose</span> <span class="n">mode</span> <span class="n">to</span> <span class="n">ON</span> <span class="p">(</span><span class="n">display</span> <span class="ow">in</span> <span class="n">console</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>OSI Validator has been developed with Python 3.6 within a virtual environment on Ubuntu 18.04.</p>
+<div class="section" id="local-recommended">
+<h3>Local (recommended)<a class="headerlink" href="#local-recommended" title="Permalink to this headline">¶</a></h3>
+<p>Clone repository osi-validation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p>Change directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">osi-validation</span></code></p>
+<p>Clone repository open-simulation-interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
+<p>Clone repository proto2cpp:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
+<p>Install virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
+<p>Create virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">-p</span> <span class="pre">/usr/bin/python3</span> <span class="pre">vpython</span></code></p>
+<p>Activate your virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">vpython/bin/activate</span></code></p>
+<p>Install open-simulation-interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">open-simulation-interface;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p>Install osi-validator:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+<p>Last step copy <code class="docutils literal notranslate"><span class="pre">requirements-osi-3</span></code> to <code class="docutils literal notranslate"><span class="pre">vpython/lib/python3.6/site-packages</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">requirements-osi-3</span> <span class="pre">vpython/lib/python3.6/site-packages/</span></code></p>
+</div>
+<div class="section" id="global">
+<h3>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h3>
+<p>Clone repository osi-validation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/osi-validation.git</span></code></p>
+<p>Change directory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">osi-validation</span></code></p>
+<p>Clone repository open-simulation-interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/open-simulation-interface.git</span></code></p>
+<p>Clone repository proto2cpp:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/OpenSimulationInterface/proto2cpp.git</span></code></p>
+<p>Install:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">.</span></code></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="doc/description.html" class="btn btn-neutral float-right" title="General description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../open-simulation-interface/variable_osi__version_8proto_1adbedb258e13546cc707a6ebb073a3d8a.html" class="btn btn-neutral float-left" title="Variable syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

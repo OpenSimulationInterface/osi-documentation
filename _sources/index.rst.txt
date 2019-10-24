@@ -41,21 +41,24 @@ The authors' vision is to be able to connect any automated driving function to a
    :maxdepth: 1
    :caption: Open Simulation Interface:
 
-   osi/README
-   osi/installation
-   osi/coordinatesystem
-   osi/commenting
-   osi/versioning
-   osi/releases
-   osi/howtocontribute
-   osi/library_root
+   open-simulation-interface/README
+   open-simulation-interface/doc/description
+   open-simulation-interface/doc/installation
+   open-simulation-interface/doc/coordinatesystem
+   open-simulation-interface/doc/commenting
+   open-simulation-interface/doc/versioning
+   open-simulation-interface/doc/releases
+   open-simulation-interface/doc/howtocontribute
+   open-simulation-interface/library_root
 
 .. toctree::
     :maxdepth: 2
-    :caption: OSI Validation:
+    :caption: OSI Validator:
 
-    osi-validator/osivalidator-module
-    osi-validator/howtocontribute
+    osi-validation/README
+    osi-validation/doc/description
+    osi-validation/doc/howtocontribute
+    osi-validation/doc/osivalidator
 
 
 .. toctree::
@@ -63,16 +66,24 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Visualizer:
 
     osi-visualizer/README
-    osi-visualizer/nvidia-docker
-    osi-visualizer/howtocontribute
+    osi-visualizer/doc/panels
+    osi-visualizer/doc/nvidia-docker
+    osi-visualizer/doc/howtocontribute
 
 
 .. toctree::
     :maxdepth: 2
-    :caption: OSI Model Packaging:
+    :caption: OSI Sensor Model Packaging:
 
-    osi-model-packaging/README
-    osi-model-packaging/examples
+    osi-sensor-model-packaging/README
+    osi-sensor-model-packaging/doc/description
+    osi-sensor-model-packaging/doc/examples
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Proto2Cpp:
+
+    proto2cpp/README
 
 
 API Reference

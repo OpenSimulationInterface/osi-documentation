@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Commenting &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Versioning" href="versioning.html" />
+    <link rel="prev" title="Coordinate systems and reference points" href="coordinatesystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Commenting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-with-block-syntax">Commenting with block syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-on-messages">Commenting on messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-on-fields-and-enums">Commenting on fields and enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-with-doxygen-references">Commenting with doxygen references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-with-links">Commenting with links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commenting-with-images">Commenting with images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Commenting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/open-simulation-interface/doc/commenting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="commenting">
+<span id="id1"></span><h1>Commenting<a class="headerlink" href="#commenting" title="Permalink to this headline">¶</a></h1>
+<p>During the building process of open simulation interface (using the <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> filter), doxygen is creating a <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/">reference documentation</a> processing all comments written in the code of the interface. In order to do that doxygen needs the comments to be written in a certain way. Please follow these rules to achieve that the reference documentation is created correctly. You will find further information on doxygen <a class="reference external" href="http://www.doxygen.nl/manual/docblocks.html">here</a>.</p>
+<p>For any additional comment styles see <a class="reference external" href="http://www.doxygen.nl/manual/commands.html">list</a> of doxygen commands.</p>
+<div class="section" id="commenting-with-block-syntax">
+<h2>Commenting with block syntax<a class="headerlink" href="#commenting-with-block-syntax" title="Permalink to this headline">¶</a></h2>
+<p>Start every comment with <code class="docutils literal notranslate"><span class="pre">//</span></code> and do not use <code class="docutils literal notranslate"><span class="pre">///</span></code>.</p>
+</div>
+<div class="section" id="commenting-on-messages">
+<h2>Commenting on messages<a class="headerlink" href="#commenting-on-messages" title="Permalink to this headline">¶</a></h2>
+<p>When writing comments specifying messages please use the following template:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">ExampleMessage</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Doxygen will interpret a comment consisting just of one single line as a brief description.
+However to keep the style of the documentation coherent there should not be any brief description when commenting on fields and enums. That is why adding one more empty line when commenting becomes necessary. There is no need for an extra empty line if you are commenting more than one line anyways.</p>
+<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;If you write two or more lines of comments...&gt;</span>
+<span class="c1">// &lt;... you do not need to add an empty line&gt;</span>
+<span class="kd">message</span> <span class="nc">ExampleMessage</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The commenting for messages follows the following order:</p>
+<ol class="arabic simple">
+<li><p>Brief description</p></li>
+<li><p>Image</p></li>
+<li><p>Detailed description</p></li>
+<li><p>Note</p></li>
+</ol>
+<p>First you define the message.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Next provide a brief description of the message with <code class="docutils literal notranslate"><span class="pre">\brief</span></code>.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then you can optionally provide an image to explain the message better. A picture is worth a thousand words.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can optionally add a detailed description which can have multiple lines.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Lastly you can add a small note about the message and have a completely commented message.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="commenting-on-fields-and-enums">
+<h2>Commenting on fields and enums<a class="headerlink" href="#commenting-on-fields-and-enums" title="Permalink to this headline">¶</a></h2>
+<p>The commenting for fields and enums follows the following order:</p>
+<ol class="arabic simple">
+<li><p>Explanation</p></li>
+<li><p>Unit</p></li>
+<li><p>Note</p></li>
+<li><p>Reference</p></li>
+<li><p>Rule</p></li>
+</ol>
+<p>First you add a field into a message with an appropriate index number.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then you describe the field by adding an explanation.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Next you decide the unit of the field.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can optionally add a note to the field to describe the field better.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note 100000 Pa = 1 bar</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you want to provide a reference to a DIN or to web page which helps in understanding the field you can add a reference.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note 100000 Pa = 1 bar</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par Reference:</span>
+    <span class="c1">// - [1] [Definition atmospheric pressure](https://en.wikipedia.org/wiki/Atmospheric_pressure)</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Finally you can provide a set of rules which this field needs to be followed. The available rules can be found below. When adding rules to *.proto files make sure that the rules are encapsulated between the <code class="docutils literal notranslate"><span class="pre">\rules</span></code> and <code class="docutils literal notranslate"><span class="pre">\endrules</span></code> tags. Now you have a fully commented message with a fully commented field.</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html EnvironmentalConditions.svg</span>
+<span class="c1">//</span>
+<span class="c1">// Definition of light, weather conditions and other environmental conditions.</span>
+<span class="c1">//</span>
+<span class="c1">// \note These conditions apply locally around the host vehicle.</span>
+<span class="c1">//</span>
+<span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note 100000 Pa = 1 bar</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par Reference:</span>
+    <span class="c1">// - [1] [Definition atmospheric pressure](https://en.wikipedia.org/wiki/Atmospheric_pressure)</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_optional</span>
+    <span class="c1">// is_greater_than_or_equal_to: 90000</span>
+    <span class="c1">// is_less_than_or_equal_to: 200000</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The rule definition must follow the syntax which is defined by a regex search which you can see below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;is_greater_than&#39;</span><span class="p">:</span>              <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than)\b: \d+(\.\d+)?&#39;</span>                                                   <span class="c1"># is_greater_than: 1</span>
+<span class="s1">&#39;is_greater_than_or_equal_to&#39;</span><span class="p">:</span>  <span class="sa">r</span><span class="s1">&#39;\b(is_greater_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                       <span class="c1"># is_greater_than_or_equal_to: 1</span>
+<span class="s1">&#39;is_less_than_or_equal_to&#39;</span><span class="p">:</span>     <span class="sa">r</span><span class="s1">&#39;\b(is_less_than_or_equal_to)\b: \d+(\.\d+)?&#39;</span>                                          <span class="c1"># is_less_than_or_equal_to: 10</span>
+<span class="s1">&#39;is_less_than&#39;</span><span class="p">:</span>                 <span class="sa">r</span><span class="s1">&#39;\b(is_less_than)\b: \d+(\.\d+)?&#39;</span>                                                      <span class="c1"># is_less_than: 2</span>
+<span class="s1">&#39;is_equal&#39;</span><span class="p">:</span>                     <span class="sa">r</span><span class="s1">&#39;\b(is_equal)\b: \d+(\.\d+)?&#39;</span>                                                          <span class="c1"># is_equal: 1</span>
+<span class="s1">&#39;is_different&#39;</span><span class="p">:</span>                 <span class="sa">r</span><span class="s1">&#39;\b(is_different)\b: \d+(\.\d+)?&#39;</span>                                                      <span class="c1"># is_different: 2</span>
+<span class="s1">&#39;is_global_unique&#39;</span><span class="p">:</span>             <span class="sa">r</span><span class="s1">&#39;\b(is_global_unique)\b&#39;</span>                                                               <span class="c1"># is_global_unique</span>
+<span class="s1">&#39;refers&#39;</span><span class="p">:</span>                       <span class="sa">r</span><span class="s1">&#39;\b(refers)\b&#39;</span>                                                                         <span class="c1"># refers</span>
+<span class="s1">&#39;is_iso_country_code&#39;</span><span class="p">:</span>          <span class="sa">r</span><span class="s1">&#39;\b(is_iso_country_code)\b&#39;</span>                                                            <span class="c1"># is_iso_country_code</span>
+<span class="s1">&#39;first_element&#39;</span><span class="p">:</span>                <span class="sa">r</span><span class="s1">&#39;\b(first_element)\b: \{.*: \d+\.\d+\}&#39;</span>                                                <span class="c1"># first_element: {is_equal: 0.13, is_greater_than: 0.13}</span>
+<span class="s1">&#39;last_element&#39;</span><span class="p">:</span>                 <span class="sa">r</span><span class="s1">&#39;\b(last_element)\b: \{.*: \d+\.\d+\}&#39;</span>                                                 <span class="c1"># last_element: {is_equal: 0.13, is_greater_than: 0.13}</span>
+<span class="s1">&#39;is_optional&#39;</span><span class="p">:</span>                  <span class="sa">r</span><span class="s1">&#39;\b(is_optional)\b&#39;</span>                                                                    <span class="c1"># is_optional</span>
+<span class="s1">&#39;check_if&#39;</span><span class="p">:</span>                     <span class="sa">r</span><span class="s1">&#39;\b(check_if)\b: \[\{.*: \d+(\.\d+)?, target: .*}, \{do_check: \{.*: \d+(\.\d+)?}}]&#39;</span>   <span class="c1"># check_if: [{is_equal: 2, is_greater_than: 3, target: this.y}, {do_check: {is_equal: 1, is_less_than: 3}}]</span>
+</pre></div>
+</div>
+<p>You can check the correctness of these regular expression on <a class="reference external" href="https://regex101.com/r/6tomm6/16">regex101</a>.</p>
+</div>
+<div class="section" id="commenting-with-doxygen-references">
+<h2>Commenting with doxygen references<a class="headerlink" href="#commenting-with-doxygen-references" title="Permalink to this headline">¶</a></h2>
+<p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put ‘c’ in front of the message name.</p>
+<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
+</pre></div>
+</div>
+<p>If you want to reference a nested message, use ‘::’ instead of ‘.’ as separators in comments.</p>
+<p>If you want to reference message fields and enums add ‘#’ to the enum/field name.</p>
+<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="commenting-with-links">
+<h2>Commenting with links<a class="headerlink" href="#commenting-with-links" title="Permalink to this headline">¶</a></h2>
+<p>With <code class="docutils literal notranslate"><span class="pre">[&lt;add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;](&lt;add</span> <span class="pre">url</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;)</span></code> you can integrate a link to a certain homepage while commenting.</p>
+</div>
+<div class="section" id="commenting-with-images">
+<h2>Commenting with images<a class="headerlink" href="#commenting-with-images" title="Permalink to this headline">¶</a></h2>
+<p>To include images write your comment similar to this <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">\image</span> <span class="pre">html</span> <span class="pre">&lt;Add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">image&gt;</span> <span class="pre">&quot;&lt;Add</span> <span class="pre">optional</span> <span class="pre">caption</span> <span class="pre">here&gt;&quot;</span></code>
+Please place all your included images in <code class="docutils literal notranslate"><span class="pre">./open-simulation-interface/docs/images</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="versioning.html" class="btn btn-neutral float-right" title="Versioning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate systems and reference points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

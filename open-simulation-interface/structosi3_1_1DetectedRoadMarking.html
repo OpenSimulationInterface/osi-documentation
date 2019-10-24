@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct DetectedRoadMarking &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct DetectedRoadMarking::CandidateRoadMarking" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html" />
+    <link rel="prev" title="Struct DetectedOccupant::CandidateOccupant" href="structosi3_1_1DetectedOccupant_1_1CandidateOccupant.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct DetectedRoadMarking</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/open-simulation-interface/structosi3_1_1DetectedRoadMarking.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-detectedroadmarking">
+<span id="exhale-struct-structosi3-1-1detectedroadmarking"></span><h1>Struct DetectedRoadMarking<a class="headerlink" href="#struct-detectedroadmarking" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedroadmarking.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-detectedroadmarking-proto"><span class="std std-ref">File osi_detectedroadmarking.proto</span></a></p></li>
+</ul>
+<div class="section" id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#exhale-struct-structosi3-1-1detectedroadmarking-1-1candidateroadmarking"><span class="std std-ref">Struct DetectedRoadMarking::CandidateRoadMarking</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv4N4osi319DetectedRoadMarkingE">
+<span id="_CPPv3N4osi319DetectedRoadMarkingE"></span><span id="_CPPv2N4osi319DetectedRoadMarkingE"></span><span id="osi3::DetectedRoadMarking"></span><span class="target" id="structosi3_1_1DetectedRoadMarking"></span><em class="property">struct </em><code class="sig-name descname">DetectedRoadMarking</code><a class="headerlink" href="#_CPPv4N4osi319DetectedRoadMarkingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A road marking in the environment as detected by the sensor. </p>
+<p><img alt="../_images/OSI_DetectedRoadMarking.svg" src="../_images/OSI_DetectedRoadMarking.svg" /></p>
+<p>The figure shows two STOP road markings (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a470e0f9da1498a03cae253eddfb8e08b"><span class="std std-ref"><span class="pre">DetectedRoadMarking::CandidateRoadMarking::classification</span></span></a></code>). STOP <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">RoadMarking::Classification::type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba4a5a31878399051eefbcd7f7dd58836c"><span class="std std-ref"><span class="pre">RoadMarking::Classification::TYPE_TEXTUAL_TRAFFIC_SIGN</span></span></a></code> is marked, STOP <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">RoadMarking::Classification::type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf32447c2168fbb5d9baf48f650a80b9d"><span class="std std-ref"><span class="pre">RoadMarking::Classification::TYPE_SYMBOLIC_TRAFFIC_SIGN</span></span></a></code> is not marked. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1ab0d6556a1a59e8139813f09e56bd3b52"></span><code class="sig-name descname">optional DetectedItemHeader osi3::DetectedRoadMarking::header = 1</code></dt>
+<dd><p>Common information of one detected item. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedRoadMarking::base = 2</code></dt>
+<dd><p>The base parameters of the road marking.</p>
+<p>The orientation of the bounding box <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"><span class="std std-ref"><span class="pre">base</span></span></a></code> <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is defined as follows: The z-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is the vector from the ‘bottom’ to the ‘top’ of the road marking’s (i.e. painted traffic sign) 2D image area. (Normally it is in the ground truth xy-plain.) The x-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is the view normal of the road marking’s 2D image area. Normally this x-axis points to the sky.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>If a valid unidirectional road marking is assigned to the host vehicle’s current lane and the driving direction of the latter roughly matches the z-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"><span class="std std-ref"><span class="pre">base</span></span></a></code> <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> then the road marking is of relevance to (i.e. in effect for) the host vehicle. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1a8195dfc3814da15504dcbd2431eff8a3"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedRoadMarking::base_rmse = 3</code></dt>
+<dd><p>The root mean squared error of the base parameters of the detected road marking. <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking.html#structosi3_1_1RoadMarking_1a8b19d63b7b7ac893eadf0c3b66a1746b"><span class="std std-ref"><span class="pre">RoadMarking::base</span></span></a></code> has to be identical for all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1a8f414cff0f010e18dcddbe0208c80fde"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> road markings. </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1a8f414cff0f010e18dcddbe0208c80fde"></span><code class="sig-name descname">repeated CandidateRoadMarking osi3::DetectedRoadMarking::candidate = 4</code></dt>
+<dd><p>A list of candidates for this road marking as estimated by the sensor.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv4N4osi319DetectedRoadMarking20CandidateRoadMarkingE">
+<span id="_CPPv3N4osi319DetectedRoadMarking20CandidateRoadMarkingE"></span><span id="_CPPv2N4osi319DetectedRoadMarking20CandidateRoadMarkingE"></span><span id="osi3::DetectedRoadMarking::CandidateRoadMarking"></span><span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking"></span><em class="property">struct </em><code class="sig-name descname">CandidateRoadMarking</code><a class="headerlink" href="#_CPPv4N4osi319DetectedRoadMarking20CandidateRoadMarkingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A candidate for a detected road marking as estimated by the sensor. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"></span><code class="sig-name descname">optional double osi3::DetectedRoadMarking::CandidateRoadMarking::probability = 1</code></dt>
+<dd><p>The estimated probability that this candidate is the true value.</p>
+<p><p>Range: [0,1] </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a470e0f9da1498a03cae253eddfb8e08b"></span><code class="sig-name descname">optional RoadMarking::Classification osi3::DetectedRoadMarking::CandidateRoadMarking::classification = 2</code></dt>
+<dd><p>The classification of the road marking.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html" class="btn btn-neutral float-right" title="Struct DetectedRoadMarking::CandidateRoadMarking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1DetectedOccupant_1_1CandidateOccupant.html" class="btn btn-neutral float-left" title="Struct DetectedOccupant::CandidateOccupant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

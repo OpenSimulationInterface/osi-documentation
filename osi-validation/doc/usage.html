@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to write rules" href="writing-rules.html" />
+    <link rel="prev" title="Installation Guide" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">OSI Validator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="description.html">General description</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Installation Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-rules.html">How to write rules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="description.html">General description</a> &raquo;</li>
+        
+      <li>Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/osi-validation/doc/usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>After installation you can call the command <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> in your terminal which has the following usage:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: osivalidator [-h] [--rules RULES] --data DATA
+                    [--type {SensorView,GroundTruth,SensorData}]
+                    [--output OUTPUT] [--timesteps TIMESTEPS] [--debug]
+                    [--verbose]
+
+Validate data defined at the input
+
+optional arguments:
+--help, -h                                      Show this help message and exit
+--rules RULES, -r RULES                         Directory with text files containig rules.
+--data DATA, -d DATA                            Path to the file with OSI-serialized data.
+--type {SensorView,GroundTruth,SensorData},     Name of the message type used to serialize data.
+    -t {SensorView,GroundTruth,SensorData}
+--output OUTPUT, -o OUTPUT                      Output folder of the log files.
+--timesteps TIMESTEPS                           Number of timesteps to analyze. If -1, all.
+--debug                                         Set the debug mode to ON.
+--verbose                                       Set the verbose mode to ON (display in console).
+</pre></div>
+</div>
+<p>To run the validation first you need to record an osi-message. Here we already have an osi-message which is called <code class="docutils literal notranslate"><span class="pre">osi_message_test.txt</span></code>. To validate the osi-message you simply call <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> and provide the path to the stored osi-message which is here in the folder <code class="docutils literal notranslate"><span class="pre">osi_message_data</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>osivalidator --data osi_message_data/osi_message_test.txt
+</pre></div>
+</div>
+<p>After successfully running the validation the following output is generated:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Instanciate logger
+Read data
+Retrieving message offsets in scenario file until inf...
+|################################| 172098454/172098454
+262 messages has been discovered in 0.05367231369018555 s
+Collect validation rules
+Caching...
+Importing messages from scenario file...
+|################################| 262/262
+Caching done!
+|################################| 262/262 [0:00:11]
+
+Errors (27)
+Ranges of timestamps    Message
+----------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------
+[0, 261]                SensorView.sensor_id.is_set(None) does not comply in SensorView
+[0, 260]                Identifier.value.is_set(None) does not comply in SensorView.sensor_id
+[0, 261]                SensorView.global_ground_truth.is_set(None) does not comply in SensorView
+[0, 260]                GroundTruth.host_vehicle_id.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                Identifier.value.is_set(None) does not comply in SensorView.global_ground_truth.host_vehicle_id
+[0, 260]                GroundTruth.country_code.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                GroundTruth.version.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                InterfaceVersion.version_major.is_set(None) does not comply in SensorView.global_ground_truth.version
+[0, 260]                InterfaceVersion.version_minor.is_set(None) does not comply in SensorView.global_ground_truth.version
+[0, 260]                InterfaceVersion.version_patch.is_set(None) does not comply in SensorView.global_ground_truth.version
+[0, 260]                GroundTruth.timestamp.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                Timestamp.seconds.is_set(None) does not comply in SensorView.global_ground_truth.timestamp
+[0, 260]                Timestamp.nanos.is_set(None) does not comply in SensorView.global_ground_truth.timestamp
+[0, 260]                GroundTruth.stationary_object.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                GroundTruth.moving_object.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                GroundTruth.lane_boundary.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                GroundTruth.lane.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                GroundTruth.environmental_conditions.is_set(None) does not comply in SensorView.global_ground_truth
+[0, 260]                EnvironmentalConditions.atmospheric_pressure.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.temperature.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.relative_humidity.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.ambient_illumination.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.time_of_day.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.TimeOfDay.seconds_since_midnight.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions.time_of_day
+[0, 260]                EnvironmentalConditions.precipitation.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                EnvironmentalConditions.fog.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                Reference unresolved: GroundTruth to MovingObject (ID: 0)
+
+Warnings (5)
+Ranges of timestamps    Message
+----------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[0, 260]                GroundTruth.country_code.is_iso_country_code(None) does not comply in SensorView.global_ground_truth.country_code
+[0, 260]                EnvironmentalConditions.atmospheric_pressure.is_greater_than_or_equal_to(80000) does not comply in SensorView.global_ground_truth.environmental_conditions.atmospheric_pressure
+[0, 260]                EnvironmentalConditions.temperature.is_greater_than_or_equal_to(170) does not comply in SensorView.global_ground_truth.environmental_conditions.temperature
+[0, 260]                GroundTruth.environmental_conditions.is_valid(None) does not comply in SensorView.global_ground_truth.environmental_conditions
+[0, 260]                SensorView.global_ground_truth.is_valid(None) does not comply in SensorView.global_ground_truth
+</pre></div>
+</div>
+<p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal notranslate"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <a class="reference internal" href="../../open-simulation-interface/doc/commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Errors (NUMBER_ERRORS)
+Ranges of timestamps                Message
+--------------------------------    --------------------------------------------------------
+[START_TIMESTAMP, END_TIMESTAMP]    PATH_TO_RULE(VALUE) does not comply in PATH_TO_OSI_FIELD
+
+Warnings (NUMBER_WARNINGS)
+Ranges of timestamps    Message
+--------------------------------    --------------------------------------------------------
+[START_TIMESTAMP, END_TIMESTAMP]    PATH_TO_RULE(VALUE) does not comply in PATH_TO_OSI_FIELD
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="writing-rules.html" class="btn btn-neutral float-right" title="How to write rules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="setup.html" class="btn btn-neutral float-left" title="Installation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

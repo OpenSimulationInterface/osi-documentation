@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File osi_groundtruth.proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File osi_groundtruth.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/open-simulation-interface/program_listing_file_osi-documentation_osi-validation_open-simulation-interface_osi_groundtruth.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-groundtruth-proto">
+<span id="program-listing-file-osi-documentation-osi-validation-open-simulation-interface-osi-groundtruth-proto"></span><h1>Program Listing for File osi_groundtruth.proto<a class="headerlink" href="#program-listing-for-file-osi-groundtruth-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_groundtruth.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-groundtruth-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/osi-validation/open-simulation-interface/osi_groundtruth.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="s">&quot;osi_version.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_environment.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_trafficsign.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_trafficlight.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_roadmarking.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_lane.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_object.proto&quot;</span><span class="p">;</span>
+<span class="n">import</span> <span class="s">&quot;osi_occupant.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief The ground truth information from the simulation environment.</span>
+<span class="c1">//</span>
+<span class="c1">// This ground truth information is supposed to describe the whole simulated</span>
+<span class="c1">// environment around any simulated vehicle. For each simulated host vehicle</span>
+<span class="c1">// (there may be one or multiple), define an area around the vehicle which</span>
+<span class="c1">// is greater than the combined field of views (FOV) of all obstructed sensors</span>
+<span class="c1">// in the vehicle. The ground truth data is supposed to describe the convex</span>
+<span class="c1">// hull of all such areas w.r.t. a global simulation coordinate system.</span>
+<span class="c1">//</span>
+<span class="c1">// The simulation coordinate system may change during the simulation if and</span>
+<span class="c1">// only if all coordinates w.r.t. this coordinate system are also changed.</span>
+<span class="c1">//</span>
+<span class="c1">// The data has to be sent at a rate defined by the receiving partner. When</span>
+<span class="c1">// sending, values with default values might be left default in order to improve</span>
+<span class="c1">// performance.</span>
+<span class="c1">//</span>
+<span class="c1">// To provide a complete interface, all fields of all contained messages must be</span>
+<span class="c1">// properly set unless specifically stated in the field&#39;s definition that the</span>
+<span class="c1">// field may remain unset.</span>
+<span class="c1">//</span>
+<span class="c1">// In enums (e.g. types) the unknown (first / default) value is not allowed to</span>
+<span class="c1">// be used in the ground truth interface.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_GroundTruth.svg &quot;Ground Truth&quot;</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">GroundTruth</span>
+<span class="p">{</span>
+    <span class="c1">// The interface version used by the sender (i.e. the simulation</span>
+    <span class="c1">// environment).</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">InterfaceVersion</span> <span class="n">version</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The data timestamp of the simulation environment. The zero time point is</span>
+    <span class="c1">// arbitrary but must be identical for all messages.</span>
+    <span class="c1">// Recommendation: Zero time point for start point of the simulation.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Zero time point does not need to coincide with the UNIX epoch.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For ground truth data this timestamp coincides both with the</span>
+    <span class="c1">// notional simulation time the data applies to and the time it was sent</span>
+    <span class="c1">// (there is no inherent latency for ground truth data, as opposed to</span>
+    <span class="c1">// sensor data).</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Timestamp</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The ID of the host vehicle object referencing to \c MovingObject .</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note This ID has to be filled and is not optional!</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">host_vehicle_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">// The list of stationary objects (excluding traffic signs and traffic</span>
+    <span class="c1">// lights).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">StationaryObject</span> <span class="n">stationary_object</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="c1">// The list of all other moving objects including all (host) vehicles.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">MovingObject</span> <span class="n">moving_object</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">// The list of traffic signs.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">TrafficSign</span> <span class="n">traffic_sign</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+    <span class="c1">// The list of traffic lights.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">TrafficLight</span> <span class="n">traffic_light</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// The list of road surface markings (lane markings are excluded and</span>
+    <span class="c1">// defined as \c LaneBoundary).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">RoadMarking</span> <span class="n">road_marking</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+    <span class="c1">// The list of lane boundaries.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">LaneBoundary</span> <span class="n">lane_boundary</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// The list of lanes forming a road network.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">Lane</span> <span class="n">lane</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// The list of passengers in the (host) vehicle(s).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">Occupant</span> <span class="n">occupant</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+    <span class="c1">// Conditions of the environment.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">EnvironmentalConditions</span> <span class="n">environmental_conditions</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+    <span class="c1">// The ISO country code in 3 digit numeric format according to:</span>
+    <span class="c1">// ISO Code 3166/1 [1,2].</span>
+    <span class="c1">// E.g. Germany = 276, USA = 840.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Unit: []</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] [International Standard ISO 3166-1: Codes for the representation of</span>
+    <span class="c1">// names of countries and their subdivisions - Part 1: Country codes, third</span>
+    <span class="c1">// ed., 2013] (https://www.iso.org/obp/ui/)</span>
+    <span class="c1">// - [2] [Wikipedia ISO 3166/1] (https://en.wikipedia.org/wiki/ISO_3166-1)</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">uint32</span> <span class="n">country_code</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+    <span class="c1">// Projection string that allows to transform all coordinates in GroundTruth</span>
+    <span class="c1">// into a different cartographic projection.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The string follows the PROJ.4 project rules for projections [1].</span>
+    <span class="c1">//</span>
+    <span class="c1">// \par References:</span>
+    <span class="c1">// - [1] [Proj.4 Projections] (https://proj4.org/usage/projections.html)</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">proj_string</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+
+    <span class="c1">// Opaque reference of a map.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Origin and orientation of the map have to coincide with the</span>
+    <span class="c1">// inertial coordinate frame of the ground truth.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note It is implementation-specific how map_reference is resolved.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">map_reference</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
