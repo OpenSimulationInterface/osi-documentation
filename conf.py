@@ -46,7 +46,7 @@ breathe_default_project = "open-simulation-interface"
 # Setup the exhale extension
 exhale_args = {
     # These arguments are required
-    "containmentFolder":     "./open-simulation-interface/doc",
+    "containmentFolder":     "./open-simulation-interface",
     "rootFileName":          "library_root.rst",
     "rootFileTitle":         "OSI Reference",
     "doxygenStripFromPath":  "..",

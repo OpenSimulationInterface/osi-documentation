@@ -49,7 +49,7 @@ The authors' vision is to be able to connect any automated driving function to a
    open-simulation-interface/doc/versioning
    open-simulation-interface/doc/releases
    open-simulation-interface/doc/howtocontribute
-   open-simulation-interface/doc/library_root
+   open-simulation-interface/library_root
 
 .. toctree::
     :maxdepth: 2
