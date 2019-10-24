@@ -48,6 +48,7 @@ install:
     - pip install doxygen-interface
     - pip install breathe
     - pip install exhale
+    - pip install --upgrade recommonmark
 
 # Environment variables.
 env:
@@ -70,7 +71,11 @@ before_script:
 script:
     # Install osi-validation to be parsed by sphinx
     - git clone https://github.com/michaeljones/breathe.git
+    - git clone https://github.com/OpenSimulationInterface/osi-visualizer.git
     - git clone https://github.com/OpenSimulationInterface/osi-validation.git
+    - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+    - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
+    - git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
     - cd osi-validation
     - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
     - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
