@@ -46,7 +46,7 @@ breathe_default_project = "open-simulation-interface"
 # Setup the exhale extension
 exhale_args = {
     # These arguments are required
-    "containmentFolder":     "./osi",
+    "containmentFolder":     "./open-simulation-interface/doc",
     "rootFileName":          "library_root.rst",
     "rootFileTitle":         "OSI Reference",
     "doxygenStripFromPath":  "..",
@@ -106,6 +106,7 @@ exclude_patterns = ['_build',
                     'osi-sensor-model-packaging/.github',
                     'open-simulation-interface/.github',
                     'osi-visualizer/.github',
+                    'proto2cpp/.github',
                     'breathe/*']
 
 # The name of the Pygments (syntax highlighting) style to use.
