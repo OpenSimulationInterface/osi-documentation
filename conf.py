@@ -37,7 +37,8 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxcontrib.spelling',
     'breathe',
-    'exhale'
+    'exhale',
+    'recommonmark'
 ]
 breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation/open-simulation-interface/doc/xml" }
 breathe_default_project = "open-simulation-interface"
@@ -45,7 +46,7 @@ breathe_default_project = "open-simulation-interface"
 # Setup the exhale extension
 exhale_args = {
     # These arguments are required
-    "containmentFolder":     "./osi",
+    "containmentFolder":     "./open-simulation-interface",
     "rootFileName":          "library_root.rst",
     "rootFileTitle":         "OSI Reference",
     "doxygenStripFromPath":  "..",
@@ -101,8 +102,11 @@ exclude_patterns = ['_build',
                     '.github',
                     'osi-validation/open-simulation-interface',
                     'osi-validation/proto2cpp',
-                    'osi-validation/README.md',
                     'osi-validation/.github',
+                    'osi-sensor-model-packaging/.github',
+                    'open-simulation-interface/.github',
+                    'osi-visualizer/.github',
+                    'proto2cpp/.github',
                     'breathe/*']
 
 # The name of the Pygments (syntax highlighting) style to use.
