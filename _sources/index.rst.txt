@@ -76,7 +76,7 @@ The authors' vision is to be able to connect any automated driving function to a
     :caption: OSI Sensor Model Packaging:
 
     osi-sensor-model-packaging/README
-    osi-sensor-model-packaging/doc/description
+    osi-sensor-model-packaging/doc/specification
     osi-sensor-model-packaging/doc/examples
 
 .. toctree::

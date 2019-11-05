@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General Description" href="doc/description.html" />
+    <link rel="next" title="OSI Sensor Model Packaging Specification" href="doc/specification.html" />
     <link rel="prev" title="Contributors’ Guidelines" href="../osi-visualizer/doc/howtocontribute.html" /> 
 </head>
 
@@ -121,7 +121,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/examples.html">Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
@@ -196,74 +196,15 @@
   <div class="section" id="osi-sensor-model-packaging">
 <h1>OSI Sensor Model Packaging<a class="headerlink" href="#osi-sensor-model-packaging" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging"><img alt="Build Status" src="https://travis-ci.org/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master" /></a></p>
-<p>OSI Sensor Model Packaging specifies ways in which environmental effect models, sensor models and logical models using the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">Open Simulation Interface (OSI)</a> are to be packaged for their use in simulation environments using FMI 2.0. For more detailed information see the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-sensor-model-packaging/README.html">official documentation</a>.</p>
+<p>OSI Sensor Model Packaging specifies ways in which models (like e.g. environmental effect models, sensor models and logical models) using the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">Open Simulation Interface (OSI)</a> are to be packaged for their use in simulation environments using FMI 2.0.
+The specification can be found in the <a class="reference external" href="doc/specification.rst">doc/specification.rst</a> document in this repository.</p>
+<p>For more detailed information see the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-sensor-model-packaging/README.html">official documentation</a>.</p>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>The examples in the directory <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples"><code class="docutils literal notranslate"><span class="pre">examples</span></code></a> of this repository can be built using CMake. They require that the open-simulation-interface submodule of the repository is populated.</p>
 <p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPDummySource"><code class="docutils literal notranslate"><span class="pre">OSMPDummySource</span></code></a> example can be used as a simplistic source of SensorView (including GroundTruth) data, that can be connected to the input of an OSMPDummySensor model, for simple testing and demonstration purposes.</p>
 <p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPCNetworkProxy"><code class="docutils literal notranslate"><span class="pre">OSMPCNetworkProxy</span></code></a> example demonstrates a simple C network proxy that can send and receive OSI data via TCP sockets.</p>
-<p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPDummySensor"><code class="docutils literal notranslate"><span class="pre">OSMPDummySensor</span></code></a> example can be used as a simple dummy sensor model, demonstrating the use of OSI for sensor models consuming SensorView data and generating SensorData output. Below you can find an example <code class="docutils literal notranslate"><span class="pre">modelDescription.xml</span></code> file that would satisfy the requirements of this document for a sensor model FMU with one input and output and no additional features:</p>
-<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;fmiModelDescription</span>
-  <span class="na">fmiVersion=</span><span class="s">&quot;2.0&quot;</span>
-  <span class="na">modelName=</span><span class="s">&quot;OSI Sensor Model Packaging Demo FMU&quot;</span>
-  <span class="na">guid=</span><span class="s">&quot;aabc2174e20f08597cfae6947c96bf86&quot;</span>
-  <span class="na">variableNamingConvention=</span><span class="s">&quot;structured&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;CoSimulation</span>
-    <span class="na">modelIdentifier=</span><span class="s">&quot;OSMPDemoFMU&quot;</span>
-    <span class="na">canNotUseMemoryManagementFunctions=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;DefaultExperiment</span> <span class="na">startTime=</span><span class="s">&quot;0.0&quot;</span> <span class="na">stepSize=</span><span class="s">&quot;0.020&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;VendorAnnotations&gt;</span>
-    <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-  <span class="nt">&lt;/VendorAnnotations&gt;</span>
-  <span class="nt">&lt;ModelVariables&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;0&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;1&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;2&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;3&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;4&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-    <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;5&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.0.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
-      <span class="nt">&lt;/Annotations&gt;</span>
-    <span class="nt">&lt;/ScalarVariable&gt;</span>
-  <span class="nt">&lt;/ModelVariables&gt;</span>
-  <span class="nt">&lt;ModelStructure&gt;</span>
-    <span class="nt">&lt;Outputs&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;Unknown</span> <span class="na">index=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/Outputs&gt;</span>
-  <span class="nt">&lt;/ModelStructure&gt;</span>
-<span class="nt">&lt;/fmiModelDescription&gt;</span>
-</pre></div>
-</div>
+<p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPDummySensor"><code class="docutils literal notranslate"><span class="pre">OSMPDummySensor</span></code></a> example can be used as a simple dummy sensor model, demonstrating the use of OSI for sensor models consuming SensorView data and generating SensorData output.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
@@ -281,8 +222,9 @@
 <div class="section" id="build-and-install-example">
 <h3>Build and install example<a class="headerlink" href="#build-and-install-example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
-$ <span class="nb">cd</span> osi-sensor-model-packaging/examples
-$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ <span class="nb">cd</span> osi-sensor-model-packaging
+$ git submodule update --init
+$ <span class="nb">cd</span> examples
 $ mkdir -p build
 $ <span class="nb">cd</span> build
 $ cmake ..
@@ -302,7 +244,7 @@ $ sudo make install
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="doc/description.html" class="btn btn-neutral float-right" title="General Description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="doc/specification.html" class="btn btn-neutral float-right" title="OSI Sensor Model Packaging Specification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../osi-visualizer/doc/howtocontribute.html" class="btn btn-neutral float-left" title="Contributors’ Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
