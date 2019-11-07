@@ -217,10 +217,21 @@
 <li><p><a class="reference external" href="https://svn.jmodelica.org/FMILibrary/tags">FMILibrary</a> (&gt;= 2.0.2)</p></li>
 <li><p><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface.git">OSI</a> (&gt;= 3.1.2)</p></li>
 </ul>
+<p>It is often a good idea to first update the system using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade <span class="o">&amp;&amp;</span> sudo apt-get autoremove
+</pre></div>
+</div>
+<p>to ensure up-to-date packages.</p>
+<p>You can install package dependencies using the provided <code class="docutils literal notranslate"><span class="pre">install-deps.sh</span></code>, and OSI and FMILibrary build dependencies using the provided <code class="docutils literal notranslate"><span class="pre">build-install-build-deps.sh</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo bash install-deps.sh
+$ sudo bash build-install-build-deps.sh
+</pre></div>
+</div>
 </div>
 <div class="section" id="build-and-run">
 <h3>Build and run<a class="headerlink" href="#build-and-run" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ bash install.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ bash build.sh
+$ ./build/osi-visualizer
 </pre></div>
 </div>
 <p>or just manually if dependecies are already installed:</p>
