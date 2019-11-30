@@ -61,10 +61,10 @@ osivalidator.osi\_rules\_implementations module
    :undoc-members:
    :show-inheritance:
 
-osivalidator.osi\_scenario module
+osivalidator.osi\_trace module
 ---------------------------------
 
-.. automodule:: osivalidator.osi_scenario
+.. automodule:: osivalidator.osi_trace
    :members:
    :undoc-members:
    :show-inheritance:

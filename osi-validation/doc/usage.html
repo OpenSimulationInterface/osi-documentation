@@ -201,93 +201,126 @@
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>After installation you can call the command <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> in your terminal which has the following usage:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: osivalidator [-h] [--rules RULES] --data DATA
-                    [--type {SensorView,GroundTruth,SensorData}]
-                    [--output OUTPUT] [--timesteps TIMESTEPS] [--debug]
-                    [--verbose]
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage: osivalidator <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--rules RULES<span class="o">]</span>
+                    <span class="o">[</span>--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}]</span>
+                    <span class="o">[</span>--output OUTPUT<span class="o">]</span> <span class="o">[</span>--timesteps TIMESTEPS<span class="o">]</span> <span class="o">[</span>--debug<span class="o">]</span>
+                    <span class="o">[</span>--verbose<span class="o">]</span> <span class="o">[</span>--parallel<span class="o">]</span> <span class="o">[</span>--format <span class="o">{</span>separated,None<span class="o">}]</span>
+                    data
 
 Validate data defined at the input
 
+positional arguments:
+data                  Path to the file with OSI-serialized data.
+
 optional arguments:
---help, -h                                      Show this help message and exit
---rules RULES, -r RULES                         Directory with text files containig rules.
---data DATA, -d DATA                            Path to the file with OSI-serialized data.
---type {SensorView,GroundTruth,SensorData},     Name of the message type used to serialize data.
-    -t {SensorView,GroundTruth,SensorData}
---output OUTPUT, -o OUTPUT                      Output folder of the log files.
---timesteps TIMESTEPS                           Number of timesteps to analyze. If -1, all.
---debug                                         Set the debug mode to ON.
---verbose                                       Set the verbose mode to ON (display in console).
+-h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+--rules RULES, -r RULES
+                        Directory with text files containig rules.
+--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}</span>, -t <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}</span>
+                        Name of the <span class="nb">type</span> used to serialize data.
+--output OUTPUT, -o OUTPUT
+                        Output folder of the log files.
+--timesteps TIMESTEPS
+                        Number of timesteps to analyze. If -1, all.
+--debug               Set the debug mode to ON.
+--verbose, -v         Set the verbose mode to ON.
+--parallel, -p        Set parallel mode to ON.
+--format <span class="o">{</span>separated,None<span class="o">}</span>, -f <span class="o">{</span>separated,None<span class="o">}</span>
+                        Set the format <span class="nb">type</span> of the trace.
 </pre></div>
 </div>
-<p>To run the validation first you need to record an osi-message. Here we already have an osi-message which is called <code class="docutils literal notranslate"><span class="pre">osi_message_test.txt</span></code>. To validate the osi-message you simply call <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> and provide the path to the stored osi-message which is here in the folder <code class="docutils literal notranslate"><span class="pre">osi_message_data</span></code>:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>osivalidator --data osi_message_data/osi_message_test.txt
+<p>To run the validation first you need an OSI trace file which consists of multiple OSI messages.
+In the directory <code class="docutils literal notranslate"><span class="pre">data</span></code> we already have two OSI trace files provided which are called <code class="docutils literal notranslate"><span class="pre">small_test.osi.lzma</span></code> (a <a class="reference external" href="https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm">lzma</a> compressed trace file with length separation of OSI messages) and a <code class="docutils literal notranslate"><span class="pre">small_test.txt.lzma</span></code> (a <a class="reference external" href="https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm">lzma</a> compressed trace file with the <code class="docutils literal notranslate"><span class="pre">$$__$$</span></code> separator which in future will be depracted. Use the <code class="docutils literal notranslate"><span class="pre">txt2osi.py</span></code> of the OSI repo in the format directory to convert from <code class="docutils literal notranslate"><span class="pre">*.txt</span></code> to <code class="docutils literal notranslate"><span class="pre">*.osi</span></code> files or from <code class="docutils literal notranslate"><span class="pre">*.txt.lzma</span></code> to <code class="docutils literal notranslate"><span class="pre">*.osi.lzma</span></code>). See usage below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage: txt2osi converter <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--file FILE<span class="o">]</span>
+                        <span class="o">[</span>--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}]</span>
+                        <span class="o">[</span>--output OUTPUT<span class="o">]</span> <span class="o">[</span>--compress<span class="o">]</span>
+
+Convert txt trace file to osi trace files.
+
+optional arguments:
+-h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+--file FILE, -f FILE  Path to the file with serialized data.
+--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}</span>, -t <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}</span>
+                        Name of the <span class="nb">type</span> used to serialize data.
+--output OUTPUT, -o OUTPUT
+                        Output name of the file.
+--compress, -c        Compress the output to a lzma file.
+</pre></div>
+</div>
+<p>To validate the trace files you simply call <code class="docutils literal notranslate"><span class="pre">osivalidator</span></code> and provide the path to the trace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>osivalidator --data data/small_test.osi.lzma
+osivalidator --data data/small_test.txt.lzma -f separated
+</pre></div>
+</div>
+<p>You can also validate the traces in parallel to increase the speed of the validation by providing <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>osivalidator --data data/small_test.osi.lzma -p
+osivalidator --data data/small_test.txt.lzma -f separated -p
 </pre></div>
 </div>
 <p>After successfully running the validation the following output is generated:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Instanciate logger
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Instanciate logger
 Read data
-Retrieving message offsets in scenario file until inf...
-|################################| 172098454/172098454
-262 messages has been discovered in 0.05367231369018555 s
+Retrieving message offsets in scenario file <span class="k">until</span> inf...
+<span class="p">|</span><span class="c1">################################| 172098454/172098454</span>
+<span class="m">262</span> messages has been discovered in <span class="m">0</span>.05367231369018555 s
 Collect validation rules
 Caching...
 Importing messages from scenario file...
-|################################| 262/262
-Caching done!
-|################################| 262/262 [0:00:11]
+<span class="p">|</span><span class="c1">################################| 262/262</span>
+Caching <span class="k">done</span>!
+<span class="p">|</span><span class="c1">################################| 262/262 [0:00:11]</span>
 
-Errors (27)
+Errors <span class="o">(</span><span class="m">27</span><span class="o">)</span>
 Ranges of timestamps    Message
 ----------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[0, 261]                SensorView.sensor_id.is_set(None) does not comply in SensorView
-[0, 260]                Identifier.value.is_set(None) does not comply in SensorView.sensor_id
-[0, 261]                SensorView.global_ground_truth.is_set(None) does not comply in SensorView
-[0, 260]                GroundTruth.host_vehicle_id.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                Identifier.value.is_set(None) does not comply in SensorView.global_ground_truth.host_vehicle_id
-[0, 260]                GroundTruth.country_code.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                GroundTruth.version.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                InterfaceVersion.version_major.is_set(None) does not comply in SensorView.global_ground_truth.version
-[0, 260]                InterfaceVersion.version_minor.is_set(None) does not comply in SensorView.global_ground_truth.version
-[0, 260]                InterfaceVersion.version_patch.is_set(None) does not comply in SensorView.global_ground_truth.version
-[0, 260]                GroundTruth.timestamp.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                Timestamp.seconds.is_set(None) does not comply in SensorView.global_ground_truth.timestamp
-[0, 260]                Timestamp.nanos.is_set(None) does not comply in SensorView.global_ground_truth.timestamp
-[0, 260]                GroundTruth.stationary_object.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                GroundTruth.moving_object.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                GroundTruth.lane_boundary.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                GroundTruth.lane.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                GroundTruth.environmental_conditions.is_set(None) does not comply in SensorView.global_ground_truth
-[0, 260]                EnvironmentalConditions.atmospheric_pressure.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.temperature.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.relative_humidity.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.ambient_illumination.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.time_of_day.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.TimeOfDay.seconds_since_midnight.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions.time_of_day
-[0, 260]                EnvironmentalConditions.precipitation.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                EnvironmentalConditions.fog.is_set(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                Reference unresolved: GroundTruth to MovingObject (ID: 0)
+<span class="o">[</span><span class="m">0</span>, <span class="m">261</span><span class="o">]</span>                SensorView.sensor_id.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                Identifier.value.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.sensor_id
+<span class="o">[</span><span class="m">0</span>, <span class="m">261</span><span class="o">]</span>                SensorView.global_ground_truth.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.host_vehicle_id.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                Identifier.value.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.host_vehicle_id
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.country_code.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.version.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                InterfaceVersion.version_major.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.version
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                InterfaceVersion.version_minor.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.version
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                InterfaceVersion.version_patch.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.version
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.timestamp.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                Timestamp.seconds.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.timestamp
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                Timestamp.nanos.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.timestamp
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.stationary_object.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.moving_object.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.lane_boundary.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.lane.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.environmental_conditions.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.atmospheric_pressure.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.temperature.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.relative_humidity.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.ambient_illumination.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.time_of_day.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.TimeOfDay.seconds_since_midnight.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions.time_of_day
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.precipitation.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.fog.is_set<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                Reference unresolved: GroundTruth to MovingObject <span class="o">(</span>ID: <span class="m">0</span><span class="o">)</span>
 
-Warnings (5)
+Warnings <span class="o">(</span><span class="m">5</span><span class="o">)</span>
 Ranges of timestamps    Message
 ----------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[0, 260]                GroundTruth.country_code.is_iso_country_code(None) does not comply in SensorView.global_ground_truth.country_code
-[0, 260]                EnvironmentalConditions.atmospheric_pressure.is_greater_than_or_equal_to(80000) does not comply in SensorView.global_ground_truth.environmental_conditions.atmospheric_pressure
-[0, 260]                EnvironmentalConditions.temperature.is_greater_than_or_equal_to(170) does not comply in SensorView.global_ground_truth.environmental_conditions.temperature
-[0, 260]                GroundTruth.environmental_conditions.is_valid(None) does not comply in SensorView.global_ground_truth.environmental_conditions
-[0, 260]                SensorView.global_ground_truth.is_valid(None) does not comply in SensorView.global_ground_truth
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.country_code.is_iso_country_code<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.country_code
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.atmospheric_pressure.is_greater_than_or_equal_to<span class="o">(</span><span class="m">80000</span><span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions.atmospheric_pressure
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                EnvironmentalConditions.temperature.is_greater_than_or_equal_to<span class="o">(</span><span class="m">170</span><span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions.temperature
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                GroundTruth.environmental_conditions.is_valid<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth.environmental_conditions
+<span class="o">[</span><span class="m">0</span>, <span class="m">260</span><span class="o">]</span>                SensorView.global_ground_truth.is_valid<span class="o">(</span>None<span class="o">)</span> does not comply in SensorView.global_ground_truth
 </pre></div>
 </div>
 <p>The Output is a report of how many errors (here 27) and warnings (here 5) were found in the osi-message according to the defined rules. The rules can be found under the tag <code class="docutils literal notranslate"><span class="pre">\rules</span></code> in the *.proto files from the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">osi github</a> or in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation/tree/master/requirements-osi-3">requirements folder</a> from osi-validation as *.yml files (for more information see <a class="reference internal" href="../../open-simulation-interface/doc/commenting.html#commenting"><span class="std std-ref">Commenting</span></a>).  Currently an error is thrown when a field is not set. A warning is thrown when a field is set but do not comply with the defined rules. For each error and warning there is a description on which timestamp it was found, the path to the rule and the path to the osi-message. The general format is:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Errors (NUMBER_ERRORS)
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Errors <span class="o">(</span>NUMBER_ERRORS<span class="o">)</span>
 Ranges of timestamps                Message
 --------------------------------    --------------------------------------------------------
-[START_TIMESTAMP, END_TIMESTAMP]    PATH_TO_RULE(VALUE) does not comply in PATH_TO_OSI_FIELD
+<span class="o">[</span>START_TIMESTAMP, END_TIMESTAMP<span class="o">]</span>    PATH_TO_RULE<span class="o">(</span>VALUE<span class="o">)</span> does not comply in PATH_TO_OSI_FIELD
 
-Warnings (NUMBER_WARNINGS)
+Warnings <span class="o">(</span>NUMBER_WARNINGS<span class="o">)</span>
 Ranges of timestamps    Message
 --------------------------------    --------------------------------------------------------
-[START_TIMESTAMP, END_TIMESTAMP]    PATH_TO_RULE(VALUE) does not comply in PATH_TO_OSI_FIELD
+<span class="o">[</span>START_TIMESTAMP, END_TIMESTAMP<span class="o">]</span>    PATH_TO_RULE<span class="o">(</span>VALUE<span class="o">)</span> does not comply in PATH_TO_OSI_FIELD
 </pre></div>
 </div>
 </div>

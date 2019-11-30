@@ -68,10 +68,6 @@ Install osi-validator:
 
 ``cd ..; pip install .``
 
-Last step copy ``requirements-osi-3`` to ``vpython/lib/python3.6/site-packages``
-
-``cp -R requirements-osi-3 vpython/lib/python3.6/site-packages/``
-
 
 Setup for windows users
 -------------------------

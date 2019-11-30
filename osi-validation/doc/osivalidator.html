@@ -110,7 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_rules">osivalidator.osi_rules module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_rules_checker">osivalidator.osi_rules_checker module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_rules_implementations">osivalidator.osi_rules_implementations module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_scenario">osivalidator.osi_scenario module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_trace">osivalidator.osi_trace module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-osivalidator.osi_validator_logger">osivalidator.osi_validator_logger module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-osivalidator">Module contents</a></li>
 </ul>
@@ -609,7 +609,7 @@ the message type.</p>
 <div class="section" id="module-osivalidator.osi_rules_checker">
 <span id="osivalidator-osi-rules-checker-module"></span><h2>osivalidator.osi_rules_checker module<a class="headerlink" href="#module-osivalidator.osi_rules_checker" title="Permalink to this headline">¶</a></h2>
 <p>This module contains all the rules which a message or an attribute of a message
-from an OSI scenario can comply.</p>
+from an OSI trace can comply.</p>
 <dl class="class">
 <dt id="osivalidator.osi_rules_checker.OSIRulesChecker">
 <em class="property">class </em><code class="sig-name descname">OSIRulesChecker</code><span class="sig-paren">(</span><em class="sig-param">logger=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_rules_checker.OSIRulesChecker" title="Permalink to this definition">¶</a></dt>
@@ -869,17 +869,17 @@ exists or not</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-osivalidator.osi_scenario">
-<span id="osivalidator-osi-scenario-module"></span><h2>osivalidator.osi_scenario module<a class="headerlink" href="#module-osivalidator.osi_scenario" title="Permalink to this headline">¶</a></h2>
-<p>Module that contains OSIDataContainer class to handle and manage OSI scenarios.</p>
+<div class="section" id="module-osivalidator.osi_trace">
+<span id="osivalidator-osi-trace-module"></span><h2>osivalidator.osi_trace module<a class="headerlink" href="#module-osivalidator.osi_trace" title="Permalink to this headline">¶</a></h2>
+<p>Module that contains OSIDataContainer class to handle and manage OSI traces.</p>
 <dl class="class">
-<dt id="osivalidator.osi_scenario.OSIScenario">
-<em class="property">class </em><code class="sig-name descname">OSIScenario</code><span class="sig-paren">(</span><em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.OSITrace">
+<em class="property">class </em><code class="sig-name descname">OSITrace</code><span class="sig-paren">(</span><em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class wrap OSI data. It can import and decode OSI scenarios.</p>
+<p>This class wrap OSI data. It can import and decode OSI traces.</p>
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range">
-<code class="sig-name descname">cache_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.cache_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.OSITrace.cache_messages_in_index_range">
+<code class="sig-name descname">cache_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.cache_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Put all messages from index begin to index end in the cache. Then the
 method <code class="docutils literal notranslate"><span class="pre">get_message_by_index</span></code> can access to it in a faster way.</p>
 <p>Using this method again clear the last cache and replace it with a new
@@ -887,42 +887,47 @@ one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.from_file">
-<code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">type_name='SensorView'</em>, <em class="sig-param">max_index=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.from_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Import a scenario from a file</p>
+<dt id="osivalidator.osi_trace.OSITrace.from_file">
+<code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">type_name='SensorView'</em>, <em class="sig-param">max_index=-1</em>, <em class="sig-param">format_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import a trace from a file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.get_message_by_index">
-<code class="sig-name descname">get_message_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_message_by_index" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.OSITrace.get_message_by_index">
+<code class="sig-name descname">get_message_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.get_message_by_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a message by its index. Try first to get it from the cache made
 by the method <code class="docutils literal notranslate"><span class="pre">cache_messages_in_index_range</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range">
-<code class="sig-name descname">get_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.get_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.OSITrace.get_messages_in_index_range">
+<code class="sig-name descname">get_messages_in_index_range</code><span class="sig-paren">(</span><em class="sig-param">begin</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.get_messages_in_index_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Yield an iterator over messages of indexes between begin and end included.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.retrieve_message_offsets">
-<code class="sig-name descname">retrieve_message_offsets</code><span class="sig-paren">(</span><em class="sig-param">max_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.retrieve_message_offsets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve the offsets of all the messages of the scenario and store them
+<dt id="osivalidator.osi_trace.OSITrace.retrieve_message">
+<code class="sig-name descname">retrieve_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.retrieve_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="osivalidator.osi_trace.OSITrace.retrieve_message_offsets">
+<code class="sig-name descname">retrieve_message_offsets</code><span class="sig-paren">(</span><em class="sig-param">max_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.retrieve_message_offsets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the offsets of all the messages of the trace and store them
 in the <cite>message_offsets</cite> attribute of the object</p>
 <p>It returns the number of discovered timesteps</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="osivalidator.osi_scenario.OSIScenario.update_bar">
-<code class="sig-name descname">update_bar</code><span class="sig-paren">(</span><em class="sig-param">progress_bar</em>, <em class="sig-param">new_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.OSIScenario.update_bar" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.OSITrace.update_bar">
+<code class="sig-name descname">update_bar</code><span class="sig-paren">(</span><em class="sig-param">progress_bar</em>, <em class="sig-param">new_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.update_bar" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
-<dt id="osivalidator.osi_scenario.get_size_from_file_stream">
-<code class="sig-name descname">get_size_from_file_stream</code><span class="sig-paren">(</span><em class="sig-param">file_object</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_scenario.get_size_from_file_stream" title="Permalink to this definition">¶</a></dt>
+<dt id="osivalidator.osi_trace.get_size_from_file_stream">
+<code class="sig-name descname">get_size_from_file_stream</code><span class="sig-paren">(</span><em class="sig-param">file_object</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.get_size_from_file_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a file size from a file stream given in parameters</p>
 </dd></dl>
 
