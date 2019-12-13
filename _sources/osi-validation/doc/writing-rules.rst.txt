@@ -47,7 +47,7 @@ The rules can either be with or without any parameters.
 In the case a rule has a parameter, it is written as a `mapping` ( a `scalar`
 followed by a colon ":"). What comes after the colon depends on the rule used. For instance, the rule ``is_greater_than_or_equal_to`` accept a double.
 
-The available rules and their usage are explained in the osi-validator class `osi_rules_implementations <https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator.html#module-osivalidator.osi_rules_implementations>`_. See also examples for available rules which can be defined in ``*.yml`` files below:
+The available rules and their usage are explained in the osi-validator class `osi_rules_implementations <https://opensimulationinterface.github.io/osi-documentation/osi-validation/doc/osivalidator.html#module-osivalidator.osi_rules_implementations>`_. See also examples for available rules which can be defined in ``*.yml`` files below:
 
 .. code-block:: python
     

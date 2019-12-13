@@ -19,10 +19,10 @@ Organization Build Overview
 
 
 
-.. _Open Simulation Interface: https://opensimulationinterface.github.io/osi-documentation/osi/README.html
-.. _OSI Validation: https://opensimulationinterface.github.io/osi-documentation/osi-validator/osivalidator-module.html
+.. _Open Simulation Interface: https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/README.html
+.. _OSI Validation: https://opensimulationinterface.github.io/osi-documentation/osi-validation/README.html
 .. _OSI Visualizer: https://opensimulationinterface.github.io/osi-documentation/osi-visualizer/README.html
-.. _OSI Model Packaging: https://opensimulationinterface.github.io/osi-documentation/osi-model-packaging/README.html
+.. _OSI Model Packaging: https://opensimulationinterface.github.io/osi-documentation/osi-sensor-model-packaging/README.html
 
 .. |osi_build| image:: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface.svg?branch=master
     :target: https://travis-ci.org/OpenSimulationInterface/open-simulation-interface

@@ -1,12 +1,12 @@
 Installation Guide
 ====================
-The *OSI Validator* has been developed with **Python 3.6** with virtual environment. It is the only version of Python that is supported now. *OSI Validator* should only be used with **Python 3.6**.
+The OSI Validator is being developed with Python 3.6 within a virtual environment. It is recommended to use the same python version for validation tasks.
 
 Setup for linux users
 ----------------------
 This setup guide is for users who want to just use the validator.
 
-Clone repository osi-validation:
+Clone the repository osi-validation:
 
 ``git clone https://github.com/OpenSimulationInterface/osi-validation.git``
 
@@ -14,17 +14,21 @@ Change directory to osi-validation:
 
 ``cd osi-validation``
 
-Clone the repository open-simulation-interface:
+Clone the submodules:
 
-``git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git``
+``git submodule update --init``
 
-Clone repository proto2cpp:
+Install the open-simulation-interface:
 
-``git clone https://github.com/OpenSimulationInterface/proto2cpp.git``
+``cd open-simulation-interface; pip install .``
 
 Install osi-validation into the global root directory:
 
-``sudo pip3 install .``
+``cd ..; sudo pip3 install .``
+
+Now you can run the validator on an example trace file (``trace.osi``) by calling:
+
+``osivalidator -d trace.osi``
 
 
 Setup for linux developers
@@ -39,13 +43,9 @@ Change directory:
 
 ``cd osi-validation``
 
-Clone repository open-simulation-interface:
+Clone the submodules:
 
-``git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git``
-
-Clone repository proto2cpp:
-
-``git clone https://github.com/OpenSimulationInterface/proto2cpp.git``
+``git submodule update --init``
 
 It is best practice to use a virtual environment in python. It has various advantages such as the ability to install modules locally, export a working environment, and execute a Python program in that environment so that you don't mess around with your global python environment. 
 Install virtual environment:
@@ -64,9 +64,11 @@ Install open-simulation-interface:
 
 ``cd open-simulation-interface; pip install .``
 
-Install osi-validator:
+Now you can run the validator on an example trace file (``trace.osi``) by calling:
 
-``cd ..; pip install .``
+``python osivalidator/osi_general_validator.py -d trace.osi``
+
+The advantage to call the osi-validator this way for developers is that you do not need to reinstall the application when you made changes to the code.
 
 
 Setup for windows users

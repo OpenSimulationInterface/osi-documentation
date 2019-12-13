@@ -43,8 +43,7 @@ OSI Validator has been developed with Python 3.6 within a virtual environment on
 ```bash
 $ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ cd osi-validation
-$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
-$ git clone https://github.com/OpenSimulationInterface/proto2cpp.git
+$ git submodule update --init
 $ sudo apt-get install virtualenv
 $ virtualenv -p /usr/bin/python3 vpython
 $ source vpython/bin/activate
@@ -59,8 +58,7 @@ $ pip install .
 ```bash
 $ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ cd osi-validation
-$ git clone https://github.com/OpenSimulationInterface/proto2cpp.git
-$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ git submodule update --init
 $ cd open-simulation-interface
 $ sudo pip3 install .
 $ cd ..

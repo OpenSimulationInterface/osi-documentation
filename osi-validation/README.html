@@ -236,8 +236,7 @@ optional arguments:
 <h3>Local (recommended)<a class="headerlink" href="#local-recommended" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ <span class="nb">cd</span> osi-validation
-$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
-$ git clone https://github.com/OpenSimulationInterface/proto2cpp.git
+$ git submodule update --init
 $ sudo apt-get install virtualenv
 $ virtualenv -p /usr/bin/python3 vpython
 $ <span class="nb">source</span> vpython/bin/activate
@@ -252,8 +251,7 @@ $ pip install .
 <h3>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ <span class="nb">cd</span> osi-validation
-$ git clone https://github.com/OpenSimulationInterface/proto2cpp.git
-$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+$ git submodule update --init
 $ <span class="nb">cd</span> open-simulation-interface
 $ sudo pip3 install .
 $ <span class="nb">cd</span> ..
