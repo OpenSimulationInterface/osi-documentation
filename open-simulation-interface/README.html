@@ -283,7 +283,7 @@
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">pip3</span></code> and missing python packages:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install python3-pip python-setuptools
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install python3-pip python3-setuptools
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> 3.0.0:</p>
@@ -308,10 +308,10 @@ $ sudo make install
 <p>Local:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
 $ <span class="nb">cd</span> open-simulation-interface
-$ sudo pip3 install virtualenv 
+$ sudo pip3 install virtualenv
 $ virtualenv -p python3 venv
 $ <span class="nb">source</span> venv/bin/activate
-$ pip install .
+$ python3 -m pip install .
 </pre></div>
 </div>
 <p>Global:</p>
