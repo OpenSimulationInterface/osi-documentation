@@ -205,6 +205,7 @@
                     <span class="o">[</span>--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}]</span>
                     <span class="o">[</span>--output OUTPUT<span class="o">]</span> <span class="o">[</span>--timesteps TIMESTEPS<span class="o">]</span> <span class="o">[</span>--debug<span class="o">]</span>
                     <span class="o">[</span>--verbose<span class="o">]</span> <span class="o">[</span>--parallel<span class="o">]</span> <span class="o">[</span>--format <span class="o">{</span>separated,None<span class="o">}]</span>
+                    <span class="o">[</span>--blast BLAST<span class="o">]</span> <span class="o">[</span>--buffer BUFFER<span class="o">]</span>
                     data
 
 Validate data defined at the input
@@ -227,6 +228,13 @@ optional arguments:
 --parallel, -p        Set parallel mode to ON.
 --format <span class="o">{</span>separated,None<span class="o">}</span>, -f <span class="o">{</span>separated,None<span class="o">}</span>
                         Set the format <span class="nb">type</span> of the trace.
+--blast BLAST, -bl BLAST
+                        Set the in-memory storage count of OSI messages during
+                        validation.
+--buffer BUFFER, -bu BUFFER
+                        Set the buffer size to retrieve OSI messages from
+                        trace file. Set it to <span class="m">0</span> <span class="k">if</span> you <span class="k">do</span> not want to use
+                        buffering at all.
 </pre></div>
 </div>
 <p>To run the validation first you need an OSI trace file which consists of multiple OSI messages.

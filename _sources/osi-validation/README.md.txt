@@ -10,6 +10,7 @@ usage: osivalidator [-h] [--rules RULES]
                     [--type {SensorView,GroundTruth,SensorData}]
                     [--output OUTPUT] [--timesteps TIMESTEPS] [--debug]
                     [--verbose] [--parallel] [--format {separated,None}]
+                    [--blast BLAST] [--buffer BUFFER]
                     data
 
 Validate data defined at the input
@@ -32,6 +33,13 @@ optional arguments:
   --parallel, -p        Set parallel mode to ON.
   --format {separated,None}, -f {separated,None}
                         Set the format type of the trace.
+  --blast BLAST, -bl BLAST
+                        Set the in-memory storage count of OSI messages during
+                        validation.
+  --buffer BUFFER, -bu BUFFER
+                        Set the buffer size to retrieve OSI messages from
+                        trace file. Set it to 0 if you do not want to use
+                        buffering at all.
 ```
 
 ## Installation

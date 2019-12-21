@@ -307,6 +307,11 @@ into it.</p>
 <span id="osivalidator-osi-general-validator-module"></span><h2>osivalidator.osi_general_validator module<a class="headerlink" href="#module-osivalidator.osi_general_validator" title="Permalink to this headline">¶</a></h2>
 <p>Main class and entry point of the OSI Validator.</p>
 <dl class="function">
+<dt id="osivalidator.osi_general_validator.check_positive_int">
+<code class="sig-name descname">check_positive_int</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.check_positive_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="osivalidator.osi_general_validator.close_pool">
 <code class="sig-name descname">close_pool</code><span class="sig-paren">(</span><em class="sig-param">pool</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_general_validator.close_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cleanly close a pool to free the memory</p>
@@ -874,7 +879,7 @@ exists or not</p>
 <p>Module that contains OSIDataContainer class to handle and manage OSI traces.</p>
 <dl class="class">
 <dt id="osivalidator.osi_trace.OSITrace">
-<em class="property">class </em><code class="sig-name descname">OSITrace</code><span class="sig-paren">(</span><em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">OSITrace</code><span class="sig-paren">(</span><em class="sig-param">buffer_size</em>, <em class="sig-param">show_progress=True</em>, <em class="sig-param">path=None</em>, <em class="sig-param">type_name='SensorView'</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class wrap OSI data. It can import and decode OSI traces.</p>
 <dl class="method">
@@ -908,12 +913,15 @@ by the method <code class="docutils literal notranslate"><span class="pre">cache
 <dl class="method">
 <dt id="osivalidator.osi_trace.OSITrace.retrieve_message">
 <code class="sig-name descname">retrieve_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.retrieve_message" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Retrieve the offsets of all the messages of the osi trace and store them
+in the <cite>message_offsets</cite> attribute of the object</p>
+<p>It returns the number of discovered timesteps</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="osivalidator.osi_trace.OSITrace.retrieve_message_offsets">
 <code class="sig-name descname">retrieve_message_offsets</code><span class="sig-paren">(</span><em class="sig-param">max_index</em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_trace.OSITrace.retrieve_message_offsets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieve the offsets of all the messages of the trace and store them
+<dd><p>Retrieve the offsets of all the messages of the txt trace and store them
 in the <cite>message_offsets</cite> attribute of the object</p>
 <p>It returns the number of discovered timesteps</p>
 </dd></dl>

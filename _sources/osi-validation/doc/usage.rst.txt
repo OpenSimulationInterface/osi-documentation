@@ -11,6 +11,7 @@ After installation you can call the command ``osivalidator`` in your terminal wh
                         [--type {SensorView,GroundTruth,SensorData}]
                         [--output OUTPUT] [--timesteps TIMESTEPS] [--debug]
                         [--verbose] [--parallel] [--format {separated,None}]
+                        [--blast BLAST] [--buffer BUFFER]
                         data
 
     Validate data defined at the input
@@ -33,6 +34,13 @@ After installation you can call the command ``osivalidator`` in your terminal wh
     --parallel, -p        Set parallel mode to ON.
     --format {separated,None}, -f {separated,None}
                             Set the format type of the trace.
+    --blast BLAST, -bl BLAST
+                            Set the in-memory storage count of OSI messages during
+                            validation.
+    --buffer BUFFER, -bu BUFFER
+                            Set the buffer size to retrieve OSI messages from
+                            trace file. Set it to 0 if you do not want to use
+                            buffering at all.
 
 To run the validation first you need an OSI trace file which consists of multiple OSI messages. 
 In the directory ``data`` we already have two OSI trace files provided which are called ``small_test.osi.lzma`` (a `lzma <https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm>`_ compressed trace file with length separation of OSI messages) and a ``small_test.txt.lzma`` (a `lzma <https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm>`_ compressed trace file with the ``$$__$$`` separator which in future will be depracted. Use the ``txt2osi.py`` of the OSI repo in the format directory to convert from ``*.txt`` to ``*.osi`` files or from ``*.txt.lzma`` to ``*.osi.lzma``). See usage below:
