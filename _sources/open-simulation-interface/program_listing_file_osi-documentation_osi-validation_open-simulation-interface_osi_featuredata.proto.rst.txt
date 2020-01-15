@@ -290,25 +290,25 @@ Program Listing for File osi_featuredata.proto
    
        // Absolute radial (in direction to the sensor) velocity of the detection.
        //
-       // Unit: [m/s]
+       // Unit: m/s
        //
        optional double radial_velocity = 5;
    
        // Root mean squared error of the object measured radial velocity.
        //
-       // Unit: [m/s]
+       // Unit: m/s
        //
        optional double radial_velocity_rmse = 6;
    
        // The radar cross section (RCS) of the radar detection.
        //
-       // Unit: [dB m^2]
+       // Unit: dB m^2
        //
        optional double rcs = 7;
    
        // The signal to noise ratio (SNR) of the radar detection.
        //
-       // Unit: [dB]
+       // Unit: dB
        //
        optional double snr = 8;
    
@@ -386,19 +386,19 @@ Program Listing for File osi_featuredata.proto
        // The height value which is required when multiple scan points are
        // vertically clustered. Only vertical clustering is allowed (z-axis).
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double height = 5;
    
        // Root mean squared error of the object height.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double height_rmse = 6;
    
        // Intensity or equivalent value of the detection's echo.
        //
-       // Unit: [%]
+       // Unit: %
        //
        optional double intensity = 7;
    
@@ -425,7 +425,7 @@ Program Listing for File osi_featuredata.proto
    {
        // Maximal range of the ultrasonic sensor.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double max_range = 1;
    
@@ -514,7 +514,7 @@ Program Listing for File osi_featuredata.proto
    
        // Measured distance (radius) of the detection.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double distance = 3;
    }
@@ -554,13 +554,13 @@ Program Listing for File osi_featuredata.proto
    
        // First parameter b of an ellipsoid equation.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double ellipsoid_radial = 3;
    
        // Second parameter b of an ellipsoid equation.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double ellipsoid_axial = 4;
    

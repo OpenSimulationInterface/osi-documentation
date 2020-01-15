@@ -384,19 +384,19 @@
             <span class="c1">//</span>
             <span class="n">DENSITY_SOLID</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
-            <span class="c1">// Perforation max. ]0; 100] [mm]</span>
+            <span class="c1">// Perforation max. ]0; 100] mm</span>
             <span class="c1">//</span>
             <span class="n">DENSITY_SMALL_MESH</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-            <span class="c1">// Perforation max. ]100; 500] [mm]</span>
+            <span class="c1">// Perforation max. ]100; 500] mm</span>
             <span class="c1">//</span>
             <span class="n">DENSITY_MEDIAN_MESH</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-            <span class="c1">// Perforation max. ]500; 5000] [mm]</span>
+            <span class="c1">// Perforation max. ]500; 5000] mm</span>
             <span class="c1">//</span>
             <span class="n">DENSITY_LARGE_MESH</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
-            <span class="c1">// Perforation max. ]5000; infinity] [mm]</span>
+            <span class="c1">// Perforation max. ]5000; infinity[ mm</span>
             <span class="c1">//</span>
             <span class="n">DENSITY_OPEN</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
         <span class="p">}</span>
@@ -572,13 +572,11 @@
         <span class="c1">// Median radius of the wheels measured from a center of the wheel</span>
         <span class="c1">// including tire.</span>
         <span class="c1">//</span>
-        <span class="c1">// Unit: [m]</span>
+        <span class="c1">// Unit: m</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="kt">double</span> <span class="n">radius_wheel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
         <span class="c1">// Number of independent wheels.</span>
-        <span class="c1">//</span>
-        <span class="c1">// Unit: []</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_wheels</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
@@ -596,7 +594,7 @@
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">Vector3d</span> <span class="n">bbcenter_to_front</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
-        <span class="c1">// Static minimal distance in [m] of under-body plane to ground</span>
+        <span class="c1">// Static minimal distance in m of under-body plane to ground</span>
         <span class="c1">// surface plane (i.e. disregarding driving dynamic effects or road</span>
         <span class="c1">// surface effects) under neutral load conditions. Can be useful to</span>
         <span class="c1">// approximate the clear area under a vehicle that a sensor can see</span>

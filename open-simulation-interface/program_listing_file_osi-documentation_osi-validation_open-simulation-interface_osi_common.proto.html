@@ -199,26 +199,26 @@
 <span class="c1">//</span>
 <span class="c1">// The coordinate system is defined as right-handed.</span>
 <span class="c1">//</span>
-<span class="c1">// Units are [m] for positions, [m/s] for velocities and [m/s^2] for</span>
+<span class="c1">// Units are m for positions, m/s for velocities, and m/s^2 for</span>
 <span class="c1">// accelerations.</span>
 <span class="c1">//</span>
 <span class="n">message</span> <span class="n">Vector3d</span>
 <span class="p">{</span>
     <span class="c1">// The x coordinate.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m] [m/s] or [m/s^2]</span>
+    <span class="c1">// Unit: m, m/s, or m/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The y coordinate.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m] [m/s] or [m/s^2]</span>
+    <span class="c1">// Unit: m, m/s, or m/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// The z coordinate.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m] [m/s] or [m/s^2]</span>
+    <span class="c1">// Unit: m, m/s, or m/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>
@@ -227,20 +227,20 @@
 <span class="c1">// \brief A cartesian 2D vector for positions, velocities or accelerations or</span>
 <span class="c1">// its uncertainties.</span>
 <span class="c1">//</span>
-<span class="c1">// Units are [m] for positions, [m/s] for velocities and [m/s^2] for</span>
+<span class="c1">// Units are m for positions, m/s for velocities, and m/s^2 for</span>
 <span class="c1">// accelerations.</span>
 <span class="c1">//</span>
 <span class="n">message</span> <span class="n">Vector2d</span>
 <span class="p">{</span>
     <span class="c1">// The x coordinate.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m] [m/s] or [m/s^2]</span>
+    <span class="c1">// Unit: m, m/s, or m/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The y coordinate.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m] [m/s] or [m/s^2]</span>
+    <span class="c1">// Unit: m, m/s, or m/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
@@ -259,7 +259,7 @@
     <span class="c1">// The number of seconds since the start of e.g. the simulation / system /</span>
     <span class="c1">// vehicle.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [s]</span>
+    <span class="c1">// Unit: s</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">int64</span> <span class="n">seconds</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
@@ -267,7 +267,7 @@
     <span class="c1">//</span>
     <span class="c1">// Range: [0, 999.999.999]</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [ns]</span>
+    <span class="c1">// Unit: ns</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">nanos</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
@@ -287,19 +287,19 @@
 <span class="p">{</span>
     <span class="c1">// The length of the box.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m]</span>
+    <span class="c1">// Unit: m</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The width of the box.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m]</span>
+    <span class="c1">// Unit: m</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// The height of the box.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m]</span>
+    <span class="c1">// Unit: m</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>
@@ -308,10 +308,10 @@
 <span class="c1">// \brief A 3D orientation, orientation rate or orientation acceleration (i.e.</span>
 <span class="c1">// derivatives) or its uncertainties denoted in euler angles.</span>
 <span class="c1">//</span>
-<span class="c1">// Units are [rad] for orientation [rad/s] for rates and [rad/s^2] for</span>
+<span class="c1">// Units are rad for orientation, rad/s for rates, and rad/s^2 for</span>
 <span class="c1">// accelerations</span>
 <span class="c1">//</span>
-<span class="c1">// The preferred angular range is (-pi, pi]. The coordinate system is defined as</span>
+<span class="c1">// The preferred angular range is [-pi, pi]. The coordinate system is defined as</span>
 <span class="c1">// right-handed.</span>
 <span class="c1">// For the sense of each rotation, the right-hand rule applies.</span>
 <span class="c1">//</span>
@@ -341,19 +341,19 @@
 <span class="p">{</span>
     <span class="c1">// The roll angle/rate/acceleration.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [rad] [rad/s] or [rad/s^2]</span>
+    <span class="c1">// Unit: rad, rad/s, or rad/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">roll</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The pitch angle/rate/acceleration.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [rad] [rad/s] or [rad/s^2]</span>
+    <span class="c1">// Unit: rad, rad/s, or rad/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">pitch</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// The yaw angle/rate/acceleration.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [rad] [rad/s] or [rad/s^2]</span>
+    <span class="c1">// Unit: rad, rad/s, or rad/s^2</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">yaw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>
@@ -421,19 +421,19 @@
 <span class="p">{</span>
     <span class="c1">// The radial distance.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [m]</span>
+    <span class="c1">// Unit: m</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The azimuth (horizontal) angle.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [rad]</span>
+    <span class="c1">// Unit: rad</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">azimuth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// The elevation (vertical) angle.</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [rad]</span>
+    <span class="c1">// Unit: rad</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">elevation</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>

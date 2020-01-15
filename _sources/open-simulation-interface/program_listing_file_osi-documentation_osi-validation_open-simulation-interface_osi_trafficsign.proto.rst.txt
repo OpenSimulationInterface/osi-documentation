@@ -49,91 +49,87 @@ Program Listing for File osi_trafficsign.proto
    
            // Value without unit.
            //
-           // Unit: []
-           //
            UNIT_NO_UNIT = 2;
    
            // Velocity.
            // Kilometers per hour.
            //
-           // Unit: [km/h]
+           // Unit: km/h
            //
            UNIT_KILOMETER_PER_HOUR = 3;
    
            // Velocity.
            // Miles per hour.
            //
-           // Unit: [mph]
+           // Unit: mph
            //
            UNIT_MILE_PER_HOUR = 4;
    
            // Length.
            // Meter.
            //
-           // Unit: [m]
+           // Unit: m
            //
            UNIT_METER = 5;
    
            // Length.
            // Kilometer.
            //
-           // Unit: [km]
+           // Unit: km
            //
            UNIT_KILOMETER = 6;
    
            // Length.
            // Feet.
            //
-           // Unit: [ft]
+           // Unit: ft
            //
            UNIT_FEET = 7;
    
            // Length.
            // Mile.
            //
-           // Unit: [mile]
+           // Unit: mile
            //
            UNIT_MILE = 8;
    
            // Weight.
            // Ton.
            //
-           // Unit: [t]
+           // Unit: t
            //
            UNIT_METRIC_TON = 9;
    
            // Weight.
-           // Long ton UK 1,016.047 [kg].
+           // Long ton UK 1,016.047 kg.
            //
-           // Unit: [tn. l.]
+           // Unit: tn. l.
            //
            UNIT_LONG_TON = 10;
    
            // Weight.
-           // Short ton USA 907.1847 [kg].
+           // Short ton USA 907.1847 kg.
            //
-           // Unit: [tn. sh.]
+           // Unit: tn. sh.
            //
            UNIT_SHORT_TON = 11;
    
            // Time of day.
            // Hour since midnight.
            //
-           // Unit: [min]
+           // Unit: min
            //
            UNIT_MINUTES = 12;
    
            // Day of the week.
            // Days since Monday. Monday = 0; Tuesday = 1; ...
            //
-           // Unit: []
-           //
            UNIT_DAY = 13;
    
            // Percentage.
            // Value.
            //
-           // Unit: [%]
+           // Unit: %
            //
            UNIT_PERCENTAGE = 14;
        }
@@ -157,7 +153,7 @@ Program Listing for File osi_trafficsign.proto
        //
        optional Identifier id = 1;
    
-       // Main sign, e.g. speed limit 30 [km/h]
+       // Main sign, e.g. speed limit 30 km/h
        //
        optional MainSign main_sign = 2;
    
@@ -1872,7 +1868,7 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // \note In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    //
                    TYPE_TRUCKS_PROHIBITED = 39;
    
@@ -2030,7 +2026,7 @@ Program Listing for File osi_trafficsign.proto
                    //
                    // \note In the German StVO, tractors are defined as motorized
                    // vehicles that are not allowed to, or cannot, drive faster
-                   // than 25 [km/h].
+                   // than 25 km/h.
                    //
                    TYPE_TRACTORS_PROHIBITED = 163;
    
@@ -3797,7 +3793,7 @@ Program Listing for File osi_trafficsign.proto
                    TYPE_SHOULDER_NOT_PASSABLE_MOTOR_VEHICLES = 220;
    
                    // Shoulder unsafe for vehicles with a permitted gross weight
-                   // over 3.5 [t] and for tractors.
+                   // over 3.5 t and for tractors.
                    // <table cellspacing="0" cellpadding="0">
                    // <tr>
                    // <td>
@@ -4447,7 +4443,7 @@ Program Listing for File osi_trafficsign.proto
                    //
                    TYPE_HIGHWAY_PREANNOUNCEMENT_DIRECTIONS = 126;
    
-                   // Pole indicating highways exit in ... [m].
+                   // Pole indicating highways exit in ... m.
                    // <table cellspacing="0" cellpadding="0">
                    // <tr>
                    // <td>
@@ -4466,7 +4462,7 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit to specify the distance in [m]
+                   // TrafficSignValue::value_unit to specify the distance in m
                    // or the displayed number of stripes (in that case, set \c
                    // TrafficSignValue::value_unit to \c
                    // TrafficSignValue::UNIT_NO_UNIT.).
@@ -6018,7 +6014,7 @@ Program Listing for File osi_trafficsign.proto
                    // All green signals ("green wave") at certain speed.
                    // <br>
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [km/h]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. km/h) to indicate the
                    // speed.
                    // </td>
                    // </tr>
@@ -6304,7 +6300,7 @@ Program Listing for File osi_trafficsign.proto
                    // - Use \c TrafficSignValue::value to include the distance
                    // indicated in the sign. Accompany this value with an
                    // indication of its unit of measure given by \c
-                   // TrafficSignValue::value_unit (e.g. [m]),
+                   // TrafficSignValue::value_unit (e.g. m),
                    // - Use \c TrafficSignValue::text to indicate the sign's
                    // specific text,
                    //
@@ -6337,7 +6333,7 @@ Program Listing for File osi_trafficsign.proto
                    // "STOP" + distance
                    // </td>
                    // <td>
-                   // Stop in e.g. ... [m]
+                   // Stop in e.g. ... m
                    // </td>
                    // </tr>
                    // <tr>
@@ -6351,7 +6347,7 @@ Program Listing for File osi_trafficsign.proto
                    // &rdquo;Rei&szlig;verschluss erst in&rdquo; + distance
                    // </td>
                    // <td>
-                   // Zipper merge in e.g. ... [m]
+                   // Zipper merge in e.g. ... m
                    // </td>
                    // </tr>
                    // <tr>
@@ -6365,7 +6361,7 @@ Program Listing for File osi_trafficsign.proto
                    // "Ende Seitenstreifen in" + distance
                    // </td>
                    // <td>
-                   // End of the side strip in e.g. ... [m]
+                   // End of the side strip in e.g. ... m
                    // </td>
                    // </tr>
                    // <tr>
@@ -6379,7 +6375,7 @@ Program Listing for File osi_trafficsign.proto
                    // "Ende in" + distance
                    // </td>
                    // <td>
-                   // End in .. [m]
+                   // End in .. m
                    // </td>
                    // </tr>
                    // <tr>
@@ -6399,7 +6395,7 @@ Program Listing for File osi_trafficsign.proto
                    // still be used up to a certain point. To indicate the point,
                    // use one of the following alternatives:
                    // - A numerical value described by \c TrafficSignValue::value
-                   // and \c TrafficSignValue::value_unit (e.g. [m]) to indicate
+                   // and \c TrafficSignValue::value_unit (e.g. m) to indicate
                    // the point as a distance from the sign.
                    // - A text described by \c TrafficSignValue::text in order to
                    // describe the point's location verbally, e.g. "Baugebiet ...".
@@ -6416,7 +6412,7 @@ Program Listing for File osi_trafficsign.proto
                    // - Use one or more \c TrafficSignValue messages to include
                    // the times indicated in the sign. Accompany each value with an
                    // indication of its unit of measure given by \c
-                   // TrafficSignValue::value_unit, e.g. [h].
+                   // TrafficSignValue::value_unit, e.g. h.
                    // - For each \c TrafficSignValue, \c TrafficSignValue::value
                    // indicates the time elapsed since midnight every day.
                    // - Use the \c TrafficSignValue::text member of the
@@ -6506,7 +6502,7 @@ Program Listing for File osi_trafficsign.proto
                    // TrafficSignValue::value indicates the time elapsed since
                    // midnight of the corresponding day, and \c
                    // TrafficSignValue::value_unit indicates the unit this time is
-                   // expressed in, e.g. in [min].
+                   // expressed in, e.g. in min.
                    // </td>
                    // </tr>
                    // <tr>
@@ -6933,10 +6929,10 @@ Program Listing for File osi_trafficsign.proto
                    // Trucks.
                    // \note
                    // - In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    // - This supplementary sign also denotes the trucks' tractor
                    // units and trailers.
-                   // - Cars and buses with a total weight superior to 3.5 [t] are
+                   // - Cars and buses with a total weight superior to 3.5 t are
                    // not denoted by this. sign.
                    // </td>
                    // </tr>
@@ -7080,7 +7076,7 @@ Program Listing for File osi_trafficsign.proto
                    // Tractors.
                    // \note In the German StVO, tractors are defined as motorized
                    // vehicles that are not allowed to, or cannot, drive faster
-                   // than 25 [km/h].
+                   // than 25 km/h.
                    // </td>
                    // </tr>
                    // <tr>
@@ -7203,7 +7199,7 @@ Program Listing for File osi_trafficsign.proto
                    // &rdquo;d&uuml;rfen &uuml;berholt werden&rdquo;.
                    // \note In the German StVO, tractors are defined as motorized
                    // vehicles that are not allowed to, or cannot, drive faster
-                   // than 25 [km/h].
+                   // than 25 km/h.
                    // </td>
                    // </tr>
                    // <tr>
@@ -7440,7 +7436,7 @@ Program Listing for File osi_trafficsign.proto
                    // Only trucks with trailers and trucks with semi-trailers.
                    // \note
                    // - In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    // - This supplementary sign also denotes the trucks'
                    // tractor units and trailers.
                    // - This supplementary sign excludes passenger cars and
@@ -7477,7 +7473,7 @@ Program Listing for File osi_trafficsign.proto
                    // <br>
                    // \note
                    // - In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    // - This supplementary sign also denotes the trucks' tractor
                    // units and trailers.
                    // </td>
@@ -7616,7 +7612,7 @@ Program Listing for File osi_trafficsign.proto
                    // each \c TrafficSignValue, \c TrafficSignValue::value
                    // indicates the time elapsed since midnight every day, and \c
                    // TrafficSignValue::value_unit indicates the unit this time is
-                   // expressed in, e.g. in [min].
+                   // expressed in, e.g. in min.
                    // </td>
                    // </tr>
                    // <tr>
@@ -7942,10 +7938,10 @@ Program Listing for File osi_trafficsign.proto
                    // Except trucks, their tractor unit and their trailers.
                    // \note
                    // - In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    // - This supplementary sign also denotes the trucks' tractor
                    // units and trailers.
-                   // - Cars and buses with a total weight superior to 3.5 [t] are
+                   // - Cars and buses with a total weight superior to 3.5 t are
                    // not exempted of a rule by this sign.
                    // </td>
                    // </tr>
@@ -7963,10 +7959,10 @@ Program Listing for File osi_trafficsign.proto
                    // Except trucks with trailers.
                    // \note
                    // - In the German StVO, trucks are defined as motorized
-                   // vehicles that are heavier than 3.5 [t].
+                   // vehicles that are heavier than 3.5 t.
                    // - This supplementary sign also denotes the trucks' tractor
                    // units and trailers.
-                   // - Cars and buses with a total weight superior to 3.5 [t] are
+                   // - Cars and buses with a total weight superior to 3.5 t are
                    // not exempted of a rule by this sign.
                    // </td>
                    // </tr>
@@ -8026,7 +8022,7 @@ Program Listing for File osi_trafficsign.proto
                    // Except tractors.
                    // \note In the German StVO, tractors are defined as motorized
                    // vehicles that are not allowed to, or cannot, drive faster
-                   // than 25 [km/h].
+                   // than 25 km/h.
                    // </td>
                    // </tr>
                    // <tr>
@@ -8057,7 +8053,7 @@ Program Listing for File osi_trafficsign.proto
                    // Except campers with a maximum allowed mass.
                    // <br>
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [t]) to indicate the mass.
+                   // TrafficSignValue::value_unit (e.g. t) to indicate the mass.
                    // </td>
                    // </tr>
                    // <tr>
@@ -8394,7 +8390,7 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [m]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. m) to indicate the
                    // distance.
                    //
                    TYPE_VALID_FOR_DISTANCE = 3;
@@ -8549,14 +8545,14 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [m]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. m) to indicate the
                    // distance.
                    //
                    // \note For OSI 4.0 compatibility use \c #TYPE_SPACE instead.
                    //
                    TYPE_VALID_IN_DISTANCE = 4;
    
-                   // Stop in e.g. .. [m].
+                   // Stop in e.g. .. m.
                    // <table cellspacing="0" cellpadding="0">
                    // <tr>
                    // <td>
@@ -8568,7 +8564,7 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [m]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. m) to indicate the
                    // distance.
                    //
                    // \note For OSI 4.0 compatibility use \c #TYPE_SPACE instead.
@@ -8741,7 +8737,7 @@ Program Listing for File osi_trafficsign.proto
                    // TrafficSignValue, \c TrafficSignValue::value indicates
                    // the time elapsed since midnight each day, and \c
                    // TrafficSignValue::value_unit indicates the unit this time is
-                   // expressed in, e.g. in [min].
+                   // expressed in, e.g. in min.
                    // - If including start and end days of the week, include two
                    // additional \c TrafficSignValue messages. For these messages,
                    // use \c TrafficSignValue::value_unit as \c
@@ -8767,7 +8763,7 @@ Program Listing for File osi_trafficsign.proto
                    // </td>
                    // <td>
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [min]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. min) to indicate the
                    // allowed duration of parking.
                    // </td>
                    // </tr>
@@ -8783,7 +8779,7 @@ Program Listing for File osi_trafficsign.proto
                    // </td>
                    // <td>
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. [min]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. min) to indicate the
                    // allowed duration of parking. Set \c TrafficSignValue::text
                    // to &rdquo;in gekennzeichneten Fl&auml;chen&rdquo;.
                    // </td>
@@ -8806,7 +8802,7 @@ Program Listing for File osi_trafficsign.proto
                    // </table>
                    //
                    // Use \c TrafficSignValue::value and \c
-                   // TrafficSignValue::value_unit (e.g. in [t]) to indicate the
+                   // TrafficSignValue::value_unit (e.g. in t) to indicate the
                    // weight.
                    //
                    TYPE_WEIGHT = 6;
@@ -9113,7 +9109,7 @@ Program Listing for File osi_trafficsign.proto
                    //
                    // \note In the German StVO, tractors are defined as
                    // motorized vehicles that are not allowed to, or cannot,
-                   // drive faster than 25 [km/h]
+                   // drive faster than 25 km/h
                    //
                    ACTOR_TRACTORS = 37;
    
@@ -9129,7 +9125,7 @@ Program Listing for File osi_trafficsign.proto
                    //
                    // \note
                    // In the German StVO, trucks are defined as
-                   // motorized vehicles that are heavier than 3.5 [t]
+                   // motorized vehicles that are heavier than 3.5 t
                    //
                    ACTOR_TRUCKS = 40;
    

@@ -26,7 +26,7 @@ Program Listing for File osi_sensorspecific.proto
    {
        // The radar cross section (RCS) of the detected object.
        //
-       // Unit: [dB m^2]
+       // Unit: dB m^2
        //
        optional double rcs = 1;
    }
@@ -60,14 +60,14 @@ Program Listing for File osi_sensorspecific.proto
        // Maximum measured distance from one sensor which leads to the calculation
        // of this object.
        //
-       // Unit: [m]
+       // Unit: m
        //
        optional double maximum_measurement_distance_sensor = 1;
    
        // This value indicates the propability height for the classification in the
        // calculated object.
        //
-       // Unit: [%]
+       // Unit: %
        //
        optional double probability = 2;
    

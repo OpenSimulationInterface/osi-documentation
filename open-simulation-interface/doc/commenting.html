@@ -198,6 +198,9 @@
 <span id="id1"></span><h1>Commenting<a class="headerlink" href="#commenting" title="Permalink to this headline">¶</a></h1>
 <p>During the building process of open simulation interface (using the <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> filter), doxygen is creating a <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/">reference documentation</a> processing all comments written in the code of the interface. In order to do that doxygen needs the comments to be written in a certain way. Please follow these rules to achieve that the reference documentation is created correctly. You will find further information on doxygen <a class="reference external" href="http://www.doxygen.nl/manual/docblocks.html">here</a>.</p>
 <p>For any additional comment styles see <a class="reference external" href="http://www.doxygen.nl/manual/commands.html">list</a> of doxygen commands.</p>
+<p>Reference for writing values and units: ISO 80000-1: 2009, Quantities and units – Part 1: General
+Nice summary: [Rohde &amp; Schwarz: Der korrekte Umgang mit Größen, Einheiten und Gleichungen ](<a class="reference external" href="https://karriere.rohde-schwarz.de/fileadmin/customer/downloads/PDF/Der_korrekte_Umgang_mit_Groessen_Einheiten_und_Gleichungen_bro_de_01.pdf">https://karriere.rohde-schwarz.de/fileadmin/customer/downloads/PDF/Der_korrekte_Umgang_mit_Groessen_Einheiten_und_Gleichungen_bro_de_01.pdf</a>
+)</p>
 <div class="section" id="commenting-with-block-syntax">
 <h2>Commenting with block syntax<a class="headerlink" href="#commenting-with-block-syntax" title="Permalink to this headline">¶</a></h2>
 <p>Start every comment with <code class="docutils literal notranslate"><span class="pre">//</span></code> and do not use <code class="docutils literal notranslate"><span class="pre">///</span></code>.</p>
@@ -214,7 +217,7 @@
 </div>
 <p>Doxygen will interpret a comment consisting just of one single line as a brief description.
 However to keep the style of the documentation coherent there should not be any brief description when commenting on fields and enums. That is why adding one more empty line when commenting becomes necessary. There is no need for an extra empty line if you are commenting more than one line anyways.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;If you write two or more lines of comments...&gt;</span>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;If you write two or more lines of comments...&gt;</span>
 <span class="c1">// &lt;... you do not need to add an empty line&gt;</span>
 <span class="kd">message</span> <span class="nc">ExampleMessage</span>
 <span class="p">{</span>
@@ -315,7 +318,7 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
-    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</span>
     <span class="c1">//</span>
     <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -332,9 +335,9 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
-    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">// Unit: Pa</span>
     <span class="c1">//</span>
     <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -351,9 +354,9 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
-    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">// Unit: Pa</span>
     <span class="c1">//</span>
     <span class="c1">// \note 100000 Pa = 1 bar</span>
     <span class="c1">//</span>
@@ -372,9 +375,9 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
-    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">// Unit: Pa</span>
     <span class="c1">//</span>
     <span class="c1">// \note 100000 Pa = 1 bar</span>
     <span class="c1">//</span>
@@ -396,9 +399,9 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="c1">//</span>
 <span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
-    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 [Pa]).</span>
+    <span class="c1">// Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</span>
     <span class="c1">//</span>
-    <span class="c1">// Unit: [Pa]</span>
+    <span class="c1">// Unit: Pa</span>
     <span class="c1">//</span>
     <span class="c1">// \note 100000 Pa = 1 bar</span>
     <span class="c1">//</span>
@@ -436,12 +439,12 @@ However to keep the style of the documentation coherent there should not be any 
 <div class="section" id="commenting-with-doxygen-references">
 <h2>Commenting with doxygen references<a class="headerlink" href="#commenting-with-doxygen-references" title="Permalink to this headline">¶</a></h2>
 <p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put ‘c’ in front of the message name.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
 </pre></div>
 </div>
 <p>If you want to reference a nested message, use ‘::’ instead of ‘.’ as separators in comments.</p>
 <p>If you want to reference message fields and enums add ‘#’ to the enum/field name.</p>
-<div class="highlight-proto notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
 </pre></div>
 </div>
 </div>

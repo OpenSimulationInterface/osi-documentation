@@ -24,7 +24,7 @@ Program Listing for File osi_datarecording.proto
    //
    message SensorDataSeries
    {
-       // List of sensor data messages for subsequent timesteps.
+       // List of sensor data messages for subsequent time steps.
        //
        // \note OSI uses singular instead of plural for repeated field names.
        //
@@ -37,7 +37,7 @@ Program Listing for File osi_datarecording.proto
    //
    message SensorDataSeriesList
    {
-       // List of sensor data for multiple sensors at subsequent timesteps.
+       // List of sensor data for multiple sensors at subsequent time steps.
        //
        // \note OSI uses singular instead of plural for repeated field names.
        //

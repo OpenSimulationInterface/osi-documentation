@@ -537,26 +537,26 @@
         <span class="p">{</span>
             <span class="c1">// The temperature of the roads surface in Kelvin.</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [K]</span>
+            <span class="c1">// Unit: K</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_temperature</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
             <span class="c1">// The height of the water film on top of the surface in mm.</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [mm]</span>
+            <span class="c1">// Unit: mm</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_water_film</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
             <span class="c1">// The temperature where the water on top of the surface would start</span>
             <span class="c1">// to freeze or dew in Kelvin.</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [K]</span>
+            <span class="c1">// Unit: K</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_freezing_point</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
             <span class="c1">// The percentage of ice covering the road.</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [%]</span>
+            <span class="c1">// Unit: %</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_ice</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
@@ -567,29 +567,29 @@
             <span class="c1">// 20 mm/m (a very rough road).</span>
             <span class="c1">//</span>
             <span class="c1">// Estimated value ranges (IRI):</span>
-            <span class="c1">// 0.0 [mm/m] absolutely perfect evenness</span>
-            <span class="c1">// 0.3 -  1.8 [mm/m] airport runways and superhighways</span>
-            <span class="c1">// 1.4 -  3.4 [mm/m] new pavements</span>
-            <span class="c1">// 2.2 -  5.7 [mm/m] older pavements</span>
-            <span class="c1">// 3.2 -  9.8 [mm/m] maintained unpaved roads</span>
-            <span class="c1">// 4.0 - 11.0 [mm/m] damaged pavements</span>
+            <span class="c1">// 0.0 mm/m absolutely perfect evenness</span>
+            <span class="c1">// 0.3 -  1.8 mm/m airport runways and superhighways</span>
+            <span class="c1">// 1.4 -  3.4 mm/m new pavements</span>
+            <span class="c1">// 2.2 -  5.7 mm/m older pavements</span>
+            <span class="c1">// 3.2 -  9.8 mm/m maintained unpaved roads</span>
+            <span class="c1">// 4.0 - 11.0 mm/m damaged pavements</span>
             <span class="c1">// 8.0 - &gt;</span>
-            <span class="c1">// 20 [mm/m] rough unpaved roads</span>
+            <span class="c1">// 20 mm/m rough unpaved roads</span>
             <span class="c1">//</span>
             <span class="c1">// Speed of normal use (IRI):</span>
-            <span class="c1">// 30 [km/h] - 20   [mm/m]</span>
-            <span class="c1">// 50 [km/h] - 14.5 [mm/m]</span>
-            <span class="c1">// 60 [km/h] - 10.0 [mm/m]</span>
-            <span class="c1">// 80 [km/h] -  8.5 [mm/m]</span>
-            <span class="c1">// 100 [km/h] -  3.4 [mm/m]</span>
+            <span class="c1">// 30 km/h - 20   mm/m</span>
+            <span class="c1">// 50 km/h - 14.5 mm/m</span>
+            <span class="c1">// 60 km/h - 10.0 mm/m</span>
+            <span class="c1">// 80 km/h -  8.5 mm/m</span>
+            <span class="c1">// 100 km/h -  3.4 mm/m</span>
             <span class="c1">//</span>
             <span class="c1">// Road conditions (IRI);</span>
-            <span class="c1">// 15 [mm/m] erosion gulleys and deep depressions</span>
-            <span class="c1">// 11 [mm/m] frequent shallow depressions, some deep</span>
-            <span class="c1">// 9 [mm/m] frequent minor depressions</span>
-            <span class="c1">// 5 [mm/m] surface imperfections</span>
+            <span class="c1">// 15 mm/m erosion gulleys and deep depressions</span>
+            <span class="c1">// 11 mm/m frequent shallow depressions, some deep</span>
+            <span class="c1">// 9 mm/m frequent minor depressions</span>
+            <span class="c1">// 5 mm/m surface imperfections</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [mm/m]</span>
+            <span class="c1">// Unit: mm/m</span>
             <span class="c1">//</span>
             <span class="c1">// \par References:</span>
             <span class="c1">// - [1] SAYERS, M.W.; KARAMIHAS, S.M. Little Book of Profiling,</span>
@@ -605,7 +605,7 @@
             <span class="c1">// 0.5m. It is given as the standard height deviation of fine</span>
             <span class="c1">// roughness</span>
             <span class="c1">//</span>
-            <span class="c1">// Unit: [m]</span>
+            <span class="c1">// Unit: m</span>
             <span class="c1">//</span>
             <span class="c1">// \par References:</span>
             <span class="c1">// - [1] SAYERS, M.W.; KARAMIHAS, S.M. Little Book of Profiling,</span>
