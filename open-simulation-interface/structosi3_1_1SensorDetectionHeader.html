@@ -358,7 +358,8 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1SensorDetectionHeader_1a66bcd17ab25dda7d4545e10472188e92"></span><code class="sig-name descname">optional uint64 osi3::SensorDetectionHeader::cycle_counter = 2</code></dt>
-<dd><p>Monotonous counter to identify the exact cycle. In general the detection function is called periodically and <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a66bcd17ab25dda7d4545e10472188e92"><span class="std std-ref"><span class="pre">cycle_counter</span></span></a></code> corresponds to the number of periods. </p>
+<dd><p>Monotonous counter to identify the exact cycle. In general the detection function is called periodically and <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorDetectionHeader_1a66bcd17ab25dda7d4545e10472188e92"><span class="std std-ref"><span class="pre">cycle_counter</span></span></a></code> corresponds to the number of periods.</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
@@ -393,8 +394,9 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorDetectionHeader_1a49fcf349c4dbda9b88d5784cd3cdb078"></span><code class="sig-name descname">optional uint32 osi3::SensorDetectionHeader::number_of_valid_detections = 6</code></dt>
 <dd><p>The current number of valid detections in the detections list.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This value has to be set if the list contains invalid detections. </p>
+<p><p>is_greater_than_or_equal_to: 0  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This value has to be set if the list contains invalid detections.</p>
 </dd>
 </dl>
 </p>

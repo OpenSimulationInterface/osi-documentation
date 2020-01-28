@@ -214,9 +214,9 @@
 <dt>
 <span class="target" id="structosi3_1_1UltrasonicDetection_1a57cc9b3e327cc7274db3f16c509be4aa"></span><code class="sig-name descname">optional double osi3::UltrasonicDetection::existence_probability = 1</code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
-<p>Range: [0.0, 1.0]</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence. </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
 </dd>
 </dl>
 </p>
@@ -226,8 +226,9 @@
 <dt>
 <span class="target" id="structosi3_1_1UltrasonicDetection_1ac2828d1150a0cda1ba5d26ef7e089d30"></span><code class="sig-name descname">optional Identifier osi3::UltrasonicDetection::object_id = 2</code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object. </p>
+<p><p>refers_to: DetectedObject  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
 </dd>
 </dl>
 </p>
@@ -237,7 +238,8 @@
 <dt>
 <span class="target" id="structosi3_1_1UltrasonicDetection_1acb0a30da407b4c5e468798d8e71ff752"></span><code class="sig-name descname">optional double osi3::UltrasonicDetection::distance = 3</code></dt>
 <dd><p>Measured distance (radius) of the detection.</p>
-<p>Unit: m </p>
+<p>Unit: m</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 </div>

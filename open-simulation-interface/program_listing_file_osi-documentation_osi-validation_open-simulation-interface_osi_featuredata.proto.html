@@ -261,6 +261,10 @@
     <span class="c1">// In general the detection function is called periodically and</span>
     <span class="c1">// \c #cycle_counter corresponds to the number of periods.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint64</span> <span class="n">cycle_counter</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// Mounting position of the sensor (origin and orientation of the sensor</span>
@@ -306,6 +310,10 @@
     <span class="c1">// The current number of valid detections in the detections list.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This value has to be set if the list contains invalid detections.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_valid_detections</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
@@ -443,16 +451,23 @@
     <span class="c1">// Existence probability of the detection not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar detections.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Use as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// ID of the detected object this detection is associated to.</span>
     <span class="c1">//</span>
     <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: DetectedObject</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -469,11 +484,19 @@
     <span class="c1">//</span>
     <span class="c1">// Unit: m/s</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">radial_velocity</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
     <span class="c1">// Root mean squared error of the object measured radial velocity.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: m/s</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">radial_velocity_rmse</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
@@ -492,7 +515,10 @@
     <span class="c1">// Describes the possibility whether more than one object may have led to</span>
     <span class="c1">// this detection.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">point_target_probability</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
@@ -538,16 +564,23 @@
     <span class="c1">// Existence probability of the detection not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar detections.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// ID of the detected object this detection is associated to.</span>
     <span class="c1">//</span>
     <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: DetectedObject</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -565,11 +598,19 @@
     <span class="c1">//</span>
     <span class="c1">// Unit: m</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
     <span class="c1">// Root mean squared error of the object height.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: m</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">height_rmse</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
@@ -577,12 +618,20 @@
     <span class="c1">//</span>
     <span class="c1">// Unit: %</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 100</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">intensity</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// The free space probability in the range [0.0, 1.0] from the origin of the</span>
     <span class="c1">// sensor up to this detection, as given by the distance.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">free_space_probability</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
@@ -676,10 +725,13 @@
     <span class="c1">// Existence probability of the detection not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar detections.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
@@ -687,11 +739,19 @@
     <span class="c1">//</span>
     <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: DetectedObject</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
     <span class="c1">// Measured distance (radius) of the detection.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: m</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>
@@ -716,16 +776,23 @@
     <span class="c1">// Existence probability of the detection not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar detections.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// ID of the detected object this detection is associated to.</span>
     <span class="c1">//</span>
     <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: DetectedObject</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -761,6 +828,10 @@
     <span class="c1">// refer.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This value has to be set if the list contains invalid points.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_valid_points</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -799,16 +870,23 @@
     <span class="c1">// Existence probability of the detection not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar detections.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// ID of the detected object this detection is associated to.</span>
     <span class="c1">//</span>
     <span class="c1">// \note ID = MAX(uint64) indicates no reference to an object.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: DetectedObject</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">object_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -959,7 +1037,10 @@
     <span class="c1">// This probability defines the mininimum probability for each selected</span>
     <span class="c1">// shape classification.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">shape_classification_probability</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
 
@@ -969,7 +1050,10 @@
 
     <span class="c1">// The probability of the shape&#39;s color.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">color_probability</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span>
 
@@ -987,6 +1071,10 @@
 
     <span class="c1">// Number of points which defines the shape.</span>
     <span class="c1">// \c #image_shape_type may restrict the number of possible values.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_points</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
 
@@ -1125,10 +1213,13 @@
     <span class="c1">// Existence probability of the point not based on history. Value does</span>
     <span class="c1">// not depend on any past experience with similar points.</span>
     <span class="c1">//</span>
-    <span class="c1">// Range: [0.0, 1.0]</span>
-    <span class="c1">//</span>
     <span class="c1">// \note Used as confidence measure where a low value means less confidence</span>
     <span class="c1">// and a high value indicates strong confidence.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">existence_probability</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 

@@ -208,6 +208,10 @@
 <span class="p">{</span>
     <span class="c1">// The ID of the object.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The base parameters of the stationary object.</span>
@@ -468,6 +472,10 @@
 <span class="p">{</span>
     <span class="c1">// The ID of the object.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The base parameters of the vehicle.</span>
@@ -494,6 +502,10 @@
     <span class="c1">// \note This field is mandatory if the \c #type is</span>
     <span class="c1">// #TYPE_VEHICLE .</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// check_if this.type is_equal_to 2 else do_check is_set</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">VehicleAttributes</span> <span class="n">vehicle_attributes</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
     <span class="c1">// Specific information about the classification of the vehicle.</span>
@@ -501,6 +513,10 @@
     <span class="c1">//</span>
     <span class="c1">// \note This field is mandatory if the \c #type is</span>
     <span class="c1">// #TYPE_VEHICLE .</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// check_if this.type is_equal_to 2 else do_check is_set</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">VehicleClassification</span> <span class="n">vehicle_classification</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
@@ -574,9 +590,17 @@
         <span class="c1">//</span>
         <span class="c1">// Unit: m</span>
         <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// is_greater_than_or_equal_to: 0</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
         <span class="n">optional</span> <span class="kt">double</span> <span class="n">radius_wheel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
         <span class="c1">// Number of independent wheels.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// is_greater_than_or_equal_to: 1</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_wheels</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
@@ -625,6 +649,10 @@
         <span class="c1">//</span>
         <span class="c1">// \note Field need not be set if has_Trailer is set to false or use</span>
         <span class="c1">// value for non valid id.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.has_trailer is_equal_to true else do_check is_set</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">trailer_id</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 

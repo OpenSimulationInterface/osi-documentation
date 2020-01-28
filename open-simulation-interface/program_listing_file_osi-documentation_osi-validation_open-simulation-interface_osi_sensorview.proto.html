@@ -245,6 +245,10 @@
     <span class="c1">// object output; it is distinct from the IDs of its physical detectors,</span>
     <span class="c1">// which are used in the detected features.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">sensor_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
     <span class="c1">// The virtual mounting position of the sensor (origin and orientation</span>
@@ -307,6 +311,10 @@
     <span class="n">optional</span> <span class="n">GroundTruth</span> <span class="n">global_ground_truth</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// The ID of the host vehicle in the \c #global_ground_truth data.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: &#39;MovingObject&#39;</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">host_vehicle_id</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 

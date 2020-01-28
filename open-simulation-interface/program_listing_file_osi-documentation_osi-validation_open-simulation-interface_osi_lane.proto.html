@@ -229,6 +229,10 @@
     <span class="c1">//</span>
     <span class="c1">// \note Note ID is global unique.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The classification of the lane.</span>
@@ -419,6 +423,10 @@
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
         <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">left_adjacent_lane_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
         <span class="c1">// List of IDs of all lane segments that are directly adjacent to the</span>
@@ -434,6 +442,10 @@
         <span class="c1">// \c #TYPE_INTERSECTION .</span>
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">right_adjacent_lane_id</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
@@ -464,6 +476,10 @@
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
         <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">right_lane_boundary_id</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
         <span class="c1">// The left adjacent lane boundaries \c #left_lane_boundary_id may only</span>
@@ -481,6 +497,10 @@
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
         <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">left_lane_boundary_id</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
         <span class="c1">// The free boundaries which have no/unknown assignment to left/right.</span>
@@ -492,6 +512,10 @@
         <span class="c1">// lane boundaries.</span>
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">free_lane_boundary_id</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
@@ -539,11 +563,19 @@
             <span class="c1">//</span>
             <span class="c1">// Unit: K</span>
             <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_temperature</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
             <span class="c1">// The height of the water film on top of the surface in mm.</span>
             <span class="c1">//</span>
             <span class="c1">// Unit: mm</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_water_film</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -552,11 +584,19 @@
             <span class="c1">//</span>
             <span class="c1">// Unit: K</span>
             <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_freezing_point</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
             <span class="c1">// The percentage of ice covering the road.</span>
             <span class="c1">//</span>
             <span class="c1">// Unit: %</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_ice</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
@@ -594,6 +634,10 @@
             <span class="c1">// \par References:</span>
             <span class="c1">// - [1] SAYERS, M.W.; KARAMIHAS, S.M. Little Book of Profiling,</span>
             <span class="c1">// University of Michigan Transportation Research Institute, 1998.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_roughness</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
@@ -662,9 +706,17 @@
         <span class="p">{</span>
             <span class="c1">// The antecessor lane ID.</span>
             <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
             <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">antecessor_lane_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
             <span class="c1">// The successor lane ID.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
             <span class="c1">//</span>
             <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">successor_lane_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
         <span class="p">}</span>
@@ -688,6 +740,10 @@
 <span class="n">message</span> <span class="n">LaneBoundary</span>
 <span class="p">{</span>
     <span class="c1">// The ID of the lane boundary.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
@@ -715,6 +771,13 @@
     <span class="c1">//</span>
     <span class="c1">// \attention For \c BoundaryPoint the same rule for the approximation</span>
     <span class="c1">// error applies as for \c Lane::Classification::centerline.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// first_element width is_equal_to 0.13</span>
+    <span class="c1">// first_element height is_equal_to 0.14</span>
+    <span class="c1">// last_element width is_equal_to 0.13</span>
+    <span class="c1">// last_element height is_equal_to 0.13</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">repeated</span> <span class="n">BoundaryPoint</span> <span class="n">boundary_line</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -865,6 +928,10 @@
         <span class="c1">// The ids of \c StationaryObject which limit the corresponding lane.</span>
         <span class="c1">// This field must be set if the \c #type is set to</span>
         <span class="c1">// \c #TYPE_STRUCTURE</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// refers_to: StationaryObject</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">limiting_structure_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 

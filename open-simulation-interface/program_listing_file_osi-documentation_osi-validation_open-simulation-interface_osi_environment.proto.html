@@ -233,11 +233,21 @@
     <span class="c1">//</span>
     <span class="c1">// Unit: Pa</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 80000</span>
+    <span class="c1">// is_less_than_or_equal_to: 120000</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
     <span class="c1">// Temperature in Kelvin at z=0.0 in world frame.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: K</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 170</span>
+    <span class="c1">// is_less_than_or_equal_to: 340</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
@@ -248,6 +258,12 @@
     <span class="c1">// temperature and atmospheric_pressure are known.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: %</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// is_less_than_or_equal_to: 100</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">relative_humidity</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
     <span class="c1">// Description of the precipitation.</span>
@@ -483,6 +499,11 @@
         <span class="c1">//</span>
         <span class="c1">// \note No changes of daylight saving time or time zones are</span>
         <span class="c1">// considered.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// is_greater_than_or_equal_to: 0</span>
+        <span class="c1">// is_less_than: 86400</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">uint32</span> <span class="n">seconds_since_midnight</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>

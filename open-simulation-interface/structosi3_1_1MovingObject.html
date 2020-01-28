@@ -262,7 +262,8 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a6a9a247e8d9c4a642b6d89dbcdf0d7da"></span><code class="sig-name descname">optional Identifier osi3::MovingObject::id = 1</code></dt>
-<dd><p>The ID of the object. </p>
+<dd><p>The ID of the object.</p>
+<p>is_globally_unique  </p>
 </dd></dl>
 
 <dl class="member">
@@ -299,8 +300,9 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1aad46113ea5b9f84a4094f671630a010c"></span><code class="sig-name descname">optional VehicleAttributes osi3::MovingObject::vehicle_attributes = 5</code></dt>
 <dd><p>Specific information about the vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> . </p>
+<p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
 </dd>
 </dl>
 </p>
@@ -310,8 +312,9 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a791fbef677615ca9e8e7af0595bb3b3d"></span><code class="sig-name descname">optional VehicleClassification osi3::MovingObject::vehicle_classification = 6</code></dt>
 <dd><p>Specific information about the classification of the vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> . </p>
+<p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
 </dd>
 </dl>
 </p>
@@ -361,13 +364,15 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a848ab52664318bb5f56acf5db0c21248"></span><code class="sig-name descname">optional double osi3::MovingObject::VehicleAttributes::radius_wheel = 2</code></dt>
 <dd><p>Median radius of the wheels measured from a center of the wheel including tire.</p>
-<p>Unit: m </p>
+<p>Unit: m</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a41139d820fbf7d590d68f09f5322a4e4"></span><code class="sig-name descname">optional uint32 osi3::MovingObject::VehicleAttributes::number_wheels = 3</code></dt>
-<dd><p>Number of independent wheels. </p>
+<dd><p>Number of independent wheels.</p>
+<p>is_greater_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="member">
@@ -530,8 +535,9 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a12a530dffb8ca980ee9909072c54e482"></span><code class="sig-name descname">optional Identifier osi3::MovingObject::VehicleClassification::trailer_id = 4</code></dt>
 <dd><p>Id of the attached trailer.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if has_Trailer is set to false or use value for non valid id. </p>
+<p><p>check_if this.has_trailer is_equal_to true else do_check is_set  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Field need not be set if has_Trailer is set to false or use value for non valid id.</p>
 </dd>
 </dl>
 </p>

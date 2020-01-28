@@ -221,7 +221,8 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1LaneBoundary_1ac5457eacc69aea20409a8b0e895c65b1"></span><code class="sig-name descname">optional Identifier osi3::LaneBoundary::id = 1</code></dt>
-<dd><p>The ID of the lane boundary. </p>
+<dd><p>The ID of the lane boundary.</p>
+<p>is_globally_unique  </p>
 </dd></dl>
 
 <dl class="member">
@@ -231,12 +232,13 @@
 <p>Since a <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> is part of a sequence, only the position attribute has to be set for each instance. All other values will be reused from the previous <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> in the sequence or set to default values if there is none or it was never set.</p>
 <p><img alt="../_images/OSI_LaneBoundary.svg" src="../_images/OSI_LaneBoundary.svg" /></p>
 <p>Example: The boundary_line of the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code> with id lb2 is given by (bp2_1, …, bp2_{i-1}, bp2_{i}, bp2_{i+1}, …).</p>
-<p><dl class="simple">
+<p><p>first_element width is_equal_to 0.13 first_element height is_equal_to 0.14 last_element width is_equal_to 0.13 last_element height is_equal_to 0.13  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>For dashed lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has to be at the start and another at the end of each dashed line segment. The first <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the beginning of the first dashed lane marking. The last <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the end of the last dashed lane marking. For example, the area between the second and third <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has no lane marking, and so on. </p>
 </dd>
 <dt><strong>Note</strong></dt><dd><p>For Botts’ dots lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> position has to define each Botts’ dot.</p>
 </dd>
-<dt><strong>Attention</strong></dt><dd><p>For <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> the same rule for the approximation error applies as for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">Lane::Classification::centerline</span></span></a></code>. </p>
+<dt><strong>Attention</strong></dt><dd><p>For <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> the same rule for the approximation error applies as for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">Lane::Classification::centerline</span></span></a></code>.</p>
 </dd>
 </dl>
 </p>
@@ -478,6 +480,7 @@
 <dt>
 <span class="target" id="structosi3_1_1LaneBoundary_1_1Classification_1a6e0dc12b94249ce6e56040a45b15dd3e"></span><code class="sig-name descname">repeated Identifier osi3::LaneBoundary::Classification::limiting_structure_id = 3</code></dt>
 <dd><p>The ids of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject"><span class="std std-ref"><span class="pre">StationaryObject</span></span></a></code> which limit the corresponding lane. This field must be set if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1Classification.html#structosi3_1_1LaneBoundary_1_1Classification_1ab65a78f20478e9c3a722c122e80aee6f"><span class="std std-ref"><span class="pre">type</span></span></a></code> is set to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1Classification.html#structosi3_1_1LaneBoundary_1_1Classification_1a9576e0ea6592a1f986bfc9ae2b5a8b47a28987ed47392310a41cbdaff066360d0"><span class="std std-ref"><span class="pre">TYPE_STRUCTURE</span></span></a></code> </p>
+<p>refers_to: <a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject"><span class="std std-ref">StationaryObject</span></a></p>
 </dd></dl>
 
 </div>

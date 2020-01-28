@@ -30,6 +30,10 @@ Program Listing for File osi_trafficlight.proto
    {
        // The ID of the traffic light.
        //
+       // \rules
+       // is_globally_unique
+       // \endrules
+       //
        optional Identifier id = 1;
    
        // The base parameters of the traffic light.
@@ -72,6 +76,10 @@ Program Listing for File osi_trafficlight.proto
            //
            // \note Set value only if traffic light bulb is a countdown counter.
            //
+           // \rules
+           // is_greater_than_or_equal_to: 0
+           // \endrules
+           //
            optional double counter = 4;
    
            // The IDs of the lanes that the traffic light is assigned to.
@@ -79,6 +87,10 @@ Program Listing for File osi_trafficlight.proto
            // lanes.
            //
            // \note OSI uses singular instead of plural for repeated field names.
+           //
+           // \rules
+           // refers_to: Lane
+           // \endrules
            //
            repeated Identifier assigned_lane_id = 5;
    

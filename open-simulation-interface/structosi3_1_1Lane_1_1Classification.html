@@ -314,10 +314,11 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"></span><code class="sig-name descname">repeated Identifier osi3::Lane::Classification::left_adjacent_lane_id = 5</code></dt>
 <dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the left side (w.r.t. intended driving direction). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: The lane l3 is the only left adjacent lane for lane l4 in image HighwayExit.</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"><span class="std std-ref"><span class="pre">left_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>
@@ -328,10 +329,11 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"></span><code class="sig-name descname">repeated Identifier osi3::Lane::Classification::right_adjacent_lane_id = 6</code></dt>
 <dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the right side (w.r.t. intended driving direction). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> = (l5, l6) for lane l4 in image HighwayExit.</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>
@@ -354,12 +356,13 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"></span><code class="sig-name descname">repeated Identifier osi3::Lane::Classification::right_lane_boundary_id = 8</code></dt>
 <dd><p>The right adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> may only be shared with/as the left adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> of the nearest right adjacent lane <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code>.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> = (lb9, lb6) for reference lane l4 in image HighwayExit.</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Empty for intersections.</p>
 </dd>
 <dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>
@@ -370,12 +373,13 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"></span><code class="sig-name descname">repeated Identifier osi3::Lane::Classification::left_lane_boundary_id = 9</code></dt>
 <dd><p>The left adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> may only be shared with/as the right adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> of the nearest left adjacent lane <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"><span class="std std-ref"><span class="pre">left_adjacent_lane_id</span></span></a></code>.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> = lb5 for lane l4 in image HighwayExit.</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Empty for intersections.</p>
 </dd>
 <dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>
@@ -386,10 +390,11 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a7c49f38d73b09f54a6d94d907e866773"></span><code class="sig-name descname">repeated Identifier osi3::Lane::Classification::free_lane_boundary_id = 10</code></dt>
 <dd><p>The free boundaries which have no/unknown assignment to left/right.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a7c49f38d73b09f54a6d94d907e866773"><span class="std std-ref"><span class="pre">free_lane_boundary_id</span></span></a></code> = lb11 for lane l7 in image Intersection.</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref"><span class="pre">Lane</span></span></a></code> with <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> use only free lane boundaries.</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>
@@ -417,13 +422,15 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1aad3a4f155fe17140317054f3270a27eb"></span><code class="sig-name descname">optional Identifier osi3::Lane::Classification::LanePairing::antecessor_lane_id = 1</code></dt>
-<dd><p>The antecessor lane ID. </p>
+<dd><p>The antecessor lane ID.</p>
+<p>refers_to: <a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1a6451767f0167f56c441f1db538b4d97a"></span><code class="sig-name descname">optional Identifier osi3::Lane::Classification::LanePairing::successor_lane_id = 2</code></dt>
-<dd><p>The successor lane ID. </p>
+<dd><p>The successor lane ID.</p>
+<p>refers_to: <a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
 </dd></dl>
 
 </div>
@@ -439,28 +446,32 @@
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1RoadCondition_1a400f3af0743a55d559bf68abe8fe688c"></span><code class="sig-name descname">optional double osi3::Lane::Classification::RoadCondition::surface_temperature = 1</code></dt>
 <dd><p>The temperature of the roads surface in Kelvin.</p>
-<p>Unit: K </p>
+<p>Unit: K</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1RoadCondition_1a7e40c025ff45bdce01acca9485888fbd"></span><code class="sig-name descname">optional double osi3::Lane::Classification::RoadCondition::surface_water_film = 2</code></dt>
 <dd><p>The height of the water film on top of the surface in mm.</p>
-<p>Unit: mm </p>
+<p>Unit: mm</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1RoadCondition_1af18fb9af81d3bd6a9860711dc8eac210"></span><code class="sig-name descname">optional double osi3::Lane::Classification::RoadCondition::surface_freezing_point = 3</code></dt>
 <dd><p>The temperature where the water on top of the surface would start to freeze or dew in Kelvin.</p>
-<p>Unit: K </p>
+<p>Unit: K</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1_1RoadCondition_1a0ff4b49e5140b577f7645ec2334cc7ee"></span><code class="sig-name descname">optional double osi3::Lane::Classification::RoadCondition::surface_ice = 4</code></dt>
 <dd><p>The percentage of ice covering the road.</p>
-<p>Unit: % </p>
+<p>Unit: %</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
@@ -471,9 +482,10 @@
 <p>Speed of normal use (IRI): 30 km/h - 20 mm/m 50 km/h - 14.5 mm/m 60 km/h - 10.0 mm/m 80 km/h - 8.5 mm/m 100 km/h - 3.4 mm/m</p>
 <p>Road conditions (IRI); 15 mm/m erosion gulleys and deep depressions 11 mm/m frequent shallow depressions, some deep 9 mm/m frequent minor depressions 5 mm/m surface imperfections</p>
 <p>Unit: mm/m</p>
-<p><dl class="simple">
+<p><p>is_greater_than_or_equal_to: 0  </p>
+<dl class="simple">
 <dt><strong>References:</strong></dt><dd><p><ul class="simple">
-<li><p>[1] SAYERS, M.W.; KARAMIHAS, S.M. Little Book of Profiling, University of Michigan Transportation Research Institute, 1998. </p></li>
+<li><p>[1] SAYERS, M.W.; KARAMIHAS, S.M. Little Book of Profiling, University of Michigan Transportation Research Institute, 1998.</p></li>
 </ul>
 </p>
 </dd>

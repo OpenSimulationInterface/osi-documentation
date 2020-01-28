@@ -25,6 +25,10 @@ Program Listing for File osi_occupant.proto
    {
        // The ID of the driver.
        //
+       // \rules
+       // is_globally_unique
+       // \endrules
+       //
        optional Identifier id = 1;
    
        // Specific information about the classification of the occupant.

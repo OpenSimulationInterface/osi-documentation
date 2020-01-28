@@ -352,8 +352,9 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraSensorViewConfiguration_1a83447cfc40ac783eda6b33b6d2f920d7"></span><code class="sig-name descname">optional uint32 osi3::CameraSensorViewConfiguration::number_of_pixels_horizontal = 6</code></dt>
 <dd><p>Number of pixels to produce across horizontal field of view.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the rendering engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the rendering engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -363,8 +364,9 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraSensorViewConfiguration_1ae71698d9be703a4d372cdaffe60b9c82"></span><code class="sig-name descname">optional uint32 osi3::CameraSensorViewConfiguration::number_of_pixels_vertical = 7</code></dt>
 <dd><p>Number of pixels to produce across horizontal field of view.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the rendering engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the rendering engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -375,7 +377,8 @@
 <span class="target" id="structosi3_1_1CameraSensorViewConfiguration_1ae202276d96b78a2fdb13cd915aeb47b7"></span><code class="sig-name descname">repeated ChannelFormat osi3::CameraSensorViewConfiguration::channel_format = 8</code></dt>
 <dd><p>Format for image data (includes number, kind and format of channels).</p>
 <p>In the message provided by the sensor model, this field can be repeated and all values are acceptable to the model, with the most acceptable value being listed first, and the remaining values indicating alternatives in descending order of preference.</p>
-<p>In the message provided to the sensor model, this field must contain exactly one value, indicating the format of the image data being provided by the simulation environment - which must be one of the values the sensor model requested - or there must be no value, indicating that the simulation environment cannot provide image data in one of the requested formats. </p>
+<p>In the message provided to the sensor model, this field must contain exactly one value, indicating the format of the image data being provided by the simulation environment - which must be one of the values the sensor model requested - or there must be no value, indicating that the simulation environment cannot provide image data in one of the requested formats.</p>
+<p>is_greater_than_or_equal_to: 1  </p>
 </dd></dl>
 
 </div>

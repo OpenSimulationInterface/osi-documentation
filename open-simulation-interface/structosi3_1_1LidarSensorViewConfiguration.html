@@ -258,8 +258,9 @@
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1aebe71ed20bb2649c86a6552aa741258a"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::number_of_rays_horizontal = 6</code></dt>
 <dd><p>Number of rays to cast across horizontal field of view.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -269,8 +270,9 @@
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1acfa737bbeed7c706f04ca4bfbbe24950"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::number_of_rays_vertical = 7</code></dt>
 <dd><p>Number of rays to cast across vertical field of view.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -280,8 +282,9 @@
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a8320df0e97a09b909f326fde8db60a0c"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::max_number_of_interactions = 8</code></dt>
 <dd><p>Maximum number of interactions to take into account.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -292,14 +295,16 @@
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1aac96421ddf19cf73a7fa611abef48766"></span><code class="sig-name descname">optional double osi3::LidarSensorViewConfiguration::emitter_frequency = 9</code></dt>
 <dd><p>Emitter Frequency.</p>
 <p>This information can be used by a ray tracing engine to calculate doppler shift information and take into account differences in refraction and reflection. For doppler shift calculations the sensor model can of course always provide a nominal frequency and adjust the resulting doppler shift information to actual frequency through frequency adjustments. For material and geometry interaction purposes the frequency is also relevant.</p>
-<p>Unit: Hz </p>
+<p>Unit: Hz</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a55ae2af0ac4a312ee6eca8d4e28f5b3e"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::num_of_pixels = 10</code></dt>
 <dd><p>Number of pixels in frame.</p>
-<p>This field includes the number of pixels in each frame </p>
+<p>This field includes the number of pixels in each frame</p>
+<p>is_greater_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="member">

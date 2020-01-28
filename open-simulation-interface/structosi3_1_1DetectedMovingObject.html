@@ -374,14 +374,16 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a5110ddb818972e8ec1711310cfeb4ec3"></span><code class="sig-name descname">optional double osi3::DetectedMovingObject::percentage_side_lane_left = 6</code></dt>
 <dd><p>Percentage side lane left.</p>
-<p>Percentage value of the object width in the corresponding lane. </p>
+<p>Percentage value of the object width in the corresponding lane.</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a4c1ab2d39aadb24aecd958ddea6656c9"></span><code class="sig-name descname">optional double osi3::DetectedMovingObject::percentage_side_lane_right = 7</code></dt>
 <dd><p>Percentage side lane right.</p>
-<p>Percentage value of the object width in the corresponding lane. </p>
+<p>Percentage value of the object width in the corresponding lane.</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
 </dd></dl>
 
 <dl class="member">
@@ -450,7 +452,7 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"></span><code class="sig-name descname">optional double osi3::DetectedMovingObject::CandidateMovingObject::probability = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p><p>Range: [0,1] </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 <dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
 </dd>

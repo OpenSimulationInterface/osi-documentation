@@ -267,8 +267,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1af5ff376f2a5f7becdd96ba9d956b3458"></span><code class="sig-name descname">optional uint32 osi3::RadarSensorViewConfiguration::number_of_rays_horizontal = 6</code></dt>
 <dd><p>Number of rays to cast across horizontal field of view (azimuth).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -278,8 +279,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a7e71f6337ffa47e1a56d720d2040e988"></span><code class="sig-name descname">optional uint32 osi3::RadarSensorViewConfiguration::number_of_rays_vertical = 7</code></dt>
 <dd><p>Number of rays to cast across vertical field of view (elevation).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -289,8 +291,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ac63f51438a226eeb48b3e34c6a8b62da"></span><code class="sig-name descname">optional uint32 osi3::RadarSensorViewConfiguration::max_number_of_interactions = 8</code></dt>
 <dd><p>Maximum number of interactions to take into account.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor. </p>
+<p><p>is_greater_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
 </dd>
 </dl>
 </p>
@@ -301,7 +304,8 @@
 <span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a16bcecae0130a7770ede9fcb934dc3c1"></span><code class="sig-name descname">optional double osi3::RadarSensorViewConfiguration::emitter_frequency = 9</code></dt>
 <dd><p>Emitter Frequency.</p>
 <p>This information can be used by a ray tracing engine to calculate doppler shift information and take into account differences in refraction and reflection. For doppler shift calculations the sensor model can of course always provide a nominal frequency and adjust the resulting doppler shift information to actual frequency through frequency adjustments. For material and geometry interaction purposes the frequency is also relevant.</p>
-<p>Unit: Hz </p>
+<p>Unit: Hz</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">

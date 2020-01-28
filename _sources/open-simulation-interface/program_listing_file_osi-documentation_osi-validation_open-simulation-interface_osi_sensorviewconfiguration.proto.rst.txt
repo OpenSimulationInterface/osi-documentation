@@ -156,6 +156,11 @@ Program Listing for File osi_sensorviewconfiguration.proto
        // that the simulation environment has to provide.
        //
        // Unit: m
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 0
+       // \endrules
+       //
        optional double range = 7;
    
        // The update cycle time of the sensor model.
@@ -375,18 +380,33 @@ Program Listing for File osi_sensorviewconfiguration.proto
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_rays_horizontal = 6;
    
        // Number of rays to cast across vertical field of view (elevation).
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_rays_vertical = 7;
    
        // Maximum number of interactions to take into account.
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 max_number_of_interactions = 8;
    
        // Emitter Frequency.
@@ -400,6 +420,11 @@ Program Listing for File osi_sensorviewconfiguration.proto
        // purposes the frequency is also relevant.
        //
        // Unit: Hz
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 0
+       // \endrules
+       //
        optional double emitter_frequency = 9;
    
        // This represents the TX antenna diagram
@@ -511,18 +536,33 @@ Program Listing for File osi_sensorviewconfiguration.proto
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_rays_horizontal = 6;
    
        // Number of rays to cast across vertical field of view.
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_rays_vertical = 7;
    
        // Maximum number of interactions to take into account.
        //
        // \note This is a characteristic of the ray tracing engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 max_number_of_interactions = 8;
    
        // Emitter Frequency.
@@ -536,11 +576,20 @@ Program Listing for File osi_sensorviewconfiguration.proto
        // purposes the frequency is also relevant.
        //
        // Unit: Hz
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 0
+       // \endrules
+       //
        optional double emitter_frequency = 9;
    
        // Number of pixels in frame.
        //
        // This field includes the number of pixels in each frame
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
        //
        optional uint32 num_of_pixels = 10;
    
@@ -631,12 +680,22 @@ Program Listing for File osi_sensorviewconfiguration.proto
        //
        // \note This is a characteristic of the rendering engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_pixels_horizontal = 6;
    
        // Number of pixels to produce across horizontal field of view.
        //
        // \note This is a characteristic of the rendering engine of the
        // environment simulation, not a direct characteristic of the sensor.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
+       //
        optional uint32 number_of_pixels_vertical = 7;
    
        // Format for image data (includes number, kind and format of channels).
@@ -652,6 +711,10 @@ Program Listing for File osi_sensorviewconfiguration.proto
        // be one of the values the sensor model requested - or there
        // must be no value, indicating that the simulation environment
        // cannot provide image data in one of the requested formats.
+       //
+       // \rules
+       // is_greater_than_or_equal_to: 1
+       // \endrules
        //
        repeated ChannelFormat channel_format = 8;
    

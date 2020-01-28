@@ -151,6 +151,10 @@ Program Listing for File osi_trafficsign.proto
    {
        // The ID of the traffic sign.
        //
+       // \rules
+       // is_globally_unique
+       // \endrules
+       //
        optional Identifier id = 1;
    
        // Main sign, e.g. speed limit 30 km/h
@@ -264,6 +268,10 @@ Program Listing for File osi_trafficsign.proto
                //
                // \note OSI uses singular instead of plural for repeated field
                // names.
+               //
+               // \rules
+               // refers_to: Lane
+               // \endrules
                //
                repeated Identifier assigned_lane_id = 5;
    
@@ -5507,6 +5515,10 @@ Program Listing for File osi_trafficsign.proto
                // \note OSI uses singular instead of plural for repeated field
                // names.
                //
+               // \rules
+               // refers_to: Lane
+               // \endrules
+               //
                repeated Identifier assigned_lane_id = 4;
    
                // This enumerator indicates a traffic actor (e.g.
@@ -9164,6 +9176,10 @@ Program Listing for File osi_trafficsign.proto
                message Arrow
                {
                    // The IDs of the lanes the arrow applies to
+                   //
+                   // \rules
+                   // refers_to: Lane
+                   // \endrules
                    //
                    repeated Identifier lane_id = 1;
    

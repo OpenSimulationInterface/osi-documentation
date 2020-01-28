@@ -205,9 +205,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a3f57cf39ffe5e9b442fe6a1cf5577b83"></span><code class="sig-name descname">optional double osi3::RadarDetection::existence_probability = 1</code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
-<p>Range: [0.0, 1.0]</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence. </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
 </dd>
 </dl>
 </p>
@@ -217,8 +217,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a1e4defa6aa377c6637fbba2ca1394ef8"></span><code class="sig-name descname">optional Identifier osi3::RadarDetection::object_id = 2</code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object. </p>
+<p><p>refers_to: DetectedObject  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
 </dd>
 </dl>
 </p>
@@ -240,14 +241,16 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a7574b7d69c5a67a44a0b5d87af50125b"></span><code class="sig-name descname">optional double osi3::RadarDetection::radial_velocity = 5</code></dt>
 <dd><p>Absolute radial (in direction to the sensor) velocity of the detection.</p>
-<p>Unit: m/s </p>
+<p>Unit: m/s</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1acbc842b645808a6e0af72a8e7bd470a4"></span><code class="sig-name descname">optional double osi3::RadarDetection::radial_velocity_rmse = 6</code></dt>
 <dd><p>Root mean squared error of the object measured radial velocity.</p>
-<p>Unit: m/s </p>
+<p>Unit: m/s</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="member">
@@ -268,7 +271,7 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a814c6d11af6c17024a8735e229137d87"></span><code class="sig-name descname">optional double osi3::RadarDetection::point_target_probability = 9</code></dt>
 <dd><p>Describes the possibility whether more than one object may have led to this detection.</p>
-<p>Range: [0.0, 1.0] </p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="member">

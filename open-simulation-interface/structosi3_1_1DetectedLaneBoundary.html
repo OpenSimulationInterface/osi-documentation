@@ -250,7 +250,7 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedLaneBoundary_1a51bce9c2256d87f9c72c229be92386a1"></span><code class="sig-name descname">repeated double osi3::DetectedLaneBoundary::boundary_line_confidences = 5</code></dt>
 <dd><p>Confidence of the segments of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">LaneBoundary::BoundaryPoint</span></span></a></code>. Each <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aec65ce160b8def1f9c7621e0d2c94391"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> has the same <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aad023da83f979508a2b8436d757b6ba6"><span class="std std-ref"><span class="pre">boundary_line</span></span></a></code> points and exact one <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1a51bce9c2256d87f9c72c229be92386a1"><span class="std std-ref"><span class="pre">boundary_line_confidences</span></span></a></code> confidence value is specified which is suitable for all candidates.</p>
-<p>Range: [0,1] </p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 </div>
@@ -264,7 +264,7 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1a01d4e5d4677f71116f84b1b6169d19f8"></span><code class="sig-name descname">optional double osi3::DetectedLaneBoundary::CandidateLaneBoundary::probability = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p><p>Range: [0,1] </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 <dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary.html#structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1a01d4e5d4677f71116f84b1b6169d19f8"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
 </dd>

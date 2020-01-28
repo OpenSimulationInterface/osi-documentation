@@ -215,7 +215,8 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1TrafficLight_1abdd181a7d391f99a495e3c5361e7276e"></span><code class="sig-name descname">optional Identifier osi3::TrafficLight::id = 1</code></dt>
-<dd><p>The ID of the traffic light. </p>
+<dd><p>The ID of the traffic light.</p>
+<p>is_globally_unique  </p>
 </dd></dl>
 
 <dl class="member">
@@ -532,8 +533,9 @@
 <dt>
 <span class="target" id="structosi3_1_1TrafficLight_1_1Classification_1a3e26403ad1b31fe8392c15b2efe78f3a"></span><code class="sig-name descname">optional double osi3::TrafficLight::Classification::counter = 4</code></dt>
 <dd><p>The value of the countdown counter. Unit: % or s</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Set value only if traffic light bulb is a countdown counter. </p>
+<p><p>is_greater_than_or_equal_to: 0  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Set value only if traffic light bulb is a countdown counter.</p>
 </dd>
 </dl>
 </p>
@@ -543,8 +545,9 @@
 <dt>
 <span class="target" id="structosi3_1_1TrafficLight_1_1Classification_1ae2d2c56139343d677a4eb633b785ed57"></span><code class="sig-name descname">repeated Identifier osi3::TrafficLight::Classification::assigned_lane_id = 5</code></dt>
 <dd><p>The IDs of the lanes that the traffic light is assigned to. Might be multiple if the traffic light is valid for multiple driving lanes.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<p><p>refers_to: </p>
+<a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>

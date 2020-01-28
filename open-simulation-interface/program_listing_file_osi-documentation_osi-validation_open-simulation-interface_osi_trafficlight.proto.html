@@ -207,6 +207,10 @@
 <span class="p">{</span>
     <span class="c1">// The ID of the traffic light.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// The base parameters of the traffic light.</span>
@@ -249,6 +253,10 @@
         <span class="c1">//</span>
         <span class="c1">// \note Set value only if traffic light bulb is a countdown counter.</span>
         <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// is_greater_than_or_equal_to: 0</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
         <span class="n">optional</span> <span class="kt">double</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
         <span class="c1">// The IDs of the lanes that the traffic light is assigned to.</span>
@@ -256,6 +264,10 @@
         <span class="c1">// lanes.</span>
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// refers_to: Lane</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">assigned_lane_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 

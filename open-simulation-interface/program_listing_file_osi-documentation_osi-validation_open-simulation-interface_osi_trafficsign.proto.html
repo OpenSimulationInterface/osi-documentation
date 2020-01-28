@@ -328,6 +328,10 @@
 <span class="p">{</span>
     <span class="c1">// The ID of the traffic sign.</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
     <span class="c1">// Main sign, e.g. speed limit 30 km/h</span>
@@ -441,6 +445,10 @@
             <span class="c1">//</span>
             <span class="c1">// \note OSI uses singular instead of plural for repeated field</span>
             <span class="c1">// names.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
             <span class="c1">//</span>
             <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">assigned_lane_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
@@ -5684,6 +5692,10 @@
             <span class="c1">// \note OSI uses singular instead of plural for repeated field</span>
             <span class="c1">// names.</span>
             <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
             <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">assigned_lane_id</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
             <span class="c1">// This enumerator indicates a traffic actor (e.g.</span>
@@ -9341,6 +9353,10 @@
             <span class="n">message</span> <span class="n">Arrow</span>
             <span class="p">{</span>
                 <span class="c1">// The IDs of the lanes the arrow applies to</span>
+                <span class="c1">//</span>
+                <span class="c1">// \rules</span>
+                <span class="c1">// refers_to: Lane</span>
+                <span class="c1">// \endrules</span>
                 <span class="c1">//</span>
                 <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">lane_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 

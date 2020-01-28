@@ -262,13 +262,22 @@
         <span class="c1">// \note Field need not be set (or set to \c #TYPE_OTHER)</span>
         <span class="c1">// if road marking type (\c #type) does not require it.</span>
         <span class="c1">//</span>
-        <span class="n">optional</span> <span class="n">TrafficSign</span><span class="p">.</span><span class="n">MainSign</span><span class="p">.</span><span class="n">Classification</span><span class="p">.</span><span class="n">Type</span>
-            <span class="n">traffic_main_sign_type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_greater_than_or_equal_to 2 else do_check is_set</span>
+        <span class="c1">// check_if this.type is_less_than_or_equal_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">TrafficSign</span><span class="p">.</span><span class="n">MainSign</span><span class="p">.</span><span class="n">Classification</span><span class="p">.</span><span class="n">Type</span> <span class="n">traffic_main_sign_type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
         <span class="c1">// The monochrome color of the road marking.</span>
         <span class="c1">// \note Field need not be set (or set to \c #COLOR_OTHER)</span>
         <span class="c1">// if road marking type does not require it (e.g. for \c #type ==</span>
         <span class="c1">// \c #TYPE_PAINTED_TRAFFIC_SIGN).</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_equal_to 2 else do_check is_set</span>
+        <span class="c1">// check_if this.monochrome_color is_equal_to 1 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">Color</span> <span class="n">monochrome_color</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
@@ -292,6 +301,10 @@
         <span class="c1">// May be multiple if the road marking goes across multiple lanes.</span>
         <span class="c1">//</span>
         <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// refers_to: Lane</span>
+        <span class="c1">// \endrules</span>
         <span class="c1">//</span>
         <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">assigned_lane_id</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 

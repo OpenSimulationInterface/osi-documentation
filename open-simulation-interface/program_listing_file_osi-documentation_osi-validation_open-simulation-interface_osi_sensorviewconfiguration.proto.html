@@ -333,6 +333,11 @@
     <span class="c1">// that the simulation environment has to provide.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: m</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">range</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// The update cycle time of the sensor model.</span>
@@ -552,18 +557,33 @@
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
     <span class="c1">// Number of rays to cast across vertical field of view (elevation).</span>
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// Maximum number of interactions to take into account.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">max_number_of_interactions</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
     <span class="c1">// Emitter Frequency.</span>
@@ -577,6 +597,11 @@
     <span class="c1">// purposes the frequency is also relevant.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: Hz</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">emitter_frequency</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
     <span class="c1">// This represents the TX antenna diagram</span>
@@ -688,18 +713,33 @@
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
     <span class="c1">// Number of rays to cast across vertical field of view.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_rays_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// Maximum number of interactions to take into account.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the ray tracing engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">max_number_of_interactions</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
     <span class="c1">// Emitter Frequency.</span>
@@ -713,11 +753,20 @@
     <span class="c1">// purposes the frequency is also relevant.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: Hz</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 0</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">emitter_frequency</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
     <span class="c1">// Number of pixels in frame.</span>
     <span class="c1">//</span>
     <span class="c1">// This field includes the number of pixels in each frame</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">num_of_pixels</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
@@ -808,12 +857,22 @@
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the rendering engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_pixels_horizontal</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
     <span class="c1">// Number of pixels to produce across horizontal field of view.</span>
     <span class="c1">//</span>
     <span class="c1">// \note This is a characteristic of the rendering engine of the</span>
     <span class="c1">// environment simulation, not a direct characteristic of the sensor.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">number_of_pixels_vertical</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
 
     <span class="c1">// Format for image data (includes number, kind and format of channels).</span>
@@ -829,6 +888,10 @@
     <span class="c1">// be one of the values the sensor model requested - or there</span>
     <span class="c1">// must be no value, indicating that the simulation environment</span>
     <span class="c1">// cannot provide image data in one of the requested formats.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_greater_than_or_equal_to: 1</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">repeated</span> <span class="n">ChannelFormat</span> <span class="n">channel_format</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 

@@ -230,8 +230,9 @@
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname">optional Identifier osi3::GroundTruth::host_vehicle_id = 3</code></dt>
 <dd><p>The ID of the host vehicle object referencing to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> .</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This ID has to be filled and is not optional! </p>
+<p><p>refers_to: </p>
+<a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This ID has to be filled and is not optional!</p>
 </dd>
 </dl>
 </p>
@@ -335,10 +336,11 @@
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><code class="sig-name descname">optional uint32 osi3::GroundTruth::country_code = 13</code></dt>
 <dd><p>The ISO country code in 3 digit numeric format according to: ISO Code 3166/1 [1,2]. E.g. Germany = 276, USA = 840.</p>
-<p><dl class="simple">
+<p><p>is_iso_country_code:  </p>
+<dl class="simple">
 <dt><strong>References:</strong></dt><dd><p><ul class="simple">
 <li><p>[1] [International Standard ISO 3166-1: Codes for the representation of names of countries and their subdivisions - Part 1: Country codes, third ed., 2013] (<a class="reference external" href="https://www.iso.org/obp/ui/">https://www.iso.org/obp/ui/</a>)</p></li>
-<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1">Wikipedia ISO 3166/1</a> </p></li>
+<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1">Wikipedia ISO 3166/1</a></p></li>
 </ul>
 </p>
 </dd>

@@ -328,10 +328,11 @@
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a71de4ec9d93175a6b2b02a7a4326cb98"></span><code class="sig-name descname">optional TrafficSign::MainSign::Classification::Type osi3::RoadMarking::Classification::traffic_main_sign_type = 2</code></dt>
 <dd><p>Traffic sign as road marking (color image, monochrome image or character string).</p>
-<p><dl class="simple">
+<p><p>check_if this.type is_greater_than_or_equal_to 2 else do_check is_set check_if this.type is_less_than_or_equal_to 4 else do_check is_set  </p>
+<dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Field is set if ( <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaaa850220d5bb3adde51b1ddc4ae1eaa4"><span class="std std-ref"><span class="pre">TYPE_PAINTED_TRAFFIC_SIGN</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf32447c2168fbb5d9baf48f650a80b9d"><span class="std std-ref"><span class="pre">TYPE_SYMBOLIC_TRAFFIC_SIGN</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba4a5a31878399051eefbcd7f7dd58836c"><span class="std std-ref"><span class="pre">TYPE_TEXTUAL_TRAFFIC_SIGN</span></span></a></code> ).</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>Field need not be set (or set to <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba61772d1752a9cefb2856abef21d09331"><span class="std std-ref"><span class="pre">TYPE_OTHER</span></span></a></code>) if road marking type (<code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code>) does not require it. </p>
+<dt><strong>Note</strong></dt><dd><p>Field need not be set (or set to <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba61772d1752a9cefb2856abef21d09331"><span class="std std-ref"><span class="pre">TYPE_OTHER</span></span></a></code>) if road marking type (<code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code>) does not require it.</p>
 </dd>
 </dl>
 </p>
@@ -340,8 +341,9 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1aa0997fbbe7cd0afaeaf2c3b2079cfca9"></span><code class="sig-name descname">optional Color osi3::RoadMarking::Classification::monochrome_color = 3</code></dt>
-<dd><p>The monochrome color of the road marking. <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set (or set to <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4aeb0cfbe193165fc4dd16ff7797666029"><span class="std std-ref"><span class="pre">COLOR_OTHER</span></span></a></code>) if road marking type does not require it (e.g. for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaaa850220d5bb3adde51b1ddc4ae1eaa4"><span class="std std-ref"><span class="pre">TYPE_PAINTED_TRAFFIC_SIGN</span></span></a></code>). </p>
+<dd><p>The monochrome color of the road marking. <p>check_if this.type is_equal_to 2 else do_check is_set check_if this.monochrome_color is_equal_to 1 else do_check is_set  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Field need not be set (or set to <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4aeb0cfbe193165fc4dd16ff7797666029"><span class="std std-ref"><span class="pre">COLOR_OTHER</span></span></a></code>) if road marking type does not require it (e.g. for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaaa850220d5bb3adde51b1ddc4ae1eaa4"><span class="std std-ref"><span class="pre">TYPE_PAINTED_TRAFFIC_SIGN</span></span></a></code>).</p>
 </dd>
 </dl>
 </p>
@@ -375,8 +377,9 @@
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a482fa85b781bebc662550ae8e3213e30"></span><code class="sig-name descname">repeated Identifier osi3::RoadMarking::Classification::assigned_lane_id = 6</code></dt>
 <dd><p>The ID(s) of the lane(s) that the road marking is assigned to. May be multiple if the road marking goes across multiple lanes.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+<p><p>refers_to: </p>
+<a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
 </dd>
 </dl>
 </p>

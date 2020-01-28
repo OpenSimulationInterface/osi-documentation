@@ -496,14 +496,16 @@
 <dt>
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1a6d9bbc1bd9eea510498792ff09a9b23d"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::atmospheric_pressure = 3</code></dt>
 <dd><p>Atmospheric pressure in Pascal at z=0.0 in world frame (about 101325 Pa).</p>
-<p>Unit: Pa </p>
+<p>Unit: Pa</p>
+<p>is_greater_than_or_equal_to: 80000 is_less_than_or_equal_to: 120000  </p>
 </dd></dl>
 
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1afb975ad7dddedd8bfac0a38664ab908e"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::temperature = 4</code></dt>
 <dd><p>Temperature in Kelvin at z=0.0 in world frame.</p>
-<p>Unit: K </p>
+<p>Unit: K</p>
+<p>is_greater_than_or_equal_to: 170 is_less_than_or_equal_to: 340  </p>
 </dd></dl>
 
 <dl class="member">
@@ -511,7 +513,8 @@
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1a05b6f530a842deef881608e131f3b98a"></span><code class="sig-name descname">optional double osi3::EnvironmentalConditions::relative_humidity = 5</code></dt>
 <dd><p>Relative humidity in at z=0.0 in world frame.</p>
 <p>Note that physically more relevant measures, like absolute or specific humidity can be easily derived from relative_humidity, given that the temperature and atmospheric_pressure are known.</p>
-<p>Unit: % </p>
+<p>Unit: %</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
 </dd></dl>
 
 <dl class="member">
@@ -542,8 +545,9 @@
 <dt>
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay_1a6babaecd5662954155e8a846edbd8b72"></span><code class="sig-name descname">optional uint32 osi3::EnvironmentalConditions::TimeOfDay::seconds_since_midnight = 1</code></dt>
 <dd><p>The number of seconds in s that have passed since midnight local time. Used e.g. for determining the current state of the circadian rhythm of a driver.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>No changes of daylight saving time or time zones are considered. </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than: 86400  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>No changes of daylight saving time or time zones are considered.</p>
 </dd>
 </dl>
 </p>

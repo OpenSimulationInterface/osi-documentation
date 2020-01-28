@@ -355,9 +355,9 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraDetection_1a3623c6f12847875a2d0a0fb5cc7d173e"></span><code class="sig-name descname">optional double osi3::CameraDetection::existence_probability = 1</code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
-<p>Range: [0.0, 1.0]</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence. </p>
+<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
 </dd>
 </dl>
 </p>
@@ -367,8 +367,9 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraDetection_1a16df8b3eb12f70983dc51879f8ddd6db"></span><code class="sig-name descname">optional Identifier osi3::CameraDetection::object_id = 2</code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object. </p>
+<p><p>refers_to: DetectedObject  </p>
+<dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
 </dd>
 </dl>
 </p>
@@ -523,7 +524,7 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraDetection_1a23a438fb60fd92df0b82a7af360c7cc1"></span><code class="sig-name descname">optional double osi3::CameraDetection::shape_classification_probability = 27</code></dt>
 <dd><p>This probability defines the mininimum probability for each selected shape classification.</p>
-<p>Range: [0.0, 1.0] </p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="member">
@@ -536,7 +537,7 @@
 <dt>
 <span class="target" id="structosi3_1_1CameraDetection_1a8392d735b4b85d8f85b79b143940d632"></span><code class="sig-name descname">optional double osi3::CameraDetection::color_probability = 29</code></dt>
 <dd><p>The probability of the shape’s color.</p>
-<p>Range: [0.0, 1.0] </p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="member">
@@ -559,7 +560,8 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1CameraDetection_1a5ad0ca8d0c3d69ee054450eb58805d49"></span><code class="sig-name descname">optional uint32 osi3::CameraDetection::number_of_points = 32</code></dt>
-<dd><p>Number of points which defines the shape. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1ae7e0e7683ada9c187d00390f92b3cb50"><span class="std std-ref"><span class="pre">image_shape_type</span></span></a></code> may restrict the number of possible values. </p>
+<dd><p>Number of points which defines the shape. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1CameraDetection_1ae7e0e7683ada9c187d00390f92b3cb50"><span class="std std-ref"><span class="pre">image_shape_type</span></span></a></code> may restrict the number of possible values.</p>
+<p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 </div>

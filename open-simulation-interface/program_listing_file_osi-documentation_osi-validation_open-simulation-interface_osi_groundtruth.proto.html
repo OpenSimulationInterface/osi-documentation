@@ -253,6 +253,10 @@
     <span class="c1">//</span>
     <span class="c1">// \note This ID has to be filled and is not optional!</span>
     <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// refers_to: MovingObject</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">host_vehicle_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
     <span class="c1">// The list of stationary objects (excluding traffic signs and traffic</span>
@@ -318,6 +322,10 @@
     <span class="c1">// names of countries and their subdivisions - Part 1: Country codes, third</span>
     <span class="c1">// ed., 2013] (https://www.iso.org/obp/ui/)</span>
     <span class="c1">// - [2] [Wikipedia ISO 3166/1] (https://en.wikipedia.org/wiki/ISO_3166-1)</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_iso_country_code:</span>
+    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">uint32</span> <span class="n">country_code</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
 
