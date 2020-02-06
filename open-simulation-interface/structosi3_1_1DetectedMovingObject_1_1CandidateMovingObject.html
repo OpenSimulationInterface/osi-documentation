@@ -237,15 +237,13 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"></span><code class="sig-name descname">optional Orientation3d osi3::DetectedMovingObject::CandidateMovingObject::head_pose = 4</code></dt>
-<dd><p>Pedestrian head pose for behavior prediction. Describes the head orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed head frame is pointing along the pedestrian’s straight ahead viewing direction and the z-axis is pointing upwards (cranial direction [1] i.e. to pedestrian’s skull cap).</p>
+<dd><p>Pedestrian head pose for behavior prediction. Describes the head orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed head frame is pointing along the pedestrian’s straight ahead viewing direction (anterior), the y-axis lateral to the left, and the z-axis is pointing upwards (superior) [1].</p>
 <p><code class="docutils literal notranslate"><span class="pre">View_normal_base_coord_system</span> <span class="pre">=</span> <span class="pre">Inverse_Rotation(</span><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"><span class="std std-ref"><span class="pre">head_pose</span></span></a><span class="pre">)*Unit_vector_x</span></code></p>
-<p><dl class="simple">
+<p><p>[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). </p>
+<em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. <dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject.type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
 </dd>
-<dt><strong>References:</strong></dt><dd><p><ul class="simple">
-<li><p>[1] <a class="reference external" href="https://en.wikipedia.org/wiki/Anatomical_terms_of_location">https://en.wikipedia.org/wiki/Anatomical_terms_of_location</a> </p></li>
-</ul>
-</p>
+<dt><strong>Reference:</strong></dt><dd><p></p>
 </dd>
 </dl>
 </p>
@@ -254,15 +252,12 @@
 <dl class="member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a0e976baaa57e7cdcfce6c4e4c9d217a1"></span><code class="sig-name descname">optional Orientation3d osi3::DetectedMovingObject::CandidateMovingObject::upper_body_pose = 5</code></dt>
-<dd><p>Pedestrian upper body pose for behavior prediction. Describes the upper body orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed upper body frame is pointing along the pedestrian’s upper body ventral direction [2] (i.e. usually pedestrian’s intended moving direction) and the z-axis is pointing upwards (to pedestrian’s head).</p>
+<dd><p>Pedestrian upper body pose for behavior prediction. Describes the upper body orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed upper body frame is pointing along the pedestrian’s upper body ventral (anterior) direction (i.e. usually pedestrian’s intended moving direction), the y-axis lateral to the left, and the z-axis is pointing upwards (superior, to the pedestrian’s head) [1].</p>
 <p><code class="docutils literal notranslate"><span class="pre">View_normal_base_coord_system</span> <span class="pre">=</span> <span class="pre">Inverse_Rotation(</span><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a0e976baaa57e7cdcfce6c4e4c9d217a1"><span class="std std-ref"><span class="pre">upper_body_pose</span></span></a><span class="pre">)*Unit_vector_x</span></code></p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject::type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
 </dd>
-<dt><strong>References:</strong></dt><dd><p><ul class="simple">
-<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/Anatomical_terms_of_location">https://en.wikipedia.org/wiki/Anatomical_terms_of_location</a> </p></li>
-</ul>
-</p>
+<dt><strong>Reference:</strong></dt><dd><p>[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). <em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. </p>
 </dd>
 </dl>
 </p>

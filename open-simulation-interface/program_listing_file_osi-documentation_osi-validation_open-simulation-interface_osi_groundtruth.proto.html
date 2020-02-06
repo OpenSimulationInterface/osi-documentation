@@ -314,14 +314,11 @@
     <span class="n">optional</span> <span class="n">EnvironmentalConditions</span> <span class="n">environmental_conditions</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
 
     <span class="c1">// The ISO country code in 3 digit numeric format according to:</span>
-    <span class="c1">// ISO Code 3166/1 [1,2].</span>
+    <span class="c1">// ISO Code 3166/1 [1].</span>
     <span class="c1">// E.g. Germany = 276, USA = 840.</span>
     <span class="c1">//</span>
-    <span class="c1">// \par References:</span>
-    <span class="c1">// - [1] [International Standard ISO 3166-1: Codes for the representation of</span>
-    <span class="c1">// names of countries and their subdivisions - Part 1: Country codes, third</span>
-    <span class="c1">// ed., 2013] (https://www.iso.org/obp/ui/)</span>
-    <span class="c1">// - [2] [Wikipedia ISO 3166/1] (https://en.wikipedia.org/wiki/ISO_3166-1)</span>
+    <span class="c1">// \par Reference:</span>
+    <span class="c1">// [1] ISO International Organization for Standardization. (2013). &lt;em&gt;ISO 3166-1 Codes for the representation of names of countries and their subdivisions - Part 1: Country codes&lt;/em&gt;. (ISO 3166-1:2013). Geneva, Switzerland.</span>
     <span class="c1">//</span>
     <span class="c1">// \rules</span>
     <span class="c1">// is_iso_country_code:</span>
@@ -332,10 +329,10 @@
     <span class="c1">// Projection string that allows to transform all coordinates in GroundTruth</span>
     <span class="c1">// into a different cartographic projection.</span>
     <span class="c1">//</span>
-    <span class="c1">// The string follows the PROJ.4 project rules for projections [1].</span>
+    <span class="c1">// The string follows the PROJ rules for projections [1].</span>
     <span class="c1">//</span>
-    <span class="c1">// \par References:</span>
-    <span class="c1">// - [1] [Proj.4 Projections] (https://proj4.org/usage/projections.html)</span>
+    <span class="c1">// \par Reference:</span>
+    <span class="c1">// [1] PROJ contributors. (2019). &lt;em&gt;PROJ coordinate transformation software library&lt;/em&gt;. Open Source Geospatial Foundation. Retrieved January 25, 2019, from https://proj.org/usage/projections.html</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">string</span> <span class="n">proj_string</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
 

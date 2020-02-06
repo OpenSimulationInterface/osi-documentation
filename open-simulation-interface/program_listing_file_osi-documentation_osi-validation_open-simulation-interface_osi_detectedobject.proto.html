@@ -204,7 +204,7 @@
 <span class="n">message</span> <span class="n">DetectedItemHeader</span>
 <span class="p">{</span>
     <span class="c1">// Specific ID of the detected item as assigned by the sensor internally.</span>
-    <span class="c1">// Need not match with \c #ground_truth_id.</span>
+    <span class="c1">// Needs not to match with \c #ground_truth_id.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">tracking_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
@@ -404,28 +404,28 @@
 
     <span class="c1">// Additional data that is specific to radar sensors.</span>
     <span class="c1">//</span>
-    <span class="c1">// \note Field need not be set if simulated sensor is not a radar</span>
+    <span class="c1">// \note Field needs not to be set if simulated sensor is not a radar</span>
     <span class="c1">// sensor.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">RadarSpecificObjectData</span> <span class="n">radar_specifics</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
 
     <span class="c1">// Additional data that is specific to lidar sensors.</span>
     <span class="c1">//</span>
-    <span class="c1">// \note Field need not be set if simulated sensor is not a lidar</span>
+    <span class="c1">// \note Field needs not to be set if simulated sensor is not a lidar</span>
     <span class="c1">// sensor.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">LidarSpecificObjectData</span> <span class="n">lidar_specifics</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
 
     <span class="c1">// Additional data that is specific to camera sensors.</span>
     <span class="c1">//</span>
-    <span class="c1">// \note Field need not be set if simulated sensor is not a camera</span>
+    <span class="c1">// \note Field needs not to be set if simulated sensor is not a camera</span>
     <span class="c1">// sensor.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">CameraSpecificObjectData</span> <span class="n">camera_specifics</span> <span class="o">=</span> <span class="mi">102</span><span class="p">;</span>
 
     <span class="c1">// Additional data that is specific to ultrasonic sensors.</span>
     <span class="c1">//</span>
-    <span class="c1">// \note Field need not be set if simulated sensor is not an ultrasonic</span>
+    <span class="c1">// \note Field needs not to be set if simulated sensor is not an ultrasonic</span>
     <span class="c1">// sensor.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">UltrasonicSpecificObjectData</span> <span class="n">ultrasonic_specifics</span> <span class="o">=</span> <span class="mi">103</span><span class="p">;</span>
@@ -464,9 +464,8 @@
         <span class="c1">// Pedestrian head pose for behavior prediction. Describes the head</span>
         <span class="c1">// orientation w.r.t. the host vehicle orientation.</span>
         <span class="c1">// The x-axis of the right-handed head frame is pointing along the</span>
-        <span class="c1">// pedestrian&#39;s straight ahead viewing direction and the z-axis is</span>
-        <span class="c1">// pointing upwards (cranial direction [1] i.e. to pedestrian&#39;s skull</span>
-        <span class="c1">// cap).</span>
+        <span class="c1">// pedestrian&#39;s straight ahead viewing direction (anterior), the y-axis lateral to the left,</span>
+        <span class="c1">// and the z-axis is pointing upwards (superior) [1].</span>
         <span class="c1">//</span>
         <span class="c1">// ``View_normal_base_coord_system =</span>
         <span class="c1">// Inverse_Rotation(#head_pose)*Unit_vector_x``</span>
@@ -474,17 +473,18 @@
         <span class="c1">// \note This field is mandatory if the \c CandidateMovingObject.type is</span>
         <span class="c1">// \c MovingObject::TYPE_PEDESTRIAN</span>
         <span class="c1">//</span>
-        <span class="c1">// \par References:</span>
-        <span class="c1">// - [1] https://en.wikipedia.org/wiki/Anatomical_terms_of_location</span>
+        <span class="c1">// \par Reference:</span>
+        <span class="c1">//</span>
+        <span class="c1">// [1] Patton, K. T. &amp; Thibodeau, G. A. (2015). &lt;em&gt;Anatomy &amp; Physiology&lt;/em&gt;. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229.</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">Orientation3d</span> <span class="n">head_pose</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
         <span class="c1">// Pedestrian upper body pose for behavior prediction. Describes the</span>
         <span class="c1">// upper body orientation w.r.t. the host vehicle orientation.</span>
         <span class="c1">// The x-axis of the right-handed upper body frame is pointing along the</span>
-        <span class="c1">// pedestrian&#39;s upper body ventral direction [2] (i.e. usually</span>
-        <span class="c1">// pedestrian&#39;s intended moving direction) and the z-axis is pointing</span>
-        <span class="c1">// upwards (to pedestrian&#39;s head).</span>
+        <span class="c1">// pedestrian&#39;s upper body ventral (anterior) direction (i.e. usually</span>
+        <span class="c1">// pedestrian&#39;s intended moving direction), the y-axis lateral to the left,</span>
+        <span class="c1">// and the z-axis is pointing upwards (superior, to the pedestrian&#39;s head) [1].</span>
         <span class="c1">//</span>
         <span class="c1">// ``View_normal_base_coord_system =</span>
         <span class="c1">// Inverse_Rotation(#upper_body_pose)*Unit_vector_x``</span>
@@ -492,8 +492,8 @@
         <span class="c1">// \note This field is mandatory if the \c CandidateMovingObject::type</span>
         <span class="c1">// is \c MovingObject::TYPE_PEDESTRIAN</span>
         <span class="c1">//</span>
-        <span class="c1">// \par References:</span>
-        <span class="c1">// - [2] https://en.wikipedia.org/wiki/Anatomical_terms_of_location</span>
+        <span class="c1">// \par Reference:</span>
+        <span class="c1">// [1] Patton, K. T. &amp; Thibodeau, G. A. (2015). &lt;em&gt;Anatomy &amp; Physiology&lt;/em&gt;. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229.</span>
         <span class="c1">//</span>
         <span class="n">optional</span> <span class="n">Orientation3d</span> <span class="n">upper_body_pose</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
     <span class="p">}</span>

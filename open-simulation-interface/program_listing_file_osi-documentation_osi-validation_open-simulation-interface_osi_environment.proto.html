@@ -212,19 +212,20 @@
 
     <span class="c1">// The Unix epoch (or Unix time or POSIX time or Unix timestamp) is</span>
     <span class="c1">// the number of seconds that have elapsed since January 1, 1970</span>
-    <span class="c1">// (midnight UTC/GMT), not counting leap seconds</span>
-    <span class="c1">// (in ISO 8601: 1970-01-01T00:00:00Z). Literally speaking the epoch</span>
+    <span class="c1">// (midnight UTC/GMT [1]), not counting leap seconds [2].</span>
+    <span class="c1">// Historically, the origin of UNIX system time was referred to as</span>
+    <span class="c1">// &quot;00:00:00 GMT, January 1, 1970&quot; [2]. Literally speaking the epoch</span>
     <span class="c1">// is Unix time 0 (midnight 1/1/1970), but &#39;epoch&#39; is often used as</span>
     <span class="c1">// a synonym for &#39;Unix time&#39;. Many Unix systems store epoch dates as</span>
     <span class="c1">// a signed 32-bit integer, which might cause problems on January 19,</span>
     <span class="c1">// 2038 (known as the Year 2038 problem or Y2038).</span>
     <span class="c1">//</span>
     <span class="c1">// \note You can convert the timestamp using the following [routines</span>
-    <span class="c1">// sorted by languages](https://www.epochconverter.com/#code)</span>
+    <span class="c1">// sorted by languages](https://www.epochconverter.com/#code).</span>
     <span class="c1">//</span>
     <span class="c1">// \par References:</span>
-    <span class="c1">// - [1] [Epoch &amp; Unix Timestamp Conversion Tools](https://www.epochconverter.com/)</span>
-    <span class="c1">// - [2] [Wikipedia: Coordinated Universal Time] (https://en.wikipedia.org/wiki/Coordinated_Universal_Time)</span>
+    <span class="c1">// [1] ITU Radiocommunication Assembly. (2002). &lt;em&gt;Recommondation  ITU-R  TF.460-6 Standard-frequency and time-signal emissions&lt;/em&gt;. (Rec.  ITU-R  TF.460-6). Retrieved January 25, 2020, from http://www.itu.int/dms_pubrec/itu-r/rec/tf/R-REC-TF.460-6-200202-I!!PDF-E.pdf \n</span>
+    <span class="c1">// [2] The Open Group. (2018). &lt;em&gt;POSIX.1-2017&lt;/em&gt; The Open Group Base Specifications Issue 7, 2018 edition. IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008). Retrieved January 25, 2020, from https://pubs.opengroup.org/onlinepubs/9699919799/xrat/contents.html</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">int64</span> <span class="n">unix_timestamp</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
 
@@ -277,10 +278,8 @@
     <span class="c1">// Definition of discretized precipitation states according to [1].</span>
     <span class="c1">// (I = Intensity of precipitation in mm per hour mm/h)</span>
     <span class="c1">//</span>
-    <span class="c1">// \par References:</span>
-    <span class="c1">// - [1] PAULAT, Marcus, et al. A gridded dataset of hourly precipitation</span>
-    <span class="c1">// in Germany: Its construction, climatology and application.</span>
-    <span class="c1">// Meteorologische Zeitschrift, 2008, 17. Jg. Nr. 6, S. 719-732.</span>
+    <span class="c1">// \par Reference:</span>
+    <span class="c1">// [1] Paulat, M., Frei, C., Hagen, M. &amp; Wernli, H. (2008). A gridded dataset of hourly precipitation in Germany: Its construction, climatology and application. &lt;em&gt;Meteorologische Zeitschrift&lt;/em&gt;. Vol. 17, No. 6. pp. 719-732. Berlin, Stuttgart, Germany. https://doi.org/10.1127/0941-2948/2008/0332</span>
     <span class="c1">//</span>
     <span class="k">enum</span> <span class="n">Precipitation</span>
     <span class="p">{</span>
@@ -322,10 +321,10 @@
         <span class="n">PRECIPITATION_EXTREME</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// Definition of discretized fog states according to [2].</span>
+    <span class="c1">// Definition of discretized fog states according to [1].</span>
     <span class="c1">// The bandwidth of thick and dense fog was adjusted to fit the German StVO</span>
-    <span class="c1">// regarding rear fog lights [3].</span>
-    <span class="c1">// (V = Visibility in meters m)</span>
+    <span class="c1">// regarding rear fog lights [2, 3].</span>
+    <span class="c1">// (V = Visibility in m)</span>
     <span class="c1">//</span>
     <span class="c1">// Visibility is defined as the length of the atmosphere over which a beam</span>
     <span class="c1">// of light travels before its luminous flux is reduced to 5% of its</span>
@@ -334,12 +333,10 @@
     <span class="c1">// contrast of a distant object against its background.</span>
     <span class="c1">//</span>
     <span class="c1">// \par References:</span>
-    <span class="c1">// - [2] SHEPARD, Frank D. Reduced visibility due to fog on the highway.</span>
-    <span class="c1">// Transportation Research Board, 1996.</span>
-    <span class="c1">// - [3] [StVO 17 chapter</span>
-    <span class="c1">// 3](https://www.stvo.de/strassenverkehrsordnung/101-17-beleuchtung)</span>
-    <span class="c1">// - [4] [Homepage of the Meteorological</span>
-    <span class="c1">// Office](http://www.metoffice.gov.uk/guide/weather/observations-guide/how-we-measure-visibility)</span>
+    <span class="c1">// [1] Shepard, F. D. (1996). &lt;em&gt;Reduced visibility due to fog on the highway.&lt;/em&gt; Transportation Research Board, National Research Council (Ed.). National Academy Press. Washington, D.C., USA. ISBN 0-309-06006-0. \n</span>
+    <span class="c1">// [2] Strassenverkehrs-Ordnung (StVO) as of dated  March 06, 2013 (BGBl. I S. 367), lastly changed by article 4a of the order from June 06, 2019 (BGBl. I S. 756). \n</span>
+    <span class="c1">// [3] stvo.de. (2013, April 01). &lt;em&gt;StVO Par. 17 Beleuchtung&lt;/em&gt;. Retrieved January 25, 2020, from https://www.stvo.de/strassenverkehrsordnung/101-17-beleuchtung \n</span>
+    <span class="c1">// [4] Meteorological Office UK. (2020). &lt;em&gt;Homepage of the Meteorological Office - How we measure visibility&lt;/em&gt;. Retrieved January 25, 2020, from http://www.metoffice.gov.uk/guide/weather/observations-guide/how-we-measure-visibility</span>
     <span class="c1">//</span>
     <span class="k">enum</span> <span class="n">Fog</span>
     <span class="p">{</span>
@@ -390,30 +387,24 @@
     <span class="c1">// emitted by the vehicle itself. It can include sun/moon light, light from</span>
     <span class="c1">// other cars, street lights etc.</span>
     <span class="c1">//</span>
-    <span class="c1">// lx (&quot;Lux&quot;) is the SI unit of luminance or illumination of an area of exact</span>
+    <span class="c1">// lx (&quot;lux&quot;) is the SI unit of luminance or illumination of an area of exact</span>
     <span class="c1">// one square meter, which is equal to one lumen per square meter 1 lx =</span>
-    <span class="c1">// 1 lm/m^2 [5].</span>
+    <span class="c1">// 1 lm/m^2 [1].</span>
     <span class="c1">// lm (&quot;lumen&quot;) is the SI derived unit of luminous flux and a measure of</span>
     <span class="c1">// the total quantity of visible light emitted by a source. The lumen is</span>
     <span class="c1">// defined in relation to cd (&quot;candela&quot;) as 1 lm = 1 cd sr, where sr</span>
     <span class="c1">// denotes steradian, the unit of solid angle used in 3D geometry analogous</span>
-    <span class="c1">// to the radian.</span>
+    <span class="c1">// to the radian [1].</span>
     <span class="c1">//</span>
     <span class="c1">// Categorization is done based on natural day/night time illuminance levels</span>
-    <span class="c1">// [6] and standards for required lighting levels on roads [6, 7, 8, 9].</span>
+    <span class="c1">// [2] and standards for required lighting levels on roads [2, 3, 4, 5].</span>
     <span class="c1">//</span>
     <span class="c1">// \par References:</span>
-    <span class="c1">// - [5] [The NIST Reference on Constants, Units, and</span>
-    <span class="c1">// Uncertainty](https://physics.nist.gov/cuu/Units/units.html)</span>
-    <span class="c1">// - [6] [National Optical Astronomy</span>
-    <span class="c1">// Observatory](https://www.noao.edu/education/QLTkit/ACTIVITY_Documents/Safety/LightLevels_outdoor+indoor.pdf)</span>
-    <span class="c1">// - [7] [Standards for required street lighting in the</span>
-    <span class="c1">// USA](http://www.wsdot.wa.gov/research/reports/fullreports/847.1.pdf)</span>
-    <span class="c1">// - [8] [Canadian IES-RP-8 standards for road lighting - municipality of</span>
-    <span class="c1">// Saint-Gedeon-de-.</span>
-    <span class="c1">// Beauce] (http://sslnet.ca/wp-content/uploads/2011/10/LTE-RT-2011-0076-Anglais.pdf)</span>
-    <span class="c1">// - [9] [European standards for road</span>
-    <span class="c1">// lighting] (http://courtneystrong.com/wp-content/uploads/2017/07/css-sl1-class-and-quality-of-street-lighting.pdf)</span>
+    <span class="c1">// [1] DIN Deutsches Institut fuer Normung e. V. (1982). &lt;em&gt;DIN 5031-3 Strahlungsphysik im optischen Bereich und Lichttechnik - Groessen, Formelzeichen und Einheiten der Lichttechnik&lt;/em&gt;. (DIN 5031-3:1982-03). Berlin, Germany. \n</span>
+    <span class="c1">// [2] National Optical Astronomy Observatory. (2015, December 02). &lt;em&gt;Recommended Light Levels&lt;/em&gt;. Retrieved January 25, 2020, from https://www.noao.edu/education/QLTkit/ACTIVITY_Documents/Safety/LightLevels_outdoor+indoor.pdf \n</span>
+    <span class="c1">// [3] Wang, Y. &amp; Zou, Y., (2016, March). &lt;em&gt;Study on Illumination for State Highways&lt;/em&gt;. Washington State Department of Transportation. Retrieved January 25, 2020, from http://www.wsdot.wa.gov/research/reports/fullreports/847.1.pdf \n</span>
+    <span class="c1">// [4] Laperriere, A. (2011, May). &lt;em&gt;LED street lighting in the municipality of Saint-Gedeon-de-Beauce within the framework of advanced lighting technologies&lt;/em&gt;. Retrieved January 25, 2020, from http://sslnet.ca/wp-content/uploads/2011/10/LTE-RT-2011-0076-Anglais.pdf \n</span>
+    <span class="c1">// [5] Crabb, G. I., Beaumont, R. &amp; Webster, D. (2008, October 17). &lt;em&gt;Review of the class and quality of street lighting&lt;/em&gt;. Transport Research Laboratory. Retrieved January 25, 2020, from http://courtneystrong.com/wp-content/uploads/2017/07/css-sl1-class-and-quality-of-street-lighting.pdf</span>
     <span class="c1">//</span>
     <span class="k">enum</span> <span class="n">AmbientIllumination</span>
     <span class="p">{</span>
