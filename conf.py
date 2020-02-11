@@ -4,14 +4,17 @@ import os
 import sys
 import sphinxcontrib.spelling
 import textwrap
-# sys.path.insert(0, os.path.abspath('.'))
+import datetime
+
 sys.path.append('/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation')
 sys.path.append('/home/travis/build/OpenSimulationInterface/osi-documentation/breathe')
+
+now = datetime.datetime.now()
 
 # -- Project information -----------------------------------------------------
 
 project = 'Open Simulation Interface'
-copyright = '2019, Carlo van Driesten'
+copyright = f'{now.year}, Carlo van Driesten'
 author = 'Carlo van Driesten'
 
 # The short X.Y version
