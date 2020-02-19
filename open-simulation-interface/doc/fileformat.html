@@ -97,6 +97,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#trace-file-naming-convention">Trace file naming convention</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-osi-traces">Generate OSI traces</a></li>
 </ul>
 </li>
@@ -232,6 +233,27 @@ python3 osi2read.py -d trace.txt -f separated -o readable_trace
 </ol>
 </div>
 </div>
+<div class="section" id="trace-file-naming-convention">
+<h2>Trace file naming convention<a class="headerlink" href="#trace-file-naming-convention" title="Permalink to this headline">¶</a></h2>
+<p>As best practice we recommend to name the trace files in the following format:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>&lt;type&gt;_&lt;osi-version&gt;_&lt;protobuf-version&gt;_&lt;frame-number&gt;_&lt;custom-trace-name&gt;.osi
+</pre></div>
+</div>
+<p>For example a naming for a trace with the information below:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Type = SensorView
+OSI Version= 3.1.2
+Protobuf Version = 3.0.0
+Number of frames = 1523
+Scenario name = highway
+</pre></div>
+</div>
+<p>would then look like this:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>sv_312_300_1523_highway.osi
+</pre></div>
+</div>
+<p>The type definition would only be possible for <code class="docutils literal notranslate"><span class="pre">SensorView</span> <span class="pre">=</span> <span class="pre">sv</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorData</span> <span class="pre">=</span> <span class="pre">sd</span></code> and <code class="docutils literal notranslate"><span class="pre">GroundTruth</span> <span class="pre">=</span> <span class="pre">gt</span></code>.
+By following this best practice users can understand the general content of a file. By comparing the information provided by the naming and the actual trace the user can check the overall validity of a trace file.</p>
+</div>
 <div class="section" id="generate-osi-traces">
 <h2>Generate OSI traces<a class="headerlink" href="#generate-osi-traces" title="Permalink to this headline">¶</a></h2>
 <p>If you want to generate a valid OSI trace file which can be used as an input for the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">osi-validator</a> or the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">osi-visualizer</a> see the example script in python below:</p>
@@ -240,7 +262,7 @@ python3 osi2read.py -d trace.txt -f separated -o readable_trace
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Initialize SensorView&quot;&quot;&quot;</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_trace.osi&quot;</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sv_312_320_10_movingobject.osi&quot;</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span>
     <span class="n">sensorview</span> <span class="o">=</span> <span class="n">SensorView</span><span class="p">()</span>
 
     <span class="n">sv_ground_truth</span> <span class="o">=</span> <span class="n">sensorview</span><span class="o">.</span><span class="n">global_ground_truth</span>
@@ -289,8 +311,8 @@ python3 osi2read.py -d trace.txt -f separated -o readable_trace
 For the <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> it is mandatory to define the version and the timestamp. After that we can add objects.
 Here we add a moving object with the ID 114. For this object we generate in a for loop 10 OSI messages which all have different x values over a time span of 9 seconds.
 This means the object is changing the position in the x direction through the iteration each second.
-Each time we change the x value and the timestamp we append the length of the OSI message and the serialized OSI message itself to a file called <code class="docutils literal notranslate"><span class="pre">test_trace.osi</span></code>.
-After finishing the loop we now have a <code class="docutils literal notranslate"><span class="pre">test_trace.osi</span></code> file which can be <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">validated</a> and <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">visualized</a>.</p>
+Each time we change the x value and the timestamp we append the length of the OSI message and the serialized OSI message itself to a file called <code class="docutils literal notranslate"><span class="pre">sv_312_320_10_movingobject.osi</span></code>.
+After finishing the loop we now have a <code class="docutils literal notranslate"><span class="pre">sv_312_320_10_movingobject.osi</span></code> file which can be <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">validated</a> and <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">visualized</a>.</p>
 </div>
 </div>
 
