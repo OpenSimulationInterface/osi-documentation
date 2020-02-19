@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Versioning" href="versioning.html" />
-    <link rel="prev" title="Coordinate systems and reference points" href="coordinatesystem.html" /> 
+    <link rel="prev" title="Interface Conventions" href="interfaceconventions.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,6 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileformat.html">OSI File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaceconventions.html">Interface Conventions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Commenting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#commenting-with-block-syntax">Commenting with block syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commenting-on-messages">Commenting on messages</a></li>
@@ -379,32 +380,16 @@ Every OSI message should be defined properly and should have a well cited refere
 <li><p>Find filled-out examples under <a class="reference external" href="https://apastyle.apa.org/style-grammar-guidelines/references/examples">https://apastyle.apa.org</a> and in existing entries.</p></li>
 <li><p>The scheme of popular sources for the reference list is as follows (replace tags with corresponding values):</p></li>
 </ul>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets">1</span></dt>
-<dd><p>&lt;author1&gt;, &lt;author2&gt;, &lt;author3&gt; &amp; &lt;author4&gt;. (&lt;year&gt;). Contribution in a compilation title. &lt;em&gt;&lt;Compilation Title&gt;&lt;/em&gt;. &lt;edition&gt;. &lt;page(s)&gt;. &lt;publisher&gt;. &lt;location&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p>
-</dd>
-<dt class="label" id="id3"><span class="brackets">2</span></dt>
-<dd><p>&lt;author1&gt;, &lt;author2&gt; &amp; &lt;author3&gt;. (&lt;year&gt;). &lt;em&gt;&lt;book (monograph) title&gt;&lt;/em&gt;. &lt;edition&gt;. &lt;publisher&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p>
-</dd>
-<dt class="label" id="id4"><span class="brackets">3</span></dt>
-<dd><p>&lt;author1&gt; &amp; &lt;author2&gt;. (&lt;year&gt;). &lt;book chapter title&gt;. In &lt;editor1&gt; &amp; &lt;editor2&gt; (Eds.), &lt;em&gt;&lt;book title&gt;&lt;/em&gt; (&lt;page(s)&gt;). &lt;publisher&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p>
-</dd>
-<dt class="label" id="id5"><span class="brackets">4</span></dt>
-<dd><p>&lt;author1&gt; &amp; &lt;author2&gt;. (&lt;year&gt;). &lt;journal article title&gt;. &lt;em&gt;&lt;journal title&gt;&lt;/em&gt;. &lt;page(s)&gt;. &lt;location&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p>
-</dd>
-<dt class="label" id="id6"><span class="brackets">5</span></dt>
-<dd><p>&lt;author&gt;. (&lt;year&gt;). &lt;em&gt;&lt;Phd thesis title&gt;&lt;/em&gt;. Phd. thesis. &lt;location&gt;. &lt;university&gt;. &lt;doi or url&gt;. &lt;page(s)&gt;.</p>
-</dd>
-<dt class="label" id="id7"><span class="brackets">6</span></dt>
-<dd><p>&lt;author&gt;. (&lt;year&gt;, &lt;month&gt; &lt;day&gt;). &lt;em&gt;&lt;internet article title&gt;&lt;/em&gt;. Retrieved &lt;month&gt; &lt;day&gt;, &lt;year&gt;, from &lt;url&gt;.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets">7</span></dt>
-<dd><p>&lt;standarding organisation&gt;. (&lt;year&gt;). &lt;em&gt;&lt;title of the standard&gt;&lt;/em&gt;. (&lt;standard identifier&gt;). &lt;location&gt;.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets">8</span></dt>
-<dd><p>&lt;author&gt;. (&lt;year&gt;). &lt;em&gt;&lt;patent title and id&gt;&lt;/em&gt;. &lt;location&gt;. &lt;organisation&gt;.</p>
-</dd>
-</dl>
+<ol class="arabic simple">
+<li><p>&lt;author1&gt;, &lt;author2&gt;, &lt;author3&gt; &amp; &lt;author4&gt;. (&lt;year&gt;). Contribution in a compilation title. &lt;em&gt;&lt;Compilation Title&gt;&lt;/em&gt;. &lt;edition&gt;. &lt;page(s)&gt;. &lt;publisher&gt;. &lt;location&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p></li>
+<li><p>&lt;author1&gt;, &lt;author2&gt; &amp; &lt;author3&gt;. (&lt;year&gt;). &lt;em&gt;&lt;book (monograph) title&gt;&lt;/em&gt;. &lt;edition&gt;. &lt;publisher&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p></li>
+<li><p>&lt;author1&gt; &amp; &lt;author2&gt;. (&lt;year&gt;). &lt;book chapter title&gt;. In &lt;editor1&gt; &amp; &lt;editor2&gt; (Eds.), &lt;em&gt;&lt;book title&gt;&lt;/em&gt; (&lt;page(s)&gt;). &lt;publisher&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p></li>
+<li><p>&lt;author1&gt; &amp; &lt;author2&gt;. (&lt;year&gt;). &lt;journal article title&gt;. &lt;em&gt;&lt;journal title&gt;&lt;/em&gt;. &lt;page(s)&gt;. &lt;location&gt;. &lt;doi&gt;. &lt;page(s)&gt;.</p></li>
+<li><p>&lt;author&gt;. (&lt;year&gt;). &lt;em&gt;&lt;Phd thesis title&gt;&lt;/em&gt;. Phd. thesis. &lt;location&gt;. &lt;university&gt;. &lt;doi or url&gt;. &lt;page(s)&gt;.</p></li>
+<li><p>&lt;author&gt;. (&lt;year&gt;, &lt;month&gt; &lt;day&gt;). &lt;em&gt;&lt;internet article title&gt;&lt;/em&gt;. Retrieved &lt;month&gt; &lt;day&gt;, &lt;year&gt;, from &lt;url&gt;.</p></li>
+<li><p>&lt;standarding organisation&gt;. (&lt;year&gt;). &lt;em&gt;&lt;title of the standard&gt;&lt;/em&gt;. (&lt;standard identifier&gt;). &lt;location&gt;.</p></li>
+<li><p>&lt;author&gt;. (&lt;year&gt;). &lt;em&gt;&lt;patent title and id&gt;&lt;/em&gt;. &lt;location&gt;. &lt;organisation&gt;.</p></li>
+</ol>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// \brief The conditions of the environment.</span>
 <span class="c1">//</span>
 <span class="c1">// \image html EnvironmentalConditions.svg</span>
@@ -511,7 +496,7 @@ Please place all your included images in <code class="docutils literal notransla
         <a href="versioning.html" class="btn btn-neutral float-right" title="Versioning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate systems and reference points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interfaceconventions.html" class="btn btn-neutral float-left" title="Interface Conventions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

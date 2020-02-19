@@ -89,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/fileformat.html">OSI File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/interfaceconventions.html">Interface Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
@@ -480,13 +481,9 @@
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Spherical3d</span> <span class="n">position_rmse</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-    <span class="c1">// Absolute radial (in direction to the sensor) velocity of the detection.</span>
+    <span class="c1">// Radial velocity of the detection positive in direction to the sensor.</span>
     <span class="c1">//</span>
     <span class="c1">// Unit: m/s</span>
-    <span class="c1">//</span>
-    <span class="c1">// \rules</span>
-    <span class="c1">// is_greater_than_or_equal_to: 0</span>
-    <span class="c1">// \endrules</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="kt">double</span> <span class="n">radial_velocity</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 

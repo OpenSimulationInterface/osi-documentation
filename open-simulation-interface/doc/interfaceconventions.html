@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interface Conventions &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Commenting" href="commenting.html" />
+    <link rel="prev" title="Coordinate systems and reference points" href="coordinatesystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileformat.html">OSI File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#message-naming">Message Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#top-level-messages">Top-Level Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-message-naming">Field Message Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-numbering">Field Numbering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enum-naming">Enum Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enum-field-naming">Enum Field Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Interface Conventions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/open-simulation-interface/doc/interfaceconventions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface-conventions">
+<span id="iconventions"></span><h1>Interface Conventions<a class="headerlink" href="#interface-conventions" title="Permalink to this headline">¶</a></h1>
+<p>When adding new messages, enums, field messages and field enums to OSI we enforce a few naming conventions for each type like in the <a class="reference external" href="https://developers.google.com/protocol-buffers/docs/style">style guide</a> from protobuf.</p>
+<div class="section" id="message-naming">
+<h2>Message Naming<a class="headerlink" href="#message-naming" title="Permalink to this headline">¶</a></h2>
+<p>A message definition should always be in camel case. This means that the first letter of each word in a message should be upper case without any spaces. See example below:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="top-level-messages">
+<h2>Top-Level Messages<a class="headerlink" href="#top-level-messages" title="Permalink to this headline">¶</a></h2>
+<p>All messages that are intended to be exchanged as a stand-alone message, i.e. not required to be embedded in another message, like e.g. <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">SensorViewConfiguration</span></code>, are required to carry an <code class="docutils literal notranslate"><span class="pre">InterfaceVersion</span></code> field as their first field, and a <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> field as their second field, e.g.:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">TopLevel</span>
+<span class="p">{</span>
+    <span class="c1">// The interface version used by the sender (simulation environment).</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="n">InterfaceVersion</span> <span class="na">version</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The data timestamp of the simulation environment. Zero time is arbitrary</span>
+    <span class="c1">// but must be identical for all messages. Zero time does not need to</span>
+    <span class="c1">// coincide with the UNIX epoch. Recommended is the starting time point of</span>
+    <span class="c1">// the simulation.</span>
+    <span class="c1">//</span>
+    <span class="k">optional</span> <span class="n">Timestamp</span> <span class="na">timestamp</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="field-message-naming">
+<h2>Field Message Naming<a class="headerlink" href="#field-message-naming" title="Permalink to this headline">¶</a></h2>
+<p>After defining a message fields can be added to it in snake case format. This means every letter is lower case and the words are connected through an underline character. See example below:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="field-numbering">
+<h2>Field Numbering<a class="headerlink" href="#field-numbering" title="Permalink to this headline">¶</a></h2>
+<p>Fields should be numbered consecutively starting from 1 on first definition. During maintenance, the rules of backward/forward-compatibility require that fields are never renumbered, and field numbers never re-used unless a major release is performed.</p>
+<p>All field numbers of 10000 and above are reserved for user-defined extensions and will thus never be used by OSI message fields.</p>
+</div>
+<div class="section" id="enum-naming">
+<h2>Enum Naming<a class="headerlink" href="#enum-naming" title="Permalink to this headline">¶</a></h2>
+<p>The naming of an enum should be camel case. See example below:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="kd">enum</span> <span class="n">AmbientIllumination</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enum-field-naming">
+<h2>Enum Field Naming<a class="headerlink" href="#enum-field-naming" title="Permalink to this headline">¶</a></h2>
+<p>The naming of an enum field should be all in upper case. The start should be converted from the enum name camel case to upper case snake case. It is mandatory to add to the first enum field name the postfix <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> and to the second the postfix <code class="docutils literal notranslate"><span class="pre">_OTHER</span></code>. After that the naming can be decided by the user. It is often mentioned that the value <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> should not be used in a <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> message as there are now uncertanties by definition in <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">truth</span></code>. These values are mostly used in messages like <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> where the content is subject to interpretation. See example below:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
+<span class="p">{</span>
+    <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="kd">enum</span> <span class="n">AmbientIllumination</span>
+    <span class="p">{</span>
+        <span class="na">AMBIENT_ILLUMINATION_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="na">AMBIENT_ILLUMINATION_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="na">AMBIENT_ILLUMINATION_LEVEL1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Here a small summary for the naming conventions:</p>
+<p>Messages: camel case</p>
+<p>Message Fields: snake case</p>
+<p>Enum: camel case</p>
+<p>Enum Fields: upper case, name of enum converted in upper case snake case and then following the specified name</p>
+<p>After defining the messages do not forget to comment them. See also the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/doc/commenting.html">section for commenting</a> of fields and messages.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commenting.html" class="btn btn-neutral float-right" title="Commenting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="coordinatesystem.html" class="btn btn-neutral float-left" title="Coordinate systems and reference points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Carlo van Driesten
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

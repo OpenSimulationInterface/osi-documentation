@@ -104,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileformat.html">OSI File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaceconventions.html">Interface Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commenting.html">Commenting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="versioning.html">Versioning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
@@ -212,6 +213,9 @@ compatibility. However, this does not mean that filling the field is
 optional. For the purpose of providing a complete interface, all
 existing fields should be set, unless not setting a field carries a
 specific meaning as indicated in the accompanying comment.</p>
+<p>All field numbers of 10000 and upward are available for user-specific
+extensions (i.e. custom fields), so no future evolution of OSI will
+use field numbers of 10000 or above itself.</p>
 </div>
 <div class="section" id="compatibility">
 <h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
