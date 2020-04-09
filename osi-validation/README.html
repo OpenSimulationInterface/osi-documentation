@@ -103,7 +103,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Validator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#local-recommended">Local (recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-recommended">Local (recommended)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compile-optional">Compile (optional)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#global">Global</a></li>
 </ul>
 </li>
@@ -247,13 +250,20 @@ optional arguments:
 $ <span class="nb">cd</span> osi-validation
 $ git submodule update --init
 $ sudo apt-get install virtualenv
-$ virtualenv -p /usr/bin/python3 vpython
-$ <span class="nb">source</span> vpython/bin/activate
-$ <span class="nb">cd</span> open-simulation-interface
-$ pip install .
-$ <span class="nb">cd</span> ..
-$ pip install .
+$ virtualenv -p /usr/bin/python3 venv
+$ <span class="nb">source</span> venv/bin/activate
+<span class="o">(</span>venv<span class="o">)</span> $ <span class="nb">cd</span> open-simulation-interface
+<span class="o">(</span>venv<span class="o">)</span> $ pip install .
+<span class="o">(</span>venv<span class="o">)</span> $ <span class="nb">cd</span> ..
+<span class="o">(</span>venv<span class="o">)</span> $ pip install .
 </pre></div>
+</div>
+<div class="section" id="compile-optional">
+<h4>Compile (optional)<a class="headerlink" href="#compile-optional" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> $ pip install pyinstaller
+<span class="o">(</span>venv<span class="o">)</span> $ pyinstaller osivalidator/osi_general_validator.py --onefile
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="global">

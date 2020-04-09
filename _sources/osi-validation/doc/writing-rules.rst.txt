@@ -41,7 +41,6 @@ The rules can either be with or without any parameters.
 ::
 
   is_greater_than_or_equal_to: 0.0
-  is_optional
   is_equal: 1
 
 In the case a rule has a parameter, it is written as a `mapping` ( a `scalar`
@@ -57,12 +56,11 @@ The available rules and their usage are explained in the osi-validator class `os
     is_less_than: 2
     is_equal: 1
     is_different: 2
-    is_global_unique
-    refers
-    is_iso_country_code
+    is_globally_unique
+    refers_to: Lane
+    is_iso_country_code:
     first_element: {is_equal: 0.13, is_greater_than: 0.13}
     last_element: {is_equal: 0.13, is_greater_than: 0.13}
-    is_optional
     check_if: [{is_equal: 2, is_greater_than: 3, target: this.y}, {do_check: {is_equal: 1, is_less_than: 3}}]
 
 

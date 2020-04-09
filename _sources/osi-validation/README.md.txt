@@ -53,12 +53,19 @@ $ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ cd osi-validation
 $ git submodule update --init
 $ sudo apt-get install virtualenv
-$ virtualenv -p /usr/bin/python3 vpython
-$ source vpython/bin/activate
-$ cd open-simulation-interface
-$ pip install .
-$ cd ..
-$ pip install .
+$ virtualenv -p /usr/bin/python3 venv
+$ source venv/bin/activate
+(venv) $ cd open-simulation-interface
+(venv) $ pip install .
+(venv) $ cd ..
+(venv) $ pip install .
+```
+
+##### Compile (optional)
+
+```bash
+(venv) $ pip install pyinstaller
+(venv) $ pyinstaller osivalidator/osi_general_validator.py --onefile
 ```
 
 #### Global

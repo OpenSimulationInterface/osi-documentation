@@ -234,7 +234,6 @@ not camel-case. For example <code class="docutils literal notranslate"><span cla
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <p>The rules can either be with or without any parameters.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">is_greater_than_or_equal_to</span><span class="p">:</span> <span class="mf">0.0</span>
-<span class="n">is_optional</span>
 <span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span>
 </pre></div>
 </div>
@@ -247,12 +246,11 @@ followed by a colon “:”). What comes after the colon depends on the rule use
 <span class="n">is_less_than</span><span class="p">:</span> <span class="mi">2</span>
 <span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span>
 <span class="n">is_different</span><span class="p">:</span> <span class="mi">2</span>
-<span class="n">is_global_unique</span>
-<span class="n">refers</span>
-<span class="n">is_iso_country_code</span>
+<span class="n">is_globally_unique</span>
+<span class="n">refers_to</span><span class="p">:</span> <span class="n">Lane</span>
+<span class="n">is_iso_country_code</span><span class="p">:</span>
 <span class="n">first_element</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">}</span>
 <span class="n">last_element</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mf">0.13</span><span class="p">}</span>
-<span class="n">is_optional</span>
 <span class="n">check_if</span><span class="p">:</span> <span class="p">[{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">is_greater_than</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">this</span><span class="o">.</span><span class="n">y</span><span class="p">},</span> <span class="p">{</span><span class="n">do_check</span><span class="p">:</span> <span class="p">{</span><span class="n">is_equal</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">is_less_than</span><span class="p">:</span> <span class="mi">3</span><span class="p">}}]</span>
 </pre></div>
 </div>
