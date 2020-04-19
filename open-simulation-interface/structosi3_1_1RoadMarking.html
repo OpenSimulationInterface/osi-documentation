@@ -205,7 +205,7 @@
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi311RoadMarkingE">
 <span id="_CPPv3N4osi311RoadMarkingE"></span><span id="_CPPv2N4osi311RoadMarkingE"></span><span id="osi3::RoadMarking"></span><span class="target" id="structosi3_1_1RoadMarking"></span><em class="property">struct </em><code class="sig-name descname">RoadMarking</code><a class="headerlink" href="#_CPPv4N4osi311RoadMarkingE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A road surface marking. </p>
@@ -215,13 +215,13 @@
 <p><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> markings are excluded and defined as <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary.html#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code> messages as part of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref"><span class="pre">Lane</span></span></a></code>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1a56a6598238d8bdf7eaeb466aa528c83d"></span><code class="sig-name descname">optional Identifier osi3::RoadMarking::id = 1</code></dt>
 <dd><p>The ID of the road marking. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1a8b19d63b7b7ac893eadf0c3b66a1746b"></span><code class="sig-name descname">optional BaseStationary osi3::RoadMarking::base = 2</code></dt>
 <dd><p>The base parameters of the road marking.</p>
@@ -233,67 +233,67 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1a957cc1b69c5b75f07f09eebdd56be2c7"></span><code class="sig-name descname">optional Classification osi3::RoadMarking::classification = 3</code></dt>
 <dd><p>The classification data for the road marking. </p>
 </dd></dl>
 
 </div>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi311RoadMarking14ClassificationE">
 <span id="_CPPv3N4osi311RoadMarking14ClassificationE"></span><span id="_CPPv2N4osi311RoadMarking14ClassificationE"></span><span id="osi3::RoadMarking::Classification"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification"></span><em class="property">struct </em><code class="sig-name descname">Classification</code><a class="headerlink" href="#_CPPv4N4osi311RoadMarking14ClassificationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification"><span class="std std-ref"><span class="pre">Classification</span></span></a></code> data for a road surface marking. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="enum">
+<dl class="cpp enum">
 <dt id="_CPPv4N4osi311RoadMarking4TypeE">
 <span id="_CPPv3N4osi311RoadMarking4TypeE"></span><span id="_CPPv2N4osi311RoadMarking4TypeE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cb"></span><em class="property">enum </em><code class="sig-name descname">Type</code><a class="headerlink" href="#_CPPv4N4osi311RoadMarking4TypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of road marking types. </p>
 <p><em>Values:</em></p>
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking12TYPE_UNKNOWNE">
 <span id="_CPPv3N4osi311RoadMarking12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi311RoadMarking12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba9005ae9c0364fa3c8e74b262184a625b"></span><code class="sig-name descname">TYPE_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi311RoadMarking12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of road marking is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking10TYPE_OTHERE">
 <span id="_CPPv3N4osi311RoadMarking10TYPE_OTHERE"></span><span id="_CPPv2N4osi311RoadMarking10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba61772d1752a9cefb2856abef21d09331"></span><code class="sig-name descname">TYPE_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi311RoadMarking10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of road marking. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking25TYPE_PAINTED_TRAFFIC_SIGNE">
 <span id="_CPPv3N4osi311RoadMarking25TYPE_PAINTED_TRAFFIC_SIGNE"></span><span id="_CPPv2N4osi311RoadMarking25TYPE_PAINTED_TRAFFIC_SIGNE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaaa850220d5bb3adde51b1ddc4ae1eaa4"></span><code class="sig-name descname">TYPE_PAINTED_TRAFFIC_SIGN</code> = 2<a class="headerlink" href="#_CPPv4N4osi311RoadMarking25TYPE_PAINTED_TRAFFIC_SIGNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface indicating a color image of a traffic sign. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking26TYPE_SYMBOLIC_TRAFFIC_SIGNE">
 <span id="_CPPv3N4osi311RoadMarking26TYPE_SYMBOLIC_TRAFFIC_SIGNE"></span><span id="_CPPv2N4osi311RoadMarking26TYPE_SYMBOLIC_TRAFFIC_SIGNE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf32447c2168fbb5d9baf48f650a80b9d"></span><code class="sig-name descname">TYPE_SYMBOLIC_TRAFFIC_SIGN</code> = 3<a class="headerlink" href="#_CPPv4N4osi311RoadMarking26TYPE_SYMBOLIC_TRAFFIC_SIGNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface indicating a monochrome logical symbol of a traffic sign (e.g. digits 50 as start of speed limit 50 or stop line for stop sign). </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking25TYPE_TEXTUAL_TRAFFIC_SIGNE">
 <span id="_CPPv3N4osi311RoadMarking25TYPE_TEXTUAL_TRAFFIC_SIGNE"></span><span id="_CPPv2N4osi311RoadMarking25TYPE_TEXTUAL_TRAFFIC_SIGNE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba4a5a31878399051eefbcd7f7dd58836c"></span><code class="sig-name descname">TYPE_TEXTUAL_TRAFFIC_SIGN</code> = 4<a class="headerlink" href="#_CPPv4N4osi311RoadMarking25TYPE_TEXTUAL_TRAFFIC_SIGNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface as a character string (e.g. BUS as bus only lane). </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking19TYPE_GENERIC_SYMBOLE">
 <span id="_CPPv3N4osi311RoadMarking19TYPE_GENERIC_SYMBOLE"></span><span id="_CPPv2N4osi311RoadMarking19TYPE_GENERIC_SYMBOLE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba9fa3fdb907caae7ac59be15889cf2acd"></span><code class="sig-name descname">TYPE_GENERIC_SYMBOL</code> = 5<a class="headerlink" href="#_CPPv4N4osi311RoadMarking19TYPE_GENERIC_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface indicating a generic symbol. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking17TYPE_GENERIC_LINEE">
 <span id="_CPPv3N4osi311RoadMarking17TYPE_GENERIC_LINEE"></span><span id="_CPPv2N4osi311RoadMarking17TYPE_GENERIC_LINEE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf0cff47840a00c3ac0cb2b97c8d9933a"></span><code class="sig-name descname">TYPE_GENERIC_LINE</code> = 6<a class="headerlink" href="#_CPPv4N4osi311RoadMarking17TYPE_GENERIC_LINEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface indicating a generic line. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking17TYPE_GENERIC_TEXTE">
 <span id="_CPPv3N4osi311RoadMarking17TYPE_GENERIC_TEXTE"></span><span id="_CPPv2N4osi311RoadMarking17TYPE_GENERIC_TEXTE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbab6918d84634cb10b458042a5bcf90788"></span><code class="sig-name descname">TYPE_GENERIC_TEXT</code> = 7<a class="headerlink" href="#_CPPv4N4osi311RoadMarking17TYPE_GENERIC_TEXTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Paint on the road surface indicating a generic character string. </p>
@@ -301,54 +301,54 @@
 
 </dd></dl>
 
-<dl class="enum">
+<dl class="cpp enum">
 <dt id="_CPPv4N4osi311RoadMarking5ColorE">
 <span id="_CPPv3N4osi311RoadMarking5ColorE"></span><span id="_CPPv2N4osi311RoadMarking5ColorE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4"></span><em class="property">enum </em><code class="sig-name descname">Color</code><a class="headerlink" href="#_CPPv4N4osi311RoadMarking5ColorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of road marking colors </p>
 <p><em>Values:</em></p>
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking13COLOR_UNKNOWNE">
 <span id="_CPPv3N4osi311RoadMarking13COLOR_UNKNOWNE"></span><span id="_CPPv2N4osi311RoadMarking13COLOR_UNKNOWNE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4aed65449ce5b10e829213eef58b01cff6"></span><code class="sig-name descname">COLOR_UNKNOWN</code> = 0<a class="headerlink" href="#_CPPv4N4osi311RoadMarking13COLOR_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Color of road marking is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking11COLOR_OTHERE">
 <span id="_CPPv3N4osi311RoadMarking11COLOR_OTHERE"></span><span id="_CPPv2N4osi311RoadMarking11COLOR_OTHERE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4aeb0cfbe193165fc4dd16ff7797666029"></span><code class="sig-name descname">COLOR_OTHER</code> = 1<a class="headerlink" href="#_CPPv4N4osi311RoadMarking11COLOR_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with another (unspecified but known) color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking11COLOR_WHITEE">
 <span id="_CPPv3N4osi311RoadMarking11COLOR_WHITEE"></span><span id="_CPPv2N4osi311RoadMarking11COLOR_WHITEE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4af58d9ae67c2b82c93627e7146438e51e"></span><code class="sig-name descname">COLOR_WHITE</code> = 2<a class="headerlink" href="#_CPPv4N4osi311RoadMarking11COLOR_WHITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with white color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking12COLOR_YELLOWE">
 <span id="_CPPv3N4osi311RoadMarking12COLOR_YELLOWE"></span><span id="_CPPv2N4osi311RoadMarking12COLOR_YELLOWE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4aa44a78567792ec99dc08b5bca1ae4152"></span><code class="sig-name descname">COLOR_YELLOW</code> = 3<a class="headerlink" href="#_CPPv4N4osi311RoadMarking12COLOR_YELLOWE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with yellow / orange-yellow color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking10COLOR_BLUEE">
 <span id="_CPPv3N4osi311RoadMarking10COLOR_BLUEE"></span><span id="_CPPv2N4osi311RoadMarking10COLOR_BLUEE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4a425b0ae611a14972e49e70260816a7eb"></span><code class="sig-name descname">COLOR_BLUE</code> = 5<a class="headerlink" href="#_CPPv4N4osi311RoadMarking10COLOR_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with blue color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking9COLOR_REDE">
 <span id="_CPPv3N4osi311RoadMarking9COLOR_REDE"></span><span id="_CPPv2N4osi311RoadMarking9COLOR_REDE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4a1c70b2c22f8369aaa46a2c9608641110"></span><code class="sig-name descname">COLOR_RED</code> = 6<a class="headerlink" href="#_CPPv4N4osi311RoadMarking9COLOR_REDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with red color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking11COLOR_GREENE">
 <span id="_CPPv3N4osi311RoadMarking11COLOR_GREENE"></span><span id="_CPPv2N4osi311RoadMarking11COLOR_GREENE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4a61414c8303818d8fa18dad70554f55c9"></span><code class="sig-name descname">COLOR_GREEN</code> = 7<a class="headerlink" href="#_CPPv4N4osi311RoadMarking11COLOR_GREENE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with green color. </p>
 </dd></dl>
 
-<dl class="enumerator">
+<dl class="cpp enumerator">
 <dt id="_CPPv4N4osi311RoadMarking12COLOR_VIOLETE">
 <span id="_CPPv3N4osi311RoadMarking12COLOR_VIOLETE"></span><span id="_CPPv2N4osi311RoadMarking12COLOR_VIOLETE"></span><span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ac87385b6a2a1bc79f828f22e1c36e4b4a1b3b2a646e9b35278f581ab738c8998c"></span><code class="sig-name descname">COLOR_VIOLET</code> = 8<a class="headerlink" href="#_CPPv4N4osi311RoadMarking12COLOR_VIOLETE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Marking with violet color. </p>
@@ -359,13 +359,13 @@
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"></span><code class="sig-name descname">optional Type osi3::RoadMarking::Classification::type = 1</code></dt>
 <dd><p>The type of the road marking. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a71de4ec9d93175a6b2b02a7a4326cb98"></span><code class="sig-name descname">optional TrafficSign::MainSign::Classification::Type osi3::RoadMarking::Classification::traffic_main_sign_type = 2</code></dt>
 <dd><p>Traffic sign as road marking (color image, monochrome image or character string).</p>
@@ -379,7 +379,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1aa0997fbbe7cd0afaeaf2c3b2079cfca9"></span><code class="sig-name descname">optional Color osi3::RoadMarking::Classification::monochrome_color = 3</code></dt>
 <dd><p>The monochrome color of the road marking. <p>check_if this.type is_equal_to 2 else do_check is_set check_if this.monochrome_color is_equal_to 1 else do_check is_set  </p>
@@ -390,7 +390,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a43378b96a36ae45b3e692bd0fcb6ff22"></span><code class="sig-name descname">optional TrafficSignValue osi3::RoadMarking::Classification::value = 4</code></dt>
 <dd><p>Additional value associated with the road marking, e.g. value of the speed limit.</p>
@@ -403,7 +403,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a161c83ff42cad24a1cdd412cf682d5bc"></span><code class="sig-name descname">optional string osi3::RoadMarking::Classification::value_text = 5</code></dt>
 <dd><p>Additional text value as road marking, e.g. BUS, TAXI etc.</p>
@@ -414,7 +414,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a482fa85b781bebc662550ae8e3213e30"></span><code class="sig-name descname">repeated Identifier osi3::RoadMarking::Classification::assigned_lane_id = 6</code></dt>
 <dd><p>The ID(s) of the lane(s) that the road marking is assigned to. May be multiple if the road marking goes across multiple lanes.</p>
@@ -426,7 +426,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1ad7ab5b67d03aaa14c440c5a7125ab186"></span><code class="sig-name descname">optional bool osi3::RoadMarking::Classification::is_out_of_service = 7</code></dt>
 <dd><p>Boolean flag to indicate that the road marking is taken out of service. This can be achieved by visibly crossing the road marking with stripes, or completly covering a road marking making it not visible.</p>

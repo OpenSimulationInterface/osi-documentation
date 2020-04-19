@@ -205,32 +205,32 @@
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi324DetectedStationaryObjectE">
 <span id="_CPPv3N4osi324DetectedStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObjectE"></span><span id="osi3::DetectedStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject"></span><em class="property">struct </em><code class="sig-name descname">DetectedStationaryObject</code><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A stationary object (e.g. landmark) in the environment as detected by the sensor. </p>
 <p><img alt="../_images/OSI_DetectedStationaryObject.svg" src="../_images/OSI_DetectedStationaryObject.svg" /></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1a0deb22fcf4bb95a870e93601ed28f055"></span><code class="sig-name descname">optional DetectedItemHeader osi3::DetectedStationaryObject::header = 1</code></dt>
 <dd><p>Common information of one detected item. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1a4f2e987daa04a3ad0b163407c69d78b1"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedStationaryObject::base = 2</code></dt>
 <dd><p>The base parameters of the stationary object. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1ad9344118d88b18d48dad62446d02fdee"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedStationaryObject::base_rmse = 3</code></dt>
 <dd><p>The root mean squared error of the base parameters of the detected stationary object (e.g. landmark). <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject_1a5f11a30dc338f7d38e2e90950b415ba2"><span class="std std-ref"><span class="pre">StationaryObject::base</span></span></a></code> has to be identical for all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedStationaryObject_1a7161d3bf96e124d79a8d7f4e8fb22a09"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> stationary objects. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1a7161d3bf96e124d79a8d7f4e8fb22a09"></span><code class="sig-name descname">repeated CandidateStationaryObject osi3::DetectedStationaryObject::candidate = 4</code></dt>
 <dd><p>A list of candidates for this stationary object as estimated by the sensor.</p>
@@ -242,13 +242,13 @@
 </dd></dl>
 
 </div>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE">
 <span id="_CPPv3N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="osi3::DetectedStationaryObject::CandidateStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject"></span><em class="property">struct </em><code class="sig-name descname">CandidateStationaryObject</code><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A candidate for a detected stationary object as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1ab51e5d548856d1c3f541e22257c8edc3"></span><code class="sig-name descname">optional double osi3::DetectedStationaryObject::CandidateStationaryObject::probability = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
@@ -260,7 +260,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1a38ad22078331991744f7718fb4cbcb64"></span><code class="sig-name descname">optional StationaryObject::Classification osi3::DetectedStationaryObject::CandidateStationaryObject::classification = 2</code></dt>
 <dd><p>The classification of the stationary object (e.g. landmark). </p>

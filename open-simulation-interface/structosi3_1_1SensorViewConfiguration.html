@@ -196,7 +196,7 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi323SensorViewConfigurationE">
 <span id="_CPPv3N4osi323SensorViewConfigurationE"></span><span id="_CPPv2N4osi323SensorViewConfigurationE"></span><span id="osi3::SensorViewConfiguration"></span><span class="target" id="structosi3_1_1SensorViewConfiguration"></span><em class="property">struct </em><code class="sig-name descname">SensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi323SensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The configuration settings for the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code> to be provided by the environment simulation. </p>
@@ -207,13 +207,13 @@
 <p>In order to optimize the workload and bandwidth needed for sensor simulation, OSI packaging mechanisms can specify the ability to exchange <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration"><span class="std std-ref"><span class="pre">SensorViewConfiguration</span></span></a></code> messages not only prior to simulation startup, but also dynamically during simulation runs, thereby allowing dynamic input configuration switching to only request data that is needed in the current sensor mode. However this is more or less only a resource optimization strategy, and since providing fine-grained information like this can reveal internal characteristics of the sensor and/or sensor model, will not always be the preferred approach for reasons of IP protection. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a45141898583710d16d41b92d31a7aaf9"></span><code class="sig-name descname">optional InterfaceVersion osi3::SensorViewConfiguration::version = 1</code></dt>
 <dd><p>The interface version used by the sender (simulation environment). </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1aa7b009e0195d8c19788c2d366af295ad"></span><code class="sig-name descname">optional Identifier osi3::SensorViewConfiguration::sensor_id = 2</code></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
@@ -221,7 +221,7 @@
 <p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a77b0315e478c632f88e50c63b06030f4"></span><code class="sig-name descname">optional MountingPosition osi3::SensorViewConfiguration::mounting_position = 3</code></dt>
 <dd><p>The virtual mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The virtual position pertains to the sensor as a whole, regardless of the actual position of individual physical detectors, and governs the sensor-relative coordinates in detected objects of the sensor as a whole. Individual features detected by individual physical detectors are governed by the actual physical mounting positions of the detectors, as indicated in the technology-specific sub-views and sub-view configurations.</p>
@@ -241,13 +241,13 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1ac2d55c94427209ff259dd9ece4914d0f"></span><code class="sig-name descname">optional MountingPosition osi3::SensorViewConfiguration::mounting_position_rmse = 4</code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a810da6109811a773dbfc505053c47731"></span><code class="sig-name descname">optional double osi3::SensorViewConfiguration::field_of_view_horizontal = 5</code></dt>
 <dd><p>Field of View in horizontal orientation of the sensor.</p>
@@ -255,7 +255,7 @@
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a27f45a5dd5fecbb632ae0cbcce56b819"></span><code class="sig-name descname">optional double osi3::SensorViewConfiguration::field_of_view_vertical = 6</code></dt>
 <dd><p>Field of View in vertical orientation of the sensor.</p>
@@ -263,7 +263,7 @@
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a9bced36ba45eadc92c0b56e7f88ccf15"></span><code class="sig-name descname">optional double osi3::SensorViewConfiguration::range = 7</code></dt>
 <dd><p>Maximum range of the sensor</p>
@@ -272,7 +272,7 @@
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a66ddabd0bd40550da7144204555d9913"></span><code class="sig-name descname">optional Timestamp osi3::SensorViewConfiguration::update_cycle_time = 8</code></dt>
 <dd><p>The update cycle time of the sensor model.</p>
@@ -284,7 +284,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1af9895d061988127eed3c38df83d48c30"></span><code class="sig-name descname">optional Timestamp osi3::SensorViewConfiguration::update_cycle_offset = 9</code></dt>
 <dd><p>Initial update cycle offset of the sensor model.</p>
@@ -292,7 +292,7 @@
 <p>Unit: s </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1ad71ee0f6a70b3772dd833fc76dd43ec3"></span><code class="sig-name descname">optional Timestamp osi3::SensorViewConfiguration::simulation_start_time = 10</code></dt>
 <dd><p>Simulation Start time</p>
@@ -300,7 +300,7 @@
 <p>Unit: s </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1aef0fc7dc867ff93107c628b0a18ba7ac"></span><code class="sig-name descname">repeated GenericSensorViewConfiguration osi3::SensorViewConfiguration::generic_sensor_view_configuration=1000</code></dt>
 <dd><p>Generic Sensor View Configuration(s).</p>
@@ -311,7 +311,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a704763486c7c724727d96e108c6e560a"></span><code class="sig-name descname">repeated RadarSensorViewConfiguration osi3::SensorViewConfiguration::radar_sensor_view_configuration=1001</code></dt>
 <dd><p>Radar-specific Sensor View Configuration(s).</p>
@@ -322,7 +322,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a13d4b0251bb2a62e2b18435fe5d51ffc"></span><code class="sig-name descname">repeated LidarSensorViewConfiguration osi3::SensorViewConfiguration::lidar_sensor_view_configuration=1002</code></dt>
 <dd><p>Lidar-specific Sensor View Configuration(s).</p>
@@ -333,7 +333,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a36e0cfeea36cc31541e907c75e9662a0"></span><code class="sig-name descname">repeated CameraSensorViewConfiguration osi3::SensorViewConfiguration::camera_sensor_view_configuration=1003</code></dt>
 <dd><p>Camera-specific Sensor View Configuration(s).</p>
@@ -344,7 +344,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a76729f34bffe67cad880626a9bd933cb"></span><code class="sig-name descname">repeated UltrasonicSensorViewConfiguration osi3::SensorViewConfiguration::ultrasonic_sensor_view_configuration = 1004</code></dt>
 <dd><p>Ultrasonic-specific Sensor View Configuration(s).</p>

@@ -205,20 +205,20 @@
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi315LidarSensorViewE">
 <span id="_CPPv3N4osi315LidarSensorViewE"></span><span id="_CPPv2N4osi315LidarSensorViewE"></span><span id="osi3::LidarSensorView"></span><span class="target" id="structosi3_1_1LidarSensorView"></span><em class="property">struct </em><code class="sig-name descname">LidarSensorView</code><a class="headerlink" href="#_CPPv4N4osi315LidarSensorViewE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of the lidar sensor view. </p>
 <p>Lidar specific sensor view data. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1a058ec969852277820a7e6d02e288b5e6"></span><code class="sig-name descname">optional LidarSensorViewConfiguration osi3::LidarSensorView::view_configuration = 1</code></dt>
 <dd><p>Lidar view configuration valid at the time the data was created. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1abd48c19b5ae9ddee52c269b0dbc11686"></span><code class="sig-name descname">repeated Reflection osi3::LidarSensorView::reflection = 2</code></dt>
 <dd><p>Ray tracing data.</p>
@@ -231,13 +231,13 @@
 </dd></dl>
 
 </div>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi315LidarSensorView10ReflectionE">
 <span id="_CPPv3N4osi315LidarSensorView10ReflectionE"></span><span id="_CPPv2N4osi315LidarSensorView10ReflectionE"></span><span id="osi3::LidarSensorView::Reflection"></span><span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection"></span><em class="property">struct </em><code class="sig-name descname">Reflection</code><a class="headerlink" href="#_CPPv4N4osi315LidarSensorView10ReflectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of the lidar reflection. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a9f8c01d2cc2b1fd2a6743b3609e2b17a"></span><code class="sig-name descname">optional double osi3::LidarSensorView::Reflection::signal_strength = 1</code></dt>
 <dd><p>Relative signal level of the reflection.</p>
@@ -245,7 +245,7 @@
 <p>Unit: dB </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a0747cfd174a577b0061ebe7ff9ccfd4c"></span><code class="sig-name descname">optional double osi3::LidarSensorView::Reflection::time_of_flight = 2</code></dt>
 <dd><p>Time of flight.</p>
@@ -253,7 +253,7 @@
 <p>Unit: s </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a104b08393487c62adf354730f3d16fd6"></span><code class="sig-name descname">optional double osi3::LidarSensorView::Reflection::doppler_shift = 3</code></dt>
 <dd><p>Doppler shift.</p>
@@ -261,7 +261,7 @@
 <p>Unit: Hz </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a8c68f21a375a0aa52ad9cc5634dd1aa2"></span><code class="sig-name descname">optional Vector3d osi3::LidarSensorView::Reflection::normal_to_surface = 5</code></dt>
 <dd><p>normal to surface angle.</p>
@@ -273,7 +273,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1af6f6bf35653db0a24f9c23fba77d4e37"></span><code class="sig-name descname">optional Identifier osi3::LidarSensorView::Reflection::object_id = 6</code></dt>
 <dd><p>ID of the detected object this reflection is associated to. can be used for raytracing debug</p>

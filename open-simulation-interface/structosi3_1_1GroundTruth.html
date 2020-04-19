@@ -196,7 +196,7 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi311GroundTruthE">
 <span id="_CPPv3N4osi311GroundTruthE"></span><span id="_CPPv2N4osi311GroundTruthE"></span><span id="osi3::GroundTruth"></span><span class="target" id="structosi3_1_1GroundTruth"></span><em class="property">struct </em><code class="sig-name descname">GroundTruth</code><a class="headerlink" href="#_CPPv4N4osi311GroundTruthE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The ground truth information from the simulation environment. </p>
@@ -208,13 +208,13 @@
 <p><img alt="../_images/OSI_GroundTruth.svg" src="../_images/OSI_GroundTruth.svg" /></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ad1ad43ca92a112daf6678da302c05880"></span><code class="sig-name descname">optional InterfaceVersion osi3::GroundTruth::version = 1</code></dt>
 <dd><p>The interface version used by the sender (i.e. the simulation environment). </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><code class="sig-name descname">optional Timestamp osi3::GroundTruth::timestamp = 2</code></dt>
 <dd><p>The data timestamp of the simulation environment. The zero time point is arbitrary but must be identical for all messages. Recommendation: Zero time point for start point of the simulation.</p>
@@ -227,7 +227,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname">optional Identifier osi3::GroundTruth::host_vehicle_id = 3</code></dt>
 <dd><p>The ID of the host vehicle object referencing to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> .</p>
@@ -239,7 +239,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><code class="sig-name descname">repeated StationaryObject osi3::GroundTruth::stationary_object = 4</code></dt>
 <dd><p>The list of stationary objects (excluding traffic signs and traffic lights).</p>
@@ -250,7 +250,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><code class="sig-name descname">repeated MovingObject osi3::GroundTruth::moving_object = 5</code></dt>
 <dd><p>The list of all other moving objects including all (host) vehicles.</p>
@@ -261,7 +261,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><code class="sig-name descname">repeated TrafficSign osi3::GroundTruth::traffic_sign = 6</code></dt>
 <dd><p>The list of traffic signs.</p>
@@ -272,7 +272,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><code class="sig-name descname">repeated TrafficLight osi3::GroundTruth::traffic_light = 7</code></dt>
 <dd><p>The list of traffic lights.</p>
@@ -283,7 +283,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><code class="sig-name descname">repeated RoadMarking osi3::GroundTruth::road_marking = 8</code></dt>
 <dd><p>The list of road surface markings (lane markings are excluded and defined as <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary.html#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>).</p>
@@ -294,7 +294,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><code class="sig-name descname">repeated LaneBoundary osi3::GroundTruth::lane_boundary = 9</code></dt>
 <dd><p>The list of lane boundaries.</p>
@@ -305,7 +305,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><code class="sig-name descname">repeated Lane osi3::GroundTruth::lane = 10</code></dt>
 <dd><p>The list of lanes forming a road network.</p>
@@ -316,7 +316,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><code class="sig-name descname">repeated Occupant osi3::GroundTruth::occupant = 11</code></dt>
 <dd><p>The list of passengers in the (host) vehicle(s).</p>
@@ -327,13 +327,13 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1aee1873cbe2ed79701c6790ddcb14b420"></span><code class="sig-name descname">optional EnvironmentalConditions osi3::GroundTruth::environmental_conditions = 12</code></dt>
 <dd><p>Conditions of the environment. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><code class="sig-name descname">optional uint32 osi3::GroundTruth::country_code = 13</code></dt>
 <dd><p>The ISO country code in 3 digit numeric format according to: ISO Code 3166/1 [1]. E.g. Germany = 276, USA = 840.</p>
@@ -345,7 +345,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"></span><code class="sig-name descname">optional string osi3::GroundTruth::proj_string = 14</code></dt>
 <dd><p>Projection string that allows to transform all coordinates in <a class="reference internal" href="#structosi3_1_1GroundTruth"><span class="std std-ref">GroundTruth</span></a> into a different cartographic projection.</p>
@@ -357,7 +357,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><code class="sig-name descname">optional string osi3::GroundTruth::map_reference = 15</code></dt>
 <dd><p>Opaque reference of a map.</p>

@@ -196,13 +196,13 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi328LidarSensorViewConfigurationE">
 <span id="_CPPv3N4osi328LidarSensorViewConfigurationE"></span><span id="_CPPv2N4osi328LidarSensorViewConfigurationE"></span><span id="osi3::LidarSensorViewConfiguration"></span><span class="target" id="structosi3_1_1LidarSensorViewConfiguration"></span><em class="property">struct </em><code class="sig-name descname">LidarSensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi328LidarSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The configuration settings for the Lidar Sensor View to be provided by the environment simulation. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a74073f8a971aab5ac7e04ba8e817485e"></span><code class="sig-name descname">optional Identifier osi3::LidarSensorViewConfiguration::sensor_id = 1</code></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
@@ -210,7 +210,7 @@
 <p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a325dff9446391912fe15aa8a948e7b49"></span><code class="sig-name descname">optional MountingPosition osi3::LidarSensorViewConfiguration::mounting_position = 2</code></dt>
 <dd><p>The physical mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The physical position pertains to this detector individually, and governs the sensor-relative coordinates in features detected by this detector.</p>
@@ -230,13 +230,13 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a939d38c2cf354fb614844c9a5b4ddf18"></span><code class="sig-name descname">optional MountingPosition osi3::LidarSensorViewConfiguration::mounting_position_rmse = 3</code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a36c98016342c2e57f60c3273242c1844"></span><code class="sig-name descname">optional double osi3::LidarSensorViewConfiguration::field_of_view_horizontal = 4</code></dt>
 <dd><p>Field of View in horizontal orientation of the physical sensor.</p>
@@ -244,7 +244,7 @@
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a655eb060bed69dcfd3b268fee2733033"></span><code class="sig-name descname">optional double osi3::LidarSensorViewConfiguration::field_of_view_vertical = 5</code></dt>
 <dd><p>Field of View in vertical orientation of the physical sensor.</p>
@@ -252,7 +252,7 @@
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1aebe71ed20bb2649c86a6552aa741258a"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::number_of_rays_horizontal = 6</code></dt>
 <dd><p>Number of rays to cast across horizontal field of view.</p>
@@ -264,7 +264,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1acfa737bbeed7c706f04ca4bfbbe24950"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::number_of_rays_vertical = 7</code></dt>
 <dd><p>Number of rays to cast across vertical field of view.</p>
@@ -276,7 +276,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a8320df0e97a09b909f326fde8db60a0c"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::max_number_of_interactions = 8</code></dt>
 <dd><p>Maximum number of interactions to take into account.</p>
@@ -288,7 +288,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1aac96421ddf19cf73a7fa611abef48766"></span><code class="sig-name descname">optional double osi3::LidarSensorViewConfiguration::emitter_frequency = 9</code></dt>
 <dd><p>Emitter Frequency.</p>
@@ -297,7 +297,7 @@
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a55ae2af0ac4a312ee6eca8d4e28f5b3e"></span><code class="sig-name descname">optional uint32 osi3::LidarSensorViewConfiguration::num_of_pixels = 10</code></dt>
 <dd><p>Number of pixels in frame.</p>
@@ -305,7 +305,7 @@
 <p>is_greater_than_or_equal_to: 1  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a712772005038f231b056111be45fc13c"></span><code class="sig-name descname">repeated Vector3d osi3::LidarSensorViewConfiguration::directions = 11</code></dt>
 <dd><p>Ray tracing data.</p>
@@ -316,7 +316,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a03f5654d3c86d31c17ab32f3a671e453"></span><code class="sig-name descname">repeated uint32 osi3::LidarSensorViewConfiguration::timings = 12</code></dt>
 <dd><p>Ray tracing data.</p>

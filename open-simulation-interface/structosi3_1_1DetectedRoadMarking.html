@@ -205,7 +205,7 @@
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi319DetectedRoadMarkingE">
 <span id="_CPPv3N4osi319DetectedRoadMarkingE"></span><span id="_CPPv2N4osi319DetectedRoadMarkingE"></span><span id="osi3::DetectedRoadMarking"></span><span class="target" id="structosi3_1_1DetectedRoadMarking"></span><em class="property">struct </em><code class="sig-name descname">DetectedRoadMarking</code><a class="headerlink" href="#_CPPv4N4osi319DetectedRoadMarkingE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A road marking in the environment as detected by the sensor. </p>
@@ -213,13 +213,13 @@
 <p>The figure shows two STOP road markings (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a470e0f9da1498a03cae253eddfb8e08b"><span class="std std-ref"><span class="pre">DetectedRoadMarking::CandidateRoadMarking::classification</span></span></a></code>). STOP <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">RoadMarking::Classification::type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba4a5a31878399051eefbcd7f7dd58836c"><span class="std std-ref"><span class="pre">RoadMarking::Classification::TYPE_TEXTUAL_TRAFFIC_SIGN</span></span></a></code> is marked, STOP <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">RoadMarking::Classification::type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking_1_1Classification.html#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf32447c2168fbb5d9baf48f650a80b9d"><span class="std std-ref"><span class="pre">RoadMarking::Classification::TYPE_SYMBOLIC_TRAFFIC_SIGN</span></span></a></code> is not marked. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1ab0d6556a1a59e8139813f09e56bd3b52"></span><code class="sig-name descname">optional DetectedItemHeader osi3::DetectedRoadMarking::header = 1</code></dt>
 <dd><p>Common information of one detected item. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedRoadMarking::base = 2</code></dt>
 <dd><p>The base parameters of the road marking.</p>
@@ -231,13 +231,13 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1a8195dfc3814da15504dcbd2431eff8a3"></span><code class="sig-name descname">optional BaseStationary osi3::DetectedRoadMarking::base_rmse = 3</code></dt>
 <dd><p>The root mean squared error of the base parameters of the detected road marking. <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking.html#structosi3_1_1RoadMarking_1a8b19d63b7b7ac893eadf0c3b66a1746b"><span class="std std-ref"><span class="pre">RoadMarking::base</span></span></a></code> has to be identical for all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1a8f414cff0f010e18dcddbe0208c80fde"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> road markings. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1a8f414cff0f010e18dcddbe0208c80fde"></span><code class="sig-name descname">repeated CandidateRoadMarking osi3::DetectedRoadMarking::candidate = 4</code></dt>
 <dd><p>A list of candidates for this road marking as estimated by the sensor.</p>
@@ -249,13 +249,13 @@
 </dd></dl>
 
 </div>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi319DetectedRoadMarking20CandidateRoadMarkingE">
 <span id="_CPPv3N4osi319DetectedRoadMarking20CandidateRoadMarkingE"></span><span id="_CPPv2N4osi319DetectedRoadMarking20CandidateRoadMarkingE"></span><span id="osi3::DetectedRoadMarking::CandidateRoadMarking"></span><span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking"></span><em class="property">struct </em><code class="sig-name descname">CandidateRoadMarking</code><a class="headerlink" href="#_CPPv4N4osi319DetectedRoadMarking20CandidateRoadMarkingE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A candidate for a detected road marking as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"></span><code class="sig-name descname">optional double osi3::DetectedRoadMarking::CandidateRoadMarking::probability = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
@@ -267,7 +267,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a470e0f9da1498a03cae253eddfb8e08b"></span><code class="sig-name descname">optional RoadMarking::Classification osi3::DetectedRoadMarking::CandidateRoadMarking::classification = 2</code></dt>
 <dd><p>The classification of the road marking.</p>

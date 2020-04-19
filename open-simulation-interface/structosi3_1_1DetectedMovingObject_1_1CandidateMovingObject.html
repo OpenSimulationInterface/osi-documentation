@@ -200,13 +200,13 @@
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi320DetectedMovingObject21CandidateMovingObjectE">
 <span id="_CPPv3N4osi320DetectedMovingObject21CandidateMovingObjectE"></span><span id="_CPPv2N4osi320DetectedMovingObject21CandidateMovingObjectE"></span><span id="osi3::DetectedMovingObject::CandidateMovingObject"></span><span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject"></span><em class="property">struct </em><code class="sig-name descname">CandidateMovingObject</code><br /></dt>
 <dd><p>A candidate for a detected moving object as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"></span><code class="sig-name descname">optional double osi3::DetectedMovingObject::CandidateMovingObject::probability = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
@@ -218,13 +218,13 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"></span><code class="sig-name descname">optional MovingObject::Type osi3::DetectedMovingObject::CandidateMovingObject::type = 2</code></dt>
 <dd><p>The description of the moving object (e.g. car). </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ada03b54c79f3aaf8e706ef33f8a18021"></span><code class="sig-name descname">optional MovingObject::VehicleClassification osi3::DetectedMovingObject::CandidateMovingObject::vehicle_classification = 3</code></dt>
 <dd><p>Specific information about the classification of the vehicle.</p>
@@ -235,7 +235,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"></span><code class="sig-name descname">optional Orientation3d osi3::DetectedMovingObject::CandidateMovingObject::head_pose = 4</code></dt>
 <dd><p>Pedestrian head pose for behavior prediction. Describes the head orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed head frame is pointing along the pedestrian’s straight ahead viewing direction (anterior), the y-axis lateral to the left, and the z-axis is pointing upwards (superior) [1].</p>
@@ -250,7 +250,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a0e976baaa57e7cdcfce6c4e4c9d217a1"></span><code class="sig-name descname">optional Orientation3d osi3::DetectedMovingObject::CandidateMovingObject::upper_body_pose = 5</code></dt>
 <dd><p>Pedestrian upper body pose for behavior prediction. Describes the upper body orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed upper body frame is pointing along the pedestrian’s upper body ventral (anterior) direction (i.e. usually pedestrian’s intended moving direction), the y-axis lateral to the left, and the z-axis is pointing upwards (superior, to the pedestrian’s head) [1].</p>

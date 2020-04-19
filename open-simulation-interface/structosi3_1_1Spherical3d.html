@@ -196,16 +196,16 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi311Spherical3dE">
 <span id="_CPPv3N4osi311Spherical3dE"></span><span id="_CPPv2N4osi311Spherical3dE"></span><span id="osi3::Spherical3d"></span><span class="target" id="structosi3_1_1Spherical3d"></span><em class="property">struct </em><code class="sig-name descname">Spherical3d</code><a class="headerlink" href="#_CPPv4N4osi311Spherical3dE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A spherical representation for a point or vector in 3D space. </p>
 <p>Used e.g., for low level representations of radar detections.</p>
 <p>Azimuth and elevation are defined as the rotations that would have to be applied to the local frame (e.g sensor frame definition in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorDetectionHeader.html#structosi3_1_1SensorDetectionHeader"><span class="std std-ref"><span class="pre">SensorDetectionHeader</span></span></a></code>) to make its x-axis point towards the referenced point or to align it with the referenced vector. The rotations are to be performed <strong>azimuth</strong> <strong>first</strong> (around the z-axis) and <strong>elevation</strong> <strong>second</strong> (around the new y-axis) to follow the definition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Orientation3d.html#structosi3_1_1Orientation3d"><span class="std std-ref"><span class="pre">Orientation3d</span></span></a></code>. For the sense of each rotation, the right-hand rule applies.</p>
-<p><span class="math notranslate nohighlight">\(\)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a440c7dfe0d994e5168de2cafa75ba851"><span class="std std-ref"><span class="pre">elevation</span></span></a></code> <span class="math notranslate nohighlight">\(\)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a92c6f939b6f1771be727b5b94efa0037"><span class="std std-ref"><span class="pre">azimuth</span></span></a></code> <span class="math notranslate nohighlight">\(\)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a3ebbbd58e45298e55e1e88ea67c790c8"><span class="std std-ref"><span class="pre">distance</span></span></a></code> <span class="math notranslate nohighlight">\(\)</span> </p>
+<p><span class="math notranslate nohighlight">\( vector_{cartesian} := Rotation( \)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a440c7dfe0d994e5168de2cafa75ba851"><span class="std std-ref"><span class="pre">elevation</span></span></a></code> <span class="math notranslate nohighlight">\( )*Rotation( \)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a92c6f939b6f1771be727b5b94efa0037"><span class="std std-ref"><span class="pre">azimuth</span></span></a></code> <span class="math notranslate nohighlight">\( )* (Unit_{vector_x}* \)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Spherical3d_1a3ebbbd58e45298e55e1e88ea67c790c8"><span class="std std-ref"><span class="pre">distance</span></span></a></code> <span class="math notranslate nohighlight">\( ) \)</span> </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1Spherical3d_1a3ebbbd58e45298e55e1e88ea67c790c8"></span><code class="sig-name descname">optional double osi3::Spherical3d::distance = 1</code></dt>
 <dd><p>The radial distance.</p>
@@ -213,14 +213,14 @@
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1Spherical3d_1a92c6f939b6f1771be727b5b94efa0037"></span><code class="sig-name descname">optional double osi3::Spherical3d::azimuth = 2</code></dt>
 <dd><p>The azimuth (horizontal) angle.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1Spherical3d_1a440c7dfe0d994e5168de2cafa75ba851"></span><code class="sig-name descname">optional double osi3::Spherical3d::elevation = 3</code></dt>
 <dd><p>The elevation (vertical) angle.</p>

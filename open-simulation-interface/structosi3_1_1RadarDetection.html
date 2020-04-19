@@ -196,13 +196,13 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi314RadarDetectionE">
 <span id="_CPPv3N4osi314RadarDetectionE"></span><span id="_CPPv2N4osi314RadarDetectionE"></span><span id="osi3::RadarDetection"></span><span class="target" id="structosi3_1_1RadarDetection"></span><em class="property">struct </em><code class="sig-name descname">RadarDetection</code><a class="headerlink" href="#_CPPv4N4osi314RadarDetectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A radar detection. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a3f57cf39ffe5e9b442fe6a1cf5577b83"></span><code class="sig-name descname">optional double osi3::RadarDetection::existence_probability = 1</code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
@@ -214,7 +214,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a1e4defa6aa377c6637fbba2ca1394ef8"></span><code class="sig-name descname">optional Identifier osi3::RadarDetection::object_id = 2</code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
@@ -226,26 +226,26 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a5ee5fcd47d931260ff8ba87fed2dbaf1"></span><code class="sig-name descname">optional Spherical3d osi3::RadarDetection::position = 3</code></dt>
 <dd><p>Measured position of the detection given in spherical coordinates in the sensor coordinate system. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a5358b26dc23308b323c765399d0d35a7"></span><code class="sig-name descname">optional Spherical3d osi3::RadarDetection::position_rmse = 4</code></dt>
 <dd><p>Root mean squared error of the measured position of the detection. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a7574b7d69c5a67a44a0b5d87af50125b"></span><code class="sig-name descname">optional double osi3::RadarDetection::radial_velocity = 5</code></dt>
 <dd><p>Radial velocity of the detection positive in direction to the sensor.</p>
 <p>Unit: m/s </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1acbc842b645808a6e0af72a8e7bd470a4"></span><code class="sig-name descname">optional double osi3::RadarDetection::radial_velocity_rmse = 6</code></dt>
 <dd><p>Root mean squared error of the object measured radial velocity.</p>
@@ -253,28 +253,28 @@
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1ac3d2984048cbe1994a379bc9be004799"></span><code class="sig-name descname">optional double osi3::RadarDetection::rcs = 7</code></dt>
 <dd><p>The radar cross section (RCS) of the radar detection.</p>
 <p>Unit: dB m^2 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1acc74a1188f9f0095a1b38f46ee856db1"></span><code class="sig-name descname">optional double osi3::RadarDetection::snr = 8</code></dt>
 <dd><p>The signal to noise ratio (SNR) of the radar detection.</p>
 <p>Unit: dB </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a814c6d11af6c17024a8735e229137d87"></span><code class="sig-name descname">optional double osi3::RadarDetection::point_target_probability = 9</code></dt>
 <dd><p>Describes the possibility whether more than one object may have led to this detection.</p>
 <p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a863eb66f96f5a64aa0989fcbe360ae4a"></span><code class="sig-name descname">optional Identifier osi3::RadarDetection::ambiguity_id = 10</code></dt>
 <dd><p>Ambiguity Information: Each ambiguous measurement generates one Ambiguity ID. Ambiguity is indicated by an identical ambiguity ID.</p>
@@ -287,7 +287,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a531fd6a2346dab69dc68143e5cf4e065"></span><code class="sig-name descname">optional DetectionClassification osi3::RadarDetection::classification = 11</code></dt>
 <dd><p>Basic classification of the detection. </p>

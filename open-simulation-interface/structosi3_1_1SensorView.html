@@ -196,7 +196,7 @@
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="cpp struct">
 <dt id="_CPPv4N4osi310SensorViewE">
 <span id="_CPPv3N4osi310SensorViewE"></span><span id="_CPPv2N4osi310SensorViewE"></span><span id="osi3::SensorView"></span><span class="target" id="structosi3_1_1SensorView"></span><em class="property">struct </em><code class="sig-name descname">SensorView</code><a class="headerlink" href="#_CPPv4N4osi310SensorViewE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The sensor view is derived from <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> and used as input to sensor models. </p>
@@ -205,13 +205,13 @@
 <p>Alternatively combined sensor models can also consume one combined <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code>, with either combined or separate <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> outputs, depending on model architecture. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a2974a1959055ea16020e93da2c672ccd"></span><code class="sig-name descname">optional InterfaceVersion osi3::SensorView::version = 1</code></dt>
 <dd><p>The interface version used by the sender (simulation environment). </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1ad30bef352de1b64dd211718c18c540f1"></span><code class="sig-name descname">optional Timestamp osi3::SensorView::timestamp = 2</code></dt>
 <dd><p>The data timestamp of the simulation environment. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the UNIX epoch. Recommended is the starting time point of the simulation.</p>
@@ -222,7 +222,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a3530ef3de5c11fb526da7ed337fd004e"></span><code class="sig-name descname">optional Identifier osi3::SensorView::sensor_id = 3</code></dt>
 <dd><p>The ID of the sensor at host vehicle’s <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorView_1a420b13889bbdd58f346df1a2e86c43e7"><span class="std std-ref"><span class="pre">mounting_position</span></span></a></code>.</p>
@@ -230,7 +230,7 @@
 <p>is_globally_unique  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a420b13889bbdd58f346df1a2e86c43e7"></span><code class="sig-name descname">optional MountingPosition osi3::SensorView::mounting_position = 4</code></dt>
 <dd><p>The virtual mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The virtual position pertains to the sensor as a whole, regardless of the actual position of individual physical detectors, and governs the sensor-relative coordinates in detected objects of the sensor as a whole. Individual features detected by individual physical detectors are governed by the actual physical mounting positions of the detectors, as indicated in the technology-specific sub-views and sub-view configurations.</p>
@@ -250,20 +250,20 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a80c5789c7f7670c8118c8c9e88698b9b"></span><code class="sig-name descname">optional MountingPosition osi3::SensorView::mounting_position_rmse = 5</code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1aca120e668e795bfc4827ddce64833d86"></span><code class="sig-name descname">optional HostVehicleData osi3::SensorView::host_vehicle_data = 6</code></dt>
 <dd><p>Host vehicle data.</p>
 <p>Host vehicle data is data that the host vehicle knows about itself, e.g. from location sensors, internal sensors and ECU bus data, etc., that is made available to sensors as input. </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1afbb7fb861761c9d12b6a49ef1f0b15be"></span><code class="sig-name descname">optional GroundTruth osi3::SensorView::global_ground_truth = 7</code></dt>
 <dd><p>Ground truth w.r.t. global coordinate system.</p>
@@ -275,14 +275,14 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a27156b9596aef52ab32922959f067cd7"></span><code class="sig-name descname">optional Identifier osi3::SensorView::host_vehicle_id = 8</code></dt>
 <dd><p>The ID of the host vehicle in the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorView_1afbb7fb861761c9d12b6a49ef1f0b15be"><span class="std std-ref"><span class="pre">global_ground_truth</span></span></a></code> data.</p>
 <p>refers_to: ‘<a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a>’  </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a593426bc89d4b899c9f8b8da1035d161"></span><code class="sig-name descname">repeated GenericSensorView osi3::SensorView::generic_sensor_view = 1000</code></dt>
 <dd><p>Generic SensorView(s).</p>
@@ -293,7 +293,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1a1fa04807874e695156b9f29fbc3dfcd8"></span><code class="sig-name descname">repeated RadarSensorView osi3::SensorView::radar_sensor_view = 1001</code></dt>
 <dd><p>Radar-specific SensorView(s).</p>
@@ -304,7 +304,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1afeac5b19e294a68c33facc72eef02453"></span><code class="sig-name descname">repeated LidarSensorView osi3::SensorView::lidar_sensor_view = 1002</code></dt>
 <dd><p>Lidar-specific SensorView(s).</p>
@@ -315,7 +315,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1aa7f650c64d069f080d9da82e42bb2238"></span><code class="sig-name descname">repeated CameraSensorView osi3::SensorView::camera_sensor_view = 1003</code></dt>
 <dd><p>Camera-specific SensorView(s).</p>
@@ -326,7 +326,7 @@
 </p>
 </dd></dl>
 
-<dl class="member">
+<dl class="cpp member">
 <dt>
 <span class="target" id="structosi3_1_1SensorView_1aad228d11aa305994239322c720657549"></span><code class="sig-name descname">repeated UltrasonicSensorView osi3::SensorView::ultrasonic_sensor_view = 1004</code></dt>
 <dd><p>Ultrasonic-specific SensorView(s).</p>
