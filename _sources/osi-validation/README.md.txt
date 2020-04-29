@@ -1,5 +1,5 @@
 # OSI Validator
-[![Travis Build Status](https://travis-ci.org/OpenSimulationInterface/osi-validation.svg?branch=master)](https://travis-ci.org/OpenSimulationInterface/osi-validation)
+[![Travis Build Status](https://travis-ci.com/OpenSimulationInterface/osi-validation.svg?branch=master)](https://travis-ci.com/OpenSimulationInterface/osi-validation)
 
 OSI Validator checks the compliance of OSI messages with predefined [rules](https://opensimulationinterface.github.io/osi-documentation/osi-validation/doc/osivalidator.html#module-osivalidator.osi_rules_implementations). The full documentation on the validator and customization of the rules is available [here](https://opensimulationinterface.github.io/osi-documentation/osi-validation/README.html).
 
