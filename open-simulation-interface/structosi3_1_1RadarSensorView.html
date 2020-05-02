@@ -207,20 +207,20 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi315RadarSensorViewE">
-<span id="_CPPv3N4osi315RadarSensorViewE"></span><span id="_CPPv2N4osi315RadarSensorViewE"></span><span id="osi3::RadarSensorView"></span><span class="target" id="structosi3_1_1RadarSensorView"></span><em class="property">struct </em><code class="sig-name descname">RadarSensorView</code><a class="headerlink" href="#_CPPv4N4osi315RadarSensorViewE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi315RadarSensorViewE"></span><span id="_CPPv2N4osi315RadarSensorViewE"></span><span id="osi3::RadarSensorView"></span><span class="target" id="structosi3_1_1RadarSensorView"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">RadarSensorView</code><a class="headerlink" href="#_CPPv4N4osi315RadarSensorViewE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of the radar sensor view. </p>
 <p>Radar specific sensor view data. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1ae25cff303336cd7feef28f46847b82a1"></span><code class="sig-name descname">optional RadarSensorViewConfiguration osi3::RadarSensorView::view_configuration = 1</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1ae25cff303336cd7feef28f46847b82a1"></span><code class="sig-name descname">optional RadarSensorViewConfiguration view_configuration   = 1</code></dt>
 <dd><p>Radar view configuration valid at the time the data was created. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1ad1737584b02a81a31da4cf31cc7c5f8d"></span><code class="sig-name descname">repeated Reflection osi3::RadarSensorView::reflection = 2</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1ad1737584b02a81a31da4cf31cc7c5f8d"></span><code class="sig-name descname">repeated Reflection reflection   = 2</code></dt>
 <dd><p>Ray tracing data.</p>
 <p>This field includes one entry for each ray, in left-to-right, top-to-bottom order (think of scan lines in a TV).</p>
 <p><dl class="simple">
@@ -237,41 +237,41 @@
 <dd><p>Definition of the radar reflection. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a22d86f03243ff116d145268b71b42008"></span><code class="sig-name descname">optional double osi3::RadarSensorView::Reflection::signal_strength = 1</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a22d86f03243ff116d145268b71b42008"></span><code class="sig-name descname">optional double signal_strength   = 1</code></dt>
 <dd><p>Relative signal level of the reflection.</p>
 <p>This takes the combined antenna diagram (losses in TX and RX) as well as the signal losses due to scattering and absorption into account, and will, when multiplied by TX power yield the actual RX power.</p>
 <p>Unit: dB </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1ac66401f3e6e296a3133d12681161e537"></span><code class="sig-name descname">optional double osi3::RadarSensorView::Reflection::time_of_flight = 2</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1ac66401f3e6e296a3133d12681161e537"></span><code class="sig-name descname">optional double time_of_flight   = 2</code></dt>
 <dd><p>Time of flight.</p>
 <p>This is the time of flight of the reflection, which is directly proportional to the distance traveled.</p>
 <p>Unit: s </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a58cf8f2eb4f068bda705ef530ca5da1f"></span><code class="sig-name descname">optional double osi3::RadarSensorView::Reflection::doppler_shift = 3</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a58cf8f2eb4f068bda705ef530ca5da1f"></span><code class="sig-name descname">optional double doppler_shift   = 3</code></dt>
 <dd><p>Doppler shift.</p>
 <p>Shift in frequency based on the specified TX frequency.</p>
 <p>Unit: Hz </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a742f95122eba3b187623a07e08b8d0b4"></span><code class="sig-name descname">optional double osi3::RadarSensorView::Reflection::source_horizontal_angle = 4</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a742f95122eba3b187623a07e08b8d0b4"></span><code class="sig-name descname">optional double source_horizontal_angle   = 4</code></dt>
 <dd><p>TX horizontal angle (azimuth).</p>
 <p>Horizontal angle of incidence of the source of the reflection at the TX antenna.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a8aef801568939be8168ecaf34dacf5af"></span><code class="sig-name descname">optional double osi3::RadarSensorView::Reflection::source_vertical_angle = 5</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorView_1_1Reflection_1a8aef801568939be8168ecaf34dacf5af"></span><code class="sig-name descname">optional double source_vertical_angle   = 5</code></dt>
 <dd><p>TX vertical angle (elevation).</p>
 <p>Vertical angle of incidence of the source of the reflection at the TX antenna.</p>
 <p>Unit: rad </p>

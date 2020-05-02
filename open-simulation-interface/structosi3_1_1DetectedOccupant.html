@@ -207,19 +207,19 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi316DetectedOccupantE">
-<span id="_CPPv3N4osi316DetectedOccupantE"></span><span id="_CPPv2N4osi316DetectedOccupantE"></span><span id="osi3::DetectedOccupant"></span><span class="target" id="structosi3_1_1DetectedOccupant"></span><em class="property">struct </em><code class="sig-name descname">DetectedOccupant</code><a class="headerlink" href="#_CPPv4N4osi316DetectedOccupantE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316DetectedOccupantE"></span><span id="_CPPv2N4osi316DetectedOccupantE"></span><span id="osi3::DetectedOccupant"></span><span class="target" id="structosi3_1_1DetectedOccupant"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">DetectedOccupant</code><a class="headerlink" href="#_CPPv4N4osi316DetectedOccupantE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A vehicle occupant as detected and perceived by an interior sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1DetectedOccupant_1a920267c96312c52c00963757711bc33c"></span><code class="sig-name descname">optional DetectedItemHeader osi3::DetectedOccupant::header = 1</code></dt>
+<span class="target" id="structosi3_1_1DetectedOccupant_1a920267c96312c52c00963757711bc33c"></span><code class="sig-name descname">optional DetectedItemHeader header   = 1</code></dt>
 <dd><p>Common information of one detected item. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1DetectedOccupant_1a265ce952f0b2f3f283093a42a394a263"></span><code class="sig-name descname">repeated CandidateOccupant osi3::DetectedOccupant::candidate = 2</code></dt>
+<span class="target" id="structosi3_1_1DetectedOccupant_1a265ce952f0b2f3f283093a42a394a263"></span><code class="sig-name descname">repeated CandidateOccupant candidate   = 2</code></dt>
 <dd><p>A list of candidates for this occupant as estimated by the sensor.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -235,9 +235,9 @@
 <dd><p>A candidate for a detected occupant as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a5cde7ba099295ec4f639f683c101ee83"></span><code class="sig-name descname">optional double osi3::DetectedOccupant::CandidateOccupant::probability = 1</code></dt>
+<span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a5cde7ba099295ec4f639f683c101ee83"></span><code class="sig-name descname">optional double probability   = 1</code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
 <p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 <dl class="simple">
@@ -247,9 +247,9 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a83b1f6b589b8feddfadf7f3dde861034"></span><code class="sig-name descname">optional Occupant::Classification osi3::DetectedOccupant::CandidateOccupant::classification = 2</code></dt>
+<span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a83b1f6b589b8feddfadf7f3dde861034"></span><code class="sig-name descname">optional Occupant::Classification classification   = 2</code></dt>
 <dd><p>The detected vehicle occupant classification.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>

@@ -198,22 +198,22 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi310SensorDataE">
-<span id="_CPPv3N4osi310SensorDataE"></span><span id="_CPPv2N4osi310SensorDataE"></span><span id="osi3::SensorData"></span><span class="target" id="structosi3_1_1SensorData"></span><em class="property">struct </em><code class="sig-name descname">SensorData</code><a class="headerlink" href="#_CPPv4N4osi310SensorDataE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi310SensorDataE"></span><span id="_CPPv2N4osi310SensorDataE"></span><span id="osi3::SensorData"></span><span class="target" id="structosi3_1_1SensorData"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">SensorData</code><a class="headerlink" href="#_CPPv4N4osi310SensorDataE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The sensor information derived from <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> and processed by sensor-models. </p>
 <p>The sensor information is supposed to imitate the output of real sensors. All information regarding the environment is given with respect to the virtual sensor coordinate system specified in <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData_1ac79014724b81866a0b47c6d989447f21"><span class="std std-ref"><span class="pre">SensorData::mounting_position</span></span></a></code>, except for feature data, which is given with respect to the physical sensor coordinate system specified in the corresponding physical sensor’s coordinate system.</p>
 <p>When simulating multiple distinct sensors, each sensor can produce an individual copy of the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> interface. This allows an independent treatment of the sensors.</p>
 <p>Sensor fusion models can consolidate multiple <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> interfaces into one consolidated <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> interface. This can happen either in seperate logical models, consuming and producing <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> interfaces, or it can happen as part of a combined sensor/logical model, that consumes <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code> interfaces and directly produces one consolidated <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData"><span class="std std-ref"><span class="pre">SensorData</span></span></a></code> output. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a4b1107d7d51dd5e915417e11e518b5ec"></span><code class="sig-name descname">optional InterfaceVersion osi3::SensorData::version = 1</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a4b1107d7d51dd5e915417e11e518b5ec"></span><code class="sig-name descname">optional InterfaceVersion version   = 1</code></dt>
 <dd><p>The interface version used by the sender. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"></span><code class="sig-name descname">optional Timestamp osi3::SensorData::timestamp = 2</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"></span><code class="sig-name descname">optional Timestamp timestamp   = 2</code></dt>
 <dd><p>The timestamp of the sensor data. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the unix epoch. Recommended is the starting time point of the simulation.</p>
 <p><p>The time that the actual measurement was performed (which will usually correspond with the timestamp of the </p>
 <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> the sensor model processed to arrive at these results) can be found in the additional field <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code>.<dl class="simple">
@@ -225,9 +225,9 @@
 <p>For a sensor model that does not know its own internal latencies (e.g. a dumb sensor with no internal time concept), the two timestamps might also be identical, but delayed from the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> timestamp. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a7bacbcf1f521df6038d455a80baed870"></span><code class="sig-name descname">optional BaseMoving osi3::SensorData::host_vehicle_location = 3</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a7bacbcf1f521df6038d455a80baed870"></span><code class="sig-name descname">optional BaseMoving host_vehicle_location   = 3</code></dt>
 <dd><p>The sensors estimated location of the host vehicle</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
@@ -240,9 +240,9 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a3b5ba4aef1a3d5eb85ee0f44676b8f98"></span><code class="sig-name descname">optional BaseMoving osi3::SensorData::host_vehicle_location_rmse = 4</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a3b5ba4aef1a3d5eb85ee0f44676b8f98"></span><code class="sig-name descname">optional BaseMoving host_vehicle_location_rmse   = 4</code></dt>
 <dd><p>The sensors estimated location error of the host vehicle</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
@@ -255,16 +255,16 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1aba1532205c5abef2f8b439fc4c54d983"></span><code class="sig-name descname">optional Identifier osi3::SensorData::sensor_id = 5</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1aba1532205c5abef2f8b439fc4c54d983"></span><code class="sig-name descname">optional Identifier sensor_id   = 5</code></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
 <p>This is the ID of the virtual sensor, to be used in its detected object output; it is distinct from the IDs of its physical detectors, which are used in the detected features. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1ac79014724b81866a0b47c6d989447f21"></span><code class="sig-name descname">optional MountingPosition osi3::SensorData::mounting_position = 6</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1ac79014724b81866a0b47c6d989447f21"></span><code class="sig-name descname">optional MountingPosition mounting_position   = 6</code></dt>
 <dd><p>The virtual mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The virtual position pertains to the sensor as a whole, regardless of the actual position of individual physical detectors, and governs the sensor-relative coordinates in detected objects of the sensor as a whole. Individual features detected by individual physical detectors are governed by the actual physical mounting positions of the detectors, as indicated in the technology-specific sub-views and sub-view configurations.</p>
 <p><ul class="simple">
 <li><p><strong>x-direction</strong> of sensor coordinate system: sensor viewing direction </p></li>
@@ -282,15 +282,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1ae9b2bb51d2add0b88c483fcabe02a70e"></span><code class="sig-name descname">optional MountingPosition osi3::SensorData::mounting_position_rmse = 7</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1ae9b2bb51d2add0b88c483fcabe02a70e"></span><code class="sig-name descname">optional MountingPosition mounting_position_rmse   = 7</code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1ab50720725334907684ff8d6a29e88ac5"></span><code class="sig-name descname">repeated SensorView osi3::SensorData::sensor_view = 8</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1ab50720725334907684ff8d6a29e88ac5"></span><code class="sig-name descname">repeated SensorView sensor_view   = 8</code></dt>
 <dd><p>Sensor view w.r.t. the sensor coordinate system</p>
 <p>This provides a copy of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code> data received by the sensor for reference purposes. For complex sensors or logic models this can be multiple copies.</p>
 <p><dl class="simple">
@@ -300,33 +300,33 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"></span><code class="sig-name descname">optional Timestamp osi3::SensorData::last_measurement_time = 9</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"></span><code class="sig-name descname">optional Timestamp last_measurement_time   = 9</code></dt>
 <dd><p>The timestamp of the last real-world measurement (e.g. GT input) that this set of sensor data takes into account. This in effect is the last time instance of reality the measurements correspond to. See field <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"><span class="std std-ref"><span class="pre">SensorData::timestamp</span></span></a></code> for a detailed discussion. This value is also the upper bound to the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedEntityHeader.html#structosi3_1_1DetectedEntityHeader_1a5c5b85a1ce129d83a3a7858a44eeb11f"><span class="std std-ref"><span class="pre">DetectedEntityHeader::measurement_time</span></span></a></code> and the feature data <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorDetectionHeader.html#structosi3_1_1SensorDetectionHeader_1a7276bbdf40b2da4fed4397df62f167aa"><span class="std std-ref"><span class="pre">SensorDetectionHeader::measurement_time</span></span></a></code> fields. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a8919ed1a34cf43726b59721fa688e240"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::stationary_object_header = 10</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a8919ed1a34cf43726b59721fa688e240"></span><code class="sig-name descname">optional DetectedEntityHeader stationary_object_header   = 10</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedStationaryObject.html#structosi3_1_1DetectedStationaryObject"><span class="std std-ref"><span class="pre">DetectedStationaryObject</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a88c9ebfc5962c362385bb7ca80b3a696"></span><code class="sig-name descname">repeated DetectedStationaryObject osi3::SensorData::stationary_object = 11</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a88c9ebfc5962c362385bb7ca80b3a696"></span><code class="sig-name descname">repeated DetectedStationaryObject stationary_object   = 11</code></dt>
 <dd><p>The list of stationary objects (e.g. landmarks) detected by the sensor. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1af1363f2e753fe2b55adf169de24f29ea"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::moving_object_header = 12</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1af1363f2e753fe2b55adf169de24f29ea"></span><code class="sig-name descname">optional DetectedEntityHeader moving_object_header   = 12</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject.html#structosi3_1_1DetectedMovingObject"><span class="std std-ref"><span class="pre">DetectedMovingObject</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a03ec2ab20c09c83157e857cf368044c5"></span><code class="sig-name descname">repeated DetectedMovingObject osi3::SensorData::moving_object = 13</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a03ec2ab20c09c83157e857cf368044c5"></span><code class="sig-name descname">repeated DetectedMovingObject moving_object   = 13</code></dt>
 <dd><p>The list of moving objects detected by the sensor as perceived by the sensor.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -335,15 +335,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a120ed3199eb2a654d1ac2828532fe6c5"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::traffic_sign_header = 14</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a120ed3199eb2a654d1ac2828532fe6c5"></span><code class="sig-name descname">optional DetectedEntityHeader traffic_sign_header   = 14</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedTrafficSign.html#structosi3_1_1DetectedTrafficSign"><span class="std std-ref"><span class="pre">DetectedTrafficSign</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a939e870a502f67517e27a8199218f878"></span><code class="sig-name descname">repeated DetectedTrafficSign osi3::SensorData::traffic_sign = 15</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a939e870a502f67517e27a8199218f878"></span><code class="sig-name descname">repeated DetectedTrafficSign traffic_sign   = 15</code></dt>
 <dd><p>The list of traffic signs detected by the sensor.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -352,15 +352,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1af3ef59a8b126f125593d36c89b775c92"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::traffic_light_header = 16</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1af3ef59a8b126f125593d36c89b775c92"></span><code class="sig-name descname">optional DetectedEntityHeader traffic_light_header   = 16</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedTrafficLight.html#structosi3_1_1DetectedTrafficLight"><span class="std std-ref"><span class="pre">DetectedTrafficLight</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1aa371b884e0cd4fd029328aa5615e8c4d"></span><code class="sig-name descname">repeated DetectedTrafficLight osi3::SensorData::traffic_light = 17</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1aa371b884e0cd4fd029328aa5615e8c4d"></span><code class="sig-name descname">repeated DetectedTrafficLight traffic_light   = 17</code></dt>
 <dd><p>The list of traffic lights detected by the sensor.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -369,15 +369,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a5921917b8f68c4efed9004ded5ee589d"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::road_marking_header = 18</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a5921917b8f68c4efed9004ded5ee589d"></span><code class="sig-name descname">optional DetectedEntityHeader road_marking_header   = 18</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking.html#structosi3_1_1DetectedRoadMarking"><span class="std std-ref"><span class="pre">DetectedRoadMarking</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a30cf0fd83d7f46cead025ce8e7fa5ce0"></span><code class="sig-name descname">repeated DetectedRoadMarking osi3::SensorData::road_marking = 19</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a30cf0fd83d7f46cead025ce8e7fa5ce0"></span><code class="sig-name descname">repeated DetectedRoadMarking road_marking   = 19</code></dt>
 <dd><p>The list of road markings detected by the sensor. This excludes lane boundary markings.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -386,15 +386,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a87f1fd980c6a87910e91b434dba5269a"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::lane_boundary_header = 20</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a87f1fd980c6a87910e91b434dba5269a"></span><code class="sig-name descname">optional DetectedEntityHeader lane_boundary_header   = 20</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedLaneBoundary.html#structosi3_1_1DetectedLaneBoundary"><span class="std std-ref"><span class="pre">DetectedLaneBoundary</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a6e5554f84475442ca5d4be19c66817eb"></span><code class="sig-name descname">repeated DetectedLaneBoundary osi3::SensorData::lane_boundary = 21</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a6e5554f84475442ca5d4be19c66817eb"></span><code class="sig-name descname">repeated DetectedLaneBoundary lane_boundary   = 21</code></dt>
 <dd><p>The list of lane boundary markings detected by the sensor.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -403,15 +403,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a41b6394917e07ddee67ac2b037aee1ad"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::lane_header = 22</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a41b6394917e07ddee67ac2b037aee1ad"></span><code class="sig-name descname">optional DetectedEntityHeader lane_header   = 22</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedLane.html#structosi3_1_1DetectedLane"><span class="std std-ref"><span class="pre">DetectedLane</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a17425a51b2bc63a094fd2dc0df8c53cc"></span><code class="sig-name descname">repeated DetectedLane osi3::SensorData::lane = 23</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a17425a51b2bc63a094fd2dc0df8c53cc"></span><code class="sig-name descname">repeated DetectedLane lane   = 23</code></dt>
 <dd><p>The list of lanes detected by the sensor</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -420,15 +420,15 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a5fc31968be2943f264442406c7a83c88"></span><code class="sig-name descname">optional DetectedEntityHeader osi3::SensorData::occupant_header = 24</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a5fc31968be2943f264442406c7a83c88"></span><code class="sig-name descname">optional DetectedEntityHeader occupant_header   = 24</code></dt>
 <dd><p>General information about the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedOccupant.html#structosi3_1_1DetectedOccupant"><span class="std std-ref"><span class="pre">DetectedOccupant</span></span></a></code> . </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a086b965d4e6b0430dc7b555120c0bd88"></span><code class="sig-name descname">repeated DetectedOccupant osi3::SensorData::occupant = 25</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a086b965d4e6b0430dc7b555120c0bd88"></span><code class="sig-name descname">repeated DetectedOccupant occupant   = 25</code></dt>
 <dd><p>The list of occupants of the host vehicle</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -437,9 +437,9 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1SensorData_1a3b13e4e31dc10ca01c97388b1eb52d0a"></span><code class="sig-name descname">optional FeatureData osi3::SensorData::feature_data = 26</code></dt>
+<span class="target" id="structosi3_1_1SensorData_1a3b13e4e31dc10ca01c97388b1eb52d0a"></span><code class="sig-name descname">optional FeatureData feature_data   = 26</code></dt>
 <dd><p>Low level feature data interface.</p>
 <p>Low Level feature data is optionally provided by sensor models that model sensors giving access to this low level data, i.e. data prior to object hypothesis and tracking. </p>
 </dd></dl>

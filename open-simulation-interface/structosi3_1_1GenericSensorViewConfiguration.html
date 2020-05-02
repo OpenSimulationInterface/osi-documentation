@@ -198,21 +198,21 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi330GenericSensorViewConfigurationE">
-<span id="_CPPv3N4osi330GenericSensorViewConfigurationE"></span><span id="_CPPv2N4osi330GenericSensorViewConfigurationE"></span><span id="osi3::GenericSensorViewConfiguration"></span><span class="target" id="structosi3_1_1GenericSensorViewConfiguration"></span><em class="property">struct </em><code class="sig-name descname">GenericSensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi330GenericSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi330GenericSensorViewConfigurationE"></span><span id="_CPPv2N4osi330GenericSensorViewConfigurationE"></span><span id="osi3::GenericSensorViewConfiguration"></span><span class="target" id="structosi3_1_1GenericSensorViewConfiguration"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GenericSensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi330GenericSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The configuration settings for the Generic Sensor View to be provided by the environment simulation. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a9f51f940323dec15617f548147dd95d4"></span><code class="sig-name descname">optional Identifier osi3::GenericSensorViewConfiguration::sensor_id = 1</code></dt>
+<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a9f51f940323dec15617f548147dd95d4"></span><code class="sig-name descname">optional Identifier sensor_id   = 1</code></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
 <p>This is the ID of the physical sensor, to be used in its detected features output; it is distinct from the ID of its virtual sensor.</p>
 <p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a363e6620deb9703b79ca1bdcee148f69"></span><code class="sig-name descname">optional MountingPosition osi3::GenericSensorViewConfiguration::mounting_position = 2</code></dt>
+<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a363e6620deb9703b79ca1bdcee148f69"></span><code class="sig-name descname">optional MountingPosition mounting_position   = 2</code></dt>
 <dd><p>The physical mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The physical position pertains to this detector individually, and governs the sensor-relative coordinates in features detected by this detector.</p>
 <p><ul class="simple">
 <li><p><strong>x-direction</strong> of sensor coordinate system: sensor viewing direction </p></li>
@@ -230,23 +230,23 @@
 </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1af95a19f374599b8d24cee9f38866c62b"></span><code class="sig-name descname">optional MountingPosition osi3::GenericSensorViewConfiguration::mounting_position_rmse = 3</code></dt>
+<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1af95a19f374599b8d24cee9f38866c62b"></span><code class="sig-name descname">optional MountingPosition mounting_position_rmse   = 3</code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1aa186f7c50f7739a27c5017dbf016b9d4"></span><code class="sig-name descname">optional double osi3::GenericSensorViewConfiguration::field_of_view_horizontal = 4</code></dt>
+<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1aa186f7c50f7739a27c5017dbf016b9d4"></span><code class="sig-name descname">optional double field_of_view_horizontal   = 4</code></dt>
 <dd><p>Field of View in horizontal orientation of the physical sensor.</p>
 <p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1GenericSensorViewConfiguration_1aa186f7c50f7739a27c5017dbf016b9d4"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1GenericSensorViewConfiguration_1aa186f7c50f7739a27c5017dbf016b9d4"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>] azimuth in the sensor frame as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
-<dl class="cpp member">
+<dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a43d9d35e028ac7f3899954a9eb77fa4b"></span><code class="sig-name descname">optional double osi3::GenericSensorViewConfiguration::field_of_view_vertical = 5</code></dt>
+<span class="target" id="structosi3_1_1GenericSensorViewConfiguration_1a43d9d35e028ac7f3899954a9eb77fa4b"></span><code class="sig-name descname">optional double field_of_view_vertical   = 5</code></dt>
 <dd><p>Field of View in vertical orientation of the physical sensor.</p>
 <p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1GenericSensorViewConfiguration_1a43d9d35e028ac7f3899954a9eb77fa4b"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1GenericSensorViewConfiguration_1a43d9d35e028ac7f3899954a9eb77fa4b"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>] elevation in the sensor frame at zero azimuth as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
