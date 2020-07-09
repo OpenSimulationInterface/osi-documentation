@@ -99,6 +99,9 @@
 <li class="toctree-l1"><a class="reference internal" href="releases.html">Releases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Contributors’ Guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#developer-certification-of-origin-dco">Developer Certification of Origin (DCO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dco-sign-off-methods">DCO Sign-Off Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reporting-issues">Reporting issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-steps">First steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#where-to-start">Where to start</a></li>
@@ -208,7 +211,70 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this document is to help contributors get started with
-the Open Simulation Interface (OSI) codebase.</p>
+the ASAM Open Simulation Interface (OSI) codebase.</p>
+<p>As an open-source standardisation project, we welcome and encourage the community to submit patches directly to the project. In our collaborative open source environment, standards and methods for submitting changes help reduce the chaos that can result from an active development community.</p>
+<p>This document explains how to participate in project conversations, log bugs and enhancement requests, and submit patches to the project so your patch will be accepted quickly in the codebase.</p>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>OSI uses the Mozilla Public License, v. 2.0. (as found in the LICENSE file in the project’s GitHub repo).</p>
+<p>The license tells you what rights you have as a developer, provided by the copyright holder. It is important that the contributor fully understands the licensing rights and agrees to them. Sometimes the copyright holder isn’t the contributor, such as when the contributor is doing work on behalf of a company.</p>
+</div>
+<div class="section" id="developer-certification-of-origin-dco">
+<h2>Developer Certification of Origin (DCO)<a class="headerlink" href="#developer-certification-of-origin-dco" title="Permalink to this headline">¶</a></h2>
+<p>To make a good faith effort to ensure licensing criteria are met, the OSI project requires the Developer Certificate of Origin (DCO) process to be followed.</p>
+<p>The DCO is an attestation attached to every contribution made by every developer. In the commit message of the contribution, (described more fully later in this document), the developer simply adds a Signed-off-by statement and thereby agrees to the DCO.</p>
+<p>When a developer submits a patch, it is a commitment that the contributor has the right to submit the patch per the license. The DCO agreement is shown below and <a class="reference external" href="http://developercertificate.org/">online</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Developer</span><span class="s1">&#39;s Certificate of Origin 1.1</span>
+
+<span class="n">By</span> <span class="n">making</span> <span class="n">a</span> <span class="n">contribution</span> <span class="n">to</span> <span class="n">this</span> <span class="n">project</span><span class="p">,</span> <span class="n">I</span> <span class="n">certify</span> <span class="n">that</span><span class="p">:</span>
+
+<span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">The</span> <span class="n">contribution</span> <span class="n">was</span> <span class="n">created</span> <span class="ow">in</span> <span class="n">whole</span> <span class="ow">or</span> <span class="ow">in</span> <span class="n">part</span> <span class="n">by</span> <span class="n">me</span> <span class="ow">and</span> <span class="n">I</span>
+    <span class="n">have</span> <span class="n">the</span> <span class="n">right</span> <span class="n">to</span> <span class="n">submit</span> <span class="n">it</span> <span class="n">under</span> <span class="n">the</span> <span class="nb">open</span> <span class="n">source</span> <span class="n">license</span>
+    <span class="n">indicated</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">file</span><span class="p">;</span> <span class="ow">or</span>
+
+<span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="n">The</span> <span class="n">contribution</span> <span class="ow">is</span> <span class="n">based</span> <span class="n">upon</span> <span class="n">previous</span> <span class="n">work</span> <span class="n">that</span><span class="p">,</span> <span class="n">to</span> <span class="n">the</span>
+    <span class="n">best</span> <span class="n">of</span> <span class="n">my</span> <span class="n">knowledge</span><span class="p">,</span> <span class="ow">is</span> <span class="n">covered</span> <span class="n">under</span> <span class="n">an</span> <span class="n">appropriate</span> <span class="nb">open</span>
+    <span class="n">source</span> <span class="n">license</span> <span class="ow">and</span> <span class="n">I</span> <span class="n">have</span> <span class="n">the</span> <span class="n">right</span> <span class="n">under</span> <span class="n">that</span> <span class="n">license</span> <span class="n">to</span>
+    <span class="n">submit</span> <span class="n">that</span> <span class="n">work</span> <span class="k">with</span> <span class="n">modifications</span><span class="p">,</span> <span class="n">whether</span> <span class="n">created</span> <span class="ow">in</span> <span class="n">whole</span>
+    <span class="ow">or</span> <span class="ow">in</span> <span class="n">part</span> <span class="n">by</span> <span class="n">me</span><span class="p">,</span> <span class="n">under</span> <span class="n">the</span> <span class="n">same</span> <span class="nb">open</span> <span class="n">source</span> <span class="n">license</span> <span class="p">(</span><span class="n">unless</span>
+    <span class="n">I</span> <span class="n">am</span> <span class="n">permitted</span> <span class="n">to</span> <span class="n">submit</span> <span class="n">under</span> <span class="n">a</span> <span class="n">different</span> <span class="n">license</span><span class="p">),</span> <span class="k">as</span>
+    <span class="n">Indicated</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">file</span><span class="p">;</span> <span class="ow">or</span>
+
+<span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="n">The</span> <span class="n">contribution</span> <span class="n">was</span> <span class="n">provided</span> <span class="n">directly</span> <span class="n">to</span> <span class="n">me</span> <span class="n">by</span> <span class="n">some</span> <span class="n">other</span>
+    <span class="n">person</span> <span class="n">who</span> <span class="n">certified</span> <span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="ow">and</span> <span class="n">I</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">modified</span>
+    <span class="n">it</span><span class="o">.</span>
+
+<span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="n">I</span> <span class="n">understand</span> <span class="ow">and</span> <span class="n">agree</span> <span class="n">that</span> <span class="n">this</span> <span class="n">project</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">contribution</span>
+    <span class="n">are</span> <span class="n">public</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">a</span> <span class="n">record</span> <span class="n">of</span> <span class="n">the</span> <span class="n">contribution</span> <span class="p">(</span><span class="n">including</span>
+    <span class="nb">all</span> <span class="n">personal</span> <span class="n">information</span> <span class="n">I</span> <span class="n">submit</span> <span class="k">with</span> <span class="n">it</span><span class="p">,</span> <span class="n">including</span> <span class="n">my</span>
+    <span class="n">sign</span><span class="o">-</span><span class="n">off</span><span class="p">)</span> <span class="ow">is</span> <span class="n">maintained</span> <span class="n">indefinitely</span> <span class="ow">and</span> <span class="n">may</span> <span class="n">be</span> <span class="n">redistributed</span>
+    <span class="n">consistent</span> <span class="k">with</span> <span class="n">this</span> <span class="n">project</span> <span class="ow">or</span> <span class="n">the</span> <span class="nb">open</span> <span class="n">source</span> <span class="n">license</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">involved</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dco-sign-off-methods">
+<h2>DCO Sign-Off Methods<a class="headerlink" href="#dco-sign-off-methods" title="Permalink to this headline">¶</a></h2>
+<p>The DCO requires a sign-off message in the following format appear on each commit in the pull request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Firstname</span> <span class="n">Lastname</span> <span class="o">&lt;</span><span class="n">email</span><span class="nd">@address</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The DCO text can either be manually added to your commit body, or you can add either <code class="docutils literal notranslate"><span class="pre">-s</span></code> or <code class="docutils literal notranslate"><span class="pre">--signoff</span></code> to your usual Git commit commands. If you forget to add the sign-off you can also amend a previous commit with the sign-off by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span> <span class="pre">-s</span></code>.  You can add sign-offs to multiple commits (including commits originally authored by others, if you are authorized to do so) using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">--signoff</span></code>. If you’ve pushed your changes to GitHub already you’ll need to force push your branch after this with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--force-with-lease</span></code>.</p>
+<p>If you want to be reminded to add the sign-off for commits in your repository, you can add the following commit-message git hook to your repository:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="c1">#</span>
+<span class="c1"># Check for DCO/Signed-off-by in message</span>
+<span class="c1">#</span>
+
+<span class="k">if</span> ! grep -q <span class="s2">&quot;^Signed-off-by: &quot;</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;Aborting commit: Commit message is not signed off&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+  <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>Placing this script into a file called <code class="docutils literal notranslate"><span class="pre">.git/hooks/commit-msg</span></code> and making it executable (e.g. using <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">a+x</span> <span class="pre">.git/hooks/commit-msg</span></code> on unixoid operating systems) will prevent commits without a sign-off.</p>
 </div>
 <div class="section" id="reporting-issues">
 <h2>Reporting issues<a class="headerlink" href="#reporting-issues" title="Permalink to this headline">¶</a></h2>
@@ -260,7 +326,7 @@ the commits are combined
 into one commit and merged into the master branch.
 Once a pull request is ready, it is reviewed and
 approved, then squashed using the <code class="docutils literal notranslate"><span class="pre">--fast-forward</span></code> option of Git in order to
-maintain a streamlined Git history.</p>
+maintain a streamlined Git history. Pull requests without a Sign-Off message (see DCO above) will not be accepted.</p>
 <p><strong>We also enforce a few hygiene rules</strong>:</p>
 <ul class="simple">
 <li><p>Prefer small atomic commits over a large one that do many things.</p></li>
