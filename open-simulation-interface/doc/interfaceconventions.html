@@ -204,7 +204,7 @@
 <p>When adding new messages, enums, field messages and field enums to OSI we enforce a few naming conventions for each type like in the <a class="reference external" href="https://developers.google.com/protocol-buffers/docs/style">style guide</a> from protobuf.</p>
 <div class="section" id="message-naming">
 <h2>Message Naming<a class="headerlink" href="#message-naming" title="Permalink to this headline">¶</a></h2>
-<p>A message definition should always be in camel case. This means that the first letter of each word in a message should be upper case without any spaces. See example below:</p>
+<p>A message definition should always be in PascalCase. This means that the first letter of each word in a message should be upper case without any spaces. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
 <span class="p">}</span>
@@ -232,7 +232,7 @@
 </div>
 <div class="section" id="field-message-naming">
 <h2>Field Message Naming<a class="headerlink" href="#field-message-naming" title="Permalink to this headline">¶</a></h2>
-<p>After defining a message fields can be added to it in snake case format. This means every letter is lower case and the words are connected through an underline character. See example below:</p>
+<p>After defining a message fields can be added to it in snake_case format. This means every letter is lower case and the words are connected through an underline character. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
     <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -247,7 +247,7 @@
 </div>
 <div class="section" id="enum-naming">
 <h2>Enum Naming<a class="headerlink" href="#enum-naming" title="Permalink to this headline">¶</a></h2>
-<p>The naming of an enum should be camel case. See example below:</p>
+<p>The naming of an enum should be PascalCase. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
     <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -261,7 +261,7 @@
 </div>
 <div class="section" id="enum-field-naming">
 <h2>Enum Field Naming<a class="headerlink" href="#enum-field-naming" title="Permalink to this headline">¶</a></h2>
-<p>The naming of an enum field should be all in upper case. The start should be converted from the enum name camel case to upper case snake case. It is mandatory to add to the first enum field name the postfix <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> and to the second the postfix <code class="docutils literal notranslate"><span class="pre">_OTHER</span></code>. After that the naming can be decided by the user. It is often mentioned that the value <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> should not be used in a <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> message as there are now uncertanties by definition in <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">truth</span></code>. These values are mostly used in messages like <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> where the content is subject to interpretation. See example below:</p>
+<p>The naming of an enum field should be all in upper case. The start should be converted from the enum name PascalCase to UPPER_CASE_SNAKE_CASE. It is mandatory to add to the first enum field name the postfix <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> and to the second the postfix <code class="docutils literal notranslate"><span class="pre">_OTHER</span></code>. After that the naming can be decided by the user. It is often mentioned that the value <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> should not be used in a <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> message as there are now uncertanties by definition in <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">truth</span></code>. These values are mostly used in messages like <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> where the content is subject to interpretation. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
 <span class="p">{</span>
     <span class="k">optional</span> <span class="kt">double</span> <span class="na">atmospheric_pressure</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -281,10 +281,10 @@
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Here a small summary for the naming conventions:</p>
-<p>Messages: camel case</p>
-<p>Message Fields: snake case</p>
-<p>Enum: camel case</p>
-<p>Enum Fields: upper case, name of enum converted in upper case snake case and then following the specified name</p>
+<p>Messages: PascalCase</p>
+<p>Message Fields: snake_case</p>
+<p>Enum: PascalCase</p>
+<p>Enum Fields: Name of enum converted in UPPER_CASE_SNAKE_CASE and then following the specified name</p>
 <p>After defining the messages do not forget to comment them. See also the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/doc/commenting.html">section for commenting</a> of fields and messages.</p>
 </div>
 </div>
