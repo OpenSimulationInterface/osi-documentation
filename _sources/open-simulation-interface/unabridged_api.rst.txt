@@ -18,6 +18,21 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1AbortActionsAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1AcquireGlobalPositionAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1ActionHeader.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1BaseMoving.rst
 
 .. toctree::
@@ -173,6 +188,11 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1EndActionsAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1EnvironmentalConditions.rst
 
 .. toctree::
@@ -189,6 +209,16 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1FileOptions.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1FollowPathAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1FollowTrajectoryAction.rst
 
 .. toctree::
    :maxdepth: 5
@@ -254,6 +284,11 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1LaneBoundary_1_1Classification.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1LaneChangeAction.rst
 
 .. toctree::
    :maxdepth: 5
@@ -403,7 +438,17 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1SpeedAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1Spherical3d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1StatePoint.rst
 
 .. toctree::
    :maxdepth: 5
@@ -419,6 +464,16 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1Timestamp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficCommand.rst
 
 .. toctree::
    :maxdepth: 5
@@ -464,6 +519,11 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1TrafficSignValue.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficUpdate.rst
 
 .. toctree::
    :maxdepth: 5
@@ -531,7 +591,7 @@ Variables
 .. toctree::
    :maxdepth: 5
 
-   variable_osi__datarecording_8proto_1a4c413fcc2632dc98eb36f8ee6befdb12.rst
+   variable_osi__datarecording_8proto_1aca7502f9a670ec2817b11542e43251c0.rst
 
 .. toctree::
    :maxdepth: 5
@@ -621,12 +681,22 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_osi__trafficcommand_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_osi__trafficlight_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
 
 .. toctree::
    :maxdepth: 5
 
    variable_osi__trafficsign_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_osi__trafficupdate_8proto_1aca7502f9a670ec2817b11542e43251c0.rst
 
 .. toctree::
    :maxdepth: 5
@@ -736,12 +806,22 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_osi__trafficcommand_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_osi__trafficlight_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
 
 .. toctree::
    :maxdepth: 5
 
    variable_osi__trafficsign_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_osi__trafficupdate_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
 
 .. toctree::
    :maxdepth: 5

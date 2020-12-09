@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct FollowTrajectoryAction &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct GenericSensorView" href="structosi3_1_1GenericSensorView.html" />
+    <link rel="prev" title="Struct FollowPathAction" href="structosi3_1_1FollowPathAction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/fileformat.html">OSI File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/interfaceconventions.html">Interface Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct FollowTrajectoryAction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/open-simulation-interface/structosi3_1_1FollowTrajectoryAction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-followtrajectoryaction">
+<span id="exhale-struct-structosi3-1-1followtrajectoryaction"></span><h1>Struct FollowTrajectoryAction<a class="headerlink" href="#struct-followtrajectoryaction" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-trafficcommand-proto"><span class="std std-ref">File osi_trafficcommand.proto</span></a></p></li>
+</ul>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N4osi322FollowTrajectoryActionE">
+<span id="_CPPv3N4osi322FollowTrajectoryActionE"></span><span id="_CPPv2N4osi322FollowTrajectoryActionE"></span><span id="osi3::FollowTrajectoryAction"></span><span class="target" id="structosi3_1_1FollowTrajectoryAction"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FollowTrajectoryAction</code><a class="headerlink" href="#_CPPv4N4osi322FollowTrajectoryActionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Follow trajectory action. </p>
+<p>Controls a traffic participant to follow a trajectory using vertices with timings. It specifies the motion in space as a function of time.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>The <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> messages in trajectory_point requires a specified timestamp.</p>
+</dd>
+<dt><strong>Note</strong></dt><dd><p>This action is aligned with the <a class="reference internal" href="#structosi3_1_1FollowTrajectoryAction"><span class="std std-ref">FollowTrajectoryAction</span></a> of OpenSCENARIO 1.0 using a 4/7D trajectory with shape Polyline. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp enum">
+<dt id="_CPPv4N4osi322FollowTrajectoryAction13FollowingModeE">
+<span id="_CPPv3N4osi322FollowTrajectoryAction13FollowingModeE"></span><span id="_CPPv2N4osi322FollowTrajectoryAction13FollowingModeE"></span><span class="target" id="structosi3_1_1FollowTrajectoryAction_1a536d21ee2345b70f3e5a6c410cfd7458"></span><em class="property">enum </em><code class="sig-name descname">FollowingMode</code><a class="headerlink" href="#_CPPv4N4osi322FollowTrajectoryAction13FollowingModeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of following mode. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi322FollowTrajectoryAction13FollowingMode23FOLLOWING_MODE_POSITIONE">
+<span id="_CPPv3N4osi322FollowTrajectoryAction13FollowingMode23FOLLOWING_MODE_POSITIONE"></span><span id="_CPPv2N4osi322FollowTrajectoryAction13FollowingMode23FOLLOWING_MODE_POSITIONE"></span><span class="target" id="structosi3_1_1FollowTrajectoryAction_1a536d21ee2345b70f3e5a6c410cfd7458abf3a02a8d86ee64672538127c6b1575f"></span><em class="property">enumerator </em><code class="sig-name descname">FOLLOWING_MODE_POSITION</code><a class="headerlink" href="#_CPPv4N4osi322FollowTrajectoryAction13FollowingMode23FOLLOWING_MODE_POSITIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Following mode position forces the traffic participant to follow the trajectory explicitly, disregarding any internal constraints, for example, steering dynamics. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi322FollowTrajectoryAction13FollowingMode21FOLLOWING_MODE_FOLLOWE">
+<span id="_CPPv3N4osi322FollowTrajectoryAction13FollowingMode21FOLLOWING_MODE_FOLLOWE"></span><span id="_CPPv2N4osi322FollowTrajectoryAction13FollowingMode21FOLLOWING_MODE_FOLLOWE"></span><span class="target" id="structosi3_1_1FollowTrajectoryAction_1a536d21ee2345b70f3e5a6c410cfd7458a154949e8c484fd37939613ae53dc9611"></span><em class="property">enumerator </em><code class="sig-name descname">FOLLOWING_MODE_FOLLOW</code><a class="headerlink" href="#_CPPv4N4osi322FollowTrajectoryAction13FollowingMode21FOLLOWING_MODE_FOLLOWE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Following mode follow allows the traffic participant to treat the trajectory as a target, to be achieved as closely as possible while retaining any internal constraints, for example, steering dynamics. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1FollowTrajectoryAction_1a01813970684ee6e970c5135afd0d2570"></span><code class="sig-name descname">optional ActionHeader action_header   = 1</code></dt>
+<dd><p>The action header </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1FollowTrajectoryAction_1a723e36f097fc71ac3f8d0f685d8592f5"></span><code class="sig-name descname">repeated StatePoint trajectory_point   = 2</code></dt>
+<dd><p>A list of trajectory StatePoints</p>
+<p>Set the timestamp fields and position fields for all trajectory points. The orientation fields can be set depending on the constrain_orientation field being true.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1FollowTrajectoryAction_1a50437c7b830088daa622a6557da95bef"></span><code class="sig-name descname">optional bool constrain_orientation   = 3</code></dt>
+<dd><p>Constrain the orientation of the traffic participant as specified by the trajectory points.</p>
+<p>This boolean flag defines whether orientation values supplied in the trajectory points (if any) shall be used to constrain the orientation of the traffic participant or not. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1FollowTrajectoryAction_1a4a0e16ba06bc7fa1a4f1bebb5b31e76c"></span><code class="sig-name descname">optional FollowingMode following_mode   = 4</code></dt>
+<dd><p>Specify the following mode that should be employed in executing the trajectory. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structosi3_1_1GenericSensorView.html" class="btn btn-neutral float-right" title="Struct GenericSensorView" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structosi3_1_1FollowPathAction.html" class="btn btn-neutral float-left" title="Struct FollowPathAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Carlo van Driesten
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

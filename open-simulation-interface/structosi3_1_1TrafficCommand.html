@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Variable proto &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Struct TrafficCommand &mdash; Open Simulation Interface v3.1.2 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Variable proto" href="variable_osi__detectedlane_8proto_1a61d2939c26d13833d8bf6986c4b60bf9.html" />
-    <link rel="prev" title="Enum DetectionClassification" href="enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07.html" /> 
+    <link rel="next" title="Struct TrafficLight" href="structosi3_1_1TrafficLight.html" />
+    <link rel="prev" title="Struct TrafficAction" href="structosi3_1_1TrafficAction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -173,13 +173,13 @@
         
           <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
         
-      <li>Variable proto</li>
+      <li>Struct TrafficCommand</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/open-simulation-interface/variable_osi__datarecording_8proto_1a4c413fcc2632dc98eb36f8ee6befdb12.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/open-simulation-interface/structosi3_1_1TrafficCommand.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,17 +192,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="variable-proto">
-<span id="exhale-variable-osi-datarecording-8proto-1a4c413fcc2632dc98eb36f8ee6befdb12"></span><h1>Variable proto<a class="headerlink" href="#variable-proto" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="struct-trafficcommand">
+<span id="exhale-struct-structosi3-1-1trafficcommand"></span><h1>Struct TrafficCommand<a class="headerlink" href="#struct-trafficcommand" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_datarecording.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-datarecording-proto"><span class="std std-ref">File osi_datarecording.proto</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-trafficcommand-proto"><span class="std std-ref">File osi_trafficcommand.proto</span></a></p></li>
 </ul>
-<div class="section" id="variable-documentation">
-<h2>Variable Documentation<a class="headerlink" href="#variable-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N4osi314TrafficCommandE">
+<span id="_CPPv3N4osi314TrafficCommandE"></span><span id="_CPPv2N4osi314TrafficCommandE"></span><span id="osi3::TrafficCommand"></span><span class="target" id="structosi3_1_1TrafficCommand"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">TrafficCommand</code><a class="headerlink" href="#_CPPv4N4osi314TrafficCommandE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The scenario engine provides control commands in the traffic command message to traffic participant models. The control commands are based on the scenario. </p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This interface is currently just a placeholder and will be changed in experimental ways to support basic scenario execution. In the future this interface shall be aligned with the level of atomic actions as described in OpenSCENARIO 1.0 or later. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="osi__datarecording_8proto_1a4c413fcc2632dc98eb36f8ee6befdb12"></span><code class="sig-name descname">import osi_sensordata proto</code></dt>
-<dd></dd></dl>
+<span class="target" id="structosi3_1_1TrafficCommand_1a39d0be3ab5f87d40d309236fed587bab"></span><code class="sig-name descname">optional InterfaceVersion version   = 1</code></dt>
+<dd><p>The interface version used by the sender (scenario engine). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficCommand_1af593b71857620300c54cdfe3f8c5d695"></span><code class="sig-name descname">optional Timestamp timestamp   = 2</code></dt>
+<dd><p>The data timestamp of the simulation environment. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the UNIX epoch. It is recommended to use zero timestamp as the starting time point of the simulation.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>For traffic command data the timestamp coincides both with the notional simulation time the data applies to and the time it was sent There is no inherent latency for traffic command data, as opposed to sensor data. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficCommand_1a3a1c42d3330cfe402429e57a6b6125d8"></span><code class="sig-name descname">optional Identifier traffic_participant_id   = 3</code></dt>
+<dd><p>The ID of this traffic participant. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficCommand_1a2c6c3e03dfb3304df6ac539d0200e1fe"></span><code class="sig-name descname">repeated TrafficAction action   = 4</code></dt>
+<dd><p>Commanded traffic action(s) if any</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
+</dd>
+<dt><strong>Note</strong></dt><dd><p>If more than one action is supplied in one command message all actions are executed in parallel. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
 
 </div>
 </div>
@@ -215,10 +260,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="variable_osi__detectedlane_8proto_1a61d2939c26d13833d8bf6986c4b60bf9.html" class="btn btn-neutral float-right" title="Variable proto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="structosi3_1_1TrafficLight.html" class="btn btn-neutral float-right" title="Struct TrafficLight" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07.html" class="btn btn-neutral float-left" title="Enum DetectionClassification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="structosi3_1_1TrafficAction.html" class="btn btn-neutral float-left" title="Struct TrafficAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

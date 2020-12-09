@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1AcquireGlobalPositionAction:
+
+Struct AcquireGlobalPositionAction
+==================================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::AcquireGlobalPositionAction
+   :members:
+   :protected-members:
+   :undoc-members:

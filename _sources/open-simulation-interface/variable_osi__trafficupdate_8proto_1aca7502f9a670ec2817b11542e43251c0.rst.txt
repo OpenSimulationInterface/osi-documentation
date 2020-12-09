@@ -1,0 +1,13 @@
+.. _exhale_variable_osi__trafficupdate_8proto_1aca7502f9a670ec2817b11542e43251c0:
+
+Variable proto
+==============
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficupdate.proto`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: proto

@@ -17,6 +17,12 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structosi3_1_1AbortActionsAction`
+
+- :ref:`exhale_struct_structosi3_1_1AcquireGlobalPositionAction`
+
+- :ref:`exhale_struct_structosi3_1_1ActionHeader`
+
 - :ref:`exhale_struct_structosi3_1_1BaseMoving`
 
 - :ref:`exhale_struct_structosi3_1_1BaseStationary`
@@ -79,6 +85,8 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1Dimension3d`
 
+- :ref:`exhale_struct_structosi3_1_1EndActionsAction`
+
 - :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions`
 
 - :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions_1_1TimeOfDay`
@@ -86,6 +94,10 @@ Classes
 - :ref:`exhale_struct_structosi3_1_1FeatureData`
 
 - :ref:`exhale_struct_structosi3_1_1FileOptions`
+
+- :ref:`exhale_struct_structosi3_1_1FollowPathAction`
+
+- :ref:`exhale_struct_structosi3_1_1FollowTrajectoryAction`
 
 - :ref:`exhale_struct_structosi3_1_1GenericSensorView`
 
@@ -112,6 +124,8 @@ Classes
 - :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1BoundaryPoint`
 
 - :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1LaneChangeAction`
 
 - :ref:`exhale_struct_structosi3_1_1LidarDetection`
 
@@ -171,13 +185,21 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1SensorViewConfiguration`
 
+- :ref:`exhale_struct_structosi3_1_1SpeedAction`
+
 - :ref:`exhale_struct_structosi3_1_1Spherical3d`
+
+- :ref:`exhale_struct_structosi3_1_1StatePoint`
 
 - :ref:`exhale_struct_structosi3_1_1StationaryObject`
 
 - :ref:`exhale_struct_structosi3_1_1StationaryObject_1_1Classification`
 
 - :ref:`exhale_struct_structosi3_1_1Timestamp`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficCommand`
 
 - :ref:`exhale_struct_structosi3_1_1TrafficLight`
 
@@ -196,6 +218,8 @@ Classes
 - :ref:`exhale_struct_structosi3_1_1TrafficSign_1_1SupplementarySign_1_1Classification_1_1Arrow`
 
 - :ref:`exhale_struct_structosi3_1_1TrafficSignValue`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficUpdate`
 
 - :ref:`exhale_struct_structosi3_1_1UltrasonicDetection`
 

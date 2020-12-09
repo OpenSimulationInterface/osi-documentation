@@ -111,12 +111,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficlight.proto.rst
 
 .. toctree::
    :maxdepth: 5
 
    file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficsign.proto.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficupdate.proto.rst
 
 .. toctree::
    :maxdepth: 5

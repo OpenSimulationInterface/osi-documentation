@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1FollowPathAction:
+
+Struct FollowPathAction
+=======================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::FollowPathAction
+   :members:
+   :protected-members:
+   :undoc-members:

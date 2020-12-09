@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1TrafficUpdate:
+
+Struct TrafficUpdate
+====================
+
+- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficupdate.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::TrafficUpdate
+   :members:
+   :protected-members:
+   :undoc-members:
