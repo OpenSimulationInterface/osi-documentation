@@ -63,7 +63,6 @@ Separating dynamics from behavior introduces 2 more types of channels:
 * Measured data, meaning ground truth as interpreted by the traffic participant
 * Actuator-intention data, providing information on what actuators are supposed to do
 
-In this example, host vehicle data describes how the vehicle interprets its own states.
 OSI currently provides only limited support for data structures describing measured internal states of the traffic participant.
 Actuator intentions are currently not covered by OSI and must be handled with a different data description format.
 
@@ -76,7 +75,7 @@ The following figure shows a more complex traffic participant.
 This use case will probably be relevant for modeling the ego vehicle, which includes the SUT.
 The traffic participant includes an arbitrary number of sensor models, which provide sensor data.
 Sensor data is another example of measured data as an interpretation of ground truth by the traffic participant.
-In contrast to host vehicle data, sensor data describes how sensors interpret the surroundings, for example, with lidar, camera, radar, or ultrasonic technology.
+In contrast to data describing the internal state of the vehicle, sensor data describes how sensors interpret the surroundings, for example, with lidar, camera, radar, or ultrasonic technology.
 The AD-function consumes measured data and outputs actuator-intention data.
 As with the prior example, OSI currently does not support actuator-intention data.
 
