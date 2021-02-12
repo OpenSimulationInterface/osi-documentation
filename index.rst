@@ -6,21 +6,24 @@
 Welcome to Open Simulation Interface's documentation!
 =====================================================
 
-The Project
+The Vision
 -----------
+
 The Open Simulation Interface (OSI) is a generic interface for the environmental perception of automated driving functions in virtual scenarios.
 
-As the complexity of automated driving functions rapidly increases, the requirements for test and development methods are growing. Testing in virtual environments offers the advantage of completely controlled and reproducible environment conditions.
+As the complexity of automated driving functions rapidly increases, the requirements for test and development methods are growing.
+Testing in virtual environments offers the advantage of completely controlled and reproducible environment conditions.
 
+In order to achieve widespread use of driving simulators for function developers, the connection between the function development framework and the simulation environment has to rely on generic and standardized interfaces.
+An easy and straight-forward compatibility between automated driving functions and the variety of available driving simulation frameworks is made possible by OSI.
+OSI was developed exactly for this purpose and addresses the emerging standard ISO 23150 for real sensors' standardized communication interface.
 In this context, OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components:
 
 .. image:: _static/images/osicontextwiki.png
    :align: center
 
-
-The Vision
------------
-In order to achieve widespread use of driving simulators for function developers, the connection between the function development framework and the simulation environment has to rely on generic and standardized interfaces. An easy and straightforward compatibility between automated driving functions and the variety of available driving simulation frameworks is made possible by OSI. OSI was developed exactly for this purpose and addresses the emerging standard ISO 23150 for real sensors' standardized communication interface.
+Interfaces
+----------
 
 OSI contains an object-based environment description using the message format of the `protocol buffer <https://github.com/protocolbuffers/protobuf/wiki>`_ library developed and maintained by Google. OSI defines top-level messages that are used to exchange between separate models. Top-level messages defines the ``GroundTruth`` interface, the SensorData interface and, since OSI version 3.0.0, the ``SensorView`` / ``SensorView`` configuration interfaces and the ``FeatureData`` interface.
 
@@ -97,4 +100,3 @@ Indices and tables
 -------------------
 * :ref:`genindex`
 * :ref:`search`
-
