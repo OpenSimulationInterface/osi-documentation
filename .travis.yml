@@ -45,7 +45,7 @@ install:
     - pip install sphinx_git
     - pip install sphinxcontrib.spelling
     - pip install progress
-    - pip install doxygen-interface
+    # - pip install doxygen-interface
     - pip install breathe
     - pip install exhale
     - pip install --upgrade recommonmark
