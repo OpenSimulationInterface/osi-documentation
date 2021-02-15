@@ -24,17 +24,9 @@ install:
     - pip install sphinx_git
     - pip install sphinxcontrib.spelling
     - pip install progress
-    - pip install doxygen-interface
     - pip install breathe
     - pip install exhale
     - pip install --upgrade recommonmark
-
-# Environment variables.
-env:
-  global:
-    - GH_REPO_ORG=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 1`
-    - GH_REPO_NAME=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 2`
-    - GH_REPO_REF="github.com/$GH_REPO_ORG/$GH_REPO_NAME.git"
 
 # Addons necessary for documentation.
 addons:
