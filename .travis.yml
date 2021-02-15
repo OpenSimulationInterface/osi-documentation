@@ -14,6 +14,18 @@ before_install:
 
 # Install necessary packages.
 install:
+# Install a recent version of CMake
+    - |
+        CMAKE_URL="https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz"
+        if [ ! -f ${DEPS_DIR}/cmake/bin/cmake ] ; then mkdir -p cmake ; travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake ; fi
+        export PATH=${DEPS_DIR}/cmake/bin:${PATH}
+
+    # Install a recent version of the Protobuf
+    - |
+        PROTOBUF_URL="https://github.com/google/protobuf/releases/download/v3.2.0/protobuf-cpp-3.2.0.tar.gz"
+        if [ ! -f ${DEPS_DIR}/protobuf/install/bin/protoc ] ; then mkdir -p protobuf ; travis_retry wget --no-check-certificate --quiet -O - ${PROTOBUF_URL} | tar --strip-components=1 -xz -C protobuf ; cd protobuf ; ./configure --prefix=${DEPS_DIR}/protobuf/install ; make ; make install ; fi
+        export PATH=${DEPS_DIR}/protobuf/install/bin:${PATH}
+
     # Install proto2cpp for doxygen
     - |
         PROTO2CPP_URL="https://github.com/OpenSimulationInterface/proto2cpp.git"
@@ -47,12 +59,17 @@ script:
     - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
     - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
     - git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
+
+    # Generate the OSI doxygen documentation so that it can be parsed by breath
+    - cd open-simulation-interface
+    - mkdir build
+    - cd build
+    - cmake -D CMAKE_PREFIX_PATH:PATH=${DEPS_DIR}/protobuf/install -D CMAKE_INSTALL_PREFIX:PATH=${TESTINST_DIR} ..
+    - cmake --build .
     - echo "GENERATE_XML = YES" >> Doxyfile
     - doxygen
-    - cd ../..
-    - pip install .    
     - cd ..
-    - cp -rf osi-validation/open-simulation-interface/doc/images/* osi-validation/open-simulation-interface/doc/xml/
+    - cp -rf open-simulation-interface/doc/images/* open-simulation-interface/doc/xml/
 
     # Check spelling mistakes
     # - make spelling
