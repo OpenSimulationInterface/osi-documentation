@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Struct TrafficUpdate &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Struct TrafficUpdate &mdash; Open Simulation Interface v3.3.0 documentation</title>
   
 
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -55,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Open Simulation Interface
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
           
 
           
@@ -165,6 +167,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -178,7 +182,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/open-simulation-interface/structosi3_1_1TrafficUpdate.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -195,14 +199,14 @@
   <div class="section" id="struct-trafficupdate">
 <span id="exhale-struct-structosi3-1-1trafficupdate"></span><h1>Struct TrafficUpdate<a class="headerlink" href="#struct-trafficupdate" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficupdate.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-trafficupdate-proto"><span class="std std-ref">File osi_trafficupdate.proto</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_trafficupdate.proto.html#file-osi-documentation-open-simulation-interface-osi-trafficupdate-proto"><span class="std std-ref">File osi_trafficupdate.proto</span></a></p></li>
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi313TrafficUpdateE">
 <span id="_CPPv3N4osi313TrafficUpdateE"></span><span id="_CPPv2N4osi313TrafficUpdateE"></span><span id="osi3::TrafficUpdate"></span><span class="target" id="structosi3_1_1TrafficUpdate"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">TrafficUpdate</code><a class="headerlink" href="#_CPPv4N4osi313TrafficUpdateE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The traffic update message is provided by traffic participant models to provide updates to their position and state back to the simulation environment. </p>
+<dd><p>The traffic update message is provided by traffic participant models to provide updates to their position, state and future trajectory back to the simulation environment. </p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>For reasons of convenience and consistency, the updated information is provided as a <a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a>. Certain fields of this sub-message are not required to be set and will be ignored by the simulation environment, because they are static information. Instead of creating a seperate message type for only the non-static information, re-use existing message. </p>
 </dd>
@@ -229,10 +233,10 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficUpdate_1a0a2a0ad240f4ba1e7eb745a50431bead"></span><code class="sig-name descname">optional MovingObject update   = 3</code></dt>
-<dd><p>Updated moving object</p>
+<span class="target" id="structosi3_1_1TrafficUpdate_1adf3c4f0f6851d1ce2e7ddcdc7684f6cd"></span><code class="sig-name descname">repeated MovingObject update   = 3</code></dt>
+<dd><p>Updated traffic participant data</p>
 <p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Only the following members are considered in updates: id, base member without dimension and base_polygon and the vehicle_classification.light_state. All other members can be left undefined and will be ignored by the receiver of this message. </p>
+<dt><strong>Note</strong></dt><dd><p>It is not expected that static fields are populated. If they are, they may be ignored by the receiver of this message, for example, dimensions, or vehicle category. All dynamic fields should be populated where known, for example, velocity, light states, or future trajectory. </p>
 </dd>
 </dl>
 </p>
@@ -249,37 +253,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structosi3_1_1UltrasonicDetection.html" class="btn btn-neutral float-right" title="Struct UltrasonicDetection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="structosi3_1_1TrafficSignValue.html" class="btn btn-neutral float-left" title="Struct TrafficSignValue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="structosi3_1_1UltrasonicDetection.html" class="btn btn-neutral float-right" title="Struct UltrasonicDetection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structosi3_1_1TrafficSignValue.html" class="btn btn-neutral float-left" title="Struct TrafficSignValue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Carlo van Driesten
+        &#169; Copyright 2021, ASAM e.V..
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

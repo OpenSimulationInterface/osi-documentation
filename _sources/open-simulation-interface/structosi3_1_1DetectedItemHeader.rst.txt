@@ -3,7 +3,7 @@
 Struct DetectedItemHeader
 =========================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedobject.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_detectedobject.proto`
 
 
 Struct Documentation

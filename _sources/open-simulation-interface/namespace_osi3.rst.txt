@@ -17,12 +17,6 @@ Classes
 -------
 
 
-- :ref:`exhale_struct_structosi3_1_1AbortActionsAction`
-
-- :ref:`exhale_struct_structosi3_1_1AcquireGlobalPositionAction`
-
-- :ref:`exhale_struct_structosi3_1_1ActionHeader`
-
 - :ref:`exhale_struct_structosi3_1_1BaseMoving`
 
 - :ref:`exhale_struct_structosi3_1_1BaseStationary`
@@ -85,8 +79,6 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1Dimension3d`
 
-- :ref:`exhale_struct_structosi3_1_1EndActionsAction`
-
 - :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions`
 
 - :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions_1_1TimeOfDay`
@@ -94,10 +86,6 @@ Classes
 - :ref:`exhale_struct_structosi3_1_1FeatureData`
 
 - :ref:`exhale_struct_structosi3_1_1FileOptions`
-
-- :ref:`exhale_struct_structosi3_1_1FollowPathAction`
-
-- :ref:`exhale_struct_structosi3_1_1FollowTrajectoryAction`
 
 - :ref:`exhale_struct_structosi3_1_1GenericSensorView`
 
@@ -125,8 +113,6 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1Classification`
 
-- :ref:`exhale_struct_structosi3_1_1LaneChangeAction`
-
 - :ref:`exhale_struct_structosi3_1_1LidarDetection`
 
 - :ref:`exhale_struct_structosi3_1_1LidarDetectionData`
@@ -139,11 +125,21 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1LidarSpecificObjectData`
 
+- :ref:`exhale_struct_structosi3_1_1LogicalDetection`
+
+- :ref:`exhale_struct_structosi3_1_1LogicalDetectionData`
+
+- :ref:`exhale_struct_structosi3_1_1LogicalDetectionDataHeader`
+
 - :ref:`exhale_struct_structosi3_1_1MountingPosition`
 
 - :ref:`exhale_struct_structosi3_1_1MovingObject`
 
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1MovingObjectClassification`
+
 - :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes`
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData`
 
 - :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification`
 
@@ -185,8 +181,6 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1SensorViewConfiguration`
 
-- :ref:`exhale_struct_structosi3_1_1SpeedAction`
-
 - :ref:`exhale_struct_structosi3_1_1Spherical3d`
 
 - :ref:`exhale_struct_structosi3_1_1StatePoint`
@@ -198,6 +192,34 @@ Classes
 - :ref:`exhale_struct_structosi3_1_1Timestamp`
 
 - :ref:`exhale_struct_structosi3_1_1TrafficAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1AbortActionsAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1ActionHeader`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1CustomAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1DynamicConstraints`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1EndActionsAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1FollowPathAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1FollowTrajectoryAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1LaneChangeAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1LaneOffsetAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1LateralDistanceAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1SpeedAction`
+
+- :ref:`exhale_struct_structosi3_1_1TrafficAction_1_1TeleportAction`
 
 - :ref:`exhale_struct_structosi3_1_1TrafficCommand`
 
@@ -241,9 +263,13 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1Vector3d`
 
+- :ref:`exhale_struct_structosi3_1_1WavelengthData`
+
 
 Enums
 -----
 
 
 - :ref:`exhale_enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07`
+
+- :ref:`exhale_enum_osi__logicaldetectiondata_8proto_1aa9b2ca5278120ca4f3632f21b1066965`

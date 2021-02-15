@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Struct Lane &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Struct Lane &mdash; Open Simulation Interface v3.3.0 documentation</title>
   
 
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -55,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Open Simulation Interface
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
           
 
           
@@ -165,6 +167,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -178,7 +182,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/open-simulation-interface/structosi3_1_1Lane.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -195,7 +199,7 @@
   <div class="section" id="struct-lane">
 <span id="exhale-struct-structosi3-1-1lane"></span><h1>Struct Lane<a class="headerlink" href="#struct-lane" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_lane.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-lane-proto"><span class="std std-ref">File osi_lane.proto</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_lane.proto.html#file-osi-documentation-open-simulation-interface-osi-lane-proto"><span class="std std-ref">File osi_lane.proto</span></a></p></li>
 </ul>
 <div class="section" id="nested-relationships">
 <h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
@@ -292,6 +296,116 @@
 
 </dd></dl>
 
+<dl class="cpp enum">
+<dt id="_CPPv4N4osi34Lane14Classification7SubtypeE">
+<span id="_CPPv3N4osi34Lane14Classification7SubtypeE"></span><span id="_CPPv2N4osi34Lane14Classification7SubtypeE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21"></span><em class="property">enum </em><code class="sig-name descname">Subtype</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7SubtypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Definition of available lane subtypes, aligned with OpenDRIVE. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_UNKNOWNE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype15SUBTYPE_UNKNOWNE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype15SUBTYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a6765aa82158659f6ec8ebca4f68b76f3"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> of unknown subtype. Do not use in ground truth. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype13SUBTYPE_OTHERE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype13SUBTYPE_OTHERE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype13SUBTYPE_OTHERE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a39fda5d64365466578c5532d693b7e8d"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype13SUBTYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Any other subtype of lane. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_NORMALE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype14SUBTYPE_NORMALE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype14SUBTYPE_NORMALE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a3c1164c5340934089bdeac655e007c08"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_NORMAL</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_NORMALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A normal driving lane. Example: Lanes with IDs l1, l2, l3 and l4 in image HighwayExit.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_BIKINGE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype14SUBTYPE_BIKINGE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype14SUBTYPE_BIKINGE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a364eb36b640401d631dea23a3d81bc0c"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_BIKING</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_BIKINGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A lane that is designated for bicylists.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype16SUBTYPE_SIDEWALKE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype16SUBTYPE_SIDEWALKE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype16SUBTYPE_SIDEWALKE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a2fc65e6c2cc8dc1e20b11a61bbae1d6a"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_SIDEWALK</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype16SUBTYPE_SIDEWALKE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A lane that is designated for pedestrians (sidewalk).</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_PARKINGE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype15SUBTYPE_PARKINGE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype15SUBTYPE_PARKINGE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a28dd1b78b095fb3a60b8d18e3566c118"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_PARKING</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_PARKINGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A lane with parking spaces.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype12SUBTYPE_STOPE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype12SUBTYPE_STOPE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype12SUBTYPE_STOPE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21ac75fb64405d197829955a683e3075246"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_STOP</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype12SUBTYPE_STOPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A hard shoulder on motorways for emergency stops. Example: <a class="reference internal" href="#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> l5 in image HighwayExit.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype18SUBTYPE_RESTRICTEDE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype18SUBTYPE_RESTRICTEDE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype18SUBTYPE_RESTRICTEDE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21ad1e5a83662bbee06567638c8e23849a5"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_RESTRICTED</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype18SUBTYPE_RESTRICTEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A lane on which cars should not drive.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_BORDERE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype14SUBTYPE_BORDERE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype14SUBTYPE_BORDERE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a97eb089f4beb0c3bc70f41ebe69332b3"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_BORDER</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_BORDERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A hard border on the edge of a road.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype16SUBTYPE_SHOULDERE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype16SUBTYPE_SHOULDERE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype16SUBTYPE_SHOULDERE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a5f2156c78bf28069cb4c82856105c64b"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_SHOULDER</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype16SUBTYPE_SHOULDERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A soft border on the edge of a road.</p>
+<p>Since it is not intended to be used for normal automotive driving, it should be used in combination with TYPE_NONDRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype12SUBTYPE_EXITE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype12SUBTYPE_EXITE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype12SUBTYPE_EXITE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a888b7f811257471386b7c36dfa4b9840"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_EXIT</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype12SUBTYPE_EXITE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A deceleration lane in parallel to the main road. Example: <a class="reference internal" href="#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> l6 in image HighwayExit.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype13SUBTYPE_ENTRYE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype13SUBTYPE_ENTRYE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype13SUBTYPE_ENTRYE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21ac8ac1f6fafe9fdb182d60dc1d65bd4b8"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_ENTRY</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype13SUBTYPE_ENTRYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An acceleration lane in parallel to the main road.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_ONRAMPE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype14SUBTYPE_ONRAMPE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype14SUBTYPE_ONRAMPE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a2db3aef6b5e21afc7687ab817bf116d4"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_ONRAMP</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype14SUBTYPE_ONRAMPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A ramp from rural or urban roads joining a motorway.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_OFFRAMPE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype15SUBTYPE_OFFRAMPE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype15SUBTYPE_OFFRAMPE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21a68500d1f721949d38253f6ec6ce1ca57"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_OFFRAMP</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype15SUBTYPE_OFFRAMPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A ramp leading off a motorway onto rural or urban roads.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N4osi34Lane14Classification7Subtype22SUBTYPE_CONNECTINGRAMPE">
+<span id="_CPPv3N4osi34Lane14Classification7Subtype22SUBTYPE_CONNECTINGRAMPE"></span><span id="_CPPv2N4osi34Lane14Classification7Subtype22SUBTYPE_CONNECTINGRAMPE"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1a14fa7be357dbbf8eb6b090a9e5b5dd21ac32db9de056f27e93732162835484fcd"></span><em class="property">enumerator </em><code class="sig-name descname">SUBTYPE_CONNECTINGRAMP</code><a class="headerlink" href="#_CPPv4N4osi34Lane14Classification7Subtype22SUBTYPE_CONNECTINGRAMPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A ramp that connect two motorways.</p>
+<p>Since it is intended to be used for normal automotive driving, it should be used in combination with TYPE_DRIVING. </p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
@@ -315,8 +429,13 @@
 <p>The centerline describes the middle of the lane.</p>
 <p><img alt="../_images/OSI_LaneCenterline.svg" src="../_images/OSI_LaneCenterline.svg" /></p>
 <p>Example: In image HighwayExit, the centerline of lane l4 (black line) is given by (cl4_1, cl4_2, cl4_3, cl4_4, cl4_5).</p>
+<p><img alt="../_images/OSI_LaneBoundaries_And_CenterLine.svg" src="../_images/OSI_LaneBoundaries_And_CenterLine.svg" /></p>
 <p><p>Approximation error green line.</p>
 <img alt="../_images/line_approximation_error.svg" src="../_images/line_approximation_error.svg" /><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>cl: center line lb: lane boundary</p>
+</dd>
+<dt><strong>Attention</strong></dt><dd><p>The points desribing the center line must be set in the same ordering (ascending or descending) as the points desribing the lane boundaries. Example: If the points are deducted from a map format, the order of points is recommended to be in line with the road coordinate (e.g. s-coordinate in OpenDRIVE).</p>
+</dd>
 <dt><strong>Attention</strong></dt><dd><p>The points describing the center line might be set at arbitrary distances. When the points are pairwise linearly connected, the lateral distance to the real ideal line (as used by the simulation environment internally) must not exceed 5cm. As shown in the following image:</p>
 </dd>
 </dl>
@@ -348,7 +467,7 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"></span><code class="sig-name descname">repeated Identifier left_adjacent_lane_id   = 5</code></dt>
-<dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the left side (w.r.t. intended driving direction). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
+<dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the left side (w.r.t. ascending order of centerline points and lane boundary points). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: The lane l3 is the only left adjacent lane for lane l4 in image HighwayExit.</p>
 <p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
 <dl class="simple">
@@ -363,7 +482,7 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"></span><code class="sig-name descname">repeated Identifier right_adjacent_lane_id   = 6</code></dt>
-<dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the right side (w.r.t. intended driving direction). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
+<dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the right side (w.r.t. ascending order of centerline points and lane boundary points). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> = (l5, l6) for lane l4 in image HighwayExit.</p>
 <p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
 <dl class="simple">
@@ -440,6 +559,13 @@
 <dt>
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1aae62d7c2da8739f46e68f0202a4f7955"></span><code class="sig-name descname">optional RoadCondition road_condition   = 11</code></dt>
 <dd><p>The condition of the lane, e.g. influenced by weather. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1Lane_1_1Classification_1ac5315bb0a34763ca7e0a31ca72a3350d"></span><code class="sig-name descname">optional Subtype subtype   = 12</code></dt>
+<dd><p>The subtype of the lane.</p>
+<p>This subtype specifies a lane more concretely. </p>
 </dd></dl>
 
 </div>
@@ -554,37 +680,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structosi3_1_1Lane_1_1Classification.html" class="btn btn-neutral float-right" title="Struct Lane::Classification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="structosi3_1_1InterfaceVersion.html" class="btn btn-neutral float-left" title="Struct InterfaceVersion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="structosi3_1_1Lane_1_1Classification.html" class="btn btn-neutral float-right" title="Struct Lane::Classification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structosi3_1_1InterfaceVersion.html" class="btn btn-neutral float-left" title="Struct InterfaceVersion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Carlo van Driesten
+        &#169; Copyright 2021, ASAM e.V..
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1LogicalDetectionData:
+
+Struct LogicalDetectionData
+===========================
+
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_logicaldetectiondata.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::LogicalDetectionData
+   :members:
+   :protected-members:
+   :undoc-members:

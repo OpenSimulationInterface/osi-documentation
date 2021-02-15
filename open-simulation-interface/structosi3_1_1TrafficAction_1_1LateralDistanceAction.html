@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Struct TrafficAction::LateralDistanceAction &mdash; Open Simulation Interface v3.3.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct TrafficAction::LongitudinalDistanceAction" href="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction.html" />
+    <link rel="prev" title="Struct TrafficAction::LaneOffsetAction" href="structosi3_1_1TrafficAction_1_1LaneOffsetAction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/fileformat.html">OSI File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/interfaceconventions.html">Interface Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library_root.html">OSI Reference</a> &raquo;</li>
+        
+      <li>Struct TrafficAction::LateralDistanceAction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/open-simulation-interface/structosi3_1_1TrafficAction_1_1LateralDistanceAction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-trafficaction-lateraldistanceaction">
+<span id="exhale-struct-structosi3-1-1trafficaction-1-1lateraldistanceaction"></span><h1>Struct TrafficAction::LateralDistanceAction<a class="headerlink" href="#struct-trafficaction-lateraldistanceaction" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_trafficcommand.proto.html#file-osi-documentation-open-simulation-interface-osi-trafficcommand-proto"><span class="std std-ref">File osi_trafficcommand.proto</span></a></p></li>
+</ul>
+<div class="section" id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
+<p>This struct is a nested type of <a class="reference internal" href="structosi3_1_1TrafficAction.html#exhale-struct-structosi3-1-1trafficaction"><span class="std std-ref">Struct TrafficAction</span></a>.</p>
+</div>
+<div class="section" id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N4osi313TrafficAction21LateralDistanceActionE">
+<span id="_CPPv3N4osi313TrafficAction21LateralDistanceActionE"></span><span id="_CPPv2N4osi313TrafficAction21LateralDistanceActionE"></span><span id="osi3::TrafficAction::LateralDistanceAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction">TrafficAction</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LateralDistanceAction</code><br /></dt>
+<dd><p>Lateral Distance Action. </p>
+<p>The action tells the (host) traffic participant to reach a certain lateral distance relative to a target traffic participant. The lateral distance is defined along an imaginative perpendicular line with respect to the centerline of the current (host) traffic participant’s lane. The interpolation strategy between centerline points for calculating that distance along the imaginative perpendicular line is open to the traffic participant modeller.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="#structosi3_1_1TrafficAction_1_1LateralDistanceAction"><span class="std std-ref">LateralDistanceAction</span></a> of OpenSCENARIO 1.0 defining the reference traffic participant and the distance.</p>
+</dd>
+<dt><strong>Note</strong></dt><dd><p>Limitation: This concept currently only works for lanes with a centerline, i.e. for lanes of TYPE_DRIVING, not for lanes of TYPE_NONDRIVING or TYPE_INTERSECTION. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1a49cb6cce5af7de1fe266b3bb270c4aff"></span><code class="sig-name descname">optional ActionHeader action_header   = 1</code></dt>
+<dd><p>Action Header of the message </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1a19e15cc025ae58a21586e0d996244ef1"></span><code class="sig-name descname">optional Identifier target_traffic_participant_id   = 2</code></dt>
+<dd><p>Id of the reference entity the lateral distance shall be kept to. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1a843ccf82915177e76a8f6758f3757dcd"></span><code class="sig-name descname">optional double distance   = 3</code></dt>
+<dd><p>Lateral distance value.</p>
+<p>Unit: m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1a84913ba85707fce80df547fcb252e665"></span><code class="sig-name descname">optional bool freespace   = 4</code></dt>
+<dd><p>Determine the measurement of lateral distance between the traffic participant receiving this action and the reference traffic participant. True: Lateral distance is measured using the distance between closest bounding box points. False: Lateral distance is mesasured using the distance between the center of each object’s bounding box. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1aef925bd47d5c53bdb7d91154cb72d759"></span><code class="sig-name descname">optional bool follow   = 5</code></dt>
+<dd><p>Define wheather the traffic participant should only reach the distance once or if it should also keep the distance after having reached it. True: the traffic participant shall approach the reference participant and follow with the distance specified until the action is aborted (communicate with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1AbortActionsAction.html#structosi3_1_1TrafficAction_1_1AbortActionsAction"><span class="std std-ref">AbortActionsAction</span></a>). False: the action ends as soon as the traffic participant has reached the specified distance (communicate with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1EndActionsAction.html#structosi3_1_1TrafficAction_1_1EndActionsAction"><span class="std std-ref">EndActionsAction</span></a>). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction_1a96b526507585bf9a7ec76de562ddc142"></span><code class="sig-name descname">optional DynamicConstraints dynamic_constraints   = 6</code></dt>
+<dd><p>Parameter that assings either unlimited dynamics (if omitted) or limited maxAcceleration/maxDeceleration/maxSpeed to the action. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction.html" class="btn btn-neutral float-right" title="Struct TrafficAction::LongitudinalDistanceAction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structosi3_1_1TrafficAction_1_1LaneOffsetAction.html" class="btn btn-neutral float-left" title="Struct TrafficAction::LaneOffsetAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ASAM e.V..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

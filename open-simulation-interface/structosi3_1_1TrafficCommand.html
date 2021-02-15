@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Struct TrafficCommand &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Struct TrafficCommand &mdash; Open Simulation Interface v3.3.0 documentation</title>
   
 
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -41,7 +43,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Struct TrafficLight" href="structosi3_1_1TrafficLight.html" />
-    <link rel="prev" title="Struct TrafficAction" href="structosi3_1_1TrafficAction.html" /> 
+    <link rel="prev" title="Struct TrafficAction::TeleportAction" href="structosi3_1_1TrafficAction_1_1TeleportAction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Open Simulation Interface
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
           
 
           
@@ -165,6 +167,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -178,7 +182,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/open-simulation-interface/structosi3_1_1TrafficCommand.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -195,7 +199,7 @@
   <div class="section" id="struct-trafficcommand">
 <span id="exhale-struct-structosi3-1-1trafficcommand"></span><h1>Struct TrafficCommand<a class="headerlink" href="#struct-trafficcommand" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficcommand.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-trafficcommand-proto"><span class="std std-ref">File osi_trafficcommand.proto</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_trafficcommand.proto.html#file-osi-documentation-open-simulation-interface-osi-trafficcommand-proto"><span class="std std-ref">File osi_trafficcommand.proto</span></a></p></li>
 </ul>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
@@ -236,10 +240,8 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1TrafficCommand_1a2c6c3e03dfb3304df6ac539d0200e1fe"></span><code class="sig-name descname">repeated TrafficAction action   = 4</code></dt>
-<dd><p>Commanded traffic action(s) if any</p>
+<dd><p>Commanded traffic action(s) if any.</p>
 <p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
 <dt><strong>Note</strong></dt><dd><p>If more than one action is supplied in one command message all actions are executed in parallel. </p>
 </dd>
 </dl>
@@ -257,37 +259,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structosi3_1_1TrafficLight.html" class="btn btn-neutral float-right" title="Struct TrafficLight" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="structosi3_1_1TrafficAction.html" class="btn btn-neutral float-left" title="Struct TrafficAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="structosi3_1_1TrafficLight.html" class="btn btn-neutral float-right" title="Struct TrafficLight" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structosi3_1_1TrafficAction_1_1TeleportAction.html" class="btn btn-neutral float-left" title="Struct TrafficAction::TeleportAction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Carlo van Driesten
+        &#169; Copyright 2021, ASAM e.V..
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

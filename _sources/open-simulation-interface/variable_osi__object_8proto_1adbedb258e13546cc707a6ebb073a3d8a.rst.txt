@@ -3,7 +3,7 @@
 Variable syntax
 ===============
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_object.proto`
 
 
 Variable Documentation

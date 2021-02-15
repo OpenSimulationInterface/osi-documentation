@@ -3,7 +3,7 @@
 Struct MovingObject
 ===================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_object.proto`
 
 
 Nested Relationships
@@ -13,7 +13,9 @@ Nested Relationships
 Nested Types
 ************
 
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1MovingObjectClassification`
 - :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes`
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData`
 - :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification`
 - :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState`
 

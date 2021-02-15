@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Struct MovingObject::VehicleAttributes &mdash; Open Simulation Interface v3.1.2 documentation</title>
+  <title>Struct MovingObject::VehicleAttributes &mdash; Open Simulation Interface v3.3.0 documentation</title>
   
 
   
@@ -17,7 +17,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -40,8 +42,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct MovingObject::VehicleClassification" href="structosi3_1_1MovingObject_1_1VehicleClassification.html" />
-    <link rel="prev" title="Struct MovingObject" href="structosi3_1_1MovingObject.html" /> 
+    <link rel="next" title="Struct VehicleAttributes::WheelData" href="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.html" />
+    <link rel="prev" title="Struct MovingObject::MovingObjectClassification" href="structosi3_1_1MovingObject_1_1MovingObjectClassification.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Open Simulation Interface
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
           
 
           
@@ -165,6 +167,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -178,7 +182,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/open-simulation-interface/structosi3_1_1MovingObject_1_1VehicleAttributes.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -195,11 +199,17 @@
   <div class="section" id="struct-movingobject-vehicleattributes">
 <span id="exhale-struct-structosi3-1-1movingobject-1-1vehicleattributes"></span><h1>Struct MovingObject::VehicleAttributes<a class="headerlink" href="#struct-movingobject-vehicleattributes" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto.html#file-osi-documentation-osi-validation-open-simulation-interface-osi-object-proto"><span class="std std-ref">File osi_object.proto</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_object.proto.html#file-osi-documentation-open-simulation-interface-osi-object-proto"><span class="std std-ref">File osi_object.proto</span></a></p></li>
 </ul>
 <div class="section" id="nested-relationships">
 <h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">¶</a></h2>
 <p>This struct is a nested type of <a class="reference internal" href="structosi3_1_1MovingObject.html#exhale-struct-structosi3-1-1movingobject"><span class="std std-ref">Struct MovingObject</span></a>.</p>
+<div class="section" id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.html#exhale-struct-structosi3-1-1movingobject-1-1vehicleattributes-1-1wheeldata"><span class="std std-ref">Struct VehicleAttributes::WheelData</span></a></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
@@ -231,7 +241,7 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a848ab52664318bb5f56acf5db0c21248"></span><code class="sig-name descname">optional double radius_wheel   = 2</code></dt>
-<dd><p>Median radius of the wheels measured from a center of the wheel including tire.</p>
+<dd><p>Deprecated: Will be removed in next major release. Moved to <a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"><span class="std std-ref">WheelData</span></a>. Median radius of the wheels measured from a center of the wheel including tire.</p>
 <p>Unit: m</p>
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
@@ -258,10 +268,112 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname">optional double ground_clearance   = 6</code></dt>
-<dd><p>Static minimal distance in m of under-body plane to ground surface plane (i.e. disregarding driving dynamic effects or road surface effects) under neutral load conditions. Can be useful to approximate the clear area under a vehicle that a sensor can see through. </p>
+<dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. <dl class="simple">
+<dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a27d7ffb7cfe89c54fc94532b4e6869cd"></span><code class="sig-name descname">repeated WheelData wheel_data   = 7</code></dt>
+<dd><p>Description of each wheel.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a73ee49dc2b6b48f16c474f12f52c5ddf"></span><code class="sig-name descname">optional double steering_wheel_angle   = 8</code></dt>
+<dd><p>Angle of the steering wheel. Zero means the steering wheel is in its center postion, a positive value means the steering wheel is turned to the left and a negative value means the steering wheel is turned to the right of the center position.</p>
+<p>Unit: rad </p>
 </dd></dl>
 
 </div>
+<dl class="cpp struct">
+<dt id="_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE">
+<span id="_CPPv3N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="osi3::MovingObject::VehicleAttributes::WheelData"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"></span><em class="property">struct </em><code class="sig-name descname">WheelData</code><br /></dt>
+<dd><p>Detailed wheel data. The focus is on the description of a wheel regarding the perceivable information from the outside. It is not intended to be used for dynamic calculations, for example. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a094de989f5a2aab080f9a65f0feb3867"></span><code class="sig-name descname">optional uint32 axle   = 1</code></dt>
+<dd><p>The axle which contains this wheel. A value of 0 represents the front-most axle of the vehicle with higher numbers incrementing towards the rear-most axle. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a2095585cdc9eb8968fe576af7c43d5a3"></span><code class="sig-name descname">optional uint32 index   = 2</code></dt>
+<dd><p>The index of the wheel on the axle, counting in the direction of positive-y, that is, right-to-left.</p>
+<p>For example, on a standard 2-axle, 4-wheel car, the rear-right wheel would be (axle=1, index=0). This concept works also for twin tires. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1abfe9b8868b4a50e8b20476aadd217268"></span><code class="sig-name descname">optional Vector3d position   = 3</code></dt>
+<dd><p>A vector pointing from the vehicle’s reference system (center of bounding box) to the geometric center of the wheel. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a103fad79e18f7443b50e4d81160c8d56"></span><code class="sig-name descname">optional double wheel_radius   = 4</code></dt>
+<dd><p>Median radius of the wheel measured from the center of the wheel to the outer part of the tire.</p>
+<p>Unit: m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1afdacaf4b3b87153099953937da698297"></span><code class="sig-name descname">optional double rim_radius   = 5</code></dt>
+<dd><p>Median radius of the rim measured from the center to the outer, visible part of the rim.</p>
+<p>Unit: m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a99c73124e0eace722696b019306d1614"></span><code class="sig-name descname">optional double width   = 6</code></dt>
+<dd><p>Median width of the tire.</p>
+<p>Unit: m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a844a2e4eacc8dee9449f8e3a17afb577"></span><code class="sig-name descname">optional Orientation3d orientation   = 7</code></dt>
+<dd><p>Orientation of the wheel.</p>
+<p>The reference system is the vehicle frame (center of bounding box). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1aac1cc436ddbf53001ca1a5269b536dc0"></span><code class="sig-name descname">optional double rotation_rate   = 8</code></dt>
+<dd><p>Rotation rate of the wheel. The rotation rate around the y-axis with respect to the wheel’s coordinate system.</p>
+<p>Unit: rad/s.</p>
+<p>The sign convention is defined using the right-hand rule. It is applied on the y-axis of the vehicle’s reference system (center of bounding box). Counterclockwise is positive and clockwise is negative.</p>
+<p><img alt="../_images/OSI_RotationRate.svg" src="../_images/OSI_RotationRate.svg" /><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>The vehicle’s reference coordinate system is only used to determine the sign convention of the rotation rate. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname">optional string model_reference   = 9</code></dt>
+<dd><p>Opaque reference of an associated 3D model of the wheel.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -272,37 +384,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structosi3_1_1MovingObject_1_1VehicleClassification.html" class="btn btn-neutral float-right" title="Struct MovingObject::VehicleClassification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="structosi3_1_1MovingObject.html" class="btn btn-neutral float-left" title="Struct MovingObject" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.html" class="btn btn-neutral float-right" title="Struct VehicleAttributes::WheelData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structosi3_1_1MovingObject_1_1MovingObjectClassification.html" class="btn btn-neutral float-left" title="Struct MovingObject::MovingObjectClassification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Carlo van Driesten
+        &#169; Copyright 2021, ASAM e.V..
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

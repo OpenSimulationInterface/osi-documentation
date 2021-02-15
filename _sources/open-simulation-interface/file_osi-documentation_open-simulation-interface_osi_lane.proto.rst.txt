@@ -1,0 +1,62 @@
+
+.. _file_osi-documentation_open-simulation-interface_osi_lane.proto:
+
+File osi_lane.proto
+===================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``osi-documentation/open-simulation-interface/osi_lane.proto``)
+---------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_osi-documentation_open-simulation-interface_osi_lane.proto.rst
+
+
+
+
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_osi3`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structosi3_1_1Lane`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1LanePairing`
+
+- :ref:`exhale_struct_structosi3_1_1Lane_1_1Classification_1_1RoadCondition`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1BoundaryPoint`
+
+- :ref:`exhale_struct_structosi3_1_1LaneBoundary_1_1Classification`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_osi__lane_8proto_1a64e4fb51263015847909f47cb7aeea70`
+
+- :ref:`exhale_variable_osi__lane_8proto_1adbedb258e13546cc707a6ebb073a3d8a`
+

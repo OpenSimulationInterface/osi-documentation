@@ -18,21 +18,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structosi3_1_1AbortActionsAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   structosi3_1_1AcquireGlobalPositionAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   structosi3_1_1ActionHeader.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structosi3_1_1BaseMoving.rst
 
 .. toctree::
@@ -188,11 +173,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structosi3_1_1EndActionsAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structosi3_1_1EnvironmentalConditions.rst
 
 .. toctree::
@@ -209,16 +189,6 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1FileOptions.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   structosi3_1_1FollowPathAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   structosi3_1_1FollowTrajectoryAction.rst
 
 .. toctree::
    :maxdepth: 5
@@ -288,11 +258,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structosi3_1_1LaneChangeAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structosi3_1_1LidarDetection.rst
 
 .. toctree::
@@ -323,6 +288,21 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1LogicalDetection.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1LogicalDetectionData.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1LogicalDetectionDataHeader.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1MountingPosition.rst
 
 .. toctree::
@@ -333,7 +313,17 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1MovingObject_1_1MovingObjectClassification.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1MovingObject_1_1VehicleAttributes.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.rst
 
 .. toctree::
    :maxdepth: 5
@@ -438,11 +428,6 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
-   structosi3_1_1SpeedAction.rst
-
-.. toctree::
-   :maxdepth: 5
-
    structosi3_1_1Spherical3d.rst
 
 .. toctree::
@@ -469,6 +454,76 @@ Classes and Structs
    :maxdepth: 5
 
    structosi3_1_1TrafficAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1AbortActionsAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1ActionHeader.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1CustomAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1DynamicConstraints.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1EndActionsAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1FollowPathAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1FollowTrajectoryAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1LaneChangeAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1LaneOffsetAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1LateralDistanceAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1SpeedAction.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1TrafficAction_1_1TeleportAction.rst
 
 .. toctree::
    :maxdepth: 5
@@ -575,6 +630,11 @@ Classes and Structs
 
    structosi3_1_1Vector3d.rst
 
+.. toctree::
+   :maxdepth: 5
+
+   structosi3_1_1WavelengthData.rst
+
 Enums
 *****
 
@@ -583,6 +643,11 @@ Enums
    :maxdepth: 5
 
    enum_osi__featuredata_8proto_1a0616021de78a6bce2d527dabc0afdc07.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   enum_osi__logicaldetectiondata_8proto_1aa9b2ca5278120ca4f3632f21b1066965.rst
 
 Variables
 *********
@@ -646,6 +711,11 @@ Variables
 .. toctree::
    :maxdepth: 5
 
+   variable_osi__logicaldetectiondata_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
+
+.. toctree::
+   :maxdepth: 5
+
    variable_osi__object_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
 
 .. toctree::
@@ -661,7 +731,7 @@ Variables
 .. toctree::
    :maxdepth: 5
 
-   variable_osi__sensordata_8proto_1a108b0a56689ea0cdba30c2cd697de90e.rst
+   variable_osi__sensordata_8proto_1ae4cc42e20eb6d5fa8a56c2e37655b5a4.rst
 
 .. toctree::
    :maxdepth: 5
@@ -767,6 +837,11 @@ Variables
    :maxdepth: 5
 
    variable_osi__lane_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_osi__logicaldetectiondata_8proto_1adbedb258e13546cc707a6ebb073a3d8a.rst
 
 .. toctree::
    :maxdepth: 5

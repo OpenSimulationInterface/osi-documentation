@@ -3,13 +3,19 @@
 Struct MovingObject::VehicleAttributes
 ======================================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_object.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_object.proto`
 
 
 Nested Relationships
 --------------------
 
 This struct is a nested type of :ref:`exhale_struct_structosi3_1_1MovingObject`.
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData`
 
 
 Struct Documentation

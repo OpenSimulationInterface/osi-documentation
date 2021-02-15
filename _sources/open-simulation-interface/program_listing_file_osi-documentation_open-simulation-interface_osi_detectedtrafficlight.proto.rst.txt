@@ -1,0 +1,84 @@
+
+.. _program_listing_file_osi-documentation_open-simulation-interface_osi_detectedtrafficlight.proto:
+
+Program Listing for File osi_detectedtrafficlight.proto
+=======================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_osi-documentation_open-simulation-interface_osi_detectedtrafficlight.proto>` (``osi-documentation/open-simulation-interface/osi_detectedtrafficlight.proto``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   syntax = "proto2";
+   
+   option optimize_for = SPEED;
+   
+   import "osi_common.proto";
+   import "osi_trafficlight.proto";
+   import "osi_detectedobject.proto";
+   
+   package osi3;
+   
+   //
+   // \brief A traffic light in the environment as detected by the sensor.
+   //
+   // \image html OSI_DetectedTrafficLight.svg
+   //
+   // One detected traffic light message defines a single 'bulb' and not a box of
+   // several bulbs, e.g. red, yellow, green are three separate detected traffic
+   // lights.
+   //
+   message DetectedTrafficLight
+   {
+       // Common information of one detected item.
+       //
+       optional DetectedItemHeader header = 1;
+   
+       // The base parameters of the traffic light.
+       //
+       // \c BaseStationary::orientation x-axis is view normal of the traffic
+       // light's icon.
+       //
+       optional BaseStationary base = 2;
+   
+       // The root mean squared error of the base parameters of the detected
+       // traffic light's geometry. \c TrafficLight::base has to be identical
+       // for all \c #candidate traffic lights.
+       //
+       optional BaseStationary base_rmse = 3;
+   
+       // A list of candidates for this traffic light as estimated by the
+       // sensor.
+       //
+       // \note OSI uses singular instead of plural for repeated field names.
+       //
+       repeated CandidateTrafficLight candidate = 4;
+   
+       //
+       // \brief A candidate for a detected traffic light as estimated by
+       // the sensor.
+       //
+       message CandidateTrafficLight
+       {
+           // The estimated probability that this candidate is the true value.
+           //
+           // \note The sum of all \c #probability must be one. This probability is
+           // given under the condition of
+           // \c DetectedItemHeader::existence_probability.
+           //
+           // \rules
+           // is_less_than_or_equal_to: 1
+           // is_greater_than_or_equal_to: 0
+           // \endrules
+           //
+           optional double probability = 1;
+   
+           // The classification of one traffic light that define this candidate.
+           //
+           // \note IDs, which are referenced in this message, usually
+           // reference to \c DetectedXXX::tracking_id IDs.
+           //
+           optional TrafficLight.Classification classification = 2;
+       }
+   }

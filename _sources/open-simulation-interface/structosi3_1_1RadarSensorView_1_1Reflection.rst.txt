@@ -3,7 +3,7 @@
 Struct RadarSensorView::Reflection
 ==================================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_sensorview.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_sensorview.proto`
 
 
 Nested Relationships

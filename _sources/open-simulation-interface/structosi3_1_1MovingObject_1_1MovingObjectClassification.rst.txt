@@ -1,0 +1,22 @@
+.. _exhale_struct_structosi3_1_1MovingObject_1_1MovingObjectClassification:
+
+Struct MovingObject::MovingObjectClassification
+===============================================
+
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_object.proto`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_struct_structosi3_1_1MovingObject`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::MovingObject::MovingObjectClassification
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -3,7 +3,7 @@
 Struct DetectedSupplementarySign::CandidateSupplementarySign
 ============================================================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedtrafficsign.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_detectedtrafficsign.proto`
 
 
 Nested Relationships

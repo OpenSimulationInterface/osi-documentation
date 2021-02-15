@@ -3,7 +3,7 @@
 Struct DetectedLane
 ===================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_detectedlane.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_detectedlane.proto`
 
 
 Nested Relationships

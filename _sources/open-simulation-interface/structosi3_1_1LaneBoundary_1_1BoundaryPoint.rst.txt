@@ -3,7 +3,7 @@
 Struct LaneBoundary::BoundaryPoint
 ==================================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_lane.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_lane.proto`
 
 
 Nested Relationships

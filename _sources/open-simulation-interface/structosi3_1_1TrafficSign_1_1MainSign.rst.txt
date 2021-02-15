@@ -3,7 +3,7 @@
 Struct TrafficSign::MainSign
 ============================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_trafficsign.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_trafficsign.proto`
 
 
 Nested Relationships

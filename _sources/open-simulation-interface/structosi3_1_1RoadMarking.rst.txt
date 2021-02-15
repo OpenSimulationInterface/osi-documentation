@@ -3,7 +3,7 @@
 Struct RoadMarking
 ==================
 
-- Defined in :ref:`file_osi-documentation_osi-validation_open-simulation-interface_osi_roadmarking.proto`
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_roadmarking.proto`
 
 
 Nested Relationships

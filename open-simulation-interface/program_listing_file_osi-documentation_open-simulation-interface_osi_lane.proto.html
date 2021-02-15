@@ -1,0 +1,1244 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File osi_lane.proto &mdash; Open Simulation Interface v3.3.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Open Simulation Interface
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Open Simulation Interface (OSI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/fileformat.html">OSI File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/coordinatesystem.html">Coordinate systems and reference points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/interfaceconventions.html">Interface Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/commenting.html">Commenting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/versioning.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">OSI Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#copyright">Copyright</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Simulation Interface</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File osi_lane.proto</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/open-simulation-interface/program_listing_file_osi-documentation_open-simulation-interface_osi_lane.proto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-osi-lane-proto">
+<span id="program-listing-file-osi-documentation-open-simulation-interface-osi-lane-proto"></span><h1>Program Listing for File osi_lane.proto<a class="headerlink" href="#program-listing-for-file-osi-lane-proto" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_osi-documentation_open-simulation-interface_osi_lane.proto.html#file-osi-documentation-open-simulation-interface-osi-lane-proto"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">osi-documentation/open-simulation-interface/osi_lane.proto</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+
+<span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+
+<span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief A lane in the road network.</span>
+<span class="c1">//</span>
+<span class="c1">// A lane is part of a road and mainly characterized by its center line. It also</span>
+<span class="c1">// knows about any adjacent lanes, antecessor and successor lanes.</span>
+<span class="c1">// The following images will be referred to by later comments. The lane</span>
+<span class="c1">// l4 in image HighwayExit is used  as reference if not mentioned otherwise.</span>
+<span class="c1">//</span>
+<span class="c1">// &lt;table border=0&gt;</span>
+<span class="c1">// &lt;tr&gt;</span>
+<span class="c1">// &lt;td&gt;</span>
+<span class="c1">// \image html OSI_Highway_Exit.svg &quot;&quot; width=550px</span>
+<span class="c1">// &lt;td&gt;</span>
+<span class="c1">// \image html OSI_LaneIntersection.svg &quot;&quot; width=550px</span>
+<span class="c1">// &lt;tr&gt;</span>
+<span class="c1">// &lt;td&gt;</span>
+<span class="c1">// \image html OSI_Highway_Exit.jpg &quot;HighwayExit&quot; width=650px</span>
+<span class="c1">// &lt;td&gt;</span>
+<span class="c1">// \image html OSI_LaneIntersection.jpg &quot;Intersection&quot; width=650px</span>
+<span class="c1">// &lt;/table&gt;</span>
+<span class="c1">//</span>
+<span class="c1">// \note In the examples, the symbols l1, l2, ... and lb1, lb2, ...</span>
+<span class="c1">// stand for the lane ids and lane boundary ids respectively, i.e. for</span>
+<span class="c1">// integers (uint64). The symbols cl1, cl2, ... represent the</span>
+<span class="c1">// osi3::Lane::Classification::centerline elements of the lanes with</span>
+<span class="c1">// the respective ids.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">Lane</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the lane.</span>
+    <span class="c1">// Example: l4 (see reference picture HighwayExit).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note Note ID is global unique.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The classification of the lane.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Classification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief \c Classification of a lane.</span>
+    <span class="c1">//</span>
+    <span class="c1">// &lt;table border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \anchor HighwayExit</span>
+    <span class="c1">// \image html OSI_LaneClassification.jpg &quot;HighwayExit&quot; width=800px</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border=0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;b&gt;</span>
+    <span class="c1">// \c Classification for lane l4 in image HighwayExit:</span>
+    <span class="c1">// &lt;/b&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #type = \c #TYPE_DRIVING</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #centerline = (cl4_1, cl4_2, cl4_3, cl4_4, cl4_5)</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #centerline_is_driving_direction = \c true</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #is_host_vehicle_lane = \c true</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #left_adjacent_lane_id = l3</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #right_adjacent_lane_id  = (l5,l6)</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #left_lane_boundary_id = lb5</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #right_lane_boundary_id = (lb9, lb6)</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \anchor Intersection</span>
+    <span class="c1">// \image html OSI_LaneIntersection.jpg &quot;Intersection&quot; width=800px</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border=0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;b&gt;</span>
+    <span class="c1">// \c Classification for lane l7 in image Intersection:</span>
+    <span class="c1">// &lt;/b&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #type = \c #TYPE_INTERSECTION</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #is_host_vehicle_lane = \c false</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #free_lane_boundary_id = lb11</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #lane_pairing = (</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// (l2,l1), (l2,l3), (l2,l5),</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// (l4,l1), (l4,l3), (l4,l5),</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// (l6,l1), (l6,l3), (l6,l5) )</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note In the examples, the symbols l1, l2, ... and lb1, lb2, ...</span>
+    <span class="c1">// stand for the lane ids and lane boundary ids respectively, i.e. for</span>
+    <span class="c1">// integers (uint64). The symbols cl1, cl2, ... represent the</span>
+    <span class="c1">// osi3::Lane::Classification::centerline elements of the lanes with</span>
+    <span class="c1">// the respective ids. The symbols cl1_1, cl1_2, ... stand for</span>
+    <span class="c1">// \c #osi3::Vector3d elements.</span>
+    <span class="c1">//</span>
+    <span class="n">message</span> <span class="n">Classification</span>
+    <span class="p">{</span>
+        <span class="c1">// The type of the lane.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: For l4 in image \ref HighwayExit the \c #type is \c</span>
+        <span class="c1">// #TYPE_DRIVING.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Type</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Indicates that the host vehicle travels on this particular lane.</span>
+        <span class="c1">// The host vehicle may travel on more than one lane at once. This does</span>
+        <span class="c1">// also apply for the \c CanditateLane in the \c DetectedLane .</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">bool</span> <span class="n">is_host_vehicle_lane</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// The lane&#39;s center line (as a list of segments).</span>
+        <span class="c1">//</span>
+        <span class="c1">// The centerline describes the middle of the lane.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \image html OSI_LaneCenterline.svg &quot;Centerline&quot; width=500px</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: In image \ref HighwayExit,</span>
+        <span class="c1">// the centerline of lane l4 (black line) is given by</span>
+        <span class="c1">// (cl4_1, cl4_2, cl4_3, cl4_4, cl4_5).</span>
+        <span class="c1">//</span>
+        <span class="c1">// \image html OSI_LaneBoundaries_And_CenterLine.svg &quot;Centerline&quot; width=500px</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note</span>
+        <span class="c1">// cl: center line</span>
+        <span class="c1">// lb: lane boundary</span>
+        <span class="c1">//</span>
+        <span class="c1">// \attention The points desribing the center line must be set in the</span>
+        <span class="c1">// same ordering (ascending or descending) as the points desribing the</span>
+        <span class="c1">// lane boundaries. Example: If the points are deducted from a map format,</span>
+        <span class="c1">// the order of points is recommended to be in line with the road coordinate</span>
+        <span class="c1">// (e.g. s-coordinate in OpenDRIVE).</span>
+        <span class="c1">//</span>
+        <span class="c1">// \attention The points describing the center line might be set at</span>
+        <span class="c1">// arbitrary distances. When the points are pairwise linearly connected,</span>
+        <span class="c1">// the lateral distance to the real ideal line (as used by the</span>
+        <span class="c1">// simulation environment internally) must not exceed 5cm. As shown in</span>
+        <span class="c1">// the following image:</span>
+        <span class="c1">//</span>
+        <span class="c1">// \image html line_approximation_error.svg &quot;Approximation error&quot;</span>
+        <span class="c1">// Approximation error green line.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The center line is the line that a typical vehicle follows more</span>
+        <span class="c1">// or less (depending on the situation, a little more to the left or</span>
+        <span class="c1">// right of the center line). The intended direction of travel on the</span>
+        <span class="c1">// lane is given by the direction defined by the sequence of points</span>
+        <span class="c1">// forming the \c #centerline w.r.t. \c</span>
+        <span class="c1">// #centerline_is_driving_direction.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #centerline is defined only for \c #type =</span>
+        <span class="c1">// \c #TYPE_DRIVING and if exactly one or no \c #lane_pairing pair</span>
+        <span class="c1">// exists.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note Intersections and non-driving lanes do not have a center line.</span>
+        <span class="c1">// A vehicle must calculate this individually and depending on the</span>
+        <span class="c1">// situation.</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Vector3d</span> <span class="n">centerline</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// Definition of the intended driving direction.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Defined and used for driving lanes.</span>
+        <span class="c1">// \c true means driving direction is according to ascending storage</span>
+        <span class="c1">// order of center line points. \c false means driving direction is</span>
+        <span class="c1">// according to descending storage order of center line points.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: \c #centerline_is_driving_direction = \c true for lane l4</span>
+        <span class="c1">// and \c #centerline_is_driving_direction = \c false for lane l2 in</span>
+        <span class="c1">// image \ref HighwayExit .</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #centerline_is_driving_direction is defined for \c #type</span>
+        <span class="c1">// = \c #TYPE_DRIVING .</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">bool</span> <span class="n">centerline_is_driving_direction</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// List of IDs of all lane segments that are directly adjacent to the</span>
+        <span class="c1">// lane on the left side (w.r.t. ascending order of centerline points</span>
+        <span class="c1">// and lane boundary points). Note that lengths of lane segments are</span>
+        <span class="c1">// not synchronized and therefore there are multiple adjacent segments</span>
+        <span class="c1">// if there is a split/merge point in the adjacent lane.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: The lane l3 is the only left adjacent lane for lane l4</span>
+        <span class="c1">// in image \ref HighwayExit.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #left_adjacent_lane_id is undefined for \c #type =</span>
+        <span class="c1">// \c #TYPE_INTERSECTION .</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">left_adjacent_lane_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// List of IDs of all lane segments that are directly adjacent to the</span>
+        <span class="c1">// lane on the right side (w.r.t. ascending order of centerline points</span>
+        <span class="c1">// and lane boundary points). Note that lengths of lane segments are</span>
+        <span class="c1">// not synchronized and therefore there are multiple adjacent segments</span>
+        <span class="c1">// if there is a split/merge point in the adjacent lane.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: \c #right_adjacent_lane_id = (l5, l6)</span>
+        <span class="c1">// for lane l4 in image \ref HighwayExit.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #right_adjacent_lane_id is undefined for \c #type =</span>
+        <span class="c1">// \c #TYPE_INTERSECTION .</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">right_adjacent_lane_id</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+        <span class="c1">// The antecessor/successor lane pairings of this lane. There can be</span>
+        <span class="c1">// multiple pairings with the same antecessor and different successor</span>
+        <span class="c1">// lanes and vice versa. The antecessor lanes end in the same point that</span>
+        <span class="c1">// this lane starts from. The successor lanes start in the same point</span>
+        <span class="c1">// that this lane ends in.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: See image \ref Intersection.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">LanePairing</span> <span class="n">lane_pairing</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+        <span class="c1">// The right adjacent lane boundaries \c #right_lane_boundary_id may</span>
+        <span class="c1">// only be shared with/as the left adjacent lane boundaries \c</span>
+        <span class="c1">// #left_lane_boundary_id of the nearest right adjacent lane \c</span>
+        <span class="c1">// #right_adjacent_lane_id.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: \c #right_lane_boundary_id =</span>
+        <span class="c1">// (lb9, lb6) for reference lane l4 in image \ref HighwayExit.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note Empty for intersections.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #right_lane_boundary_id is undefined for \c #type =</span>
+        <span class="c1">// \c #TYPE_INTERSECTION .</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">right_lane_boundary_id</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+        <span class="c1">// The left adjacent lane boundaries \c #left_lane_boundary_id may only</span>
+        <span class="c1">// be shared with/as the right adjacent lane boundaries \c</span>
+        <span class="c1">// #right_lane_boundary_id of the nearest left adjacent lane \c</span>
+        <span class="c1">// #left_adjacent_lane_id.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: \c #left_lane_boundary_id = lb5 for lane l4 in image \ref</span>
+        <span class="c1">// HighwayExit.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note Empty for intersections.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note The \c #left_lane_boundary_id is undefined for \c #type =</span>
+        <span class="c1">// \c #TYPE_INTERSECTION .</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">left_lane_boundary_id</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+        <span class="c1">// The free boundaries which have no/unknown assignment to left/right.</span>
+        <span class="c1">//</span>
+        <span class="c1">// Example: \c #free_lane_boundary_id = lb11 for lane l7 in image \ref</span>
+        <span class="c1">// Intersection.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note \c Lane with \c #type = \c #TYPE_INTERSECTION use only free</span>
+        <span class="c1">// lane boundaries.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note OSI uses singular instead of plural for repeated field names.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// check_if this.type is_different_to 4 else do_check is_set</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">free_lane_boundary_id</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+        <span class="c1">// The condition of the lane, e.g. influenced by weather.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">RoadCondition</span> <span class="n">road_condition</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+        <span class="c1">// The subtype of the lane.</span>
+        <span class="c1">//</span>
+        <span class="c1">// This subtype specifies a lane more concretely.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Subtype</span> <span class="n">subtype</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+        <span class="c1">// Definition of available lane types.</span>
+        <span class="c1">//</span>
+        <span class="k">enum</span> <span class="nc">Type</span>
+        <span class="p">{</span>
+            <span class="c1">// Lane of unknown type (must not be used in ground truth).</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// Any other type of lane.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// A normal lane.</span>
+            <span class="c1">// Example: Lanes with IDs l1, l2, l3, l4 and l6 in image \ref</span>
+            <span class="c1">// HighwayExit.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_DRIVING</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// A road where driving is normally not permitted.</span>
+            <span class="c1">// Example: Lane with ID l5 in image \ref HighwayExit.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_NONDRIVING</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+            <span class="c1">// An intersection as a lane.</span>
+            <span class="c1">// Example: Lane with ID l7 in image \ref Intersection.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \image html OSI_X-Junction.svg &quot;&quot; width=600px</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_INTERSECTION</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Definition of available lane subtypes, aligned with OpenDRIVE.</span>
+        <span class="c1">//</span>
+        <span class="k">enum</span> <span class="nc">Subtype</span>
+        <span class="p">{</span>
+            <span class="c1">// Lane of unknown subtype. Do not use in ground truth.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// Any other subtype of lane.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// A normal driving lane.</span>
+            <span class="c1">// Example: Lanes with IDs l1, l2, l3 and l4 in image \ref</span>
+            <span class="c1">// HighwayExit.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_NORMAL</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// A lane that is designated for bicylists.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_BIKING</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+            <span class="c1">// A lane that is designated for pedestrians (sidewalk).</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_SIDEWALK</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+            <span class="c1">// A lane with parking spaces.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_PARKING</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+            <span class="c1">// A hard shoulder on motorways for emergency stops.</span>
+            <span class="c1">// Example: Lane l5 in image \ref</span>
+            <span class="c1">// HighwayExit.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_STOP</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+            <span class="c1">// A lane on which cars should not drive.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_RESTRICTED</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+            <span class="c1">// A hard border on the edge of a road.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_BORDER</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+            <span class="c1">// A soft border on the edge of a road.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is not intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_NONDRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_SHOULDER</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+            <span class="c1">// A deceleration lane in parallel to the main road.</span>
+            <span class="c1">// Example: Lane l6 in image \ref</span>
+            <span class="c1">// HighwayExit.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_EXIT</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+            <span class="c1">// An acceleration lane in parallel to the main road.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_ENTRY</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+            <span class="c1">// A ramp from rural or urban roads joining a motorway.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_ONRAMP</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+            <span class="c1">// A ramp leading off a motorway onto rural or urban roads.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_OFFRAMP</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+
+            <span class="c1">// A ramp that connect two motorways.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Since it is intended to be used for normal automotive</span>
+            <span class="c1">// driving, it should be used in combination with TYPE_DRIVING.</span>
+            <span class="c1">//</span>
+            <span class="n">SUBTYPE_CONNECTINGRAMP</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//</span>
+        <span class="c1">// \brief The condition of the road surface.</span>
+        <span class="c1">//</span>
+        <span class="n">message</span> <span class="n">RoadCondition</span>
+        <span class="p">{</span>
+            <span class="c1">// The temperature of the roads surface in Kelvin.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: K</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_temperature</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// The height of the water film on top of the surface in mm.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: mm</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_water_film</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// The temperature where the water on top of the surface would start</span>
+            <span class="c1">// to freeze or dew in Kelvin.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: K</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_freezing_point</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+            <span class="c1">// The percentage of ice covering the road.</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: %</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_ice</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+            <span class="c1">// The coefficient representing the roughness or unevenness of the</span>
+            <span class="c1">// road. International Roughness Index (IRI) [1] values range from 0</span>
+            <span class="c1">// = smooth ground (equivalent to driving on a plate of glass) up to</span>
+            <span class="c1">// &gt;</span>
+            <span class="c1">// 20 mm/m (a very rough road).</span>
+            <span class="c1">//</span>
+            <span class="c1">// Estimated value ranges (IRI):</span>
+            <span class="c1">// 0.0 mm/m absolutely perfect evenness</span>
+            <span class="c1">// 0.3 -  1.8 mm/m airport runways and superhighways</span>
+            <span class="c1">// 1.4 -  3.4 mm/m new pavements</span>
+            <span class="c1">// 2.2 -  5.7 mm/m older pavements</span>
+            <span class="c1">// 3.2 -  9.8 mm/m maintained unpaved roads</span>
+            <span class="c1">// 4.0 - 11.0 mm/m damaged pavements</span>
+            <span class="c1">// 8.0 - &gt;</span>
+            <span class="c1">// 20 mm/m rough unpaved roads</span>
+            <span class="c1">//</span>
+            <span class="c1">// Speed of normal use (IRI):</span>
+            <span class="c1">// 30 km/h - 20   mm/m</span>
+            <span class="c1">// 50 km/h - 14.5 mm/m</span>
+            <span class="c1">// 60 km/h - 10.0 mm/m</span>
+            <span class="c1">// 80 km/h -  8.5 mm/m</span>
+            <span class="c1">// 100 km/h -  3.4 mm/m</span>
+            <span class="c1">//</span>
+            <span class="c1">// Road conditions (IRI);</span>
+            <span class="c1">// 15 mm/m erosion gulleys and deep depressions</span>
+            <span class="c1">// 11 mm/m frequent shallow depressions, some deep</span>
+            <span class="c1">// 9 mm/m frequent minor depressions</span>
+            <span class="c1">// 5 mm/m surface imperfections</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: mm/m</span>
+            <span class="c1">//</span>
+            <span class="c1">// \par Reference:</span>
+            <span class="c1">// [1] Sayers, M. W. &amp; Karamihas, S. M. (1998). &lt;em&gt;Little Book of Profiling&lt;/em&gt;. University of Michigan Transportation Research Institute. Retrieved January 25, 2020, from http://www.umtri.umich.edu/content/LittleBook98R.pdf pp. 45 ff.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// is_greater_than_or_equal_to: 0</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_roughness</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+            <span class="c1">// The surface texture or fine roughness</span>
+            <span class="c1">//</span>
+            <span class="c1">// Whereas the IRI-based roughness or unevenness measure only takes</span>
+            <span class="c1">// into account road wavelengths around 0.5 m - 100 m, the surface</span>
+            <span class="c1">// texture or fine roughness [1] measures only wavelengths below</span>
+            <span class="c1">// 0.5 m. It is given as the standard height deviation of fine</span>
+            <span class="c1">// roughness</span>
+            <span class="c1">//</span>
+            <span class="c1">// Unit: m</span>
+            <span class="c1">//</span>
+            <span class="c1">// \par Reference:</span>
+            <span class="c1">// [1] Schneider, R. (1998). &lt;em&gt;Modellierung der Wellenausbreitung fuer ein bildgebendes Kfz-Radar&lt;/em&gt;. PhD thesis. Karlsruhe, Germany. Universitaet Karlsruhe, Fak. f. Elektrotechnik.</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="kt">double</span> <span class="n">surface_texture</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// \brief The lane ID pairings of antecessor and successor lanes.</span>
+        <span class="c1">//</span>
+        <span class="c1">// &lt;table border = 0&gt;</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// \image html OSI_LaneIntersection.svg &quot;&quot; width=600px</span>
+        <span class="c1">// &lt;/td&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// &lt;table border=0&gt;</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// &lt;b&gt;</span>
+        <span class="c1">// \c LanePairing for lane l7:</span>
+        <span class="c1">// &lt;/b&gt;</span>
+        <span class="c1">// &lt;/td&gt;</span>
+        <span class="c1">// &lt;/tr&gt;</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// &lt;table border = 0&gt;</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// (l2,l1), (l2,l3), (l2,l5),</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// (l4,l1), (l4,l3), (l4,l5),</span>
+        <span class="c1">// &lt;tr&gt;</span>
+        <span class="c1">// &lt;td&gt;</span>
+        <span class="c1">// (l6,l1), (l6,l3), (l6,l5)</span>
+        <span class="c1">// &lt;/table&gt;</span>
+        <span class="c1">// &lt;/td&gt;</span>
+        <span class="c1">// &lt;/tr&gt;</span>
+        <span class="c1">// &lt;/table&gt;</span>
+        <span class="c1">// &lt;/td&gt;</span>
+        <span class="c1">// &lt;/tr&gt;</span>
+        <span class="c1">// &lt;/table&gt;</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note In the example, the symbols l1, l2, ... stand for the</span>
+        <span class="c1">// respective lane ids, i.e. for integers (uint64). The symbols cl1,</span>
+        <span class="c1">// cl2, ... represent the osi3::Lane::Classification::centerline</span>
+        <span class="c1">// elements of the lanes with the respective ids.</span>
+        <span class="c1">//</span>
+        <span class="n">message</span> <span class="n">LanePairing</span>
+        <span class="p">{</span>
+            <span class="c1">// The antecessor lane ID.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">antecessor_lane_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// The successor lane ID.</span>
+            <span class="c1">//</span>
+            <span class="c1">// \rules</span>
+            <span class="c1">// refers_to: Lane</span>
+            <span class="c1">// \endrules</span>
+            <span class="c1">//</span>
+            <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">successor_lane_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//</span>
+<span class="c1">// \brief A lane boundary defining the border of a lane.</span>
+<span class="c1">//</span>
+<span class="c1">// The left and right lane boundary define the width of the lane. Additionally,</span>
+<span class="c1">// free markings can be defined, e.g. at construction sites. Free markings</span>
+<span class="c1">// across multiple lanes may be defined multiple times for all affected lanes.</span>
+<span class="c1">//</span>
+<span class="c1">// \image html OSI_LaneBoundary.svg &quot;LaneBoundary&quot; width=800px</span>
+<span class="c1">//</span>
+<span class="c1">// \note In the example, the symbols l1, l2, ... and lb1, lb2, ...</span>
+<span class="c1">// stand for the lane ids and lane boundary ids respectively, i.e. for</span>
+<span class="c1">// integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand</span>
+<span class="c1">// for \c #osi3::LaneBoundary::BoundaryPoint elements.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">LaneBoundary</span>
+<span class="p">{</span>
+    <span class="c1">// The ID of the lane boundary.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// is_globally_unique</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Identifier</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The list of individual points defining the location of the lane boundary</span>
+    <span class="c1">// (as a list of segments).</span>
+    <span class="c1">//</span>
+    <span class="c1">// Since a \c BoundaryPoint is part of a sequence, only the position</span>
+    <span class="c1">// attribute has to be set for each instance. All other values will be</span>
+    <span class="c1">// reused from the previous \c BoundaryPoint in the sequence or set to</span>
+    <span class="c1">// default values if there is none or it was never set.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \image html OSI_LaneBoundary.svg &quot;&quot; width=800px</span>
+    <span class="c1">//</span>
+    <span class="c1">// Example: The boundary_line of the \c LaneBoundary with id lb2 is given by</span>
+    <span class="c1">// (bp2_1, ..., bp2_{i-1}, bp2_{i}, bp2_{i+1}, ...).</span>
+    <span class="c1">//</span>
+    <span class="c1">// \attention The ordering of the points must be the same for all lane boundaries</span>
+    <span class="c1">// on one road (also for roads with two-way traffic) and also the center line(s).</span>
+    <span class="c1">// Example: If the points are deducted from a map format, the order of points</span>
+    <span class="c1">// is recommended to be in line with the road coordinate (e.g. s-coordinate in</span>
+    <span class="c1">// OpenDRIVE).</span>
+
+    <span class="c1">// \note For dashed lines, one \c BoundaryPoint has to be at the start and</span>
+    <span class="c1">// another at the end of each dashed line segment. The first</span>
+    <span class="c1">// \c BoundaryPoint defines the beginning of the first dashed lane marking.</span>
+    <span class="c1">// The last \c BoundaryPoint defines the end of the last dashed lane</span>
+    <span class="c1">// marking. For example, the area between the second and third</span>
+    <span class="c1">// \c BoundaryPoint has no lane marking, and so on.</span>
+    <span class="c1">// \note For Botts&#39; dots lines, one \c BoundaryPoint position has to define</span>
+    <span class="c1">// each Botts&#39; dot.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \attention For \c BoundaryPoint the same rule for the approximation</span>
+    <span class="c1">// error applies as for \c Lane::Classification::centerline.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \rules</span>
+    <span class="c1">// first_element width is_equal_to 0.13</span>
+    <span class="c1">// first_element height is_equal_to 0.14</span>
+    <span class="c1">// last_element width is_equal_to 0.13</span>
+    <span class="c1">// last_element height is_equal_to 0.13</span>
+    <span class="c1">// \endrules</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">BoundaryPoint</span> <span class="n">boundary_line</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The classification of the lane boundary.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">Classification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief A single point of a lane boundary.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \image html OSI_LaneBoundaries_And_CenterLine.svg &quot;&quot; width=800px</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note</span>
+    <span class="c1">// cl: center line</span>
+    <span class="c1">// lb: lane boundary</span>
+    <span class="c1">//</span>
+    <span class="c1">// \image html OSI_LaneBoundary.svg &quot;&quot; width=800px</span>
+    <span class="c1">//</span>
+    <span class="c1">// The lane boundary point bp2_{i} is one of the points of lane boundary</span>
+    <span class="c1">// lb2.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note In the example, the symbols l1, l2, ... and lb1, lb2, ...</span>
+    <span class="c1">// stand for the lane ids and lane boundary ids respectively, i.e. for</span>
+    <span class="c1">// integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand</span>
+    <span class="c1">// for \c #osi3::LaneBoundary::BoundaryPoint elements.</span>
+    <span class="c1">//</span>
+    <span class="n">message</span> <span class="n">BoundaryPoint</span>
+    <span class="p">{</span>
+        <span class="c1">// The position of the \c BoundaryPoint.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Vector3d</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// The overall width of the lane boundary at the position of the</span>
+        <span class="c1">// \c BoundaryPoint .</span>
+        <span class="c1">// Used for lines forming lane markings.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \image html OSI_LaneBoundaryWidth.svg &quot;&quot; width=600px</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note Field need not be set if it is defined previous.</span>
+        <span class="c1">// See \c LaneBoundary.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// The overall height of the lane boundary at the position of the</span>
+        <span class="c1">// \c BoundaryPoint .</span>
+        <span class="c1">// Used for guard rails, curbstone, or similar.</span>
+        <span class="c1">//</span>
+        <span class="c1">// \image html OSI_LaneBoundaryHeight.svg &quot;&quot; width=600px</span>
+        <span class="c1">//</span>
+        <span class="c1">// \note Field need not be set if it is previously defined.</span>
+        <span class="c1">// See \c LaneBoundary .</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="kt">double</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//</span>
+    <span class="c1">// \brief \c Classification of a lane boundary.</span>
+    <span class="c1">//</span>
+    <span class="c1">// &lt;table border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border=0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;b&gt;</span>
+    <span class="c1">// Image Intersection</span>
+    <span class="c1">// &lt;/b&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c Classification for lane boundaries lb2 and lb9:</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #type = #TYPE_DASHED_LINE</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #color = #COLOR_WHITE</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c Classification for lane boundaries lb1, lb3, lb4, lb7, lb8, lb10,</span>
+    <span class="c1">// lb11, lb12 and lb14:</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #type = #TYPE_SOLID_LINE</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #color = #COLOR_WHITE</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c Classification for lane boundaries lb5, lb6 and lb13:</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border = 0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \c #type = #TYPE_CURB</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// &lt;table border=0&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \image html OSI_LaneIntersection.svg &quot;&quot; width=500px</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;tr&gt;</span>
+    <span class="c1">// &lt;td&gt;</span>
+    <span class="c1">// \image html OSI_LaneBoundaryClassification.jpg &quot;&quot; width=600px</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">// &lt;/td&gt;</span>
+    <span class="c1">// &lt;/tr&gt;</span>
+    <span class="c1">// &lt;/table&gt;</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note In the example, the symbols l1, l2, ... and lb1, lb2, ...</span>
+    <span class="c1">// stand for the lane ids and lane boundary ids respectively, i.e. for</span>
+    <span class="c1">// integers (uint64). The symbols cl1, cl2, ... represent the</span>
+    <span class="c1">// osi3::Lane::Classification::centerline elements of the lanes with</span>
+    <span class="c1">// the respective ids.</span>
+    <span class="c1">//</span>
+    <span class="n">message</span> <span class="n">Classification</span>
+    <span class="p">{</span>
+        <span class="c1">// The type of the lane boundary.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Type</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// The color of the lane boundary in case of lane markings.</span>
+        <span class="c1">//</span>
+        <span class="n">optional</span> <span class="n">Color</span> <span class="n">color</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+        <span class="c1">// The ids of \c StationaryObject which limit the corresponding lane.</span>
+        <span class="c1">// This field must be set if the \c #type is set to</span>
+        <span class="c1">// \c #TYPE_STRUCTURE</span>
+        <span class="c1">//</span>
+        <span class="c1">// \rules</span>
+        <span class="c1">// refers_to: StationaryObject</span>
+        <span class="c1">// \endrules</span>
+        <span class="c1">//</span>
+        <span class="n">repeated</span> <span class="n">Identifier</span> <span class="n">limiting_structure_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="c1">// The lane boundary type.</span>
+        <span class="c1">// There is no special representation for double lines, e.g. solid /</span>
+        <span class="c1">// solid or dashed / solid. In such cases, each lane will define its own</span>
+        <span class="c1">// side of the lane boundary.</span>
+        <span class="c1">//</span>
+        <span class="k">enum</span> <span class="nc">Type</span>
+        <span class="p">{</span>
+            <span class="c1">// The type of lane boundary is unknown. Value must not be used in</span>
+            <span class="c1">// ground truth.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// Unspecified but known type of lane boundary.</span>
+            <span class="c1">// Consider proposing an additional type if using TYPE_OTHER.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// An invisible lane boundary (e.g. unmarked part of a dashed line).</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_NO_LINE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// A solid line at the lane boundary.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_SOLID_LINE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+            <span class="c1">// A dashed line at the lane boundary.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_DASHED_LINE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary consisting of Botts&#39; dots (multiple Botts dots).</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_BOTTS_DOTS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary formed by the road&#39;s edge.</span>
+            <span class="c1">// The road edge is the end of the (paved) road surface.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_ROAD_EDGE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary formed by a snow edge that may be on the road</span>
+            <span class="c1">// surface.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_SNOW_EDGE</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary covered by grass.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_GRASS_EDGE</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary covered by gravel.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_GRAVEL_EDGE</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+            <span class="c1">// A lane boundary covered by soil.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_SOIL_EDGE</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+            <span class="c1">// A guard rail.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_GUARD_RAIL</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+
+            <span class="c1">// A curb.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_CURB</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+            <span class="c1">// A structure (e.g. building or tunnel wall).</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_STRUCTURE</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// The color of the lane boundary in case of a lane markings.</span>
+        <span class="c1">// Lane markings that alternate in color must be represented by</span>
+        <span class="c1">// individual \c LaneBoundary segments.</span>
+        <span class="c1">//</span>
+        <span class="k">enum</span> <span class="nc">Color</span>
+        <span class="p">{</span>
+            <span class="c1">// Color of marking is unknown. Value must not be used in ground</span>
+            <span class="c1">// truth.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_UNKNOWN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// Other (unspecified but known) color.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_OTHER</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="c1">// Marking without color. Used to represent logical boundaries</span>
+            <span class="c1">// without actual physical markings at the respective position.</span>
+            <span class="c1">// Value may be used in ground truth only.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_NONE</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="c1">// Marking with white color.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_WHITE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+            <span class="c1">// Marking with yellow / orange-yellow color.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_YELLOW</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+            <span class="c1">// Marking with red color</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_RED</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+            <span class="c1">// Marking with blue color.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_BLUE</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+            <span class="c1">// Marking with green color;</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_GREEN</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+            <span class="c1">// Marking with violet color.</span>
+            <span class="c1">//</span>
+            <span class="n">COLOR_VIOLET</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ASAM e.V..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+.. _file_osi-documentation_open-simulation-interface_osi_sensordata.proto:
+
+File osi_sensordata.proto
+=========================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``osi-documentation/open-simulation-interface/osi_sensordata.proto``)
+---------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_osi-documentation_open-simulation-interface_osi_sensordata.proto.rst
+
+
+
+
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_osi3`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structosi3_1_1DetectedEntityHeader`
+
+- :ref:`exhale_struct_structosi3_1_1SensorData`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_osi__sensordata_8proto_1ae4cc42e20eb6d5fa8a56c2e37655b5a4`
+
+- :ref:`exhale_variable_osi__sensordata_8proto_1adbedb258e13546cc707a6ebb073a3d8a`
+
