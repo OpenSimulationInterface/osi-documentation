@@ -6,34 +6,18 @@ language: python
 python:
     - "3.6"
 
-# Cache dependencies to speed up the build.
-cache:
-    directories:
-        - ${HOME}/deps/cmake
-        - ${HOME}/deps/protobuf
-#        - ${HOME}/deps/proto2cpp
-
 # Handle dependencies in separate directory.
 before_install:
-    - TESTINST_DIR="${HOME}/dummy"
-    - mkdir -p "${TESTINST_DIR}"
     - DEPS_DIR="${HOME}/deps"
     - mkdir -p "${DEPS_DIR}"
     - cd "${DEPS_DIR}"
 
-# Install necessary packages.
 install:
     # Install a recent version of CMake
     - |
         CMAKE_URL="https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz"
         if [ ! -f ${DEPS_DIR}/cmake/bin/cmake ] ; then mkdir -p cmake ; travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake ; fi
         export PATH=${DEPS_DIR}/cmake/bin:${PATH}
-
-    # Install a recent version of the Protobuf
-    - |
-        PROTOBUF_URL="https://github.com/google/protobuf/releases/download/v3.2.0/protobuf-cpp-3.2.0.tar.gz"
-        if [ ! -f ${DEPS_DIR}/protobuf/install/bin/protoc ] ; then mkdir -p protobuf ; travis_retry wget --no-check-certificate --quiet -O - ${PROTOBUF_URL} | tar --strip-components=1 -xz -C protobuf ; cd protobuf ; ./configure --prefix=${DEPS_DIR}/protobuf/install ; make ; make install ; fi
-        export PATH=${DEPS_DIR}/protobuf/install/bin:${PATH}
 
     # Install proto2cpp for doxygen
     - |
@@ -45,17 +29,9 @@ install:
     - pip install sphinx_git
     - pip install sphinxcontrib.spelling
     - pip install progress
-    - pip install doxygen-interface
     - pip install breathe
     - pip install exhale
     - pip install --upgrade recommonmark
-
-# Environment variables.
-env:
-  global:
-    - GH_REPO_ORG=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 1`
-    - GH_REPO_NAME=`echo $TRAVIS_REPO_SLUG | cut -d "/" -f 2`
-    - GH_REPO_REF="github.com/$GH_REPO_ORG/$GH_REPO_NAME.git"
 
 # Addons necessary for documentation.
 addons:
@@ -76,23 +52,16 @@ script:
     - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
     - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
     - git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
-    - cd osi-validation
-    - git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
-    - git clone https://github.com/OpenSimulationInterface/proto2cpp.git
+
+    # Generate the OSI doxygen documentation so that it can be parsed by breathe
     - cd open-simulation-interface
-    - pip install .
     - mkdir build
     - cd build
-    - cmake -D CMAKE_PREFIX_PATH:PATH=${DEPS_DIR}/protobuf/install -D CMAKE_INSTALL_PREFIX:PATH=${TESTINST_DIR} ..
-    - cmake --build .
-    - cmake --build . --target install
     - cmake -D FILTER_PROTO2CPP_PY_PATH=${DEPS_DIR}/proto2cpp ..
     - echo "GENERATE_XML = YES" >> Doxyfile
     - doxygen
     - cd ../..
-    - pip install .    
-    - cd ..
-    - cp -rf osi-validation/open-simulation-interface/doc/images/* osi-validation/open-simulation-interface/doc/xml/
+    - cp -rf open-simulation-interface/doc/images/* open-simulation-interface/doc/xml/
 
     # Check spelling mistakes
     # - make spelling
