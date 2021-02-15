@@ -42,7 +42,7 @@ extensions = [
     'exhale',
     'recommonmark'
 ]
-breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation/open-simulation-interface/doc/xml" }
+breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/open-simulation-interface/doc/xml" }
 breathe_default_project = "open-simulation-interface"
 
 # Setup the exhale extension
