@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -214,13 +213,13 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi328RadarSensorViewConfigurationE">
-<span id="_CPPv3N4osi328RadarSensorViewConfigurationE"></span><span id="_CPPv2N4osi328RadarSensorViewConfigurationE"></span><span id="osi3::RadarSensorViewConfiguration"></span><span class="target" id="structosi3_1_1RadarSensorViewConfiguration"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">RadarSensorViewConfiguration</code><a class="headerlink" href="#_CPPv4N4osi328RadarSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi328RadarSensorViewConfigurationE"></span><span id="_CPPv2N4osi328RadarSensorViewConfigurationE"></span><span id="osi3::RadarSensorViewConfiguration"></span><span class="target" id="structosi3_1_1RadarSensorViewConfiguration"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">RadarSensorViewConfiguration</span></code><a class="headerlink" href="#_CPPv4N4osi328RadarSensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The configuration settings for the Radar Sensor View to be provided by the environment simulation. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a3dfd1c0ad1e506a377e8bd8f63b58fca"></span><code class="sig-name descname">optional Identifier sensor_id   = 1</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a3dfd1c0ad1e506a377e8bd8f63b58fca"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">sensor_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
 <p>This is the ID of the physical sensor, to be used in its detected features output; it is distinct from the ID of its virtual sensor.</p>
 <p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
@@ -228,7 +227,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a8d18654b6e5063c50b6175bbb61854fe"></span><code class="sig-name descname">optional MountingPosition mounting_position   = 2</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a8d18654b6e5063c50b6175bbb61854fe"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The physical mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The physical position pertains to this detector individually, and governs the sensor-relative coordinates in features detected by this detector.</p>
 <p><ul class="simple">
 <li><p><strong>x-direction</strong> of sensor coordinate system: sensor viewing direction </p></li>
@@ -248,13 +247,13 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a0fba9494590cda2bb4d705089a43b31f"></span><code class="sig-name descname">optional MountingPosition mounting_position_rmse   = 3</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a0fba9494590cda2bb4d705089a43b31f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a0432063a6735dc06b7c6068030a501ae"></span><code class="sig-name descname">optional double field_of_view_horizontal   = 4</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a0432063a6735dc06b7c6068030a501ae"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_horizontal</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Field of View in horizontal orientation of the physical sensor.</p>
 <p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RadarSensorViewConfiguration_1a0432063a6735dc06b7c6068030a501ae"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RadarSensorViewConfiguration_1a0432063a6735dc06b7c6068030a501ae"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>] azimuth in the sensor frame as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
@@ -262,7 +261,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ad9c99aa06a5729857247fc7319562d43"></span><code class="sig-name descname">optional double field_of_view_vertical   = 5</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ad9c99aa06a5729857247fc7319562d43"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_vertical</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Field of View in vertical orientation of the physical sensor.</p>
 <p>Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RadarSensorViewConfiguration_1ad9c99aa06a5729857247fc7319562d43"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RadarSensorViewConfiguration_1ad9c99aa06a5729857247fc7319562d43"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>] elevation in the sensor frame at zero azimuth as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
@@ -270,7 +269,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1af5ff376f2a5f7becdd96ba9d956b3458"></span><code class="sig-name descname">optional uint32 number_of_rays_horizontal   = 6</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1af5ff376f2a5f7becdd96ba9d956b3458"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_of_rays_horizontal</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Number of rays to cast across horizontal field of view (azimuth).</p>
 <p><p>is_greater_than_or_equal_to: 1  </p>
 <dl class="simple">
@@ -282,7 +281,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a7e71f6337ffa47e1a56d720d2040e988"></span><code class="sig-name descname">optional uint32 number_of_rays_vertical   = 7</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a7e71f6337ffa47e1a56d720d2040e988"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_of_rays_vertical</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Number of rays to cast across vertical field of view (elevation).</p>
 <p><p>is_greater_than_or_equal_to: 1  </p>
 <dl class="simple">
@@ -294,7 +293,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ac63f51438a226eeb48b3e34c6a8b62da"></span><code class="sig-name descname">optional uint32 max_number_of_interactions   = 8</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ac63f51438a226eeb48b3e34c6a8b62da"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">max_number_of_interactions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>Maximum number of interactions to take into account.</p>
 <p><p>is_greater_than_or_equal_to: 1  </p>
 <dl class="simple">
@@ -306,7 +305,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a16bcecae0130a7770ede9fcb934dc3c1"></span><code class="sig-name descname">optional double emitter_frequency   = 9</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a16bcecae0130a7770ede9fcb934dc3c1"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">emitter_frequency</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Emitter Frequency.</p>
 <p>This information can be used by a ray tracing engine to calculate doppler shift information and take into account differences in refraction and reflection. For doppler shift calculations the sensor model can of course always provide a nominal frequency and adjust the resulting doppler shift information to actual frequency through frequency adjustments. For material and geometry interaction purposes the frequency is also relevant.</p>
 <p>Unit: Hz</p>
@@ -315,7 +314,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ac55679303d865a28b659f4166b22f762"></span><code class="sig-name descname">repeated AntennaDiagramEntry tx_antenna_diagram   = 10</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1ac55679303d865a28b659f4166b22f762"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">AntennaDiagramEntry</span> <span class="pre">tx_antenna_diagram</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>This represents the TX antenna diagram</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -326,7 +325,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a6d5b88a01eaa071e8bf4d6b13743b9b0"></span><code class="sig-name descname">repeated AntennaDiagramEntry rx_antenna_diagram   = 11</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1a6d5b88a01eaa071e8bf4d6b13743b9b0"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">AntennaDiagramEntry</span> <span class="pre">rx_antenna_diagram</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></code></dt>
 <dd><p>This represents the RX antenna diagram</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -338,7 +337,7 @@
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE">
-<span id="_CPPv3N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE"></span><span id="_CPPv2N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE"></span><span id="osi3::RadarSensorViewConfiguration::AntennaDiagramEntry"></span><span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry"></span><em class="property">struct </em><code class="sig-name descname">AntennaDiagramEntry</code><a class="headerlink" href="#_CPPv4N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE"></span><span id="_CPPv2N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE"></span><span id="osi3::RadarSensorViewConfiguration::AntennaDiagramEntry"></span><span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">AntennaDiagramEntry</span></code><a class="headerlink" href="#_CPPv4N4osi328RadarSensorViewConfiguration19AntennaDiagramEntryE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The radar antenna diagram. </p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Rotation is defined analog <a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref">Spherical3d</span></a> </p>
@@ -349,21 +348,21 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1a53596ac061003061f399aa4242d377bf"></span><code class="sig-name descname">optional double horizontal_angle   = 1</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1a53596ac061003061f399aa4242d377bf"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">horizontal_angle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Horizontal deflection (azimuth) of entry in sensor/antenna coordinates.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1a788f6578025171307daf7764277a11a3"></span><code class="sig-name descname">optional double vertical_angle   = 2</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1a788f6578025171307daf7764277a11a3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">vertical_angle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Vertical deflection (elevation) of entry in sensor/antenna coordinates.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1af52433c9c212034b606903e35c68719a"></span><code class="sig-name descname">optional double response   = 3</code></dt>
+<span class="target" id="structosi3_1_1RadarSensorViewConfiguration_1_1AntennaDiagramEntry_1af52433c9c212034b606903e35c68719a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">response</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Response of antenna at this point (positive dB is gain, negative dB is attenuation).</p>
 <p>Unit: dB </p>
 </dd></dl>

@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -214,7 +213,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi316StationaryObjectE">
-<span id="_CPPv3N4osi316StationaryObjectE"></span><span id="_CPPv2N4osi316StationaryObjectE"></span><span id="osi3::StationaryObject"></span><span class="target" id="structosi3_1_1StationaryObject"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">StationaryObject</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObjectE"></span><span id="_CPPv2N4osi316StationaryObjectE"></span><span id="osi3::StationaryObject"></span><span class="target" id="structosi3_1_1StationaryObject"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">StationaryObject</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A simulated object that is neither a moving object (vehicle or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> e.g. pedestrian, animal, or vehicle) nor a traffic related object (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficLight.html#structosi3_1_1TrafficLight"><span class="std std-ref"><span class="pre">TrafficLight</span></span></a></code>, <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficSign.html#structosi3_1_1TrafficSign"><span class="std std-ref"><span class="pre">TrafficSign</span></span></a></code>). </p>
 <p><img alt="../_images/OSI_BaseStationary.svg" src="../_images/OSI_BaseStationary.svg" /></p>
 <p><code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1StationaryObject"><span class="std std-ref"><span class="pre">StationaryObject</span></span></a></code> excludes traffic lights, traffic signs and road marking </p>
@@ -222,26 +221,26 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1afb3fbdaaa9fe344f1200dc7554d121b4"></span><code class="sig-name descname">optional Identifier id   = 1</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1afb3fbdaaa9fe344f1200dc7554d121b4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the object.</p>
 <p>is_globally_unique  </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1a5f11a30dc338f7d38e2e90950b415ba2"></span><code class="sig-name descname">optional BaseStationary base   = 2</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1a5f11a30dc338f7d38e2e90950b415ba2"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The base parameters of the stationary object. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1ad7acdaf235cb4b4c77806fbb365677f7"></span><code class="sig-name descname">optional Classification classification   = 3</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1ad7acdaf235cb4b4c77806fbb365677f7"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The classification of the stationary object. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1aad1c24fcdb11699954bf3494b8632288"></span><code class="sig-name descname">optional string model_reference   = 4</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1aad1c24fcdb11699954bf3494b8632288"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the stationary object.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
@@ -253,114 +252,114 @@
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi316StationaryObject14ClassificationE">
-<span id="_CPPv3N4osi316StationaryObject14ClassificationE"></span><span id="_CPPv2N4osi316StationaryObject14ClassificationE"></span><span id="osi3::StationaryObject::Classification"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification"></span><em class="property">struct </em><code class="sig-name descname">Classification</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14ClassificationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14ClassificationE"></span><span id="_CPPv2N4osi316StationaryObject14ClassificationE"></span><span id="osi3::StationaryObject::Classification"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">Classification</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14ClassificationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="structosi3_1_1StationaryObject_1_1Classification.html#structosi3_1_1StationaryObject_1_1Classification"><span class="std std-ref">Classification</span></a> data for a stationary object. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4TypeE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4TypeE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4TypeE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457d"></span><em class="property">enum </em><code class="sig-name descname">Type</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4TypeE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4TypeE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457d"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4TypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of object types. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da224542cd5d9d94ba440ada2f249159dd"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da224542cd5d9d94ba440ada2f249159dd"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of the object is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_OTHERE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da6158b24f924dbecf2a1bfd46b2b7df04"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da6158b24f924dbecf2a1bfd46b2b7df04"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of object. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da3061d9cf215369f5d91dad750d08e05d"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_BRIDGE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da3061d9cf215369f5d91dad750d08e05d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_BRIDGE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type11TYPE_BRIDGEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a bridge. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da50031e171de36e8236e7b500069e5994"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_BUILDING</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da50031e171de36e8236e7b500069e5994"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_BUILDING</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type13TYPE_BUILDINGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a building. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_POLEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_POLEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_POLEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da8de3fc54006491ab87373bd894881755"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_POLE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_POLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_POLEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_POLEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da8de3fc54006491ab87373bd894881755"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_POLE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_POLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a pole (e.g. from a traffic light). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_PYLONE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type10TYPE_PYLONE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type10TYPE_PYLONE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da0e33b264a89e8b4c8bb688e03b17393b"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_PYLON</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_PYLONE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type10TYPE_PYLONE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type10TYPE_PYLONE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da0e33b264a89e8b4c8bb688e03b17393b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_PYLON</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type10TYPE_PYLONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a pylon. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dad2da8cbd9c8234fceb736ab178eabaf3"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_DELINEATOR</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dad2da8cbd9c8234fceb736ab178eabaf3"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_DELINEATOR</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_DELINEATORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a delineator (e.g. at a construction site). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_TREEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_TREEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_TREEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da7f2213df87e569d5a6ec7e6d2dd863a9"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_TREE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_TREEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_TREEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_TREEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da7f2213df87e569d5a6ec7e6d2dd863a9"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_TREE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_TREEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a tree. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da822faf8362eae49c88f464f79c590be4"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_BARRIER</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da822faf8362eae49c88f464f79c590be4"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_BARRIER</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type12TYPE_BARRIERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a barrier. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457daebee7560a0a5b63846221860fcf64321"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_VEGETATION</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457daebee7560a0a5b63846221860fcf64321"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_VEGETATION</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_VEGETATIONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is vegetation. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da6bdaba100e01c55375fce090386bd1a6"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_CURBSTONE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da6bdaba100e01c55375fce090386bd1a6"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_CURBSTONE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type14TYPE_CURBSTONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a curbstone. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_WALLE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_WALLE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_WALLE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da0c432c54aecbf9d68f3b320206f535f1"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_WALL</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_WALLE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type9TYPE_WALLE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type9TYPE_WALLE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da0c432c54aecbf9d68f3b320206f535f1"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_WALL</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type9TYPE_WALLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a wall. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dab5c48f060b434b4b8aefa7c977dd060a"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_VERTICAL_STRUCTURE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dab5c48f060b434b4b8aefa7c977dd060a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_VERTICAL_STRUCTURE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_VERTICAL_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to vertical structures in the environment. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da962c01097f9e857d3cff64ac1e4e8383"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_RECTANGULAR_STRUCTURE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da962c01097f9e857d3cff64ac1e4e8383"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_RECTANGULAR_STRUCTURE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type26TYPE_RECTANGULAR_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to rectangular structures in the environment, like walls. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da7e3b5e517279cca2683c659eb7d2543a"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_OVERHEAD_STRUCTURE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da7e3b5e517279cca2683c659eb7d2543a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_OVERHEAD_STRUCTURE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type23TYPE_OVERHEAD_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to overhead structures in the environment, like sign bridges. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dac1715c176bec889ed7d8b55e70b17375"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_REFLECTIVE_STRUCTURE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457dac1715c176bec889ed7d8b55e70b17375"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_REFLECTIVE_STRUCTURE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type25TYPE_REFLECTIVE_STRUCTUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to light sources or reflective structures in the environment, like street lights or reflective poles on the road boarder. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE">
-<span id="_CPPv3N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da61844e11acb3ff57ce7635709d59fb1b"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_CONSTRUCTION_SITE_ELEMENT</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da61844e11acb3ff57ce7635709d59fb1b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_CONSTRUCTION_SITE_ELEMENT</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to construction site elements in the environment, like cones or beacons. </p>
 </dd></dl>
 
@@ -368,60 +367,60 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8MaterialE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8MaterialE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8MaterialE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4"></span><em class="property">enum </em><code class="sig-name descname">Material</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8MaterialE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8MaterialE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8MaterialE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Material</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8MaterialE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of material types. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a9d881ed34e57899fd95299993f7ec1fe"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a9d881ed34e57899fd95299993f7ec1fe"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of the material is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4adff39bf36c571aa115f1914dde7a4242"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_OTHER</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4adff39bf36c571aa115f1914dde7a4242"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of material. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a473b09acad506f1492cc4845b927ec0e"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_WOOD</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a473b09acad506f1492cc4845b927ec0e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_WOOD</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_WOODE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Wooden structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a1ddaa8c67846d29fd7c55b5614972ca1"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_PLASTIC</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a1ddaa8c67846d29fd7c55b5614972ca1"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_PLASTIC</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material16MATERIAL_PLASTICE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Plastic structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4ac02c570046810c81a71d358fd57111ac"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_CONCRETE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4ac02c570046810c81a71d358fd57111ac"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_CONCRETE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material17MATERIAL_CONCRETEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Concrete structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_METALE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_METALE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_METALE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a8182937780718e0db0de8be97e581336"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_METAL</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_METALE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_METALE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_METALE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a8182937780718e0db0de8be97e581336"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_METAL</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_METALE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Metal structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a163d000b0c17d02d4eb2cb8f9e597cc4"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_STONE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a163d000b0c17d02d4eb2cb8f9e597cc4"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_STONE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material14MATERIAL_STONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Natural stone structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a9b7b0c2a85c54037c848a221e32c303d"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_GLAS</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a9b7b0c2a85c54037c848a221e32c303d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_GLAS</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material13MATERIAL_GLASE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Glas structure. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE">
-<span id="_CPPv3N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a5b92f9e41f1e0a4505d4f1092bf16eae"></span><em class="property">enumerator </em><code class="sig-name descname">MATERIAL_MUD</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a355ae3da574e37c59e934583cd7ec4a4a5b92f9e41f1e0a4505d4f1092bf16eae"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">MATERIAL_MUD</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification8Material12MATERIAL_MUDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mud structure. </p>
 </dd></dl>
 
@@ -429,48 +428,48 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7DensityE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7DensityE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7DensityE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009b"></span><em class="property">enum </em><code class="sig-name descname">Density</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7DensityE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7DensityE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7DensityE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009b"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Density</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7DensityE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of material density types. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba6d387cc295590b7dfa3767ff5f142b35"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba6d387cc295590b7dfa3767ff5f142b35"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density15DENSITY_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of the material density is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba8475b166b6b13d8b7a6a4e9b75a5955b"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_OTHER</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba8475b166b6b13d8b7a6a4e9b75a5955b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of material density. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009babaae08ca914470116f3cc65bfce3d9ed"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_SOLID</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009babaae08ca914470116f3cc65bfce3d9ed"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_SOLID</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density13DENSITY_SOLIDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>No perforation - solid; </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba7231f8b5d9a08a5cf2683fa28c40313a"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_SMALL_MESH</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba7231f8b5d9a08a5cf2683fa28c40313a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_SMALL_MESH</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_SMALL_MESHE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Perforation max. ]0; 100] mm </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009bac57e0c6e7ce72f631c5b21c9b0594967"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_MEDIAN_MESH</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009bac57e0c6e7ce72f631c5b21c9b0594967"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_MEDIAN_MESH</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density19DENSITY_MEDIAN_MESHE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Perforation max. ]100; 500] mm </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba3159fc5241cdce9dcbbd2640f56321ee"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_LARGE_MESH</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009ba3159fc5241cdce9dcbbd2640f56321ee"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_LARGE_MESH</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density18DENSITY_LARGE_MESHE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Perforation max. ]500; 5000] mm </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification7Density12DENSITY_OPENE">
-<span id="_CPPv3N4osi316StationaryObject14Classification7Density12DENSITY_OPENE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density12DENSITY_OPENE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009bae5489fa179604873131df772c375f805"></span><em class="property">enumerator </em><code class="sig-name descname">DENSITY_OPEN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density12DENSITY_OPENE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification7Density12DENSITY_OPENE"></span><span id="_CPPv2N4osi316StationaryObject14Classification7Density12DENSITY_OPENE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1aa3f3a0944f19ae7fa3aa55d700ac009bae5489fa179604873131df772c375f805"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DENSITY_OPEN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification7Density12DENSITY_OPENE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Perforation max. ]5000; infinity[ mm </p>
 </dd></dl>
 
@@ -478,72 +477,72 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5ColorE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5ColorE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5ColorE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18"></span><em class="property">enum </em><code class="sig-name descname">Color</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5ColorE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5ColorE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5ColorE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Color</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5ColorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of colors for structures. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18af0cfd3dd8f274d4be1782193f9ff1ad3"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18af0cfd3dd8f274d4be1782193f9ff1ad3"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color13COLOR_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Color is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_OTHERE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18ae0a6283d10945bacc414792f56c88900"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_OTHER</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_OTHERE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_OTHERE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18ae0a6283d10945bacc414792f56c88900"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) color. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18ab6c191f398842a16b7c578f1ee62473f"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_YELLOW</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18ab6c191f398842a16b7c578f1ee62473f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_YELLOW</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_YELLOWE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Yellow. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_GREENE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_GREENE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_GREENE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a59380eb7ef599dc8f0e97b8d10a4f9d5"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_GREEN</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_GREENE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_GREENE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_GREENE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a59380eb7ef599dc8f0e97b8d10a4f9d5"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_GREEN</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_GREENE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Green. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_BLUEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color10COLOR_BLUEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color10COLOR_BLUEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a46ac7e5b4a81ff978c260f79872e1b62"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_BLUE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color10COLOR_BLUEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color10COLOR_BLUEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a46ac7e5b4a81ff978c260f79872e1b62"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_BLUE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Blue. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a0fa24d36aba831d2e97cedbdabf4a1a0"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_VIOLET</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a0fa24d36aba831d2e97cedbdabf4a1a0"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_VIOLET</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_VIOLETE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Violet. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color9COLOR_REDE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color9COLOR_REDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color9COLOR_REDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a4aa95ace4f6eec9407f38c62c0dd912b"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_RED</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color9COLOR_REDE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color9COLOR_REDE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color9COLOR_REDE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a4aa95ace4f6eec9407f38c62c0dd912b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_RED</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color9COLOR_REDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Red. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a9d88e8a2ed628a1475a514e8f1b5b44d"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_ORANGE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a9d88e8a2ed628a1475a514e8f1b5b44d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_ORANGE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color12COLOR_ORANGEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Orange. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_BLACKE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_BLACKE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_BLACKE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18adb5f2127665fdea9d5ffb9367d153b3a"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_BLACK</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_BLACKE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_BLACKE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_BLACKE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18adb5f2127665fdea9d5ffb9367d153b3a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_BLACK</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_BLACKE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Black. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_GREYE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color10COLOR_GREYE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color10COLOR_GREYE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18aa0910a904100bcd0c68747a405dcf5b2"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_GREY</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_GREYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color10COLOR_GREYE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color10COLOR_GREYE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18aa0910a904100bcd0c68747a405dcf5b2"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_GREY</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color10COLOR_GREYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>GREY. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_WHITEE">
-<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_WHITEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_WHITEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a223ae57ff63a7987bb2626617a7ef7d8"></span><em class="property">enumerator </em><code class="sig-name descname">COLOR_WHITE</code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_WHITEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi316StationaryObject14Classification5Color11COLOR_WHITEE"></span><span id="_CPPv2N4osi316StationaryObject14Classification5Color11COLOR_WHITEE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a24bf321f2a1a030fe681c2bd6a7b1f18a223ae57ff63a7987bb2626617a7ef7d8"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">COLOR_WHITE</span></code><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification5Color11COLOR_WHITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>White. </p>
 </dd></dl>
 
@@ -554,25 +553,25 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a1d9400e4e1404fba9b80ac08c744d396"></span><code class="sig-name descname">optional Type type   = 1</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1a1d9400e4e1404fba9b80ac08c744d396"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Type</span> <span class="pre">type</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The type of the object. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1af7041eb960ee28815dbf9ca469f65832"></span><code class="sig-name descname">optional Material material   = 2</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1af7041eb960ee28815dbf9ca469f65832"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Material</span> <span class="pre">material</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The dominating material of the structure. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1afeb7027b4c8d6098f1fed2ce5f065467"></span><code class="sig-name descname">optional Density density   = 3</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1afeb7027b4c8d6098f1fed2ce5f065467"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Density</span> <span class="pre">density</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The dominating density of the material of the structure. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ae22a9a0e707d85d8883ddccf0cb4f32f"></span><code class="sig-name descname">optional Color color   = 4</code></dt>
+<span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ae22a9a0e707d85d8883ddccf0cb4f32f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Color</span> <span class="pre">color</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The dominating color of the material of the structure. </p>
 </dd></dl>
 

@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -205,7 +204,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi310IdentifierE">
-<span id="_CPPv3N4osi310IdentifierE"></span><span id="_CPPv2N4osi310IdentifierE"></span><span id="osi3::Identifier"></span><span class="target" id="structosi3_1_1Identifier"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Identifier</code><a class="headerlink" href="#_CPPv4N4osi310IdentifierE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi310IdentifierE"></span><span id="_CPPv2N4osi310IdentifierE"></span><span id="osi3::Identifier"></span><span class="target" id="structosi3_1_1Identifier"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">Identifier</span></code><a class="headerlink" href="#_CPPv4N4osi310IdentifierE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A common identifier (ID), represented as an integer. </p>
 <p>Has to be unique among all simulated items at any given time. For ground truth, the identifier of an item (object, lane, sign, etc.) must remain stable over its lifetime. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Identifier"><span class="std std-ref"><span class="pre">Identifier</span></span></a></code> values may be only be reused if the available address space is exhausted and the specific values have not been in use for several timesteps. Sensor specific tracking IDs have no restrictions and should behave according to the sensor specifications.</p>
 <p>The value MAX(uint64) = 2^(64) -1 = 0b1111111111111111111111111111111111111111111111111111111111111111 is reserved and indicates an invalid ID or error. </p>
@@ -213,7 +212,7 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1Identifier_1a96d2bdfa66d7a220cf65b389ee82a473"></span><code class="sig-name descname">optional uint64 value   = 1</code></dt>
+<span class="target" id="structosi3_1_1Identifier_1a96d2bdfa66d7a220cf65b389ee82a473"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint64</span> <span class="pre">value</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The identifier’s value.</p>
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>

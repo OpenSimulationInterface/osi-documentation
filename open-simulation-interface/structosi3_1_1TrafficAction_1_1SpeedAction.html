@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,7 +208,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi313TrafficAction11SpeedActionE">
-<span id="_CPPv3N4osi313TrafficAction11SpeedActionE"></span><span id="_CPPv2N4osi313TrafficAction11SpeedActionE"></span><span id="osi3::TrafficAction::SpeedAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction">TrafficAction</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">SpeedAction</code><br /></dt>
+<span id="_CPPv3N4osi313TrafficAction11SpeedActionE"></span><span id="_CPPv2N4osi313TrafficAction11SpeedActionE"></span><span id="osi3::TrafficAction::SpeedAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="pre">TrafficAction</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">SpeedAction</span></code><br /></dt>
 <dd><p>Speed action. </p>
 <p>This action assigns a targeted speed to a traffic participant. The action can be constrained by specifying the dynamics shape or even the duration and the distance of the acceleration / deceleration process.</p>
 <p><dl class="simple">
@@ -221,25 +220,25 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1ae2dad2dca71d441b378ba2351f4db9de"></span><code class="sig-name descname">optional ActionHeader action_header   = 1</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1ae2dad2dca71d441b378ba2351f4db9de"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The action header </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a235e02ca90a90af01ddcdf29e9aecfc5"></span><code class="sig-name descname">optional double absolute_target_speed   = 2</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a235e02ca90a90af01ddcdf29e9aecfc5"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">absolute_target_speed</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Targeted absolute speed. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a3984a322b8c57f580f3fad061796a457"></span><code class="sig-name descname">optional DynamicsShape dynamics_shape   = 3</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a3984a322b8c57f580f3fad061796a457"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DynamicsShape</span> <span class="pre">dynamics_shape</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Specified transition shape of the speed change action. If the shape is unspecified (enum value 0), the shape of the speed change is open to the traffic participant model. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1abca045658fb8a429d7cfc7d54b6c6a28"></span><code class="sig-name descname">optional double duration   = 4</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1abca045658fb8a429d7cfc7d54b6c6a28"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">duration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Duration of the speed change.</p>
 <p>A value of 0.0 (the default value) imposes no constraint on the duration, unless the dynamics shape is a step function, where an immediate step is effected.</p>
 <p>Unit: s </p>
@@ -247,7 +246,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a341ca36944c16c88fc5d9440beed377d"></span><code class="sig-name descname">optional double distance   = 5</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction_1a341ca36944c16c88fc5d9440beed377d"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">distance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Distance of the speed change.</p>
 <p>A value of 0.0 (the default value) imposes no constraint on the distance, unless the dynamics shape is a step function, where an immediate step is effected.</p>
 <p>Unit: m </p>

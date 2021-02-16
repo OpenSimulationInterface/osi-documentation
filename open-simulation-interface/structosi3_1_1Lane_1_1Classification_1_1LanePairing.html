@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,9 +208,40 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi34Lane14Classification11LanePairingE">
-<span id="_CPPv3N4osi34Lane14Classification11LanePairingE"></span><span id="_CPPv2N4osi34Lane14Classification11LanePairingE"></span><span id="osi3::Lane::Classification::LanePairing"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1Lane.html#_CPPv4N4osi34LaneE" title="osi3::Lane">Lane</a>::<a class="reference internal" href="structosi3_1_1Lane.html#_CPPv4N4osi34Lane14ClassificationE" title="osi3::Lane::Classification">Classification</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LanePairing</code><br /></dt>
+<span id="_CPPv3N4osi34Lane14Classification11LanePairingE"></span><span id="_CPPv2N4osi34Lane14Classification11LanePairingE"></span><span id="osi3::Lane::Classification::LanePairing"></span><span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1Lane.html#_CPPv4N4osi34LaneE" title="osi3::Lane"><span class="pre">Lane</span></a><span class="pre">::</span><a class="reference internal" href="structosi3_1_1Lane.html#_CPPv4N4osi34Lane14ClassificationE" title="osi3::Lane::Classification"><span class="pre">Classification</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LanePairing</span></code><br /></dt>
 <dd><p>The lane ID pairings of antecessor and successor lanes. </p>
-<p></p>
+<p><table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="../_images/OSI_LaneIntersection.svg" src="../_images/OSI_LaneIntersection.svg" /></p></td>
+<td><p><table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>  for lane l7: </strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="row-even"><td><p><table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>(l2,l1), (l2,l3), (l2,l5), </p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="row-even"><td><p>(l4,l1), (l4,l3), (l4,l5), </p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="row-odd"><td><p>(l6,l1), (l6,l3), (l6,l5) </p></td>
+</tr>
+</tbody>
+</table>
+</p></td>
+</tr>
+</tbody>
+</table>
+</p></td>
+</tr>
+</tbody>
+</table>
+</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>In the example, the symbols l1, l2, … stand for the respective lane ids, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. </p>
 </dd>
@@ -221,14 +251,14 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1aad3a4f155fe17140317054f3270a27eb"></span><code class="sig-name descname">optional Identifier antecessor_lane_id   = 1</code></dt>
+<span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1aad3a4f155fe17140317054f3270a27eb"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">antecessor_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The antecessor lane ID.</p>
 <p>refers_to: <a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1a6451767f0167f56c441f1db538b4d97a"></span><code class="sig-name descname">optional Identifier successor_lane_id   = 2</code></dt>
+<span class="target" id="structosi3_1_1Lane_1_1Classification_1_1LanePairing_1a6451767f0167f56c441f1db538b4d97a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">successor_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The successor lane ID.</p>
 <p>refers_to: <a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
 </dd></dl>

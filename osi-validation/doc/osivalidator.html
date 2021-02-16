@@ -35,7 +35,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -223,24 +222,24 @@
 and unicity according to the OSI KPIs.</p>
 <dl class="py class">
 <dt id="osivalidator.osi_id_manager.OSIIDManager">
-<em class="property">class </em><code class="sig-name descname">OSIIDManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logger</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">OSIIDManager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manage the ID of OSI Messages for verification of unicity and references</p>
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.get_all_messages_by_id">
-<code class="sig-name descname">get_all_messages_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_id</span></em>, <em class="sig-param"><span class="n">message_t</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_all_messages_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_all_messages_by_id</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_all_messages_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve all the message by giving an id</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.get_message_by_id">
-<code class="sig-name descname">get_message_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_id</span></em>, <em class="sig-param"><span class="n">message_t</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_message_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_message_by_id</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.get_message_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve only one message by giving an id</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.refer">
-<code class="sig-name descname">refer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">referer</span></em>, <em class="sig-param"><span class="n">identifier</span></em>, <em class="sig-param"><span class="n">expected_type</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.refer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">refer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">referer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.refer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a reference
 Condition is a function that will be applied on the found object if the
 reference is resolved</p>
@@ -248,25 +247,25 @@ reference is resolved</p>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.register_message">
-<code class="sig-name descname">register_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_id</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.register_message" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">register_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.register_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register one message in the ID manager</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Erase all data in the ID manager</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.resolve_references">
-<code class="sig-name descname">resolve_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestamp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_references" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">resolve_references</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_references" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if references are compliant</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="osivalidator.osi_id_manager.OSIIDManager.resolve_unicity">
-<code class="sig-name descname">resolve_unicity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestamp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_unicity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">resolve_unicity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.OSIIDManager.resolve_unicity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check for double ID</p>
 </dd></dl>
 
@@ -274,7 +273,7 @@ reference is resolved</p>
 
 <dl class="py function">
 <dt id="osivalidator.osi_id_manager.message_t_filter">
-<code class="sig-name descname">message_t_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">message_t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.message_t_filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">message_t_filter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#osivalidator.osi_id_manager.message_t_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if a message is of type message_t</p>
 </dd></dl>
 

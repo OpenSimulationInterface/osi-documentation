@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,7 +208,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi313TrafficAction16LaneOffsetActionE">
-<span id="_CPPv3N4osi313TrafficAction16LaneOffsetActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneOffsetActionE"></span><span id="osi3::TrafficAction::LaneOffsetAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction">TrafficAction</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LaneOffsetAction</code><br /></dt>
+<span id="_CPPv3N4osi313TrafficAction16LaneOffsetActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneOffsetActionE"></span><span id="osi3::TrafficAction::LaneOffsetAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="pre">TrafficAction</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LaneOffsetAction</span></code><br /></dt>
 <dd><p><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> Offset Action. </p>
 <p>This action assigns a targeted lane offset to a traffic participant. The action can be constrained by specifying the dynamics shape of the lateral transition profile.</p>
 <p><dl class="simple">
@@ -221,20 +220,20 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1af40d53b5ba0e2295691b120067767d6f"></span><code class="sig-name descname">optional ActionHeader action_header   = 1</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1af40d53b5ba0e2295691b120067767d6f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The Action Header </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1a9ccf06c47eeef124acbef2da0b27fe6d"></span><code class="sig-name descname">optional double target_lane_offset   = 2</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1a9ccf06c47eeef124acbef2da0b27fe6d"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">target_lane_offset</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Targeted lane offset in meters relative to the centerline of the current traffic participant’s lane. Positive values mean left of the centerline, negative values mean right of the centerline.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1af7fa69fcf14c87bfa5bbcbf560e51491"></span><code class="sig-name descname">optional DynamicsShape dynamics_shape   = 3</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction_1af7fa69fcf14c87bfa5bbcbf560e51491"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DynamicsShape</span> <span class="pre">dynamics_shape</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Specified transition shape of reaching the lane offset. If the shape is unspecified (enum value 0), the shape of the transition is open to the traffic participant model. </p>
 </dd></dl>
 

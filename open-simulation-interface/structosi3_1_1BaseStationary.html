@@ -205,7 +205,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi314BaseStationaryE">
-<span id="_CPPv3N4osi314BaseStationaryE"></span><span id="_CPPv2N4osi314BaseStationaryE"></span><span id="osi3::BaseStationary"></span><span class="target" id="structosi3_1_1BaseStationary"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">BaseStationary</code><a class="headerlink" href="#_CPPv4N4osi314BaseStationaryE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi314BaseStationaryE"></span><span id="_CPPv2N4osi314BaseStationaryE"></span><span id="osi3::BaseStationary"></span><span class="target" id="structosi3_1_1BaseStationary"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">BaseStationary</span></code><a class="headerlink" href="#_CPPv4N4osi314BaseStationaryE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The base attributes of a stationary object or entity. </p>
 <p>This includes the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject"><span class="std std-ref"><span class="pre">StationaryObject</span></span></a></code> , <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficSign.html#structosi3_1_1TrafficSign"><span class="std std-ref"><span class="pre">TrafficSign</span></span></a></code> , <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficLight.html#structosi3_1_1TrafficLight"><span class="std std-ref"><span class="pre">TrafficLight</span></span></a></code> , <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1RoadMarking.html#structosi3_1_1RoadMarking"><span class="std std-ref"><span class="pre">RoadMarking</span></span></a></code> messages.</p>
 <p><img alt="../_images/OSI_BaseStationary.svg" src="../_images/OSI_BaseStationary.svg" /></p>
@@ -214,19 +214,19 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1BaseStationary_1aa4f3a1c316bfa13aa805195630bb08e8"></span><code class="sig-name descname">optional Dimension3d dimension   = 1</code></dt>
+<span class="target" id="structosi3_1_1BaseStationary_1aa4f3a1c316bfa13aa805195630bb08e8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Dimension3d</span> <span class="pre">dimension</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The 3D dimensions of the stationary object (bounding box), e.g. a landmark. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1BaseStationary_1a2378991a1c0c9f65e9fd274b6e07318e"></span><code class="sig-name descname">optional Vector3d position   = 2</code></dt>
+<span class="target" id="structosi3_1_1BaseStationary_1a2378991a1c0c9f65e9fd274b6e07318e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The reference point for position and orientation, i.e. the center (x,y,z) of the bounding box. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"></span><code class="sig-name descname">optional Orientation3d orientation   = 3</code></dt>
+<span class="target" id="structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The relative orientation of the stationary object w.r.t. its parent frame, noted in the parent frame. The orientation becomes global/absolute if the parent frame is inertial (all parent frames up to ground truth).</p>
 <p><span class="math notranslate nohighlight">\( Origin_{\text{base stationary entity}} := Rotation_{yaw,pitch,roll}( \)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">orientation</span></span></a></code> <span class="math notranslate nohighlight">\( )* (Origin_{\text{parent coord system}} - \)</span> <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1BaseStationary_1a2378991a1c0c9f65e9fd274b6e07318e"><span class="std std-ref"><span class="pre">position</span></span></a></code> <span class="math notranslate nohighlight">\( )\)</span></p>
 <p><dl class="simple">
@@ -238,7 +238,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1BaseStationary_1aa1db348acaac2d5a2ba0883903d962cd"></span><code class="sig-name descname">repeated Vector2d base_polygon   = 4</code></dt>
+<span class="target" id="structosi3_1_1BaseStationary_1aa1db348acaac2d5a2ba0883903d962cd"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Vector2d</span> <span class="pre">base_polygon</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Usage as ground truth: The two dimensional (flat) contour of the object. This is an extension of the concept of a bounding box as defined by <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Dimension3d.html#structosi3_1_1Dimension3d"><span class="std std-ref"><span class="pre">Dimension3d</span></span></a></code>. The contour is the projection of the object’s outline onto the z-plane in the object frame (independent of its current position and orientation). The height is the same as the height of the bounding box.</p>
 <p>Usage as sensor data: The polygon describes the visible part of the object’s contour.</p>
 <p>General definitions: The polygon is defined in the local object frame: x pointing forward and y to the left. The origin is the center of the bounding box. As ground truth, the polygon is closed by connecting the last with the first point. Therefore these two points must be different. The polygon must consist of at least three points. As sensor data, however, the polygon is open. The polygon is defined counter-clockwise. </p>

@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -205,7 +204,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi311GroundTruthE">
-<span id="_CPPv3N4osi311GroundTruthE"></span><span id="_CPPv2N4osi311GroundTruthE"></span><span id="osi3::GroundTruth"></span><span class="target" id="structosi3_1_1GroundTruth"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">GroundTruth</code><a class="headerlink" href="#_CPPv4N4osi311GroundTruthE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi311GroundTruthE"></span><span id="_CPPv2N4osi311GroundTruthE"></span><span id="osi3::GroundTruth"></span><span class="target" id="structosi3_1_1GroundTruth"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">GroundTruth</span></code><a class="headerlink" href="#_CPPv4N4osi311GroundTruthE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The ground truth information from the simulation environment. </p>
 <p>This ground truth information is supposed to describe the whole simulated environment around any simulated vehicle. For each simulated host vehicle (there may be one or multiple), define an area around the vehicle which is greater than the combined field of views (FOV) of all obstructed sensors in the vehicle. The ground truth data is supposed to describe the convex hull of all such areas w.r.t. a global simulation coordinate system.</p>
 <p>The simulation coordinate system may change during the simulation if and only if all coordinates w.r.t. this coordinate system are also changed.</p>
@@ -217,13 +216,13 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ad1ad43ca92a112daf6678da302c05880"></span><code class="sig-name descname">optional InterfaceVersion version   = 1</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1ad1ad43ca92a112daf6678da302c05880"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The interface version used by the sender (i.e. the simulation environment). </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><code class="sig-name descname">optional Timestamp timestamp   = 2</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The data timestamp of the simulation environment. The zero time point is arbitrary but must be identical for all messages. Recommendation: Zero time point for start point of the simulation.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Zero time point does not need to coincide with the UNIX epoch.</p>
@@ -236,7 +235,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname">optional Identifier host_vehicle_id   = 3</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">host_vehicle_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The ID of the host vehicle object referencing to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> .</p>
 <p><p>refers_to: </p>
 <a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a><dl class="simple">
@@ -248,7 +247,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><code class="sig-name descname">repeated StationaryObject stationary_object   = 4</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StationaryObject</span> <span class="pre">stationary_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The list of stationary objects (excluding traffic signs and traffic lights).</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -259,7 +258,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><code class="sig-name descname">repeated MovingObject moving_object   = 5</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">MovingObject</span> <span class="pre">moving_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>The list of all other moving objects including all (host) vehicles.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -270,7 +269,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><code class="sig-name descname">repeated TrafficSign traffic_sign   = 6</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficSign</span> <span class="pre">traffic_sign</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>The list of traffic signs.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -281,7 +280,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><code class="sig-name descname">repeated TrafficLight traffic_light   = 7</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficLight</span> <span class="pre">traffic_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>The list of traffic lights.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -292,7 +291,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><code class="sig-name descname">repeated RoadMarking road_marking   = 8</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RoadMarking</span> <span class="pre">road_marking</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The list of road surface markings (lane markings are excluded and defined as <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary.html#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>).</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -303,7 +302,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><code class="sig-name descname">repeated LaneBoundary lane_boundary   = 9</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary</span> <span class="pre">lane_boundary</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>The list of lane boundaries.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -314,7 +313,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><code class="sig-name descname">repeated Lane lane   = 10</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Lane</span> <span class="pre">lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>The list of lanes forming a road network.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -325,7 +324,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><code class="sig-name descname">repeated Occupant occupant   = 11</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Occupant</span> <span class="pre">occupant</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></code></dt>
 <dd><p>The list of passengers in the (host) vehicle(s).</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -336,13 +335,13 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1aee1873cbe2ed79701c6790ddcb14b420"></span><code class="sig-name descname">optional EnvironmentalConditions environmental_conditions   = 12</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1aee1873cbe2ed79701c6790ddcb14b420"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">EnvironmentalConditions</span> <span class="pre">environmental_conditions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">12</span></code></dt>
 <dd><p>Conditions of the environment. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><code class="sig-name descname">optional uint32 country_code   = 13</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">country_code</span>&#160;&#160; <span class="pre">=</span> <span class="pre">13</span></code></dt>
 <dd><p>The ISO country code in 3 digit numeric format according to: ISO Code 3166/1 [1]. E.g. Germany = 276, USA = 840.</p>
 <p><p>is_iso_country_code:  </p>
 <dl class="simple">
@@ -354,7 +353,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"></span><code class="sig-name descname">optional string proj_string   = 14</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">proj_string</span>&#160;&#160; <span class="pre">=</span> <span class="pre">14</span></code></dt>
 <dd><p>Projection string that allows to transform all coordinates in <a class="reference internal" href="#structosi3_1_1GroundTruth"><span class="std std-ref">GroundTruth</span></a> into a different cartographic projection.</p>
 <p>The string follows the PROJ rules for projections [1].</p>
 <p><dl class="simple">
@@ -366,7 +365,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><code class="sig-name descname">optional string map_reference   = 15</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">map_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">15</span></code></dt>
 <dd><p>Opaque reference of a map.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Origin and orientation of the map have to coincide with the inertial coordinate frame of the ground truth.</p>
@@ -379,7 +378,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a83042861723a4a9e890a53aa98d88858"></span><code class="sig-name descname">optional string model_reference   = 16</code></dt>
+<span class="target" id="structosi3_1_1GroundTruth_1a83042861723a4a9e890a53aa98d88858"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">16</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model.</p>
 <p>The model covers the static parts of the environment that are not provided as individual models referenced from ground truth objects like moving or stationary objects.</p>
 <p><dl class="simple">

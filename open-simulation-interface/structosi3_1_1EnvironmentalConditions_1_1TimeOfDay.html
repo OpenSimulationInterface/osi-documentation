@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,7 +208,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi323EnvironmentalConditions9TimeOfDayE">
-<span id="_CPPv3N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="osi3::EnvironmentalConditions::TimeOfDay"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1EnvironmentalConditions.html#_CPPv4N4osi323EnvironmentalConditionsE" title="osi3::EnvironmentalConditions">EnvironmentalConditions</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">TimeOfDay</code><br /></dt>
+<span id="_CPPv3N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="osi3::EnvironmentalConditions::TimeOfDay"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1EnvironmentalConditions.html#_CPPv4N4osi323EnvironmentalConditionsE" title="osi3::EnvironmentalConditions"><span class="pre">EnvironmentalConditions</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">TimeOfDay</span></code><br /></dt>
 <dd><p>The time of day at a specified location. </p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>In general the global position of the parent frame should be obtainable in order to derive the local time. This information can be calculated from the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1EnvironmentalConditions.html#structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"><span class="std std-ref"><span class="pre">unix_timestamp</span></span></a></code> in combination with <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"><span class="std std-ref"><span class="pre">osi3::GroundTruth::proj_string</span></span></a></code> and the position of the corresponding <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary"><span class="std std-ref"><span class="pre">osi3::BaseStationary</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">osi3::BaseMoving</span></span></a></code> . </p>
@@ -220,7 +219,7 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay_1a6babaecd5662954155e8a846edbd8b72"></span><code class="sig-name descname">optional uint32 seconds_since_midnight   = 1</code></dt>
+<span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay_1a6babaecd5662954155e8a846edbd8b72"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">seconds_since_midnight</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The number of seconds in s that have passed since midnight local time. Used e.g. for determining the current state of the circadian rhythm of a driver.</p>
 <p><p>is_greater_than_or_equal_to: 0 is_less_than: 86400  </p>
 <dl class="simple">

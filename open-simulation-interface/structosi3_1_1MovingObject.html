@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -218,7 +217,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObjectE">
-<span id="_CPPv3N4osi312MovingObjectE"></span><span id="_CPPv2N4osi312MovingObjectE"></span><span id="osi3::MovingObject"></span><span class="target" id="structosi3_1_1MovingObject"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">MovingObject</code><a class="headerlink" href="#_CPPv4N4osi312MovingObjectE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObjectE"></span><span id="_CPPv2N4osi312MovingObjectE"></span><span id="osi3::MovingObject"></span><span class="target" id="structosi3_1_1MovingObject"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">MovingObject</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A simulated object that is either a vehicle or another moving object (animal, pedestrian, etc), but not a stationary object (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficLight.html#structosi3_1_1TrafficLight"><span class="std std-ref"><span class="pre">TrafficLight</span></span></a></code>, <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficSign.html#structosi3_1_1TrafficSign"><span class="std std-ref"><span class="pre">TrafficSign</span></span></a></code>, or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject"><span class="std std-ref"><span class="pre">StationaryObject</span></span></a></code>). </p>
 <p><img alt="../_images/OSI_MovingObject.svg" src="../_images/OSI_MovingObject.svg" /></p>
 <p><img alt="../_images/OSI_HostVehicle.svg" src="../_images/OSI_HostVehicle.svg" /></p>
@@ -231,36 +230,36 @@
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi312MovingObject4TypeE">
-<span id="_CPPv3N4osi312MovingObject4TypeE"></span><span id="_CPPv2N4osi312MovingObject4TypeE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721e"></span><em class="property">enum </em><code class="sig-name descname">Type</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4TypeE"></span><span id="_CPPv2N4osi312MovingObject4TypeE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721e"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4TypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of object types. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject4Type12TYPE_UNKNOWNE">
-<span id="_CPPv3N4osi312MovingObject4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721eadba6d9163601a0c4761c130132a7a457"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721eadba6d9163601a0c4761c130132a7a457"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of the object is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject4Type10TYPE_OTHERE">
-<span id="_CPPv3N4osi312MovingObject4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea4b608f86c88c57a54ca0619793deadcd"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea4b608f86c88c57a54ca0619793deadcd"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of moving object. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject4Type12TYPE_VEHICLEE">
-<span id="_CPPv3N4osi312MovingObject4Type12TYPE_VEHICLEE"></span><span id="_CPPv2N4osi312MovingObject4Type12TYPE_VEHICLEE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_VEHICLE</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type12TYPE_VEHICLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4Type12TYPE_VEHICLEE"></span><span id="_CPPv2N4osi312MovingObject4Type12TYPE_VEHICLEE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_VEHICLE</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type12TYPE_VEHICLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a vehicle. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject4Type15TYPE_PEDESTRIANE">
-<span id="_CPPv3N4osi312MovingObject4Type15TYPE_PEDESTRIANE"></span><span id="_CPPv2N4osi312MovingObject4Type15TYPE_PEDESTRIANE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_PEDESTRIAN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type15TYPE_PEDESTRIANE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4Type15TYPE_PEDESTRIANE"></span><span id="_CPPv2N4osi312MovingObject4Type15TYPE_PEDESTRIANE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_PEDESTRIAN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type15TYPE_PEDESTRIANE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is a pedestrian. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject4Type11TYPE_ANIMALE">
-<span id="_CPPv3N4osi312MovingObject4Type11TYPE_ANIMALE"></span><span id="_CPPv2N4osi312MovingObject4Type11TYPE_ANIMALE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea34271d85b37fc38a053e9d81e2e2eac2"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_ANIMAL</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type11TYPE_ANIMALE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject4Type11TYPE_ANIMALE"></span><span id="_CPPv2N4osi312MovingObject4Type11TYPE_ANIMALE"></span><span class="target" id="structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea34271d85b37fc38a053e9d81e2e2eac2"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_ANIMAL</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject4Type11TYPE_ANIMALE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Object is an animal. </p>
 </dd></dl>
 
@@ -271,14 +270,14 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a6a9a247e8d9c4a642b6d89dbcdf0d7da"></span><code class="sig-name descname">optional Identifier id   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a6a9a247e8d9c4a642b6d89dbcdf0d7da"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the object.</p>
 <p>is_globally_unique  </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"></span><code class="sig-name descname">optional BaseMoving base   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The base parameters of the vehicle.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>The bounding box does NOT include side mirrors for vehicles. </p>
@@ -291,13 +290,13 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"></span><code class="sig-name descname">optional Type type   = 3</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Type</span> <span class="pre">type</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The type of the object. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a655c12b5f4db44e68e83a3c351d3d4e9"></span><code class="sig-name descname">repeated Identifier assigned_lane_id   = 4</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a655c12b5f4db44e68e83a3c351d3d4e9"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">assigned_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The IDs of the lanes that this object is assigned to.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
@@ -312,7 +311,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1aad46113ea5b9f84a4094f671630a010c"></span><code class="sig-name descname">optional VehicleAttributes vehicle_attributes   = 5</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1aad46113ea5b9f84a4094f671630a010c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">VehicleAttributes</span> <span class="pre">vehicle_attributes</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Specific information about the vehicle.</p>
 <p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
 <dl class="simple">
@@ -324,7 +323,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a791fbef677615ca9e8e7af0595bb3b3d"></span><code class="sig-name descname">optional VehicleClassification vehicle_classification   = 6</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a791fbef677615ca9e8e7af0595bb3b3d"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">VehicleClassification</span> <span class="pre">vehicle_classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Specific information about the classification of the vehicle.</p>
 <p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
 <dl class="simple">
@@ -336,7 +335,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a07558573bee7a5fa2f0729e1cad1325f"></span><code class="sig-name descname">optional string model_reference   = 7</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a07558573bee7a5fa2f0729e1cad1325f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the moving object.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
@@ -347,7 +346,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a62f68ba53ed7d9dfc25e41d07769893f"></span><code class="sig-name descname">repeated StatePoint future_trajectory   = 8</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a62f68ba53ed7d9dfc25e41d07769893f"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StatePoint</span> <span class="pre">future_trajectory</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The trajectory that this moving object expects to follow in the future.</p>
 <p>This is not externally perceivable information, rather this is to aid realistic simulation of traffic participants that are not under test. This information should not be made available to the stack under test.</p>
 <p><dl class="simple">
@@ -359,20 +358,20 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1a977066d08847f96bd98dffcc0aff80ca"></span><code class="sig-name descname">optional MovingObjectClassification moving_object_classification   = 9</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1a977066d08847f96bd98dffcc0aff80ca"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MovingObjectClassification</span> <span class="pre">moving_object_classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Specific information about the classification of the vehicle. </p>
 </dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObject26MovingObjectClassificationE">
-<span id="_CPPv3N4osi312MovingObject26MovingObjectClassificationE"></span><span id="_CPPv2N4osi312MovingObject26MovingObjectClassificationE"></span><span id="osi3::MovingObject::MovingObjectClassification"></span><span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification"></span><em class="property">struct </em><code class="sig-name descname">MovingObjectClassification</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject26MovingObjectClassificationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject26MovingObjectClassificationE"></span><span id="_CPPv2N4osi312MovingObject26MovingObjectClassificationE"></span><span id="osi3::MovingObject::MovingObjectClassification"></span><span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">MovingObjectClassification</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject26MovingObjectClassificationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Information for the classification of moving objects regarding <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> (host or other). </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1aed7d82827143b64b4b1d312117fe5c70"></span><code class="sig-name descname">repeated Identifier assigned_lane_id   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1aed7d82827143b64b4b1d312117fe5c70"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">assigned_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The IDs of the lanes that this object is assigned to.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
@@ -385,7 +384,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1ae28d19cb839da33ea9015475b76928b8"></span><code class="sig-name descname">repeated double assigned_lane_percentage   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1ae28d19cb839da33ea9015475b76928b8"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">assigned_lane_percentage</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Percentage value of the object width in the corresponding lane.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
@@ -401,7 +400,7 @@
 
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObject17VehicleAttributesE">
-<span id="_CPPv3N4osi312MovingObject17VehicleAttributesE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributesE"></span><span id="osi3::MovingObject::VehicleAttributes"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes"></span><em class="property">struct </em><code class="sig-name descname">VehicleAttributes</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject17VehicleAttributesE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject17VehicleAttributesE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributesE"></span><span id="osi3::MovingObject::VehicleAttributes"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">VehicleAttributes</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject17VehicleAttributesE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The vehicle attributes for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> (host or other). </p>
 <p>This is an extension to the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> with additional attributes, such as type and lights. The origin of the rear (front) axis coordinate system in world coordinates is calculated as: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + R * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code> (front) for the host vehicle (R rotates from vehicle to world frame, i.e. inverse orientation of <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>).</p>
 <p>For all vehicles, including host vehicles, the position given in <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> points to the center of the vehicle’s bounding box.</p>
@@ -415,7 +414,7 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1aba30c025ec374d4bcb9dead3913438ec"></span><code class="sig-name descname">optional Identifier driver_id   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1aba30c025ec374d4bcb9dead3913438ec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">driver_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the driver of the (host) vehicle.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
@@ -426,7 +425,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a848ab52664318bb5f56acf5db0c21248"></span><code class="sig-name descname">optional double radius_wheel   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a848ab52664318bb5f56acf5db0c21248"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">radius_wheel</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Deprecated: Will be removed in next major release. Moved to <a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"><span class="std std-ref">WheelData</span></a>. Median radius of the wheels measured from a center of the wheel including tire.</p>
 <p>Unit: m</p>
 <p>is_greater_than_or_equal_to: 0  </p>
@@ -434,26 +433,26 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a41139d820fbf7d590d68f09f5322a4e4"></span><code class="sig-name descname">optional uint32 number_wheels   = 3</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a41139d820fbf7d590d68f09f5322a4e4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_wheels</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Number of independent wheels.</p>
 <p>is_greater_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"></span><code class="sig-name descname">optional Vector3d bbcenter_to_rear   = 4</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">bbcenter_to_rear</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The vector pointing from the bounding box center point (<code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code>) to the middle (in x, y and z) of the rear axle under neutral load conditions. In object coordinates. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a7f681fb05df13db0e9df73e664621ccf"></span><code class="sig-name descname">optional Vector3d bbcenter_to_front   = 5</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a7f681fb05df13db0e9df73e664621ccf"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">bbcenter_to_front</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>The vector pointing from the bounding box center point (<code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code>) to the middle (in x, y and z) of the front axle under neutral load conditions. In object coordinates. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname">optional double ground_clearance   = 6</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ground_clearance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. <dl class="simple">
 <dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
 </dd>
@@ -463,7 +462,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a27d7ffb7cfe89c54fc94532b4e6869cd"></span><code class="sig-name descname">repeated WheelData wheel_data   = 7</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a27d7ffb7cfe89c54fc94532b4e6869cd"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">WheelData</span> <span class="pre">wheel_data</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Description of each wheel.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
@@ -474,7 +473,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a73ee49dc2b6b48f16c474f12f52c5ddf"></span><code class="sig-name descname">optional double steering_wheel_angle   = 8</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a73ee49dc2b6b48f16c474f12f52c5ddf"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">steering_wheel_angle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>Angle of the steering wheel. Zero means the steering wheel is in its center postion, a positive value means the steering wheel is turned to the left and a negative value means the steering wheel is turned to the right of the center position.</p>
 <p>Unit: rad </p>
 </dd></dl>
@@ -482,60 +481,60 @@
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE">
-<span id="_CPPv3N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="osi3::MovingObject::VehicleAttributes::WheelData"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"></span><em class="property">struct </em><code class="sig-name descname">WheelData</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="osi3::MovingObject::VehicleAttributes::WheelData"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">WheelData</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Detailed wheel data. The focus is on the description of a wheel regarding the perceivable information from the outside. It is not intended to be used for dynamic calculations, for example. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a094de989f5a2aab080f9a65f0feb3867"></span><code class="sig-name descname">optional uint32 axle   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a094de989f5a2aab080f9a65f0feb3867"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">axle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The axle which contains this wheel. A value of 0 represents the front-most axle of the vehicle with higher numbers incrementing towards the rear-most axle. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a2095585cdc9eb8968fe576af7c43d5a3"></span><code class="sig-name descname">optional uint32 index   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a2095585cdc9eb8968fe576af7c43d5a3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">index</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The index of the wheel on the axle, counting in the direction of positive-y, that is, right-to-left.</p>
 <p>For example, on a standard 2-axle, 4-wheel car, the rear-right wheel would be (axle=1, index=0). This concept works also for twin tires. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1abfe9b8868b4a50e8b20476aadd217268"></span><code class="sig-name descname">optional Vector3d position   = 3</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1abfe9b8868b4a50e8b20476aadd217268"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>A vector pointing from the vehicle’s reference system (center of bounding box) to the geometric center of the wheel. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a103fad79e18f7443b50e4d81160c8d56"></span><code class="sig-name descname">optional double wheel_radius   = 4</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a103fad79e18f7443b50e4d81160c8d56"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">wheel_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Median radius of the wheel measured from the center of the wheel to the outer part of the tire.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1afdacaf4b3b87153099953937da698297"></span><code class="sig-name descname">optional double rim_radius   = 5</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1afdacaf4b3b87153099953937da698297"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rim_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Median radius of the rim measured from the center to the outer, visible part of the rim.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a99c73124e0eace722696b019306d1614"></span><code class="sig-name descname">optional double width   = 6</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a99c73124e0eace722696b019306d1614"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">width</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Median width of the tire.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a844a2e4eacc8dee9449f8e3a17afb577"></span><code class="sig-name descname">optional Orientation3d orientation   = 7</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a844a2e4eacc8dee9449f8e3a17afb577"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Orientation of the wheel.</p>
 <p>The reference system is the vehicle frame (center of bounding box). </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1aac1cc436ddbf53001ca1a5269b536dc0"></span><code class="sig-name descname">optional double rotation_rate   = 8</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1aac1cc436ddbf53001ca1a5269b536dc0"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rotation_rate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>Rotation rate of the wheel. The rotation rate around the y-axis with respect to the wheel’s coordinate system.</p>
 <p>Unit: rad/s.</p>
 <p>The sign convention is defined using the right-hand rule. It is applied on the y-axis of the vehicle’s reference system (center of bounding box). Counterclockwise is positive and clockwise is negative.</p>
@@ -548,7 +547,7 @@
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname">optional string model_reference   = 9</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the wheel.</p>
 <p><dl class="simple">
 <dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
@@ -564,113 +563,113 @@
 
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassificationE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassificationE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassificationE"></span><span id="osi3::MovingObject::VehicleClassification"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification"></span><em class="property">struct </em><code class="sig-name descname">VehicleClassification</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassificationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassificationE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassificationE"></span><span id="osi3::MovingObject::VehicleClassification"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">VehicleClassification</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassificationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Information for the classification of vehicles regarding <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> (host or other). </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4TypeE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4TypeE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4TypeE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189"></span><em class="property">enum </em><code class="sig-name descname">Type</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4TypeE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4TypeE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Type</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4TypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of vehicle types. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189aec66603fc9aa8b1d34018624bbec3108"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189aec66603fc9aa8b1d34018624bbec3108"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Type of vehicle is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189acb1dee27892b248476d04004a935af0e"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189acb1dee27892b248476d04004a935af0e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) type of vehicle. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ac718a0ff22197a44b39472bea7e61f85"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_SMALL_CAR</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ac718a0ff22197a44b39472bea7e61f85"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_SMALL_CAR</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_SMALL_CARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a small car.</p>
 <p>Definition: Hatchback car with maximum length 4 m. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab40589ead1b3d66b0960e3f0e44dc99d"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_COMPACT_CAR</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab40589ead1b3d66b0960e3f0e44dc99d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_COMPACT_CAR</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_COMPACT_CARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a compact car.</p>
 <p>Definition: Hatchback car with length between 4 and 4.5 m. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189aa4cc83f7e97bef135062b2d10ed96ecc"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_MEDIUM_CAR</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189aa4cc83f7e97bef135062b2d10ed96ecc"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_MEDIUM_CAR</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_MEDIUM_CARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a medium car.</p>
 <p>Definition: Hatchback or sedan with lenght between 4.5 and 5 m. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab33b4a7846b43eebad650ba75fa77f21"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_LUXURY_CAR</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab33b4a7846b43eebad650ba75fa77f21"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_LUXURY_CAR</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_LUXURY_CARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a luxury car.</p>
 <p>Definition: Sedan or coupe that is longer then 5 m. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a32997755078624bff21f884bba6390a4"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_DELIVERY_VAN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a32997755078624bff21f884bba6390a4"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_DELIVERY_VAN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type17TYPE_DELIVERY_VANE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a delivery van.</p>
 <p>Definition: A delivery van. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab0c863afde22fc252f1cfdc5017e9bee"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_HEAVY_TRUCK</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab0c863afde22fc252f1cfdc5017e9bee"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_HEAVY_TRUCK</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_HEAVY_TRUCKE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a heavy truck. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ad699ae83bd8e73abfb186a0f3de31032"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_SEMITRAILER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ad699ae83bd8e73abfb186a0f3de31032"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_SEMITRAILER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type16TYPE_SEMITRAILERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a truck with semitrailer. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab9b04f1b060bb4489db8ad60a6879e4e"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_TRAILER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab9b04f1b060bb4489db8ad60a6879e4e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_TRAILER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_TRAILERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a trailer (possibly attached to another vehicle). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab53bad6d89068f83e36d674c913b6b8d"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_MOTORBIKE</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189ab53bad6d89068f83e36d674c913b6b8d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_MOTORBIKE</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type14TYPE_MOTORBIKEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a motorbike or moped. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a72cc520d97695dc8aa981f9954d7df20"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_BICYCLE</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a72cc520d97695dc8aa981f9954d7df20"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_BICYCLE</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type12TYPE_BICYCLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a bicycle (without motor and specific lights). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a9c6e20f0148178e2f06f1894b6af62dc"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_BUS</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a9c6e20f0148178e2f06f1894b6af62dc"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_BUS</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type8TYPE_BUSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a bus. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a336aedac92512e3d90315397f09a283e"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_TRAM</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a336aedac92512e3d90315397f09a283e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_TRAM</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type9TYPE_TRAME" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a tram. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a763f1bcda4dc3bf98b9bc01cf6b2b35d"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_TRAIN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a763f1bcda4dc3bf98b9bc01cf6b2b35d"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_TRAIN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type10TYPE_TRAINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a train. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a091236ee01efd0b63b6f9964615ecd02"></span><em class="property">enumerator </em><code class="sig-name descname">TYPE_WHEELCHAIR</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a65c82aaafe22ed6996ab78713354d189a091236ee01efd0b63b6f9964615ecd02"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">TYPE_WHEELCHAIR</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification4Type15TYPE_WHEELCHAIRE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Vehicle is a wheelchair. </p>
 </dd></dl>
 
@@ -681,25 +680,25 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1ac035d2f6580e418a8ebffb746a461f21"></span><code class="sig-name descname">optional Type type   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1ac035d2f6580e418a8ebffb746a461f21"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Type</span> <span class="pre">type</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The type of the vehicle. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1abbb92dd5780b3abe7a87162043e919a0"></span><code class="sig-name descname">optional LightState light_state   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1abbb92dd5780b3abe7a87162043e919a0"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">LightState</span> <span class="pre">light_state</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The light state of the vehicle. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a895d31955ea81f96e05983d41d4cc9d6"></span><code class="sig-name descname">optional bool has_trailer   = 3</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a895d31955ea81f96e05983d41d4cc9d6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">bool</span> <span class="pre">has_trailer</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Flag defining whether the vehicle has an attached trailer. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a12a530dffb8ca980ee9909072c54e482"></span><code class="sig-name descname">optional Identifier trailer_id   = 4</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a12a530dffb8ca980ee9909072c54e482"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">trailer_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Id of the attached trailer.</p>
 <p><p>check_if this.has_trailer is_equal_to true else do_check is_set  </p>
 <dl class="simple">
@@ -712,48 +711,48 @@
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightStateE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightStateE"></span><span id="osi3::MovingObject::VehicleClassification::LightState"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState"></span><em class="property">struct </em><code class="sig-name descname">LightState</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightStateE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightStateE"></span><span id="osi3::MovingObject::VehicleClassification::LightState"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">LightState</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightStateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The state of the lights of a vehicle. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6"></span><em class="property">enum </em><code class="sig-name descname">IndicatorState</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">IndicatorState</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorStateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of indicator states. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a3f350db2d89db857956581ff0dbe0910"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a3f350db2d89db857956581ff0dbe0910"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Indicator state is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6ad05303f9ae0a36b703217b3a4a268b0f"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6ad05303f9ae0a36b703217b3a4a268b0f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) state of indicator. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a2859e8b8c42fe78eeaccf757d0c790ae"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_OFF</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a2859e8b8c42fe78eeaccf757d0c790ae"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_OFF</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState19INDICATOR_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Indicators are off. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a56737ad8e4feb0dd2f317a9db52bfb7e"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_LEFT</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a56737ad8e4feb0dd2f317a9db52bfb7e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_LEFT</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState20INDICATOR_STATE_LEFTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Left indicator is on. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a6c7bf48ed7e3065f98d373ded9a6d361"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_RIGHT</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6a6c7bf48ed7e3065f98d373ded9a6d361"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_RIGHT</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState21INDICATOR_STATE_RIGHTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Right indicator is on. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6ab94161490fa612e6401a47c82e0f7dd5"></span><em class="property">enumerator </em><code class="sig-name descname">INDICATOR_STATE_WARNING</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9e26233cf49cf0efcadac87e9cb90aa6ab94161490fa612e6401a47c82e0f7dd5"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">INDICATOR_STATE_WARNING</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState14IndicatorState23INDICATOR_STATE_WARNINGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Hazard/warning light, i.e. both indicators, are on. </p>
 </dd></dl>
 
@@ -761,48 +760,48 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587d"></span><em class="property">enum </em><code class="sig-name descname">GenericLightState</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587d"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">GenericLightState</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightStateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of generic light states for light that may be on or off. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da4ce61d0e9902880c562e3d0e6d4f191f"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da4ce61d0e9902880c562e3d0e6d4f191f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState27GENERIC_LIGHT_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light state is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da05b41944a0fbc5748137828b08002737"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da05b41944a0fbc5748137828b08002737"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState25GENERIC_LIGHT_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) state of light. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587daf5d89e74830906c84eb2eb444ce4a050"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_OFF</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587daf5d89e74830906c84eb2eb444ce4a050"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_OFF</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState23GENERIC_LIGHT_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light is off. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da2d22a92bf57be5d2c56d07e3976783b7"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_ON</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da2d22a92bf57be5d2c56d07e3976783b7"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_ON</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState22GENERIC_LIGHT_STATE_ONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light is on. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da26de2f33082a8ab84946f2a6b277cf30"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_FLASHING_BLUE</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da26de2f33082a8ab84946f2a6b277cf30"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_FLASHING_BLUE</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState33GENERIC_LIGHT_STATE_FLASHING_BLUEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light is flashing blue. To be used for emergency vehicles. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da724c7456169c9afbe30d21b5ba3b3560"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_RED</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da724c7456169c9afbe30d21b5ba3b3560"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_RED</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState41GENERIC_LIGHT_STATE_FLASHING_BLUE_AND_REDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light is flashing blue and red. To be used for emergency vehicles. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da7b919374c9e6334b73697b5c8cb8054e"></span><em class="property">enumerator </em><code class="sig-name descname">GENERIC_LIGHT_STATE_FLASHING_AMBER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aef50eb476a6f201f48d42d00a0c1587da7b919374c9e6334b73697b5c8cb8054e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GENERIC_LIGHT_STATE_FLASHING_AMBER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState17GenericLightState34GENERIC_LIGHT_STATE_FLASHING_AMBERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Light is flashing amber. To be used for service vehicles. </p>
 </dd></dl>
 
@@ -810,36 +809,36 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23"></span><em class="property">enum </em><code class="sig-name descname">BrakeLightState</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">BrakeLightState</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightStateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of brake light states. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a4ac51bec2b6ea6cf4721f54a9f78b30e"></span><em class="property">enumerator </em><code class="sig-name descname">BRAKE_LIGHT_STATE_UNKNOWN</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a4ac51bec2b6ea6cf4721f54a9f78b30e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">BRAKE_LIGHT_STATE_UNKNOWN</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState25BRAKE_LIGHT_STATE_UNKNOWNE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Brake light state is unknown (must not be used in ground truth). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a763392d326911310a38f7bbdbca05d5b"></span><em class="property">enumerator </em><code class="sig-name descname">BRAKE_LIGHT_STATE_OTHER</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a763392d326911310a38f7bbdbca05d5b"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">BRAKE_LIGHT_STATE_OTHER</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState23BRAKE_LIGHT_STATE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Other (unspecified but known) state of brake light. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a0a0eebaa21d80dc0cad593668617fede"></span><em class="property">enumerator </em><code class="sig-name descname">BRAKE_LIGHT_STATE_OFF</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a0a0eebaa21d80dc0cad593668617fede"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">BRAKE_LIGHT_STATE_OFF</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState21BRAKE_LIGHT_STATE_OFFE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Brake lights are off. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23ad5f9cff2b0a51bc81e3f59a6eccd6a5f"></span><em class="property">enumerator </em><code class="sig-name descname">BRAKE_LIGHT_STATE_NORMAL</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23ad5f9cff2b0a51bc81e3f59a6eccd6a5f"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">BRAKE_LIGHT_STATE_NORMAL</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_NORMALE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Brake lights are on with normal intensity. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE">
-<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a554ebef610d3c380e8233da59ad2fe17"></span><em class="property">enumerator </em><code class="sig-name descname">BRAKE_LIGHT_STATE_STRONG</code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE"></span><span id="_CPPv2N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ac8aa5535231bb311da31a0cfa45a5e23a554ebef610d3c380e8233da59ad2fe17"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">BRAKE_LIGHT_STATE_STRONG</span></code><a class="headerlink" href="#_CPPv4N4osi312MovingObject21VehicleClassification10LightState15BrakeLightState24BRAKE_LIGHT_STATE_STRONGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Brake lights are on with extra bright intensity (indicating stronger braking). </p>
 </dd></dl>
 
@@ -850,61 +849,61 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9dd52b3a293d5b296b451a11b077afec"></span><code class="sig-name descname">optional IndicatorState indicator_state   = 1</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9dd52b3a293d5b296b451a11b077afec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">IndicatorState</span> <span class="pre">indicator_state</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>State of the object’s indicators. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ae3defe31384a483f30bf502c7234d894"></span><code class="sig-name descname">optional GenericLightState front_fog_light   = 2</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ae3defe31384a483f30bf502c7234d894"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">front_fog_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>State of the front fog light. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9151ebc0e2515f3a58f743ff193b7936"></span><code class="sig-name descname">optional GenericLightState rear_fog_light   = 3</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a9151ebc0e2515f3a58f743ff193b7936"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">rear_fog_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>State of the rear fog light. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1af1ef11603f3655d6105d58af33ac38ef"></span><code class="sig-name descname">optional GenericLightState head_light   = 4</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1af1ef11603f3655d6105d58af33ac38ef"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">head_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>State of the head lights. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a62778cf3684febbfd41667f820f0422b"></span><code class="sig-name descname">optional GenericLightState high_beam   = 5</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a62778cf3684febbfd41667f820f0422b"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">high_beam</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>State of the high beam. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a4ff4d25be361bc831238a27a197503a6"></span><code class="sig-name descname">optional GenericLightState reversing_light   = 6</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a4ff4d25be361bc831238a27a197503a6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">reversing_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>State of the reversing light. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a448f9e0b0f0e39b90b2c800f920bc1ac"></span><code class="sig-name descname">optional BrakeLightState brake_light_state   = 7</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a448f9e0b0f0e39b90b2c800f920bc1ac"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BrakeLightState</span> <span class="pre">brake_light_state</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>State of the brake lights. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aa1134d39b5620fe55d7a35706ba2efa2"></span><code class="sig-name descname">optional GenericLightState license_plate_illumination_rear   = 8</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1aa1134d39b5620fe55d7a35706ba2efa2"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">license_plate_illumination_rear</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>State of the (rear) license plate illumination. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a27a9f18b2697ae7d2c13f0cd31085997"></span><code class="sig-name descname">optional GenericLightState emergency_vehicle_illumination   = 9</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1a27a9f18b2697ae7d2c13f0cd31085997"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">emergency_vehicle_illumination</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Lighting of emergency vehicles (ambulance, fire engine, police car, etc.). Must be set only if a vehicle is allowed to use this illumination type. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ab7c5f741b220355a46864b7ad1f82c63"></span><code class="sig-name descname">optional GenericLightState service_vehicle_illumination   = 10</code></dt>
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1_1LightState_1ab7c5f741b220355a46864b7ad1f82c63"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">GenericLightState</span> <span class="pre">service_vehicle_illumination</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>Lighting of service vehicles (snow removal, garbage truck, towing vehicle, slow or wide vehicle, etc.). Must be set only if a vehicle is allowed to use this illumination type. </p>
 </dd></dl>
 

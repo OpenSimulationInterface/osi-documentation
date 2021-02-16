@@ -35,7 +35,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,7 +208,7 @@
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
 <dt id="_CPPv4N4osi313TrafficAction26LongitudinalDistanceActionE">
-<span id="_CPPv3N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="_CPPv2N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="osi3::TrafficAction::LongitudinalDistanceAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction"></span><em class="property">struct </em><code class="sig-prename descclassname">osi3::<a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction">TrafficAction</a><code class="sig-prename descclassname">::</code></code><code class="sig-name descname">LongitudinalDistanceAction</code><br /></dt>
+<span id="_CPPv3N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="_CPPv2N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="osi3::TrafficAction::LongitudinalDistanceAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="pre">TrafficAction</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LongitudinalDistanceAction</span></code><br /></dt>
 <dd><p>Longitudinal Distance Action. </p>
 <p>The action tells the (host) traffic participant to reach a certain longitudinal distance relative to a target traffic participant. The longitudinal distance is defined as the distance along the centerline of the lane, on which the (host) traffic participant is currently located. The interpolation strategy between centerline points for calculating that distance along the centerline is open to the traffic participant modeller.</p>
 <p><dl class="simple">
@@ -223,38 +222,38 @@
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a654eb958853b42b41a8d10cc9bb2c19c"></span><code class="sig-name descname">optional ActionHeader action_header   = 1</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a654eb958853b42b41a8d10cc9bb2c19c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Action Header of the message </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a061e9fb4e643af3fcd42b8be22d183fe"></span><code class="sig-name descname">optional Identifier target_traffic_participant_id   = 2</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a061e9fb4e643af3fcd42b8be22d183fe"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">target_traffic_participant_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Unique Id of the reference traffic participant to which the distance is defined. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a1e077ee11f27eae739cbdd720969976b"></span><code class="sig-name descname">optional double distance   = 3</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a1e077ee11f27eae739cbdd720969976b"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">distance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The distance to reach along the lane</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a32cc72e36926d7a2f4a761754699d479"></span><code class="sig-name descname">optional bool freespace   = 4</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a32cc72e36926d7a2f4a761754699d479"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">bool</span> <span class="pre">freespace</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Determine the measurement of longitudinal distance between the traffic participant receiving this action and the reference traffic participant. True: Longitudinal distance is measured using the distance between closest bounding box points. False: Longitudinal distance is mesasured using the distance between the center of each object’s bounding box. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a99de3bedcc35721ebba9ddb1800627ae"></span><code class="sig-name descname">optional bool follow   = 5</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1a99de3bedcc35721ebba9ddb1800627ae"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">bool</span> <span class="pre">follow</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Define wheather the traffic participant should only reach the distance once or if it should also keep the distance after having reached it. True: the traffic participant shall approach the reference participant and follow with the distance specified until the action is aborted (communicate with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1AbortActionsAction.html#structosi3_1_1TrafficAction_1_1AbortActionsAction"><span class="std std-ref">AbortActionsAction</span></a>). False: the action ends as soon as the traffic participant has reached the specified distance (communicate with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1EndActionsAction.html#structosi3_1_1TrafficAction_1_1EndActionsAction"><span class="std std-ref">EndActionsAction</span></a>). </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1aab09e26527907a9ef72ab28946486307"></span><code class="sig-name descname">optional DynamicConstraints dynamic_constraints   = 6</code></dt>
+<span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction_1aab09e26527907a9ef72ab28946486307"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DynamicConstraints</span> <span class="pre">dynamic_constraints</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Parameter that assings either unlimited dynamics (if omitted) or limited maxAcceleration/maxDeceleration/maxSpeed to the action. </p>
 </dd></dl>
 
