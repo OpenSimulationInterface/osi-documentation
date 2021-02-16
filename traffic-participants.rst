@@ -8,9 +8,9 @@ A traffic participant is an element of the simulated world, which can change its
 A traffic participant represents one of the following:
 
 - A living being.
-- A means of transportation for living beings.
-- A means of transportation for goods.
-- Any other movable object that may travel the road network.
+- A means of transportation for living beings
+- A means of transportation for goods
+- Any other movable object that may travel the road network
 
 Pedestrians and animals are examples of traffic participants that are living objects.
 Vehicles are examples of traffic participants that are means of transportation.
