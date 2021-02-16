@@ -37,6 +37,10 @@ The ``SensorView`` Configuration interface is the configuration setting for the 
 
 The ``SensorView`` interface is derived from ``GroundTruth`` and used as input to sensor models. The ``SensorView`` information is supposed to provide input to sensor models for simulation of actual real sensors. All information regarding the environment is given with respect to the virtual sensor coordinate system, except for the individual physical technology-specific data, which is given with respect to the physical sensor coordinate system specified in the corresponding physical sensor's mounting position, and the global ground truth, which is given in global coordinates.
 
+The ```TrafficCommand`` interface provides control commands from the scenario engine to traffic participant models.
+
+The ``TrafficUpdate`` interface is provided by traffic participant models to provide updates of their position, state and future trajectory back to the simulation environment.
+
 The authors' vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations with a standardized ISO 23150 interface. This will simplify integration and thus significantly strengthen the accessibility and usefulness of virtual testing.
 
 
