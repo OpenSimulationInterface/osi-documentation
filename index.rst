@@ -19,7 +19,7 @@ An easy and straight-forward compatibility between automated driving functions a
 OSI was developed exactly for this purpose and addresses the emerging standard ISO 23150 for real sensors' standardized communication interface.
 In this context, OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components:
 
-.. image:: _static/images/osicontextwiki.png
+.. image:: _static/images/osi-context.png
    :align: center
 
 Interfaces
