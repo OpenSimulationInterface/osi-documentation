@@ -211,67 +211,74 @@ For more information on OSI see the [<span class="nt">official documentation</sp
 [1] Hanke, T., Hirsenkorn, N., van-Driesten, C., Garcia-Ramos, P., Schiementz, M., Schneider, S. &amp; Biebl, E. (2017, February 03). <span class="ge">*A generic interface for the environment perception of automated driving functions in virtual scenarios.*</span> Retrieved January 25, 2020, from https://www.hot.ei.tum.de/forschung/automotive-veroeffentlichungen/
 
 <span class="gu">## Usage</span>
-<span class="gu">##### Example of writing and reading an OSI message in `Python`</span>
+<span class="gu">##### Example of generating OSI messages in `Python`</span>
 <span class="sb">```python</span>
+<span class="c1"># generate_osi_messages.py</span>
 <span class="kn">from</span> <span class="nn">osi3.osi_sensorview_pb2</span> <span class="kn">import</span> <span class="n">SensorView</span>
-<span class="kn">from</span> <span class="nn">osi3.osi_sensordata_pb2</span> <span class="kn">import</span> <span class="n">SensorData</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+
+<span class="n">NANO_INCREMENT</span> <span class="o">=</span> <span class="mi">10000000</span>
+<span class="n">MOVING_OBJECT_LENGTH</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">MOVING_OBJECT_WIDTH</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">MOVING_OBJECT_HEIGHT</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Initialize SensorView and SensorData&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Initialize SensorView&quot;&quot;&quot;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sv_330_361_1000_movingobject.osi&quot;</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span>
     <span class="n">sensorview</span> <span class="o">=</span> <span class="n">SensorView</span><span class="p">()</span>
-    <span class="n">sensordata</span> <span class="o">=</span> <span class="n">SensorData</span><span class="p">()</span>
 
-    <span class="sd">&quot;&quot;&quot;Clear SensorData&quot;&quot;&quot;</span>
-    <span class="n">sensordata</span><span class="o">.</span><span class="n">Clear</span><span class="p">()</span>
-
-    <span class="sd">&quot;&quot;&quot;Get boundary line attributes from SensorView&quot;&quot;&quot;</span>
     <span class="n">sv_ground_truth</span> <span class="o">=</span> <span class="n">sensorview</span><span class="o">.</span><span class="n">global_ground_truth</span>
-    <span class="n">sv_lane_boundary</span> <span class="o">=</span> <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">lane_boundary</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-    <span class="n">sv_boundary_line</span> <span class="o">=</span> <span class="n">sv_lane_boundary</span><span class="o">.</span><span class="n">boundary_line</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-    <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">1699.20</span>
-    <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">100.16</span>
-    <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mf">0.13</span>
-    <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">version_major</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">version_minor</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">version_patch</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="sd">&quot;&quot;&quot;Set boundary line attributes to SensorData&quot;&quot;&quot;</span>
-    <span class="n">sd_lane_boundary</span> <span class="o">=</span> <span class="n">sensordata</span><span class="o">.</span><span class="n">lane_boundary</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-    <span class="n">sd_boundary_line</span> <span class="o">=</span> <span class="n">sd_lane_boundary</span><span class="o">.</span><span class="n">boundary_line</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
-    <span class="n">sd_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span>
-    <span class="n">sd_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span>
-    <span class="n">sd_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span>
-    <span class="n">sd_boundary_line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">width</span>
-    <span class="n">sd_boundary_line</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">sv_boundary_line</span><span class="o">.</span><span class="n">height</span>
+    <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">seconds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">nanos</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="sd">&quot;&quot;&quot;Serialize SensorData which can be send&quot;&quot;&quot;</span>
-    <span class="n">string_buffer</span> <span class="o">=</span> <span class="n">sensordata</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">()</span>
+    <span class="n">moving_object</span> <span class="o">=</span> <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">moving_object</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+    <span class="n">moving_object</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">42</span>
 
-    <span class="sd">&quot;&quot;&quot;Clear SensorData to show parsing from string&quot;&quot;&quot;</span>
-    <span class="n">sensordata</span><span class="o">.</span><span class="n">Clear</span><span class="p">()</span>
+    <span class="c1"># Generate 1000 OSI messages for a duration of 10 seconds</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;The received string buffer can now be parsed&quot;&quot;&quot;</span>
-    <span class="n">sensordata</span><span class="o">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">string_buffer</span><span class="p">)</span>
+        <span class="c1"># Increment the time</span>
+        <span class="k">if</span> <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">nanos</span> <span class="o">&gt;</span> <span class="mi">1000000000</span><span class="p">:</span>
+            <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">seconds</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">nanos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">sv_ground_truth</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">nanos</span> <span class="o">+=</span> <span class="n">NANO_INCREMENT</span>
 
-    <span class="sd">&quot;&quot;&quot;Print SensorData&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sensordata</span><span class="p">)</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">vehicle_classification</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="mi">2</span>
+
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">dimension</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">MOVING_OBJECT_LENGTH</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">dimension</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">MOVING_OBJECT_WIDTH</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">dimension</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">MOVING_OBJECT_HEIGHT</span>
+
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">0.5</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">roll</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">moving_object</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">yaw</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="sd">&quot;&quot;&quot;Serialize&quot;&quot;&quot;</span>
+        <span class="n">bytes_buffer</span> <span class="o">=</span> <span class="n">sensorview</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">()</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;&lt;L&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bytes_buffer</span><span class="p">)))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bytes_buffer</span><span class="p">)</span>
+
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 <span class="sb">```</span>
-<span class="gs">**Output**</span>:
+
+To run the script execute the following command in the terminal:
 <span class="sb">```bash</span>
-lane_boundary <span class="o">{</span>
-  boundary_line <span class="o">{</span>
-    position <span class="o">{</span>
-      x: <span class="m">1699</span>.2
-      y: <span class="m">100</span>.16
-      z: <span class="m">0</span>.0
-    <span class="o">}</span>
-    width: <span class="m">0</span>.13
-    height: <span class="m">0</span>.0
-  <span class="o">}</span>
-<span class="o">}</span>
+python3 generate_osi_messages.py
 <span class="sb">```</span>
+
+This will output an osi file (<span class="sb">`sv_330_361_1000_movingobject.osi`</span>) which can be visualized and played back by the [<span class="nt">osi-visualizer</span>](<span class="na">https://github.com/OpenSimulationInterface/osi-visualizer</span>).
+
 See Google&#39;s documentation for more tutorials on how to use protocol buffers with [<span class="nt">Python</span>](<span class="na">https://developers.google.com/protocol-buffers/docs/pythontutorial</span>) or [<span class="nt">C++</span>](<span class="na">https://developers.google.com/protocol-buffers/docs/cpptutorial</span>).
 <span class="gu">## Installation</span>
 <span class="gu">##### Dependencies</span>
