@@ -35,7 +35,7 @@ The following figure shows the interfaces of a generic traffic participant.
 Traffic participant models may use other OSI interfaces internally, for example, to model autonomous vehicles.
 The following figure shows a more advanced use case for traffic participants.
 
-.. image:: _static/images/osi-traffic-participant-use-case-3.png
+.. image:: _static/images/osi-traffic-participant-advanced.png
    :align: center
    :alt: Traffic participant with sensor models, AD function, and dynamic model
 
