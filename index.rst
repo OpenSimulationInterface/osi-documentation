@@ -73,6 +73,7 @@ The authors' vision is to be able to connect any automated driving function to a
    open-simulation-interface/doc/installation
    open-simulation-interface/doc/fileformat
    open-simulation-interface/doc/coordinatesystem
+   osi-documentation/traffic-participants
    open-simulation-interface/doc/interfaceconventions
    open-simulation-interface/doc/commenting
    open-simulation-interface/doc/versioning
