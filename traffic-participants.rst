@@ -20,7 +20,7 @@ The following figure shows the interface of a traffic participant.
 
 .. image:: _static/images/osi-traffic-participant-principle.png
    :align: center
-   :alt: Traffic participant interface
+   :alt: Traffic participant interfaces
 
 With every simulation step, an OSI traffic participant model receives ground truth data from the environment around itself, the sensor view.
 A traffic participant can output its own perceivable state, the traffic update.

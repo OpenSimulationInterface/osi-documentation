@@ -18,24 +18,26 @@ In order to achieve widespread use of driving simulators for function developers
 An easy and straight-forward compatibility between automated driving functions and the variety of available driving simulation frameworks is made possible by OSI.
 OSI was developed exactly for this purpose and addresses the emerging standard ISO 23150 for real sensors' standardized communication interface.
 In this context, OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components:
+The following figure shows the interfaces and models involved in modeling a sensor.
 
 .. image:: _static/images/osi-context.png
    :align: center
+   :alt: Open Simulation Interface overview
 
 OSI also defines interfaces for traffic participant models.
-These interfaces allow to send commands to traffic participant models and receive their updated state.
-The following image shows the interfaces of a generic traffic participant.
+These interfaces allow to send commands to traffic participant models and to receive their updated state.
+The following figure shows the interfaces of a generic traffic participant.
 
 .. image:: _static/images/osi-traffic-participant-principle.png
    :align: center
-   :alt: Traffic participant interfaces.
+   :alt: Traffic participant interfaces
 
 Traffic participant models may use other OSI interfaces internally, for example, to model autonomous vehicles.
-The following image shows a more advanced use case for traffic participants.
+The following figure shows a more advanced use case for traffic participants.
 
 .. image:: _static/images/osi-traffic-participant-use-case-3.png
    :align: center
-   :alt: Traffic participant with sensor models, AD-function, and dynamic model.
+   :alt: Traffic participant with sensor models, AD function, and dynamic model
 
 OSI currently provides only limited support for data structures describing measured internal states of the traffic participant.
 Actuator intentions are currently not covered by OSI and must be handled with a different data description format.
