@@ -14,13 +14,12 @@ now = datetime.datetime.now()
 # -- Project information -----------------------------------------------------
 
 project = 'Open Simulation Interface'
-copyright = f'{now.year}, Carlo van Driesten'
-author = 'Carlo van Driesten'
+copyright = f'{now.year}, ASAM e.V.'
 
 # The short X.Y version
 # version = ''
 # The full version, including alpha/beta/rc tags
-release = 'v3.1.2'
+release = 'v3.3.0'
 
 add_module_names = False
 
@@ -43,7 +42,7 @@ extensions = [
     'exhale',
     'recommonmark'
 ]
-breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/osi-validation/open-simulation-interface/doc/xml" }
+breathe_projects = { "open-simulation-interface": "/home/travis/build/OpenSimulationInterface/osi-documentation/open-simulation-interface/doc/xml" }
 breathe_default_project = "open-simulation-interface"
 
 # Setup the exhale extension
