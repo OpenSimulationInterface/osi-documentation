@@ -32,7 +32,7 @@ They may come from a separate source, for example, a scenario engine.
 Use cases for traffic participants
 ----------------------------------
 
-Different models are involved in modeling a traffic participant.
+Different models may be involved in modeling a traffic participant.
 In all the use cases, a simulator loads and interprets a scenario and a map prior to execution.
 The scenario is, for example, provided by OpenSCENARIO.
 The map data is, for example, provided by OpenDRIVE.
