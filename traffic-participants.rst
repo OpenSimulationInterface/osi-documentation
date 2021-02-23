@@ -82,9 +82,3 @@ Such a cooperative use case is, for example, relevant to studies on human-machin
 In this example, a virtual on-screen representation of the scenario, or mock-up, is added after the AD function.
 The driver-in-the-loop interacts with the dynamics model via this mock-up.
 OSI's limitations regarding dynamics-model input apply in this example as well.
-
-The following figure shows a similar example with the difference that there is only a human driver in control.
-
-.. image:: _static/images/osi-traffic-participant-use-case-5.png
-   :align: center
-   :alt: Traffic participant with driver in the loop
