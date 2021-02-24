@@ -62,6 +62,7 @@ script:
     - doxygen
     - cd ../..
     - cp -rf open-simulation-interface/doc/images/* open-simulation-interface/doc/xml/
+    - cp -rf open-simulation-interface/doc/images/BASt_2017/* open-simulation-interface/doc/xml/
 
     # Check spelling mistakes
     # - make spelling
