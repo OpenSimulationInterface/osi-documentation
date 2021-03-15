@@ -1,0 +1,97 @@
+= Open Simulation Interface
+
+:revnumber: v.v.v 
+:revdate: dd.mm.yyyy
+:toc: left 
+:toclevels: 2
+:sectnums:
+
+:topicdir: topics
+:reusedir: reuse
+
+// header & footer for html
+// html themes
+//
+// source highlighting
+:source-highlighter: rouge
+:rouge-style: base16.solarized.light
+// 
+// :nofooter:
+:last-update-label!:
+//embed images into html
+:data-uri: 
+:mathematical-format: svg
+:imagesoutdir: ../images/generated_images
+
+// 
+
+include::./general_docs/foreword.adoc[leveloffset=+1]
+
+== Introduction
+
+include::./general_docs/statements.adoc[leveloffset=+2]
+
+include::./general_docs/conventions.adoc[leveloffset=+2]
+
+include::./general_docs/other_asam_standards.adoc[leveloffset=+2]
+
+include::./general_docs/non_asam_standards.adoc[leveloffset=+2]
+
+// START: including the documentation of other osi repositories
+
+include::./open-simulation-interface/doc/open-simulation-interface_user_guide.adoc[leveloffset=+1]
+
+include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
+
+include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1]
+
+include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1]
+
+include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
+
+// END: including the documentation of other osi repositories
+
+== Contributing to ASAM OSI
+
+include::./contributing/start_contributing.adoc[leveloffset=+2]
+
+include::./contributing/osi_repos.adoc[leveloffset=+2]
+
+
+include::./contributing/reporting_issues.adoc[leveloffset=+2]
+
+=== Contributing changes
+
+include::./contributing/licensing.adoc[leveloffset=+3]
+
+include::./contributing/dco.adoc[leveloffset=+3]
+
+include::./contributing/signing_off_commits.adoc[leveloffset=+3]
+
+include::./contributing/contribution_rules.adoc[leveloffset=+3]
+
+include::./contributing/naming_conventions.adoc[leveloffset=+3]
+
+include::./contributing/branching_member.adoc[leveloffset=+3]
+
+include::./contributing/forking_no_member.adoc[leveloffset=+3]
+
+include::./contributing/contributing_docs.adoc[leveloffset=+3]
+
+include::./contributing/creating_comments.adoc[leveloffset=+3]
+
+include::./contributing/creating_images.adoc[leveloffset=+3]
+
+=== Reviewing contributions
+
+include::./contributing/asking_review.adoc[leveloffset=+3]
+
+include::./contributing/review_author.adoc[leveloffset=+3]
+
+include::./contributing/review_reviewer.adoc[leveloffset=+3]
+
+// 
+
+include::./general_docs/glossary.adoc[leveloffset=+1]
+
+include::./general_docs/bibliography.adoc[leveloffset=+1]
