@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>v3.2.0 - OSI “Editorial Eaton” &mdash; Open Simulation Interface v3.3.0 documentation</title>
+  <title>v3.3.0 - OSI “Fabulous Fangio” &mdash; Open Simulation Interface v3.3.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="v3.3.0 - OSI “Fabulous Fangio”" href="v03.03.html" />
-    <link rel="prev" title="v3.1.0 - OSI “Dynamic Duncan”" href="v03.01.html" /> 
+    <link rel="next" title="Contributors’ Guidelines" href="../howtocontribute.html" />
+    <link rel="prev" title="v3.2.0 - OSI “Editorial Eaton”" href="v03.02.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,12 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="v03.01.html">v3.1.0 - OSI “Dynamic Duncan”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v03.01.html#id3">v3.1.1 - OSI “Dynamic Duncan”, Update 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v03.01.html#id6">v3.1.2 - OSI “Dynamic Duncan”, Update 2</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">v3.2.0 - OSI “Editorial Eaton”</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="v03.02.html">v3.2.0 - OSI “Editorial Eaton”</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v3.3.0 - OSI “Fabulous Fangio”</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#purpose">Purpose:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Content/Changes:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="v03.03.html">v3.3.0 - OSI “Fabulous Fangio”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../howtocontribute.html">Contributors’ Guidelines</a></li>
@@ -193,13 +193,13 @@
         
           <li><a href="../releases.html">Releases</a> &raquo;</li>
         
-      <li>v3.2.0 - OSI “Editorial Eaton”</li>
+      <li>v3.3.0 - OSI “Fabulous Fangio”</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../../_sources/open-simulation-interface/doc/releases/v03.02.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/open-simulation-interface/doc/releases/v03.03.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -213,54 +213,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.2.0">v3.2.0 - OSI “Editorial Eaton”</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=SJUhlRoBL8M">Think p(OSI)tive!</a></p>
+<h1><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.3.0">v3.3.0 - OSI “Fabulous Fangio”</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Stay p(OSI)tive!</p>
 <div class="section" id="purpose">
 <h2>Purpose:<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<p>The work on the OSI project was until now mainly organized by the BMW AG. In order to enable as many interested parties as possible to
-contribute to the success of the Open Simulation Interface the project has been transferred to the <a class="reference external" href="https://www.asam.net/">ASAM e.V.</a>
-which has been made public in the <a class="reference external" href="https://www.asam.net/news-media/news/detail/news/bmw-transfers-open-simulation-interface-osi-to-asam/">ASAM press release</a>.
-A new chapter in the development of OSI is now opened with the <a class="reference external" href="https://www.asam.net/conferences-events/detail/asam-osi-kick-off-workshop/">kickoff workshop</a>
-leading to hopefully many project proposals streamlining the efficient future development of the interface.
-Due to this we decided to focus on the improvement of processes and documentation with this release.</p>
+<p>As a part of the increasing adoption of OSI in the industry, and its movement to ASAM as its home,
+several new use cases and extensions for OSI have been identified.
+This minor release highlights the work that has been done on several working packages including
+the introduction of brand new top level messages which extend OSI’s scope beyond the specialized world of sensor modeling.</p>
 </div>
 <div class="section" id="id2">
-<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?q=is%3Apr+is%3Aclosed+milestone%3Av3.2.0">Content/Changes</a>:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/13?closed=1">Content/Changes</a>:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Updated README according to K(eep) I(t) S(imply) S(tupid) principle</p></li>
-<li><p>Added Issue and Pullrequest templates</p></li>
-<li><dl class="simple">
-<dt>Travis CI updated</dt><dd><ul>
-<li><p>Update to bionic 18.04</p></li>
-<li><p>Added tests for building protobuf 2.6 and 3.0 in parallel</p></li>
-<li><p>Bugfixed the display of doubled documentation</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Fixed several typos in the comments</p></li>
-<li><dl class="simple">
-<dt>Added a centralized documentation in <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-documentation">OSI-Documentation</a></dt><dd><ul>
-<li><p>Added contributors guidelines</p></li>
-<li><p>Added commenting style guidelines</p></li>
-<li><p>Added uniform citation style according to APA</p></li>
-<li><p>Updated installation guides for osi in Linux and Windows</p></li>
-<li><p>Added a reference in sphinx based on the generated doxygen documentation</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Added rules to the comments in order to enforce osi message validation with the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">OSI-Validator</a></p></li>
-<li><p>Added the rule definitions in the rules.yml</p></li>
-<li><p>Modularized testing of commenting style into python unit tests</p></li>
-<li><p>Defined a standardazied a file format for reading trace files (<a href="#id3"><span class="problematic" id="id4">*</span></a>.osi)</p></li>
-<li><p>Defined naming conventions of osi files</p></li>
-<li><p>Added a <a href="#id5"><span class="problematic" id="id6">*</span></a>.txt to <a href="#id7"><span class="problematic" id="id8">*</span></a>.osi file converter for backward compatibility</p></li>
-<li><p>Added a script to make traces readable for plausibility checks</p></li>
-<li><p>Corrected the citing style for OSI Bibtex</p></li>
-<li><p>Corrected unit specifications and references according to DIN (e.g. removed Unit: [])</p></li>
-<li><p>Added timestamp in osi_environment</p></li>
-<li><p>Added is_out_of_service bool to traffic light / traffic sign</p></li>
+<li><p>Introduced the TrafficCommand top-level message which enables event-based control of traffic participant models, e.g. with regard to a scenario specification.</p></li>
+<li><p>Introduced the TrafficUpdate top-level message to send updated properties of traffic participant models.</p></li>
+<li><p>Add new LogicalDetectionData message to SensorData, which provides detection data with respect to the reference frame of the logical/virtual sensor.</p></li>
+<li><p>Added a new submessage to further specify wheel data.</p></li>
+<li><p>Added a new field to support future trajectories of moving objects.</p></li>
+<li><p>Added a new subtype message to osi_lane to better align with OpenDrive’s lane type information and enable traffic participant models to identify lanes on which they are supposed to move.</p></li>
+<li><p>Extended traffic lights and signs messages to include the model_references attribute that can be used to point out to a 3D-model.</p></li>
+<li><p>Add global model reference to ground truth that can be used to specify the 3D model representing the environment.</p></li>
+<li><p>Extended the camera sensor view configuration to better support the configuration of the simulation environment.</p></li>
+<li><p>Added a new field to describe the position of the steering wheel.</p></li>
+<li><p>Added a message MovingObjectClassification for classify-able attributes that are shared between different moving object types. Introduced the assigned lane id and the assigned lane percentage of a moving object there.</p></li>
+<li><p>Updated to checklist for pull requests to provide clearer orientation for all users.</p></li>
+<li><p>Updated the documentation of centerline and lane boundaries (ordering of the points, describing those lines).</p></li>
+<li><p>Updated the documentation of 3D bounding boxes.</p></li>
+<li><p>Update the documentation of ground clearance.</p></li>
+<li><p>Make handling of enums in rules check more robust, especially ones.</p></li>
+<li><p>Set the default compiler to C++ 11 to support protobuf&gt;3.6.</p></li>
 </ul>
 </div>
 </div>
@@ -271,8 +252,8 @@ Due to this we decided to focus on the improvement of processes and documentatio
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="v03.03.html" class="btn btn-neutral float-right" title="v3.3.0 - OSI “Fabulous Fangio”" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="v03.01.html" class="btn btn-neutral float-left" title="v3.1.0 - OSI “Dynamic Duncan”" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../howtocontribute.html" class="btn btn-neutral float-right" title="Contributors’ Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="v03.02.html" class="btn btn-neutral float-left" title="v3.2.0 - OSI “Editorial Eaton”" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
