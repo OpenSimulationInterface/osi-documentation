@@ -212,7 +212,7 @@
 <p>This also implies that for sensors that have dynamically varying characteristics (e.g. switching between wide and narrow focus, switching update rates, etc.), the basic approach is to specify the maximum amount of data needed at all times here, and internally select the data that is needed at any point in time.</p>
 <p>In order to optimize the workload and bandwidth needed for sensor simulation, OSI packaging mechanisms can specify the ability to exchange <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration"><span class="std std-ref"><span class="pre">SensorViewConfiguration</span></span></a></code> messages not only prior to simulation startup, but also dynamically during simulation runs, thereby allowing dynamic input configuration switching to only request data that is needed in the current sensor mode. However this is more or less only a resource optimization strategy, and since providing fine-grained information like this can reveal internal characteristics of the sensor and/or sensor model, will not always be the preferred approach for reasons of IP protection. </p>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a45141898583710d16d41b92d31a7aaf9"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
