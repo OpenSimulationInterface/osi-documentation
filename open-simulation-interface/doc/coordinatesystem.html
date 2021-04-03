@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Coordinate systems and reference points &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -87,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -106,27 +107,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -198,9 +199,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="coordinate-systems-and-reference-points">
+  <section id="coordinate-systems-and-reference-points">
 <h1>Coordinate systems and reference points<a class="headerlink" href="#coordinate-systems-and-reference-points" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="coordinate-systems">
+<section id="coordinate-systems">
 <h2>Coordinate systems<a class="headerlink" href="#coordinate-systems" title="Permalink to this headline">¶</a></h2>
 <p>Currently three coordinate systems exist.</p>
 <ul class="simple">
@@ -214,20 +215,20 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">GroundTruth::moving_object::vehicle_attributes::bbcenter_to_rear</span></code>: This defines the vehicle frame origin resp. the relative frame of the vehicle, i.e. it defines the offset of the rear axis center relative to the vehicle’s reference point (center of bounding box). This offset is static and given in vehicle coordinates.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SensorData::mounting_position</span></code>: This defines the sensor’s position and orientation relative to the vehicle frame’s origin, i.e. rear axis center, and therefore defines sensor frame origin resp. the relative frame of the sensor.</p></li>
 </ul>
-</div>
-<div class="section" id="reference-points">
+</section>
+<section id="reference-points">
 <h2>Reference points<a class="headerlink" href="#reference-points" title="Permalink to this headline">¶</a></h2>
 <p>All position coordinates refer to the center of the bounding box of the object (vehicle or otherwise). This does not depend on the reference frame and is identical for all objects without exceptions.</p>
-</div>
-<div class="section" id="example-position-vectors-of-vehicles">
+</section>
+<section id="example-position-vectors-of-vehicles">
 <h2>Example: Position vectors of vehicles<a class="headerlink" href="#example-position-vectors-of-vehicles" title="Permalink to this headline">¶</a></h2>
 <p>A position vector consists of two points + orientation / coordinate system:</p>
 <p><strong>start point</strong>: This is the origin of the coordinate system. (i.e. sensor frame or world frame).</p>
 <p><strong>end point</strong>: often referred to as reference point. It is always the middle of the bounding box.</p>
 <p><strong>orientation</strong>: captured by the coordinate system. (i.e. sensor frame or world frame).</p>
 <p>Open Simulation Interface uses DIN ISO 8855:2013-11 for coordinate systems and transformations between coordinate systems.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

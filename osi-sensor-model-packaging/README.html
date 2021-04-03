@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>OSI Sensor Model Packaging &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -87,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/description.html">General description</a></li>
@@ -101,21 +102,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Sensor Model Packaging</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
@@ -129,7 +130,7 @@
 <li class="toctree-l1"><a class="reference internal" href="doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
@@ -201,22 +202,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="osi-sensor-model-packaging">
+  <section id="osi-sensor-model-packaging">
 <h1>OSI Sensor Model Packaging<a class="headerlink" href="#osi-sensor-model-packaging" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://travis-ci.com/OpenSimulationInterface/osi-sensor-model-packaging"><img alt="Build Status" src="https://travis-ci.com/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master" /></a></p>
 <p>OSI Sensor Model Packaging specifies ways in which models (like e.g. environmental effect models, sensor models and logical models) using the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">Open Simulation Interface (OSI)</a> are to be packaged for their use in simulation environments using FMI 2.0.
 The specification can be found in the <a class="reference external" href="doc/specification.rst">doc/specification.rst</a> document in this repository.</p>
 <p>For more detailed information see the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-sensor-model-packaging/README.html">official documentation</a>.</p>
-<div class="section" id="usage">
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>The examples in the directory <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples"><code class="docutils literal notranslate"><span class="pre">examples</span></code></a> of this repository can be built using CMake. They require that the open-simulation-interface submodule of the repository is populated.</p>
 <p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPDummySource"><code class="docutils literal notranslate"><span class="pre">OSMPDummySource</span></code></a> example can be used as a simplistic source of SensorView (including GroundTruth) data, that can be connected to the input of an OSMPDummySensor model, for simple testing and demonstration purposes.</p>
 <p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPCNetworkProxy"><code class="docutils literal notranslate"><span class="pre">OSMPCNetworkProxy</span></code></a> example demonstrates a simple C network proxy that can send and receive OSI data via TCP sockets.</p>
 <p>The <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/tree/master/examples/OSMPDummySensor"><code class="docutils literal notranslate"><span class="pre">OSMPDummySensor</span></code></a> example can be used as a simple dummy sensor model, demonstrating the use of OSI for sensor models consuming SensorView data and generating SensorData output.</p>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="dependencies">
+<section id="dependencies">
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
 <p>Install <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 3.10.2:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install cmake
@@ -226,8 +227,8 @@ The specification can be found in the <a class="reference external" href="doc/sp
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libprotobuf-dev protobuf-compiler
 </pre></div>
 </div>
-</div>
-<div class="section" id="build-and-install-example">
+</section>
+<section id="build-and-install-example">
 <h3>Build and install example<a class="headerlink" href="#build-and-install-example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
 $ <span class="nb">cd</span> osi-sensor-model-packaging
@@ -240,9 +241,9 @@ $ make
 $ sudo make install
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

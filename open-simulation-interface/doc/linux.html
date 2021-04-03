@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Linux &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -87,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -109,27 +110,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -203,7 +204,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linux">
+  <section id="linux">
 <h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
 <p>Install <code class="docutils literal notranslate"><span class="pre">cmake</span></code> 3.10.2:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install cmake
@@ -217,7 +218,7 @@
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libprotobuf-dev protobuf-compiler
 </pre></div>
 </div>
-<div class="section" id="c">
+<section id="c">
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
 $ <span class="nb">cd</span> open-simulation-interface
@@ -229,8 +230,8 @@ $ sudo make install
 </pre></div>
 </div>
 <p>P.S.: To build a 32-bit target under 64-bit linux, please add <code class="docutils literal notranslate"><span class="pre">-DCMAKE_CXX_FLAGS=&quot;-m32&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command. In this case, please make sure that <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> is in a 32-bit mode too.</p>
-</div>
-<div class="section" id="python">
+</section>
+<section id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <p><strong>Local</strong>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
@@ -247,8 +248,8 @@ $ <span class="nb">cd</span> open-simulation-interface
 $ sudo pip3 install .
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

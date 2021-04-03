@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Welcome to Open Simulation Interface’s documentation! &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -86,7 +87,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/doc/description.html">General description</a></li>
@@ -100,27 +101,27 @@
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proto2cpp/README.html#version-history">Version history</a></li>
@@ -192,16 +193,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-open-simulation-interface-s-documentation">
+  <section id="welcome-to-open-simulation-interface-s-documentation">
 <h1>Welcome to Open Simulation Interface’s documentation!<a class="headerlink" href="#welcome-to-open-simulation-interface-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="the-project">
+<section id="the-project">
 <h2>The Project<a class="headerlink" href="#the-project" title="Permalink to this headline">¶</a></h2>
 <p>The Open Simulation Interface (OSI) is a generic interface for the environmental perception of automated driving functions in virtual scenarios.</p>
 <p>As the complexity of automated driving functions rapidly increases, the requirements for test and development methods are growing. Testing in virtual environments offers the advantage of completely controlled and reproducible environment conditions.</p>
 <p>In this context, OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components:</p>
 <img alt="_images/osicontextwiki.png" class="align-center" src="_images/osicontextwiki.png" />
-</div>
-<div class="section" id="the-vision">
+</section>
+<section id="the-vision">
 <h2>The Vision<a class="headerlink" href="#the-vision" title="Permalink to this headline">¶</a></h2>
 <p>In order to achieve widespread use of driving simulators for function developers, the connection between the function development framework and the simulation environment has to rely on generic and standardized interfaces. An easy and straightforward compatibility between automated driving functions and the variety of available driving simulation frameworks is made possible by OSI. OSI was developed exactly for this purpose and addresses the emerging standard ISO 23150 for real sensors’ standardized communication interface.</p>
 <p>OSI contains an object-based environment description using the message format of the <a class="reference external" href="https://github.com/protocolbuffers/protobuf/wiki">protocol buffer</a> library developed and maintained by Google. OSI defines top-level messages that are used to exchange between separate models. Top-level messages defines the <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> interface, the SensorData interface and, since OSI version 3.0.0, the <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> / <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> configuration interfaces and the <code class="docutils literal notranslate"><span class="pre">FeatureData</span></code> interface.</p>
@@ -212,7 +213,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> interface is derived from <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> and used as input to sensor models. The <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> information is supposed to provide input to sensor models for simulation of actual real sensors. All information regarding the environment is given with respect to the virtual sensor coordinate system, except for the individual physical technology-specific data, which is given with respect to the physical sensor coordinate system specified in the corresponding physical sensor’s mounting position, and the global ground truth, which is given in global coordinates.</p>
 <p>The authors’ vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations with a standardized ISO 23150 interface. This will simplify integration and thus significantly strengthen the accessibility and usefulness of virtual testing.</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+<p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open-simulation-interface/doc/description.html">General description</a></li>
@@ -228,7 +229,7 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-validation/README.html">OSI Validator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="osi-validation/README.html#usage">Usage</a></li>
@@ -263,7 +264,7 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-visualizer/README.html">OSI Visualizer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="osi-visualizer/README.html#usage">Usage</a></li>
@@ -295,7 +296,7 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="osi-sensor-model-packaging/README.html#usage">Usage</a></li>
@@ -323,7 +324,7 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proto2cpp/README.html#version-history">Version history</a><ul>
@@ -345,19 +346,19 @@
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="api-reference">
+</section>
+<section id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <p>Visit the <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/">doxygen documentation</a> of the actual <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">open-simulation-interface</a> master branch.</p>
-</div>
-<div class="section" id="indices-and-tables">
+</section>
+<section id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

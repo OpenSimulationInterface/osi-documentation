@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Contributors’ Guidelines &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -87,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -117,27 +118,27 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -209,21 +210,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="contributors-guidelines">
+  <section id="contributors-guidelines">
 <span id="how-to-contribute"></span><h1>Contributors’ Guidelines<a class="headerlink" href="#contributors-guidelines" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this document is to help contributors get started with
 the ASAM Open Simulation Interface (OSI) codebase.</p>
 <p>As an open-source standardisation project, we welcome and encourage the community to submit patches directly to the project. In our collaborative open source environment, standards and methods for submitting changes help reduce the chaos that can result from an active development community.</p>
 <p>This document explains how to participate in project conversations, log bugs and enhancement requests, and submit patches to the project so your patch will be accepted quickly in the codebase.</p>
-</div>
-<div class="section" id="licensing">
+</section>
+<section id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
 <p>OSI uses the Mozilla Public License, v. 2.0. (as found in the LICENSE file in the project’s GitHub repo).</p>
 <p>The license tells you what rights you have as a developer, provided by the copyright holder. It is important that the contributor fully understands the licensing rights and agrees to them. Sometimes the copyright holder isn’t the contributor, such as when the contributor is doing work on behalf of a company.</p>
-</div>
-<div class="section" id="developer-certification-of-origin-dco">
+</section>
+<section id="developer-certification-of-origin-dco">
 <h2>Developer Certification of Origin (DCO)<a class="headerlink" href="#developer-certification-of-origin-dco" title="Permalink to this headline">¶</a></h2>
 <p>To make a good faith effort to ensure licensing criteria are met, the OSI project requires the Developer Certificate of Origin (DCO) process to be followed.</p>
 <p>The DCO is an attestation attached to every contribution made by every developer. In the commit message of the contribution, (described more fully later in this document), the developer simply adds a Signed-off-by statement and thereby agrees to the DCO.</p>
@@ -256,8 +257,8 @@ the ASAM Open Simulation Interface (OSI) codebase.</p>
     <span class="n">involved</span><span class="o">.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="dco-sign-off-methods">
+</section>
+<section id="dco-sign-off-methods">
 <h2>DCO Sign-Off Methods<a class="headerlink" href="#dco-sign-off-methods" title="Permalink to this headline">¶</a></h2>
 <p>The DCO requires a sign-off message in the following format appear on each commit in the pull request:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Firstname</span> <span class="n">Lastname</span> <span class="o">&lt;</span><span class="n">email</span><span class="nd">@address</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
@@ -278,8 +279,8 @@ the ASAM Open Simulation Interface (OSI) codebase.</p>
 </pre></div>
 </div>
 <p>Placing this script into a file called <code class="docutils literal notranslate"><span class="pre">.git/hooks/commit-msg</span></code> and making it executable (e.g. using <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">a+x</span> <span class="pre">.git/hooks/commit-msg</span></code> on unixoid operating systems) will prevent commits without a sign-off.</p>
-</div>
-<div class="section" id="reporting-issues">
+</section>
+<section id="reporting-issues">
 <h2>Reporting issues<a class="headerlink" href="#reporting-issues" title="Permalink to this headline">¶</a></h2>
 <p>The simplest way to contribute to OSI is to report issues that you may
 find with the project on <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">github</a>. Everyone can create issues.
@@ -292,8 +293,8 @@ Issues may be created to discuss:</p>
 <li><p><a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/issues/new">Other</a></p></li>
 </ul>
 <p>If practicable issues should be closed by a referenced pull request or commit (<a class="reference external" href="https://help.github.com/en/articles/closing-issues-using-keywords">here</a> you can find keywords to close issues automatically). To help developers and maintainers we provide a <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/.github/pull_request_template.md">pull request template</a> which will be generated each time you create a new pull request.</p>
-</div>
-<div class="section" id="first-steps">
+</section>
+<section id="first-steps">
 <h2>First steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">¶</a></h2>
 <p>First, make sure that you are proficient enough in protobuf. The developers
 website <a class="reference external" href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a> is a great place to start learning.
@@ -303,14 +304,14 @@ It is a good idea to read the <a class="reference external" href="https://develo
 <p>For contribution you also need be proficient in Git. You can download and read the book Pro Git by Scott Chacon and Ben Straub <a class="reference external" href="https://link.springer.com/book/10.1007%2F978-1-4842-0076-6">here</a> for free.
 Learn <a class="reference external" href="https://help.github.com/en/articles/fork-a-repo">how to fork a repository</a> and follow the suggested <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows">fork workflow</a> by Atlassian.
 Become a github guru :).</p>
-</div>
-<div class="section" id="where-to-start">
+</section>
+<section id="where-to-start">
 <h2>Where to start<a class="headerlink" href="#where-to-start" title="Permalink to this headline">¶</a></h2>
 <p>While you familiarize yourself with the basics as suggested above, you
 can have a look at the <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/annotated.html">doxgen API reference</a> of OSI. It will
 give you an overview of the OSI messages, fields, their main components and their meaning.</p>
-</div>
-<div class="section" id="our-git-workflow">
+</section>
+<section id="our-git-workflow">
 <h2>Our git workflow<a class="headerlink" href="#our-git-workflow" title="Permalink to this headline">¶</a></h2>
 <p>First, the main repository of the OSI Organization is <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">https://github.com/OpenSimulationInterface/open-simulation-interface</a>.
 The other repositories are optional extensions which add functionality to OSI like <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">validation</a>, <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">visualization</a> and <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging">model packaging</a>.
@@ -375,13 +376,13 @@ detailed motivated explanation.</p></li>
 <li><p>Consider adding stuff to the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-documentation">osi-documentation</a> or directly to the <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface/tree/master/doc">doc</a> folder in the repository.</p></li>
 <li><p>When new changes are made directly to the osi-documentation repo the documentation will be rebuild and the new changes can be seen. When making documentation changes in the doc folder of the osi repository the changes will be visible when the daily chron job of osi-documentation is executed.</p></li>
 </ul>
-</div>
-<div class="section" id="code-review">
+</section>
+<section id="code-review">
 <h2>Code Review<a class="headerlink" href="#code-review" title="Permalink to this headline">¶</a></h2>
 <p>At OSI all the code is peer reviewed before getting committed in the
 master branch. Briefly, a code review is a discussion between two or
 more developers about changes to the code to address an issue.</p>
-<div class="section" id="author-perspective">
+<section id="author-perspective">
 <h3>Author Perspective<a class="headerlink" href="#author-perspective" title="Permalink to this headline">¶</a></h3>
 <p>Code review is a tool among others to enhance the quality of the code and to
 reduce the likelihood of introducing new bugs in the code base. It is a
@@ -401,8 +402,8 @@ with the convention adopted in the code base.</p></li>
 <li><p>Are your Commit messages meaningful? (i.e., <a class="reference external" href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a> )</p></li>
 </ul>
 <p>Review your own code before calling for a peer review from a college.</p>
-</div>
-<div class="section" id="reviewer-perspective">
+</section>
+<section id="reviewer-perspective">
 <h3>Reviewer Perspective<a class="headerlink" href="#reviewer-perspective" title="Permalink to this headline">¶</a></h3>
 <p>Code review can be challenging at times. These are suggestions and common
 pitfalls a code reviewer should avoid.</p>
@@ -451,8 +452,8 @@ there might be a mistake. Despite the message being the same, the recipient migh
 have a different reactions to it and impact on the quality of this work. This
 general remark is valid for any comment.</p></li>
 </ul>
-</div>
-<div class="section" id="practicalities-how-to-ask-for-a-code-review">
+</section>
+<section id="practicalities-how-to-ask-for-a-code-review">
 <h3>Practicalities : how to ask for a code review.<a class="headerlink" href="#practicalities-how-to-ask-for-a-code-review" title="Permalink to this headline">¶</a></h3>
 <p>Our code review process uses Github. First a developer creates a new
 branch (it is often useful to prefix the name of the branch with the name of
@@ -479,9 +480,9 @@ it easier for the reviewer to keep interacting till each discussion is
 resolved. When the reviewer is satisfied, he/she will mark the discussion resolved.</p>
 <p>When all discussions are resolved, the reviewer will rebase the branch,
 squash commits and merge the MR in the master branch.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

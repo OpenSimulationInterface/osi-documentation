@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Panels &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -87,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
+              <p><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/description.html">General description</a></li>
@@ -101,14 +102,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Validator:</span></p>
+<p><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
+<p><span class="caption-text">OSI Visualizer:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">OSI Visualizer</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Panels</a><ul>
@@ -127,13 +128,13 @@
 <li class="toctree-l1"><a class="reference internal" href="nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
+<p><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -205,15 +206,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="panels">
+  <section id="panels">
 <h1>Panels<a class="headerlink" href="#panels" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="connection">
+<section id="connection">
 <h2>Connection:<a class="headerlink" href="#connection" title="Permalink to this headline">¶</a></h2>
 <p>The channel receives osi message from the network with specific IP
 address and port number, and shows up different data types.</p>
 <img alt="../../_images/Connection.png" class="align-center" src="../../_images/Connection.png" />
-</div>
-<div class="section" id="playback">
+</section>
+<section id="playback">
 <h2>Playback:<a class="headerlink" href="#playback" title="Permalink to this headline">¶</a></h2>
 <p>The channel receives osi message from the loaded file. The tool will
 check a header file of the same name with a extension: .txth. If it doesn’t
@@ -224,24 +225,24 @@ case of very large message files. By default this value is “0” ms.</p>
 playing.</p>
 <p>Besides the tool provides sending out osi message to network with specific port number.</p>
 <img alt="../../_images/PlayBack.png" class="align-center" src="../../_images/PlayBack.png" />
-</div>
-<div class="section" id="show-field-of-view">
+</section>
+<section id="show-field-of-view">
 <h2>Show Field of View:<a class="headerlink" href="#show-field-of-view" title="Permalink to this headline">¶</a></h2>
 <p>Shows the field of view for sensors, like lidar, on the grid. Users can set
 minimum range, maximum range, azimuth positive angle and azimuth
 negative angle.</p>
 <img alt="../../_images/FieldOfView.png" class="align-center" src="../../_images/FieldOfView.png" />
-</div>
-<div class="section" id="save-osi-message">
+</section>
+<section id="save-osi-message">
 <h2>Save OSI Message:<a class="headerlink" href="#save-osi-message" title="Permalink to this headline">¶</a></h2>
 <p>Log or cut out part of the osi message stream and save it to another
 file. By default the threshold is 1000000 OSI messages. The User can change
 this threshold in the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer/blob/7e8ae13ac01229753b11098c0f530163a59b9a07/src/appconfig.cpp#L53">appconfig.cpp</a>.</p>
 <img alt="../../_images/SaveOSIMessage.png" class="align-center" src="../../_images/SaveOSIMessage.png" />
-</div>
-<div class="section" id="menu-options">
+</section>
+<section id="menu-options">
 <h2>Menu options<a class="headerlink" href="#menu-options" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="file-menu">
+<section id="file-menu">
 <h3>File Menu:<a class="headerlink" href="#file-menu" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Play</span></code>: Play/Pause Channel 1 by default.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Compare</span></code>: A standalone compare tool to compare two osi
@@ -253,8 +254,8 @@ select menu. The compare script should take the two osi files’ full path
 as arguments. The compare result can be exported to a text file by
 clicking the “Export” button.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Quit</span></code>: Quit the visualizer.</p>
-</div>
-<div class="section" id="view-menu">
+</section>
+<section id="view-menu">
 <h3>View Menu:<a class="headerlink" href="#view-menu" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Combine</span> <span class="pre">Channels</span></code>: Config two channels’ “Play/Pause”
 simultaneously, or not. It can only be checked when the channels are at
@@ -265,14 +266,14 @@ checked.</p>
 Show up the selected object’s position, velocity and acceleration in
 another independent dialog. By default, it is checked.</p>
 <p>The others are self-explaining.</p>
-</div>
-</div>
-<div class="section" id="notice">
+</section>
+</section>
+<section id="notice">
 <h2>Notice<a class="headerlink" href="#notice" title="Permalink to this headline">¶</a></h2>
 <p>When playing large osi files, try to adapt the Delta Delay. Then the
 tool renders smoothly.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
