@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>OSI File Format &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -113,27 +112,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -205,23 +204,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="osi-file-format">
+  <div class="section" id="osi-file-format">
 <h1>OSI File Format<a class="headerlink" href="#osi-file-format" title="Permalink to this headline">¶</a></h1>
-<section id="formats">
+<div class="section" id="formats">
 <h2>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">¶</a></h2>
-<section id="osi">
+<div class="section" id="osi">
 <h3>*.osi<a class="headerlink" href="#osi" title="Permalink to this headline">¶</a></h3>
 <p>To save multiple serialized OSI messages into one trace file we use the length of each OSI message and save it before the actual OSI message.
 The length is represented by the first four bytes which are a little endian unsigned int that represents the length of the followed message, not including the integer itself.</p>
-</section>
-<section id="txt">
+</div>
+<div class="section" id="txt">
 <h3>*.txt<a class="headerlink" href="#txt" title="Permalink to this headline">¶</a></h3>
 <p>If you happen to have a trace file which uses <code class="docutils literal notranslate"><span class="pre">$$__$$</span></code> separation you can convert it to the official OSI trace file by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 txt2osi.py -d trace.txt
 </pre></div>
 </div>
-</section>
-<section id="txth">
+</div>
+<div class="section" id="txth">
 <h3>*.txth<a class="headerlink" href="#txth" title="Permalink to this headline">¶</a></h3>
 <p>To read to content of a serialized txt/osi trace file we also provide a converter <code class="docutils literal notranslate"><span class="pre">osi2read.py</span></code>.
 See the usage below:</p>
@@ -230,8 +229,8 @@ python3 osi2read.py -d trace.txt -f separated -o readable_trace
 </pre></div>
 </div>
 <p>which outputs a <code class="docutils literal notranslate"><span class="pre">readable_trace.txth</span></code> which can be opened by any text editor.</p>
-</section>
-<section id="summary">
+</div>
+<div class="section" id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>In summary we have currently three types of formats:</p>
 <ol class="arabic simple">
@@ -239,9 +238,9 @@ python3 osi2read.py -d trace.txt -f separated -o readable_trace
 <li><p><code class="docutils literal notranslate"><span class="pre">*.txt</span></code> trace files which are <code class="docutils literal notranslate"><span class="pre">$$__$$</span></code> separated.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*.txth</span></code> files which are human readable trace files for just plausibility checks.</p></li>
 </ol>
-</section>
-</section>
-<section id="trace-file-naming-convention">
+</div>
+</div>
+<div class="section" id="trace-file-naming-convention">
 <h2>Trace file naming convention<a class="headerlink" href="#trace-file-naming-convention" title="Permalink to this headline">¶</a></h2>
 <p>As best practice we recommend to name the trace files in the following format:</p>
 <div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>&lt;type&gt;_&lt;osi-version&gt;_&lt;protobuf-version&gt;_&lt;frame-number&gt;_&lt;custom-trace-name&gt;.osi
@@ -261,8 +260,8 @@ Scenario name = highway
 </div>
 <p>The type definition would only be possible for <code class="docutils literal notranslate"><span class="pre">SensorView</span> <span class="pre">=</span> <span class="pre">sv</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorData</span> <span class="pre">=</span> <span class="pre">sd</span></code> and <code class="docutils literal notranslate"><span class="pre">GroundTruth</span> <span class="pre">=</span> <span class="pre">gt</span></code>.
 By following this best practice users can understand the general content of a file. By comparing the information provided by the naming and the actual trace the user can check the overall validity of a trace file.</p>
-</section>
-<section id="generate-osi-traces">
+</div>
+<div class="section" id="generate-osi-traces">
 <h2>Generate OSI traces<a class="headerlink" href="#generate-osi-traces" title="Permalink to this headline">¶</a></h2>
 <p>If you want to generate a valid OSI trace file which can be used as an input for the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">osi-validator</a> or the <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">osi-visualizer</a> see the example script in python below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">osi3.osi_sensorview_pb2</span> <span class="kn">import</span> <span class="n">SensorView</span>
@@ -321,8 +320,8 @@ Here we add a moving object with the ID 114. For this object we generate in a fo
 This means the object is changing the position in the x direction through the iteration each second.
 Each time we change the x value and the timestamp we append the length of the OSI message and the serialized OSI message itself to a file called <code class="docutils literal notranslate"><span class="pre">sv_312_320_10_movingobject.osi</span></code>.
 After finishing the loop we now have a <code class="docutils literal notranslate"><span class="pre">sv_312_320_10_movingobject.osi</span></code> file which can be <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-validation">validated</a> and <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-visualizer">visualized</a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

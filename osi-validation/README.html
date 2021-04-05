@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>OSI Validator &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/description.html">General description</a></li>
@@ -102,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Validator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
@@ -120,20 +119,20 @@
 <li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
@@ -205,11 +204,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="osi-validator">
+  <div class="section" id="osi-validator">
 <h1>OSI Validator<a class="headerlink" href="#osi-validator" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://travis-ci.com/OpenSimulationInterface/osi-validation"><img alt="Travis Build Status" src="https://travis-ci.com/OpenSimulationInterface/osi-validation.svg?branch=master" /></a></p>
 <p>OSI Validator checks the compliance of OSI messages with predefined <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validation/doc/osivalidator.html#module-osivalidator.osi_rules_implementations">rules</a>. The full documentation on the validator and customization of the rules is available <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-validation/README.html">here</a>.</p>
-<section id="usage">
+<div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage: osivalidator <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--rules RULES<span class="o">]</span>
                     <span class="o">[</span>--type <span class="o">{</span>SensorView,GroundTruth,SensorData<span class="o">}]</span>
@@ -247,11 +246,11 @@ optional arguments:
                         buffering at all.
 </pre></div>
 </div>
-</section>
-<section id="installation">
+</div>
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>OSI Validator has been developed with Python 3.6 within a virtual environment on Ubuntu 18.04.</p>
-<section id="local-recommended">
+<div class="section" id="local-recommended">
 <h3>Local (recommended)<a class="headerlink" href="#local-recommended" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ <span class="nb">cd</span> osi-validation
@@ -265,15 +264,15 @@ $ <span class="nb">source</span> venv/bin/activate
 <span class="o">(</span>venv<span class="o">)</span> $ pip install .
 </pre></div>
 </div>
-<section id="compile-optional">
+<div class="section" id="compile-optional">
 <h4>Compile (optional)<a class="headerlink" href="#compile-optional" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> $ pip install pyinstaller
 <span class="o">(</span>venv<span class="o">)</span> $ pyinstaller osivalidator/osi_general_validator.py --onefile
 </pre></div>
 </div>
-</section>
-</section>
-<section id="global">
+</div>
+</div>
+<div class="section" id="global">
 <h3>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenSimulationInterface/osi-validation.git
 $ <span class="nb">cd</span> osi-validation
@@ -284,9 +283,9 @@ $ <span class="nb">cd</span> ..
 $ sudo pip3 install .
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

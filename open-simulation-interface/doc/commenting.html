@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Commenting &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -110,27 +109,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -202,17 +201,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="commenting">
+  <div class="section" id="commenting">
 <span id="id1"></span><h1>Commenting<a class="headerlink" href="#commenting" title="Permalink to this headline">¶</a></h1>
 <p>During the building process of open simulation interface (using the <a class="reference external" href="https://github.com/OpenSimulationInterface/proto2cpp">proto2cpp</a> filter), doxygen is creating a <a class="reference external" href="https://opensimulationinterface.github.io/open-simulation-interface/">reference documentation</a> processing all comments written in the code of the interface. In order to do that doxygen needs the comments to be written in a certain way. Please follow these rules to achieve that the reference documentation is created correctly. You will find further information on doxygen <a class="reference external" href="http://www.doxygen.nl/manual/docblocks.html">here</a>.</p>
 <p>For any additional comment styles see <a class="reference external" href="http://www.doxygen.nl/manual/commands.html">list</a> of doxygen commands.</p>
 <p>Reference for writing values and units: ISO 80000-1:2013-08, Quantities and units – Part 1: General
 Nice summary in German: <a class="reference external" href="https://karriere.rohde-schwarz.de/fileadmin/customer/downloads/PDF/Der_korrekte_Umgang_mit_Groessen_Einheiten_und_Gleichungen_bro_de_01.pdf">Rohde &amp; Schwarz: Der korrekte Umgang mit Groessen, Einheiten und Gleichungen</a></p>
-<section id="commenting-with-block-syntax">
+<div class="section" id="commenting-with-block-syntax">
 <h2>Commenting with block syntax<a class="headerlink" href="#commenting-with-block-syntax" title="Permalink to this headline">¶</a></h2>
 <p>Start every comment with <code class="docutils literal notranslate"><span class="pre">//</span></code> and do not use <code class="docutils literal notranslate"><span class="pre">///</span></code>.</p>
-</section>
-<section id="commenting-on-messages">
+</div>
+<div class="section" id="commenting-on-messages">
 <h2>Commenting on messages<a class="headerlink" href="#commenting-on-messages" title="Permalink to this headline">¶</a></h2>
 <p>When writing comments specifying messages please use the following template:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// &lt;Add your single line comment like this&gt;</span>
@@ -288,8 +287,8 @@ However to keep the style of the documentation coherent there should not be any 
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="commenting-on-fields-and-enums">
+</div>
+<div class="section" id="commenting-on-fields-and-enums">
 <h2>Commenting on fields and enums<a class="headerlink" href="#commenting-on-fields-and-enums" title="Permalink to this headline">¶</a></h2>
 <p>The commenting for fields and enums follows the following order:</p>
 <ol class="arabic simple">
@@ -468,8 +467,8 @@ Every OSI message should be defined properly and should have a well cited refere
 </pre></div>
 </div>
 <p>You can check the correctness of these regular expression on <a class="reference external" href="https://regex101.com/r/P4KeuO/1">regex101</a>.</p>
-</section>
-<section id="commenting-with-doxygen-references">
+</div>
+<div class="section" id="commenting-with-doxygen-references">
 <h2>Commenting with doxygen references<a class="headerlink" href="#commenting-with-doxygen-references" title="Permalink to this headline">¶</a></h2>
 <p>If you need to reference to another message etc., you can achieve that by just using the exact same name of this message (upper and lower case sensitive) in your comment and put ‘c’ in front of the message name.</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to \c GroundTruth message.</span>
@@ -480,17 +479,17 @@ Every OSI message should be defined properly and should have a well cited refere
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// A reference to a enum e.g. \c #COLOR_GREEN.</span>
 </pre></div>
 </div>
-</section>
-<section id="commenting-with-links-e-g-in-references">
+</div>
+<div class="section" id="commenting-with-links-e-g-in-references">
 <h2>Commenting with links (e.g. in references)<a class="headerlink" href="#commenting-with-links-e-g-in-references" title="Permalink to this headline">¶</a></h2>
 <p>With <code class="docutils literal notranslate"><span class="pre">[&lt;add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;](&lt;add</span> <span class="pre">url</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">link&gt;)</span></code> you can integrate a link to a certain homepage while commenting.</p>
-</section>
-<section id="commenting-with-images">
+</div>
+<div class="section" id="commenting-with-images">
 <h2>Commenting with images<a class="headerlink" href="#commenting-with-images" title="Permalink to this headline">¶</a></h2>
 <p>To include images write your comment similar to this <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">\image</span> <span class="pre">html</span> <span class="pre">&lt;Add</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">image&gt;</span> <span class="pre">&quot;&lt;Add</span> <span class="pre">optional</span> <span class="pre">caption</span> <span class="pre">here&gt;&quot;</span></code>
 Please place all your included images in <code class="docutils literal notranslate"><span class="pre">./open-simulation-interface/docs/images</span></code>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

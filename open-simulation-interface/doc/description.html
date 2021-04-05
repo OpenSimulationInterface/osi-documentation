@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>General description &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">General description</a><ul>
@@ -115,27 +114,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -207,10 +206,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="general-description">
+  <div class="section" id="general-description">
 <h1>General description<a class="headerlink" href="#general-description" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.hot.ei.tum.de/forschung/automotive-veroeffentlichungen/">TUM Department of Electrical and Computer Engineering</a></p>
-<section id="global-remarks">
+<div class="section" id="global-remarks">
 <h2>Global remarks<a class="headerlink" href="#global-remarks" title="Permalink to this headline">¶</a></h2>
 <p>All fields in the interface are set to optional and required is not
 used. This has been done to allow backward compatible changes in the
@@ -223,8 +222,8 @@ specific meaning as indicated in the accompanying comment.</p>
 <p>All field numbers of 10000 and upward are available for user-specific
 extensions (i.e. custom fields), so no future evolution of OSI will
 use field numbers of 10000 or above itself.</p>
-</section>
-<section id="compatibility">
+</div>
+<div class="section" id="compatibility">
 <h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
 <p>Definition: FAITHFULLY “All recorded data is correctly interpreted by
 the interface”</p>
@@ -239,8 +238,8 @@ forward compatible.</p>
 to read old files” All files that have been recorded in the past with a
 specific major version are FAITHFULLY valid with all combinations of
 higher minor and patch versions of the same major version.</p>
-</section>
-<section id="proto3-support">
+</div>
+<div class="section" id="proto3-support">
 <h2>Proto3 Support<a class="headerlink" href="#proto3-support" title="Permalink to this headline">¶</a></h2>
 <p>For users that need to use proto3 syntax, for example because the
 language binding of choice only supports proto3 syntax out of the box, a
@@ -253,8 +252,8 @@ remaining compatible between proto2 and proto3 libraries.</p>
 <p>In the current OSI proto2 files there are no “required” fields or “[default = xx] values assigned.
 This is intentional since the use is prohibited for now. The reason for that is the conversion from proto2 to proto3 which would require to remove defaults or required attributes and therefore change the meaning of the proto file (and thus also the valid on-the-wire protocol) silently, and is thus dangerous.</p>
 </div>
-</section>
-<section id="osi-trace-files">
+</div>
+<div class="section" id="osi-trace-files">
 <h2>OSI Trace Files<a class="headerlink" href="#osi-trace-files" title="Permalink to this headline">¶</a></h2>
 <p>If you have a serialized txt trace file which is separating OSI messages by <code class="docutils literal notranslate"><span class="pre">$$__$$</span></code> you can convert
 the trace file to the official OSI file format which uses the length of OSI messages to store and read them in a file.
@@ -270,17 +269,17 @@ python3 osi2read.py -d trace.osi
 python3 osi2read.py -d trace.txt -f separated -o myfile
 </pre></div>
 </div>
-</section>
-<section id="packaging">
+</div>
+<div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <p>A specification to package sensor models using OSI as (extended)
 Functional Mock-up Units (FMUs) for use in simulation environments is
 available <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging">here</a>.</p>
-</section>
-<section id="vector-images">
+</div>
+<div class="section" id="vector-images">
 <h2>Vector Images<a class="headerlink" href="#vector-images" title="Permalink to this headline">¶</a></h2>
 <p>The vector images for the open-simulation-interface documentation are provided in the .svg-format.</p>
-<section id="creating-vector-images">
+<div class="section" id="creating-vector-images">
 <h3>Creating vector images<a class="headerlink" href="#creating-vector-images" title="Permalink to this headline">¶</a></h3>
 <p>Objects such as roads, vehicles, signs, etc. that are embedded in the graphics are based on realistic high detailed 3D models.
 The overall scene and 3D objects are modelled using the 3D modelling software <a class="reference external" href="https://www.blender.org/">Blender</a>.
@@ -297,16 +296,16 @@ Visibility = Visible,
 Edgetype = Inclusive,
 Silhouette = true,
 Border = true;</p>
-</section>
-<section id="editing-vector-images">
+</div>
+<div class="section" id="editing-vector-images">
 <h3>Editing vector images<a class="headerlink" href="#editing-vector-images" title="Permalink to this headline">¶</a></h3>
 <p>The exported 3D vector graphics can be opened and edited with any image editing program. (e.g. <a class="reference external" href="https://inkscape.org/de/">Inkscape</a>)
 The vectors and labels are placed accordingly.
 The graphics should generally be kept in a grayscale style.
 RGBA code for grey: b3b3b3ff</p>
-</section>
-</section>
-<section id="citing">
+</div>
+</div>
+<div class="section" id="citing">
 <h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline">¶</a></h2>
 <p>Use the following citation for referencing the OSI interface in your
 scientific work:</p>
@@ -318,8 +317,8 @@ scientific work:</p>
     note = <span class="nb">{{</span>Accessed: 2019-11-05<span class="nb">}}}</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

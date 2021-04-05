@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Interface Conventions &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description</a></li>
@@ -111,27 +110,27 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -203,10 +202,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="interface-conventions">
+  <div class="section" id="interface-conventions">
 <span id="iconventions"></span><h1>Interface Conventions<a class="headerlink" href="#interface-conventions" title="Permalink to this headline">¶</a></h1>
 <p>When adding new messages, enums, field messages and field enums to OSI we enforce a few naming conventions for each type like in the <a class="reference external" href="https://developers.google.com/protocol-buffers/docs/style">style guide</a> from protobuf.</p>
-<section id="message-naming">
+<div class="section" id="message-naming">
 <h2>Message Naming<a class="headerlink" href="#message-naming" title="Permalink to this headline">¶</a></h2>
 <p>A message definition should always be in PascalCase. This means that the first letter of each word in a message should be upper case without any spaces. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
@@ -214,8 +213,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="top-level-messages">
+</div>
+<div class="section" id="top-level-messages">
 <h2>Top-Level Messages<a class="headerlink" href="#top-level-messages" title="Permalink to this headline">¶</a></h2>
 <p>All messages that are intended to be exchanged as a stand-alone message, i.e. not required to be embedded in another message, like e.g. <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> or <code class="docutils literal notranslate"><span class="pre">SensorViewConfiguration</span></code>, are required to carry an <code class="docutils literal notranslate"><span class="pre">InterfaceVersion</span></code> field as their first field, and a <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> field as their second field, e.g.:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">TopLevel</span>
@@ -233,8 +232,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="field-message-naming">
+</div>
+<div class="section" id="field-message-naming">
 <h2>Field Message Naming<a class="headerlink" href="#field-message-naming" title="Permalink to this headline">¶</a></h2>
 <p>After defining a message fields can be added to it in snake_case format. This means every letter is lower case and the words are connected through an underline character. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
@@ -243,13 +242,13 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="field-numbering">
+</div>
+<div class="section" id="field-numbering">
 <h2>Field Numbering<a class="headerlink" href="#field-numbering" title="Permalink to this headline">¶</a></h2>
 <p>Fields should be numbered consecutively starting from 1 on first definition. During maintenance, the rules of backward/forward-compatibility require that fields are never renumbered, and field numbers never re-used unless a major release is performed.</p>
 <p>All field numbers of 10000 and above are reserved for user-defined extensions and will thus never be used by OSI message fields.</p>
-</section>
-<section id="enum-naming">
+</div>
+<div class="section" id="enum-naming">
 <h2>Enum Naming<a class="headerlink" href="#enum-naming" title="Permalink to this headline">¶</a></h2>
 <p>The naming of an enum should be PascalCase. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
@@ -262,8 +261,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="enum-field-naming">
+</div>
+<div class="section" id="enum-field-naming">
 <h2>Enum Field Naming<a class="headerlink" href="#enum-field-naming" title="Permalink to this headline">¶</a></h2>
 <p>The naming of an enum field should be all in upper case. The start should be converted from the enum name PascalCase to UPPER_CASE_SNAKE_CASE. It is mandatory to add to the first enum field name the postfix <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> and to the second the postfix <code class="docutils literal notranslate"><span class="pre">_OTHER</span></code>. After that the naming can be decided by the user. It is often mentioned that the value <code class="docutils literal notranslate"><span class="pre">_UNKNOWN</span></code> should not be used in a <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code> message as there are now uncertanties by definition in <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">truth</span></code>. These values are mostly used in messages like <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> where the content is subject to interpretation. See example below:</p>
 <div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="kd">message</span> <span class="nc">EnvironmentalConditions</span>
@@ -281,8 +280,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="summary">
+</div>
+<div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Here a small summary for the naming conventions:</p>
 <p>Messages: PascalCase</p>
@@ -290,8 +289,8 @@
 <p>Enum: PascalCase</p>
 <p>Enum Fields: Name of enum converted in UPPER_CASE_SNAKE_CASE and then following the specified name</p>
 <p>After defining the messages do not forget to comment them. See also the <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/doc/commenting.html">section for commenting</a> of fields and messages.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

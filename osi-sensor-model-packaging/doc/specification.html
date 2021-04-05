@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>OSI Sensor Model Packaging Specification &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/description.html">General description</a></li>
@@ -102,21 +101,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Sensor Model Packaging Specification</a><ul>
@@ -138,7 +137,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -210,7 +209,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="osi-sensor-model-packaging-specification">
+  <div class="section" id="osi-sensor-model-packaging-specification">
 <h1>OSI Sensor Model Packaging Specification<a class="headerlink" href="#osi-sensor-model-packaging-specification" title="Permalink to this headline">¶</a></h1>
 <p>This document specifies the ways in which environmental effect models,
 sensor models, logical models and traffic participant models using the
@@ -222,7 +221,7 @@ interpreted according to the <a class="reference external" href="http://semver.o
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
 “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
 document are to be interpreted as described in <a class="reference external" href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
-<section id="kinds-of-models">
+<div class="section" id="kinds-of-models">
 <h2>Kinds of Models<a class="headerlink" href="#kinds-of-models" title="Permalink to this headline">¶</a></h2>
 <p>The current specification supports the following kinds of models, that
 can be packaged as FMUs:</p>
@@ -246,14 +245,14 @@ during initialization.</p>
 <p>Additionally complex models that combine various aspects of the model
 kinds above are possible, however configuration and setup of such FMUs
 will require manual intervention in those cases.</p>
-</section>
-<section id="fmi-2-0">
+</div>
+<div class="section" id="fmi-2-0">
 <span id="fmi-20"></span><h2>FMI 2.0<a class="headerlink" href="#fmi-2-0" title="Permalink to this headline">¶</a></h2>
 <p>The model MUST be packaged as a valid <a class="reference external" href="https://fmi-standard.org/">FMI</a> 2.0 FMU for Co-Simulation,
 as specified in the <a class="reference external" href="https://svn.modelica.org/fmi/branches/public/specifications/v2.0/FMI_for_ModelExchange_and_CoSimulation_v2.0.pdf">FMI 2.0 standard</a>. Unless otherwise noted in this
 document all specifications in the FMI 2.0 standard apply as-is.</p>
-</section>
-<section id="basic-conventions">
+</div>
+<div class="section" id="basic-conventions">
 <h2>Basic Conventions<a class="headerlink" href="#basic-conventions" title="Permalink to this headline">¶</a></h2>
 <p>The following basic conventions apply:</p>
 <ul>
@@ -287,8 +286,8 @@ the model can be run correctly with all of those variables left
 unconnected and at their default values. The model MUST NOT rely on
 other connections (beside the specified data connections) being made.</p></li>
 </ul>
-</section>
-<section id="definition-of-binary-variables">
+</div>
+<div class="section" id="definition-of-binary-variables">
 <h2>Definition of Binary Variables<a class="headerlink" href="#definition-of-binary-variables" title="Permalink to this headline">¶</a></h2>
 <p>In order to support the efficient exchange of binary data, especially
 binary data as provided for by the OSI <a class="reference external" href="https://developers.google.com/protocol-buffers">Protocol Buffer</a> definitions,
@@ -372,8 +371,8 @@ notional binary variable defined and another variable.</p></li>
 through the actual variables is defined for each kind of variable
 specified below.</p></li>
 </ul>
-</section>
-<section id="sensor-view-inputs">
+</div>
+<div class="section" id="sensor-view-inputs">
 <h2>Sensor View Inputs<a class="headerlink" href="#sensor-view-inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Sensor view inputs MUST be named with the prefix
@@ -401,8 +400,8 @@ copy the contents in that case (zero copy input).</p></li>
 <li><p>The sensor view passed to the model must contain data as specified by
 the corresponding <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfiguration</span></code> parameter.</p></li>
 </ul>
-</section>
-<section id="sensor-view-input-configuration">
+</div>
+<div class="section" id="sensor-view-input-configuration">
 <h2>Sensor View Input Configuration<a class="headerlink" href="#sensor-view-input-configuration" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>For each notional sensor view input variable (named with the base
@@ -442,8 +441,8 @@ supported SensorView configuration. The simulation environment MUST set this
 configuration using the corresponding <code class="docutils literal notranslate"><span class="pre">OSMPSensorViewInConfig</span></code> parameter
 before exiting initialization mode.</p></li>
 </ul>
-</section>
-<section id="sensor-view-outputs">
+</div>
+<div class="section" id="sensor-view-outputs">
 <h2>Sensor View Outputs<a class="headerlink" href="#sensor-view-outputs" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Sensor view outputs are present in environmental effect models.</p></li>
@@ -479,8 +478,8 @@ chain FMUs with protocol buffer inputs/outputs in a normal simulation
 engine like e.g. MATLAB/Simulink, and get valid results.</p>
 </li>
 </ul>
-</section>
-<section id="sensor-data-outputs">
+</div>
+<div class="section" id="sensor-data-outputs">
 <h2>Sensor Data Outputs<a class="headerlink" href="#sensor-data-outputs" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Sensor data outputs MUST be named with the prefix
@@ -515,8 +514,8 @@ FMUs with protocol buffer inputs/outputs in a normal simulation
 engine like e.g. MATLAB/Simulink, and get valid results.</p>
 </li>
 </ul>
-</section>
-<section id="sensor-data-inputs">
+</div>
+<div class="section" id="sensor-data-inputs">
 <h2>Sensor Data Inputs<a class="headerlink" href="#sensor-data-inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Sensor data inputs are present in logical models.</p></li>
@@ -546,8 +545,8 @@ copy the contents in that case (zero copy input).</p></li>
 processes that generated the data, i.e. the exact details of the
 contents will depend on the processing pipeline.</p></li>
 </ul>
-</section>
-<section id="groundtruth-initialization-parameters">
+</div>
+<div class="section" id="groundtruth-initialization-parameters">
 <h2>GroundTruth Initialization Parameters<a class="headerlink" href="#groundtruth-initialization-parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>All models CAN optionally consume an <code class="docutils literal notranslate"><span class="pre">osi3::GroundTruth</span></code> as an
@@ -578,8 +577,8 @@ provided as input to the FMU MUST be from the time of the call to
 <code class="docutils literal notranslate"><span class="pre">fmi2SetInteger</span></code> that provides those values until the end of the following
 <code class="docutils literal notranslate"><span class="pre">fmi2ExitInitializationMode</span></code> call.</p></li>
 </ul>
-</section>
-<section id="traffic-update-outputs">
+</div>
+<div class="section" id="traffic-update-outputs">
 <h2>Traffic Update Outputs<a class="headerlink" href="#traffic-update-outputs" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Traffic update outputs MUST be named with the prefix
@@ -615,8 +614,8 @@ FMUs with protocol buffer inputs/outputs in a normal simulation
 engine like e.g. MATLAB/Simulink, and get valid results.</p>
 </li>
 </ul>
-</section>
-<section id="traffic-command-inputs">
+</div>
+<div class="section" id="traffic-command-inputs">
 <h2>Traffic Command Inputs<a class="headerlink" href="#traffic-command-inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Traffic command inputs are optionally present in traffic participant
@@ -646,8 +645,8 @@ buffer remaining valid from the moment it is passed in until the end
 of the corresponding calculation, and thus does not need to copy the
 contents in that case (zero copy input).</p></li>
 </ul>
-</section>
-<section id="examples">
+</div>
+<div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>An example dummy sensor model implementation is provided in the
 OSMPDummySensor sub-directory of the examples directory of this
@@ -715,8 +714,8 @@ with one input and output and no additional features:</p>
 <span class="nt">&lt;/fmiModelDescription&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="future-evolution">
+</div>
+<div class="section" id="future-evolution">
 <h2>Future Evolution<a class="headerlink" href="#future-evolution" title="Permalink to this headline">¶</a></h2>
 <p>For FMI 3.0, which is currently in development, an opaque binary data
 type (a binary data type that is defined in the same way as the current
@@ -732,8 +731,8 @@ going to be required. Other than that the current specification can be
 mapped 1:1 onto this new mechanism, and once FMI 3.0 is released, an
 updated OSMP specification including this option and mapping will be
 released.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

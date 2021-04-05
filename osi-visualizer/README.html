@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>OSI Visualizer &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/description.html">General description</a></li>
@@ -102,14 +101,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/README.html">OSI Validator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/description.html">General description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-validation/doc/osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OSI Visualizer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
@@ -124,13 +123,13 @@
 <li class="toctree-l1"><a class="reference internal" href="doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../proto2cpp/README.html#version-history">Version history</a></li>
@@ -202,20 +201,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="osi-visualizer">
+  <div class="section" id="osi-visualizer">
 <h1>OSI Visualizer<a class="headerlink" href="#osi-visualizer" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://travis-ci.com/OpenSimulationInterface/osi-visualizer"><img alt="Travis Build Status" src="https://travis-ci.com/OpenSimulationInterface/osi-visualizer.svg?branch=master" /></a></p>
 <p>OSI Visualizer serves as a visualization tool for the current implementation of <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">OSI (Open Simulation Interface)</a> messages. It supports <code class="docutils literal notranslate"><span class="pre">GroundTruth</span></code>, <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> and <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> messages and allows the visualization of two independent data channels using different input types (file and network stream). For more information see the documentation <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/osi-visualizer/README.html">here</a>.</p>
-<section id="usage">
+<div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Use the configuration panel at the right (see Screenshot below) to load e.g. a <a class="reference external" href="https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/doc/fileformat.html">OSI trace file</a> for channel 1 at <code class="docutils literal notranslate"><span class="pre">Playback</span></code> and choose a port to which it will be send (here 5564). Select the data type <code class="docutils literal notranslate"><span class="pre">SensorView</span></code> according to the content of the file. After that enter into the IP field the <code class="docutils literal notranslate"><span class="pre">localhost</span></code> and into the port field the receiving port (here 5563) for channel 2 in the panel below at <code class="docutils literal notranslate"><span class="pre">Connection</span></code>. Select the data type it is expected to visualize (here <code class="docutils literal notranslate"><span class="pre">SensorData</span></code>). In this example an intermediary on localhost processes the data from the input file using a <a class="reference external" href="https://github.com/OpenSimulationInterface/osi-sensor-model-packaging">OSMP</a> sensor model, transforms it into <code class="docutils literal notranslate"><span class="pre">SensorData</span></code> and sends it to port 5563.</p>
 <p><img alt="../_images/Over_View.png" src="../_images/Over_View.png" /></p>
 <p>Now you can click on play for channel 1 and 2 and you can visualize the communication between these two channels. Channel 1 plays the selected OSI input file scenario and sends out the OSI message to port 5564 at the same time. Channel 2 visualizes the received OSI messages at <code class="docutils literal notranslate"><span class="pre">localhost</span></code> at port 5563 showing it on the canvas (see demo screenshot below).</p>
 <p><img alt="../_images/Demo.png" src="../_images/Demo.png" /></p>
-</section>
-<section id="installation">
+</div>
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<section id="environment-and-dependencies">
+<div class="section" id="environment-and-dependencies">
 <h3>Environment and dependencies<a class="headerlink" href="#environment-and-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>Currently we recommend users to use the osi-visualizer under Ubuntu Linux 18.04 LTS. You can see a working development environment based on Ubuntu 18.04 LTS in the Docker file in the repository.</p>
 <ul class="simple">
@@ -236,8 +235,8 @@
 $ sudo bash build-install-build-deps.sh
 </pre></div>
 </div>
-</section>
-<section id="build-and-run">
+</div>
+<div class="section" id="build-and-run">
 <h3>Build and run<a class="headerlink" href="#build-and-run" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ bash build.sh
 $ ./build/osi-visualizer
@@ -254,9 +253,9 @@ $ make -j8
 $ ./osi-visualizer
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

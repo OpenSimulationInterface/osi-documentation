@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Installation Guide &mdash; Open Simulation Interface v3.3.0 documentation</title>
@@ -88,7 +87,7 @@
               
             
             
-              <p><span class="caption-text">Open Simulation Interface:</span></p>
+              <p class="caption"><span class="caption-text">Open Simulation Interface:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/README.html">Open Simulation Interface (OSI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/description.html">General description</a></li>
@@ -102,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../open-simulation-interface/library_root.html">OSI Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Validator:</span></p>
+<p class="caption"><span class="caption-text">OSI Validator:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">OSI Validator</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="description.html">General description</a><ul class="current">
@@ -123,20 +122,20 @@
 <li class="toctree-l1"><a class="reference internal" href="howtocontribute.html">Contributors’ Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osivalidator.html">Validator Reference</a></li>
 </ul>
-<p><span class="caption-text">OSI Visualizer:</span></p>
+<p class="caption"><span class="caption-text">OSI Visualizer:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/README.html">OSI Visualizer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/panels.html">Panels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/nvidia-docker.html">Nvidia Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-visualizer/doc/howtocontribute.html">Contributors’ Guidelines</a></li>
 </ul>
-<p><span class="caption-text">OSI Sensor Model Packaging:</span></p>
+<p class="caption"><span class="caption-text">OSI Sensor Model Packaging:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/README.html">OSI Sensor Model Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/specification.html">OSI Sensor Model Packaging Specification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../osi-sensor-model-packaging/doc/examples.html">Examples</a></li>
 </ul>
-<p><span class="caption-text">Proto2Cpp:</span></p>
+<p class="caption"><span class="caption-text">Proto2Cpp:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html">Doxygen filter for Google Protocol Buffers .proto files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../proto2cpp/README.html#version-history">Version history</a></li>
@@ -210,10 +209,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="installation-guide">
+  <div class="section" id="installation-guide">
 <h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
 <p>The OSI Validator is being developed with Python 3.6 within a virtual environment. It is recommended to use the same python version for validation tasks.</p>
-<section id="setup-for-linux-users">
+<div class="section" id="setup-for-linux-users">
 <h2>Setup for linux users<a class="headerlink" href="#setup-for-linux-users" title="Permalink to this headline">¶</a></h2>
 <p>This setup guide is for users who want to just use the validator.</p>
 <p>Clone the repository osi-validation:</p>
@@ -241,7 +240,7 @@ pip install .
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>osivalidator -d trace.osi
 </pre></div>
 </div>
-<section id="osi-validator-binary">
+<div class="section" id="osi-validator-binary">
 <h3>OSI Validator Binary<a class="headerlink" href="#osi-validator-binary" title="Permalink to this headline">¶</a></h3>
 <p>After the installation of all the dependencies it is possible to compile the osi-validator into one binary file (size ~ 9.1 Mb) for easier distribution and usage.
 For that we use <a class="reference external" href="https://www.pyinstaller.org/">pyinstaller</a>:</p>
@@ -258,9 +257,9 @@ pyinstaller osivalidator/osi_general_validator.py --onefile
 ./dist/osi_general_validator -r rules data/small_test.txt.lzma
 </pre></div>
 </div>
-</section>
-</section>
-<section id="setup-for-linux-developers">
+</div>
+</div>
+<div class="section" id="setup-for-linux-developers">
 <h2>Setup for linux developers<a class="headerlink" href="#setup-for-linux-developers" title="Permalink to this headline">¶</a></h2>
 <p>This setup guide is for developers who want to contribute to the OSI Validator.</p>
 <p>Clone repository osi-validation:</p>
@@ -298,16 +297,16 @@ pip install .
 </pre></div>
 </div>
 <p>The advantage to call the osi-validator this way for developers is that you do not need to reinstall the application when you made changes to the code.</p>
-</section>
-<section id="setup-for-windows-users">
+</div>
+<div class="section" id="setup-for-windows-users">
 <h2>Setup for windows users<a class="headerlink" href="#setup-for-windows-users" title="Permalink to this headline">¶</a></h2>
 <p>In Progress …</p>
-</section>
-<section id="setup-for-windows-developers">
+</div>
+<div class="section" id="setup-for-windows-developers">
 <h2>Setup for windows developers<a class="headerlink" href="#setup-for-windows-developers" title="Permalink to this headline">¶</a></h2>
 <p>In Progress …</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
