@@ -355,11 +355,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorDetectionHeader_1a7276bbdf40b2da4fed4397df62f167aa"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">measurement_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Time stamp at which the measurement was taken (not the time at which it was processed or at which it is transmitted) in the global synchronized time.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>See <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"><span class="std std-ref"><span class="pre">SensorData::timestamp</span></span></a></code> and <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code> for detailed discussions on the semantics of time-related fields. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"><span class="std std-ref"><span class="pre">SensorData::timestamp</span></span></a></code> and <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorData.html#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code> for detailed discussions on the semantics of time-related fields. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -398,12 +397,11 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorDetectionHeader_1a49fcf349c4dbda9b88d5784cd3cdb078"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_of_valid_detections</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>The current number of valid detections in the detections list.</p>
-<p><p>is_greater_than_or_equal_to: 0  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This value has to be set if the list contains invalid detections.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This value has to be set if the list contains invalid detections.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

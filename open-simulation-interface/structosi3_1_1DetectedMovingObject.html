@@ -340,37 +340,38 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1ad8a69c2327a7da76dba2d66dbcca54b6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The base parameters of the moving object.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The bounding box does NOT includes mirrors for vehicles. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The parent frame of <code class="docutils literal notranslate"><span class="pre">base</span></code> is the sensor’s vehicle frame. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The height includes the ground_clearance. It always goes from the top to the ground. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The bounding box does NOT includes mirrors for vehicles. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parent frame of <code class="docutils literal notranslate"><span class="pre">base</span></code> is the sensor’s vehicle frame. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The height includes the ground_clearance. It always goes from the top to the ground. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a92bd545d7e0a7db2040154aae9e6fc06"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">base_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The root mean squared error of the base parameters of the detected moving object (e.g. car). <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> has to be identical for all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1a34576520312191febc4a5c5878a492a4"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> moving objects.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The parent frame of <code class="docutils literal notranslate"><span class="pre">base</span></code> is the sensor’s vehicle frame. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parent frame of <code class="docutils literal notranslate"><span class="pre">base</span></code> is the sensor’s vehicle frame. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a77c7170535d578fc84de22e4a52f6a93"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ReferencePoint</span> <span class="pre">reference_point</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Reference point location specification of the sensor measurement (required to decouple sensor measurement, position and bounding box estimation) as used by the sensor (model).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Note that the value of this field has no impact on the value of object::position, which always references the center of the object / bounding box. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the value of this field has no impact on the value of object::position, which always references the center of the object / bounding box. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -384,12 +385,11 @@
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a5110ddb818972e8ec1711310cfeb4ec3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">percentage_side_lane_left</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Percentage side lane left.</p>
 <p>Percentage value of the object width in the corresponding lane.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>DEPRECATED: Use assigned_lane_percentage in MovingObjectClassification instead.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DEPRECATED: Use assigned_lane_percentage in MovingObjectClassification instead.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -397,67 +397,61 @@
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a4c1ab2d39aadb24aecd958ddea6656c9"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">percentage_side_lane_right</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Percentage side lane right.</p>
 <p>Percentage value of the object width in the corresponding lane.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>DEPRECATED: Use assigned_lane_percentage in MovingObjectClassification instead.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DEPRECATED: Use assigned_lane_percentage in MovingObjectClassification instead.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a34576520312191febc4a5c5878a492a4"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateMovingObject</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>A list of candidates for this moving object as estimated by the sensor (e.g. pedestrian, car).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a5b07a3ad866056764be3081a269d4a73"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">RadarSpecificObjectData</span> <span class="pre">radar_specifics</span>&#160;&#160; <span class="pre">=</span> <span class="pre">100</span></code></dt>
 <dd><p>Additional data that is specific to radar sensors.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field needs not to be set if simulated sensor is not a radar sensor. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field needs not to be set if simulated sensor is not a radar sensor. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1ab995cfa98f7a350779da19635ec220f2"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">LidarSpecificObjectData</span> <span class="pre">lidar_specifics</span>&#160;&#160; <span class="pre">=</span> <span class="pre">101</span></code></dt>
 <dd><p>Additional data that is specific to lidar sensors.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field needs not to be set if simulated sensor is not a lidar sensor. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field needs not to be set if simulated sensor is not a lidar sensor. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a09082e051d4e8743ac25613459010722"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">CameraSpecificObjectData</span> <span class="pre">camera_specifics</span>&#160;&#160; <span class="pre">=</span> <span class="pre">102</span></code></dt>
 <dd><p>Additional data that is specific to camera sensors.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field needs not to be set if simulated sensor is not a camera sensor. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field needs not to be set if simulated sensor is not a camera sensor. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1a7ff0b899063e8a28ed147caf9f6e9235"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">UltrasonicSpecificObjectData</span> <span class="pre">ultrasonic_specifics</span>&#160;&#160; <span class="pre">=</span> <span class="pre">103</span></code></dt>
 <dd><p>Additional data that is specific to ultrasonic sensors.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field needs not to be set if simulated sensor is not an ultrasonic sensor. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field needs not to be set if simulated sensor is not an ultrasonic sensor. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -471,12 +465,11 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -489,11 +482,10 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ada03b54c79f3aaf8e706ef33f8a18021"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MovingObject::VehicleClassification</span> <span class="pre">vehicle_classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Specific information about the classification of the vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject::type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref"><span class="pre">MovingObject::TYPE_VEHICLE</span></span></a></code> . </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject::type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref"><span class="pre">MovingObject::TYPE_VEHICLE</span></span></a></code> . </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -503,12 +495,14 @@
 <p><code class="docutils literal notranslate"><span class="pre">View_normal_base_coord_system</span> <span class="pre">=</span> <span class="pre">Inverse_Rotation(</span><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"><span class="std std-ref"><span class="pre">head_pose</span></span></a><span class="pre">)*Unit_vector_x</span></code></p>
 <p><p>[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). </p>
 <em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject.type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
-</dd>
 <dt><strong>Reference:</strong></dt><dd><p></p>
 </dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject.type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -517,12 +511,14 @@
 <dd><p>Pedestrian upper body pose for behavior prediction. Describes the upper body orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed upper body frame is pointing along the pedestrian’s upper body ventral (anterior) direction (i.e. usually pedestrian’s intended moving direction), the y-axis lateral to the left, and the z-axis is pointing upwards (superior, to the pedestrian’s head) [1].</p>
 <p><code class="docutils literal notranslate"><span class="pre">View_normal_base_coord_system</span> <span class="pre">=</span> <span class="pre">Inverse_Rotation(</span><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a0e976baaa57e7cdcfce6c4e4c9d217a1"><span class="std std-ref"><span class="pre">upper_body_pose</span></span></a><span class="pre">)*Unit_vector_x</span></code></p>
 <p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject::type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
-</dd>
 <dt><strong>Reference:</strong></dt><dd><p>[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). <em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. </p>
 </dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject.html#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1ac09a45f142cda46d14a8c3f2b069e4c6"><span class="std std-ref"><span class="pre">CandidateMovingObject::type</span></span></a></code> is <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea51ba3d4a7a7c23a33261826b3df9ee4a"><span class="std std-ref"><span class="pre">MovingObject::TYPE_PEDESTRIAN</span></span></a></code> </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

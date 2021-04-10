@@ -218,10 +218,10 @@
 <dd><p>A lane boundary defining the border of a lane. </p>
 <p>The left and right lane boundary define the width of the lane. Additionally, free markings can be defined, e.g. at construction sites. Free markings across multiple lanes may be defined multiple times for all affected lanes.</p>
 <p><img alt="../_images/OSI_LaneBoundary.svg" src="../_images/OSI_LaneBoundary.svg" /></p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">osi3::LaneBoundary::BoundaryPoint</span></span></a></code> elements. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">osi3::LaneBoundary::BoundaryPoint</span></span></a></code> elements. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -243,14 +243,18 @@
 <dl class="simple">
 <dt><strong>Attention</strong></dt><dd><p>The ordering of the points must be the same for all lane boundaries on one road (also for roads with two-way traffic) and also the center line(s). Example: If the points are deducted from a map format, the order of points is recommended to be in line with the road coordinate (e.g. s-coordinate in OpenDRIVE). </p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>For dashed lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has to be at the start and another at the end of each dashed line segment. The first <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the beginning of the first dashed lane marking. The last <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the end of the last dashed lane marking. For example, the area between the second and third <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has no lane marking, and so on. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>For Botts’ dots lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> position has to define each Botts’ dot.</p>
-</dd>
 <dt><strong>Attention</strong></dt><dd><p>For <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> the same rule for the approximation error applies as for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">Lane::Classification::centerline</span></span></a></code>.</p>
 </dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For dashed lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has to be at the start and another at the end of each dashed line segment. The first <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the beginning of the first dashed lane marking. The last <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> defines the end of the last dashed lane marking. For example, the area between the second and third <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> has no lane marking, and so on. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Botts’ dots lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> position has to define each Botts’ dot.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -265,16 +269,16 @@
 <span id="_CPPv3N4osi312LaneBoundary13BoundaryPointE"></span><span id="_CPPv2N4osi312LaneBoundary13BoundaryPointE"></span><span id="osi3::LaneBoundary::BoundaryPoint"></span><span class="target" id="structosi3_1_1LaneBoundary_1_1BoundaryPoint"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">BoundaryPoint</span></code><a class="headerlink" href="#_CPPv4N4osi312LaneBoundary13BoundaryPointE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A single point of a lane boundary. </p>
 <p><img alt="../_images/OSI_LaneBoundaries_And_CenterLine.svg" src="../_images/OSI_LaneBoundaries_And_CenterLine.svg" /></p>
-<p><img alt="../_images/OSI_LaneBoundary.svg" src="../_images/OSI_LaneBoundary.svg" /><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>cl: center line lb: lane boundary</p>
-</dd>
-</dl>
+<p><img alt="../_images/OSI_LaneBoundary.svg" src="../_images/OSI_LaneBoundary.svg" /><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>cl: center line lb: lane boundary</p>
+</div>
 </p>
 <p>The lane boundary point bp2_{i} is one of the points of lane boundary lb2.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">osi3::LaneBoundary::BoundaryPoint</span></span></a></code> elements. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols bp2_{i+1}, bp2_{i}, bp2_{i-1} stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">osi3::LaneBoundary::BoundaryPoint</span></span></a></code> elements. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -289,11 +293,10 @@
 <span class="target" id="structosi3_1_1LaneBoundary_1_1BoundaryPoint_1aab512ff550b26c0def46d45f704df838"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">width</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The overall width of the lane boundary at the position of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> . Used for lines forming lane markings.</p>
 <p><img alt="../_images/OSI_LaneBoundaryWidth.svg" src="../_images/OSI_LaneBoundaryWidth.svg" /></p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if it is defined previous. See <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field need not be set if it is defined previous. See <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -301,11 +304,10 @@
 <span class="target" id="structosi3_1_1LaneBoundary_1_1BoundaryPoint_1ae8687f50d44774617a8ad44269266d74"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">height</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The overall height of the lane boundary at the position of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">BoundaryPoint</span></span></a></code> . Used for guard rails, curbstone, or similar.</p>
 <p><img alt="../_images/OSI_LaneBoundaryHeight.svg" src="../_images/OSI_LaneBoundaryHeight.svg" /></p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if it is previously defined. See <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code> . </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field need not be set if it is previously defined. See <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code> . </p>
+</div>
 </dd></dl>
 
 </div>
@@ -383,10 +385,10 @@
 </tbody>
 </table>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the example, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="structosi3_1_1Lane_1_1Classification.html#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>

@@ -206,10 +206,10 @@
 <dt id="_CPPv4N4osi313TrafficUpdateE">
 <span id="_CPPv3N4osi313TrafficUpdateE"></span><span id="_CPPv2N4osi313TrafficUpdateE"></span><span id="osi3::TrafficUpdate"></span><span class="target" id="structosi3_1_1TrafficUpdate"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">TrafficUpdate</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficUpdateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The traffic update message is provided by traffic participant models to provide updates to their position, state and future trajectory back to the simulation environment. </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>For reasons of convenience and consistency, the updated information is provided as a <a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a>. Certain fields of this sub-message are not required to be set and will be ignored by the simulation environment, because they are static information. Instead of creating a seperate message type for only the non-static information, re-use existing message. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For reasons of convenience and consistency, the updated information is provided as a <a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a>. Certain fields of this sub-message are not required to be set and will be ignored by the simulation environment, because they are static information. Instead of creating a seperate message type for only the non-static information, re-use existing message. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -223,22 +223,20 @@
 <dt>
 <span class="target" id="structosi3_1_1TrafficUpdate_1acc394afcae59b5491032f1c2fbc43bd6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The data timestamp of the simulation environment. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the UNIX epoch. Recommended is the starting time point of the simulation.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>For moving object update data the timestamp coincides both with the notional simulation time the data applies to and the time it was sent. There is no inherent latency for moving object update data, as opposed to sensor data. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For moving object update data the timestamp coincides both with the notional simulation time the data applies to and the time it was sent. There is no inherent latency for moving object update data, as opposed to sensor data. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1TrafficUpdate_1adf3c4f0f6851d1ce2e7ddcdc7684f6cd"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">MovingObject</span> <span class="pre">update</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>Updated traffic participant data</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>It is not expected that static fields are populated. If they are, they may be ignored by the receiver of this message, for example, dimensions, or vehicle category. All dynamic fields should be populated where known, for example, velocity, light states, or future trajectory. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not expected that static fields are populated. If they are, they may be ignored by the receiver of this message, for example, dimensions, or vehicle category. All dynamic fields should be populated where known, for example, velocity, light states, or future trajectory. </p>
+</div>
 </dd></dl>
 
 </div>

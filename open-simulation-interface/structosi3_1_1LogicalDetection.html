@@ -212,24 +212,22 @@
 <dt>
 <span class="target" id="structosi3_1_1LogicalDetection_1aa9a33e155552270021915e4a46cb4da6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Existence probability of the logical detection</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1LogicalDetection_1a8a64923b6510df2e5645c6b506028ed7"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>ID of the detected object this logical detection is associated to.</p>
-<p><p>refers_to: DetectedObject  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
-</dd>
-</dl>
-</p>
+<p>refers_to: DetectedObject  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID = MAX(uint64) indicates no reference to an object.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -286,11 +284,10 @@
 <dt>
 <span class="target" id="structosi3_1_1LogicalDetection_1a50fa3651cd1da3ff3e32aaa46c011181"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">sensor_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>The ID(s) of the sensor(s) that produced the detection(s) for transformation and - in case of multiple sensors - fusion into the single logical detection.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>One logical detection can originate from multiple sensors. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One logical detection can originate from multiple sensors. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

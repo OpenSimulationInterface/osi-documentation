@@ -224,13 +224,14 @@
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The data timestamp of the simulation environment. The zero time point is arbitrary but must be identical for all messages. Recommendation: Zero time point for start point of the simulation.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Zero time point does not need to coincide with the UNIX epoch.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>For ground truth data this timestamp coincides both with the notional simulation time the data applies to and the time it was sent (there is no inherent latency for ground truth data, as opposed to sensor data). </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zero time point does not need to coincide with the UNIX epoch.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For ground truth data this timestamp coincides both with the notional simulation time the data applies to and the time it was sent (there is no inherent latency for ground truth data, as opposed to sensor data). </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -238,99 +239,91 @@
 <span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">host_vehicle_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The ID of the host vehicle object referencing to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> .</p>
 <p><p>refers_to: </p>
-<a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This ID has to be filled and is not optional!</p>
-</dd>
-</dl>
-</p>
+<a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This ID has to be filled and is not optional!</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StationaryObject</span> <span class="pre">stationary_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The list of stationary objects (excluding traffic signs and traffic lights).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">MovingObject</span> <span class="pre">moving_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>The list of all other moving objects including all (host) vehicles.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficSign</span> <span class="pre">traffic_sign</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>The list of traffic signs.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficLight</span> <span class="pre">traffic_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>The list of traffic lights.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RoadMarking</span> <span class="pre">road_marking</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The list of road surface markings (lane markings are excluded and defined as <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary.html#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary</span> <span class="pre">lane_boundary</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>The list of lane boundaries.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Lane</span> <span class="pre">lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>The list of lanes forming a road network.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Occupant</span> <span class="pre">occupant</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></code></dt>
 <dd><p>The list of passengers in the (host) vehicle(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -367,13 +360,14 @@
 <dt>
 <span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">map_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">15</span></code></dt>
 <dd><p>Opaque reference of a map.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Origin and orientation of the map have to coincide with the inertial coordinate frame of the ground truth.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how map_reference is resolved. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Origin and orientation of the map have to coincide with the inertial coordinate frame of the ground truth.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is implementation-specific how map_reference is resolved. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -381,13 +375,14 @@
 <span class="target" id="structosi3_1_1GroundTruth_1a83042861723a4a9e890a53aa98d88858"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">16</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model.</p>
 <p>The model covers the static parts of the environment that are not provided as individual models referenced from ground truth objects like moving or stationary objects.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Origin and orientation of the model have to coincide with the inertial coordinate frame of the ground truth.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. The parts the world model contains are also implementation-specific. For example, the world model can either contain street geometries or derives street geometries automatically from a map reference. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Origin and orientation of the model have to coincide with the inertial coordinate frame of the ground truth.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is implementation-specific how model_references are resolved to 3d models. The parts the world model contains are also implementation-specific. For example, the world model can either contain street geometries or derives street geometries automatically from a map reference. </p>
+</div>
 </dd></dl>
 
 </div>

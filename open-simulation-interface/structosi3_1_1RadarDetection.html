@@ -212,24 +212,22 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a3f57cf39ffe5e9b442fe6a1cf5577b83"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a1e4defa6aa377c6637fbba2ca1394ef8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
-<p><p>refers_to: DetectedObject  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
-</dd>
-</dl>
-</p>
+<p>refers_to: DetectedObject  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID = MAX(uint64) indicates no reference to an object.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -284,13 +282,14 @@
 <dt>
 <span class="target" id="structosi3_1_1RadarDetection_1a863eb66f96f5a64aa0989fcbe360ae4a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">ambiguity_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>Ambiguity Information: Each ambiguous measurement generates one Ambiguity ID. Ambiguity is indicated by an identical ambiguity ID.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Unambiguous measurements have the ambiguity ID 0.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Multiple seperate detections, from e.g. a large object, do not necessarily on their own create any ambiguity. Therefore they do not usually share an ambiguity ID. They can however be ambiguous with other detections. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unambiguous measurements have the ambiguity ID 0.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple seperate detections, from e.g. a large object, do not necessarily on their own create any ambiguity. Therefore they do not usually share an ambiguity ID. They can however be ambiguous with other detections. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

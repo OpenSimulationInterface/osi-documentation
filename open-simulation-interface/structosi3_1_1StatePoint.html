@@ -207,10 +207,10 @@
 <span id="_CPPv3N4osi310StatePointE"></span><span id="_CPPv2N4osi310StatePointE"></span><span id="osi3::StatePoint"></span><span class="target" id="structosi3_1_1StatePoint"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">StatePoint</span></code><a class="headerlink" href="#_CPPv4N4osi310StatePointE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The <a class="reference internal" href="#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> definition. </p>
 <p>A reference to a time and pose. Typically used in a repeated field to define a trajectory.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <a class="reference internal" href="#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> definition does not define mandatory fields. The context defines how and what fields are used. For example, in some cases only the pose variables are relevant and the timestamp is ignored. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> definition does not define mandatory fields. The context defines how and what fields are used. For example, in some cases only the pose variables are relevant and the timestamp is ignored. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -218,22 +218,20 @@
 <dt>
 <span class="target" id="structosi3_1_1StatePoint_1abc934b324c107f97ccbb2341f2834c10"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The timestamp of a <a class="reference internal" href="#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a>.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Zero time does not need to coincide with the UNIX epoch. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zero time does not need to coincide with the UNIX epoch. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1StatePoint_1acfd675952f416ff9b42a90d4b9a1575f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Position in the global coordinate system.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

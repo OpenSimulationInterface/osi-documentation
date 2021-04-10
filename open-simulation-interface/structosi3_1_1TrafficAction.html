@@ -229,12 +229,14 @@
 <span id="_CPPv3N4osi313TrafficActionE"></span><span id="_CPPv2N4osi313TrafficActionE"></span><span id="osi3::TrafficAction"></span><span class="target" id="structosi3_1_1TrafficAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">TrafficAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Atomic traffic actions to be performed. </p>
 <p>The transmitted commands are the atomic traffic actions described by this message.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This message is notionally a multiple choice selection, that is, only certain combinations of atomic traffic actions shall be transmitted within certain time intervals, for example, for plausibity reasons. The restrictions regarding that are not part of this message, yet are seen as a task of the scenario description, for example, OpenSCENARIO.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>All traffic actions are sent only once just before they are about to start. This is also true, if their execution is expected to take simulation time. To inform the traffic participant model that certain actions must or shall be terminated, there are explicit actions nested inside this message (<a class="reference internal" href="structosi3_1_1TrafficAction_1_1AbortActionsAction.html#structosi3_1_1TrafficAction_1_1AbortActionsAction"><span class="std std-ref">AbortActionsAction</span></a>, <a class="reference internal" href="structosi3_1_1TrafficAction_1_1EndActionsAction.html#structosi3_1_1TrafficAction_1_1EndActionsAction"><span class="std std-ref">EndActionsAction</span></a>), which hold a reference to the respective actions. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This message is notionally a multiple choice selection, that is, only certain combinations of atomic traffic actions shall be transmitted within certain time intervals, for example, for plausibity reasons. The restrictions regarding that are not part of this message, yet are seen as a task of the scenario description, for example, OpenSCENARIO.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All traffic actions are sent only once just before they are about to start. This is also true, if their execution is expected to take simulation time. To inform the traffic participant model that certain actions must or shall be terminated, there are explicit actions nested inside this message (<a class="reference internal" href="structosi3_1_1TrafficAction_1_1AbortActionsAction.html#structosi3_1_1TrafficAction_1_1AbortActionsAction"><span class="std std-ref">AbortActionsAction</span></a>, <a class="reference internal" href="structosi3_1_1TrafficAction_1_1EndActionsAction.html#structosi3_1_1TrafficAction_1_1EndActionsAction"><span class="std std-ref">EndActionsAction</span></a>), which hold a reference to the respective actions. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
@@ -399,10 +401,10 @@
 <dd><p>Acquire global position action. </p>
 <p>This action assigns a route to a traffic participant. The route assigned will be the shortest route (along roads or satisfying any other constraints a traffic participant is operating under) between the traffic participant’s current position and the position specified.</p>
 <p>As with all routing actions, the exact way this route is achieved is under the control of the traffic participant model.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with the AcquirePositionAction of OpenSCENARIO 1.0 using a WorldPosition position argument. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with the AcquirePositionAction of OpenSCENARIO 1.0 using a WorldPosition position argument. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -417,11 +419,10 @@
 <span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1a5ed933a3ee8cc825c00654247aab4dbc"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Position in the global coordinate system.</p>
 <p>The position refers to the center (x,y,z) of the bounding box.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -444,13 +445,14 @@
 <dt>
 <span class="target" id="structosi3_1_1TrafficAction_1_1ActionHeader_1ab7266e5a5270ce51d00a861c276956c8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">action_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The unique id of the action.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>This id must be unique within all traffic command messages exchanged with one traffic participant. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This id must be unique within all traffic command messages exchanged with one traffic participant. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -461,10 +463,10 @@
 <span id="_CPPv3N4osi313TrafficAction12CustomActionE"></span><span id="_CPPv2N4osi313TrafficAction12CustomActionE"></span><span id="osi3::TrafficAction::CustomAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1CustomAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">CustomAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction12CustomActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Custom Action. </p>
 <p>This action assigns a custom command to a traffic participant. The syntax and semantics of this action is implementation defined. It is entirely up to each individual traffic participant which custom commands it supports, if any, and how they must be phrased.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with CustomCommandAction of OpenSCENARIO 1.0 providing a customizable user defined action. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with CustomCommandAction of OpenSCENARIO 1.0 providing a customizable user defined action. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -542,12 +544,14 @@
 <span id="_CPPv3N4osi313TrafficAction16FollowPathActionE"></span><span id="_CPPv2N4osi313TrafficAction16FollowPathActionE"></span><span id="osi3::TrafficAction::FollowPathAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1FollowPathAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">FollowPathAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction16FollowPathActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Follow path action. </p>
 <p>Controls a traffic participant to follow a path using vertices. It specifies the motion in space independent of time.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> messages in path_point only requires a specified position field. The orientation can be set optionally. Any timestamp <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> values are ignored.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction.html#structosi3_1_1TrafficAction_1_1FollowTrajectoryAction"><span class="std std-ref">FollowTrajectoryAction</span></a> of OpenSCENARIO 1.0 using a 3/6D trajectory with shape Polyline. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> messages in path_point only requires a specified position field. The orientation can be set optionally. Any timestamp <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> values are ignored.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction.html#structosi3_1_1TrafficAction_1_1FollowTrajectoryAction"><span class="std std-ref">FollowTrajectoryAction</span></a> of OpenSCENARIO 1.0 using a 3/6D trajectory with shape Polyline. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -562,11 +566,10 @@
 <span class="target" id="structosi3_1_1TrafficAction_1_1FollowPathAction_1a9560d0669c321be9819e513c37816e85"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StatePoint</span> <span class="pre">path_point</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>A list of path StatePoints</p>
 <p>Set the position fields for all path points. The timestamp field are not required and ignored. The orientation fields can be set depending on the constrain_orientation field being true.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -590,12 +593,14 @@
 <span id="_CPPv3N4osi313TrafficAction22FollowTrajectoryActionE"></span><span id="_CPPv2N4osi313TrafficAction22FollowTrajectoryActionE"></span><span id="osi3::TrafficAction::FollowTrajectoryAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">FollowTrajectoryAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction22FollowTrajectoryActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Follow trajectory action. </p>
 <p>Controls a traffic participant to follow a trajectory using vertices with timings. It specifies the motion in space as a function of time.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> messages in trajectory_point requires a specified timestamp.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction.html#structosi3_1_1TrafficAction_1_1FollowTrajectoryAction"><span class="std std-ref">FollowTrajectoryAction</span></a> of OpenSCENARIO 1.0 using a 4/7D trajectory with shape Polyline. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="structosi3_1_1StatePoint.html#structosi3_1_1StatePoint"><span class="std std-ref">StatePoint</span></a> messages in trajectory_point requires a specified timestamp.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction.html#structosi3_1_1TrafficAction_1_1FollowTrajectoryAction"><span class="std std-ref">FollowTrajectoryAction</span></a> of OpenSCENARIO 1.0 using a 4/7D trajectory with shape Polyline. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -610,11 +615,10 @@
 <span class="target" id="structosi3_1_1TrafficAction_1_1FollowTrajectoryAction_1a3a316528f8bf3c2af89a4a92d78b1232"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StatePoint</span> <span class="pre">trajectory_point</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>A list of trajectory StatePoints.</p>
 <p>Set the timestamp fields and position fields for all trajectory points. The orientation fields can be set depending on the constrain_orientation field being true.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -638,10 +642,10 @@
 <span id="_CPPv3N4osi313TrafficAction16LaneChangeActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneChangeActionE"></span><span id="osi3::TrafficAction::LaneChangeAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">LaneChangeAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction16LaneChangeActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> change action. </p>
 <p>This action assigns a lane change to a traffic participant. The fields of this message enable different levels of constraint for the traffic participant depending on the use case. In case the constraints are supposed to be small, the dynamics shape or even the duration and the distance for the lane change can be omitted.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LaneChangeAction.html#structosi3_1_1TrafficAction_1_1LaneChangeAction"><span class="std std-ref">LaneChangeAction</span></a> of OpenSCENARIO 1.0 defining the targeted lane and optionally the parametrization of the lane change. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LaneChangeAction.html#structosi3_1_1TrafficAction_1_1LaneChangeAction"><span class="std std-ref">LaneChangeAction</span></a> of OpenSCENARIO 1.0 defining the targeted lane and optionally the parametrization of the lane change. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -688,10 +692,10 @@
 <span id="_CPPv3N4osi313TrafficAction16LaneOffsetActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneOffsetActionE"></span><span id="osi3::TrafficAction::LaneOffsetAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneOffsetAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">LaneOffsetAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction16LaneOffsetActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> Offset Action. </p>
 <p>This action assigns a targeted lane offset to a traffic participant. The action can be constrained by specifying the dynamics shape of the lateral transition profile.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LaneOffsetAction.html#structosi3_1_1TrafficAction_1_1LaneOffsetAction"><span class="std std-ref">LaneOffsetAction</span></a> of OpenSCENARIO 1.0. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LaneOffsetAction.html#structosi3_1_1TrafficAction_1_1LaneOffsetAction"><span class="std std-ref">LaneOffsetAction</span></a> of OpenSCENARIO 1.0. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -722,12 +726,14 @@
 <span id="_CPPv3N4osi313TrafficAction21LateralDistanceActionE"></span><span id="_CPPv2N4osi313TrafficAction21LateralDistanceActionE"></span><span id="osi3::TrafficAction::LateralDistanceAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LateralDistanceAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">LateralDistanceAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction21LateralDistanceActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Lateral Distance Action. </p>
 <p>The action tells the (host) traffic participant to reach a certain lateral distance relative to a target traffic participant. The lateral distance is defined along an imaginative perpendicular line with respect to the centerline of the current (host) traffic participant’s lane. The interpolation strategy between centerline points for calculating that distance along the imaginative perpendicular line is open to the traffic participant modeller.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LateralDistanceAction.html#structosi3_1_1TrafficAction_1_1LateralDistanceAction"><span class="std std-ref">LateralDistanceAction</span></a> of OpenSCENARIO 1.0 defining the reference traffic participant and the distance.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Limitation: This concept currently only works for lanes with a centerline, i.e. for lanes of TYPE_DRIVING, not for lanes of TYPE_NONDRIVING or TYPE_INTERSECTION. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LateralDistanceAction.html#structosi3_1_1TrafficAction_1_1LateralDistanceAction"><span class="std std-ref">LateralDistanceAction</span></a> of OpenSCENARIO 1.0 defining the reference traffic participant and the distance.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Limitation: This concept currently only works for lanes with a centerline, i.e. for lanes of TYPE_DRIVING, not for lanes of TYPE_NONDRIVING or TYPE_INTERSECTION. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -776,12 +782,14 @@
 <span id="_CPPv3N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="_CPPv2N4osi313TrafficAction26LongitudinalDistanceActionE"></span><span id="osi3::TrafficAction::LongitudinalDistanceAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">LongitudinalDistanceAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction26LongitudinalDistanceActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Longitudinal Distance Action. </p>
 <p>The action tells the (host) traffic participant to reach a certain longitudinal distance relative to a target traffic participant. The longitudinal distance is defined as the distance along the centerline of the lane, on which the (host) traffic participant is currently located. The interpolation strategy between centerline points for calculating that distance along the centerline is open to the traffic participant modeller.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction.html#structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction"><span class="std std-ref">LongitudinalDistanceAction</span></a> of OpenSCENARIO 1.0 defining the reference traffic participant and the distance.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Limitation: This concept currently only works for lanes with a centerline, i.e. for lanes of TYPE_DRIVING, not for lanes of TYPE_NONDRIVING or TYPE_INTERSECTION. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction.html#structosi3_1_1TrafficAction_1_1LongitudinalDistanceAction"><span class="std std-ref">LongitudinalDistanceAction</span></a> of OpenSCENARIO 1.0 defining the reference traffic participant and the distance.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Limitation: This concept currently only works for lanes with a centerline, i.e. for lanes of TYPE_DRIVING, not for lanes of TYPE_NONDRIVING or TYPE_INTERSECTION. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -830,10 +838,10 @@
 <span id="_CPPv3N4osi313TrafficAction11SpeedActionE"></span><span id="_CPPv2N4osi313TrafficAction11SpeedActionE"></span><span id="osi3::TrafficAction::SpeedAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1SpeedAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">SpeedAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction11SpeedActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Speed action. </p>
 <p>This action assigns a targeted speed to a traffic participant. The action can be constrained by specifying the dynamics shape or even the duration and the distance of the acceleration / deceleration process.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1SpeedAction.html#structosi3_1_1TrafficAction_1_1SpeedAction"><span class="std std-ref">SpeedAction</span></a> of OpenSCENARIO 1.0 defining the targeted speed and optionally the parametrization of the speed transition. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with <a class="reference internal" href="structosi3_1_1TrafficAction_1_1SpeedAction.html#structosi3_1_1TrafficAction_1_1SpeedAction"><span class="std std-ref">SpeedAction</span></a> of OpenSCENARIO 1.0 defining the targeted speed and optionally the parametrization of the speed transition. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -879,10 +887,10 @@
 <span id="_CPPv3N4osi313TrafficAction14TeleportActionE"></span><span id="_CPPv2N4osi313TrafficAction14TeleportActionE"></span><span id="osi3::TrafficAction::TeleportAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1TeleportAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">TeleportAction</span></code><a class="headerlink" href="#_CPPv4N4osi313TrafficAction14TeleportActionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Teleport Action. </p>
 <p>This Action allows to immediately place a traffic participant to another position.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1TeleportAction.html#structosi3_1_1TrafficAction_1_1TeleportAction"><span class="std std-ref">TeleportAction</span></a> of OpenSCENARIO 1.0 using a WorldPosition position argument. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action is aligned with the <a class="reference internal" href="structosi3_1_1TrafficAction_1_1TeleportAction.html#structosi3_1_1TrafficAction_1_1TeleportAction"><span class="std std-ref">TeleportAction</span></a> of OpenSCENARIO 1.0 using a WorldPosition position argument. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -897,11 +905,10 @@
 <span class="target" id="structosi3_1_1TrafficAction_1_1TeleportAction_1a6e5c16af2aecfcfc00516887d36ace4a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Position in the global coordinate system.</p>
 <p>The position refers to the center (x,y,z) of the bounding box.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remark: The definition of the reference point follows the specification of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">BaseMoving</span></span></a></code> message. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

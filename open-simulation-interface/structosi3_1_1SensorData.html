@@ -222,43 +222,49 @@
 <span class="target" id="structosi3_1_1SensorData_1a82adb4a7724d1e4835ae0921fab4080c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The timestamp of the sensor data. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the unix epoch. Recommended is the starting time point of the simulation.</p>
 <p><p>The time that the actual measurement was performed (which will usually correspond with the timestamp of the </p>
-<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> the sensor model processed to arrive at these results) can be found in the additional field <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code>.<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is the point in time that the sensor data message becomes available to the rest of the system (i.e. the driving functions), so it corresponds with the sending time and thus takes the latency of internal processing of the sensor into account. Latencies of bus communications, etc., that occur after the sensor output have to be applied on top of this, if needed.</p>
-</dd>
-</dl>
-</p>
+<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> the sensor model processed to arrive at these results) can be found in the additional field <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorData_1a9baaaa40491c5f241c117a7dacbe0d9d"><span class="std std-ref"><span class="pre">SensorData::last_measurement_time</span></span></a></code>.</p>
 <p>For an ideal zero latency sensor the two timestamps would be the same and would correspond with the timestamp from the current <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> message.</p>
 <p>For a sensor model that does not know its own internal latencies (e.g. a dumb sensor with no internal time concept), the two timestamps might also be identical, but delayed from the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth"><span class="std std-ref"><span class="pre">GroundTruth</span></span></a></code> timestamp. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the point in time that the sensor data message becomes available to the rest of the system (i.e. the driving functions), so it corresponds with the sending time and thus takes the latency of internal processing of the sensor into account. Latencies of bus communications, etc., that occur after the sensor output have to be applied on top of this, if needed.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a7bacbcf1f521df6038d455a80baed870"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">host_vehicle_location</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
 <dd><p>The sensors estimated location of the host vehicle</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Note that dimension and base_polygon need not be set. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The parent frame of <code class="docutils literal notranslate"><span class="pre">host_vehicle_location</span></code> is the sensor frame. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that dimension and base_polygon need not be set. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parent frame of <code class="docutils literal notranslate"><span class="pre">host_vehicle_location</span></code> is the sensor frame. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a3b5ba4aef1a3d5eb85ee0f44676b8f98"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">host_vehicle_location_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The sensors estimated location error of the host vehicle</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Note that dimension and base_polygon need not be set. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The parent frame of <code class="docutils literal notranslate"><span class="pre">host_vehicle_location_rmse</span></code> is the sensor frame. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This value is only set by sensors that are able to provide an own estimation of the host vehicle location. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that dimension and base_polygon need not be set. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parent frame of <code class="docutils literal notranslate"><span class="pre">host_vehicle_location_rmse</span></code> is the sensor frame. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -280,12 +286,16 @@
 <dl class="simple">
 <dt><strong>Reference:</strong></dt><dd><p>[1] DIN Deutsches Institut fuer Normung e. V. (2013). <em>DIN ISO 8855 Strassenfahrzeuge - Fahrzeugdynamik und Fahrverhalten - Begriffe</em>. (DIN ISO 8855:2013-11). Berlin, Germany.</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>This field is usually static during the simulation. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
-</dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is usually static during the simulation. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -299,11 +309,10 @@
 <span class="target" id="structosi3_1_1SensorData_1ab50720725334907684ff8d6a29e88ac5"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">SensorView</span> <span class="pre">sensor_view</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>Sensor view w.r.t. the sensor coordinate system</p>
 <p>This provides a copy of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code> data received by the sensor for reference purposes. For complex sensors or logic models this can be multiple copies.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -334,11 +343,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a03ec2ab20c09c83157e857cf368044c5"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedMovingObject</span> <span class="pre">moving_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">13</span></code></dt>
 <dd><p>The list of moving objects detected by the sensor as perceived by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -351,11 +359,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a939e870a502f67517e27a8199218f878"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedTrafficSign</span> <span class="pre">traffic_sign</span>&#160;&#160; <span class="pre">=</span> <span class="pre">15</span></code></dt>
 <dd><p>The list of traffic signs detected by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -368,11 +375,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1aa371b884e0cd4fd029328aa5615e8c4d"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedTrafficLight</span> <span class="pre">traffic_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">17</span></code></dt>
 <dd><p>The list of traffic lights detected by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -385,11 +391,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a30cf0fd83d7f46cead025ce8e7fa5ce0"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedRoadMarking</span> <span class="pre">road_marking</span>&#160;&#160; <span class="pre">=</span> <span class="pre">19</span></code></dt>
 <dd><p>The list of road markings detected by the sensor. This excludes lane boundary markings.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -402,11 +407,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a6e5554f84475442ca5d4be19c66817eb"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedLaneBoundary</span> <span class="pre">lane_boundary</span>&#160;&#160; <span class="pre">=</span> <span class="pre">21</span></code></dt>
 <dd><p>The list of lane boundary markings detected by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -419,11 +423,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a17425a51b2bc63a094fd2dc0df8c53cc"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedLane</span> <span class="pre">lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">23</span></code></dt>
 <dd><p>The list of lanes detected by the sensor</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -436,11 +439,10 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorData_1a086b965d4e6b0430dc7b555120c0bd88"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">DetectedOccupant</span> <span class="pre">occupant</span>&#160;&#160; <span class="pre">=</span> <span class="pre">25</span></code></dt>
 <dd><p>The list of occupants of the host vehicle</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

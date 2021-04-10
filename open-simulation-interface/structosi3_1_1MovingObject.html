@@ -221,10 +221,10 @@
 <dd><p>A simulated object that is either a vehicle or another moving object (animal, pedestrian, etc), but not a stationary object (<code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficLight.html#structosi3_1_1TrafficLight"><span class="std std-ref"><span class="pre">TrafficLight</span></span></a></code>, <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1TrafficSign.html#structosi3_1_1TrafficSign"><span class="std std-ref"><span class="pre">TrafficSign</span></span></a></code>, or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject"><span class="std std-ref"><span class="pre">StationaryObject</span></span></a></code>). </p>
 <p><img alt="../_images/OSI_MovingObject.svg" src="../_images/OSI_MovingObject.svg" /></p>
 <p><img alt="../_images/OSI_HostVehicle.svg" src="../_images/OSI_HostVehicle.svg" /></p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The field <code class="docutils literal notranslate"><span class="pre">MovingObject::vehicle_extension</span></code> has to be filled if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721e"><span class="std std-ref"><span class="pre">MovingObject::Type</span></span></a></code> is a vehicle. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The field <code class="docutils literal notranslate"><span class="pre">MovingObject::vehicle_extension</span></code> has to be filled if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721e"><span class="std std-ref"><span class="pre">MovingObject::Type</span></span></a></code> is a vehicle. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
@@ -279,13 +279,14 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseMoving</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The base parameters of the vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The bounding box does NOT include side mirrors for vehicles. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The height includes the ground_clearance. It always goes from the top to the ground. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The bounding box does NOT include side mirrors for vehicles. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The height includes the ground_clearance. It always goes from the top to the ground. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -298,50 +299,50 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a655c12b5f4db44e68e83a3c351d3d4e9"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">assigned_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>The IDs of the lanes that this object is assigned to.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>DEPRECATED: Use assigned_lane_id in <a class="reference internal" href="structosi3_1_1MovingObject_1_1MovingObjectClassification.html#structosi3_1_1MovingObject_1_1MovingObjectClassification"><span class="std std-ref">MovingObjectClassification</span></a> instead. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DEPRECATED: Use assigned_lane_id in <a class="reference internal" href="structosi3_1_1MovingObject_1_1MovingObjectClassification.html#structosi3_1_1MovingObject_1_1MovingObjectClassification"><span class="std std-ref">MovingObjectClassification</span></a> instead. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1aad46113ea5b9f84a4094f671630a010c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">VehicleAttributes</span> <span class="pre">vehicle_attributes</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>Specific information about the vehicle.</p>
-<p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_equal_to 2 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a791fbef677615ca9e8e7af0595bb3b3d"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">VehicleClassification</span> <span class="pre">vehicle_classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Specific information about the classification of the vehicle.</p>
-<p><p>check_if this.type is_equal_to 2 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_equal_to 2 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This field is mandatory if the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1MovingObject_1aa2d750449efff1e937d9c9a69ad7fd71"><span class="std std-ref"><span class="pre">type</span></span></a></code> is <a class="reference internal" href="#structosi3_1_1MovingObject_1afcfe8fd7eb90481e826d84cfbc5a721ea7c48e327c1cbef313cfabc47fcbde11f"><span class="std std-ref">TYPE_VEHICLE</span></a> .</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1a07558573bee7a5fa2f0729e1cad1325f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the moving object.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is implementation-specific how model_references are resolved to 3d models. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -349,11 +350,10 @@
 <span class="target" id="structosi3_1_1MovingObject_1a62f68ba53ed7d9dfc25e41d07769893f"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StatePoint</span> <span class="pre">future_trajectory</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The trajectory that this moving object expects to follow in the future.</p>
 <p>This is not externally perceivable information, rather this is to aid realistic simulation of traffic participants that are not under test. This information should not be made available to the stack under test.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Moving objects are not required to stick to this trajectory, it is indicative, and equivalent to the output of a perception + prediction system. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Moving objects are not required to stick to this trajectory, it is indicative, and equivalent to the output of a perception + prediction system. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -373,26 +373,28 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1aed7d82827143b64b4b1d312117fe5c70"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">assigned_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The IDs of the lanes that this object is assigned to.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1MovingObjectClassification_1ae28d19cb839da33ea9015475b76928b8"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">assigned_lane_percentage</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Percentage value of the object width in the corresponding lane.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Might be multiple if the object is switching lanes or moving from one lane into another following lane.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -416,11 +418,10 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1aba30c025ec374d4bcb9dead3913438ec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">driver_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the driver of the (host) vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -453,22 +454,21 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ground_clearance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
-<dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
-</dd>
-</dl>
-</p>
+<dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a27d7ffb7cfe89c54fc94532b4e6869cd"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">WheelData</span> <span class="pre">wheel_data</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Description of each wheel.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -538,22 +538,21 @@
 <dd><p>Rotation rate of the wheel. The rotation rate around the y-axis with respect to the wheel’s coordinate system.</p>
 <p>Unit: rad/s.</p>
 <p>The sign convention is defined using the right-hand rule. It is applied on the y-axis of the vehicle’s reference system (center of bounding box). Counterclockwise is positive and clockwise is negative.</p>
-<p><img alt="../_images/OSI_RotationRate.svg" src="../_images/OSI_RotationRate.svg" /><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The vehicle’s reference coordinate system is only used to determine the sign convention of the rotation rate. </p>
-</dd>
-</dl>
-</p>
+<p><img alt="../_images/OSI_RotationRate.svg" src="../_images/OSI_RotationRate.svg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The vehicle’s reference coordinate system is only used to determine the sign convention of the rotation rate. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the wheel.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is implementation-specific how model_references are resolved to 3d models. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -700,12 +699,11 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleClassification_1a12a530dffb8ca980ee9909072c54e482"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">trailer_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Id of the attached trailer.</p>
-<p><p>check_if this.has_trailer is_equal_to true else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if has_Trailer is set to false or use value for non valid id.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.has_trailer is_equal_to true else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field need not be set if has_Trailer is set to false or use value for non valid id.</p>
+</div>
 </dd></dl>
 
 </div>

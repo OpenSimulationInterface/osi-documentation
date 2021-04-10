@@ -216,10 +216,10 @@
 <span id="_CPPv3N4osi323EnvironmentalConditionsE"></span><span id="_CPPv2N4osi323EnvironmentalConditionsE"></span><span id="osi3::EnvironmentalConditions"></span><span class="target" id="structosi3_1_1EnvironmentalConditions"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">EnvironmentalConditions</span></code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditionsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The conditions of the environment. </p>
 <p>Definition of light, weather conditions and other environmental conditions.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>These conditions apply locally around the host vehicle. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These conditions apply locally around the host vehicle. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
@@ -397,11 +397,10 @@
 <dt id="_CPPv4N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL1E">
 <span id="_CPPv3N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL1E"></span><span id="_CPPv2N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL1E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba971aa350d4d33410b9f9c6ede341e18e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">AMBIENT_ILLUMINATION_LEVEL1</span></code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL1E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Level 1 illumination in ]0.001, 0.01[ lx E.g. Night with no artificial light.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba971aa350d4d33410b9f9c6ede341e18e"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL1</span></span></a></code> if illumination is less than 0.001 lx </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4ba971aa350d4d33410b9f9c6ede341e18e"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL1</span></span></a></code> if illumination is less than 0.001 lx </p>
+</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
@@ -450,11 +449,10 @@
 <dt id="_CPPv4N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL9E">
 <span id="_CPPv3N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL9E"></span><span id="_CPPv2N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL9E"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4bae7c67175f6db7526d05fecdf66f97a6c"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">AMBIENT_ILLUMINATION_LEVEL9</span></code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions19AmbientIllumination27AMBIENT_ILLUMINATION_LEVEL9E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Level 9 illumination in [10000, 120000[ lx E.g. Full daylight to intense sunlight.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4bae7c67175f6db7526d05fecdf66f97a6c"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL9</span></span></a></code> if illumination is more than 120000 lx </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a9af62398fb21a5314539815afa733d4bae7c67175f6db7526d05fecdf66f97a6c"><span class="std std-ref"><span class="pre">AMBIENT_ILLUMINATION_LEVEL9</span></span></a></code> if illumination is more than 120000 lx </p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -479,13 +477,15 @@
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">int64</span> <span class="pre">unix_timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT [1]), not counting leap seconds [2]. Historically, the origin of UNIX system time was referred to as “00:00:00 GMT, January 1, 1970” [2]. Literally speaking the epoch is Unix time 0 (midnight 1/1/1970), but ‘epoch’ is often used as a synonym for ‘Unix time’. Many Unix systems store epoch dates as a signed 32-bit integer, which might cause problems on January 19, 2038 (known as the Year 2038 problem or Y2038).</p>
 <p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>You can convert the timestamp using the following <a class="reference external" href="https://www.epochconverter.com/#code">routines sorted by languages</a>.</p>
-</dd>
 <dt><strong>References:</strong></dt><dd><p>[1] ITU Radiocommunication Assembly. (2002). <em>Recommondation ITU-R TF.460-6 Standard-frequency and time-signal emissions</em>. (Rec. ITU-R TF.460-6). Retrieved January 25, 2020, from <a class="reference external" href="http://www.itu.int/dms_pubrec/itu-r/rec/tf/R-REC-TF.460-6-200202-I!!PDF-E.pdf">http://www.itu.int/dms_pubrec/itu-r/rec/tf/R-REC-TF.460-6-200202-I!!PDF-E.pdf</a> <p>[2] The Open Group. (2018). </p>
 <em>POSIX.1-2017</em> The Open Group Base Specifications Issue 7, 2018 edition. IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008). Retrieved January 25, 2020, from <a class="reference external" href="https://pubs.opengroup.org/onlinepubs/9699919799/xrat/contents.html">https://pubs.opengroup.org/onlinepubs/9699919799/xrat/contents.html</a> </p>
 </dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can convert the timestamp using the following <a class="reference external" href="https://www.epochconverter.com/#code">routines sorted by languages</a>.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -530,10 +530,10 @@
 <dt id="_CPPv4N4osi323EnvironmentalConditions9TimeOfDayE">
 <span id="_CPPv3N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="_CPPv2N4osi323EnvironmentalConditions9TimeOfDayE"></span><span id="osi3::EnvironmentalConditions::TimeOfDay"></span><span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">TimeOfDay</span></code><a class="headerlink" href="#_CPPv4N4osi323EnvironmentalConditions9TimeOfDayE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The time of day at a specified location. </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In general the global position of the parent frame should be obtainable in order to derive the local time. This information can be calculated from the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"><span class="std std-ref"><span class="pre">unix_timestamp</span></span></a></code> in combination with <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"><span class="std std-ref"><span class="pre">osi3::GroundTruth::proj_string</span></span></a></code> and the position of the corresponding <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary"><span class="std std-ref"><span class="pre">osi3::BaseStationary</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">osi3::BaseMoving</span></span></a></code> . </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In general the global position of the parent frame should be obtainable in order to derive the local time. This information can be calculated from the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1EnvironmentalConditions_1a636bb78627046f34208f42f586ab2086"><span class="std std-ref"><span class="pre">unix_timestamp</span></span></a></code> in combination with <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"><span class="std std-ref"><span class="pre">osi3::GroundTruth::proj_string</span></span></a></code> and the position of the corresponding <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary"><span class="std std-ref"><span class="pre">osi3::BaseStationary</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving"><span class="std std-ref"><span class="pre">osi3::BaseMoving</span></span></a></code> . </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -541,12 +541,11 @@
 <dt>
 <span class="target" id="structosi3_1_1EnvironmentalConditions_1_1TimeOfDay_1a6babaecd5662954155e8a846edbd8b72"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">seconds_since_midnight</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The number of seconds in s that have passed since midnight local time. Used e.g. for determining the current state of the circadian rhythm of a driver.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than: 86400  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>No changes of daylight saving time or time zones are considered.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than: 86400  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No changes of daylight saving time or time zones are considered.</p>
+</div>
 </dd></dl>
 
 </div>

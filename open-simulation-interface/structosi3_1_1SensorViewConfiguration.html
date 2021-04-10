@@ -239,12 +239,16 @@
 <dl class="simple">
 <dt><strong>Reference:</strong></dt><dd><p>[1] DIN Deutsches Institut fuer Normung e. V. (2013). <em>DIN ISO 8855 Strassenfahrzeuge - Fahrzeugdynamik und Fahrverhalten - Begriffe</em>. (DIN ISO 8855:2013-11). Berlin, Germany.</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>A default position can be provided by the sensor model (e.g. to indicate the position the model was validated for), but this is optional; the environment simulation must provide a valid mounting position (based on the vehicle configuration) when setting the view configuration. </p>
-</dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A default position can be provided by the sensor model (e.g. to indicate the position the model was validated for), but this is optional; the environment simulation must provide a valid mounting position (based on the vehicle configuration) when setting the view configuration. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -283,11 +287,11 @@
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a66ddabd0bd40550da7144204555d9913"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">update_cycle_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The update cycle time of the sensor model.</p>
 <p>This specifies the rate at which the sensor model is provided with new input data.</p>
-<p>Unit: s <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the case of FMU packaging this will correspond to the communication step size. </p>
-</dd>
-</dl>
-</p>
+<p>Unit: s </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the case of FMU packaging this will correspond to the communication step size. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -310,55 +314,50 @@
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1aef0fc7dc867ff93107c628b0a18ba7ac"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">GenericSensorViewConfiguration</span> <span class="pre">generic_sensor_view_configuration</span>&#160; <span class="pre">=1000</span></code></dt>
 <dd><p>Generic Sensor View Configuration(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a704763486c7c724727d96e108c6e560a"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RadarSensorViewConfiguration</span> <span class="pre">radar_sensor_view_configuration</span>&#160; <span class="pre">=1001</span></code></dt>
 <dd><p>Radar-specific Sensor View Configuration(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a13d4b0251bb2a62e2b18435fe5d51ffc"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LidarSensorViewConfiguration</span> <span class="pre">lidar_sensor_view_configuration</span>&#160; <span class="pre">=1002</span></code></dt>
 <dd><p>Lidar-specific Sensor View Configuration(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a36e0cfeea36cc31541e907c75e9662a0"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CameraSensorViewConfiguration</span> <span class="pre">camera_sensor_view_configuration</span>&#160; <span class="pre">=1003</span></code></dt>
 <dd><p>Camera-specific Sensor View Configuration(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1SensorViewConfiguration_1a76729f34bffe67cad880626a9bd933cb"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">UltrasonicSensorViewConfiguration</span> <span class="pre">ultrasonic_sensor_view_configuration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1004</span></code></dt>
 <dd><p>Ultrasonic-specific Sensor View Configuration(s).</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 </div>

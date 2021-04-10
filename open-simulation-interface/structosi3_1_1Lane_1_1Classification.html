@@ -273,10 +273,10 @@
 </tbody>
 </table>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the examples, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. The symbols cl1_1, cl1_2, … stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Vector3d.html#structosi3_1_1Vector3d"><span class="std std-ref"><span class="pre">osi3::Vector3d</span></span></a></code> elements. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the examples, the symbols l1, l2, … and lb1, lb2, … stand for the lane ids and lane boundary ids respectively, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. The symbols cl1_1, cl1_2, … stand for <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Vector3d.html#structosi3_1_1Vector3d"><span class="std std-ref"><span class="pre">osi3::Vector3d</span></span></a></code> elements. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
@@ -454,23 +454,28 @@
 <p><img alt="../_images/OSI_LaneBoundaries_And_CenterLine.svg" src="../_images/OSI_LaneBoundaries_And_CenterLine.svg" /></p>
 <p><p>Approximation error green line.</p>
 <img alt="../_images/line_approximation_error.svg" src="../_images/line_approximation_error.svg" /><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>cl: center line lb: lane boundary</p>
-</dd>
 <dt><strong>Attention</strong></dt><dd><p>The points desribing the center line must be set in the same ordering (ascending or descending) as the points desribing the lane boundaries. Example: If the points are deducted from a map format, the order of points is recommended to be in line with the road coordinate (e.g. s-coordinate in OpenDRIVE).</p>
 </dd>
 <dt><strong>Attention</strong></dt><dd><p>The points describing the center line might be set at arbitrary distances. When the points are pairwise linearly connected, the lateral distance to the real ideal line (as used by the simulation environment internally) must not exceed 5cm. As shown in the following image:</p>
 </dd>
 </dl>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The center line is the line that a typical vehicle follows more or less (depending on the situation, a little more to the left or right of the center line). The intended direction of travel on the lane is given by the direction defined by the sequence of points forming the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">centerline</span></span></a></code> w.r.t. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code>.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">centerline</span></span></a></code> is defined only for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a33672b40f93a20f684bce78086deab8d"><span class="std std-ref"><span class="pre">TYPE_DRIVING</span></span></a></code> and if exactly one or no <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a36c2f60a9ee363fe9e478a56d16a6b4a"><span class="std std-ref"><span class="pre">lane_pairing</span></span></a></code> pair exists.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>Intersections and non-driving lanes do not have a center line. A vehicle must calculate this individually and depending on the situation. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>cl: center line lb: lane boundary</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The center line is the line that a typical vehicle follows more or less (depending on the situation, a little more to the left or right of the center line). The intended direction of travel on the lane is given by the direction defined by the sequence of points forming the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">centerline</span></span></a></code> w.r.t. <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref"><span class="pre">centerline</span></span></a></code> is defined only for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a33672b40f93a20f684bce78086deab8d"><span class="std std-ref"><span class="pre">TYPE_DRIVING</span></span></a></code> and if exactly one or no <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a36c2f60a9ee363fe9e478a56d16a6b4a"><span class="std std-ref"><span class="pre">lane_pairing</span></span></a></code> pair exists.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Intersections and non-driving lanes do not have a center line. A vehicle must calculate this individually and depending on the situation. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -479,11 +484,10 @@
 <dd><p>Definition of the intended driving direction.</p>
 <p>Defined and used for driving lanes. <code class="docutils literal notranslate"><span class="pre">true</span></code> means driving direction is according to ascending storage order of center line points. <code class="docutils literal notranslate"><span class="pre">false</span></code> means driving direction is according to descending storage order of center line points.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code> = <code class="docutils literal notranslate"><span class="pre">true</span></code> for lane l4 and <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code> = <code class="docutils literal notranslate"><span class="pre">false</span></code> for lane l2 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1HighwayExit"><span class="std std-ref">HighwayExit</span></a> .</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code> is defined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a33672b40f93a20f684bce78086deab8d"><span class="std std-ref"><span class="pre">TYPE_DRIVING</span></span></a></code> . </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1aefbd7976958f298e74e62ed43895562f"><span class="std std-ref"><span class="pre">centerline_is_driving_direction</span></span></a></code> is defined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a33672b40f93a20f684bce78086deab8d"><span class="std std-ref"><span class="pre">TYPE_DRIVING</span></span></a></code> . </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -491,14 +495,15 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">left_adjacent_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
 <dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the left side (w.r.t. ascending order of centerline points and lane boundary points). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: The lane l3 is the only left adjacent lane for lane l4 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1HighwayExit"><span class="std std-ref">HighwayExit</span></a>.</p>
-<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"><span class="std std-ref"><span class="pre">left_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"><span class="std std-ref"><span class="pre">left_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -506,14 +511,15 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">right_adjacent_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>List of IDs of all lane segments that are directly adjacent to the lane on the right side (w.r.t. ascending order of centerline points and lane boundary points). Note that lengths of lane segments are not synchronized and therefore there are multiple adjacent segments if there is a split/merge point in the adjacent lane.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> = (l5, l6) for lane l4 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1HighwayExit"><span class="std std-ref">HighwayExit</span></a>.</p>
-<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -521,11 +527,10 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a36c2f60a9ee363fe9e478a56d16a6b4a"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LanePairing</span> <span class="pre">lane_pairing</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>The antecessor/successor lane pairings of this lane. There can be multiple pairings with the same antecessor and different successor lanes and vice versa. The antecessor lanes end in the same point that this lane starts from. The successor lanes start in the same point that this lane ends in.</p>
 <p>Example: See image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1Intersection"><span class="std std-ref">Intersection</span></a>.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -533,16 +538,19 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">right_lane_boundary_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>The right adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> may only be shared with/as the left adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> of the nearest right adjacent lane <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a9a5f956fd6acea0205ae10a7b2475145"><span class="std std-ref"><span class="pre">right_adjacent_lane_id</span></span></a></code>.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> = (lb9, lb6) for reference lane l4 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1HighwayExit"><span class="std std-ref">HighwayExit</span></a>.</p>
-<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Empty for intersections.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Empty for intersections.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -550,16 +558,19 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">left_lane_boundary_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>The left adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> may only be shared with/as the right adjacent lane boundaries <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a5e514b311276ad01e40538743a0664a2"><span class="std std-ref"><span class="pre">right_lane_boundary_id</span></span></a></code> of the nearest left adjacent lane <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1afa68d060422444ad5453dd9d3fc414eb"><span class="std std-ref"><span class="pre">left_adjacent_lane_id</span></span></a></code>.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> = lb5 for lane l4 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1HighwayExit"><span class="std std-ref">HighwayExit</span></a>.</p>
-<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Empty for intersections.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Empty for intersections.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a27cc65913fe78232e6006222612a509e"><span class="std std-ref"><span class="pre">left_lane_boundary_id</span></span></a></code> is undefined for <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> .</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -567,14 +578,15 @@
 <span class="target" id="structosi3_1_1Lane_1_1Classification_1a7c49f38d73b09f54a6d94d907e866773"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">free_lane_boundary_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
 <dd><p>The free boundaries which have no/unknown assignment to left/right.</p>
 <p>Example: <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a7c49f38d73b09f54a6d94d907e866773"><span class="std std-ref"><span class="pre">free_lane_boundary_id</span></span></a></code> = lb11 for lane l7 in image <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1Intersection"><span class="std std-ref">Intersection</span></a>.</p>
-<p><p>check_if this.type is_different_to 4 else do_check is_set  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref"><span class="pre">Lane</span></span></a></code> with <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> use only free lane boundaries.</p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names.</p>
-</dd>
-</dl>
-</p>
+<p>check_if this.type is_different_to 4 else do_check is_set  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref"><span class="pre">Lane</span></span></a></code> with <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a8cd72d8448d3b02adb6a2337f9a9d6f8"><span class="std std-ref"><span class="pre">type</span></span></a></code> = <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1ac3ca1e440d72a4bd5a640212edf73168a15483ca4d0d24c2e18d158167416d03e"><span class="std std-ref"><span class="pre">TYPE_INTERSECTION</span></span></a></code> use only free lane boundaries.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -621,10 +633,10 @@
 </tbody>
 </table>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>In the example, the symbols l1, l2, … stand for the respective lane ids, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the example, the symbols l1, l2, … stand for the respective lane ids, i.e. for integers (uint64). The symbols cl1, cl2, … represent the <a class="reference internal" href="#structosi3_1_1Lane_1_1Classification_1a0085c16a3e1677daf76db0ad23d79e42"><span class="std std-ref">osi3::Lane::Classification::centerline</span></a> elements of the lanes with the respective ids. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>

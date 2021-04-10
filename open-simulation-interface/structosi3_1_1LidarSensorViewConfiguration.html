@@ -228,12 +228,16 @@
 <dl class="simple">
 <dt><strong>Reference:</strong></dt><dd><p>[1] DIN Deutsches Institut fuer Normung e. V. (2013). <em>DIN ISO 8855 Strassenfahrzeuge - Fahrzeugdynamik und Fahrverhalten - Begriffe</em>. (DIN ISO 8855:2013-11). Berlin, Germany.</p>
 </dd>
-<dt><strong>Note</strong></dt><dd><p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
-</dd>
-<dt><strong>Note</strong></dt><dd><p>A default position can be provided by the sensor model (e.g. to indicate the position the model was validated for), but this is optional; the environment simulation must provide a valid mounting position (based on the vehicle configuration) when setting the view configuration. </p>
-</dd>
 </dl>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The origin of vehicle’s coordinate system in world frame is ( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a189c6f025650f630b92adb277bf59db6"><span class="std std-ref"><span class="pre">BaseMoving::position</span></span></a></code> + Inverse_Rotation_yaw_pitch_roll( <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>) * <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject_1_1VehicleAttributes.html#structosi3_1_1MovingObject_1_1VehicleAttributes_1a310be4844cd22fcd937ee65f865c8bc5"><span class="std std-ref"><span class="pre">MovingObject::VehicleAttributes::bbcenter_to_rear</span></span></a></code>) . The orientation of the vehicle’s coordinate system is equal to the orientation of the vehicle’s bounding box <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject_1a9eca3b518686778cb9cdd7f4e097a9f8"><span class="std std-ref"><span class="pre">MovingObject::base</span></span></a></code> . <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseMoving.html#structosi3_1_1BaseMoving_1a9d5923d72125e326e53083eb57551667"><span class="std std-ref"><span class="pre">BaseMoving::orientation</span></span></a></code>. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A default position can be provided by the sensor model (e.g. to indicate the position the model was validated for), but this is optional; the environment simulation must provide a valid mounting position (based on the vehicle configuration) when setting the view configuration. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -262,36 +266,33 @@
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1aebe71ed20bb2649c86a6552aa741258a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_of_rays_horizontal</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>Number of rays to cast across horizontal field of view.</p>
-<p><p>is_greater_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1acfa737bbeed7c706f04ca4bfbbe24950"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">number_of_rays_vertical</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Number of rays to cast across vertical field of view.</p>
-<p><p>is_greater_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a8320df0e97a09b909f326fde8db60a0c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">max_number_of_interactions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
 <dd><p>Maximum number of interactions to take into account.</p>
-<p><p>is_greater_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a characteristic of the ray tracing engine of the environment simulation, not a direct characteristic of the sensor.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -315,11 +316,11 @@
 <dt>
 <span class="target" id="structosi3_1_1LidarSensorViewConfiguration_1a712772005038f231b056111be45fc13c"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Vector3d</span> <span class="pre">directions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></code></dt>
 <dd><p>Ray tracing data.</p>
-<p>The directions unit vectors describing the Lidar’s raster transmission directions. Length is num_of_pixels <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>data is in Lidar’s coordinate system </p>
-</dd>
-</dl>
-</p>
+<p>The directions unit vectors describing the Lidar’s raster transmission directions. Length is num_of_pixels </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>data is in Lidar’s coordinate system </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

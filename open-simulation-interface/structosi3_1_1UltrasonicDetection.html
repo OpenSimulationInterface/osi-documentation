@@ -210,10 +210,10 @@
 <p>Sending: Ultrasonic Sensor ID 1</p>
 <p>Receiving: Ultrasonic Sensor ID 1</p>
 <p><img alt="../_images/OSI_USSensor_direct.svg" src="../_images/OSI_USSensor_direct.svg" /></p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Direct detecions lies on circles with the sensor as centre. </p>
-</dd>
-</dl>
+<p><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Direct detecions lies on circles with the sensor as centre. </p>
+</div>
 </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -221,24 +221,22 @@
 <dt>
 <span class="target" id="structosi3_1_1UltrasonicDetection_1a57cc9b3e327cc7274db3f16c509be4aa"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Used as confidence measure where a low value means less confidence and a high value indicates strong confidence.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1UltrasonicDetection_1ac2828d1150a0cda1ba5d26ef7e089d30"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
-<p><p>refers_to: DetectedObject  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>ID = MAX(uint64) indicates no reference to an object.</p>
-</dd>
-</dl>
-</p>
+<p>refers_to: DetectedObject  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ID = MAX(uint64) indicates no reference to an object.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">

@@ -230,11 +230,10 @@
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1aba30c025ec374d4bcb9dead3913438ec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">driver_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The ID of the driver of the (host) vehicle.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Field need not be set if host_vehicle is set to false or use value for non valid id. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -267,22 +266,21 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a08e4d735182136ee84337ef910f89ae1"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ground_clearance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
-<dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. <dl class="simple">
-<dt><strong>Note</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
-</dd>
-</dl>
-</p>
+<dd><p>Static minimal distance or space from the lowest point of the vehicle’s body to the surface plane below it under neutral load conditions. This distance disregards, for example, driving-dynamic effects or road-surface effects. Can be useful to approximate the clearance area under a vehicle that a sensor can see through. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ground_clearance</span></code> is included in the bounding box height. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1a27d7ffb7cfe89c54fc94532b4e6869cd"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">WheelData</span> <span class="pre">wheel_data</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
 <dd><p>Description of each wheel.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -352,22 +350,21 @@
 <dd><p>Rotation rate of the wheel. The rotation rate around the y-axis with respect to the wheel’s coordinate system.</p>
 <p>Unit: rad/s.</p>
 <p>The sign convention is defined using the right-hand rule. It is applied on the y-axis of the vehicle’s reference system (center of bounding box). Counterclockwise is positive and clockwise is negative.</p>
-<p><img alt="../_images/OSI_RotationRate.svg" src="../_images/OSI_RotationRate.svg" /><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The vehicle’s reference coordinate system is only used to determine the sign convention of the rotation rate. </p>
-</dd>
-</dl>
-</p>
+<p><img alt="../_images/OSI_RotationRate.svg" src="../_images/OSI_RotationRate.svg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The vehicle’s reference coordinate system is only used to determine the sign convention of the rotation rate. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
 <dd><p>Opaque reference of an associated 3D model of the wheel.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>It is implementation-specific how model_references are resolved to 3d models. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is implementation-specific how model_references are resolved to 3d models. </p>
+</div>
 </dd></dl>
 
 </div>

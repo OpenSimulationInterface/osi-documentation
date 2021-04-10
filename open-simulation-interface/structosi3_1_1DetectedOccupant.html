@@ -227,11 +227,10 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedOccupant_1a265ce952f0b2f3f283093a42a394a263"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateOccupant</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>A list of candidates for this occupant as estimated by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -245,23 +244,21 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a5cde7ba099295ec4f639f683c101ee83"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p><p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedOccupant_1_1CandidateOccupant.html#structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a5cde7ba099295ec4f639f683c101ee83"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
-</dd>
-</dl>
-</p>
+<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedOccupant_1_1CandidateOccupant.html#structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a5cde7ba099295ec4f639f683c101ee83"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedOccupant_1_1CandidateOccupant_1a83b1f6b589b8feddfadf7f3dde861034"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Occupant::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The detected vehicle occupant classification.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>
+</div>
 </dd></dl>
 
 </div>

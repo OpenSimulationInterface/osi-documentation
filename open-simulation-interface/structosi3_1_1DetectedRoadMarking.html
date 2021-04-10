@@ -230,11 +230,10 @@
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The base parameters of the road marking.</p>
 <p>The orientation of the bounding box <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"><span class="std std-ref"><span class="pre">base</span></span></a></code> <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is defined as follows: The z-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is the vector from the ‘bottom’ to the ‘top’ of the road marking’s (i.e. painted traffic sign) 2D image area. (Normally it is in the ground truth xy-plain.) The x-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> is the view normal of the road marking’s 2D image area. Normally this x-axis points to the sky.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>If a valid unidirectional road marking is assigned to the host vehicle’s current lane and the driving direction of the latter roughly matches the z-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"><span class="std std-ref"><span class="pre">base</span></span></a></code> <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> then the road marking is of relevance to (i.e. in effect for) the host vehicle. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a valid unidirectional road marking is assigned to the host vehicle’s current lane and the driving direction of the latter roughly matches the z-axis of the <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedRoadMarking_1adefabb83fa050eab33ff7aae39ee3f1c"><span class="std std-ref"><span class="pre">base</span></span></a></code> <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1BaseStationary.html#structosi3_1_1BaseStationary_1a811a76e0a95abc696f60bfc0f3987826"><span class="std std-ref"><span class="pre">BaseStationary::orientation</span></span></a></code> then the road marking is of relevance to (i.e. in effect for) the host vehicle. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
@@ -247,11 +246,10 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1a8f414cff0f010e18dcddbe0208c80fde"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateRoadMarking</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>A list of candidates for this road marking as estimated by the sensor.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>OSI uses singular instead of plural for repeated field names. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>OSI uses singular instead of plural for repeated field names. </p>
+</div>
 </dd></dl>
 
 </div>
@@ -265,23 +263,21 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p><p>is_less_than_or_equal_to: 1 is_greater_than_or_equal_to: 0  </p>
-<dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
-</dd>
-</dl>
-</p>
+<p>is_less_than_or_equal_to: 1 is_greater_than_or_equal_to: 0  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking.html#structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a5914c3bf1a92788ec1dd7f977db15606"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1DetectedRoadMarking_1_1CandidateRoadMarking_1a470e0f9da1498a03cae253eddfb8e08b"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">RoadMarking::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>The classification of the road marking.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>IDs, which are referenced in this message, usually reference to <code class="docutils literal notranslate"><span class="pre">DetectedXXX::tracking_id</span></code> IDs. </p>
+</div>
 </dd></dl>
 
 </div>
