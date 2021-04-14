@@ -8,7 +8,7 @@ jobs:
   asciidoctor-build:
     name: Run Asciidoctor on Documentation
     
-    runs-on: asciidoctor/docker-asciidoctor
+    runs-on: ubuntu-18.04
 
     steps:
     # Checkout osi documentation
@@ -67,7 +67,16 @@ jobs:
 
 
     # run Asciidoctor
+    # - name: Build HTML
+    #   uses: avattathil/asciidoctor-action@master
+    #   with:
+    #     program: "asciidoctor -D . --backend=html5 document.adoc"
 
+    # - name: Upload HTML Artifact
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: HTML document
+    #     path: document.html
 
 
 
