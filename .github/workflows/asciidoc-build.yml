@@ -32,7 +32,7 @@ jobs:
         repository: OpenSimulationInterface/osi-sensor-model-packaging
         ref: migration
         # submodules: true
-        # path: osi-documentation
+        path: .
 
 
     # - name: Checkout OSI Validation
@@ -65,9 +65,9 @@ jobs:
     - name: Show checkout result for debugging purposes
       run: ls -la
 
-    - name: Show checkout result for debugging purposes
-      run: git branch
-      working-directory: ./osi-sensor-model-packaging
+    # - name: Show checkou
+    #   run: git branch
+    #   working-directory: ./osi-sensor-model-packaging
 
 
 
