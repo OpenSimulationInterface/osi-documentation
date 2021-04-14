@@ -62,25 +62,16 @@ jobs:
         ls -la
         ls -la ..
         
-
-    # - name: Show checkou
-    #   run: git branch
-    #   working-directory: ./osi-sensor-model-packaging
-
-
-
-
     # run Asciidoctor
-    # - name: Build HTML
-    #   uses: avattathil/asciidoctor-action@master
-    #   with:
-    #     program: "asciidoctor -D . --backend=html5 document.adoc"
+    - name: Build HTML
+      uses: avattathil/asciidoctor-action@master
+      with:
+        program: "asciidoctor -D . --backend=html5 index.adoc -o documentation.html"
 
-    # - name: Upload HTML Artifact
-    #   uses: actions/upload-artifact@v1
-    #   with:
-    #     name: HTML document
-    #     path: document.html
+    - name: Upload HTML Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: HTML document
+        path: documentation.html
 
-
-
+    
