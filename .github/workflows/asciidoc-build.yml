@@ -10,6 +10,7 @@ jobs:
     
     runs-on: asciidoctor/docker-asciidoctor
 
+    steps:
     # Checkout osi documentation
     - name: Checkout osi-documentation
       uses: actions/checkout@v2
