@@ -1,29 +1,40 @@
-= Open Simulation Interface
+
+:THIS_STANDARD: ASAM Open Simulation Interface
+
+:asciidoc-resources: ./asciidoc-resources
+include::{asciidoc-resources}/preamble.adoc[]
+
+
+= {THIS_STANDARD}
+
+:copyright: ASAM e.V. 2021
+:email: info@asam.net
+:release_date: {docdate}
 
 :revnumber: v.v.v 
 :revdate: dd.mm.yyyy
-:toc: left 
-:toclevels: 2
-:sectnums:
 
 :topicdir: topics
 :reusedir: reuse
 
-// header & footer for html
-// html themes
-//
-// source highlighting
-:source-highlighter: rouge
-:rouge-style: base16.solarized.light
-// 
-// :nofooter:
-:last-update-label!:
 //embed images into html
-:data-uri: 
-:mathematical-format: svg
-:imagesoutdir: ../images/generated_images
+:imagesdir: ./images
+:imagesoutdir: ./images/generated_images
+// :bibtex-file: Tables_and_Bibliography/bibliography.bib // add when needed
 
 // 
+
+[IMPORTANT]
+.Disclaimer
+====
+This document is the copyrighted property of ASAM e.V.
+Any use is limited to the scope described in the https://www.asam.net/license[license terms].
+====
+
+<<<
+toc::[]
+
+
 
 include::./general_docs/foreword.adoc[leveloffset=+1]
 
@@ -33,9 +44,9 @@ include::./general_docs/statements.adoc[leveloffset=+2]
 
 include::./general_docs/conventions.adoc[leveloffset=+2]
 
-// include::./general_docs/other_asam_standards.adoc[leveloffset=+2]
+include::./general_standard/other_asam_standards.adoc[leveloffset=+2]
 
-// include::./general_docs/non_asam_standards.adoc[leveloffset=+2]
+include::./general_standard/non_asam_standards.adoc[leveloffset=+2]
 
 // START: including the documentation of other osi repositories
 

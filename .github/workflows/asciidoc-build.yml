@@ -56,17 +56,12 @@ jobs:
         ref: migration
         path: proto2cpp
 
-    # DEBUG: 
-    - name: Show checkout result for debugging purposes
-      run: | 
-        ls -la
-        ls -la ..
-        
+       
     # run Asciidoctor
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
-        program: "asciidoctor -D . --backend=html5 index.adoc -o documentation.html"
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o documentation.html"
 
     - name: Upload HTML Artifact
       uses: actions/upload-artifact@v1
