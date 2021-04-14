@@ -18,52 +18,50 @@ jobs:
         submodules: true
 
     # Checkout all other OSI repositories with branch "migration" and nested into osi-documentation
-    # - name: Checkout open-simulation-interface
-    #   uses: actions/checkout@v2
-    #   with:
-    #     repository: OpenSimulationInterface/open-simulation-interface
-    #     ref: migration
-    #     submodules: true
-    #     path: osi-documentation
+    - name: Checkout open-simulation-interface
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/open-simulation-interface
+        ref: migration
+        path: open-simulation-interface
 
     - name: Checkout OSI Sensor Model Packaging
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/osi-sensor-model-packaging
         ref: migration
-        # submodules: true
-        path: .
+        path: osi-sensor-model-packaging
 
 
-    # - name: Checkout OSI Validation
-    #   uses: actions/checkout@v2
-    #   with:
-    #     repository: OpenSimulationInterface/osi-validation
-    #     ref: migration
-    #     submodules: true
-    #     # path: osi-documentation
+    - name: Checkout OSI Validation
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/osi-validation
+        ref: migration
+        path: osi-validation
 
 
-    # - name: Checkout OSI Visualizer
-    #   uses: actions/checkout@v2
-    #   with:
-    #     repository: OpenSimulationInterface/osi-visualizer
-    #     ref: migration
-    #     submodules: true
-    #     path: osi-documentation
+    - name: Checkout OSI Visualizer
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/osi-visualizer
+        ref: migration
+        path: osi-visualizer
 
 
-    # - name: Checkout proto2cpp
-    #   uses: actions/checkout@v2
-    #   with:
-    #     repository: OpenSimulationInterface/proto2cpp
-    #     ref: migration
-    #     submodules: true
-        # path: osi-documentation
+    - name: Checkout proto2cpp
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/proto2cpp
+        ref: migration
+        path: proto2cpp
 
     # DEBUG: 
     - name: Show checkout result for debugging purposes
-      run: ls -la
+      run: | 
+        ls -la
+        ls -la ..
+        
 
     # - name: Show checkou
     #   run: git branch
