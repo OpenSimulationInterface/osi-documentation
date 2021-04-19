@@ -66,10 +66,11 @@ jobs:
 
 
     - name: Apply versioning to Adoc
-      uses: datamonsters/replace-action@v2
+      uses: jacobtomlinson/gha-find-replace@master
       with: 
-        files: index.adoc
-        replacements: ':revnumber: --localbuild--=:revnumber: ${{ steps.get_version.outputs.VERSION }}'
+        find: ":revnumber: --localbuild--"
+        replace: ":revnumber: ${{ steps.get_version.outputs.VERSION }}"
+        include: "index.adoc"
 
        
     # run Asciidoctor
