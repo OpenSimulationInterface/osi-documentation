@@ -56,12 +56,21 @@ jobs:
         ref: migration
         path: proto2cpp
 
+    - name: Get versioning
+      id: get_version
+      run: echo ::set-output name=VERSION::$(git describe --tags --always)
+
+      
+    - name: DEGUB
+      run: echo ${{ steps.get_version.outputs.VERSION }}
+
        
     # run Asciidoctor
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
         program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o documentation.html"
+      # TODO: change name of output file to something better using the version of the repo as well!
 
     - name: Upload HTML Artifact
       uses: actions/upload-artifact@v1
