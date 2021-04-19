@@ -4,15 +4,8 @@
 :asciidoc-resources: ./asciidoc-resources
 include::{asciidoc-resources}/preamble.adoc[]
 
-
-= {THIS_STANDARD}
-
-:copyright: ASAM e.V. 2021
-:email: info@asam.net
-:release_date: {docdate}
-
-:revnumber: v.v.v 
-:revdate: dd.mm.yyyy
+:revnumber: --localbuild--
+:revdate: {docdate}
 
 :topicdir: topics
 :reusedir: reuse
@@ -22,7 +15,9 @@ include::{asciidoc-resources}/preamble.adoc[]
 :imagesoutdir: ./images/generated_images
 // :bibtex-file: Tables_and_Bibliography/bibliography.bib // add when needed
 
-// 
+
+= {THIS_STANDARD}
+// Version v1.0.0_ghasum231
 
 [IMPORTANT]
 .Disclaimer
