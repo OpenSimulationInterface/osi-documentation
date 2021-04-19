@@ -69,7 +69,7 @@ jobs:
       uses: datamonsters/replace-action
       with: 
         files: index.adoc
-      replacements: ':revnumber: --localbuild--=:revnumber: ${{ steps.get_version.outputs.VERSION }}'
+        replacements: ':revnumber: --localbuild--=:revnumber: ${{ steps.get_version.outputs.VERSION }}'
 
        
     # run Asciidoctor
