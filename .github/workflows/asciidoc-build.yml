@@ -1,8 +1,11 @@
 name: AsciiDoc Documentation Build
 
+# This needs to be changed at some point
 on:
-  push:
-
+  create: # new branches or tags
+  release: # new releases
+  pull_request: 
+    branches: [ master ]
 
 jobs: 
   asciidoctor-build:
@@ -49,7 +52,6 @@ jobs:
         ref: migration
         path: osi-visualizer
 
-
     - name: Checkout proto2cpp
       uses: actions/checkout@v2
       with:
@@ -57,13 +59,11 @@ jobs:
         ref: migration
         path: proto2cpp
 
+    # Versioning
     - name: Get versioning
       id: get_version
       run: echo ::set-output name=VERSION::$(git describe --tags --always)
  
-    - name: DEGUB
-      run: echo ${{ steps.get_version.outputs.VERSION }}
-
 
     - name: Apply versioning to Adoc
       uses: jacobtomlinson/gha-find-replace@master
@@ -79,6 +79,7 @@ jobs:
       with:
         program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_${{ steps.get_version.outputs.VERSION }}.html"
 
+    # Upload artifact. This will change to publishing to gh-pages in the future.
     - name: Upload HTML Artifact
       uses: actions/upload-artifact@v1
       with:

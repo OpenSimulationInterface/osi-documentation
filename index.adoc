@@ -16,8 +16,8 @@ include::{asciidoc-resources}/preamble.adoc[]
 // :bibtex-file: Tables_and_Bibliography/bibliography.bib // add when needed
 
 
+
 = {THIS_STANDARD}
-// Version v1.0.0_ghasum231
 
 [IMPORTANT]
 .Disclaimer
