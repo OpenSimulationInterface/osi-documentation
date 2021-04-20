@@ -5,7 +5,7 @@ on:
   create: # new branches or tags
   release: # new releases
   pull_request: 
-    branches: [ master ]
+    branches: [ master, migration ]
 
 jobs: 
   asciidoctor-build:
