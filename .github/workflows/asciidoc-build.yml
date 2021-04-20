@@ -1,0 +1,89 @@
+name: AsciiDoc Documentation Build
+
+# This needs to be changed at some point
+on:
+  create: # new branches or tags
+  release: # new releases
+  pull_request: 
+    branches: [ master, migration ]
+
+jobs: 
+  asciidoctor-build:
+    name: Run Asciidoctor on Documentation
+    
+    runs-on: ubuntu-18.04
+
+    steps:
+    # Checkout osi documentation
+    - name: Checkout osi-documentation
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    # Checkout all other OSI repositories with branch "migration" and nested into osi-documentation
+    - name: Checkout open-simulation-interface
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/open-simulation-interface
+        ref: migration
+        path: open-simulation-interface
+
+    - name: Checkout OSI Sensor Model Packaging
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/osi-sensor-model-packaging
+        ref: migration
+        path: osi-sensor-model-packaging
+
+
+    - name: Checkout OSI Validation
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/osi-validation
+        ref: migration
+        path: osi-validation
+
+
+    - name: Checkout OSI Visualizer
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/osi-visualizer
+        ref: migration
+        path: osi-visualizer
+
+    - name: Checkout proto2cpp
+      uses: actions/checkout@v2
+      with:
+        repository: OpenSimulationInterface/proto2cpp
+        ref: migration
+        path: proto2cpp
+
+    # Versioning
+    - name: Get versioning
+      id: get_version
+      run: echo ::set-output name=VERSION::$(git describe --tags --always)
+ 
+
+    - name: Apply versioning to Adoc
+      uses: jacobtomlinson/gha-find-replace@master
+      with: 
+        find: ":revnumber: --localbuild--"
+        replace: ":revnumber: ${{ steps.get_version.outputs.VERSION }}"
+        include: "index.adoc"
+
+       
+    # run Asciidoctor
+    - name: Build HTML
+      uses: avattathil/asciidoctor-action@master
+      with:
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_${{ steps.get_version.outputs.VERSION }}.html"
+
+    # Upload artifact. This will change to publishing to gh-pages in the future.
+    - name: Upload HTML Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: HTML document
+        path: open-simulation-interface_${{ steps.get_version.outputs.VERSION }}.html
+
+    
