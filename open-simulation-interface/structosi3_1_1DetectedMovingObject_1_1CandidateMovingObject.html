@@ -216,7 +216,8 @@
 <dt>
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
-<p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
+<p>
+is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The sum of all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1acb41f80be1062f662bed906b19e83d99"><span class="std std-ref"><span class="pre">probability</span></span></a></code> must be one. This probability is given under the condition of <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1DetectedItemHeader.html#structosi3_1_1DetectedItemHeader_1a8d2238e55c8b92bf6310bce3c0c228e2"><span class="std std-ref"><span class="pre">DetectedItemHeader::existence_probability</span></span></a></code>.</p>
@@ -244,8 +245,8 @@
 <span class="target" id="structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">head_pose</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
 <dd><p>Pedestrian head pose for behavior prediction. Describes the head orientation w.r.t. the host vehicle orientation. The x-axis of the right-handed head frame is pointing along the pedestrian’s straight ahead viewing direction (anterior), the y-axis lateral to the left, and the z-axis is pointing upwards (superior) [1].</p>
 <p><code class="docutils literal notranslate"><span class="pre">View_normal_base_coord_system</span> <span class="pre">=</span> <span class="pre">Inverse_Rotation(</span><a class="reference internal" href="#structosi3_1_1DetectedMovingObject_1_1CandidateMovingObject_1a5c13d0541f0706ce7c8a827a81df9202"><span class="std std-ref"><span class="pre">head_pose</span></span></a><span class="pre">)*Unit_vector_x</span></code></p>
-<p><p>[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). </p>
-<em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. <dl class="simple">
+<p>
+[1] Patton, K. T. &amp; Thibodeau, G. A. (2015). <em>Anatomy &amp; Physiology</em>. 9th Edition. Elsevier. Missouri, U.S.A. ISBN 978-0-323-34139-4. p. 1229. <dl class="simple">
 <dt><strong>Reference:</strong></dt><dd><p></p>
 </dd>
 </dl>

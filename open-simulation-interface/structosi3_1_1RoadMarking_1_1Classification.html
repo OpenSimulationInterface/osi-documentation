@@ -335,7 +335,8 @@
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a71de4ec9d93175a6b2b02a7a4326cb98"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">TrafficSign::MainSign::Classification::Type</span> <span class="pre">traffic_main_sign_type</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
 <dd><p>Traffic sign as road marking (color image, monochrome image or character string).</p>
-<p>check_if this.type is_greater_than_or_equal_to 2 else do_check is_set check_if this.type is_less_than_or_equal_to 4 else do_check is_set  </p>
+<p>
+check_if this.type is_greater_than_or_equal_to 2 else do_check is_set check_if this.type is_less_than_or_equal_to 4 else do_check is_set  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Field is set if ( <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1a6fd9cb8216af8321e341e8b79c6f916e"><span class="std std-ref"><span class="pre">type</span></span></a></code> == <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaaa850220d5bb3adde51b1ddc4ae1eaa4"><span class="std std-ref"><span class="pre">TYPE_PAINTED_TRAFFIC_SIGN</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cbaf32447c2168fbb5d9baf48f650a80b9d"><span class="std std-ref"><span class="pre">TYPE_SYMBOLIC_TRAFFIC_SIGN</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1RoadMarking_1_1Classification_1af73299847f0cbcd33b492d8e8b6427cba4a5a31878399051eefbcd7f7dd58836c"><span class="std std-ref"><span class="pre">TYPE_TEXTUAL_TRAFFIC_SIGN</span></span></a></code> ).</p>
@@ -349,7 +350,8 @@
 <dl class="cpp var">
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1aa0997fbbe7cd0afaeaf2c3b2079cfca9"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Color</span> <span class="pre">monochrome_color</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
-<dd><p>The monochrome color of the road marking. <p>check_if this.type is_equal_to 2 else do_check is_set check_if this.monochrome_color is_equal_to 1 else do_check is_set  </p>
+<dd><p><p>The monochrome color of the road marking.</p>
+<p>check_if this.type is_equal_to 2 else do_check is_set check_if this.monochrome_color is_equal_to 1 else do_check is_set</p>
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -385,8 +387,8 @@
 <dt>
 <span class="target" id="structosi3_1_1RoadMarking_1_1Classification_1a482fa85b781bebc662550ae8e3213e30"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Identifier</span> <span class="pre">assigned_lane_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
 <dd><p>The ID(s) of the lane(s) that the road marking is assigned to. May be multiple if the road marking goes across multiple lanes.</p>
-<p><p>refers_to: </p>
-<a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
+<p>
+refers_to: <a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>OSI uses singular instead of plural for repeated field names.</p>
