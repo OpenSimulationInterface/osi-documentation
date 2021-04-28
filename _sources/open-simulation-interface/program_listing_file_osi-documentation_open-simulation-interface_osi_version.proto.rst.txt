@@ -67,5 +67,5 @@ Program Listing for File osi_version.proto
    }
    
    option (current_interface_version).version_major = 3;
-   option (current_interface_version).version_minor = 2;
-   option (current_interface_version).version_patch = 0;
+   option (current_interface_version).version_minor = 3;
+   option (current_interface_version).version_patch = 1;
