@@ -62,7 +62,7 @@ jobs:
     # Versioning
     - name: Get versioning
       id: get_version
-      run: echo ::set-output name=VERSION::$(git describe --tags --always)
+      run: echo ::set-output name=VERSION::$(git describe --tags --always |  sed 's/^v//')
  
 
     - name: Apply versioning to Adoc
@@ -77,7 +77,7 @@ jobs:
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
-        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_${{ steps.get_version.outputs.VERSION }}.html"
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
     # Upload artifact. This will change to publishing to gh-pages in the future.
     - name: Upload HTML Artifact
