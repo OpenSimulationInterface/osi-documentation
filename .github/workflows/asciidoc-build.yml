@@ -1,11 +1,11 @@
 name: AsciiDoc Documentation Build
 
-# This needs to be changed at some point
 on:
   create: # new branches or tags
   release: # new releases
   pull_request: 
     branches: [ master, migration ]
+  push: # on push. This may be removed later
 
 jobs: 
   asciidoctor-build:
