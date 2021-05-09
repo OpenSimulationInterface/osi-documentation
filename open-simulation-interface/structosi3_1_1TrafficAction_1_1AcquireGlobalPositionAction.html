@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -207,8 +210,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi313TrafficAction27AcquireGlobalPositionActionE">
-<span id="_CPPv3N4osi313TrafficAction27AcquireGlobalPositionActionE"></span><span id="_CPPv2N4osi313TrafficAction27AcquireGlobalPositionActionE"></span><span id="osi3::TrafficAction::AcquireGlobalPositionAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="pre">TrafficAction</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">AcquireGlobalPositionAction</span></code><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi313TrafficAction27AcquireGlobalPositionActionE">
+<span id="_CPPv3N4osi313TrafficAction27AcquireGlobalPositionActionE"></span><span id="_CPPv2N4osi313TrafficAction27AcquireGlobalPositionActionE"></span><span id="osi3::TrafficAction::AcquireGlobalPositionAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="n"><span class="pre">TrafficAction</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">AcquireGlobalPositionAction</span></span></span><br /></dt>
 <dd><p>Acquire global position action. </p>
 <p>This action assigns a route to a traffic participant. The route assigned will be the shortest route (along roads or satisfying any other constraints a traffic participant is operating under) between the traffic participant’s current position and the position specified.</p>
 <p>As with all routing actions, the exact way this route is achieved is under the control of the traffic participant model.</p>
@@ -220,14 +223,14 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1a9cf4f0aa63230c4464901c948661243e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1a9cf4f0aa63230c4464901c948661243e"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The action header. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1a5ed933a3ee8cc825c00654247aab4dbc"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1a5ed933a3ee8cc825c00654247aab4dbc"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>Position in the global coordinate system.</p>
 <p>The position refers to the center (x,y,z) of the bounding box.</p>
 <div class="admonition note">
@@ -237,8 +240,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1aad332f32b5debaa29dc1b8b169f30f31"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1AcquireGlobalPositionAction_1aad332f32b5debaa29dc1b8b169f30f31"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>Orientation in the global coordinate system.</p>
 <p>This is optional. If no orientation is given, the end orientation is under control of the traffic participant. </p>
 </dd></dl>

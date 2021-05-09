@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,8 +206,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi327UltrasonicIndirectDetectionE">
-<span id="_CPPv3N4osi327UltrasonicIndirectDetectionE"></span><span id="_CPPv2N4osi327UltrasonicIndirectDetectionE"></span><span id="osi3::UltrasonicIndirectDetection"></span><span class="target" id="structosi3_1_1UltrasonicIndirectDetection"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">UltrasonicIndirectDetection</span></code><a class="headerlink" href="#_CPPv4N4osi327UltrasonicIndirectDetectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi327UltrasonicIndirectDetectionE">
+<span id="_CPPv3N4osi327UltrasonicIndirectDetectionE"></span><span id="_CPPv2N4osi327UltrasonicIndirectDetectionE"></span><span id="osi3::UltrasonicIndirectDetection"></span><span class="target" id="structosi3_1_1UltrasonicIndirectDetection"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">UltrasonicIndirectDetection</span></span></span><a class="headerlink" href="#_CPPv4N4osi327UltrasonicIndirectDetectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Ultrasonic detection received by another ultrasonic sensor (different sensors as sender and receiver). </p>
 <p>Indirect detections:</p>
 <p>Sending: Ultrasonic Sensor ID 1</p>
@@ -218,8 +221,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a6d161260fca7169e5964cf620fcd044f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a6d161260fca7169e5964cf620fcd044f"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
 <p>
 is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
@@ -230,8 +233,8 @@ is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a66f2cbb56ff0694190aaab5cc9377fdf"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a66f2cbb56ff0694190aaab5cc9377fdf"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
 <p>
 refers_to: DetectedObject  </p>
@@ -242,28 +245,28 @@ refers_to: DetectedObject  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1ae27488fe133f3e50b4894c7616466989"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ellipsoid_radial</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1ae27488fe133f3e50b4894c7616466989"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ellipsoid_radial</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>First parameter b of an ellipsoid equation.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a486263493b3eea64c92cd607c86bc7f4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ellipsoid_axial</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a486263493b3eea64c92cd607c86bc7f4"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">ellipsoid_axial</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>Second parameter b of an ellipsoid equation.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a3e131efae88dbf40eadfd43ba4e444df"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">receiver_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a3e131efae88dbf40eadfd43ba4e444df"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">receiver_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>The ID of the sensor’s receiver. Sender ID is stored in the header <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorDetectionHeader.html#structosi3_1_1SensorDetectionHeader"><span class="std std-ref"><span class="pre">SensorDetectionHeader</span></span></a></code>. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a2ed15dee2e9e49c36d8bb61639de4a8a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">receiver_origin</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1UltrasonicIndirectDetection_1a2ed15dee2e9e49c36d8bb61639de4a8a"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">receiver_origin</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>The vector to the receiver’s origin in sending ultrasonic sensor frame. The vector is also the direction of <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1UltrasonicIndirectDetection_1a486263493b3eea64c92cd607c86bc7f4"><span class="std std-ref"><span class="pre">ellipsoid_axial</span></span></a></code>. </p>
 </dd></dl>
 

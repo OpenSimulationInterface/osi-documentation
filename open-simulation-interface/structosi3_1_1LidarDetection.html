@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,14 +206,14 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi314LidarDetectionE">
-<span id="_CPPv3N4osi314LidarDetectionE"></span><span id="_CPPv2N4osi314LidarDetectionE"></span><span id="osi3::LidarDetection"></span><span class="target" id="structosi3_1_1LidarDetection"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LidarDetection</span></code><a class="headerlink" href="#_CPPv4N4osi314LidarDetectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi314LidarDetectionE">
+<span id="_CPPv3N4osi314LidarDetectionE"></span><span id="_CPPv2N4osi314LidarDetectionE"></span><span id="osi3::LidarDetection"></span><span class="target" id="structosi3_1_1LidarDetection"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">LidarDetection</span></span></span><a class="headerlink" href="#_CPPv4N4osi314LidarDetectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A point or vertical line in a lidar point cloud. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1aa43288d7437026989c17abbc466d29d2"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1aa43288d7437026989c17abbc466d29d2"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">existence_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Existence probability of the detection not based on history. Value does not depend on any past experience with similar detections.</p>
 <p>
 is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
@@ -221,8 +224,8 @@ is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a744d7f8e6e5be6c25dce2f4bb3d2755c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a744d7f8e6e5be6c25dce2f4bb3d2755c"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>ID of the detected object this detection is associated to.</p>
 <p>
 refers_to: DetectedObject  </p>
@@ -233,57 +236,57 @@ refers_to: DetectedObject  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1ae732995aaab1ef629a09896f1ab04317"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Spherical3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1ae732995aaab1ef629a09896f1ab04317"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Spherical3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>Measured position of the detection given in spherical coordinates in the sensor coordinate system. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1aa648b223b72897239e0120be863a4439"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Spherical3d</span> <span class="pre">position_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1aa648b223b72897239e0120be863a4439"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Spherical3d</span> <span class="pre">position_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>Root mean squared error of the measured position of the detection. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a3307991b913cb5b5451257e49f5234d9"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">height</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a3307991b913cb5b5451257e49f5234d9"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">height</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>The height value which is required when multiple scan points are vertically clustered. Only vertical clustering is allowed (z-axis).</p>
 <p>Unit: m</p>
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a6799498adedc0b59775d547106557029"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">height_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a6799498adedc0b59775d547106557029"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">height_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>Root mean squared error of the object height.</p>
 <p>Unit: m</p>
 <p>is_greater_than_or_equal_to: 0  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a1c2ea1eb70a1d1c31d5bc1481572f4e7"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">intensity</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a1c2ea1eb70a1d1c31d5bc1481572f4e7"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">intensity</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></span></dt>
 <dd><p>Intensity or equivalent value of the detection’s echo.</p>
 <p>Unit: %</p>
 <p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 100  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a211052d77b3fd978c00659d3d1b98a06"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">free_space_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a211052d77b3fd978c00659d3d1b98a06"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">free_space_probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></span></dt>
 <dd><p>The free space probability in the range [0.0, 1.0] from the origin of the sensor up to this detection, as given by the distance.</p>
 <p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a44833637161c94126c8ba84bf47b377a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectionClassification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a44833637161c94126c8ba84bf47b377a"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectionClassification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></span></dt>
 <dd><p>Basic classification of the detection. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarDetection_1a20bdc24a0eaadbd9c2fa48f416f30f42"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">reflectivity</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarDetection_1a20bdc24a0eaadbd9c2fa48f416f30f42"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">reflectivity</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></span></dt>
 <dd><p>Lambertian reflectivity. </p>
 </dd></dl>
 

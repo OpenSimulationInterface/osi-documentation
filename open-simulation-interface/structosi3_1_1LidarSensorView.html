@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -212,21 +215,21 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi315LidarSensorViewE">
-<span id="_CPPv3N4osi315LidarSensorViewE"></span><span id="_CPPv2N4osi315LidarSensorViewE"></span><span id="osi3::LidarSensorView"></span><span class="target" id="structosi3_1_1LidarSensorView"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LidarSensorView</span></code><a class="headerlink" href="#_CPPv4N4osi315LidarSensorViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi315LidarSensorViewE">
+<span id="_CPPv3N4osi315LidarSensorViewE"></span><span id="_CPPv2N4osi315LidarSensorViewE"></span><span id="osi3::LidarSensorView"></span><span class="target" id="structosi3_1_1LidarSensorView"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">LidarSensorView</span></span></span><a class="headerlink" href="#_CPPv4N4osi315LidarSensorViewE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of the lidar sensor view. </p>
 <p>Lidar specific sensor view data. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1a058ec969852277820a7e6d02e288b5e6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">LidarSensorViewConfiguration</span> <span class="pre">view_configuration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1a058ec969852277820a7e6d02e288b5e6"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">LidarSensorViewConfiguration</span> <span class="pre">view_configuration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Lidar view configuration valid at the time the data was created. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1abd48c19b5ae9ddee52c269b0dbc11686"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Reflection</span> <span class="pre">reflection</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1abd48c19b5ae9ddee52c269b0dbc11686"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Reflection</span> <span class="pre">reflection</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>Ray tracing data.</p>
 <p>This field includes one entry for each ray, in left-to-right, top-to-bottom order (think of scan lines in a TV).</p>
 <div class="admonition note">
@@ -237,38 +240,38 @@
 
 </div>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi315LidarSensorView10ReflectionE">
-<span id="_CPPv3N4osi315LidarSensorView10ReflectionE"></span><span id="_CPPv2N4osi315LidarSensorView10ReflectionE"></span><span id="osi3::LidarSensorView::Reflection"></span><span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">Reflection</span></code><a class="headerlink" href="#_CPPv4N4osi315LidarSensorView10ReflectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi315LidarSensorView10ReflectionE">
+<span id="_CPPv3N4osi315LidarSensorView10ReflectionE"></span><span id="_CPPv2N4osi315LidarSensorView10ReflectionE"></span><span id="osi3::LidarSensorView::Reflection"></span><span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reflection</span></span></span><a class="headerlink" href="#_CPPv4N4osi315LidarSensorView10ReflectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Definition of the lidar reflection. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a9f8c01d2cc2b1fd2a6743b3609e2b17a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">signal_strength</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a9f8c01d2cc2b1fd2a6743b3609e2b17a"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">signal_strength</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Relative signal level of the reflection.</p>
 <p>This takes the signal losses due to scattering and absorption into account, and will, when multiplied by TX power yield the potential RX power (disregarding any other RX/TX losses).</p>
 <p>Unit: dB </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a0747cfd174a577b0061ebe7ff9ccfd4c"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">time_of_flight</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a0747cfd174a577b0061ebe7ff9ccfd4c"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">time_of_flight</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>Time of flight.</p>
 <p>This is the time of flight of the reflection, which is directly proportional to the distance traveled.</p>
 <p>Unit: s </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a104b08393487c62adf354730f3d16fd6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">doppler_shift</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a104b08393487c62adf354730f3d16fd6"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">doppler_shift</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>Doppler shift.</p>
 <p>Shift in frequency based on the specified TX frequency.</p>
 <p>Unit: Hz </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a8c68f21a375a0aa52ad9cc5634dd1aa2"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">normal_to_surface</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1a8c68f21a375a0aa52ad9cc5634dd1aa2"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">normal_to_surface</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>normal to surface angle.</p>
 <p><p>The normal of the transmitted beam to the object, roadmarking etc encounter.</p>
 <p>Unit: unit vector</p>
@@ -280,8 +283,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1af6f6bf35653db0a24f9c23fba77d4e37"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LidarSensorView_1_1Reflection_1af6f6bf35653db0a24f9c23fba77d4e37"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">object_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>ID of the detected object this reflection is associated to. can be used for raytracing debug</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

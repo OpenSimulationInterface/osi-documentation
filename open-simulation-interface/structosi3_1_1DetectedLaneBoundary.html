@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -212,21 +215,21 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi320DetectedLaneBoundaryE">
-<span id="_CPPv3N4osi320DetectedLaneBoundaryE"></span><span id="_CPPv2N4osi320DetectedLaneBoundaryE"></span><span id="osi3::DetectedLaneBoundary"></span><span class="target" id="structosi3_1_1DetectedLaneBoundary"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">DetectedLaneBoundary</span></code><a class="headerlink" href="#_CPPv4N4osi320DetectedLaneBoundaryE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi320DetectedLaneBoundaryE">
+<span id="_CPPv3N4osi320DetectedLaneBoundaryE"></span><span id="_CPPv2N4osi320DetectedLaneBoundaryE"></span><span id="osi3::DetectedLaneBoundary"></span><span class="target" id="structosi3_1_1DetectedLaneBoundary"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">DetectedLaneBoundary</span></span></span><a class="headerlink" href="#_CPPv4N4osi320DetectedLaneBoundaryE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A lane boundary segment as detected by the sensor. </p>
 <p><img alt="../_images/OSI_DetectedLaneBoundary.svg" src="../_images/OSI_DetectedLaneBoundary.svg" /></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a22473acb719c74d6d2daa8556a9deedf"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectedItemHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a22473acb719c74d6d2daa8556a9deedf"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectedItemHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Common information of one detected item. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1aec65ce160b8def1f9c7621e0d2c94391"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateLaneBoundary</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1aec65ce160b8def1f9c7621e0d2c94391"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateLaneBoundary</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>A list of candidates for this lane boundary as estimated by the sensor.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -235,8 +238,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1aad023da83f979508a2b8436d757b6ba6"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary::BoundaryPoint</span> <span class="pre">boundary_line</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1aad023da83f979508a2b8436d757b6ba6"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary::BoundaryPoint</span> <span class="pre">boundary_line</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>The list of individual points defining the location of the lane boundary (as a list of segments).</p>
 <p>Since a <code class="docutils literal notranslate"><span class="pre">BoundaryPoint</span></code> is part of a sequence, only the position attribute has to be set for each instance. All other values will be reused from the previous <code class="docutils literal notranslate"><span class="pre">BoundaryPoint</span></code> in the sequence or set to default values if there is none or it was never set. For dashed lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">LaneBoundary::BoundaryPoint</span></span></a></code> has to be at the start and another at the end of each dashed line segment. For Botts’ dots lines, one <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">LaneBoundary::BoundaryPoint</span></span></a></code> position has to define each Botts’ dot.</p>
 <p><dl class="simple">
@@ -247,28 +250,28 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a3fa345c67f974ea15c71acb24ef6e5d6"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary::BoundaryPoint</span> <span class="pre">boundary_line_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a3fa345c67f974ea15c71acb24ef6e5d6"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary::BoundaryPoint</span> <span class="pre">boundary_line_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>The root mean squared error of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">LaneBoundary::BoundaryPoint</span></span></a></code>. Each <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aec65ce160b8def1f9c7621e0d2c94391"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> has the same <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aad023da83f979508a2b8436d757b6ba6"><span class="std std-ref"><span class="pre">boundary_line</span></span></a></code> points and exact one <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1a3fa345c67f974ea15c71acb24ef6e5d6"><span class="std std-ref"><span class="pre">boundary_line_rmse</span></span></a></code> rmse confidence value is specified which is suitable for all candidates. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a51bce9c2256d87f9c72c229be92386a1"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">boundary_line_confidences</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1a51bce9c2256d87f9c72c229be92386a1"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">double</span> <span class="pre">boundary_line_confidences</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>Confidence of the segments of the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary_1_1BoundaryPoint.html#structosi3_1_1LaneBoundary_1_1BoundaryPoint"><span class="std std-ref"><span class="pre">LaneBoundary::BoundaryPoint</span></span></a></code>. Each <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aec65ce160b8def1f9c7621e0d2c94391"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> has the same <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1aad023da83f979508a2b8436d757b6ba6"><span class="std std-ref"><span class="pre">boundary_line</span></span></a></code> points and exact one <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedLaneBoundary_1a51bce9c2256d87f9c72c229be92386a1"><span class="std std-ref"><span class="pre">boundary_line_confidences</span></span></a></code> confidence value is specified which is suitable for all candidates.</p>
 <p>is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 </div>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE">
-<span id="_CPPv3N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE"></span><span id="_CPPv2N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE"></span><span id="osi3::DetectedLaneBoundary::CandidateLaneBoundary"></span><span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">CandidateLaneBoundary</span></code><a class="headerlink" href="#_CPPv4N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE">
+<span id="_CPPv3N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE"></span><span id="_CPPv2N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE"></span><span id="osi3::DetectedLaneBoundary::CandidateLaneBoundary"></span><span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CandidateLaneBoundary</span></span></span><a class="headerlink" href="#_CPPv4N4osi320DetectedLaneBoundary21CandidateLaneBoundaryE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A candidate for a detected lane boundary as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1a01d4e5d4677f71116f84b1b6169d19f8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1a01d4e5d4677f71116f84b1b6169d19f8"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
 <p>
 is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
@@ -279,8 +282,8 @@ is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1aef5a6e6b9e362c541191709fb462b5a8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">LaneBoundary::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedLaneBoundary_1_1CandidateLaneBoundary_1aef5a6e6b9e362c541191709fb462b5a8"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">LaneBoundary::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The classification of one lane boundary that defines this candidate.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

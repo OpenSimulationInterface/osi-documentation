@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -207,61 +210,61 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE">
-<span id="_CPPv3N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="osi3::MovingObject::VehicleAttributes::WheelData"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1MovingObject.html#_CPPv4N4osi312MovingObjectE" title="osi3::MovingObject"><span class="pre">MovingObject</span></a><span class="pre">::</span><a class="reference internal" href="structosi3_1_1MovingObject.html#_CPPv4N4osi312MovingObject17VehicleAttributesE" title="osi3::MovingObject::VehicleAttributes"><span class="pre">VehicleAttributes</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">WheelData</span></code><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi312MovingObject17VehicleAttributes9WheelDataE">
+<span id="_CPPv3N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="_CPPv2N4osi312MovingObject17VehicleAttributes9WheelDataE"></span><span id="osi3::MovingObject::VehicleAttributes::WheelData"></span><span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structosi3_1_1MovingObject.html#_CPPv4N4osi312MovingObjectE" title="osi3::MovingObject"><span class="n"><span class="pre">MovingObject</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structosi3_1_1MovingObject.html#_CPPv4N4osi312MovingObject17VehicleAttributesE" title="osi3::MovingObject::VehicleAttributes"><span class="n"><span class="pre">VehicleAttributes</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">WheelData</span></span></span><br /></dt>
 <dd><p>Detailed wheel data. The focus is on the description of a wheel regarding the perceivable information from the outside. It is not intended to be used for dynamic calculations, for example. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a094de989f5a2aab080f9a65f0feb3867"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">axle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a094de989f5a2aab080f9a65f0feb3867"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">axle</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The axle which contains this wheel. A value of 0 represents the front-most axle of the vehicle with higher numbers incrementing towards the rear-most axle. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a2095585cdc9eb8968fe576af7c43d5a3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">index</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a2095585cdc9eb8968fe576af7c43d5a3"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">index</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The index of the wheel on the axle, counting in the direction of positive-y, that is, right-to-left.</p>
 <p>For example, on a standard 2-axle, 4-wheel car, the rear-right wheel would be (axle=1, index=0). This concept works also for twin tires. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1abfe9b8868b4a50e8b20476aadd217268"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1abfe9b8868b4a50e8b20476aadd217268"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Vector3d</span> <span class="pre">position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>A vector pointing from the vehicle’s reference system (center of bounding box) to the geometric center of the wheel. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a103fad79e18f7443b50e4d81160c8d56"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">wheel_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a103fad79e18f7443b50e4d81160c8d56"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">wheel_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>Median radius of the wheel measured from the center of the wheel to the outer part of the tire.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1afdacaf4b3b87153099953937da698297"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rim_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1afdacaf4b3b87153099953937da698297"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rim_radius</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>Median radius of the rim measured from the center to the outer, visible part of the rim.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a99c73124e0eace722696b019306d1614"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">width</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a99c73124e0eace722696b019306d1614"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">width</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>Median width of the tire.</p>
 <p>Unit: m </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a844a2e4eacc8dee9449f8e3a17afb577"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1a844a2e4eacc8dee9449f8e3a17afb577"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Orientation3d</span> <span class="pre">orientation</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></span></dt>
 <dd><p>Orientation of the wheel.</p>
 <p>The reference system is the vehicle frame (center of bounding box). </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1aac1cc436ddbf53001ca1a5269b536dc0"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rotation_rate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1aac1cc436ddbf53001ca1a5269b536dc0"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">rotation_rate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></span></dt>
 <dd><p>Rotation rate of the wheel. The rotation rate around the y-axis with respect to the wheel’s coordinate system.</p>
 <p>Unit: rad/s.</p>
 <p>The sign convention is defined using the right-hand rule. It is applied on the y-axis of the vehicle’s reference system (center of bounding box). Counterclockwise is positive and clockwise is negative.</p>
@@ -273,8 +276,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1_1VehicleAttributes_1_1WheelData_1af71580c96768174a1c294d7d9e4d9cb4"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></span></dt>
 <dd><p>Opaque reference of an associated 3D model of the wheel.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

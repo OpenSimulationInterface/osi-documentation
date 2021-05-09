@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,8 +206,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi311GroundTruthE">
-<span id="_CPPv3N4osi311GroundTruthE"></span><span id="_CPPv2N4osi311GroundTruthE"></span><span id="osi3::GroundTruth"></span><span class="target" id="structosi3_1_1GroundTruth"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">GroundTruth</span></code><a class="headerlink" href="#_CPPv4N4osi311GroundTruthE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi311GroundTruthE">
+<span id="_CPPv3N4osi311GroundTruthE"></span><span id="_CPPv2N4osi311GroundTruthE"></span><span id="osi3::GroundTruth"></span><span class="target" id="structosi3_1_1GroundTruth"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">GroundTruth</span></span></span><a class="headerlink" href="#_CPPv4N4osi311GroundTruthE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The ground truth information from the simulation environment. </p>
 <p>This ground truth information is supposed to describe the whole simulated environment around any simulated vehicle. For each simulated host vehicle (there may be one or multiple), define an area around the vehicle which is greater than the combined field of views (FOV) of all obstructed sensors in the vehicle. The ground truth data is supposed to describe the convex hull of all such areas w.r.t. a global simulation coordinate system.</p>
 <p>The simulation coordinate system may change during the simulation if and only if all coordinates w.r.t. this coordinate system are also changed.</p>
@@ -215,14 +218,14 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ad1ad43ca92a112daf6678da302c05880"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1ad1ad43ca92a112daf6678da302c05880"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The interface version used by the sender (i.e. the simulation environment). </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a681bc6d9e26aa4603adb4f167bad67fc"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The data timestamp of the simulation environment. The zero time point is arbitrary but must be identical for all messages. Recommendation: Zero time point for start point of the simulation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -235,8 +238,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">host_vehicle_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a1e95e5082d740add167f4e4948d3faec"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">host_vehicle_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>The ID of the host vehicle object referencing to <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref"><span class="pre">MovingObject</span></span></a></code> .</p>
 <p>
 refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#structosi3_1_1MovingObject"><span class="std std-ref">MovingObject</span></a></p>
@@ -247,8 +250,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StationaryObject</span> <span class="pre">stationary_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1ab3ed9b77d4db3fda6a8a03a4cbd37d50"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">StationaryObject</span> <span class="pre">stationary_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>The list of stationary objects (excluding traffic signs and traffic lights).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -257,8 +260,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">MovingObject</span> <span class="pre">moving_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1ac0cc92fce3e8e5a7d067a3a456b3d0ec"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">MovingObject</span> <span class="pre">moving_object</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>The list of all other moving objects including all (host) vehicles.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -267,8 +270,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficSign</span> <span class="pre">traffic_sign</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a4234b9b1037680ad8c53ac504cc085b7"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficSign</span> <span class="pre">traffic_sign</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>The list of traffic signs.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -277,8 +280,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficLight</span> <span class="pre">traffic_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1ac46f04d9d79b4e3862f2a1640f2d315e"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficLight</span> <span class="pre">traffic_light</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></span></dt>
 <dd><p>The list of traffic lights.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -287,8 +290,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RoadMarking</span> <span class="pre">road_marking</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a9f687169c82faae4e380556d5fabdd8f"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RoadMarking</span> <span class="pre">road_marking</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></span></dt>
 <dd><p>The list of road surface markings (lane markings are excluded and defined as <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1LaneBoundary.html#structosi3_1_1LaneBoundary"><span class="std std-ref"><span class="pre">LaneBoundary</span></span></a></code>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -297,8 +300,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary</span> <span class="pre">lane_boundary</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a06abefd3ac8111dc471a3296a4b98b37"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LaneBoundary</span> <span class="pre">lane_boundary</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></span></dt>
 <dd><p>The list of lane boundaries.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -307,8 +310,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Lane</span> <span class="pre">lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a5b6fb61bebe56eb509f4e5ca833d5a49"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Lane</span> <span class="pre">lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></span></dt>
 <dd><p>The list of lanes forming a road network.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -317,8 +320,8 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Occupant</span> <span class="pre">occupant</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1adef71408537b15e4047667dd5b56b964"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">Occupant</span> <span class="pre">occupant</span>&#160;&#160; <span class="pre">=</span> <span class="pre">11</span></span></dt>
 <dd><p>The list of passengers in the (host) vehicle(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -327,14 +330,14 @@ refers_to: <a class="reference internal" href="structosi3_1_1MovingObject.html#s
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1aee1873cbe2ed79701c6790ddcb14b420"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">EnvironmentalConditions</span> <span class="pre">environmental_conditions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">12</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1aee1873cbe2ed79701c6790ddcb14b420"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">EnvironmentalConditions</span> <span class="pre">environmental_conditions</span>&#160;&#160; <span class="pre">=</span> <span class="pre">12</span></span></dt>
 <dd><p>Conditions of the environment. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">country_code</span>&#160;&#160; <span class="pre">=</span> <span class="pre">13</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a162349535ee11aee7b68aaa61f1dc661"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">uint32</span> <span class="pre">country_code</span>&#160;&#160; <span class="pre">=</span> <span class="pre">13</span></span></dt>
 <dd><p>The ISO country code in 3 digit numeric format according to: ISO Code 3166/1 [1]. E.g. Germany = 276, USA = 840.</p>
 <p>
 is_iso_country_code:  <dl class="simple">
@@ -345,8 +348,8 @@ is_iso_country_code:  <dl class="simple">
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">proj_string</span>&#160;&#160; <span class="pre">=</span> <span class="pre">14</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1af5f78f308a00d74ece79410eb7913006"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">proj_string</span>&#160;&#160; <span class="pre">=</span> <span class="pre">14</span></span></dt>
 <dd><p>Projection string that allows to transform all coordinates in <a class="reference internal" href="#structosi3_1_1GroundTruth"><span class="std std-ref">GroundTruth</span></a> into a different cartographic projection.</p>
 <p>The string follows the PROJ rules for projections [1].</p>
 <p><dl class="simple">
@@ -357,8 +360,8 @@ is_iso_country_code:  <dl class="simple">
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">map_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">15</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">map_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">15</span></span></dt>
 <dd><p>Opaque reference of a map.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -371,8 +374,8 @@ is_iso_country_code:  <dl class="simple">
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1GroundTruth_1a83042861723a4a9e890a53aa98d88858"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">16</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1GroundTruth_1a83042861723a4a9e890a53aa98d88858"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">string</span> <span class="pre">model_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">16</span></span></dt>
 <dd><p>Opaque reference of an associated 3D model.</p>
 <p>The model covers the static parts of the environment that are not provided as individual models referenced from ground truth objects like moving or stationary objects.</p>
 <div class="admonition note">

@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,8 +206,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi314TrafficCommandE">
-<span id="_CPPv3N4osi314TrafficCommandE"></span><span id="_CPPv2N4osi314TrafficCommandE"></span><span id="osi3::TrafficCommand"></span><span class="target" id="structosi3_1_1TrafficCommand"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">TrafficCommand</span></code><a class="headerlink" href="#_CPPv4N4osi314TrafficCommandE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi314TrafficCommandE">
+<span id="_CPPv3N4osi314TrafficCommandE"></span><span id="_CPPv2N4osi314TrafficCommandE"></span><span id="osi3::TrafficCommand"></span><span class="target" id="structosi3_1_1TrafficCommand"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">TrafficCommand</span></span></span><a class="headerlink" href="#_CPPv4N4osi314TrafficCommandE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The scenario engine provides control commands in the traffic command message to traffic participant models. The control commands are based on the scenario. </p>
 <p><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -214,14 +217,14 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficCommand_1a39d0be3ab5f87d40d309236fed587bab"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficCommand_1a39d0be3ab5f87d40d309236fed587bab"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The interface version used by the sender (scenario engine). </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficCommand_1af593b71857620300c54cdfe3f8c5d695"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficCommand_1af593b71857620300c54cdfe3f8c5d695"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">timestamp</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The data timestamp of the simulation environment. Zero time is arbitrary but must be identical for all messages. Zero time does not need to coincide with the UNIX epoch. It is recommended to use zero timestamp as the starting time point of the simulation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -230,14 +233,14 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficCommand_1a3a1c42d3330cfe402429e57a6b6125d8"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">traffic_participant_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficCommand_1a3a1c42d3330cfe402429e57a6b6125d8"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">traffic_participant_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>The ID of this traffic participant. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficCommand_1a2c6c3e03dfb3304df6ac539d0200e1fe"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficAction</span> <span class="pre">action</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficCommand_1a2c6c3e03dfb3304df6ac539d0200e1fe"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">TrafficAction</span> <span class="pre">action</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>Commanded traffic action(s) if any.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

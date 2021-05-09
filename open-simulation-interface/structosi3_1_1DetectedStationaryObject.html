@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -212,33 +215,33 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi324DetectedStationaryObjectE">
-<span id="_CPPv3N4osi324DetectedStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObjectE"></span><span id="osi3::DetectedStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">DetectedStationaryObject</span></code><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi324DetectedStationaryObjectE">
+<span id="_CPPv3N4osi324DetectedStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObjectE"></span><span id="osi3::DetectedStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">DetectedStationaryObject</span></span></span><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A stationary object (e.g. landmark) in the environment as detected by the sensor. </p>
 <p><img alt="../_images/OSI_DetectedStationaryObject.svg" src="../_images/OSI_DetectedStationaryObject.svg" /></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1a0deb22fcf4bb95a870e93601ed28f055"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectedItemHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1a0deb22fcf4bb95a870e93601ed28f055"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">DetectedItemHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>Common information of one detected item. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1a4f2e987daa04a3ad0b163407c69d78b1"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1a4f2e987daa04a3ad0b163407c69d78b1"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The base parameters of the stationary object. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1ad9344118d88b18d48dad62446d02fdee"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1ad9344118d88b18d48dad62446d02fdee"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">BaseStationary</span> <span class="pre">base_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>The root mean squared error of the base parameters of the detected stationary object (e.g. landmark). <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1StationaryObject.html#structosi3_1_1StationaryObject_1a5f11a30dc338f7d38e2e90950b415ba2"><span class="std std-ref"><span class="pre">StationaryObject::base</span></span></a></code> has to be identical for all <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1DetectedStationaryObject_1a7161d3bf96e124d79a8d7f4e8fb22a09"><span class="std std-ref"><span class="pre">candidate</span></span></a></code> stationary objects. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1a7161d3bf96e124d79a8d7f4e8fb22a09"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateStationaryObject</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1a7161d3bf96e124d79a8d7f4e8fb22a09"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CandidateStationaryObject</span> <span class="pre">candidate</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>A list of candidates for this stationary object as estimated by the sensor.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -248,14 +251,14 @@
 
 </div>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE">
-<span id="_CPPv3N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="osi3::DetectedStationaryObject::CandidateStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">CandidateStationaryObject</span></code><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE">
+<span id="_CPPv3N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="_CPPv2N4osi324DetectedStationaryObject25CandidateStationaryObjectE"></span><span id="osi3::DetectedStationaryObject::CandidateStationaryObject"></span><span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CandidateStationaryObject</span></span></span><a class="headerlink" href="#_CPPv4N4osi324DetectedStationaryObject25CandidateStationaryObjectE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A candidate for a detected stationary object as estimated by the sensor. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1ab51e5d548856d1c3f541e22257c8edc3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1ab51e5d548856d1c3f541e22257c8edc3"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">probability</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The estimated probability that this candidate is the true value.</p>
 <p>
 is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
@@ -266,8 +269,8 @@ is_greater_than_or_equal_to: 0 is_less_than_or_equal_to: 1  </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1a38ad22078331991744f7718fb4cbcb64"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">StationaryObject::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1DetectedStationaryObject_1_1CandidateStationaryObject_1a38ad22078331991744f7718fb4cbcb64"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">StationaryObject::Classification</span> <span class="pre">classification</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The classification of the stationary object (e.g. landmark). </p>
 </dd></dl>
 

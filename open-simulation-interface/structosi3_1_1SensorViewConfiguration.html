@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,8 +206,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi323SensorViewConfigurationE">
-<span id="_CPPv3N4osi323SensorViewConfigurationE"></span><span id="_CPPv2N4osi323SensorViewConfigurationE"></span><span id="osi3::SensorViewConfiguration"></span><span class="target" id="structosi3_1_1SensorViewConfiguration"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">SensorViewConfiguration</span></code><a class="headerlink" href="#_CPPv4N4osi323SensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi323SensorViewConfigurationE">
+<span id="_CPPv3N4osi323SensorViewConfigurationE"></span><span id="_CPPv2N4osi323SensorViewConfigurationE"></span><span id="osi3::SensorViewConfiguration"></span><span class="target" id="structosi3_1_1SensorViewConfiguration"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SensorViewConfiguration</span></span></span><a class="headerlink" href="#_CPPv4N4osi323SensorViewConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The configuration settings for the <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView"><span class="std std-ref"><span class="pre">SensorView</span></span></a></code> to be provided by the environment simulation. </p>
 <p>This message can be provided by the sensor model to the environment simulation, in which case it describes the input configuration that is desired by the sensor model. In response the environment simulation will configure the input and provide a new message of this type, which describes the actual configuration that it is going to employ. The two can and will differ, when either the environment simulation does not support a given requested configuration, and/or when the requested configuration allowed for multiple alternatives, in which case the set configuration will only contain the alternative chosen.</p>
 <p>It should be noted that this message is not intended to provide for parametrization of a generic sensor model, but rather for the automatic configuration of an environment simulation in order to supply the necessary input to it, depending on its actual configuration. Mechanisms to parametrize sensor models are currently packaging-specific, i.e. they depend on the packaging mechanism chosen: For FMU-packaging the parametrization can be implemented using normal FMU parameters, and the requested <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration"><span class="std std-ref"><span class="pre">SensorViewConfiguration</span></span></a></code> can depend on those parameter values by being defined as a calculatedParameter.</p>
@@ -214,22 +217,22 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a45141898583710d16d41b92d31a7aaf9"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a45141898583710d16d41b92d31a7aaf9"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The interface version used by the sender (simulation environment). </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1aa7b009e0195d8c19788c2d366af295ad"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">sensor_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1aa7b009e0195d8c19788c2d366af295ad"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Identifier</span> <span class="pre">sensor_id</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>The ID of the sensor at host vehicle’s mounting_position.</p>
 <p>This is the ID of the virtual sensor, to be used in its detected object output; it is distinct from the IDs of its physical detectors, which are used in the detected features.</p>
 <p>The ID is to be provided by the environment simulation, the sensor model is not in a position to provide a useful default value. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a77b0315e478c632f88e50c63b06030f4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a77b0315e478c632f88e50c63b06030f4"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>The virtual mounting position of the sensor (origin and orientation of the sensor coordinate system) given in vehicle coordinates [1]. The virtual position pertains to the sensor as a whole, regardless of the actual position of individual physical detectors, and governs the sensor-relative coordinates in detected objects of the sensor as a whole. Individual features detected by individual physical detectors are governed by the actual physical mounting positions of the detectors, as indicated in the technology-specific sub-views and sub-view configurations.</p>
 <p><ul class="simple">
 <li><p><strong>x-direction</strong> of sensor coordinate system: sensor viewing direction </p></li>
@@ -252,30 +255,30 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1ac2d55c94427209ff259dd9ece4914d0f"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1ac2d55c94427209ff259dd9ece4914d0f"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">MountingPosition</span> <span class="pre">mounting_position_rmse</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>The root mean squared error of the mounting position. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a810da6109811a773dbfc505053c47731"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_horizontal</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a810da6109811a773dbfc505053c47731"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_horizontal</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>Field of View in horizontal orientation of the sensor.</p>
 <p>This determines the limit of the cone of interest of ground truth that the simulation environment has to provide. Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration_1a810da6109811a773dbfc505053c47731"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration_1a810da6109811a773dbfc505053c47731"><span class="std std-ref"><span class="pre">field_of_view_horizontal</span></span></a><span class="pre">/2</span></code>] azimuth in the sensor frame as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a27f45a5dd5fecbb632ae0cbcce56b819"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_vertical</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a27f45a5dd5fecbb632ae0cbcce56b819"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">field_of_view_vertical</span>&#160;&#160; <span class="pre">=</span> <span class="pre">6</span></span></dt>
 <dd><p>Field of View in vertical orientation of the sensor.</p>
 <p>This determines the limit of the cone of interest of ground truth that the simulation environment has to provide. Viewing range: [- <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration_1a27f45a5dd5fecbb632ae0cbcce56b819"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#structosi3_1_1SensorViewConfiguration_1a27f45a5dd5fecbb632ae0cbcce56b819"><span class="std std-ref"><span class="pre">field_of_view_vertical</span></span></a><span class="pre">/2</span></code>] elevation in the sensor frame at zero azimuth as defined in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1Spherical3d.html#structosi3_1_1Spherical3d"><span class="std std-ref"><span class="pre">Spherical3d</span></span></a></code>.</p>
 <p>Unit: rad </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a9bced36ba45eadc92c0b56e7f88ccf15"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">range</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a9bced36ba45eadc92c0b56e7f88ccf15"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">range</span>&#160;&#160; <span class="pre">=</span> <span class="pre">7</span></span></dt>
 <dd><p>Maximum range of the sensor</p>
 <p>This determines the limit of the cone of interest of ground truth that the simulation environment has to provide.</p>
 <p>Unit: m</p>
@@ -283,8 +286,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a66ddabd0bd40550da7144204555d9913"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">update_cycle_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a66ddabd0bd40550da7144204555d9913"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">update_cycle_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">8</span></span></dt>
 <dd><p>The update cycle time of the sensor model.</p>
 <p>This specifies the rate at which the sensor model is provided with new input data.</p>
 <p>Unit: s </p>
@@ -295,24 +298,24 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1af9895d061988127eed3c38df83d48c30"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">update_cycle_offset</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1af9895d061988127eed3c38df83d48c30"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">update_cycle_offset</span>&#160;&#160; <span class="pre">=</span> <span class="pre">9</span></span></dt>
 <dd><p>Initial update cycle offset of the sensor model.</p>
 <p>This specifies the initial offset (i.e. initial delay) of the sensor model update cycle that the simulation should take into account. It is defined against a simulation start time of 0: i.e. an initial offset of 0.008s would mean, that the initial update of sensor input data to the model should occur at 0+0.008s, and then update_cycle_time after that, etc. If the simulation start time of the simulation is non-zero, then the offset still has to be interpreted against a 0 start time, and not simply added on top of the start time: e.g. if the simulation starts at 0.030s, and the update cycle time is 0.020s, then the first update to the sensor input should happen at 0.048s, or 0.018s after simulation start. This convention is needed to ensure stable phase position of the offset in the case of changing simulation start times, e.g. for partial resimulation.</p>
 <p>Unit: s </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1ad71ee0f6a70b3772dd833fc76dd43ec3"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">simulation_start_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1ad71ee0f6a70b3772dd833fc76dd43ec3"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">Timestamp</span> <span class="pre">simulation_start_time</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></span></dt>
 <dd><p>Simulation Start time</p>
 <p>This specifies the simulation start time that the Simulation has chosen. This field has no defined meaning if provided by the sensor model.</p>
 <p>Unit: s </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1aef0fc7dc867ff93107c628b0a18ba7ac"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">GenericSensorViewConfiguration</span> <span class="pre">generic_sensor_view_configuration</span>&#160; <span class="pre">=1000</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1aef0fc7dc867ff93107c628b0a18ba7ac"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">GenericSensorViewConfiguration</span> <span class="pre">generic_sensor_view_configuration</span>&#160; <span class="pre">=1000</span></span></dt>
 <dd><p>Generic Sensor View Configuration(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -321,8 +324,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a704763486c7c724727d96e108c6e560a"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RadarSensorViewConfiguration</span> <span class="pre">radar_sensor_view_configuration</span>&#160; <span class="pre">=1001</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a704763486c7c724727d96e108c6e560a"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">RadarSensorViewConfiguration</span> <span class="pre">radar_sensor_view_configuration</span>&#160; <span class="pre">=1001</span></span></dt>
 <dd><p>Radar-specific Sensor View Configuration(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -331,8 +334,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a13d4b0251bb2a62e2b18435fe5d51ffc"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LidarSensorViewConfiguration</span> <span class="pre">lidar_sensor_view_configuration</span>&#160; <span class="pre">=1002</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a13d4b0251bb2a62e2b18435fe5d51ffc"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LidarSensorViewConfiguration</span> <span class="pre">lidar_sensor_view_configuration</span>&#160; <span class="pre">=1002</span></span></dt>
 <dd><p>Lidar-specific Sensor View Configuration(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -341,8 +344,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a36e0cfeea36cc31541e907c75e9662a0"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CameraSensorViewConfiguration</span> <span class="pre">camera_sensor_view_configuration</span>&#160; <span class="pre">=1003</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a36e0cfeea36cc31541e907c75e9662a0"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">CameraSensorViewConfiguration</span> <span class="pre">camera_sensor_view_configuration</span>&#160; <span class="pre">=1003</span></span></dt>
 <dd><p>Camera-specific Sensor View Configuration(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -351,8 +354,8 @@
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1SensorViewConfiguration_1a76729f34bffe67cad880626a9bd933cb"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">UltrasonicSensorViewConfiguration</span> <span class="pre">ultrasonic_sensor_view_configuration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1004</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1SensorViewConfiguration_1a76729f34bffe67cad880626a9bd933cb"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">UltrasonicSensorViewConfiguration</span> <span class="pre">ultrasonic_sensor_view_configuration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1004</span></span></dt>
 <dd><p>Ultrasonic-specific Sensor View Configuration(s).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

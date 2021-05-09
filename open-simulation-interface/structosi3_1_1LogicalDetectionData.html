@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -203,27 +206,27 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi320LogicalDetectionDataE">
-<span id="_CPPv3N4osi320LogicalDetectionDataE"></span><span id="_CPPv2N4osi320LogicalDetectionDataE"></span><span id="osi3::LogicalDetectionData"></span><span class="target" id="structosi3_1_1LogicalDetectionData"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LogicalDetectionData</span></code><a class="headerlink" href="#_CPPv4N4osi320LogicalDetectionDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi320LogicalDetectionDataE">
+<span id="_CPPv3N4osi320LogicalDetectionDataE"></span><span id="_CPPv2N4osi320LogicalDetectionDataE"></span><span id="osi3::LogicalDetectionData"></span><span class="target" id="structosi3_1_1LogicalDetectionData"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">LogicalDetectionData</span></span></span><a class="headerlink" href="#_CPPv4N4osi320LogicalDetectionDataE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Processed data from one or multiple sensors as a list of logical detections. Logical detections are derived from sensor detections in a logical model through processing steps like fusion filtering, tracking etc. </p>
 <p>All information is given with respect to the reference frame of the logical/virtual sensor <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView_1a420b13889bbdd58f346df1a2e86c43e7"><span class="std std-ref"><span class="pre">SensorView::mounting_position</span></span></a></code> (e.g. center of rear axle of the ego car) in Cartesian coordinates. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LogicalDetectionData_1ae01fdd0d2ba0b99bb2f3e95c4a92b481"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LogicalDetectionData_1ae01fdd0d2ba0b99bb2f3e95c4a92b481"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">InterfaceVersion</span> <span class="pre">version</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The interface version used by the sender (i.e. the simulation environment). </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LogicalDetectionData_1a34055185af45ddc052b2e182ab9fd1db"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">LogicalDetectionDataHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LogicalDetectionData_1a34055185af45ddc052b2e182ab9fd1db"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">LogicalDetectionDataHeader</span> <span class="pre">header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>Header attributes of fused detections from multiple sensors and sensor types. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1LogicalDetectionData_1a754762194c10b1f1775b5b495c629834"></span><code class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LogicalDetection</span> <span class="pre">logical_detection</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LogicalDetectionData_1a754762194c10b1f1775b5b495c629834"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">LogicalDetection</span> <span class="pre">logical_detection</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>logical detections consisting of transformed (and potentially fused) detections from one or multiple sensors and sensor types. Logical detections are given with respect to the reference frame of the logical/virtual sensor <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1SensorView.html#structosi3_1_1SensorView_1a420b13889bbdd58f346df1a2e86c43e7"><span class="std std-ref"><span class="pre">SensorView::mounting_position</span></span></a></code> (e.g. center of rear axle of the ego car)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

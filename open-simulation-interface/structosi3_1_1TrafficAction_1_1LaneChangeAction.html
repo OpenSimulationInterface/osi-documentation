@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -207,8 +210,8 @@
 <div class="section" id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp struct">
-<dt id="_CPPv4N4osi313TrafficAction16LaneChangeActionE">
-<span id="_CPPv3N4osi313TrafficAction16LaneChangeActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneChangeActionE"></span><span id="osi3::TrafficAction::LaneChangeAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-prename descclassname"><span class="pre">osi3</span><span class="pre">::</span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="pre">TrafficAction</span></a><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">LaneChangeAction</span></code><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4osi313TrafficAction16LaneChangeActionE">
+<span id="_CPPv3N4osi313TrafficAction16LaneChangeActionE"></span><span id="_CPPv2N4osi313TrafficAction16LaneChangeActionE"></span><span id="osi3::TrafficAction::LaneChangeAction"></span><span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">osi3</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structosi3_1_1TrafficAction.html#_CPPv4N4osi313TrafficActionE" title="osi3::TrafficAction"><span class="n"><span class="pre">TrafficAction</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">LaneChangeAction</span></span></span><br /></dt>
 <dd><p><a class="reference internal" href="structosi3_1_1Lane.html#structosi3_1_1Lane"><span class="std std-ref">Lane</span></a> change action. </p>
 <p>This action assigns a lane change to a traffic participant. The fields of this message enable different levels of constraint for the traffic participant depending on the use case. In case the constraints are supposed to be small, the dynamics shape or even the duration and the distance for the lane change can be omitted.</p>
 <p><div class="admonition note">
@@ -219,35 +222,35 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1af0495e898ba3ae0697e54b067cd6c8a4"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1af0495e898ba3ae0697e54b067cd6c8a4"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">ActionHeader</span> <span class="pre">action_header</span>&#160;&#160; <span class="pre">=</span> <span class="pre">1</span></span></dt>
 <dd><p>The action header. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a32a03cef4a8fc4742c1fe58e0b2b707d"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">int32</span> <span class="pre">relative_target_lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a32a03cef4a8fc4742c1fe58e0b2b707d"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">int32</span> <span class="pre">relative_target_lane</span>&#160;&#160; <span class="pre">=</span> <span class="pre">2</span></span></dt>
 <dd><p>Targeted lane relative to the current lane.</p>
 <p>Convention: +1 means to the right, -1 means to the left. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1abbae2dbe7cef614103eb28c43b25ab1e"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">DynamicsShape</span> <span class="pre">dynamics_shape</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1abbae2dbe7cef614103eb28c43b25ab1e"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">DynamicsShape</span> <span class="pre">dynamics_shape</span>&#160;&#160; <span class="pre">=</span> <span class="pre">3</span></span></dt>
 <dd><p>Specified shape of the lane change action. If the shape is unspecified (enum value 0), the shape of the lane change is open to the traffic participant model. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a7e5012c0dea164062dda8e4493b7370a"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">duration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a7e5012c0dea164062dda8e4493b7370a"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">duration</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
 <dd><p>Duration of the lane change.</p>
 <p>A value of 0.0 (the default value) imposes no constraint on the duration, unless the dynamics shape is a step function, where an immediate step is effected.</p>
 <p>Unit: s </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt>
-<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a759bf95d53d0b2bc6a0642797964f6c6"></span><code class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">distance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></code></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1TrafficAction_1_1LaneChangeAction_1a759bf95d53d0b2bc6a0642797964f6c6"></span><span class="sig-name descname"><span class="pre">optional</span> <span class="pre">double</span> <span class="pre">distance</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
 <dd><p>Distance of the lane change.</p>
 <p>A value of 0.0 (the default value) imposes no constraint on the distance, unless the dynamics shape is a step function, where an immediate step is effected.</p>
 <p>Unit: m </p>
