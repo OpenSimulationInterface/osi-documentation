@@ -63,7 +63,6 @@ include::./contributing/start_contributing.adoc[leveloffset=+2]
 
 include::./contributing/osi_repos.adoc[leveloffset=+2]
 
-
 include::./contributing/reporting_issues.adoc[leveloffset=+2]
 
 === Contributing changes
@@ -73,6 +72,8 @@ include::./contributing/licensing.adoc[leveloffset=+3]
 include::./contributing/dco.adoc[leveloffset=+3]
 
 include::./contributing/signing_off_commits.adoc[leveloffset=+3]
+
+include::./contributing/writing_commit_messages.adoc[leveloffset=+3]
 
 include::./contributing/contribution_rules.adoc[leveloffset=+3]
 
@@ -84,13 +85,13 @@ include::./contributing/forking_no_member.adoc[leveloffset=+3]
 
 include::./contributing/contributing_docs.adoc[leveloffset=+3]
 
-include::./contributing/creating_comments.adoc[leveloffset=+3]
+include::./contributing/commenting_messages.adoc[leveloffset=+3]
+
+include::./contributing/commenting_fields_enums.adoc[leveloffset=+3]
 
 include::./contributing/creating_images.adoc[leveloffset=+3]
 
 === Reviewing contributions
-
-include::./contributing/asking_review.adoc[leveloffset=+3]
 
 include::./contributing/review_author.adoc[leveloffset=+3]
 

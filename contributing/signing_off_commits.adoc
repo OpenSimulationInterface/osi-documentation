@@ -1,11 +1,21 @@
 = Signing off commits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id. Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+Contributing to OSI projects requires agreeing to the Developer Certificate of Origin (DCO).
+Contributors agree to the DCO by adding a ``Signed-off-by`` statement to the commit message.
+
+----
+Signed-off-by: Firstname Lastname <email@address.com>
+----
+
+If a commit is missing the ``Signed-off-by`` statement, this commit cannot be merged into the master branch.
+
+To add a sign-off statement to a commit add ``-s`` or ``--signoff`` to the commit command:
+
+----
+git commit -m "Commit message" -s
+----
+
+
+**Related topics**
+
+Developer Certificate of Origin (DCO)

@@ -1,11 +1,55 @@
-= Message naming conventions
+= Interface conventions
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id. Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+OSI messages, enums, field messages and field enums shall comply with OSI interface conventions.
+These conventions ensure that message definitions and the corresponding classes are consistently named and easy to read.
+
+Message names shall use _PascalCase_.
+
+----
+message EnvironmentalConditions
+{
+}
+----
+
+Message field names shall use _snake_case_
+
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+}
+----
+
+Enum names shall use _PascalCase_.
+
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+
+    enum AmbientIllumination
+    {
+    }
+}
+----
+
+Enum field names shall use _UPPER_SNAKE_CASE_.
+Enum fields shall always be prefixed with the name of the respective enum.
+The first enum field shall always use the suffix __UNKNOWN_.
+The second enum field shall always use the suffix __OTHER_.
+
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+
+    enum AmbientIllumination
+    {
+        AMBIENT_ILLUMINATION_UNKNOWN = 0;
+
+        AMBIENT_ILLUMINATION_OTHER = 1;
+
+        AMBIENT_ILLUMINATION_LEVEL1 = 2;
+    }
+}
+----
