@@ -1,0 +1,37 @@
+= Commenting on messages
+
+The reference documentation of Open Simulation Interface is created using doxygen.
+The content of the reference documentation is generated from comments in the `.proto` files.
+Follow these steps when creating comments on messages to keep the documentation style consistent.
+
+**Prerequisites**
+
+* You have created a new message.
+
+**Steps**
+
+. Add a brief description using the `\brief` keyword followed by an empty comment line.
+. Optionally, add an image using the `\image html` keyword followed by an empty comment line.
+  The image must be stored at `./open-simulation-interface/docs/images`
+. Optionally, add a detailed description spanning multiple lines followed by an empty comment line.
+. Optionally, add an image using the `\image html` keyword followed by an empty comment line.
+
+**Example**
+
+----
+// \brief The conditions of the environment.
+//
+// \image html EnvironmentalConditions.svg
+//
+// Definition of light, weather conditions and other environmental conditions.
+//
+// \note These conditions apply locally around the host vehicle.
+//
+message EnvironmentalConditions
+{
+}
+----
+
+**Related topics**
+
+- Creating images.

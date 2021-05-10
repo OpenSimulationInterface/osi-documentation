@@ -1,12 +1,25 @@
 = Reporting issues
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+Reporting issues is a simple way of contributing to OSI.
+
+**Prerequisites**
+
+* You have a Github account.
+
+**Steps**
+
+. Determine the repository your issue relates to and open it on Github.
+. Create a new issue.
+. Select the correct issue type.
+  Bug report:: Report an error.
+  Feature request:: Suggest an idea for the project 
+  Question:: Ask a question if you do not understand something or need clarification.
+  Blank issue:: Use this issue type if no other type fits your issue.
+. Fill out the title and description field.
+  Follow the instructions in the template.
+. Add suitable labels.
+. When you are done editing the fields and labels, click **Submit new issue**.
+
+**Related topics**
+
+- <<osi_repos.adoc#, ASAM OSI repositories>>
