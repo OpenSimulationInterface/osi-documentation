@@ -1,12 +1,19 @@
-= Review from the author's perspective
+= Review guidelines for authors
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+Code review is a tool among others to enhance the quality of the code and to reduce the likelihood of introducing new bugs in the code base.
+It is a technical discussion, it is not an exam, but it is a common effort to learn from each other.
+
+Before asking for review, make sure your changes meet the following requirements:
+
+* The code is readable and easy to understand.
+* The code does not contain contain commented-out lines and deprecated comments.
+* The code contains helpful comments to be used in the reference documentation.
+* Variable and function names follow the naming convention.
+* Commit messages are meaningful and follow the convention.
+* All commits are signed-off.
+
+**Related topics**
+
+- Interface conventions
+- Writing commit messages
+- Signing off commits

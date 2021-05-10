@@ -1,12 +1,15 @@
 = ASAM OSI repositories
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+The source code and documentation of OSI and OSI-related tools is spread over several repositories.
+
+open-simulation-interface:: Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.
+
+osi-documentation:: Source of the OSI user guide.
+
+osi-sensor-model-packaging:: Packaging specification for OSI models used in FMI 2.0 simulation environments , including examples.
+
+osi-validation:: Source code and documentation of the OSI Validator, a CLI tool for validating OSI messages.
+
+osi-visualizer:: Source code and documentation of the OSI Visualizer, a GUI tool for visualizing OSI messages.
+
+proto2cpp:: Doxygen filter for creating the reference documentation from OSI .proto files
