@@ -133,8 +133,8 @@ Program Listing for File osi_roadmarking.proto
    
    
            // Boolean flag to indicate that the road marking is taken out of service.
-           // This can be achieved by visibly crossing the road marking with stripes, 
-           // or completly covering a road marking making it not visible. 
+           // This can be achieved by visibly crossing the road marking with stripes,
+           // or completly covering a road marking making it not visible.
            //
            // \image html OSI_RoadMaking_is_out_of_service.jpg width=800px
            //
@@ -218,6 +218,10 @@ Program Listing for File osi_roadmarking.proto
                // Marking with violet color.
                //
                COLOR_VIOLET = 8;
+   
+               // Marking with orange color.
+               //
+               COLOR_ORANGE = 9;
            }
        }
    }

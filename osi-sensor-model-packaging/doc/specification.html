@@ -218,7 +218,7 @@
 sensor models, logical models and traffic participant models using the
 <a class="reference external" href="https://github.com/OpenSimulationInterface/open-simulation-interface">Open Simulation Interface</a> are to be packaged for their use in simulation
 environments using FMI 2.0.</p>
-<p>This is version 1.1.0 of this document. The version number is to be
+<p>This is version 1.1.1 of this document. The version number is to be
 interpreted according to the <a class="reference external" href="http://semver.org/spec/v2.0.0.html">Semantic Versioning Specification (SemVer)
 2.0.0</a>.</p>
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
@@ -262,7 +262,7 @@ document all specifications in the FMI 2.0 standard apply as-is.</p>
 <li><p>In order to mark the FMU as being conformant to this version of the
 specification the following annotation MUST be placed into the
 <code class="docutils literal notranslate"><span class="pre">VendorAnnotations</span></code> element of the <code class="docutils literal notranslate"><span class="pre">modelDescription.xml</span></code>:</p>
-<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.1.1&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
 </pre></div>
 </div>
 <p>where the <code class="docutils literal notranslate"><span class="pre">osi-version</span></code> attribute SHOULD contain the major, minor
@@ -351,9 +351,9 @@ specified <code class="docutils literal notranslate"><span class="pre">&lt;role&
 specified by the <code class="docutils literal notranslate"><span class="pre">mime-type</span></code> attribute, as given by
 <code class="docutils literal notranslate"><span class="pre">&lt;mime-type&gt;</span></code>, which MUST be a valid MIME type specification.</p>
 <p>In the case of OSI-specified data, the MIME type MUST be of the form
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.0</span></code>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.1</span></code>
 indicating that the binary content is conformant to a given OSI
-version (3.3.0 in this example), containing a message of the type
+version (3.3.1 in this example), containing a message of the type
 given in the <code class="docutils literal notranslate"><span class="pre">type</span></code> parameter (<code class="docutils literal notranslate"><span class="pre">``osi3::SensorView``</span></code> in this
 example).</p>
 <p>The version parameter given for the MIME type
@@ -390,7 +390,7 @@ input variable, as specified above, with <code class="docutils literal notransla
 <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorView</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The sensor view MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::SensorView</span></code> (see the OSI
 specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the sensor view protocol buffer pointer
@@ -424,7 +424,7 @@ where the variability MUST match the variability of the corresponding
 calculatedParameter.</p></li>
 <li><p>The MIME type of both variables MUST specify the
 <code class="docutils literal notranslate"><span class="pre">type=SensorViewConfiguration</span></code>, e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorViewConfiguration;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorViewConfiguration;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The variables values MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::SensorViewConfiguration</span></code>
 (see the OSI specification documentation for more details).</p></li>
 <li><p>As long as no non-zero value has been assigned to the corresponding
@@ -461,7 +461,7 @@ output variable, as specified above, with <code class="docutils literal notransl
 <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorView</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorView;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The sensor view MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::SensorView</span></code> (see the OSI
 specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the sensor view protocol buffer pointer
@@ -497,7 +497,7 @@ output variable, as specified above, with <code class="docutils literal notransl
 <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorData</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The sensor data MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::SensorData</span></code> (see the OSI
 specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the sensor data protocol buffer pointer
@@ -534,7 +534,7 @@ input variable, as specified above, with <code class="docutils literal notransla
 <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=SensorData</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=SensorData;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The sensor data MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::SensorData</span></code> (see the OSI
 specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the sensor data protocol buffer pointer
@@ -562,7 +562,7 @@ OSI format.</p></li>
 input parameter variable, as specified above, with
 <code class="docutils literal notranslate"><span class="pre">causality=&quot;parameter&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">variability=&quot;fixed&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">initial=&quot;exact&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=GroundTruth</span></code>, e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=GroundTruth;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=GroundTruth;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">OSMPGroundTruthInit</span></code> MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::GroundTruth</span></code> (see the OSI
 specification documentation for more details).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">OSMPGroundTruthInit</span></code> MUST contain all static data (e.g. roads) encountered
@@ -597,7 +597,7 @@ binary output variable, as specified above, with
 <code class="docutils literal notranslate"><span class="pre">causality=&quot;output&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=TrafficUpdate</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=TrafficUpdate;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=TrafficUpdate;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The traffic update MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::TrafficUpdate</span></code> (see the
 OSI specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the traffic update protocol buffer pointer
@@ -637,7 +637,7 @@ binary input variable, as specified above, with <code class="docutils literal no
 and <code class="docutils literal notranslate"><span class="pre">variability=&quot;discrete&quot;</span></code>.</p></li>
 <li><p>The MIME type of the variable MUST specify the <code class="docutils literal notranslate"><span class="pre">type=TrafficCommand</span></code>,
 e.g.
-<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=TrafficCommand;</span> <span class="pre">version=3.3.0</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">application/x-open-simulation-interface;</span> <span class="pre">type=TrafficCommand;</span> <span class="pre">version=3.3.1</span></code>.</p></li>
 <li><p>The traffic command MUST be encoded as <code class="docutils literal notranslate"><span class="pre">osi3::TrafficCommand</span></code> (see
 the OSI specification documentation for more details).</p></li>
 <li><p>The guaranteed lifetime of the traffic command protocol buffer pointer
@@ -667,43 +667,43 @@ with one input and output and no additional features:</p>
     <span class="na">canNotUseMemoryManagementFunctions=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;DefaultExperiment</span> <span class="na">startTime=</span><span class="s">&quot;0.0&quot;</span> <span class="na">stepSize=</span><span class="s">&quot;0.020&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;VendorAnnotations&gt;</span>
-    <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+    <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp</span> <span class="na">version=</span><span class="s">&quot;1.1.1&quot;</span> <span class="na">osi-version=</span><span class="s">&quot;3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
   <span class="nt">&lt;/VendorAnnotations&gt;</span>
   <span class="nt">&lt;ModelVariables&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;0&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;1&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;2&quot;</span> <span class="na">causality=</span><span class="s">&quot;input&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorViewIn&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorView; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.lo&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;3&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.lo&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.base.hi&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;4&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;base.hi&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
     <span class="nt">&lt;ScalarVariable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut.size&quot;</span> <span class="na">valueReference=</span><span class="s">&quot;5&quot;</span> <span class="na">causality=</span><span class="s">&quot;output&quot;</span> <span class="na">variability=</span><span class="s">&quot;discrete&quot;</span> <span class="na">initial=</span><span class="s">&quot;exact&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;Integer</span> <span class="na">start=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;Annotations&gt;</span>
-        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.0&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
+        <span class="nt">&lt;Tool</span> <span class="na">name=</span><span class="s">&quot;net.pmsf.osmp&quot;</span> <span class="na">xmlns:osmp=</span><span class="s">&quot;http://xsd.pmsf.net/OSISensorModelPackaging&quot;</span><span class="nt">&gt;&lt;osmp:osmp-binary-variable</span> <span class="na">name=</span><span class="s">&quot;OSMPSensorDataOut&quot;</span> <span class="na">role=</span><span class="s">&quot;size&quot;</span> <span class="na">mime-type=</span><span class="s">&quot;application/x-open-simulation-interface; type=SensorData; version=3.3.1&quot;</span><span class="nt">/&gt;&lt;/Tool&gt;</span>
       <span class="nt">&lt;/Annotations&gt;</span>
     <span class="nt">&lt;/ScalarVariable&gt;</span>
   <span class="nt">&lt;/ModelVariables&gt;</span>
