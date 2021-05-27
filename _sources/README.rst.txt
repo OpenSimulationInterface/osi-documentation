@@ -11,7 +11,7 @@ Organization Build Overview
 ----------------------------
 |osi_build| - `Open Simulation Interface`_
 
-|osi_validation_build| - `OSI Validation`_
+Pipeline is broken - `OSI Validation`_
 
 |osi_visualizer_build| - `OSI Visualizer`_
 
@@ -24,14 +24,14 @@ Organization Build Overview
 .. _OSI Visualizer: https://opensimulationinterface.github.io/osi-documentation/osi-visualizer/README.html
 .. _OSI Model Packaging: https://opensimulationinterface.github.io/osi-documentation/osi-sensor-model-packaging/README.html
 
-.. |osi_build| image:: https://travis-ci.com/OpenSimulationInterface/open-simulation-interface.svg?branch=master
-    :target: https://travis-ci.com/OpenSimulationInterface/open-simulation-interface
+.. |osi_build| image:: https://github.com/OpenSimulationInterface/open-simulation-interface/actions/workflows/protobuf.yml/badge.svg
+    :target: https://github.com/OpenSimulationInterface/open-simulation-interface/actions/workflows/protobuf.yml
 
-.. |osi_validation_build| image:: https://travis-ci.com/OpenSimulationInterface/osi-validation.svg?branch=master
-    :target: https://travis-ci.com/OpenSimulationInterface/osi-validation
+.. |osi_validation_build| image:: ..
+    :target: ..
 
-.. |osi_visualizer_build| image:: https://travis-ci.com/OpenSimulationInterface/osi-visualizer.svg?branch=master
-    :target: https://travis-ci.com/OpenSimulationInterface/osi-visualizer
+.. |osi_visualizer_build| image:: https://github.com/OpenSimulationInterface/osi-visualizer/actions/workflows/ci-build.yml/badge.svg
+    :target: https://github.com/OpenSimulationInterface/osi-visualizer/actions/workflows/ci-build.yml
 
-.. |osi_sensor_model_packaging_build| image:: https://travis-ci.com/OpenSimulationInterface/osi-sensor-model-packaging.svg?branch=master
-    :target: https://travis-ci.com/OpenSimulationInterface/osi-sensor-model-packaging
+.. |osi_sensor_model_packaging_build| image:: https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/actions/workflows/protobuf.yml/badge.svg
+    :target: https://github.com/OpenSimulationInterface/osi-sensor-model-packaging/actions/workflows/protobuf.yml
