@@ -83,13 +83,13 @@ include::./contributing/branching_member.adoc[leveloffset=+3]
 
 include::./contributing/forking_no_member.adoc[leveloffset=+3]
 
-include::./contributing/contributing_docs.adoc[leveloffset=+3]
+//include::./contributing/contributing_docs.adoc[leveloffset=+3]
 
 include::./contributing/commenting_messages.adoc[leveloffset=+3]
 
 include::./contributing/commenting_fields_enums.adoc[leveloffset=+3]
 
-include::./contributing/creating_images.adoc[leveloffset=+3]
+//include::./contributing/creating_images.adoc[leveloffset=+3]
 
 === Reviewing contributions
 
