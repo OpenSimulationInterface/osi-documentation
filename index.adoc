@@ -101,6 +101,6 @@ include::./contributing/review_reviewer.adoc[leveloffset=+3]
 
 // 
 
-include::./general_docs/glossary.adoc[leveloffset=+1]
+//include::./general_docs/glossary.adoc[leveloffset=+1]
 
-include::./general_docs/bibliography.adoc[leveloffset=+1]
+//include::./general_docs/bibliography.adoc[leveloffset=+1]
