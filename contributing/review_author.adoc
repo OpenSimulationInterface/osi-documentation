@@ -1,7 +1,7 @@
 = Review guidelines for authors
 
-Code review is a tool among others to enhance the quality of the code and to reduce the likelihood of introducing new bugs in the code base.
-It is a technical discussion, it is not an exam, but it is a common effort to learn from each other.
+Code review enhances the quality of the code and reduces the likelihood of introducing new bugs in the code base.
+Reviewing code is a technical discussion, it is not an exam, but it is a common effort to learn from each other.
 
 Before asking for review, make sure your changes meet the following requirements:
 
@@ -10,7 +10,7 @@ Before asking for review, make sure your changes meet the following requirements
 * The code contains helpful comments to be used in the reference documentation.
 * Variable and function names follow the naming convention.
 * Commit messages are meaningful and follow the convention.
-* All commits are signed-off.
+* All commits are signed off.
 
 **Related topics**
 

@@ -1,6 +1,7 @@
 = Review guidelines for reviewers
 
-Code review can be challenging at times. These are suggestions and common pitfalls a code reviewer should avoid.
+Code review can be challenging at times.
+Follow these suggestions when reviewing code to avoid common pitfalls:
 
 Ask questions::
 What is the purpose of this change?
@@ -9,7 +10,7 @@ How could we make this more maintainable?
 
 Discuss in person for more detailed points::
 Online comments are useful for focused technical questions.
-In case of discussions, it will often be more productive to discuss in person.
+In case of more detailed discussions, it will often be more productive to discuss in person.
 
 Explain yourself::
 Sometimes it is best to both ask if there is a better alternative and at the same time justify why a problem in the code is worth fixing.
@@ -25,10 +26,10 @@ Indicate the importance of your suggestions.
 This allows developers to improve their work incrementally.
 
 Take the developer’s opinion into consideration::
-Imposing a particular design choice out of personal preferences and without a real explanation will incentivize the developer to be passive instead of a active and creative.
+Imposing a particular design choice out of personal preferences and without a real explanation will incentivize the developer to be passive instead of active and creative.
 
 Do not re-write, remove or re-do all the work::
-Sometimes it appears easier to re-do the work yourself, thereby discarding the work of the developer.
+Sometimes, it appears easier to re-do the work yourself, thereby discarding the work of the developer.
 This can give the impression that the work of the developer is worthless.
 It also adds additional work for the reviewer who effectively takes responsibility for the code.
 
@@ -38,6 +39,6 @@ Consider their personality and experience when reviewing their code.
 
 Avoid confrontational and authoritative language::
 The way we communicate has an impact on the receiver.
-Consider these two statements to communicate about a problem in the code : 
-For example, the statement “This operation is wrong. Please fix it.” is confrontational and authorative.
+Consider these two statements to communicate about a problem in the code: 
+The statement “This operation is wrong, please fix it.” is confrontational and authoritative.
 Instead, explain the specific error and ask the developer to review the code again.

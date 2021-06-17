@@ -1,6 +1,6 @@
 = Commenting on messages
 
-The reference documentation of Open Simulation Interface is created using doxygen.
+The reference documentation of OSI is created using _Doxygen_.
 The content of the reference documentation is generated from comments in the `.proto` files.
 Follow these steps when creating comments on messages to keep the documentation style consistent.
 

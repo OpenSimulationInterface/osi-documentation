@@ -3,7 +3,7 @@
 Apart from a sign-off message, OSI requires commit messages to follow a specific format.
 This format enables others to understand the motivation behind your commits more easily.
 OSI enforces these requirements only for commits to protected branches.
-However, you should follow these guidelines all the times to help others to understand your commits.
+However, you should follow these guidelines always to help others to understand your commits.
 
 Commit messages shall have the following structure:
 
@@ -24,11 +24,11 @@ Such changes usually correspond to a PATCH release.
 
 feat::
 Change introduces a new feature.
-If the change is backwards compatible, it correspond to a MINOR release.
-If the change is not backwards compatible, it correspond to a MAJOR release.
+If the change is backwards compatible, it corresponds to a MINOR release.
+If the change is not backwards compatible, it corresponds to a MAJOR release.
 
 style::
-Change affects only the style, but not the meaning of the code.
+Change affects only the style but not the meaning of the code.
 Examples include white-space changes or code formatting.
 
 build::
@@ -59,7 +59,7 @@ This includes references to Github issues by ID.
 Github uses these IDs to create links between the issues and the commit history.
 
 The optional footer contains a note, if the changes are breaking backwards compatibility.
-Such a note starts with `BREAKING CHANGES: ` followed by a concise description of what this change breaks.
+Such a note starts with `BREAKING CHANGES:` followed by a concise description of what this change breaks.
 
 The following example shows a commit message meeting all requirements:
 
