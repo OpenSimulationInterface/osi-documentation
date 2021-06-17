@@ -1,12 +1,8 @@
 = Normative and non-normative statements and deliverables
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+This specification uses a standard information structure.
+The following rules apply regarding normativity of sections:
+
+* Statements expressed as requirements, permissions, or prohibitions according to the use of modal verbs, as defined in <<sec-273d9649-afab-45d3-b6c9-73c0e64971a0, Section Modal verbs>>, are normative.
+* Rules in "Rules" sections are normative.
+* Examples, use case descriptions, and instructions are non-normative.
