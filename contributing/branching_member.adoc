@@ -10,7 +10,7 @@ Members of the OSI project can contribute to the ASAM OSI repositories directly.
 **Steps**
 
 . Create an issue describing the intended change.
-. Clone the respective repository on your local machine.
+. Clone the corresponding repository on your local machine.
 . Create a branch with a meaningful name.
   Follow the branch-name conventions.
 . Commit and push your changes to the branch.
@@ -20,7 +20,7 @@ Members of the OSI project can contribute to the ASAM OSI repositories directly.
 . Ask reviewers to review your changes.
 . When discussion about the changes are done, add the _ReadyForCCBReview_ label.
   Pull request with this label will be discussed in the next meeting of the _Change Control Board_.
-. When the Change Control Board approves of the changes, the pull request is labelled as __ReadyToMerge_.
+. When the Change Control Board approves of the changes, the pull request is labelled as _ReadyToMerge_.
 This label indicates that the changes in the pull request can be merged.
 . Merge the changes into the master branch of the repository.
 

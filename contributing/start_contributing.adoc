@@ -5,7 +5,7 @@ OSI and its supporting tools are developed publicly on Github.
 
 Before you start, make yourself familiar with OSI and how to contribute by reading this documentation and OSI's reference documentation.
 
-You should also make yourself familiar with the following topics: 
+You should also make familiarize yourself with the following topics: 
 
 * Google's _Protocol Buffers_.
 * _Git_.
