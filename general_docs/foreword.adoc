@@ -1,12 +1,16 @@
 = Foreword
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+The Open Simulation Interface (OSI) is a specification for interfaces between models and components of a distributed simulation.
+OSI has a strong focus on environmental perception of automated driving functions.
+
+The complexity of automated driving functions increases rapidly.
+Accordingly, the requirements for testing and development methods are growing too.
+Testing in virtual environments allows to control and reproduce environment conditions.
+
+To enable widespread use of driving simulators for function developers, the connection between the function-development framework and the simulation environment needs generic and standardized interfaces.
+An easy and straight-forward compatibility between automated driving functions and the variety of available driving-simulation frameworks is made possible by OSI.
+OSI addresses the emerging standard ISO 23150 for real sensors’ standardized communication interface.
+OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components.
+
+The vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations using a standardized ISO-23150 interface.
+This will simplify integration and thus significantly strengthen the accessibility and usefulness of virtual testing.
