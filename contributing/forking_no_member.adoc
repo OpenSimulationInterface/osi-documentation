@@ -9,7 +9,7 @@ External contributers must fork the OSI repositories and contribute their change
 **Steps**
 
 . Create an issue describing the intended change.
-. Fork the respective OSI repository on Github.
+. Fork the corresponding OSI repository on Github.
 . Clone the forked repository on your local machine.
 . Create a branch with a meaningful name.
   Follow the branch-name conventions.
@@ -20,7 +20,7 @@ External contributers must fork the OSI repositories and contribute their change
 . Ask reviewers to review your changes.
 . When discussion about the changes are done, add the _ReadyForCCBReview_ label.
   Pull request with this label will be discussed in the next meeting of the _Change Control Board_.
-. When the Change Control Board approves of the changes, the pull request is labelled as __ReadyToMerge_.
+. When the Change Control Board approves of the changes, the pull request is labelled as _ReadyToMerge_.
 This label indicates that the changes in the pull request can be merged.
 . Merge the changes into the master branch of the repository.
 

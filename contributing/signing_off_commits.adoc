@@ -7,7 +7,7 @@ Contributors agree to the DCO by adding a ``Signed-off-by`` statement to the com
 Signed-off-by: Firstname Lastname <email@address.com>
 ----
 
-If a commit is missing the ``Signed-off-by`` statement, this commit cannot be merged into the master branch.
+If a commit does not include the ``Signed-off-by`` statement, this commit cannot be merged into the master branch.
 
 To add a sign-off statement to a commit add ``-s`` or ``--signoff`` to the commit command:
 

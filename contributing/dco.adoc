@@ -1,6 +1,6 @@
 = Developer Certificate of Origin (DCO)
 
-To make a good-faith effort to ensure licensing criteria are met, the Developer-Certificate-of-Origin process shall be followed.
+To make a good-faith effort to ensure licensing criteria are met, the Developer-Certificate-of-Origin (DCO) process shall be followed.
 
 When contributing a change, the contributor must agree to the DCO.
 The DCO is a commitment that the contributor has the right to submit the change.

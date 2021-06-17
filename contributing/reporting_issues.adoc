@@ -8,11 +8,11 @@ Reporting issues is a simple way of contributing to OSI.
 
 **Steps**
 
-. Determine the repository your issue relates to and open it on Github.
+. Determine the repository that your issue relates to and open the repository on Github.
 . Create a new issue.
-. Select the correct issue type.
+. Select the correct issue type:
   Bug report:: Report an error.
-  Feature request:: Suggest an idea for the project 
+  Feature request:: Suggest an idea for the project.
   Question:: Ask a question if you do not understand something or need clarification.
   Blank issue:: Use this issue type if no other type fits your issue.
 . Fill out the title and description field.
