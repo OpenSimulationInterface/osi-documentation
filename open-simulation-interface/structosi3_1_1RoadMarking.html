@@ -247,6 +247,31 @@
 <dd><p>The classification data for the road marking. </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1RoadMarking_1ab40669e568d7b6cfc476cb42c39270ef"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">ExternalReference</span> <span class="pre">source_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
+<dd><p>Optional external reference to the road-marking source.</p>
+<p>The external reference points to the source of the surface marking, if it is derived from one or more objects or external references. An example here is the reference to the signal defined in a OpenDRIVE map.</p>
+<p>For example, to reference a signal defined in an OpenDRIVE map the items should be set as follows:<ul class="simple">
+<li><p>reference = URI to map, can remain empty if identical with definiton in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"><span class="std std-ref"><span class="pre">GroundTruth::map_reference</span></span></a></code> </p></li>
+<li><p>type = “net.asam.opendrive”</p></li>
+<li><p>identifier[0] = id of t_road_signals_signal</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With OpenDRIVE, surface markings can also be defined as objects. In this case, the associated object is usually referenced within OpenDRIVE using the reference t_road_signals_signal_reference. An additional reference to the object is therefore not necessary.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For non-ASAM Standards, it is implementation-specific how source_reference is resolved.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value has to be repeated, because one lane segment may be derived from more than one origin segment. Multiple sources may be added as reference as well, for example, a map and sensors. </p>
+</div>
+</dd></dl>
+
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N4osi311RoadMarking14ClassificationE">

@@ -254,6 +254,33 @@
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Classification</span> <span class="n">classification</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
+    <span class="c1">// Optional external reference to the road-marking source.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The external reference points to the source of the surface marking, if it</span>
+    <span class="c1">// is derived from one or more objects or external references. An example</span>
+    <span class="c1">// here is the reference to the signal defined in a OpenDRIVE map.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For example, to reference a signal defined in an OpenDRIVE map</span>
+    <span class="c1">// the items should be set as follows:</span>
+    <span class="c1">// * reference = URI to map, can remain empty if identical with definiton</span>
+    <span class="c1">//               in \c GroundTruth::map_reference</span>
+    <span class="c1">// * type = &quot;net.asam.opendrive&quot;</span>
+    <span class="c1">// * identifier[0] = id of t_road_signals_signal</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note With OpenDRIVE, surface markings can also be defined as objects.</span>
+    <span class="c1">//       In this case, the associated object is usually referenced within</span>
+    <span class="c1">//       OpenDRIVE using the reference t_road_signals_signal_reference.</span>
+    <span class="c1">//       An additional reference to the object is therefore not necessary.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For non-ASAM Standards, it is implementation-specific how</span>
+    <span class="c1">//       source_reference is resolved.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The value has to be repeated, because one lane segment may be</span>
+    <span class="c1">//       derived from more than one origin segment. Multiple sources</span>
+    <span class="c1">//       may be added as reference as well, for example, a map and sensors.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">ExternalReference</span> <span class="n">source_reference</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
     <span class="c1">//</span>
     <span class="c1">// \brief \c Classification data for a road surface marking.</span>
     <span class="c1">//</span>

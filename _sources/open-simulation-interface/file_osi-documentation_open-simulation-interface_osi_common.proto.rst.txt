@@ -43,6 +43,8 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1Dimension3d`
 
+- :ref:`exhale_struct_structosi3_1_1ExternalReference`
+
 - :ref:`exhale_struct_structosi3_1_1Identifier`
 
 - :ref:`exhale_struct_structosi3_1_1MountingPosition`

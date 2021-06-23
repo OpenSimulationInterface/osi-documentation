@@ -239,6 +239,41 @@
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">string</span> <span class="n">model_reference</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
+    <span class="c1">// External reference to the stationary-object source.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The external reference points to the source of a stationary object, if it</span>
+    <span class="c1">// is derived from an external sources like OpenDRIVE or OpenSCENARIO.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For example, to reference an object defined in an OpenDRIVE map</span>
+    <span class="c1">// the items should be set as follows:</span>
+    <span class="c1">// * reference = URI to map, can remain empty if identical with definiton</span>
+    <span class="c1">//               in \c GroundTruth::map_reference</span>
+    <span class="c1">// * type = &quot;net.asam.opendrive&quot;</span>
+    <span class="c1">// * identifier[0] = &quot;object&quot; for t_road_objects_object and</span>
+    <span class="c1">//                   &quot;bridge&quot; for t_road_objects_bridge</span>
+    <span class="c1">// * identifier[1] = id of t_road_objects_object or t_road_objects_bridge</span>
+    <span class="c1">//</span>
+    <span class="c1">// For example, to reference OpenSCENARIO entities of the type MiscObject,</span>
+    <span class="c1">// which describe partly stationary objects, the items should be set as</span>
+    <span class="c1">// follows:</span>
+    <span class="c1">// * reference = URI to the OpenSCENARIO File</span>
+    <span class="c1">// * type = &quot;net.asam.openscenario&quot;</span>
+    <span class="c1">// * identifier[0] = Entity-Type (&quot;MiscObject&quot;)</span>
+    <span class="c1">// * identifier[1] = name of MiscObject in Entity</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The following rule, described in OpenDRIVE, also applies:</span>
+    <span class="c1">// * Objects derived from OpenSCENARIO shall not be mixed with objects</span>
+    <span class="c1">//   described in OpenDRIVE.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For non-ASAM Standards, it is implementation-specific how</span>
+    <span class="c1">//       source_reference is resolved.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The value has to be repeated because one object may be derived</span>
+    <span class="c1">//       from more than one origin source, for example, from a scenario file</span>
+    <span class="c1">//       and from sensors.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">ExternalReference</span> <span class="n">source_reference</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
     <span class="c1">//</span>
     <span class="c1">// \brief Classification data for a stationary object.</span>
     <span class="c1">//</span>
@@ -337,6 +372,10 @@
             <span class="c1">// environment, like beacons.</span>
             <span class="c1">//</span>
             <span class="n">TYPE_CONSTRUCTION_SITE_ELEMENT</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+            <span class="c1">// Object is a speed bump.</span>
+            <span class="c1">//</span>
+            <span class="n">TYPE_SPEED_BUMP</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="c1">// Definition of material types.</span>
@@ -557,6 +596,30 @@
     <span class="c1">// Specific information about the classification of the vehicle.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">MovingObjectClassification</span> <span class="n">moving_object_classification</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+    <span class="c1">// Optional external reference to the moving-object source</span>
+    <span class="c1">//</span>
+    <span class="c1">// The external reference points to the source of an moving object, if it</span>
+    <span class="c1">// is derived from an external sources like OpenSCENARIO.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For example, to reference OpenSCENARIO entities of the type Vehicle or</span>
+    <span class="c1">// Pedestrian, which describe moving objects, the items should be set as</span>
+    <span class="c1">// follows:</span>
+    <span class="c1">// * reference = URI to the OpenSCENARIO File</span>
+    <span class="c1">// * type = &quot;net.asam.openscenario&quot;</span>
+    <span class="c1">// * identifier[0] = Entity-Type (&quot;Vehicle&quot; or &quot;Pedestrian&quot;)</span>
+    <span class="c1">// * identifier[1] = name of Vehicle/Pedestrian in Entity</span>
+    <span class="c1">//</span>
+    <span class="c1">// \todo OpenSCENARIO currently does not provide an animal type.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For non-ASAM Standards, it is implementation-specific how</span>
+    <span class="c1">//       source_reference is resolved.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The value has to be repeated because one object may be derived</span>
+    <span class="c1">//       from more than one origin source, for example, from a scenario file</span>
+    <span class="c1">//       and from sensors.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">ExternalReference</span> <span class="n">source_reference</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
     <span class="c1">// Definition of object types.</span>
     <span class="c1">//</span>

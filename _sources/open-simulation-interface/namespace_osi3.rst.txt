@@ -83,6 +83,8 @@ Classes
 
 - :ref:`exhale_struct_structosi3_1_1EnvironmentalConditions_1_1TimeOfDay`
 
+- :ref:`exhale_struct_structosi3_1_1ExternalReference`
+
 - :ref:`exhale_struct_structosi3_1_1FeatureData`
 
 - :ref:`exhale_struct_structosi3_1_1FileOptions`

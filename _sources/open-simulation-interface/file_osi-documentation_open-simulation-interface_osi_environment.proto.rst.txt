@@ -46,5 +46,7 @@ Variables
 ---------
 
 
+- :ref:`exhale_variable_osi__environment_8proto_1a64e4fb51263015847909f47cb7aeea70`
+
 - :ref:`exhale_variable_osi__environment_8proto_1adbedb258e13546cc707a6ebb073a3d8a`
 

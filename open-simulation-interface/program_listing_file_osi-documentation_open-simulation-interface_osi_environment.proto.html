@@ -201,6 +201,8 @@
 
 <span class="n">option</span> <span class="n">optimize_for</span> <span class="o">=</span> <span class="n">SPEED</span><span class="p">;</span>
 
+<span class="k">import</span> <span class="s">&quot;osi_common.proto&quot;</span><span class="p">;</span>
+
 <span class="n">package</span> <span class="n">osi3</span><span class="p">;</span>
 
 <span class="c1">//</span>
@@ -284,6 +286,19 @@
     <span class="c1">// Description of the fog.</span>
     <span class="c1">//</span>
     <span class="n">optional</span> <span class="n">Fog</span> <span class="n">fog</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+    <span class="c1">// Optional external reference to the environmental condition sources.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For OpenDRIVE and OpenSECNARIO there is no direct counterpart.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note For non-ASAM standards, it is implementation-specific how</span>
+    <span class="c1">//       source_reference is resolved.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The value has to be repeated because one object may be derived</span>
+    <span class="c1">//       from more than one origin source, for example, from a scenario file</span>
+    <span class="c1">//       and from sensors.</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">ExternalReference</span> <span class="n">source_reference</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
 
     <span class="c1">// Definition of discretized precipitation states according to [1].</span>
     <span class="c1">// (I = Intensity of precipitation in mm per hour mm/h)</span>

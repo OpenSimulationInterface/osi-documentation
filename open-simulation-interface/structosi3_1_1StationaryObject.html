@@ -251,6 +251,42 @@
 </div>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1StationaryObject_1aa8d86e0b109f067fa6ba78197aec539c"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">ExternalReference</span> <span class="pre">source_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">5</span></span></dt>
+<dd><p>External reference to the stationary-object source.</p>
+<p>The external reference points to the source of a stationary object, if it is derived from an external sources like OpenDRIVE or OpenSCENARIO.</p>
+<p>For example, to reference an object defined in an OpenDRIVE map the items should be set as follows:<ul class="simple">
+<li><p>reference = URI to map, can remain empty if identical with definiton in <code class="docutils literal notranslate"><a class="reference internal" href="structosi3_1_1GroundTruth.html#structosi3_1_1GroundTruth_1a151bae123d1ceecb7d83a9619ab8017e"><span class="std std-ref"><span class="pre">GroundTruth::map_reference</span></span></a></code> </p></li>
+<li><p>type = “net.asam.opendrive”</p></li>
+<li><p>identifier[0] = “object” for t_road_objects_object and “bridge” for t_road_objects_bridge</p></li>
+<li><p>identifier[1] = id of t_road_objects_object or t_road_objects_bridge</p></li>
+</ul>
+</p>
+<p>For example, to reference OpenSCENARIO entities of the type MiscObject, which describe partly stationary objects, the items should be set as follows:<ul class="simple">
+<li><p>reference = URI to the OpenSCENARIO File</p></li>
+<li><p>type = “net.asam.openscenario”</p></li>
+<li><p>identifier[0] = Entity-Type (“MiscObject”)</p></li>
+<li><p>identifier[1] = name of MiscObject in Entity</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following rule, described in OpenDRIVE, also applies:<ul class="simple">
+<li><p>Objects derived from OpenSCENARIO shall not be mixed with objects described in OpenDRIVE.</p></li>
+</ul>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For non-ASAM Standards, it is implementation-specific how source_reference is resolved.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value has to be repeated because one object may be derived from more than one origin source, for example, from a scenario file and from sensors. </p>
+</div>
+</dd></dl>
+
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N4osi316StationaryObject14ClassificationE">
@@ -363,6 +399,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE">
 <span id="_CPPv3N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da61844e11acb3ff57ce7635709d59fb1b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TYPE_CONSTRUCTION_SITE_ELEMENT</span></span></span><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type30TYPE_CONSTRUCTION_SITE_ELEMENTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Landmarks corresponding to construction site elements in the environment, like beacons. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_SPEED_BUMPE">
+<span id="_CPPv3N4osi316StationaryObject14Classification4Type15TYPE_SPEED_BUMPE"></span><span id="_CPPv2N4osi316StationaryObject14Classification4Type15TYPE_SPEED_BUMPE"></span><span class="target" id="structosi3_1_1StationaryObject_1_1Classification_1ad497488a7119617633b54181ea08457da0035009db5b2fadfc746e432cd4d3eb9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TYPE_SPEED_BUMP</span></span></span><a class="headerlink" href="#_CPPv4N4osi316StationaryObject14Classification4Type15TYPE_SPEED_BUMPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Object is a speed bump. </p>
 </dd></dl>
 
 </dd></dl>

@@ -367,6 +367,35 @@ check_if this.type is_equal_to 2 else do_check is_set  </p>
 <dd><p>Specific information about the classification of the vehicle. </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1MovingObject_1a28102f7b1679219e151881c74c716073"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">ExternalReference</span> <span class="pre">source_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">10</span></span></dt>
+<dd><p>Optional external reference to the moving-object source</p>
+<p>The external reference points to the source of an moving object, if it is derived from an external sources like OpenSCENARIO.</p>
+<p>For example, to reference OpenSCENARIO entities of the type Vehicle or Pedestrian, which describe moving objects, the items should be set as follows:<ul class="simple">
+<li><p>reference = URI to the OpenSCENARIO File</p></li>
+<li><p>type = “net.asam.openscenario”</p></li>
+<li><p>identifier[0] = Entity-Type (“Vehicle” or “Pedestrian”)</p></li>
+<li><p>identifier[1] = name of Vehicle/Pedestrian in Entity</p></li>
+</ul>
+</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Todo:</span></em></dt>
+<dd><p>OpenSCENARIO currently does not provide an animal type.</p>
+</dd></dl>
+
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For non-ASAM Standards, it is implementation-specific how source_reference is resolved.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value has to be repeated because one object may be derived from more than one origin source, for example, from a scenario file and from sensors. </p>
+</div>
+</dd></dl>
+
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N4osi312MovingObject26MovingObjectClassificationE">

@@ -183,6 +183,11 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   structosi3_1_1ExternalReference.rst
+
+.. toctree::
+   :maxdepth: 5
+
    structosi3_1_1FeatureData.rst
 
 .. toctree::
@@ -687,6 +692,11 @@ Variables
    :maxdepth: 5
 
    variable_osi__detectedtrafficsign_8proto_1a61d2939c26d13833d8bf6986c4b60bf9.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_osi__environment_8proto_1a64e4fb51263015847909f47cb7aeea70.rst
 
 .. toctree::
    :maxdepth: 5

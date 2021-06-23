@@ -1,0 +1,16 @@
+.. _exhale_struct_structosi3_1_1ExternalReference:
+
+Struct ExternalReference
+========================
+
+- Defined in :ref:`file_osi-documentation_open-simulation-interface_osi_common.proto`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: osi3::ExternalReference
+   :members:
+   :protected-members:
+   :undoc-members:

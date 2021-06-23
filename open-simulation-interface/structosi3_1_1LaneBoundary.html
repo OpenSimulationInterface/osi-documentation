@@ -266,6 +266,24 @@ first_element width is_equal_to 0.13 first_element height is_equal_to 0.14 last_
 <dd><p>The classification of the lane boundary. </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="structosi3_1_1LaneBoundary_1aefd5280ba5c8c61425706ff9a029b5a4"></span><span class="sig-name descname"><span class="pre">repeated</span> <span class="pre">ExternalReference</span> <span class="pre">source_reference</span>&#160;&#160; <span class="pre">=</span> <span class="pre">4</span></span></dt>
+<dd><p>Optional external reference to the lane boundary source.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For OpenDRIVE, there is no direct possibility to reference the RoadMark, as there is no unique identifier in this sub-object.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For non-ASAM Standards, it is implementation-specific how source_reference is resolved.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value has to be repeated because one object may be derived from more than one origin source, for example, from a scenario file and from sensors. </p>
+</div>
+</dd></dl>
+
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N4osi312LaneBoundary13BoundaryPointE">

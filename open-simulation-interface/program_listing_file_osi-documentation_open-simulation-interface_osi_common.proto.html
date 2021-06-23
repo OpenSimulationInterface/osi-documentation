@@ -414,6 +414,68 @@
     <span class="n">optional</span> <span class="n">uint64</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 
+<span class="c1">// \brief References to external objects.</span>
+<span class="c1">//</span>
+<span class="c1">// The external reference is an optional recommendation to refer to objects defined outside of OSI.</span>
+<span class="c1">// This could be other OpenX standards, 3rd-party standards or user-defined objects.</span>
+<span class="c1">//</span>
+<span class="c1">// \note ExternalReference is optional and can be left empty.</span>
+<span class="c1">//</span>
+<span class="n">message</span> <span class="n">ExternalReference</span>
+<span class="p">{</span>
+    <span class="c1">// The source of the external references.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Defines the original source of an object as uniquely identifiable reference.</span>
+    <span class="c1">// In case of using \c GroundTruth::map_reference or</span>
+    <span class="c1">// \c GroundTruth::model_reference, the reference can be left empty.</span>
+    <span class="c1">// If not otherwise required, an URI is suggested. The syntax should follow</span>
+    <span class="c1">// \link https://tools.ietf.org/html/rfc3986 RFC 3986\endlink.</span>
+    <span class="c1">//</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">reference</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// The type of the external references.</span>
+    <span class="c1">//</span>
+    <span class="c1">// Mandatory value describing the type of the original source.</span>
+    <span class="c1">//</span>
+    <span class="c1">// For OpenX/ASAM standards it is specified as follows:</span>
+    <span class="c1">// - net.asam.opendrive</span>
+    <span class="c1">// - net.asam.openscenario</span>
+    <span class="c1">//</span>
+    <span class="c1">// For third-party standards and user-defined objects,</span>
+    <span class="c1">// reverse domain name notation with lower-case type field</span>
+    <span class="c1">// is recommended to guarantee unique and interoperable identification.</span>
+    <span class="c1">//</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="c1">// The external identifier reference value.</span>
+    <span class="c1">//</span>
+    <span class="c1">// The repeated string is chosen as a common description of the external</span>
+    <span class="c1">// identifier, because a variety of identificatier types could be</span>
+    <span class="c1">// involved .</span>
+    <span class="c1">//</span>
+    <span class="c1">// For example, referencing a unique lane in OpenDRIVE requires the</span>
+    <span class="c1">// following identifiers:</span>
+    <span class="c1">// * RoadId: String</span>
+    <span class="c1">// * S-Value of LaneSection: Double</span>
+    <span class="c1">// * LaneId: Int</span>
+    <span class="c1">//</span>
+    <span class="c1">// \note The detailed description of the identifiers and how they are</span>
+    <span class="c1">//       used for referencing external objects is given in the individual</span>
+    <span class="c1">//       messages where the external identifier is used.</span>
+    <span class="c1">//</span>
+    <span class="c1">// \see EnvironmentalConditions::source_reference</span>
+    <span class="c1">// \see Lane::source_reference</span>
+    <span class="c1">// \see LaneBoundary::source_reference</span>
+    <span class="c1">// \see StationaryObject::source_reference</span>
+    <span class="c1">// \see MovingObject::source_reference</span>
+    <span class="c1">// \see RoadMarking::source_reference</span>
+    <span class="c1">// \see TrafficLight::source_reference</span>
+    <span class="c1">// \see TrafficSign::source_reference</span>
+    <span class="c1">//</span>
+    <span class="n">repeated</span> <span class="n">string</span> <span class="n">identifier</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
 <span class="c1">//</span>
 <span class="c1">// \brief Specifies the mounting position of a sensor.</span>
 <span class="c1">//</span>
