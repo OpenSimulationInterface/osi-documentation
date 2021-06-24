@@ -12,5 +12,5 @@ An easy and straight-forward compatibility between automated driving functions a
 OSI addresses the emerging standard ISO 23150 for real sensors’ standardized communication interface.
 OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components.
 
-The vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations using a standardized ISO-23150 interface.
+The vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations using a standardized ISO 23150 interface.
 This will simplify integration and thus significantly strengthen the accessibility and usefulness of virtual testing.
