@@ -26,4 +26,5 @@ This label indicates that the changes in the pull request can be merged.
 
 **Related topics**
 
-- Reporting issues
+- <<_reporting_issues>>
+- <<_guidelines_for_contributions>>

@@ -31,7 +31,3 @@ message EnvironmentalConditions
 {
 }
 ----
-
-**Related topics**
-
-- Creating images.

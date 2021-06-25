@@ -12,3 +12,11 @@ ASAM OSI enforces the following commit guidelines:
 - Sign off commit messages.
 - Name branches meaningfully and consistently.
 - If a commit contains work-in-progress, add the _WIP_ label to the commit message.
+
+**Related topics**
+
+- <<_guidelines_for_writing_commit_messages>>
+- <<_interface_conventions>>
+- <<_commenting_on_messages>>
+- <<_commenting_on_fields_and_enums>>
+- <<_signing_off_commits>>

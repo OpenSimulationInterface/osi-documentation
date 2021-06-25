@@ -7,6 +7,6 @@ Before you start, make yourself familiar with OSI and how to contribute by readi
 
 You should also make familiarize yourself with the following topics: 
 
-* Google's _Protocol Buffers_.
-* _Git_.
+* Google's _Protocol Buffers_
+* _Git_
 * _Github_

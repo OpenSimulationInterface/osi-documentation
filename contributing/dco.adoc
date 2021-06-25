@@ -48,6 +48,3 @@ By making a contribution to this project, I certify that:
 ----
 
 Contributors agree to the DCO by adding a ``Signed-off-by`` statement to the commit message.
-
-**Related topics**
-
