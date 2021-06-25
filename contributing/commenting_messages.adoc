@@ -14,6 +14,7 @@ Follow these steps when creating comments on messages to keep the documentation 
 . Optionally, add an image using the `\image html` keyword followed by an empty comment line.
   The image must be stored at `./open-simulation-interface/docs/images`
 . Optionally, add a detailed description spanning multiple lines followed by an empty comment line.
+. Optionally, add notes using the keyword `\note`.
 
 **Example**
 
