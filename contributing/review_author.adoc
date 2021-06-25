@@ -14,6 +14,6 @@ Before asking for review, make sure your changes meet the following requirements
 
 **Related topics**
 
-- Interface conventions
-- Writing commit messages
-- Signing off commits
+- <<_interface_conventions>>
+- <<_guidelines_for_writing_commit_messages>>
+- <<_signing_off_commits>>
