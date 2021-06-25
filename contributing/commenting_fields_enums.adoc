@@ -50,5 +50,5 @@ message EnvironmentalConditions
 
 **Related topics**
 
-- Writing rules
-- Creating literary references.
+- <<_writing_custom_rules>>
+- <<_guidelines_for_creating_literary_references>>
