@@ -11,9 +11,13 @@ Follow these steps when creating comments on fields and enums to keep the docume
 **Steps**
 
 . Add a description to the field or enum followed by an empty comment line.
-. Add the unit of the field using the `\unit` keyword followed by an empty comment line.
+. Add the unit of the field using the format `Unit: UNIT` followed by an empty comment line.
 . Optionally, add literary references to the comments.
-. Optionally, add rules encapsulated between `\rules` and `endrules`.
+The list of references starts with `\par References:` followed by the references.
+Every reference starts on a new line.
+Every reference begins with a reference number in the format `[n]`.
+Every reference ends with `\n`, except the last reference.
+. Optionally, add rules encapsulated between `\rules` and `\endrules`.
 
 **Example**
 

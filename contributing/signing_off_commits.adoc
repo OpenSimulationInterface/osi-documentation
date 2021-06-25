@@ -18,4 +18,4 @@ git commit -m "Commit message" -s
 
 **Related topics**
 
-Developer Certificate of Origin (DCO)
+- <<_developer_certificate_of_origin_dco>>

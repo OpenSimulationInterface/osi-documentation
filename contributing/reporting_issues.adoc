@@ -22,4 +22,4 @@ Reporting issues is a simple way of contributing to OSI.
 
 **Related topics**
 
-- <<osi_repos.adoc#, ASAM OSI repositories>>
+- <<_asam_osi_repositories>>

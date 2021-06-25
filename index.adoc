@@ -83,6 +83,8 @@ include::./contributing/commenting_messages.adoc[leveloffset=+3]
 
 include::./contributing/commenting_fields_enums.adoc[leveloffset=+3]
 
+include::./contributing/creating_references.adoc[leveloffset=+3]
+
 //include::./contributing/creating_images.adoc[leveloffset=+3]
 
 === Reviewing contributions
