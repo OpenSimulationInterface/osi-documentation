@@ -11,8 +11,16 @@ include::{asciidoc-resources}/preamble.adoc[]
 :reusedir: reuse
 
 //embed images into html
-:imagesdir: ./images
+:imagesdir: .
+// Since a document spanning multiple repos is rendered here, the pathing regarding images is a bit involved.
+// We create a variable for every repo that is included. It point to the repo in question.
+// If the subrepo is rendered seperatly, then the variable is set to just "./images" with ifdef.
+// Please note that this variable has to used in all image includes. Includes here have to use "image::./images..."
+:images_open_simulation_interface: ./open-simulation-interface/doc/images
+// :images_osi_sensor_model_packaging: ./osi-sensor-model-packaging/doc/images  // example
+
 :imagesoutdir: ./images/generated_images
+
 // :bibtex-file: Tables_and_Bibliography/bibliography.bib // add when needed
 
 
@@ -47,11 +55,11 @@ include::./open-simulation-interface/doc/open-simulation-interface_user_guide.ad
 
 include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
 
-include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1]
+include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
 
-include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1]
+include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
 
-include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
+include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1,opts=optional]
 
 // END: including the documentation of other osi repositories
 
