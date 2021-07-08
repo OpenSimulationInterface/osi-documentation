@@ -1,0 +1,44 @@
+= Review guidelines for reviewers
+
+Code review can be challenging at times.
+Follow these suggestions when reviewing code to avoid common pitfalls:
+
+Ask questions::
+What is the purpose of this change?
+If this requirement changes, what else would have to change?
+How could we make this more maintainable?
+
+Discuss in person for more detailed points::
+Online comments are useful for focused technical questions.
+In case of more detailed discussions, it will often be more productive to discuss in person.
+
+Explain yourself::
+Sometimes it is best to both ask if there is a better alternative and at the same time justify why a problem in the code is worth fixing.
+Criticism without explanation can appear confrontational.
+
+Make it about the code::
+It is easy to take notes from code reviews personally, especially if we take pride in our work.
+It is best to make discussions about the code than about the developer.
+
+Suggest importance of fixes::
+When offering many suggestions at once, clarify that not all of them need to be acted upon at once.
+Indicate the importance of your suggestions.
+This allows developers to improve their work incrementally.
+
+Take the developer’s opinion into consideration::
+Imposing a particular design choice out of personal preferences and without a real explanation will incentivize the developer to be passive instead of active and creative.
+
+Do not re-write, remove or re-do all the work::
+Sometimes, it appears easier to re-do the work yourself, thereby discarding the work of the developer.
+This can give the impression that the work of the developer is worthless.
+It also adds additional work for the reviewer who effectively takes responsibility for the code.
+
+Consider the person you are reviewing::
+Developers are human beings.
+Consider their personality and experience when reviewing their code.
+
+Avoid confrontational and authoritative language::
+The way we communicate has an impact on the receiver.
+Consider these two statements to communicate about a problem in the code: 
+The statement “This operation is wrong, please fix it.” is confrontational and authoritative.
+Instead, explain the specific error and ask the developer to review the code again.

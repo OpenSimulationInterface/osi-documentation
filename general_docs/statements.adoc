@@ -1,0 +1,8 @@
+= Normative and non-normative statements and deliverables
+
+This specification uses a standard information structure.
+The following rules apply regarding normativity of sections:
+
+* Statements expressed as requirements, permissions, or prohibitions according to the use of modal verbs, as defined in <<sec-273d9649-afab-45d3-b6c9-73c0e64971a0, Section Modal verbs>>, are normative.
+* Rules in "Rules" sections are normative.
+* Examples, use case descriptions, and instructions are non-normative.

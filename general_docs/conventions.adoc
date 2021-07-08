@@ -1,0 +1,94 @@
+= Conventions
+
+== Naming Conventions
+
+In this document, the following conventions apply:
+
+``data types`` are given according to IEEE 754.
+
+== Units
+
+Unless stated otherwise, all numeric values within this specification are in SI units, for example:
+
+* position/distance	in [m]
+* angles in [rad]
+* time in [s]
+* speed in [m/s]
+
+Geographic positions are stated in the unit defined by the spatial coordinate system, for example, in accordance with WGS 84 – EPSG 4326.
+
+Some data elements allow you to explicitly state the unit of a given value.
+If the unit is not given or if there is no means to state the unit, SI units apply.
+The following units may be used in explicit assignments:
+
+.Units
+[%header, cols=3*]
+|===
+|Category    |Description         |Identifier
+.4+|distance |meter               |m
+             |kilometer           |km
+             |feet                |ft
+             |land mile           |mile
+.3+|speed    |meters per second   |m/s
+             |miles per hour      |mph
+             |kilometers per hour |km/h
+.2+|mass     |kilogram            |kg
+             |metric tons         |t
+|slope       |percent             |%
+|===
+
+These optional units shall be used for purposes of signage and speed indication only.
+They shall not be used as general units, for example, to define road geometry, etc.
+
+[#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
+== Modal verbs
+
+To ensure compliance with the Open Simulation Interface standard, users need to be able to distinguish between mandatory requirements, recommendations, permissions, as well as possibilities and capabilities.
+
+The following rules for using modal verbs apply:
+
+.Rules for using modal verbs
+[%header, cols=2*]
+|===
+|Provision |Verbal form
+|*Requirement* +
+Requirements shall be followed strictly in order to be conform to the standard. Deviations are not allowed.
+|shall +
+shall not
+
+|*Recommendation* +
+Recommendations indicate that among several possibilities, one is recommended as particularly suitable, without mentioning or excluding others.
+|should +
+should not
+
+|*Permission* +
+Permissions indicate a course of action permissible within the limits of {THIS_STANDARD} deliverables.
+|may +
+need not
+
+|*Possibility and capability* +
+These verbal forms are used for stating possibilities or capabilities, being technical, material, physical, or others.
+|can +
+can not
+
+|*Obligation and necessity* +
+These verbal forms are used to describe legal, organizational, or technical obligations and necessities that are not regulated or enforced by the {THIS_STANDARD} standard.
+|must +
+must not
+|===
+
+== Typographic conventions
+
+This documentation uses the following typographical conventions:
+
+.Typographical conventions
+[%header, cols=2*]
+|===
+|Mark-up                          |Definition
+|`Code elements`                  |This format is used for code elements, such as technical names of classes and attributes, as well as attribute values.
+|```[blue]#Code snippets#```      |This format is used for excerpts of code that serve as an example for implementation.
+|_Terms_                          |This format is used to introduce glossary terms, new terms and to emphasize terms.
+|`[green]#Mathematical elements#` |This format is used for calculations and mathematical elements.
+|`[green]#<element>#`             |This describes a tag for an XML element
+|`@attribute`                     |The "@" identifies an attribute of an XML element.
+|===

@@ -1,0 +1,22 @@
+= Guidelines for contributions
+
+Commit guidelines ensure the transparency and intelligibility of the commit history.
+ASAM OSI enforces the following commit guidelines:
+
+- Prefer small atomic commits over large ones that do many things.
+- Do not mix refactoring and new features.
+- Do not mix style changes, for example indentation changes, with actual code changes.
+- If you add new messages to a *.proto file, add appropriate documentation as well.
+- Run the unit tests for comment compliance to check if you followed the correct syntax guidelines for *.proto files.
+- Follow the guidelines for commit messages.
+- Sign off commit messages.
+- Name branches meaningfully and consistently.
+- If a commit contains work-in-progress, add the _WIP_ label to the commit message.
+
+**Related topics**
+
+- <<_guidelines_for_writing_commit_messages>>
+- <<_interface_conventions>>
+- <<_commenting_on_messages>>
+- <<_commenting_on_fields_and_enums>>
+- <<_signing_off_commits>>
