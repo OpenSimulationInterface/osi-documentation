@@ -55,11 +55,11 @@ include::./open-simulation-interface/doc/open-simulation-interface_user_guide.ad
 
 include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
 
-include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
+// include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
 
-include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
+// include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
 
-include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1,opts=optional]
+// include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1,opts=optional]
 
 // END: including the documentation of other osi repositories
 
