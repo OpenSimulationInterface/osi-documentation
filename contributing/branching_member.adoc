@@ -4,7 +4,7 @@ Members of the OSI project can contribute to the ASAM OSI repositories directly.
 
 **Prerequisites**
 
-- You have a Github account.
+- You have a GitHub account.
 - You are a member of the ASAM OSI project.
 
 **Steps**
@@ -18,7 +18,7 @@ Members of the OSI project can contribute to the ASAM OSI repositories directly.
 . When your changes are ready for review, create a pull request.
   If possible, add references to corresponding issues and appropriate labels.
 . Ask reviewers to review your changes.
-. When discussion about the changes are done, add the _ReadyForCCBReview_ label.
+. When discussions about the changes are done, add the _ReadyForCCBReview_ label.
   Pull request with this label will be discussed in the next meeting of the _Change Control Board_.
 . When the Change Control Board approves of the changes, the pull request is labelled as _ReadyToMerge_.
 This label indicates that the changes in the pull request can be merged.

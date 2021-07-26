@@ -4,11 +4,11 @@ Reporting issues is a simple way of contributing to OSI.
 
 **Prerequisites**
 
-* You have a Github account.
+* You have a GitHub account.
 
 **Steps**
 
-. Determine the repository that your issue relates to and open the repository on Github.
+. Determine the repository that your issue relates to and open the repository on GitHub.
 . Create a new issue.
 . Select the correct issue type:
   Bug report:: Report an error.

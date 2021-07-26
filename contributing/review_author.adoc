@@ -6,7 +6,7 @@ Reviewing code is a technical discussion, it is not an exam, but it is a common 
 Before asking for review, make sure your changes meet the following requirements:
 
 * The code is readable and easy to understand.
-* The code does not contain contain commented-out lines and deprecated comments.
+* The code does not contain commented-out lines and deprecated comments.
 * The code contains helpful comments to be used in the reference documentation.
 * Variable and function names follow the naming convention.
 * Commit messages are meaningful and follow the convention.

@@ -1,7 +1,7 @@
 = Getting started with contributing
 
 ASAM Open Simulation Interface is an open-source standardization project.
-OSI and its supporting tools are developed publicly on Github.
+OSI and its supporting tools are developed publicly on GitHub.
 
 Before you start, make yourself familiar with OSI and how to contribute by reading this documentation and OSI's reference documentation.
 
@@ -9,4 +9,4 @@ You should also make familiarize yourself with the following topics:
 
 * Google's _Protocol Buffers_
 * _Git_
-* _Github_
+* _GitHub_

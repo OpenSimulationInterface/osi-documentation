@@ -55,8 +55,8 @@ The description shall adhere to the following rules:
 - Do not end the description with a full stop.
 
 The optional body contains information about the motivation behind the change.
-This includes references to Github issues by ID.
-Github uses these IDs to create links between the issues and the commit history.
+This includes references to GitHub issues by ID.
+GitHub uses these IDs to create links between the issues and the commit history.
 
 The optional footer contains a note, if the changes are breaking backwards compatibility.
 Such a note starts with `BREAKING CHANGES:` followed by a concise description of what this change breaks.
