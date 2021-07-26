@@ -5,7 +5,7 @@
     :target: https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml
 
 This is the main repository for the whole documentation of the osi-project. 
-The documentation is based on `sphinx <https://www.sphinx-doc.org/en/master/>`_. See the documentation `here <https://opensimulationinterface.github.io/osi-documentation/>`_.
+The documentation is based on `asciidoc <https://asciidoc.org/>`_. See the documentation `here <https://opensimulationinterface.github.io/osi-documentation/>`_.
 
 Organization Build Overview
 ----------------------------
