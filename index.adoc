@@ -55,6 +55,7 @@ include::./open-simulation-interface/doc/open-simulation-interface_user_guide.ad
 
 include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
 
+// osi-validation and osi-visualizer are considered supplementary tooling that is not normative. They are therefore not part of the ASAM standard release.
 // include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
 
 // include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
