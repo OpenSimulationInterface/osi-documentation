@@ -4,7 +4,7 @@ on:
   create: # new branches or tags
   release: # new releases
   pull_request: 
-    branches: [ master, migration ]
+    branches: [ master ]
   push: # on push. This may be removed later
   schedule: # periodic - needed because some of the content is from the other repos
     - cron:  '30 5,20 * * *' # this is pretty often. Only needed during review phase
@@ -28,37 +28,19 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/open-simulation-interface
-        ref: migration
         path: open-simulation-interface
 
     - name: Checkout OSI Sensor Model Packaging
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/osi-sensor-model-packaging
-        ref: migration
+        ref: migration # This has to be change once the PR is closed
         path: osi-sensor-model-packaging
-
-
-    - name: Checkout OSI Validation
-      uses: actions/checkout@v2
-      with:
-        repository: OpenSimulationInterface/osi-validation
-        ref: migration
-        path: osi-validation
-
-
-    - name: Checkout OSI Visualizer
-      uses: actions/checkout@v2
-      with:
-        repository: OpenSimulationInterface/osi-visualizer
-        ref: migration
-        path: osi-visualizer
 
     - name: Checkout proto2cpp
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/proto2cpp
-        ref: migration
         path: proto2cpp
 
     # Versioning
