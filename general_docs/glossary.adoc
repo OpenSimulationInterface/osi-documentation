@@ -1,74 +1,91 @@
 [glossary]
 = Terms and definitions
 
-Co-Simulation (CS)::
-Co-Simulation (CS) is a type of Functional Mockup Unit (FMU). +
+//Writing style adopted from https://www.iso.org/glossary.html
+CS (Co-Simulation)::
+Type of Functional Mockup Unit (FMU). +
 Co-Simulation FMUs contain their own numerical solver.
-The importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed. +
+The importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed.
+With OSMP, models are packaged as valid _FMI-2.0 FMU for co-simulation_ +
 +
-(Source: https://www.modelon.com/functional-mock-up-interface-fmi/)
+See also: https://www.modelon.com/functional-mock-up-interface-fmi/
 
 Ego vehicle::
-An externally controlled vehicle used for scenario descriptions. +
+Externally controlled vehicle used for scenario descriptions. +
 For evaluation of automated driving systems, the Ego vehicle will be the one controlled by the system-under-test.
-For human driver experiments, the Ego vehicle will be the one driven by the human driver. +
-+
-(Source: Open SCENARIO User Guide 1.0)
+For human driver experiments, the Ego vehicle will be the one driven by the human driver.
 
 Environmental effect model::
+//TODO: input needed
+Information set that deals with effects and phenomena caused by, for example, shadows and occlusions, weather effects, the physics of a sensor, or the pre-processing of raw sensor data.
+An environmental effect model has a sensor-view message as input, which comes from the environment simulation, and a sensor-view message as output.
+The output is sent to the sensor model.
 
-
-FMI::
-Functional Mockup Interface; +
-The Functional Mock-up Interface (FMI) is a free standard that defines a container and an interface to exchange dynamic models using a combination of XML files, binaries and C code zipped into a single file. +
+FMI (Functional Mockup Interface)::
+Free standard that defines a container and an interface to exchange dynamic models using a combination of XML files, binaries, and C code zipped into a single file. +
 +
-(Source: https://fmi-standard.org/)
+See also: https://fmi-standard.org/
 
-FMU::
-Functional Mockup Unit; +
-FMU is a file with the extension _.fmu_ It contains a simulation model that adheres to the FMI standard.
-There are two different kinds of FMUs: Model Exchange (ME) and Co-Simulation (CS) +
+FMU (Functional Mockup Unit)::
+
+Simulation model that adheres to the FMI standard.
+There are two different kinds of FMUs that both adhere to the FMI standard: Model Exchange (ME) and Co-Simulation (CS).
+An FMU is distributed in a ZIP file with the file extension _.fmu_. +
 +
-(Source: https://www.modelon.com/functional-mock-up-interface-fmi/)
+See also: https://www.modelon.com/functional-mock-up-interface-fmi/
 
 Ground truth::
-The ground truth describes the simulated environment containing all simulated objects in the global coordinate system at consecutive time instances. It is based on data available to the simulation environment. +
-+
-(Source: OSI User Guide)
+Information set that describes the whole simulated environment around any simulated vehicle.
+It is based on data available to the simulation environment.
 
-Model Exchange (ME)::
-Model exchange (ME) is a type of Functional Mockup Unit (FMU).
+Logical model::
+//TODO: input required from working group
+Examples:
+- Sensor-fusion model: combines the output of multiple sensor models to produce data with less uncertainty
+- Fault-injection model which, contrary to a sensor-fusion model, may be used to increase uncertainties
 
 Object coordinate system::
+Local object coordinate system whose origin may be identical to the center of the object's bounding box.
+If the origin is not identical to the center of the object's bounding box, the object documentation will provide the actual definition.
 
-
-OSI::
-Open Simulation Interface; +
-The Open Simulation Interface (OSI) is a specification for interfaces between models and components of a distributed simulation. OSI has a strong focus on environmental perception of automated driving functions. It also specifies interfaces for modeling traffic participants. +
+OSI (Open Simulation Interface)::
+Specification for interfaces between models and components of a distributed simulation.
+OSI has a strong focus on environmental perception of automated driving functions.
+It also specifies interfaces for modeling traffic participants. +
 +
 (Source: OSI User Guide)
 
-OSMP::
-OSI Sensor Model Packaging; +
-OSI Sensor Model Packaging (OSMP) specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0). +
-+
-(Source: OSMP specification)
+OSMP (OSI Sensor Model Packaging)::
+Specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0).
 
 Sensor coordinate system::
+Coordinate system for all entities that are part of sensor data.
+The origin is the mounting position of the physical sensor or a virtual mounting position, depending on the OSI message.
 
 Sensor model::
+//TODO: research definition
+Simulation of a real sensor.
+Sensor models consume sensor-view messages and produce sensor-data messages.
+Sensor-model output does not represent raw data but detected features or classified objects.
 
 Sensor view::
-The sensor view is derived from GroundTruth and used as input to sensor models.
-
-The sensor view information is supposed to provide input to sensor models for simulation of actual real sensors.
-
-(Source: OSI User Guide)
+Information set that is derived from ground truth and used as input to sensor models.
 
 Traffic participant::
+Represents one of the following:
+- A living being.
+- A means of transportation for living beings or goods.
+- Any other movable object that travels the road network.
+
+A traffic participant is an element of the simulated world, which can change its state during simulation time, for example, position and orientation.
 
 Traffic participant model::
+//TODO: input needed
 
 World coordinate system::
 Coordinate system for all entities that are part of ground truth.
-The world coordinate system is an inertial x/y/z-coordinate system. The origin is the global reference point that is determined by the environment simulation. This reference point may be derived from map data or other considerations.
+The world coordinate system is an inertial x/y/z-coordinate system.
+The origin is the global reference point that is determined by the environment simulation.
+This reference point may be derived from map data or other considerations.
+
+//TODO: Question: difference between World coordinate system and Global coordinate system?
