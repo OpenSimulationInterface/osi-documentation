@@ -12,8 +12,8 @@ See also: https://www.modelon.com/functional-mock-up-interface-fmi/
 
 Ego vehicle::
 Externally controlled vehicle used for scenario descriptions. +
-For evaluation of automated driving systems, the Ego vehicle will be the one controlled by the system-under-test.
-For human driver experiments, the Ego vehicle will be the one driven by the human driver.
+For evaluation of automated driving systems, the Ego vehicle is the vehicle that is controlled by the system-under-test.
+For human-driver experiments, the Ego vehicle is the vehicle that is driven by the human driver.
 
 Environmental effect model::
 //TODO: input needed
@@ -29,7 +29,7 @@ See also: https://fmi-standard.org/
 FMU (Functional Mockup Unit)::
 
 Simulation model that adheres to the FMI standard.
-There are two different kinds of FMUs that both adhere to the FMI standard: Model Exchange (ME) and Co-Simulation (CS).
+There are two different kinds of FMU that both adhere to the FMI standard: Model Exchange (ME) and Co-Simulation (CS).
 An FMU is distributed in a ZIP file with the file extension _.fmu_. +
 +
 See also: https://www.modelon.com/functional-mock-up-interface-fmi/
@@ -45,15 +45,13 @@ Examples:
 - Fault-injection model which, contrary to a sensor-fusion model, may be used to increase uncertainties
 
 Object coordinate system::
-Local object coordinate system whose origin may be identical to the center of the object's bounding box.
-If the origin is not identical to the center of the object's bounding box, the object documentation will provide the actual definition.
+Local coordinate system whose origin may be identical to the center of the object's bounding box.
+If the origin is not identical to the center of the object's bounding box, the object documentation provides the actual definition.
 
 OSI (Open Simulation Interface)::
 Specification for interfaces between models and components of a distributed simulation.
 OSI has a strong focus on environmental perception of automated driving functions.
-It also specifies interfaces for modeling traffic participants. +
-+
-(Source: OSI User Guide)
+It also specifies interfaces for modeling traffic participants.
 
 OSMP (OSI Sensor Model Packaging)::
 Specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0).
@@ -77,7 +75,7 @@ Represents one of the following:
 - A means of transportation for living beings or goods.
 - Any other movable object that travels the road network.
 
-A traffic participant is an element of the simulated world, which can change its state during simulation time, for example, position and orientation.
+A traffic participant is an element of the simulated world that can change its state during simulation time, for example, position and orientation.
 
 Traffic participant model::
 //TODO: input needed
