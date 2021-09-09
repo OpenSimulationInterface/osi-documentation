@@ -1,7 +1,7 @@
 = Guidelines for contributions
 
-Commit guidelines ensure the transparency and intelligibility of the commit history.
-ASAM OSI enforces the following commit guidelines:
+Commit guidelines exist to ensure the transparency and intelligibility of the commit history.
+{THIS_STANDARD} enforces the following commit guidelines:
 
 - Prefer small atomic commits over large ones that do many things.
 - Do not mix refactoring and new features.

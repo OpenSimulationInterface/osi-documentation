@@ -1,6 +1,6 @@
 = Forking for non-member contributors
 
-External contributors must fork the OSI repositories and contribute their changes via pull request.
+External contributors must fork the OSI repositories and contribute their changes via a pull request.
 
 **Prerequisites**
 
