@@ -2,18 +2,18 @@
 = Terms and definitions
 
 //Writing style adopted from https://www.iso.org/glossary.html
-CS (Co-Simulation)::
+CS (co-simulation)::
 Type of Functional Mockup Unit (FMU). +
-Co-Simulation FMUs contain their own numerical solver.
-The importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed.
+Co-simulation FMUs contain their own numerical solver.
+This importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed.
 With OSMP, models are packaged as valid _FMI-2.0 FMU for co-simulation_ +
 +
 See also: https://www.modelon.com/functional-mock-up-interface-fmi/
 
 Ego vehicle::
 Externally controlled vehicle used for scenario descriptions. +
-For evaluation of automated driving systems, the Ego vehicle is the vehicle that is controlled by the system-under-test.
-For human-driver experiments, the Ego vehicle is the vehicle that is driven by the human driver.
+For evaluation of automated driving systems, the ego vehicle is the vehicle that is controlled by the system-under-test.
+For human-driver experiments, the ego vehicle is the vehicle that is driven by the human driver.
 
 Environmental effect model::
 //TODO: input needed
@@ -41,7 +41,7 @@ It is based on data available to the simulation environment.
 Logical model::
 //TODO: input required from working group
 Examples:
-- Sensor-fusion model: combines the output of multiple sensor models to produce data with less uncertainty
+- Sensor-fusion model: Combines the output of multiple sensor models to produce data with less uncertainty
 - Fault-injection model which, contrary to a sensor-fusion model, may be used to increase uncertainties
 
 Object coordinate system::
@@ -71,11 +71,11 @@ Information set that is derived from ground truth and used as input to sensor mo
 
 Traffic participant::
 Represents one of the following:
-- A living being.
-- A means of transportation for living beings or goods.
+- Living being.
+- Means of transportation for living beings or goods.
 - Any other movable object that travels the road network.
 
-A traffic participant is an element of the simulated world that can change its state during simulation time, for example, position and orientation.
+A traffic participant is an element of the simulated world and can change its state during simulation time, for example, its position and orientation.
 
 Traffic participant model::
 //TODO: input needed
