@@ -1,15 +1,15 @@
-= Relations to other standards
+= Relationships with other standards
 
 == Positioning of Open Simulation Interface within ASAM activities
 
-OSI is part of the ASAM simulation standards that focus on simulation data for the automotive environment.
-Next to OSI, ASAM provides other standards for the simulation domain, like OpenDRIVE, OpenSCENARIO and OpenCRG.
+{THIS_STANDARD} is part of the ASAM simulation standards that focus on simulation data for the automotive environment.
+Next to {THIS_STANDARD}, ASAM provides other standards for the simulation domain, such as OpenDRIVE, OpenSCENARIO and OpenCRG.
 
 OpenDRIVE defines a storage format for the static description of road networks.
 In combination with OpenCRG it is possible to add very detailed road surface descriptions to the road network.
 OpenDRIVE and OpenCRG only contain static content.
-To add dynamic content OpenSCENARIO is needed.
-All three standards combined provide a scenario-driven description of traffic simulation that contains static and dynamic content.
+To add dynamic content, OpenSCENARIO is needed.
+Combining all three standards provides a scenario-driven description of traffic simulation that contains static and dynamic content.
 
 == References to other standards
 

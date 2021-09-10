@@ -1,13 +1,14 @@
 = Review guidelines for authors
 
 Code review enhances the quality of the code and reduces the likelihood of introducing new bugs in the code base.
-Reviewing code is a technical discussion, it is not an exam, but it is a common effort to learn from each other.
+Reviewing code is a technical discussion, not an exam.
+It is a common effort to learn from each other.
 
-Before asking for review, make sure your changes meet the following requirements:
+Before asking for a review, make sure your changes meet the following requirements:
 
-* The code is readable and easy to understand.
-* The code does not contain commented-out lines and deprecated comments.
-* The code contains helpful comments to be used in the reference documentation.
+* Code is readable and easy to understand.
+* Code does not contain commented-out lines and deprecated comments.
+* Code contains helpful comments to be used in the reference documentation.
 * Variable and function names follow the naming convention.
 * Commit messages are meaningful and follow the convention.
 * All commits are signed off.
