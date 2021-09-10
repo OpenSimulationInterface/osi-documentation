@@ -34,7 +34,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/osi-sensor-model-packaging
-        ref: migration # This has to be change once the PR is closed
         path: osi-sensor-model-packaging
 
     - name: Checkout proto2cpp
