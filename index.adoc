@@ -21,7 +21,8 @@ include::{asciidoc-resources}/preamble.adoc[]
 
 :imagesoutdir: ./images/generated_images
 
-// :bibtex-file: Tables_and_Bibliography/bibliography.bib // add when needed
+// attention: bibtex requires pathing relative to asciidoc command, not main.adoc!
+:bibtex-file: ./general_docs/bibliography.bib
 
 
 
@@ -106,8 +107,11 @@ include::./contributing/review_author.adoc[leveloffset=+3]
 
 include::./contributing/review_reviewer.adoc[leveloffset=+3]
 
-// 
 
 //include::./general_docs/glossary.adoc[leveloffset=+1]
 
-//include::./general_docs/bibliography.adoc[leveloffset=+1]
+
+
+[bibliography]
+=== Bibliography
+bibliography::[]

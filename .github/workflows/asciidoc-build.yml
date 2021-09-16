@@ -61,7 +61,7 @@ jobs:
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
-        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
     # Upload artifact. This will change to publishing to gh-pages in the future.
     - name: Upload HTML Artifact
