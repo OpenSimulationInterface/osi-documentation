@@ -80,10 +80,9 @@ A traffic participant is an element of the simulated world and can change its st
 Traffic participant model::
 //TODO: input needed
 
-World coordinate system::
+Global coordinate system::
 Coordinate system for all entities that are part of ground truth.
-The world coordinate system is an inertial x/y/z-coordinate system.
+The global coordinate system is an inertial x/y/z-coordinate system.
 The origin is the global reference point that is determined by the environment simulation.
 This reference point may be derived from map data or other considerations.
 
-//TODO: Question: difference between World coordinate system and Global coordinate system?
