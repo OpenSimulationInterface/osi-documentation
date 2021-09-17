@@ -16,7 +16,6 @@ For evaluation of automated driving systems, the ego vehicle is the vehicle that
 For human-driver experiments, the ego vehicle is the vehicle that is driven by the human driver.
 
 Environmental effect model::
-//TODO: input needed
 Information set that deals with effects and phenomena caused by, for example, shadows and occlusions, weather effects, the physics of a sensor, or the pre-processing of raw sensor data.
 An environmental effect model has a sensor-view message as input, which comes from the environment simulation, and a sensor-view message as output.
 The output is sent to the sensor model.
@@ -39,7 +38,8 @@ Information set that describes the whole simulated environment around any simula
 It is based on data available to the simulation environment.
 
 Logical model::
-//TODO: input required from working group
+Logical models consume sensor-data messages and produce sensor-data messages
+
 Examples:
 - Sensor-fusion model: Combines the output of multiple sensor models to produce data with less uncertainty
 - Fault-injection model which, contrary to a sensor-fusion model, may be used to increase uncertainties
@@ -78,12 +78,11 @@ Represents one of the following:
 A traffic participant is an element of the simulated world and can change its state during simulation time, for example, its position and orientation.
 
 Traffic participant model::
-//TODO: input needed
+The traffic participant model makes decisions how to change position, orientation, and other states of the dedicated moving object.
+To do this, it reacts on input given by `SensorView` and `TrafficCommand` resulting in `TrafficUpdate` as output.
 
 World coordinate system::
 Coordinate system for all entities that are part of ground truth.
 The world coordinate system is an inertial x/y/z-coordinate system.
 The origin is the global reference point that is determined by the environment simulation.
 This reference point may be derived from map data or other considerations.
-
-//TODO: Question: difference between World coordinate system and Global coordinate system?
