@@ -4,7 +4,7 @@
 
 In this document, the following conventions apply:
 
-``data types`` are given according to IEEE 754 cite:[IEEE_754-2019].
+``data types`` conform to IEEE 754 cite:[IEEE_754-2019].
 
 == Units
 
@@ -17,8 +17,8 @@ Unless stated otherwise, all numeric values within this specification are in SI 
 
 Geographic positions are stated in the unit defined by the spatial coordinate system, for example, in accordance with WGS 84 – EPSG 4326.
 
-Some data elements allow you to explicitly state the unit of a given value.
-If the unit is not given or if there is no means to state the unit, SI units apply.
+With some data elements, it is possible to explicitly state the unit of a given value.
+If the unit is not given or if there is no means of stating the unit, SI units apply.
 The following units may be used in explicit assignments:
 
 .Units
@@ -37,7 +37,7 @@ The following units may be used in explicit assignments:
 |slope       |percent             |%
 |===
 
-These optional units shall be used for purposes of signage and speed indication only.
+These optional units shall be used only for the purposes of signage and speed indication.
 They shall not be used as general units, for example, to define road geometry, etc.
 
 [#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
@@ -57,7 +57,7 @@ Requirements shall be followed strictly in order to be conform to the standard. 
 shall not
 
 |*Recommendation* +
-Recommendations indicate that among several possibilities, one is recommended as particularly suitable, without mentioning or excluding others.
+Recommendations indicate that one possibility out of the several available is particularly suitable, without mentioning or excluding the other possibilities.
 |should +
 should not
 
@@ -67,12 +67,12 @@ Permissions indicate a course of action permissible within the limits of {THIS_S
 need not
 
 |*Possibility and capability* +
-These verbal forms are used for stating possibilities or capabilities, being technical, material, physical, or others.
+Verbal forms used to state possibilities or capabilities, whether technical, material, physical, etc.
 |can +
 can not
 
 |*Obligation and necessity* +
-These verbal forms are used to describe legal, organizational, or technical obligations and necessities that are not regulated or enforced by the {THIS_STANDARD} standard.
+Verbal forms used to describe legal, organizational, or technical obligations and necessities that are not regulated or enforced by the {THIS_STANDARD} standard.
 |must +
 must not
 |===

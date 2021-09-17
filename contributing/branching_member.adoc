@@ -19,10 +19,10 @@ Members of the OSI project can contribute to the ASAM OSI repositories directly.
   If possible, add references to corresponding issues and appropriate labels.
 . Ask reviewers to review your changes.
 . When discussions about the changes are done, add the _ReadyForCCBReview_ label.
-  Pull request with this label will be discussed in the next meeting of the _Change Control Board_.
-. When the Change Control Board approves of the changes, the pull request is labelled as _ReadyToMerge_.
+  Pull request with this label will be discussed at the next meeting of the _Change Control Board_.
+. When the Change Control Board approves the changes, the pull request is labelled as _ReadyToMerge_.
 This label indicates that the changes in the pull request can be merged.
-. Merge the changes into the master branch of the repository.
+. Merge the changes into the repository's master branch.
 
 **Related topics**
 
