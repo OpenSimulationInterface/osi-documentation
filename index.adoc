@@ -112,6 +112,8 @@ include::./contributing/review_reviewer.adoc[leveloffset=+3]
 
 
 
+
+
 [bibliography]
-=== Bibliography
+== Bibliography
 bibliography::[]
