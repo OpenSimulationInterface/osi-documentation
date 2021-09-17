@@ -6,7 +6,7 @@ open-simulation-interface:: Main repository containing the interface description
 
 osi-documentation:: Source of the OSI user guide.
 
-osi-sensor-model-packaging:: Packaging specification for OSI models used in FMI 2.0 simulation environments, including examples.
+osi-sensor-model-packaging:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
 osi-validation:: Source code and documentation of the OSI Validator, a CLI tool for validating OSI messages.
 
