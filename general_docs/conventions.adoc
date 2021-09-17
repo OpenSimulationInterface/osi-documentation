@@ -4,7 +4,7 @@
 
 In this document, the following conventions apply:
 
-``data types`` are given according to IEEE 754.
+``data types`` are given according to IEEE 754 cite:[IEEE_754-2019].
 
 == Units
 

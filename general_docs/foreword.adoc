@@ -9,8 +9,8 @@ Testing in virtual environments allows to control and reproduce environment cond
 
 To enable widespread use of driving simulators for function developers, the connection between the function-development framework and the simulation environment needs generic and standardized interfaces.
 An easy and straight-forward compatibility between automated driving functions and the variety of available driving-simulation frameworks is made possible by OSI.
-OSI addresses the emerging standard ISO 23150 for real sensors’ standardized communication interface.
+OSI addresses the emerging standard ISO 23150 cite:[iso23150] for real sensors’ standardized communication interface.
 OSI defines generic interfaces to ensure modularity, integrability, and interchangeability of the individual components.
 
-The vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations using a standardized ISO 23150 interface.
+The vision is to be able to connect any automated driving function to any driving simulator and emerging new hardware sensor generations using a standardized ISO 23150 cite:[iso23150] interface.
 This will simplify integration and thus significantly strengthen the accessibility and usefulness of virtual testing.
