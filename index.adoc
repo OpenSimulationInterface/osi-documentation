@@ -1,5 +1,5 @@
 
-:THIS_STANDARD: ASAM OpenSimulationInterface
+:THIS_STANDARD: ASAM OSI®
 
 :asciidoc-resources: ./asciidoc-resources
 include::{asciidoc-resources}/preamble.adoc[]
@@ -29,7 +29,7 @@ include::{asciidoc-resources}/preamble.adoc[]
 
 
 
-= {THIS_STANDARD}
+= {THIS_STANDARD} (Open Simulation Interface)
 
 [IMPORTANT]
 .Disclaimer
