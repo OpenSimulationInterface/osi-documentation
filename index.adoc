@@ -64,7 +64,8 @@ include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[l
 
 // include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
 
-include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
+// proto2cpp is an tooling that is internally used to create the DOXYGEN documentation. It doc shall not the part of the OSI specification.
+// include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
 
 // END: including the documentation of other osi repositories
 
