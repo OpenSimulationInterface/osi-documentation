@@ -18,6 +18,7 @@ Follow these steps when creating comments on messages to keep the documentation 
 
 **Example**
 
+[source,protobuf,linenums]
 ----
 // \brief The conditions of the environment.
 //

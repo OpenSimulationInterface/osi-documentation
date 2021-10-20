@@ -7,7 +7,6 @@ However, you should always follow these guidelines to help other people understa
 
 Commit messages shall have the following structure:
 
-[source]
 ----
 <type>[optional scope]: <description>
 
@@ -63,7 +62,6 @@ This note starts with `BREAKING CHANGES:` followed by a concise description of w
 
 The following example shows a commit message meeting all requirements:
 
-[source]
 ----
 feat(model): Prevent empty StopTriggers
 

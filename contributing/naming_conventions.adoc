@@ -5,6 +5,7 @@ These conventions ensure that message definitions and the corresponding classes 
 
 Message names shall use _PascalCase_.
 
+[source,protobuf,linenums]
 ----
 message EnvironmentalConditions
 {
@@ -13,6 +14,7 @@ message EnvironmentalConditions
 
 Message field names shall use _snake_case_.
 
+[source,protobuf,linenums]
 ----
 message EnvironmentalConditions
 {
@@ -22,6 +24,7 @@ message EnvironmentalConditions
 
 Enum names shall use _PascalCase_.
 
+[source,protobuf,linenums]
 ----
 message EnvironmentalConditions
 {
@@ -38,6 +41,7 @@ Enum fields shall always be prefixed with the name of the corresponding enum.
 The first enum field shall always use the suffix _UNKNOWN_.
 The second enum field shall always use the suffix _OTHER_.
 
+[source,protobuf,linenums]
 ----
 message EnvironmentalConditions
 {
