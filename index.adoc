@@ -10,6 +10,9 @@ include::{asciidoc-resources}/preamble.adoc[]
 :topicdir: topics
 :reusedir: reuse
 
+// as decided in the project
+:toclevels: 3
+
 //embed images into html
 :imagesdir: .
 // Since a document spanning multiple repos is rendered here, the pathing regarding images is a bit involved.
