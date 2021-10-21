@@ -1,5 +1,8 @@
 = ASAM OSI repositories
 
+{THIS_STANDARD} is an open-source standardization project.
+OSI and its supporting tools are developed publicly on GitHub.
+
 The source code and documentation for OSI and OSI-related tools are spread over several repositories.
 
 open-simulation-interface:: Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.

@@ -4,41 +4,10 @@
 
 In this document, the following conventions apply:
 
-``data types`` conform to IEEE 754 cite:[IEEE_754-2019].
-
 == Units
 
-Unless stated otherwise, all numeric values within this specification are in SI units, for example:
-
-* position/distance	in [m]
-* angles in [rad]
-* time in [s]
-* speed in [m/s]
-
-Geographic positions are stated in the unit defined by the spatial coordinate system, for example, in accordance with WGS 84 – EPSG 4326.
-
-With some data elements, it is possible to explicitly state the unit of a given value.
-If the unit is not given or if there is no means of stating the unit, SI units apply.
-The following units may be used in explicit assignments:
-
-.Units
-[%header, cols=3*]
-|===
-|Category    |Description         |Identifier
-.4+|distance |meter               |m
-             |kilometer           |km
-             |feet                |ft
-             |land mile           |mile
-.3+|speed    |meters per second   |m/s
-             |miles per hour      |mph
-             |kilometers per hour |km/h
-.2+|mass     |kilogram            |kg
-             |metric tons         |t
-|slope       |percent             |%
-|===
-
-These optional units shall be used only for the purposes of signage and speed indication.
-They shall not be used as general units, for example, to define road geometry, etc.
+Every field has its own unit that is defined in the proto files.
+For more information, see <<_commenting_on_fields_and_enums, the example in the contribution guidelines.>>)
 
 [#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
 == Modal verbs
@@ -69,7 +38,7 @@ need not
 |*Possibility and capability* +
 Verbal forms used to state possibilities or capabilities, whether technical, material, physical, etc.
 |can +
-can not
+cannot
 
 |*Obligation and necessity* +
 Verbal forms used to describe legal, organizational, or technical obligations and necessities that are not regulated or enforced by the {THIS_STANDARD} standard.

@@ -48,6 +48,8 @@ include::./general_docs/foreword.adoc[leveloffset=+1]
 
 == Introduction
 
+include::./general_docs/osi_repos.adoc[leveloffset=+2]
+
 include::./general_docs/statements.adoc[leveloffset=+2]
 
 include::./general_docs/conventions.adoc[leveloffset=+2]
@@ -73,8 +75,6 @@ include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[l
 == Contributing to ASAM OSI
 
 include::./contributing/start_contributing.adoc[leveloffset=+2]
-
-include::./contributing/osi_repos.adoc[leveloffset=+2]
 
 include::./contributing/reporting_issues.adoc[leveloffset=+2]
 
