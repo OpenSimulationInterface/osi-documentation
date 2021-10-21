@@ -12,6 +12,7 @@ include::{asciidoc-resources}/preamble.adoc[]
 
 // as decided in the project
 :toclevels: 3
+:xrefstyle: full
 
 //embed images into html
 :imagesdir: .
