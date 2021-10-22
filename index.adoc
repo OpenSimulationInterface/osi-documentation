@@ -48,6 +48,8 @@ include::./general_docs/foreword.adoc[leveloffset=+1]
 
 == Introduction
 
+include::./general_docs/deliverables.adoc[leveloffset=+2]
+
 include::./general_docs/osi_repos.adoc[leveloffset=+2]
 
 include::./general_docs/statements.adoc[leveloffset=+2]

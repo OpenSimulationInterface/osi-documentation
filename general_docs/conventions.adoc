@@ -1,13 +1,9 @@
 = Conventions
 
-== Naming Conventions
-
-In this document, the following conventions apply:
-
 == Units
 
 Every field has its own unit that is defined in the proto files.
-For more information, see <<_commenting_on_fields_and_enums, the example in the contribution guidelines.>>)
+For more information, see <<_commenting_on_fields_and_enums, the example in the contribution guidelines.>>
 
 [#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
 == Modal verbs
