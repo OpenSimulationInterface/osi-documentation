@@ -17,7 +17,7 @@ For human-driver experiments, the ego vehicle is the vehicle that is driven by t
 
 Environmental effect model::
 Information set that deals with effects and phenomena caused by, for example, shadows and occlusions, weather effects, the physics of a sensor, or the pre-processing of raw sensor data.
-An environmental effect model has a sensor-view message as input, which comes from the environment simulation, and a sensor-view message as output.
+An environmental effect model has a `SensorView` message as input, which comes from the environment simulation, and a `SensorView` message as output.
 The output is sent to the sensor model.
 
 FMI (Functional Mockup Interface)::
@@ -38,7 +38,7 @@ Information set that describes the whole simulated environment around any simula
 It is based on data available to the simulation environment.
 
 Logical model::
-Logical models consume sensor-data messages and produce sensor-data messages.
+Logical models consume `SensorData` messages and produce `SensorData` messages.
 
 Examples:
 - Sensor-fusion model: Combines the output of multiple sensor models to produce data with less uncertainty
@@ -61,10 +61,9 @@ Coordinate system for all entities that are part of sensor data.
 The origin is the mounting position of the physical sensor or a virtual mounting position, depending on the OSI message.
 
 Sensor model::
-//TODO: research definition
 Simulation of a real sensor.
-Sensor models consume sensor-view messages and produce sensor-data messages.
-Sensor-model output does not represent raw data but detected features or classified objects.
+Sensor models consume `SensorView` messages and produce `SensorData` messages.
+Sensor model output does not represent raw data but detected features or classified objects.
 
 Sensor view::
 Information set that is derived from ground truth and used as input to sensor models.
