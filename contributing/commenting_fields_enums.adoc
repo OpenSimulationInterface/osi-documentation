@@ -56,5 +56,4 @@ message EnvironmentalConditions
 
 **Related topics**
 
-- <<_writing_custom_rules>>
 - <<_guidelines_for_creating_literary_references>>

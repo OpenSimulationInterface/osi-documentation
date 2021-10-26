@@ -56,6 +56,8 @@ include::./general_docs/statements.adoc[leveloffset=+2]
 
 include::./general_docs/conventions.adoc[leveloffset=+2]
 
+include::./general_docs/versioning.adoc[leveloffset=+2]
+
 include::./general_standard/relations_to_other_standards.adoc[leveloffset=+2]
 
 // START: including the documentation of other osi repositories

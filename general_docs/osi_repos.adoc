@@ -1,4 +1,4 @@
-= ASAM OSI repositories
+= {THIS_STANDARD} repositories
 
 {THIS_STANDARD} is an open-source standardization project.
 OSI and its supporting tools are developed publicly on GitHub.
