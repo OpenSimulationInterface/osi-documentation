@@ -128,8 +128,7 @@ bibliography::[]
 
 [appendix]
 == Release Notes
-// :toclevels: 1
-// toc::[]
+:sectnums!:
 
 include::./appendix/releases/v02.00.adoc[leveloffset=+2]
 
