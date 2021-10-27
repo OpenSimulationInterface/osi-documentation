@@ -2,13 +2,13 @@
 = Terms and definitions
 
 //Writing style adopted from https://www.iso.org/glossary.html
-CS (co-simulation)::
+Co-simulation::
 Type of Functional Mockup Unit (FMU). +
 Co-simulation FMUs contain their own numerical solver.
 This importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed.
-With OSMP, models are packaged as valid _FMI-2.0 FMU for co-simulation_ +
+With OSMP, models are packaged as valid _FMI-2.0 FMU for co-simulation_. +
 +
-See also: https://www.modelon.com/functional-mock-up-interface-fmi/
+See also: https://fmi-standard.org/
 
 Ego vehicle::
 Externally controlled vehicle used for scenario descriptions. +
@@ -27,13 +27,11 @@ See also: https://fmi-standard.org/
 
 FMU (Functional Mockup Unit)::
 
-Simulation model that adheres to the FMI standard.
-There are two different kinds of FMU that both adhere to the FMI standard: Model Exchange (ME) and Co-Simulation (CS).
-An FMU is distributed in a ZIP file with the file extension _.fmu_. +
+Simulation model that adheres to the FMI standard. +
 +
-See also: https://www.modelon.com/functional-mock-up-interface-fmi/
+See also: https://fmi-standard.org/
 
-Ground truth::
+GroundTruth::
 Information set that describes the whole simulated environment around any simulated vehicle.
 It is based on data available to the simulation environment.
 
@@ -57,27 +55,19 @@ OSMP (OSI Sensor Model Packaging)::
 Specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0).
 
 Sensor coordinate system::
-Coordinate system for all entities that are part of sensor data.
+Coordinate system for all entities that are part of `SensorData`.
 The origin is the mounting position of the physical sensor or a virtual mounting position, depending on the OSI message.
 
 Sensor model::
-Simulation of a real sensor.
+Within OSI, a sensor model refers to the part of a sensor system model that includes processing algorithms at an object detection level.
 Sensor models consume `SensorView` messages and produce `SensorData` messages.
 Sensor model output does not represent raw data but detected features or classified objects.
 
-Sensor view::
-Information set that is derived from ground truth and used as input to sensor models.
-
-Traffic participant::
-Represents one of the following:
-- Living being.
-- Means of transportation for living beings or goods.
-- Any other movable object that travels the road network.
-
-A traffic participant is an element of the simulated world and can change its state during simulation time, for example, its position and orientation.
+SensorView::
+Information set that is derived from ground truth and used as input to sensor models, environmental effect models, or traffic participant models.
 
 Traffic participant model::
-The traffic participant model makes decisions how to change position, orientation, and other states of the dedicated moving object.
+It models the dynamic behavior of moving objects by deciding how to change position, orientation, and other states of the dedicated moving object.
 To do this, it reacts on input given by `SensorView` and `TrafficCommand` resulting in `TrafficUpdate` as output.
 
 Global coordinate system::
@@ -85,4 +75,3 @@ Coordinate system for all entities that are part of ground truth.
 The global coordinate system is an inertial x/y/z-coordinate system.
 The origin is the global reference point that is determined by the environment simulation.
 This reference point may be derived from map data or other considerations.
-
