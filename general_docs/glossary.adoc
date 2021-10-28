@@ -1,12 +1,77 @@
+[glossary]
 = Terms and definitions
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Et malesuada fames ac turpis egestas.
-Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-Nulla facilisi morbi tempus iaculis urna id.
-Justo eget magna fermentum iaculis.
-Sed augue lacus viverra vitae congue eu.
-Velit ut tortor pretium viverra suspendisse.
-Amet commodo nulla facilisi nullam vehicula ipsum a.
-Nibh nisl condimentum id venenatis a.
-Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.
+//Writing style adopted from https://www.iso.org/glossary.html
+Co-simulation::
+Type of Functional Mockup Unit (FMU). +
+Co-simulation FMUs contain their own numerical solver.
+This importing tool sets the FMU inputs, asks the FMU to step forward a given time, and reads the FMU output after the step is completed.
+With OSMP, models are packaged as valid _FMI-2.0 FMU for co-simulation_. +
++
+See also: https://fmi-standard.org/
+
+Ego vehicle::
+Externally controlled vehicle used for scenario descriptions. +
+For evaluation of automated driving systems, the ego vehicle is the vehicle that is controlled by the system-under-test.
+For human-driver experiments, the ego vehicle is the vehicle that is driven by the human driver.
+
+Environmental effect model::
+Information set that deals with effects and phenomena caused by, for example, shadows and occlusions, weather effects, the physics of a sensor, or the pre-processing of raw sensor data.
+An environmental effect model has a `SensorView` message as input, which comes from the environment simulation, and a `SensorView` message as output.
+The output is sent to the sensor model.
+
+FMI (Functional Mockup Interface)::
+Free standard that defines a container and an interface to exchange dynamic models using a combination of XML files, binaries, and C code zipped into a single file. +
++
+See also: https://fmi-standard.org/
+
+FMU (Functional Mockup Unit)::
+
+Simulation model that adheres to the FMI standard. +
++
+See also: https://fmi-standard.org/
+
+GroundTruth::
+Information set that describes the whole simulated environment around any simulated vehicle.
+It is based on data available to the simulation environment.
+
+Logical model::
+Logical models consume `SensorData` messages and produce `SensorData` messages.
+
+Examples:
+- Sensor-fusion model: Combines the output of multiple sensor models to produce data with less uncertainty
+- Fault-injection model which, contrary to a sensor-fusion model, may be used to increase uncertainties
+
+Object coordinate system::
+Local coordinate system whose origin may be identical to the center of the object's bounding box.
+If the origin is not identical to the center of the object's bounding box, the object documentation provides the actual definition.
+
+OSI (Open Simulation Interface)::
+Specification for interfaces between models and components of a distributed simulation.
+OSI has a strong focus on environmental perception of automated driving functions.
+It also specifies interfaces for modeling traffic participants.
+
+OSMP (OSI Sensor Model Packaging)::
+Specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0).
+
+Sensor coordinate system::
+Coordinate system for all entities that are part of `SensorData`.
+The origin is the mounting position of the physical sensor or a virtual mounting position, depending on the OSI message.
+
+Sensor model::
+From OSI's perspective, a sensor model refers to the part of a sensor system model that includes processing algorithms at an object detection level.
+Sensor models consume `SensorView` messages and produce `SensorData` messages.
+Sensor model output does not represent raw data but detected features or classified objects.
+
+SensorView::
+Information set that is derived from ground truth and used as input to sensor models, environmental effect models, or traffic participant models.
+
+Traffic participant model::
+Information set that models the dynamic behavior of moving objects by deciding how to change position, orientation, and other states of the dedicated moving object.
+To do this, it reacts on input given by `SensorView` and `TrafficCommand` resulting in `TrafficUpdate` as output.
+
+Global coordinate system::
+Coordinate system for all entities that are part of ground truth.
+The global coordinate system is an inertial x/y/z-coordinate system.
+The origin is the global reference point that is determined by the environment simulation.
+This reference point may be derived from map data or other considerations.
