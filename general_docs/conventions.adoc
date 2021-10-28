@@ -51,6 +51,7 @@ This documentation uses the following typographical conventions:
 |===
 |Mark-up                          |Definition
 |`Code elements`                  |This format is used for code elements, such as technical names of classes and attributes, as well as attribute values.
+| Technical concepts              |This format is used for technical concepts. Technical concepts as opposed to code elements do not have a special highlighting.
 |```[blue]#Code snippets#```      |This format is used for excerpts of code that serve as an example for implementation.
 |_Terms_                          |This format is used to introduce glossary terms, new terms and to emphasize terms.
 |`[green]#Mathematical elements#` |This format is used for calculations and mathematical elements.
