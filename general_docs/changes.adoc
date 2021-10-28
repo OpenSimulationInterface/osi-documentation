@@ -1,0 +1,22 @@
+= What has changed
+
+
+Documentation Updates::
+- Updated the documentation's structure and migrated it to AsciiDoc.
+- Updated the description of OSI's top level messages.
+- Updates on additional descriptions, like those for trace file formats, naming conventions and installation instructions for Linux/Windows.
+
+Technical Updates::
+- Extended SensorViewConfiguration message to allow the consumer to choose to not include static content in the SensorView ground truth information.
+- Updated StationaryObject classification enums to avoid "pylon" duplication.
+- Extended StationaryObject classification message to include speed bumps.
+- Extended StationaryObject to include emitting structures of electromagnetic waves (for example this can be used to define a streetlamp).
+- Extended the TrafficSign classification message, by adding attributes country, country_revision, code and sub_code, to better support internationalization and to align with ASAM OpenDRIVE.
+- Updated the color coding message description to better align with ASAM OpenDRIVE.
+- Update the color coding message description to include Grey, RGB, RGBIR, HSV, LUV and thus align with ISO-23150.
+- Added an enum for dashed lane boundaries to disambiguate start and end of those.
+- Extended HostVehcileData with more comprehensive on-board information, and promoted the message to a top-level message for exchange between simulation environments and (external) dynamic models.
+- Extended LidarDetection message under feature data to include echo pulse width information to better support several sensor outputs that are currently on the market.
+- Extended OSI to include a generic external reference message to enable traceability for data from other standards, including other ASAM OpenX standards.
+- Added support for using OSI with Flatbuffers encoding for OSI messages instead of ProtoBuffers, in preparation for a potential switch of default encoding in a future major release.
+- Extended LaneBoundary message to include additional types, to better align with ASAM OpenDRIVE.

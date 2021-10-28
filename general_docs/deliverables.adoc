@@ -1,0 +1,13 @@
+= Deliverables
+
+The following deliverables are provided for {THIS_STANDARD}:
+
+* User guide, that is, this document (partly normative)
+* .proto files (normative)
+* Doxygen reference documentation (not normative)
+* OSMP packaging (OSMP packaging has its own version number, but is compatible with the version of {THIS_STANDARD}.)
+
+**Related topics**
+
+- <<_normative_and_non_normative_statements>>
+- <<top-repositories>>

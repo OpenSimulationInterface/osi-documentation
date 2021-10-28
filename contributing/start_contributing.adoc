@@ -1,8 +1,5 @@
 = Getting started with contributing
 
-{THIS_STANDARD} is an open-source standardization project.
-OSI and its supporting tools are developed publicly on GitHub.
-
 Before you start, familiarize yourself with {THIS_STANDARD} and how to contribute by reading this documentation and the reference documentation of {THIS_STANDARD}.
 
 You should also familiarize yourself with the following topics:
