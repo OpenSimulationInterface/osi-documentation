@@ -1,3 +1,5 @@
+
+[#top-repositories]
 = {THIS_STANDARD} repositories
 
 {THIS_STANDARD} is an open-source standardization project.
@@ -5,10 +7,11 @@ OSI and its supporting tools are developed publicly on GitHub.
 
 The source code and documentation for OSI and OSI-related tools are spread over several repositories:
 
-open-simulation-interface:: Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.
+https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface]::
+Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts. Hosts the .proto files as well as the https://opensimulationinterface.github.io/open-simulation-interface/[Doxygen reference documentation].
 
-osi-documentation:: Source for the OSI user guide.
+https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the OSI user guide sources and hosts the https://opensimulationinterface.github.io/osi-documentation/[{THIS_STANDARD} user guide].
 
-osi-sensor-model-packaging:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
+https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
-proto2cpp:: Doxygen filter for creating the reference documentation from OSI .proto files.
+https://github.com/OpenSimulationInterface/proto2cpp[proto2cpp]:: Doxygen filter for creating the reference documentation from OSI .proto files.
