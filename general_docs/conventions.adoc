@@ -6,41 +6,7 @@ Every field has its own unit that is defined in the proto files.
 For more information, see <<_commenting_on_fields_and_enums, the example in the contribution guidelines.>>
 
 [#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
-== Modal verbs
-
-To ensure compliance with the Open Simulation Interface standard, users need to be able to distinguish between mandatory requirements, recommendations, permissions, as well as possibilities and capabilities.
-
-The following rules for using modal verbs apply:
-
-.Rules for using modal verbs
-[%header, cols=2*]
-|===
-|Provision |Verbal form
-|*Requirement* +
-Requirements shall be followed strictly in order to be conform to the standard. Deviations are not allowed.
-|shall +
-shall not
-
-|*Recommendation* +
-Recommendations indicate that one possibility out of the several available is particularly suitable, without mentioning or excluding the other possibilities.
-|should +
-should not
-
-|*Permission* +
-Permissions indicate a course of action permissible within the limits of {THIS_STANDARD} deliverables.
-|may +
-need not
-
-|*Possibility and capability* +
-Verbal forms used to state possibilities or capabilities, whether technical, material, physical, etc.
-|can +
-cannot
-
-|*Obligation and necessity* +
-Verbal forms used to describe legal, organizational, or technical obligations and necessities that are not regulated or enforced by the {THIS_STANDARD} standard.
-|must +
-must not
-|===
+include::../{asciidoc-resources}/modal_verbs.adoc[leveloffset=+1]
 
 == Typographic conventions
 
