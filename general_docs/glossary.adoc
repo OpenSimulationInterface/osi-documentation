@@ -59,7 +59,7 @@ Coordinate system for all entities that are part of `SensorData`.
 The origin is the mounting position of the physical sensor or a virtual mounting position, depending on the OSI message.
 
 Sensor model::
-Within OSI, a sensor model refers to the part of a sensor system model that includes processing algorithms at an object detection level.
+From OSI's perspective, a sensor model refers to the part of a sensor system model that includes processing algorithms at an object detection level.
 Sensor models consume `SensorView` messages and produce `SensorData` messages.
 Sensor model output does not represent raw data but detected features or classified objects.
 
@@ -67,7 +67,7 @@ SensorView::
 Information set that is derived from ground truth and used as input to sensor models, environmental effect models, or traffic participant models.
 
 Traffic participant model::
-It models the dynamic behavior of moving objects by deciding how to change position, orientation, and other states of the dedicated moving object.
+Information set that models the dynamic behavior of moving objects by deciding how to change position, orientation, and other states of the dedicated moving object.
 To do this, it reacts on input given by `SensorView` and `TrafficCommand` resulting in `TrafficUpdate` as output.
 
 Global coordinate system::
