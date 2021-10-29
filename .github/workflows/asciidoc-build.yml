@@ -29,6 +29,8 @@ jobs:
       with:
         repository: OpenSimulationInterface/open-simulation-interface
         path: open-simulation-interface
+        fetch-depth: 0
+        
 
     - name: Checkout OSI Sensor Model Packaging
       uses: actions/checkout@v2
