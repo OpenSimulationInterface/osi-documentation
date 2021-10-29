@@ -130,17 +130,19 @@ bibliography::[]
 == Release Notes
 :sectnums!:
 
+include::./appendix/releases/v03.04.adoc[leveloffset=+2]
+include::./appendix/releases/v03.03.adoc[leveloffset=+2]
+include::./appendix/releases/v03.02.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.00.adoc[leveloffset=+2]
+include::./appendix/releases/v02.02.adoc[leveloffset=+2]
+include::./appendix/releases/v02.01.adoc[leveloffset=+2]
 include::./appendix/releases/v02.00.adoc[leveloffset=+2]
 
-include::./appendix/releases/v02.01.adoc[leveloffset=+2]
 
-include::./appendix/releases/v02.02.adoc[leveloffset=+2]
 
-include::./appendix/releases/v03.00.adoc[leveloffset=+2]
 
-include::./appendix/releases/v03.01.adoc[leveloffset=+2]
 
-include::./appendix/releases/v03.02.adoc[leveloffset=+2]
 
-include::./appendix/releases/v03.03.adoc[leveloffset=+2]
+
 
