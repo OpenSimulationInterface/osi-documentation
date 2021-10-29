@@ -45,6 +45,7 @@ jobs:
     # Versioning
     - name: Get versioning
       id: get_version
+      working-directory: open-simulation-interface
       run: echo ::set-output name=VERSION::$(git describe --tags --always |  sed 's/^v//')
  
 
