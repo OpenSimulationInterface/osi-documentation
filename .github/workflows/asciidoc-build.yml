@@ -48,14 +48,14 @@ jobs:
     - name: Get versioning
       id: get_version
       working-directory: open-simulation-interface
-      run: echo ::set-output name=VERSION::$(git describe --tags --always |  sed 's/^v//')
+      run: echo ::set-output name=VERSION::$(git describe --always)
  
 
     - name: Apply versioning to Adoc
       uses: jacobtomlinson/gha-find-replace@master
       with: 
         find: ":revnumber: --localbuild--"
-        replace: ":revnumber: ${{ steps.get_version.outputs.VERSION }}"
+        replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
         include: "index.adoc"
 
        
