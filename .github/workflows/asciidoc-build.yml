@@ -29,6 +29,8 @@ jobs:
       with:
         repository: OpenSimulationInterface/open-simulation-interface
         path: open-simulation-interface
+        fetch-depth: 0
+        
 
     - name: Checkout OSI Sensor Model Packaging
       uses: actions/checkout@v2
@@ -45,16 +47,19 @@ jobs:
     # Versioning
     - name: Get versioning
       id: get_version
-      run: echo ::set-output name=VERSION::$(git describe --tags --always |  sed 's/^v//')
+      working-directory: open-simulation-interface
+      run: echo ::set-output name=VERSION::$(git describe --always)
  
 
     - name: Apply versioning to Adoc
       uses: jacobtomlinson/gha-find-replace@master
       with: 
         find: ":revnumber: --localbuild--"
-        replace: ":revnumber: ${{ steps.get_version.outputs.VERSION }}"
+        replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
         include: "index.adoc"
 
+    - name: Remove docdate for online hosted document
+      run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
        
     # run Asciidoctor
     - name: Build HTML
@@ -64,9 +69,22 @@ jobs:
 
     # Upload artifact. This will change to publishing to gh-pages in the future.
     - name: Upload HTML Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
+      if: ${{ github.event_name == 'pull_request' }}
       with:
         name: HTML document
         path: open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html
+        if-no-files-found: error   
 
-    
+    - name: rename file for deploy to gh-page
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      run: | 
+        mkdir html/
+        cp open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html html/index.html
+
+    - name: deploy to gh-pages if push to master branch
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      uses:  peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./html
