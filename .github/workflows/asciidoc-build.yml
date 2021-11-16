@@ -58,6 +58,8 @@ jobs:
         replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
         include: "index.adoc"
 
+    - name: Remove docdate for online hosted document
+      run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
        
     # run Asciidoctor
     - name: Build HTML
