@@ -50,7 +50,6 @@ jobs:
       working-directory: open-simulation-interface
       run: echo ::set-output name=VERSION::$(git describe --always)
  
-
     - name: Apply versioning to Adoc
       uses: jacobtomlinson/gha-find-replace@master
       with: 
@@ -67,7 +66,7 @@ jobs:
       with:
         program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
-    # Upload artifact. This will change to publishing to gh-pages in the future.
+    # Upload artifact. 
     - name: Upload HTML Artifact
       uses: actions/upload-artifact@v2
       if: ${{ github.event_name == 'pull_request' }}
@@ -76,14 +75,15 @@ jobs:
         path: open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html
         if-no-files-found: error   
 
+    # Publish the artifact when pipeline runs on master
     - name: rename file for deploy to gh-page
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      if: ${{ github.ref == 'refs/heads/master' }}
       run: | 
         mkdir html/
         cp open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html html/index.html
 
     - name: deploy to gh-pages if push to master branch
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      if: ${{ github.ref == 'refs/heads/master' }}
       uses:  peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
