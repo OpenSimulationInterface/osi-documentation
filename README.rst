@@ -17,7 +17,24 @@ Pipeline is broken - `OSI Validation`_
 
 |osi_sensor_model_packaging_build| - `OSI Model Packaging`_
 
+How To build and change Documentation locally on Windows
+--------------------------------------------------------
+- Install Docker Desktop
+- Clone this repository with submodules
+- Clone OSI and OSMP with submodules into this folder
+- Check file ``docker-compose.yml`` with the following content:
 
+.. code-block:: yaml
+
+  version: "2"
+  
+  services: 
+  asciidoctor:
+      image: asciidoctor/docker-asciidoctor:1
+      volumes: 
+      - .:/documents
+      working_dir: /documents
+      entrypoint: asciidoctor -D . --failure-level WARN -r asciidoctor-bibtex -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_localbuild.html
 
 .. _Open Simulation Interface: https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/README.html
 .. _OSI Validation: https://opensimulationinterface.github.io/osi-documentation/osi-validation/README.html
