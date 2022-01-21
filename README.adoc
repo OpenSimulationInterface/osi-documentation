@@ -1,0 +1,69 @@
+= OSI Documentation
+
+This repo hosts the asciidoc-based part of the documentation. 
+It contains generals parts of the content and a CI-pipeline that renders the document and deploys it the the https://opensimulationinterface.github.io/osi-documentation/[gh-pages of this repo].
+
+== ASAM OSI (R) official documentation
+
+See the documentation https://opensimulationinterface.github.io/osi-documentation/[here].
+
+
+== Build Pipeline
+
+
+image::https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml/badge.svg[link=https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml]
+
+
+The pipeline collects the documentation from both https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface] and https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging] and integrates it into skeleton of this repo. As with all ASAM asciidoc project the complete document structure is described in the mapping file https://github.com/OpenSimulationInterface/osi-documentation/blob/master/index.adoc[index.adoc].
+
+
+== How To build and change documentation locally
+
+The following instruction shows how to build the document locally. Take note that the document is build with a version 'localbuild' in the document and filename.
+
+The instruction should work on Windows, Linux and MacOS.
+
+. *Precondition*: have docker and docker-compose installed.
++
+TIP: Official installation can be found https://docs.docker.com/get-docker/[here].
+
+. Clone this repository with submodules. 
++
+[source, shell]
+----
+git clone https://github.com/OpenSimulationInterface/osi-documentation.git
+git submodule update --init
+----
+
+. Clone OSI and OSMP with submodules *into* the osi-documentation folder
++
+[source, shell]
+----
+cd osi-documentation
+git clone https://github.com/OpenSimulationInterface/open-simulation-interface.git
+git clone https://github.com/OpenSimulationInterface/osi-sensor-model-packaging.git
+----
+
+. Check file ``docker-compose.yml`` with the following content:
++
+[source, yaml]
+----
+  version: "2"
+  
+  services: 
+  asciidoctor:
+      image: asciidoctor/docker-asciidoctor:1
+      volumes: 
+      - .:/documents
+      working_dir: /documents
+      entrypoint: asciidoctor -D . --failure-level WARN -r asciidoctor-bibtex -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_localbuild.html
+----
+
+. Run 
++
+[source, shell]
+----
+docker-compose run asciidoctor
+----
+
+. *Result*: Document is build as `open-simulation-interface_localbuild.html` in the folder osi-documentation.
