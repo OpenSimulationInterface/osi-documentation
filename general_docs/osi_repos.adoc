@@ -12,6 +12,6 @@ Main repository containing the interface description based on Google's Protocol 
 
 https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the OSI user guide sources and hosts the https://opensimulationinterface.github.io/osi-documentation/[{THIS_STANDARD} user guide].
 
-https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
+https://github.com/OpenSimulationInterface/osi-simulation-model-packaging[osi-simulation-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
 https://github.com/OpenSimulationInterface/proto2cpp[proto2cpp]:: Doxygen filter for creating the reference documentation from OSI .proto files.

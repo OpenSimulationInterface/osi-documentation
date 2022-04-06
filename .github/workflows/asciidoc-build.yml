@@ -32,11 +32,11 @@ jobs:
         fetch-depth: 0
         
 
-    - name: Checkout OSI Sensor Model Packaging
+    - name: Checkout OSI Simulation Model Packaging
       uses: actions/checkout@v2
       with:
-        repository: OpenSimulationInterface/osi-sensor-model-packaging
-        path: osi-sensor-model-packaging
+        repository: OpenSimulationInterface/osi-simulation-model-packaging
+        path: osi-simulation-model-packaging
 
     - name: Checkout proto2cpp
       uses: actions/checkout@v2

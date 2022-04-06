@@ -21,7 +21,7 @@ include::{asciidoc-resources}/preamble.adoc[]
 // If the subrepo is rendered seperatly, then the variable is set to just "./images" with ifdef.
 // Please note that this variable has to used in all image includes. Includes here have to use "image::./images..."
 :images_open_simulation_interface: ./open-simulation-interface/doc/images
-// :images_osi_sensor_model_packaging: ./osi-sensor-model-packaging/doc/images  // example
+// :images_osi_simulation_model_packaging: ./osi-simulation-model-packaging/doc/images  // example
 
 :imagesoutdir: ./images/generated_images
 
@@ -66,7 +66,7 @@ include::./general_standard/relations_to_other_standards.adoc[leveloffset=+2]
 
 include::./open-simulation-interface/doc/open-simulation-interface_user_guide.adoc[leveloffset=+1]
 
-include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
+include::./osi-simulation-model-packaging/doc/osi-simulation-model-packaging_spec.adoc[leveloffset=+1]
 
 // osi-validation and osi-visualizer are considered supplementary tooling that is not normative. They are therefore not part of the ASAM standard release.
 // include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]

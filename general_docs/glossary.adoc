@@ -51,7 +51,7 @@ Specification for interfaces between models and components of a distributed simu
 OSI has a strong focus on environmental perception of automated driving functions.
 It also specifies interfaces for modeling traffic participants.
 
-OSMP (OSI Sensor Model Packaging)::
+OSMP (OSI Simulation Model Packaging)::
 Specifies how models that use Open Simulation Interface (OSI) in simulation environments are packaged in accordance with the Functional Mock-up Interface 2.0 (FMI 2.0).
 
 Sensor coordinate system::
