@@ -804,7 +804,7 @@ th { border-bottom: 1pt solid black; }
 <div id="header">
 <h1>ASAM OSI® (Open Simulation Interface)</h1>
 <div class="details">
-<span id="revnumber">version master (ce35bc3d),</span>
+<span id="revnumber">version master (b2899703),</span>
 <span id="revdate">2022-05-02</span>
 </div>
 <div id="toc" class="toc2">
@@ -1423,18 +1423,50 @@ The following figure shows a more advanced use case for traffic participants.</p
 OSI currently provides only limited support for data structures that describe measured internal states of traffic participants.
 Actuator intentions are currently not covered by OSI and must be handled using a different data description format.</p>
 </div>
-<div class="paragraph">
-<p>All fields in an interface are set to <code>optional</code>.
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+OSI uses singular instead of plural for <code>repeated</code> field names.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All fields in an interface are set to <code>optional</code>.
 <code>required</code> is not used.
-This has been done to allow backward-compatible changes in the field.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This has been done to allow backward-compatible changes in the field.
 Additionally, this is the default behavior in Protocol Buffer version 3 that no longer has the <code>required</code> type.
 Setting all fields to <code>optional</code> thus ensures update compatibility.
 However, this does not mean that it is optional to fill the field.
 For the purpose of providing a complete interface, all existing fields should be set, unless not setting a field carries a specific meaning, as indicated in the accompanying comment.</p>
 </div>
-<div class="paragraph">
-<p>All field numbers equal to or greater than 10000 are available for user-specific extensions via custom fields.
-No future evolution of OSI will therefore use field numbers equal to or greater than 10000.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All field numbers equal to or greater than 10000 are available for user-specific extensions via custom fields.
+No future evolution of OSI will therefore use field numbers equal to or greater than 10000.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -1738,7 +1770,7 @@ OSI&#8217;s limitations regarding dynamics-model input apply in this example as 
 <div class="sect3">
 <h4 id="_coordinate_systems_and_reference_points">2.2.4. Coordinate systems and reference points</h4>
 <div class="sect4">
-<h5 id="_coordinate_systems_and_reference_points_2">Coordinate systems and reference points</h5>
+<h5 id="_coordinate_systems_reference_points_and_coordinate_transformation">Coordinate systems, reference points and coordinate transformation</h5>
 <div class="paragraph">
 <p>OSI uses DIN ISO 8855:2013-11 [<a href="#iso8855">6</a>] for coordinate systems and transformations between coordinate systems.
 OSI uses three coordinate systems:</p>
@@ -1777,6 +1809,87 @@ If the origin of the corresponding coordinate system is not identical to the cen
 <div class="paragraph">
 <p>This section provides an overview of the messages and fields involved and their relationship for this task.
 It demonstrates how a global coordinate system, vehicle coordinate system, and sensor coordinate system are related on the basis of a specific (ego) vehicle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mathematical Definitions of Coordinate Transformations</strong></p>
+</div>
+<div class="paragraph">
+<p>All vectors and matrices are noted with reference frame as a superscript index and the direction of translation as a supscript index. [<a href="#reuper2020">7</a>]
+The translation direction is from the first index to the second index (src: source coordinate system, trg: target coordinate system).
+The vector \(\boldsymbol{v}^x\) denotes the 3D position of an object in the coordinate frame \(x\).
+Vector \(\boldsymbol{t}\) is the translation vector between two coordinate systems with the described indices for reference frame and direction.
+The angles yaw \(\psi\) around the z-axis, pitch \(\theta\) around the y-axis and roll \(\phi\) around the x-axis are defined in a right handed coordinate system according to DIN ISO 8855:2013 [<a href="#iso8855">6</a>].
+The sign of the angles corresponds to the direction of the transformation.</p>
+</div>
+<div class="paragraph">
+<p>Transformation from source \(src\) to target \(trg\) coordinates:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\boldsymbol{v}^{trg} = \boldsymbol{R}_{src}^{trg} (\boldsymbol{v}^{src} - \boldsymbol{t}_{src,trg}^{src})\]
+</div>
+</div>
+<div class="paragraph">
+<p>Transformation back from target \(trg\) to source \(src\) coordinates</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\boldsymbol{v}^{src} = (\boldsymbol{R}_{src}^{trg})^{-1} \boldsymbol{v}^{trg}  + \boldsymbol{t}_{src,trg}^{src}\]
+</div>
+</div>
+<div class="paragraph">
+<p>With the rotation matrix (from rotating the coordinate system) [<a href="#wiki_rotation_matrix">8</a>]:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\boldsymbol{R}_{srv}^{trg}=\boldsymbol{R}_{yaw,pitch,roll} = \boldsymbol{R}_{z,y,x} = \boldsymbol{R}_{x}(\phi) \boldsymbol{R}_{y}(\theta) \boldsymbol{R}_{z}(\psi) \\
+
+\boldsymbol{R}_{z,y,x} =
+\begin{pmatrix}
+1 &amp; 0 &amp; 0\\
+0 &amp; \cos(\phi) &amp; \sin(\phi)\\
+0 &amp; -\sin(\phi) &amp; \cos(\phi)
+\end{pmatrix}
+\begin{pmatrix}
+\cos(\theta) &amp; 0 &amp; -\sin(\theta)\\
+0 &amp; 1 &amp; 0\\
+\sin(\theta) &amp; 0 &amp; \cos(\theta)
+\end{pmatrix}
+\begin{pmatrix}
+\cos(\psi) &amp; \sin(\psi) &amp; 0\\
+-\sin(\psi) &amp; \cos(\psi) &amp; 0\\
+0 &amp; 0 &amp;1
+\end{pmatrix} \\
+
+\boldsymbol{R}_{z,y,x} =
+\begin{pmatrix}
+\cos(\theta)\cos(\psi) &amp; \cos(\theta)\sin(\psi) &amp; -\sin(\theta)\\
+\sin(\phi)\sin(\theta)\cos(\psi)-\cos(\phi)\sin(\psi) &amp; \sin(\phi)\sin(\theta)\sin(\psi)+\cos(\phi)\cos(\psi) &amp; \sin(\phi)\cos(\theta)\\
+\cos(\phi)\sin(\theta)\cos(\psi)+\sin(\phi)\sin(\psi) &amp; \cos(\phi)\sin(\theta)\sin(\psi)-\sin(\phi)\cos(\psi) &amp; \cos(\phi)\cos(\theta)
+\end{pmatrix}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Get Tait–Bryan angles from rotation matrix [<a href="#wiki_euler_angles">9</a>]:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\theta = -\arcsin(R_{13}) \\
+\psi = \arctan2(R_{12}/\cos(\theta),R_{11}/\cos(\theta)) \\
+\phi = \arctan2(R_{23}/\cos(\theta),R_{33}/\cos(\theta))\]
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Relative orientation</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Object rotation Matrix: \(\boldsymbol{R}_{object}^{src}\)<br>
+Host vehicle rotation Matrix: \(\boldsymbol{R}_{ego}^{src}\)<br>
+Resulting rotation matrix between object and host: \(\boldsymbol{R}_{object}^{src}(\boldsymbol{R}_{ego}^{src})^{T}\)<br></p>
+</div>
+<div class="paragraph">
+<p>To transform from world coordinates into vehicle coordinates and back use the formulas from above with the world coordinates frame \(w\) as source system \(src\) and vehicle coordinates frame \(v\) as target system \(trg\).
+To transform from world coordinates into vehicle coordinates and back use the formulas from above with the vehicle coordinates frame \(v\) as source system \(src\) and sensor coordinates frame \(s\) as target system \(trg\).</p>
 </div>
 <div class="paragraph">
 <p><strong>Corresponding messages</strong></p>
@@ -1825,7 +1938,7 @@ The mounting positions of the sensors and therefore the origins of the correspon
 <div class="sect4">
 <h5 id="_data_layer">Data layer</h5>
 <div class="paragraph">
-<p>The OSI data layer is defined in the message specifications using the ProtoBuf IDL [<a href="#protobuf">7</a>].
+<p>The OSI data layer is defined in the message specifications using the ProtoBuf IDL [<a href="#protobuf">10</a>].
 This defines the data that can be transmitted using OSI, including the structure and the semantics of the data.</p>
 </div>
 <div class="paragraph">
@@ -1943,7 +2056,7 @@ These files may be used for manual checks.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp (ISO 8601) [<a href="#iso8601">8</a>]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timestamp (ISO 8601) [<a href="#iso8601">11</a>]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20210818T150542Z</p></td>
 </tr>
 <tr>
@@ -4236,10 +4349,19 @@ This reference point may be derived from map data or other considerations.</p>
 <p><a id="iso8855"></a>[6] <em>DIN ISO 8855:2013-11 Road vehicles - Vehicle dynamics and road-holding ability - Vocabulary</em>. Deutsches Institut für Normung e.V., Berlin, Germany., 2013-11.</p>
 </div>
 <div class="paragraph">
-<p><a id="protobuf"></a>[7] <em>Protocol Buffers.</em> <a href="https://developers.google.com/protocol-buffers/" class="bare">https://developers.google.com/protocol-buffers/</a>., 2008-07.</p>
+<p><a id="reuper2020"></a>[7] <em>Multi-Frequency GNSS Sensor Fusion With Quality Assessment for Automotive Applications.</em> Reuper., 2020.</p>
 </div>
 <div class="paragraph">
-<p><a id="iso8601"></a>[8] <em>ISO 8601:2019 Data elements and interchange formats — Information interchange — Representation of dates and times</em>. International Organization for Standardization, Geneva, Switzerland., 2004-12.</p>
+<p><a id="wiki_rotation_matrix"></a>[8] <em>Rotation Matrix.</em> <a href="https://en.wikipedia.org/wiki/Rotation_matrix" class="bare">https://en.wikipedia.org/wiki/Rotation_matrix</a>., 2022-01.</p>
+</div>
+<div class="paragraph">
+<p><a id="wiki_euler_angles"></a>[9] <em>Protocol Buffers.</em> <a href="https://en.wikipedia.org/wiki/Euler_angles" class="bare">https://en.wikipedia.org/wiki/Euler_angles</a>., 2022-01.</p>
+</div>
+<div class="paragraph">
+<p><a id="protobuf"></a>[10] <em>Protocol Buffers.</em> <a href="https://developers.google.com/protocol-buffers/" class="bare">https://developers.google.com/protocol-buffers/</a>., 2008-07.</p>
+</div>
+<div class="paragraph">
+<p><a id="iso8601"></a>[11] <em>ISO 8601:2019 Data elements and interchange formats — Information interchange — Representation of dates and times</em>. International Organization for Standardization, Geneva, Switzerland., 2004-12.</p>
 </div>
 </div>
 </div>
@@ -4915,7 +5037,7 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
 <div id="footer-text">
 ASAM OSI® (Open Simulation Interface)
 <br/>
-Last updated: 2022-05-02 05:48:29 UTC
+Last updated: 2022-05-02 20:36:38 UTC
 </div>
 </div>
 </body>
