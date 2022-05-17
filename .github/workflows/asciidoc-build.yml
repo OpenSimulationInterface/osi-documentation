@@ -50,18 +50,12 @@ jobs:
       working-directory: open-simulation-interface
       run: echo ::set-output name=VERSION::$(git describe --always)
 
+    # replaces the placeholder for versioning in the main mapping file
     - name: Apply versioning to Adoc
-      # uses: jacobtomlinson/gha-find-replace@master
-      # with:
-      #   find: ":revnumber: --localbuild--"
-      #   replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
-      #   include: "index.adoc"
       run: |
         grep ":revnumber:" index.adoc
         sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" index.adoc
         grep ":revnumber:" index.adoc
-
-
 
     - name: Remove docdate for online hosted document
       run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
