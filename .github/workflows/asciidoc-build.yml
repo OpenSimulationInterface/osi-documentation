@@ -3,16 +3,16 @@ name: AsciiDoc Documentation Build
 on:
   create: # new branches or tags
   release: # new releases
-  pull_request: 
+  pull_request:
     branches: [ master ]
   push: # on push. This may be removed later
   schedule: # periodic - needed because some of the content is from the other repos
     - cron:  '30 5,20 * * *' # this is pretty often. Only needed during review phase
 
-jobs: 
+jobs:
   asciidoctor-build:
     name: Run Asciidoctor on Documentation
-    
+
     runs-on: ubuntu-18.04
 
     steps:
@@ -30,7 +30,7 @@ jobs:
         repository: OpenSimulationInterface/open-simulation-interface
         path: open-simulation-interface
         fetch-depth: 0
-        
+
 
     - name: Checkout OSI Sensor Model Packaging
       uses: actions/checkout@v2
@@ -49,36 +49,42 @@ jobs:
       id: get_version
       working-directory: open-simulation-interface
       run: echo ::set-output name=VERSION::$(git describe --always)
- 
+
     - name: Apply versioning to Adoc
-      uses: jacobtomlinson/gha-find-replace@master
-      with: 
-        find: ":revnumber: --localbuild--"
-        replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
-        include: "index.adoc"
+      # uses: jacobtomlinson/gha-find-replace@master
+      # with:
+      #   find: ":revnumber: --localbuild--"
+      #   replace: ":revnumber: master (${{ steps.get_version.outputs.VERSION }})"
+      #   include: "index.adoc"
+      run: |
+        grep ":revnumber:" index.adoc
+        sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" index.adoc
+        grep ":revnumber:" index.adoc
+
+
 
     - name: Remove docdate for online hosted document
       run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
-       
+
     # run Asciidoctor
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
         program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
-    # Upload artifact. 
+    # Upload artifact.
     - name: Upload HTML Artifact
       uses: actions/upload-artifact@v2
       if: ${{ github.event_name == 'pull_request' }}
       with:
         name: HTML document
         path: open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html
-        if-no-files-found: error   
+        if-no-files-found: error
 
     # Publish the artifact when pipeline runs on master
     - name: rename file for deploy to gh-page
       if: ${{ github.ref == 'refs/heads/master' }}
-      run: | 
+      run: |
         mkdir html/
         cp open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html html/index.html
 
