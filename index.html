@@ -804,7 +804,7 @@ th { border-bottom: 1pt solid black; }
 <div id="header">
 <h1>ASAM OSI® (Open Simulation Interface)</h1>
 <div class="details">
-<span id="revnumber">version master (9f762e33),</span>
+<span id="revnumber">version master (f836f2ac),</span>
 <span id="revdate">2022-05-30</span>
 </div>
 <div id="toc" class="toc2">
@@ -871,7 +871,8 @@ th { border-bottom: 1pt solid black; }
 <li><a href="#_sensor_data_outputs">3.2.8. Sensor data outputs</a></li>
 <li><a href="#_ground_truth_initialization_parameters">3.2.9. Ground truth initialization parameters</a></li>
 <li><a href="#_traffic_command_inputs">3.2.10. Traffic command inputs</a></li>
-<li><a href="#_traffic_update_outputs">3.2.11. Traffic update outputs</a></li>
+<li><a href="#_traffic_command_update_outputs">3.2.11. Traffic command update outputs</a></li>
+<li><a href="#_traffic_update_outputs">3.2.12. Traffic update outputs</a></li>
 </ul>
 </li>
 <li><a href="#_examples">3.3. Examples</a>
@@ -2523,7 +2524,8 @@ It consumes <code>osi3::SensorData</code> as input and produces <code>osi3::Sens
 Traffic participant models may internally use environmental effect models, sensor models, or logical models as part of a modeled autonomous vehicle.
 They may also be used to implement surrounding traffic in simplified ways.
 Traffic participant models consume <code>osi3::SensorView</code> as input and produce <code>osi3::TrafficUpdate</code> as output.
-They may also consume <code>osi3::TrafficCommand</code> as input to allow control by a scenario engine or other coordinating function.</p>
+They may also consume <code>osi3::TrafficCommand</code> as input to allow control by a scenario engine or other coordinating function.
+They may also produce <code>osi3::TrafficCommandUpdate</code> as output to allow status responses to such control messages.</p>
 </dd>
 </dl>
 </div>
@@ -3020,7 +3022,52 @@ This makes it possible to control the traffic participant behavior using scenari
 </div>
 </div>
 <div class="sect3">
-<h4 id="_traffic_update_outputs">3.2.11. Traffic update outputs</h4>
+<h4 id="_traffic_command_update_outputs">3.2.11. Traffic command update outputs</h4>
+<div class="paragraph">
+<p>Traffic command update outputs are present in traffic participant models.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prefix</strong></p>
+</div>
+<div class="paragraph">
+<p>Traffic command update outputs shall be named with the following prefix:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-protobuf hljs" data-lang="protobuf">OSMPTrafficCommandUpdateOut</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Rules</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If only one traffic command update output is configured, the prefix shall only be <code>OSMPTrafficCommandUpdateOut</code>.</p>
+</li>
+<li>
+<p>If more than one traffic command update output is configured, the prefix shall be extended by an array index, for example <code>OSMPTrafficCommandUpdateOut[1]</code> and <code>OSMPTrafficCommandUpdateOut[2]</code>.</p>
+</li>
+<li>
+<p>Array indices shall start at 1 and shall be consecutive.</p>
+</li>
+<li>
+<p>Each traffic command update output shall be defined as a notional discrete binary output variable with a <code>@causality="output"</code> and a <code>@variability="discrete"</code>.</p>
+</li>
+<li>
+<p>The MIME type of the variable shall specify the <code>type=TrafficCommandUpdate</code> as part of the MIME type parameters.</p>
+</li>
+<li>
+<p>Traffic command updates shall be encoded as <code>osi3::TrafficCommandUpdate</code>.</p>
+</li>
+<li>
+<p>The guaranteed lifetime of the traffic command update protocol-buffer pointer provided as output by the FMU shall be from the end of the call to <code>fmi2DoStep</code> that calculated this buffer until the beginning of the second <code>fmi2DoStep</code> call after that.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_traffic_update_outputs">3.2.12. Traffic update outputs</h4>
 <div class="paragraph">
 <p>Traffic update outputs are present in traffic participant models.</p>
 </div>
@@ -5037,7 +5084,7 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
 <div id="footer-text">
 ASAM OSI® (Open Simulation Interface)
 <br/>
-Last updated: 2022-05-30 05:44:29 UTC
+Last updated: 2022-05-30 20:42:01 UTC
 </div>
 </div>
 </body>
