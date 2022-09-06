@@ -11,7 +11,7 @@ Every field has its own unit that is defined in the proto files.
 For more information, see <<top-commenting_on_fields_and_enums, the example in the contribution guidelines.>>
 
 [#sec-273d9649-afab-45d3-b6c9-73c0e64971a0]
-include::../{asciidoc-resources}/modal_verbs.adoc[leveloffset=+1]
+include::{asciidoc-resources}/modal_verbs.adoc[leveloffset=+1]
 
 == Typographic conventions
 

@@ -6,7 +6,7 @@
 ifndef::root-path[:root-path: ./]
 
 :partials-path: {root-path}../_additional_content
-:asciidoc-resources: ../asciidoc-resources
+:asciidoc-resources: {root-path}../asciidoc-resources
 :appendix-caption: Annex
 
 // ifndef::use-antora-rules,include-only-once[]
@@ -52,6 +52,3 @@ endif::[]
 ifdef::env-gitlab[]
 :relfilesuffix: .adoc
 endif::[]
-
-
-:asciidoc-resources: ../0_resources

@@ -20,6 +20,6 @@ Before asking for a review, make sure your changes meet the following requiremen
 
 **Related topics**
 
-- <<_interface_conventions>>
-- <<_guidelines_for_writing_commit_messages>>
-- <<_signing_off_commits>>
+- <<top-interface_conventions>>
+- <<top-guidelines_for_writing_commit_messages>>
+- <<top-signing_off_commits>>

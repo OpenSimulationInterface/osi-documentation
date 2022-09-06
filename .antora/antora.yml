@@ -18,7 +18,6 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
   # START - Mandatory ASAM attributes
     use-antora-rules: true
     THIS_STANDARD: ASAM OSI®
-    asciidoc-resources: general:ROOT:partial$asciidoc-resources
     partials-path: partial$
     root-path: page$
     appendix-caption: Annex
