@@ -1,0 +1,17 @@
+
+:reftext: v2.2.1 - OSI "Brave Brabham", Update 1
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.2.1[{reftext}]
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+*Purpose*
+
+This release focuses on optimizing the build process and ensures the proper installation of different versions of OSI on a single system.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/compare/maintenance/v2.2.x[Content/Changes]*
+
+* Allowing several OSI versions on the same computer.
+* Improves CI builds to also test the installation cmake targets for proper completion.

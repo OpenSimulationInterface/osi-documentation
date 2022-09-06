@@ -1,0 +1,8 @@
+= What has changed
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+include::../appendix/releases/v03.04.adoc[lines=14..50]

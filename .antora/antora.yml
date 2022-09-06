@@ -1,0 +1,45 @@
+# Component name (without spaces!). All content repositories with the same component name are merged in Antora.
+name: asamosi
+# CENTRAL DOCUMENT ONLY!!! Display name of the component. Define only once per component!
+title: ASAM OSI
+version:
+  # Update version number accordingly. This is the version for the main branch
+  main: 'current'
+  v(*): V$1
+  V(*): V$1
+  # Update version number accordingly. This is the version for any other activated branch (branch must be added in the generator site.yml!). Schema = 0.0.x-<branch-name> (only works for branches starting with "feature/")
+  (*): '3.6.0-$1'
+# CENTRAL DOCUMENT ONLY!!! First page of the component. Define only once per component!
+start_page: specification:index.adoc
+
+# THE FOLLOWING MAY ONLY DEFINED FOR THE CENTRAL DOCUMENT!!!
+asciidoc: # Sets global AsciiDoc attributes that are applied for every page of this component (from all repositories with the same version and component name!)
+  attributes:
+  # START - Mandatory ASAM attributes
+    use-antora-rules: true
+    THIS_STANDARD: ASAM OSI®
+    asciidoc-resources: general:ROOT:partial$asciidoc-resources
+    partials-path: partial$
+    root-path: page$
+    appendix-caption: Annex
+    appendix-offset: 1
+    asam-terminology: v0.0.1@ASAM_Terminology:ROOT:partial$terms_and_definitions_opendrive.adoc
+    topicdir: topics
+    reusedir: reuse
+    imagesoutdir: ./images/generated_images
+    images_open_simulation_interface: 'interface:'
+    doc_open_simulation_interface: 'interface:'
+    doc_osi-sensor-model-packaging: 'sensor-model:'
+    # page-download-links: [["opendrive-examples-and-use-cases.zip", "Examples and use cases"],["xsd_schema.zip","XSD schema files"],["ASAM_OpenDRIVE.EAP","Enterprise Architect file"],["example-implementations.zip","Implementation examples"]]
+
+  # END - Mandatory ASAM attributes
+
+nav:
+- modules/specification/nav_introduction.adoc
+- modules/interface/nav.adoc
+- modules/sensor-model/nav.adoc
+- modules/specification/nav_contribution.adoc
+# Add more items here as required.
+# Recommended: One navigation file per document/repository!
+# Recommended: Name your module (folder) as your document type, e.g. "standard" or "concept" or "topic-guidelines"
+# Format: - modules/<module-folder-name>/<navigation-file-name>.adoc

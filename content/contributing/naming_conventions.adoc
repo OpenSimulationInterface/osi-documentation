@@ -1,0 +1,65 @@
+[#top-interface_conventions]
+= Interface conventions
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+OSI messages, enums, field messages, and field enums shall comply with OSI interface conventions.
+These conventions ensure that message definitions and the corresponding classes are consistently named and easy to read.
+
+Message names shall use _PascalCase_.
+
+[source,protobuf,linenums]
+----
+message EnvironmentalConditions
+{
+}
+----
+
+Message field names shall use _snake_case_.
+
+[source,protobuf,linenums]
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+}
+----
+
+Enum names shall use _PascalCase_.
+
+[source,protobuf,linenums]
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+
+    enum AmbientIllumination
+    {
+    }
+}
+----
+
+Enum field names shall use _UPPER_SNAKE_CASE_.
+Enum fields shall always be prefixed with the name of the corresponding enum.
+The first enum field shall always use the suffix _UNKNOWN_.
+The second enum field shall always use the suffix _OTHER_.
+
+[source,protobuf,linenums]
+----
+message EnvironmentalConditions
+{
+    optional double atmospheric_pressure = 1;
+
+    enum AmbientIllumination
+    {
+        AMBIENT_ILLUMINATION_UNKNOWN = 0;
+
+        AMBIENT_ILLUMINATION_OTHER = 1;
+
+        AMBIENT_ILLUMINATION_LEVEL1 = 2;
+    }
+}
+----

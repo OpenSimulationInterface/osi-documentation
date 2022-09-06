@@ -1,0 +1,26 @@
+
+:reftext: v3.0.1 - OSI "Cosmic Coulthard", Update 1
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.0.1[{reftext}]
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+https://www.youtube.com/watch?v=yG0oBPtyNb0[Summertime :)]
+
+*Purpose*
+
+This release is a patch reworking parts of the documentation in order to avoid ambiguities and improving the build/installation process of OSI.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?page=1&q=is%3Apr+is%3Aclosed+milestone%3Av3.0.1[Content/Changes]*
+
+* Added script to automatically convert the messages from proto2 to proto3 with on the wire compatibility
+* cmake enhancements to enable multi-version support of OSI 2 and OSI 3
+* Added Python 3 support
+* Clarification of multiple comments
+* Added explanatory images in the documentation
+* centerline definition improved
+* signal_strength definition in LidarSensorView corrected
+* FeatureData::ambiguity_id definition clarified
+* RadarSensorViewConfiguration::AntennaDiagram::response definition clarified

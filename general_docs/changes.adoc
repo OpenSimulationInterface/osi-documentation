@@ -1,3 +1,0 @@
-= What has changed
-
-include::../appendix/releases/v03.04.adoc[lines=14..50]

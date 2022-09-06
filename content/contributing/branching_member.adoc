@@ -1,0 +1,35 @@
+= Branching workflow for member contributors
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+Members of the OSI project can contribute to the ASAM OSI repositories directly.
+
+**Prerequisites**
+
+- You have a GitHub account.
+- You are a member of the ASAM OSI project.
+
+**Steps**
+
+. Create an issue describing the intended change.
+. Clone the corresponding repository on your local machine.
+. Create a branch with a meaningful name.
+  Follow the branch-name conventions.
+. Commit and push your changes to the branch.
+  Follow the commit messages guidelines.
+. When your changes are ready for review, create a pull request.
+  If possible, add references to corresponding issues and appropriate labels.
+. Ask reviewers to review your changes.
+. When discussions about the changes are done, add the _ReadyForCCBReview_ label.
+  Pull request with this label will be discussed at the next meeting of the _Change Control Board_.
+. When the Change Control Board approves the changes, the pull request is labelled as _ReadyToMerge_.
+This label indicates that the changes in the pull request can be merged.
+. Merge the changes into the repository's master branch.
+
+**Related topics**
+
+- <<top-reporting_issues>>
+- <<top-guidelines_for_contributions>>

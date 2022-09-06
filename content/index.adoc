@@ -1,0 +1,25 @@
+:root-path: ./
+include::{root-path}_config.adoc[]
+= {THIS_STANDARD} (Open Simulation Interface)
+
+[IMPORTANT]
+.Disclaimer
+====
+This document is the copyrighted property of ASAM e.V.
+Any use is limited to the scope described in the https://www.asam.net/license[license terms].
+====
+
+ifndef::use-antora-rules[]
+<<<
+toc::[]
+
+endif::[]
+
+[preface]
+include::./general_docs/foreword.adoc[leveloffset=+1]
+
+
+ifndef::use-antora-rules[]
+
+
+endif::[]

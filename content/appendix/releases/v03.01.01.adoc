@@ -1,0 +1,13 @@
+
+:reftext: v3.1.1 - OSI "Dynamic Duncan", Update 1
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.1[{reftext}]
+
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?q=is%3Apr+is%3Aclosed+milestone%3Av3.1.1[Content/Changes]*
+
+* **Bug Fix**: Changed open_simulation_interface target back from being a static library to a shared library, as before (this reverts an inadvertent change in v3.1.0 from previous releases).
+v3.1.0 breaks all users of the shared library (i.e. everyone building on Linux/Unix systems, and even some using the DLL on Windows).
