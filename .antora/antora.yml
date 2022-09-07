@@ -22,7 +22,7 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
     partials-path: partial$
     root-path: page$
     appendix-caption: Annex
-    appendix-offset: 1
+    # appendix-offset: 1
     asam-terminology: v0.0.1@ASAM_Terminology:ROOT:partial$terms_and_definitions_opendrive.adoc
     topicdir: topics
     reusedir: reuse
