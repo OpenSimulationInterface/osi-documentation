@@ -17,6 +17,7 @@ include::{asciidoc-resources}/modal_verbs.adoc[leveloffset=+1]
 
 This documentation uses the following typographical conventions:
 
+[#tab-typographical-conventions]
 .Typographical conventions
 [%header, cols=2*]
 |===
