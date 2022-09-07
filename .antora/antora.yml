@@ -44,6 +44,7 @@ nav:
 - modules/sensor-model/nav.adoc
 - modules/specification/nav_contribution.adoc
 - modules/gen/doxynav.adoc
+- modules/specification/nav_loft.adoc
 # Add more items here as required.
 # Recommended: One navigation file per document/repository!
 # Recommended: Name your module (folder) as your document type, e.g. "standard" or "concept" or "topic-guidelines"
