@@ -42,8 +42,7 @@
 
 
 [bibliography]
-* Bibliography
-bibliography::[]
+* xref:general_docs/bibliography.adoc[]
 
 [appendix]
 * Release Notes
