@@ -16,6 +16,7 @@ Moreover, this release provides a first glance on the on-going efforts for OSI's
 
 *https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/14?closed=1[Content/Changes]*
 
+//tag::content[]
 Documentation Updates::
 - Updated the documentation's structure and migrated it to AsciiDoc.
 - Updated the description of OSI's top level messages.
@@ -35,3 +36,4 @@ Technical Updates::
 - Extended OSI to include a generic external reference message to enable traceability for data from other standards, including other ASAM OpenX standards.
 - Added support for using OSI with Flatbuffers encoding for OSI messages instead of ProtoBuffers, in preparation for a potential switch of default encoding in a future major release.
 - Extended LaneBoundary message to include additional types, to better align with ASAM OpenDRIVE.
+//end::content[]

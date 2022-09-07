@@ -5,4 +5,4 @@ ifndef::include-only-once[]
 include::{root-path}_config.adoc[]
 endif::[]
 
-include::../appendix/releases/v03.04.adoc[lines=14..50]
+include::../appendix/releases/v03.04.adoc[tag=content]
