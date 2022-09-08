@@ -1,11 +1,9 @@
-
-:reftext: v3.1.2 - OSI "Dynamic Duncan", Update 2
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.2[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v3.1.2 - OSI "Dynamic Duncan", Update 2
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.2[{reftext}]
 
 *https://github.com/OpenSimulationInterface/open-simulation-interface/pulls?q=is%3Apr+is%3Aclosed+milestone%3Av3.1.2[Content/Changes]*
 

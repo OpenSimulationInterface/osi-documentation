@@ -5,8 +5,8 @@
 
 ifndef::root-path[:root-path: ./]
 
-:partials-path: {root-path}../_additional_content
-:asciidoc-resources: {root-path}../asciidoc-resources
+// :asciidoc-resources: {root-path}../asciidoc-resources
+:asciidoc-resources: ../asciidoc-resources
 :appendix-caption: Annex
 
 // ifndef::use-antora-rules,include-only-once[]
@@ -42,6 +42,7 @@ ifndef::include-only-once[]
 // Please note that this variable has to used in all image includes. Includes here have to use "image::./images..."
 // :images_osi_sensor_model_packaging: ./osi-sensor-model-packaging/doc/images  // example
 :imagesoutdir: ./images/generated_images
+:page-feedbackurl: https://github.com/OpenSimulationInterface/osi-documentation/issues/new
 
 endif::[]
 

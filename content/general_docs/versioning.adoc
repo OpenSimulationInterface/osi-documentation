@@ -1,9 +1,8 @@
-= Versioning and compatibility
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Versioning and compatibility
 
 The version number is defined in `InterfaceVersion::version_number` in `osi_version.proto` as the field's default value.
 

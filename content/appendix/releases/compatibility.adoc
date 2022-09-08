@@ -1,9 +1,8 @@
-= Compatibility
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+= Compatibility
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Et malesuada fames ac turpis egestas.

@@ -1,9 +1,8 @@
-= Getting started with contributing
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Getting started with contributing
 
 Before you start, familiarize yourself with {THIS_STANDARD} and how to contribute by reading this documentation and the reference documentation of {THIS_STANDARD}.
 

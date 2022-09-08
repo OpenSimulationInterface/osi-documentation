@@ -1,11 +1,9 @@
-
-:reftext: v2.2.1 - OSI "Brave Brabham", Update 1
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.2.1[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v2.2.1 - OSI "Brave Brabham", Update 1
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.2.1[{reftext}]
 
 *Purpose*
 

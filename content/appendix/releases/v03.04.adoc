@@ -1,11 +1,9 @@
-
-:reftext: v3.4.0 - OSI "Gallant Glock"
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.4.0[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v3.4.0 - OSI "Gallant Glock"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.4.0[{reftext}]
 
 Stay p(OSI)tive!
 

@@ -1,10 +1,9 @@
-[#top-interface_conventions]
-= Interface conventions
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-interface_conventions]
+= Interface conventions
 
 OSI messages, enums, field messages, and field enums shall comply with OSI interface conventions.
 These conventions ensure that message definitions and the corresponding classes are consistently named and easy to read.

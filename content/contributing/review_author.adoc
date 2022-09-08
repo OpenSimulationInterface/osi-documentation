@@ -1,9 +1,8 @@
-= Review guidelines for authors
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Review guidelines for authors
 
 Code review enhances the quality of the code and reduces the likelihood of introducing new bugs in the code base.
 Reviewing code is a technical discussion, not an exam.

@@ -1,9 +1,8 @@
-= Relationships with other standards
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Relationships with other standards
 
 == Positioning of {THIS_STANDARD} within ASAM activities
 

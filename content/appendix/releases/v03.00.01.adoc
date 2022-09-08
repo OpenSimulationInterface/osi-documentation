@@ -1,11 +1,9 @@
-
-:reftext: v3.0.1 - OSI "Cosmic Coulthard", Update 1
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.0.1[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v3.0.1 - OSI "Cosmic Coulthard", Update 1
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.0.1[{reftext}]
 
 https://www.youtube.com/watch?v=yG0oBPtyNb0[Summertime :)]
 

@@ -1,11 +1,9 @@
-
-:reftext: v3.1.0 - OSI "Dynamic Duncan"
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.0[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v3.1.0 - OSI "Dynamic Duncan"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.0[{reftext}]
 
 https://www.youtube.com/watch?v=fu3uA8K6ApQ>[(O SI)lent night]
 

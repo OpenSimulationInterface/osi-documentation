@@ -1,10 +1,9 @@
-[#top-guidelines_for_creating_literary_references]
-= Guidelines for creating literary references
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-guidelines_for_creating_literary_references]
+= Guidelines for creating literary references
 
 When citing literature in the reference documentation, adhere to the following guidelines:
 

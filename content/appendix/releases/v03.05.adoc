@@ -1,11 +1,9 @@
-
-:reftext: v3.5.0 - OSI "Hard-fighting Hunt"
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v3.5.0 - OSI "Hard-fighting Hunt"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[{reftext}]
 
 L(OSI)ng is not an option!
 

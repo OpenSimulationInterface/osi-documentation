@@ -1,9 +1,8 @@
-= Forking for non-member contributors
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Forking for non-member contributors
 
 External contributors must fork the OSI repositories and contribute their changes via a pull request.
 

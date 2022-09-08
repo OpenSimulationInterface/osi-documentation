@@ -1,10 +1,10 @@
-[#top-normative_and_non_normative_statements]
-= Normative and non-normative statements
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-normative_and_non_normative_statements]
+= Normative and non-normative statements
+
 
 This specification uses a standard information structure.
 The following rules apply regarding normativity of the different sections:

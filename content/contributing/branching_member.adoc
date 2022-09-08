@@ -1,9 +1,8 @@
-= Branching workflow for member contributors
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Branching workflow for member contributors
 
 Members of the OSI project can contribute to the ASAM OSI repositories directly.
 

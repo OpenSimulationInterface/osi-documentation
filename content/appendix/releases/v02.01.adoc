@@ -1,11 +1,9 @@
-
-:reftext: v2.1.0 - OSI "Agile Andretti"
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.1.0[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v2.1.0 - OSI "Agile Andretti"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.1.0[{reftext}]
 
 *Purpose*
 

@@ -1,9 +1,8 @@
-= Review guidelines for reviewers
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Review guidelines for reviewers
 
 Code reviews can be challenging at times.
 Follow these suggestions when reviewing code to avoid common pitfalls:

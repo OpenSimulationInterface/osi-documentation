@@ -1,10 +1,9 @@
-[#top-developer_certificate_of_origin_dco]
-= Developer Certificate of Origin (DCO)
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-developer_certificate_of_origin_dco]
+= Developer Certificate of Origin (DCO)
 
 To make a good-faith effort to ensure licensing criteria are met, the Developer-Certificate-of-Origin (DCO) process shall be followed.
 

@@ -1,10 +1,9 @@
-[#top-signing_off_commits]
-= Signing off commits
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-signing_off_commits]
+= Signing off commits
 
 Contributing to OSI projects, it is necessary to agree to the Developer Certificate of Origin (DCO).
 Contributors agree to the DCO by adding a ``Signed-off-by`` statement to the commit message.

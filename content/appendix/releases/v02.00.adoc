@@ -1,11 +1,9 @@
-
-:reftext: v2.0.0 - OSI Initial Commit
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.0.0[{reftext}]
-
 ifndef::include-only-once[]
-:root-path: ../
+:root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+:reftext: v2.0.0 - OSI Initial Commit
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.0.0[{reftext}]
 
 This is the initial version of the Open Simulation Interface (OSI).
 

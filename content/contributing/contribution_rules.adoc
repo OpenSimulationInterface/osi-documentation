@@ -1,10 +1,9 @@
-[#top-guidelines_for_contributions]
-= Guidelines for contributions
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+[#top-guidelines_for_contributions]
+= Guidelines for contributions
 
 Commit guidelines exist to ensure the transparency and intelligibility of the commit history.
 {THIS_STANDARD} enforces the following commit guidelines:

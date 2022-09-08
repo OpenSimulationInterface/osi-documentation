@@ -1,9 +1,8 @@
-= Deliverables
-
 ifndef::include-only-once[]
 :root-path: ../
 include::{root-path}_config.adoc[]
 endif::[]
+= Deliverables
 
 The following deliverables are provided for {THIS_STANDARD}:
 
