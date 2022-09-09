@@ -2,8 +2,13 @@ ifndef::include-only-once[]
 :root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+ifdef::use-antora-rules[]
 :reftext: v3.2.0 - OSI "Editorial Eaton"
 = https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.2.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.2.0[v3.2.0 - OSI "Editorial Eaton"]
+endif::[]
 
 https://www.youtube.com/watch?v=SJUhlRoBL8M[Think p(OSI)tive!]
 

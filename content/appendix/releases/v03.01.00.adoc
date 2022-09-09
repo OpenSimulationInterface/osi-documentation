@@ -2,8 +2,13 @@ ifndef::include-only-once[]
 :root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+ifdef::use-antora-rules[]
 :reftext: v3.1.0 - OSI "Dynamic Duncan"
 = https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.1.0[v3.1.0 - OSI "Dynamic Duncan"]
+endif::[]
 
 https://www.youtube.com/watch?v=fu3uA8K6ApQ>[(O SI)lent night]
 

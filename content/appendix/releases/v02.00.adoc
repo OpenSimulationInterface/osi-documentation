@@ -2,8 +2,13 @@ ifndef::include-only-once[]
 :root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+ifdef::use-antora-rules[]
 :reftext: v2.0.0 - OSI Initial Commit
 = https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.0.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v2.0.0[v2.0.0 - OSI Initial Commit]
+endif::[]
 
 This is the initial version of the Open Simulation Interface (OSI).
 

@@ -2,8 +2,13 @@ ifndef::include-only-once[]
 :root-path: ../../
 include::{root-path}_config.adoc[]
 endif::[]
+ifdef::use-antora-rules[]
 :reftext: v3.5.0 - OSI "Hard-fighting Hunt"
 = https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[v3.5.0 - OSI "Hard-fighting Hunt"]
+endif::[]
 
 L(OSI)ng is not an option!
 
