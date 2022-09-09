@@ -1,4 +1,4 @@
-:root-path: ./
+:root-path: 
 include::{root-path}_config.adoc[]
 = {THIS_STANDARD} (Open Simulation Interface)
 
@@ -10,6 +10,7 @@ Any use is limited to the scope described in the https://www.asam.net/license[li
 ====
 
 ifndef::use-antora-rules[]
+:asciidoc-resources: ../{asciidoc-resources}
 <<<
 toc::[]
 
