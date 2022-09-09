@@ -53,18 +53,18 @@ jobs:
     # replaces the placeholder for versioning in the main mapping file
     - name: Apply versioning to Adoc
       run: |
-        grep ":revnumber:" _config.adoc
-        sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" _config.adoc
-        grep ":revnumber:" _config.adoc
+        grep ":revnumber:" content/_config.adoc
+        sed -i -e "s/--localbuild--/main (${{ steps.get_version.outputs.VERSION }})/" content/_config.adoc
+        grep ":revnumber:" content/_config.adoc
 
     - name: Remove docdate for online hosted document
-      run: sed 's/^:revdate:.*/:!revdate:/' _config.adoc
+      run: sed 's/^:revdate:.*/:!revdate:/' content/_config.adoc
 
     # run Asciidoctor
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
-        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 content/index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
     # Upload artifact.
     - name: Upload HTML Artifact
