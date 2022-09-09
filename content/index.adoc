@@ -42,9 +42,9 @@ include::./general_standard/relations_to_other_standards.adoc[leveloffset=+2]
 
 // START: including the documentation of other osi repositories
 
-include::./open-simulation-interface/doc/open-simulation-interface_user_guide.adoc[leveloffset=+1]
+include::../open-simulation-interface/doc/open-simulation-interface_user_guide.adoc[leveloffset=+1]
 
-include::./osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
+include::../osi-sensor-model-packaging/doc/osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
 
 // osi-validation and osi-visualizer are considered supplementary tooling that is not normative. They are therefore not part of the ASAM standard release.
 // include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
@@ -108,12 +108,18 @@ bibliography::[]
 == Release Notes
 :sectnums!:
 
+include::./appendix/releases/v03.05.adoc[leveloffset=+2]
 include::./appendix/releases/v03.04.adoc[leveloffset=+2]
-include::./appendix/releases/v03.03.adoc[leveloffset=+2]
+include::./appendix/releases/v03.03.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.03.00.adoc[leveloffset=+2]
 include::./appendix/releases/v03.02.adoc[leveloffset=+2]
-include::./appendix/releases/v03.01.adoc[leveloffset=+2]
-include::./appendix/releases/v03.00.adoc[leveloffset=+2]
-include::./appendix/releases/v02.02.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.02.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.00.adoc[leveloffset=+2]
+include::./appendix/releases/v03.00.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.00.00.adoc[leveloffset=+2]
+include::./appendix/releases/v02.02.01.adoc[leveloffset=+2]
+include::./appendix/releases/v02.02.00.adoc[leveloffset=+2]
 include::./appendix/releases/v02.01.adoc[leveloffset=+2]
 include::./appendix/releases/v02.00.adoc[leveloffset=+2]
 

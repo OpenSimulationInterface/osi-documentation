@@ -5,8 +5,8 @@
 
 ifndef::root-path[:root-path: ./]
 
-// :asciidoc-resources: {root-path}../asciidoc-resources
-:asciidoc-resources: ../asciidoc-resources
+:asciidoc-resources: {root-path}../asciidoc-resources
+// :asciidoc-resources: ../asciidoc-resources
 :appendix-caption: Annex
 
 // ifndef::use-antora-rules,include-only-once[]
