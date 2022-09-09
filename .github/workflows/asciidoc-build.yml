@@ -53,12 +53,12 @@ jobs:
     # replaces the placeholder for versioning in the main mapping file
     - name: Apply versioning to Adoc
       run: |
-        grep ":revnumber:" index.adoc
-        sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" index.adoc
-        grep ":revnumber:" index.adoc
+        grep ":revnumber:" _config.adoc
+        sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" _config.adoc
+        grep ":revnumber:" _config.adoc
 
     - name: Remove docdate for online hosted document
-      run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
+      run: sed 's/^:revdate:.*/:!revdate:/' _config.adoc
 
     # run Asciidoctor
     - name: Build HTML
