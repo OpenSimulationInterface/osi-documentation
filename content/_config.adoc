@@ -32,8 +32,8 @@ ifndef::include-only-once[]
 :reusedir: reuse
 :toclevels: 3
 :xrefstyle: full
-:images_open_simulation_interface: ../open-simulation-interface/doc/images
-// :images_osi-sensor-model-packaging: ../osi-sensor-model-packaging/doc/images
+:images_open_simulation_interface: ../../open-simulation-interface/doc/images
+// :images_osi-sensor-model-packaging: ../../osi-sensor-model-packaging/doc/images
 :doc_open_simulation_interface: ../../open-simulation-interface/doc/
 :doc_osi-sensor-model-packaging: ../../osi-sensor-model-packaging/doc/
 // Since a document spanning multiple repos is rendered here, the pathing regarding images is a bit involved.
