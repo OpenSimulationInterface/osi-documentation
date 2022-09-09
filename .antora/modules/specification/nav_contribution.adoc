@@ -38,6 +38,7 @@
 
 *** xref:contributing/review_reviewer.adoc[]
 
+[glossary]
 * xref:general_docs/glossary.adoc[]
 
 
