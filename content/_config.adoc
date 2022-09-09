@@ -25,6 +25,7 @@ ifndef::include-only-once[]
 :bibtex-file: ./content/general_docs/bibliography.bib
 // Replace PLACEHOLDER with the name of your standard, e.g. OpenDRIVE
 :THIS_STANDARD: {GLO_VAR_STA_ASAM_OSI}
+:THIS_STANDARD_TITLE: {GLO_VAR_STA_ASAM_OSI}
 :asam-terminology: https://code.asam.net/common/asam-terminology/-/raw/main/terms_and_definitions_opendrive.adoc
 :imagesdir: {root-path}_static/images
 :include-only-once: true
