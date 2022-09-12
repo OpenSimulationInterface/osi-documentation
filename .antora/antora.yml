@@ -31,7 +31,7 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
     images_open_simulation_interface: 'interface:'
     doc_open_simulation_interface: 'interface:'
     doc_osi-sensor-model-packaging: 'sensor-model:'
-    # page-download-links: [["opendrive-examples-and-use-cases.zip", "Examples and use cases"],["xsd_schema.zip","XSD schema files"],["ASAM_OpenDRIVE.EAP","Enterprise Architect file"],["example-implementations.zip","Implementation examples"]]
+    page-download-links: [["../../interface/_attachments/proto-files.zip", "Protobuffer files"]]
 
   # END - Mandatory ASAM attributes
   # doxygen_interface_version: "v3.2.0"  # The interface version that needs to be retrieved
