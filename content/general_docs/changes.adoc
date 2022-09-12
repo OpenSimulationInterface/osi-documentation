@@ -1,7 +1,0 @@
-ifndef::include-only-once[]
-:root-path: ../
-include::{root-path}_config.adoc[]
-endif::[]
-= What has changed
-
-include::../appendix/releases/v03.04.adoc[tag=content]

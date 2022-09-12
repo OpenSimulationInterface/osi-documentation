@@ -1,5 +1,0 @@
-calculatedParameter
-enum
-enums
-proj
-params
