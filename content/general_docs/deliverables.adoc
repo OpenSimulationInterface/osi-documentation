@@ -7,8 +7,8 @@ endif::[]
 The following deliverables are provided for {THIS_STANDARD}:
 
 * User guide, that is, this document (partly normative)
-* .proto files (normative)
-* Doxygen reference documentation (not normative)
+* xref:interface:attachment$proto-files.zip[.proto files] (normative)
+* xref:gen:index.adoc[Doxygen reference documentation] (not normative)
 * OSMP packaging (OSMP packaging has its own version number, but is compatible with the version of {THIS_STANDARD}.)
 
 **Related topics**
