@@ -1,0 +1,9 @@
+# Component name (without spaces!). All content repositories with the same component name are merged in Antora.
+name: asamosi
+# CENTRAL DOCUMENT ONLY!!! Display name of the component. Define only once per component!
+title: ASAM OSI
+version:
+  # Update version number accordingly. This is the version for the main branch
+  antora/redirects: V3.3.0
+# CENTRAL DOCUMENT ONLY!!! First page of the component. Define only once per component!
+start_page: ROOT:index.adoc

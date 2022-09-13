@@ -4,6 +4,6 @@ name: asamosi
 title: ASAM OSI
 version:
   # Update version number accordingly. This is the version for the main branch
-  antora/redirects: V2.0.0
+  antora/redirects: V3.4.0
 # CENTRAL DOCUMENT ONLY!!! First page of the component. Define only once per component!
 start_page: ROOT:index.adoc
