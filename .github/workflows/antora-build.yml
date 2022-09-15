@@ -39,13 +39,15 @@ jobs:
       working-directory: generator
       run: |
         sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [HEAD]/" site.yml
+        cat site.yml
         sed -i -E "s/cd repo/cd repo\/generator/" run-build.sh
+        cat run-build.sh
         
     - name: Generate site
       uses: docker://ghcr.io/asam-ev/project-guide-docker:4
       with:
         entrypoint: sh
-        args: repo/generator/run-build.sh
+        args: ls & repo/generator/run-build.sh
     
     - name: Upload artifact
       uses: actions/upload-artifact@v3
