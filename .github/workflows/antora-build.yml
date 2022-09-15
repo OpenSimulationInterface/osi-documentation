@@ -38,16 +38,16 @@ jobs:
     - name: Modify site.yml
       working-directory: generator
       run: |
-        sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [HEAD]/" site.yml
+        sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [${CI_COMMIT_BRANCH}]/" site.yml
         cat site.yml
-        sed -i -E "s/cd repo/cd repo\/generator/" run-build.sh
+        sed -i -E "s/cd repo/cd generator/" run-build.sh
         cat run-build.sh
         
     - name: Generate site
       uses: docker://ghcr.io/asam-ev/project-guide-docker:4
       with:
         entrypoint: sh
-        args: antora --stacktrace --fetch --clean generator/site.yml
+        args: generator/run-build.sh
     
     - name: Upload artifact
       uses: actions/upload-artifact@v3
