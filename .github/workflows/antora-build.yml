@@ -47,7 +47,7 @@ jobs:
       uses: docker://ghcr.io/asam-ev/project-guide-docker:4
       with:
         entrypoint: sh
-        args: ls & repo/generator/run-build.sh
+        args: antora --stacktrace --fetch --clean generator/site.yml
     
     - name: Upload artifact
       uses: actions/upload-artifact@v3
