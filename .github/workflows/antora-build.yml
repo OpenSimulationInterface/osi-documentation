@@ -38,7 +38,8 @@ jobs:
     - name: Modify site.yml
       working-directory: generator
       run: |
-        echo ${CI_COMMIT_BRANCH}
+        echo "${CI_COMMIT_BRANCH}"
+        echo "$CI_COMMIT_BRANCH"
         sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [${CI_COMMIT_BRANCH}] \# osi-documentation/" site.yml
         cat site.yml
         sed -i -E "s/cd repo/cd generator/" run-build.sh
