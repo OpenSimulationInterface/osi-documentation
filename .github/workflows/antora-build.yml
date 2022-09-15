@@ -3,8 +3,8 @@ name: Antora Documentation Build
 on:
   # create: # new branches or tags
   # release: # new releases
-  pull_request:
-    branches: [ main, master ]
+  push:
+    branches-ignore: [ main, master ]
   # push: # on push. This may be removed later
   # schedule: # periodic - needed because some of the content is from the other repos
   #   - cron:  '30 5,20 * * *' # this is pretty often. Only needed during review phase
@@ -38,8 +38,8 @@ jobs:
     - name: Modify site.yml
       working-directory: generator
       run: |
-        echo ${CI_COMMIT_REF_NAME}
-        sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [${CI_COMMIT_REF_NAME}] \# osi-documentation/" site.yml
+        echo ${CI_COMMIT_BRANCH}
+        sed -i -E "s/(branches\:) \[antora\/base-antora-setup\] \# osi-documentation/\1 [${CI_COMMIT_BRANCH}] \# osi-documentation/" site.yml
         cat site.yml
         sed -i -E "s/cd repo/cd generator/" run-build.sh
         cat run-build.sh
