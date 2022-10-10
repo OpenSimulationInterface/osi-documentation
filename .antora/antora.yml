@@ -18,8 +18,10 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
   attributes:
   # START - Mandatory ASAM attributes
     use-antora-rules: true
-    THIS_STANDARD: ASAM OSI<sup>®</sup>
-    THIS_STANDARD_TITLE: 'ASAM OSI^®^'
+    THIS_STANDARD: ASAM OSI<sup>®</sup> # Normal attribute
+    THIS_STANDARD_TITLE: 'ASAM OSI^®^' # Normal attribute
+    # THIS_STANDARD: ASAM OSI # PDF version attribute
+    # THIS_STANDARD_TITLE: 'ASAM OSI' # PDF version attribute
     partials-path: partial$
     root-path: page$
     appendix-caption: Annex
@@ -31,7 +33,7 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
     images_open_simulation_interface: 'interface:'
     doc_open_simulation_interface: 'interface:'
     doc_osi-sensor-model-packaging: 'sensor-model:'
-    page-repository-links: [["https://github.com/OpenSimulationInterface/open-simulation-interface", "Open Simulation Interface"],["https://github.com/OpenSimulationInterface/osi-sensor-model-packaging","Sensor Model Packaging"],["https://github.com/OpenSimulationInterface/osi-validation","OSI Validation"]]
+    page-repository-links: [["https://github.com/OpenSimulationInterface/open-simulation-interface", "Open Simulation Interface"],["https://github.com/OpenSimulationInterface/osi-sensor-model-packaging","OSI Sensor Model Packaging"],["https://github.com/OpenSimulationInterface/osi-validation","OSI Validation"]]
 
   # END - Mandatory ASAM attributes
   # doxygen_interface_version: "v3.2.0"  # The interface version that needs to be retrieved
