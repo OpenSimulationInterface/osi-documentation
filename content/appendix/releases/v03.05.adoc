@@ -1,0 +1,37 @@
+ifndef::include-only-once[]
+:root-path: ../../
+include::{root-path}_config.adoc[]
+endif::[]
+ifdef::use-antora-rules[]
+:reftext: v3.5.0 - OSI "Hard-fighting Hunt"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.5.0[v3.5.0 - OSI "Hard-fighting Hunt"]
+endif::[]
+
+L(OSI)ng is not an option!
+
+This is an official ASAM release of OSI. The standard can also be downloaded on the ASAM website.
+
+*Purpose*
+
+In this minor release, several interface messages have been updated and extended to better ensure consistency within the standard itself and harmonization with other OpenX-Standards like ASAM OpenDRIVE or OpenScenario.
+In this context the extension of GroundTruth by logical lane information - to empower a better traffic participant modelling - was one of the key achievements for this release.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/19?closed=1[Content/Changes]*
+
+- Added logical lane information (including st-representation) for traffic participant usage.
+- Added route message TrafficCommandUpdate to offer a backchannel for (un)executed TrafficCommands.
+- Extended EnvironmentalConditions regarding sun, wind and cloud state.
+- Added dash property to boundary points.
+- Extended HostVehicleData by automated driving function states and operating states.
+- Added friction coefficient to moving object.
+- Improved description of trucks in VehicleClassification.
+- Added Role to VehicleClassification.
+- Concretized LaneBoundary modelling.
+- Removed protobuf version recommendation.
+- CMake: Project usable via FetchContent.
+- Doxygen: Improved output.
+- CI: Moved to current protobuf release.
+- Updated documentation of coordinate systems and their transformations.

@@ -6,4 +6,4 @@ services:
     volumes: 
       - .:/documents
     working_dir: /documents
-    entrypoint: asciidoctor -D . --failure-level WARN -r asciidoctor-bibtex -r asciidoctor-diagram -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_localbuild.html
+    entrypoint: asciidoctor -D . --failure-level WARN -r asciidoctor-bibtex -r asciidoctor-diagram -a mathjax --trace --backend=html5 content/index.adoc -o open-simulation-interface_localbuild.html

@@ -1,0 +1,127 @@
+:root-path: 
+include::{root-path}_config.adoc[]
+= {THIS_STANDARD} (Open Simulation Interface)
+
+[IMPORTANT]
+.Disclaimer
+====
+This document is the copyrighted property of ASAM e.V.
+Any use is limited to the scope described in the https://www.asam.net/license[license terms].
+====
+
+ifndef::use-antora-rules[]
+:asciidoc-resources: ../{asciidoc-resources}
+<<<
+toc::[]
+
+endif::[]
+
+[preface]
+include::./general_docs/foreword.adoc[leveloffset=+1]
+
+
+ifndef::use-antora-rules[]
+
+[foreword]
+include::./general_docs/foreword.adoc[leveloffset=+1]
+
+== Introduction
+
+include::./general_docs/changes.adoc[leveloffset=+2]
+
+include::./general_docs/deliverables.adoc[leveloffset=+2]
+
+include::./general_docs/osi_repos.adoc[leveloffset=+2]
+
+include::./general_docs/statements.adoc[leveloffset=+2]
+
+include::./general_docs/conventions.adoc[leveloffset=+2]
+
+include::./general_docs/versioning.adoc[leveloffset=+2]
+
+include::./general_standard/relations_to_other_standards.adoc[leveloffset=+2]
+
+// START: including the documentation of other osi repositories
+
+include::{doc_open_simulation_interface}open-simulation-interface_user_guide.adoc[leveloffset=+1]
+
+include::{doc_osi-sensor-model-packaging}osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
+
+// osi-validation and osi-visualizer are considered supplementary tooling that is not normative. They are therefore not part of the ASAM standard release.
+// include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
+
+// include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
+
+// proto2cpp is an tooling that is internally used to create the DOXYGEN documentation. It doc shall not the part of the OSI specification.
+// include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
+
+// END: including the documentation of other osi repositories
+
+== Contributing to ASAM OSI
+
+include::./contributing/start_contributing.adoc[leveloffset=+2]
+
+include::./contributing/reporting_issues.adoc[leveloffset=+2]
+
+=== Contributing changes
+
+include::./contributing/licensing.adoc[leveloffset=+3]
+
+include::./contributing/dco.adoc[leveloffset=+3]
+
+include::./contributing/signing_off_commits.adoc[leveloffset=+3]
+
+include::./contributing/writing_commit_messages.adoc[leveloffset=+3]
+
+include::./contributing/contribution_rules.adoc[leveloffset=+3]
+
+include::./contributing/naming_conventions.adoc[leveloffset=+3]
+
+include::./contributing/branching_member.adoc[leveloffset=+3]
+
+include::./contributing/forking_no_member.adoc[leveloffset=+3]
+
+//include::./contributing/contributing_docs.adoc[leveloffset=+3]
+
+include::./contributing/commenting_messages.adoc[leveloffset=+3]
+
+include::./contributing/commenting_fields_enums.adoc[leveloffset=+3]
+
+include::./contributing/creating_references.adoc[leveloffset=+3]
+
+//include::./contributing/creating_images.adoc[leveloffset=+3]
+
+=== Reviewing contributions
+
+include::./contributing/review_author.adoc[leveloffset=+3]
+
+include::./contributing/review_reviewer.adoc[leveloffset=+3]
+
+
+include::./general_docs/glossary.adoc[leveloffset=+1]
+
+
+[bibliography]
+== Bibliography
+bibliography::[]
+
+[appendix]
+== Release Notes
+:sectnums!:
+
+include::./appendix/releases/v03.05.adoc[leveloffset=+2]
+include::./appendix/releases/v03.04.adoc[leveloffset=+2]
+include::./appendix/releases/v03.03.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.03.00.adoc[leveloffset=+2]
+include::./appendix/releases/v03.02.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.02.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.01.00.adoc[leveloffset=+2]
+include::./appendix/releases/v03.00.01.adoc[leveloffset=+2]
+include::./appendix/releases/v03.00.00.adoc[leveloffset=+2]
+include::./appendix/releases/v02.02.01.adoc[leveloffset=+2]
+include::./appendix/releases/v02.02.00.adoc[leveloffset=+2]
+include::./appendix/releases/v02.01.adoc[leveloffset=+2]
+include::./appendix/releases/v02.00.adoc[leveloffset=+2]
+
+endif::[]

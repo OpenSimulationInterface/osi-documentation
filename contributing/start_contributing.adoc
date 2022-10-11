@@ -1,9 +1,0 @@
-= Getting started with contributing
-
-Before you start, familiarize yourself with {THIS_STANDARD} and how to contribute by reading this documentation and the reference documentation of {THIS_STANDARD}.
-
-You should also familiarize yourself with the following topics:
-
-* Google's _Protocol Buffers_
-* _Git_
-* _GitHub_

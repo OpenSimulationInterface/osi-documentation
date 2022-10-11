@@ -1,0 +1,77 @@
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+[#top-guidelines_for_writing_commit_messages]
+= Guidelines for writing commit messages
+
+Apart from a sign-off message, {THIS_STANDARD} requires commit messages to follow a specific format.
+This format enables other people to understand the motivation behind your commits more easily.
+OSI enforces these requirements only for commits to protected branches.
+However, you should always follow these guidelines to help other people understand your commits.
+
+Commit messages shall have the following structure:
+
+----
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+----
+
+Commits can have one of the following types:
+
+fix::
+Change fixes an error.
+These changes usually correspond to a PATCH release.
+
+feat::
+Change introduces a new feature.
+If the change is backward compatible, it corresponds to a MINOR release.
+If the change is not backward compatible, it corresponds to a MAJOR release.
+
+style::
+Change affects only the style, not the meaning of the code.
+Examples include white-space changes or code formatting.
+
+build::
+Change affects the building components.
+Examples include changes to the CI pipeline or the project version.
+
+The scope indicates which part of OSI is affected by the commit.
+With OSI, commits can have one of the following scopes:
+
+code::
+Change affects the OSI code.
+
+inlinedocs::
+Change affects the inline documentation.
+
+docs::
+Change affects the accompanying documentation.
+
+The description gives a concise summary of the change.
+The description shall adhere to the following rules:
+
+- Use imperative mode and present tense to indicate what happens when the change is applied.
+- Do not capitalize the first letter.
+- Do not end the description with a full stop.
+
+The optional body contains information on  the motivation for the change.
+This includes references to GitHub issues by ID.
+GitHub uses these IDs to create links between the issues and the commit history.
+
+The optional footer contains a note if the changes are breaking backwards compatibility.
+This note starts with `BREAKING CHANGES:` followed by a concise description of what this change breaks.
+
+The following example shows a commit message meeting all requirements:
+
+----
+feat(model): Prevent empty StopTriggers
+
+refers to #23
+
+BREAKING CHANGES: StopTrigger can no longer be empty
+Signed-off-by: Max Mustermann <max.mustermann@email.address>
+----

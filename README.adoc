@@ -1,27 +1,39 @@
 = OSI Documentation
 
-This repo hosts the asciidoc-based part of the documentation. 
-It contains generals parts of the content and a CI-pipeline that renders the document and deploys it the the https://opensimulationinterface.github.io/osi-documentation/[gh-pages of this repo].
+This repo hosts the AsciiDoc-based part of the documentation. 
+It contains generals parts of the content and a CI-pipeline that renders the document with Asciidoctor and deploys it to the https://opensimulationinterface.github.io/osi-documentation/[gh-pages of this repo].
+
+// TODO: Update if Asciidoctor is completely dropped!
 
 == ASAM OSI (R) official documentation
 
 See the documentation https://opensimulationinterface.github.io/osi-documentation/[here].
 
 
-== Build Pipeline
-
+== Build pipeline 
+=== Asciidoctor pipeline
 
 image::https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml/badge.svg[link=https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml]
 
+The pipeline collects the documentation from both https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface] and https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging] and integrates it into skeleton of this repo. 
+As with all ASAM Asciidoctor projects, the complete document structure is described in the mapping file https://github.com/OpenSimulationInterface/osi-documentation/blob/master/index.adoc[index.adoc].
 
-The pipeline collects the documentation from both https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface] and https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging] and integrates it into skeleton of this repo. As with all ASAM asciidoc project the complete document structure is described in the mapping file https://github.com/OpenSimulationInterface/osi-documentation/blob/master/index.adoc[index.adoc].
+=== Antora pipeline 
+image::https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml/badge.svg?branch=main[link=https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml]
+
+NOTE: This pipeline runs on https://github.com/OpenSimulationInterface/osi-antora-generator.
 
 
 == How To build and change documentation locally
 
-The following instruction shows how to build the document locally. Take note that the document is build with a version 'localbuild' in the document and filename.
+IMPORTANT: These instructions relate ONLY to the Asciidoctor build. 
+For Antora, check the https://github.com/OpenSimulationInterface/osi-antora-generator[ASAM OSI Antora generator].
 
-The instruction should work on Windows, Linux and MacOS.
+
+The following instructions show how to build the document locally. 
+Take note that the document is built with a version 'localbuild' in the document and filename.
+
+The instruction should work on Windows, Linux, and MacOS.
 
 . *Precondition*: have docker and docker-compose installed.
 +

@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/open-simulation-interface
-        path: open-simulation-interface
+        path: content/open-simulation-interface
         fetch-depth: 0
 
 
@@ -36,7 +36,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: OpenSimulationInterface/osi-sensor-model-packaging
-        path: osi-sensor-model-packaging
+        path: content/osi-sensor-model-packaging
 
     - name: Checkout proto2cpp
       uses: actions/checkout@v2
@@ -47,24 +47,24 @@ jobs:
     # Versioning
     - name: Get versioning
       id: get_version
-      working-directory: open-simulation-interface
+      working-directory: content/open-simulation-interface
       run: echo ::set-output name=VERSION::$(git describe --always)
 
     # replaces the placeholder for versioning in the main mapping file
     - name: Apply versioning to Adoc
       run: |
-        grep ":revnumber:" index.adoc
-        sed -i -e "s/--localbuild--/master (${{ steps.get_version.outputs.VERSION }})/" index.adoc
-        grep ":revnumber:" index.adoc
+        grep ":revnumber:" content/_config.adoc
+        sed -i -e "s/--localbuild--/main (${{ steps.get_version.outputs.VERSION }})/" content/_config.adoc
+        grep ":revnumber:" content/_config.adoc
 
     - name: Remove docdate for online hosted document
-      run: sed 's/^:revdate:.*/:!revdate:/' index.adoc
+      run: sed 's/^:revdate:.*/:!revdate:/' content/_config.adoc
 
     # run Asciidoctor
     - name: Build HTML
       uses: avattathil/asciidoctor-action@master
       with:
-        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
+        program: "asciidoctor -D . --failure-level WARN -r asciidoctor-diagram -r asciidoctor-bibtex -a mathjax --trace --backend=html5 content/index.adoc -o open-simulation-interface_V${{ steps.get_version.outputs.VERSION }}.html"
 
     # Upload artifact.
     - name: Upload HTML Artifact

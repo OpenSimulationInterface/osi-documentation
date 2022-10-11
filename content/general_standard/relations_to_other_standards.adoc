@@ -1,0 +1,22 @@
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+= Relationships with other standards
+
+== Positioning of {THIS_STANDARD} within ASAM activities
+
+{THIS_STANDARD} (Open Simulation Interface) is part of the ASAM simulation standards that focus on simulation data for the automotive environment.
+Next to {THIS_STANDARD}, ASAM provides other standards for the simulation domain, like OpenDRIVE cite:[opendrive], OpenSCENARIO cite:[openscenario] and OpenCRG cite:[opencrg].
+
+OpenDRIVE defines a storage format for the static description of road networks.
+In combination with OpenCRG it is possible to add very detailed road surface descriptions to the road network.
+OpenDRIVE and OpenCRG only contain static content.
+To add dynamic content, OpenSCENARIO is needed.
+Combining all three standards provides a scenario-driven description of traffic simulation that contains static and dynamic content.
+
+== References to other standards
+
+* DIN ISO 8855:2013-11: Road vehicles - Vehicle dynamics and road-holding ability - Vocabulary cite:[iso8855]
+* ISO 23150: Road vehicles — Data communication between sensors and data fusion unit for automated driving functions — Logical interface cite:[iso23150]
+* FMI 2.0: https://svn.modelica.org/fmi/branches/public/specifications/v2.0/FMI_for_ModelExchange_and_CoSimulation_v2.0.pdf[Functional Mock-up Interface for Model Exchange and Co-Simulation] cite:[fmi2.0]

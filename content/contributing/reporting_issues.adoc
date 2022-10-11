@@ -1,0 +1,30 @@
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+[#top-reporting_issues]
+= Reporting issues
+
+Reporting issues is a simple way of contributing to OSI.
+
+**Prerequisites**
+
+* You have a GitHub account.
+
+**Steps**
+
+. Identify the repository that your issue relates to and open the repository on GitHub.
+. Create a new issue.
+. Select the correct issue type:
+  Bug report:: Report an error.
+  Feature request:: Suggest an idea for the project.
+  Question:: Ask a question if you do not understand something or need clarification.
+  Blank issue:: Use this issue type if no other type fits your issue.
+. Fill out the title and description field.
+  Follow the instructions in the template.
+. Add suitable labels.
+. When you are done editing the fields and labels, click **Submit new issue**.
+
+**Related topics**
+
+- <<top-repositories>>

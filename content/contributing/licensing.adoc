@@ -1,0 +1,10 @@
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+= License
+
+OSI uses the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License, v. 2.0].
+All contributions are released under this license.
+
+Before contributing to OSI repositories, read the `LICENSE` file in the corresponding repository.

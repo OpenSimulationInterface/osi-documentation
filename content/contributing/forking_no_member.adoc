@@ -1,0 +1,34 @@
+ifndef::include-only-once[]
+:root-path: ../
+include::{root-path}_config.adoc[]
+endif::[]
+= Forking for non-member contributors
+
+External contributors must fork the OSI repositories and contribute their changes via a pull request.
+
+**Prerequisites**
+
+- You have a GitHub account.
+
+**Steps**
+
+. Create an issue describing the intended change.
+. Fork the corresponding OSI repository on GitHub.
+. Clone the forked repository on your local machine.
+. Create a branch with a meaningful name.
+  Follow the branch-name conventions.
+. Commit and push your changes to the branch.
+  Follow the commit messages guidelines.
+. When your changes are ready for review, create a pull request.
+  If possible, add references to corresponding issues and appropriate labels.
+. Ask reviewers to review your changes.
+. When discussions about the changes are done, add the _ReadyForCCBReview_ label.
+  Pull request with this label will be discussed in the next meeting of the _Change Control Board_.
+. When the Change Control Board approves of the changes, the pull request is labelled as _ReadyToMerge_.
+This label indicates that the changes in the pull request can be merged.
+. Merge the changes into the master branch of the repository.
+
+**Related topics**
+
+- <<top-reporting_issues>>
+- <<top-guidelines_for_contributions>>
