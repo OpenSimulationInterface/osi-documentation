@@ -16,9 +16,10 @@ toc::[]
 
 endif::[]
 
+ifdef::use-antora-rules[]
 [preface]
 include::./general_docs/foreword.adoc[leveloffset=+1]
-
+endif::[]
 
 ifndef::use-antora-rules[]
 
