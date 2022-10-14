@@ -5,6 +5,7 @@ title: ASAM OSI
 version:
   # Update version number accordingly. This is the version for the main branch
   main: 'current'
+  master: 'current'
   v(*)-antora: V$1
   v(*): V$1
   V(*): V$1
@@ -40,6 +41,8 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
   # doxygen_document_date: "01.01.2000"  # The date associated with the document (optional)
     doxygen_module: "gen"               # The module in which the output is stored
     # doxygen_module_path: "gen"          # Path within module
+    doxygen_source_repo: "https://github.com/OpenSimulationInterface/open-simulation-interface.git"
+    # doxygen_source_folder: open-simulation-interface
 
 nav:
 - modules/specification/nav_introduction.adoc
