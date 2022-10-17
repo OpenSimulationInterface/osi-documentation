@@ -1,13 +1,10 @@
 name: Antora Documentation Build
 
 on:
-  # create: # new branches or tags
-  # release: # new releases
   push:
-    branches-ignore: [ main, master ]
-  # push: # on push. This may be removed later
-  # schedule: # periodic - needed because some of the content is from the other repos
-  #   - cron:  '30 5,20 * * *' # this is pretty often. Only needed during review phase
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   trigger_antora:
