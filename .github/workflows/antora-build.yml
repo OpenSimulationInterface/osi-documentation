@@ -1,59 +1,73 @@
 name: Antora Documentation Build
 
 on:
-  # create: # new branches or tags
-  # release: # new releases
   push:
-    branches-ignore: [ main, master ]
-  # push: # on push. This may be removed later
-  # schedule: # periodic - needed because some of the content is from the other repos
-  #   - cron:  '30 5,20 * * *' # this is pretty often. Only needed during review phase
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  antora-build:
-    name: Build
-    runs-on: ubuntu-20.04
+  trigger_antora:
+    name: Trigger antora generator
 
-    services:
-      kroki:
-        image: yuzutech/kroki:0.15.1
-        env:
-          KROKI_MAX_URI_LENGTH: 8000
-          KROKI_BLOCKDIAG_HOST: blockdiag
-          KROKI_MERMAID_HOST: mermaid
-      blockdiag:
-        image: yuzutech/kroki-blockdiag:0.15.1
-      mermaid:
-        image: yuzutech/kroki-mermaid:0.15.1
+    runs-on: Ubuntu-latest
+
+    env:
+      MUP_KEY: ${{ secrets.MACHINE_USER_PAT }}
 
     steps:
-    - name: Checkout generator
-      uses: actions/checkout@master
+    - name: Trigger generator
+      if: ${{ env.MUP_KEY != '' }}
+      uses: peter-evans/repository-dispatch@v2
       with:
+        token: ${{ secrets.MACHINE_USER_PAT }}
+        event-type: antora-build-trigger
         repository: OpenSimulationInterface/osi-antora-generator
-        path: generator
-        submodules: true
-        fetch-depth: 0
+        client-payload: '{"src": "${{ github.repository }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "head_ref": "${{ github.head_ref }}"}'
+  # antora-build:
+  #   name: Build
+  #   runs-on: ubuntu-20.04
 
-    - name: Modify site.yml
-      working-directory: generator
-      run: |
-        echo "$GITHUB_REF_NAME"
-        sed -i -E "s%(branches\:) \[antora\/base-antora-setup\] \# osi-documentation%\1 [$GITHUB_REF_NAME] \# osi-documentation%" site.yml
-        cat site.yml
-        sed -i -E "s/cd repo/cd generator/" run-build.sh
-        cat run-build.sh
+  #   services:
+  #     kroki:
+  #       image: yuzutech/kroki:0.15.1
+  #       env:
+  #         KROKI_MAX_URI_LENGTH: 8000
+  #         KROKI_BLOCKDIAG_HOST: blockdiag
+  #         KROKI_MERMAID_HOST: mermaid
+  #     blockdiag:
+  #       image: yuzutech/kroki-blockdiag:0.15.1
+  #     mermaid:
+  #       image: yuzutech/kroki-mermaid:0.15.1
+
+  #   steps:
+  #   - name: Checkout generator
+  #     uses: actions/checkout@master
+  #     with:
+  #       repository: OpenSimulationInterface/osi-antora-generator
+  #       path: generator
+  #       submodules: true
+  #       fetch-depth: 0
+
+  #   - name: Modify site.yml
+  #     working-directory: generator
+  #     run: |
+  #       echo "$GITHUB_REF_NAME"
+  #       sed -i -E "s%(branches\:) \[antora\/base-antora-setup\] \# osi-documentation%\1 [$GITHUB_REF_NAME] \# osi-documentation%" site.yml
+  #       cat site.yml
+  #       sed -i -E "s/cd repo/cd generator/" run-build.sh
+  #       cat run-build.sh
         
-    - name: Generate site
-      uses: docker://ghcr.io/asam-ev/project-guide-docker:4
-      with:
-        entrypoint: sh
-        args: generator/run-build.sh
+  #   - name: Generate site
+  #     uses: docker://ghcr.io/asam-ev/project-guide-docker:4
+  #     with:
+  #       entrypoint: sh
+  #       args: generator/run-build.sh
     
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with: 
-        name: antora-build
-        path: ./generator/site
+  #   - name: Upload artifact
+  #     uses: actions/upload-artifact@v3
+  #     with: 
+  #       name: antora-build
+  #       path: ./generator/site
 
       
