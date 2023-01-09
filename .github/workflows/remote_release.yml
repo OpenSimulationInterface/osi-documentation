@@ -3,6 +3,10 @@ name: Remote Tagging
 on:
   repository_dispatch:
     types: [update-tag]
+
+permissions:
+  contents: write
+  repository-projects: write
     
 jobs:
   submodule:
@@ -14,12 +18,9 @@ jobs:
         with:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
         
-      - name: Update submodule and push with tag
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git tag ${{ github.event.client_payload.tag }}
-          
+      - name: Create tag
+        run: git tag ${{ github.event.client_payload.tag }}
+        
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         with:
