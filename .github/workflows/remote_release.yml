@@ -6,7 +6,7 @@ on:
     
 jobs:
   submodule:
-    name: Update submodule and create tag
+    name: Create tag
     runs-on: Ubuntu-latest
     steps:
       - name: Checkout
@@ -14,12 +14,8 @@ jobs:
         with:
           path: repo
           fetch-depth: 0 # test if depth in fetch history is required
-      - name: Update submodule and push with tag
+      - name: Update with tag
         run: |
-          git submodule update --recursive --remote
-          git add .
-          git commit -m "git submodule updated"
           git tag ${{ github.event.client_payload.tag }}
           git push --atomic origin master ${{ github.event.client_payload.tag }}
-      
-    
+         
