@@ -41,7 +41,8 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
   # doxygen_document_date: "01.01.2000"  # The date associated with the document (optional)
     doxygen_module: "gen"               # The module in which the output is stored
     # doxygen_module_path: "gen"          # Path within module
-    doxygen_source_repo: "https://github.com/OpenSimulationInterface/open-simulation-interface.git"
+    # doxygen_source_repo: "https://github.com/OpenSimulationInterface/open-simulation-interface.git"
+    doxygen_source_repo: "https://github.com/philipwindecker/open-simulation-interface.git"
     # doxygen_source_folder: open-simulation-interface
 
 nav:
