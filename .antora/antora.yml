@@ -35,6 +35,7 @@ asciidoc: # Sets global AsciiDoc attributes that are applied for every page of t
     doc_open_simulation_interface: 'interface:'
     doc_osi-sensor-model-packaging: 'sensor-model:'
     page-repository-links: [["https://github.com/OpenSimulationInterface/open-simulation-interface", "Open Simulation Interface"],["https://github.com/OpenSimulationInterface/osi-sensor-model-packaging","OSI Sensor Model Packaging"],["https://github.com/OpenSimulationInterface/osi-validation","OSI Validation"]]
+    asamBibliography: 'specification:general_docs/bibliography.bib'
 
   # END - Mandatory ASAM attributes
   # doxygen_interface_version: "v3.2.0"  # The interface version that needs to be retrieved
