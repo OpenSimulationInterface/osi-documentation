@@ -36,7 +36,7 @@ ifndef::include-only-once[]
 // :images_osi-sensor-model-packaging: ../../osi-sensor-model-packaging/doc/images
 :doc_open_simulation_interface: open-simulation-interface/doc/
 :doc_osi-sensor-model-packaging: osi-sensor-model-packaging/doc/
-:images_open_simulation_interface: ../../open-simulation-interface/doc/images
+:images_open_simulation_interface: images
 // Since a document spanning multiple repos is rendered here, the pathing regarding images is a bit involved.
 // We create a variable for every repo that is included. It point to the repo in question.
 // If the subrepo is rendered seperatly, then the variable is set to just "./images" with ifdef.
