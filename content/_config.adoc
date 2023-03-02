@@ -58,6 +58,6 @@ endif::[]
 ifdef::local[]
 :doc_open_simulation_interface: ../../open-simulation-interface/doc/
 :doc_osi-sensor-model-packaging: ../../osi-sensor-model-packaging/doc/
-:images_open_simulation_interface: ./images
+:images_open_simulation_interface: ../images
 :data-uri:
 endif::[]
