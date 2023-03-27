@@ -2,3 +2,4 @@ vpython/
 _build/
 .vscode/
 _templates/
+local_build_tools/*.html
