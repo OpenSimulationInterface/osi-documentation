@@ -1,0 +1,30 @@
+name: Remote Tagging
+
+on:
+  repository_dispatch:
+    types: [update-tag]
+
+permissions:
+  contents: write
+  repository-projects: write
+    
+jobs:
+  submodule:
+    name: Update submodule and create tag
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+        
+      - name: Create tag
+        run: git tag ${{ github.event.client_payload.tag }}
+        
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.MACHINE_USER_PAT }}
+          # Determines if --tags is used
+          tags: true
