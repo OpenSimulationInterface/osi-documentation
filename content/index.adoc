@@ -105,8 +105,7 @@ include::./general_docs/glossary.adoc[leveloffset=+1]
 
 
 [bibliography]
-== Bibliography
-bibliography::[]
+include::./general_docs/bibliography.adoc[leveloffset=+1]
 
 [appendix]
 == Release Notes
