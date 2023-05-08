@@ -804,7 +804,7 @@ th { border-bottom: 1pt solid black; }
 <div id="header">
 <h1>ASAM OSI® (Open Simulation Interface)</h1>
 <div class="details">
-<span id="revnumber">version main (v3.5.0-antora-129-g86b29be8),</span>
+<span id="revnumber">version main (v3.5.0-antora-132-g52710bc1),</span>
 <span id="revdate">2023-05-08</span>
 </div>
 <div id="toc" class="toc2">
@@ -875,7 +875,8 @@ th { border-bottom: 1pt solid black; }
 <ul class="sectlevel4">
 <li><a href="#top-osi_trace_file_formats">2.2.6.1. OSI trace file formats</a></li>
 <li><a href="#_osi_trace_file_naming_conventions">2.2.6.2. OSI trace file naming conventions</a></li>
-<li><a href="#_trace_file_formatting_scripts">2.2.6.3. Trace-file formatting scripts</a></li>
+<li><a href="#top-osi_trace_file_example">2.2.6.3. OSI trace file example</a></li>
+<li><a href="#_trace_file_formatting_scripts">2.2.6.4. Trace-file formatting scripts</a></li>
 </ul>
 </li>
 </ul>
@@ -2134,7 +2135,85 @@ These files may be used for manual checks.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_trace_file_formatting_scripts">2.2.6.3. Trace-file formatting scripts</h5>
+<h5 id="top-osi_trace_file_example">2.2.6.3. OSI trace file example</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># generate_osi_messages.py
+from osi3.osi_sensorview_pb2 import SensorView
+import struct
+
+NANO_INCREMENT = 10000000
+MOVING_OBJECT_LENGTH = 5
+MOVING_OBJECT_WIDTH = 2
+MOVING_OBJECT_HEIGHT = 1
+
+def main():
+    """Initialize SensorView"""
+    f = open("sv_330_361_1000_movingobject.osi", "ab")
+    sensorview = SensorView()
+
+    sv_ground_truth = sensorview.global_ground_truth
+    sv_ground_truth.version.version_major = 3
+    sv_ground_truth.version.version_minor = 5
+    sv_ground_truth.version.version_patch = 0
+
+    sv_ground_truth.timestamp.seconds = 0
+    sv_ground_truth.timestamp.nanos = 0
+
+    moving_object = sv_ground_truth.moving_object.add()
+    moving_object.id.value = 42
+
+    # Generate 1000 OSI messages for a duration of 10 seconds
+    for i in range(1000):
+
+        # Increment the time
+        if sv_ground_truth.timestamp.nanos &gt; 1000000000:
+            sv_ground_truth.timestamp.seconds += 1
+            sv_ground_truth.timestamp.nanos = 0
+        sv_ground_truth.timestamp.nanos += NANO_INCREMENT
+
+        moving_object.vehicle_classification.type = 2
+
+        moving_object.base.dimension.length = MOVING_OBJECT_LENGTH
+        moving_object.base.dimension.width = MOVING_OBJECT_WIDTH
+        moving_object.base.dimension.height = MOVING_OBJECT_HEIGHT
+
+        moving_object.base.position.x += 0.5
+        moving_object.base.position.y = 0.0
+        moving_object.base.position.z = 0.0
+
+        moving_object.base.orientation.roll = 0.0
+        moving_object.base.orientation.pitch = 0.0
+        moving_object.base.orientation.yaw = 0.0
+
+        """Serialize"""
+        bytes_buffer = sensorview.SerializeToString()
+        f.write(struct.pack("&lt;L", len(bytes_buffer)))
+        f.write(bytes_buffer)
+
+    f.close()
+
+if __name__ == "__main__":
+    main()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To run the script execute the following command in the terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">python3 generate_osi_messages.py</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will output an osi file (<code>sv_330_361_1000_movingobject.osi</code>) which can be visualized and played back by the <a href="https://github.com/OpenSimulationInterface/osi-visualizer" target="_blank" rel="noopener">osi-visualizer</a>.</p>
+</div>
+<div class="paragraph">
+<p>See Google&#8217;s documentation for more tutorials on how to use protocol buffers with <a href="https://developers.google.com/protocol-buffers/docs/pythontutorial" target="_blank" rel="noopener">Python</a> or <a href="https://developers.google.com/protocol-buffers/docs/cpptutorial" target="_blank" rel="noopener">C++</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_trace_file_formatting_scripts">2.2.6.4. Trace-file formatting scripts</h5>
 <div class="paragraph">
 <p>The OSI repository contains Python scripts for converting trace files from one format to another.
 The formatting scripts are stored in <code>open-simulation-interface/format/</code></p>
