@@ -41,10 +41,12 @@ message EnvironmentalConditions
 }
 ----
 
-Enum field names shall use _UPPER_SNAKE_CASE_.
-Enum fields shall always be prefixed with the name of the corresponding enum.
-The first enum field should always use the suffix _UNKNOWN_.
-The second enum field should always use the suffix _OTHER_.
+Enum field value names shall use _UPPER_SNAKE_CASE_.
+Enum field value names shall always be prefixed with the name of the corresponding enum.
+
+For enum fields that are concerned with ground truth or sensor data, the first two enum values shall always be defined with the following rules:
+The first enum field value shall always use the suffix _UNKNOWN_.
+The second enum field value shall always use the suffix _OTHER_.
 
 [source,protobuf,linenums]
 ----
@@ -62,3 +64,5 @@ message EnvironmentalConditions
     }
 }
 ----
+
+Other enum fields, especially purely technical fields, can deviate from the rules for the first two field values.
