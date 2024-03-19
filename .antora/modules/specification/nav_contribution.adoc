@@ -34,7 +34,7 @@
 
 ** Test scripts
 
-*** link: https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/doc/architecture/test_scripts.adoc[]
+*** xref:contributing/test_scripts.adoc[]
 
 ** Reviewing contributions
 
