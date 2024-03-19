@@ -32,6 +32,10 @@
 
 // *** xref:contributing/creating_images.adoc[]
 
+** Test scripts
+
+*** link: https://github.com/OpenSimulationInterface/open-simulation-interface/blob/master/doc/architecture/test_scripts.adoc[]
+
 ** Reviewing contributions
 
 *** xref:contributing/review_author.adoc[]
