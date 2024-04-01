@@ -32,6 +32,8 @@
 
 // *** xref:contributing/creating_images.adoc[]
 
+** xref:contributing/test_scripts.adoc[] 
+
 ** Reviewing contributions
 
 *** xref:contributing/review_author.adoc[]
