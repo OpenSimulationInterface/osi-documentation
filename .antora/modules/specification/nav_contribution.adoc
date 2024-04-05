@@ -51,6 +51,12 @@
 * Release Notes
 
 :sectnums!:
+** xref:appendix/releases/v03.07.adoc[]
+:sectnums!:
+** xref:appendix/releases/v03.06.adoc[]
+:sectnums!:
+** xref:appendix/releases/v03.05.adoc[]
+:sectnums!:
 ** xref:appendix/releases/v03.04.adoc[]
 :sectnums!:
 ** xref:appendix/releases/v03.03.01.adoc[]
