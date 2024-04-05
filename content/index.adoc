@@ -112,6 +112,8 @@ bibliography::[]
 == Release Notes
 :sectnums!:
 
+include::./appendix/releases/v03.07.adoc[leveloffset=+2]
+include::./appendix/releases/v03.06.adoc[leveloffset=+2]
 include::./appendix/releases/v03.05.adoc[leveloffset=+2]
 include::./appendix/releases/v03.04.adoc[leveloffset=+2]
 include::./appendix/releases/v03.03.01.adoc[leveloffset=+2]

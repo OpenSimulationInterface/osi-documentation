@@ -1,0 +1,55 @@
+ifndef::include-only-once[]
+:root-path: ../../
+include::{root-path}_config.adoc[]
+endif::[]
+ifdef::use-antora-rules[]
+:reftext: v3.7.0 - OSI "Hard-fighting Hunt"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.7.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.7.0[v3.7.0 - OSI "Jolly Jones"]
+endif::[]
+
+Ambr(OSI)al Features!
+
+*Purpose*
+
+This minor release contains a number of incremental enhancements and improvements:
+
+- Sub-bounding boxes can be provided for ground truth objects to model e.g. concave non-rectangular objects in more realistic ways without resorting to full 3D models.
+- Logical lanes can contain effective speed limit information to avoid the need to process traffic signs for speed selection.
+- Routing information can be transmitted as part of HostVehicleData.
+- Orientation rates can be transmitted as part of pedestrian skeleton information.
+- A virtual detection area can be supplied in SensorData to visualize or indicate the currently active nominal detection area of a sensor.
+- The system time of a source of SensorData can be supplied in addition to the simulation measurement timestamp to aid timing simulation and measurement use cases.
+- An offset has been introduced that is to be added to the cartesian global ground truth coordinate system prior to mapping into a geodetic coordinate system with the proj.4 string. This harmonizes OSI with OpenDRIVE and allows the easier provision of false easting/northing in the coordinate transformation.
+- The set of car types has been reduced to better harmonize with other OpenX standards as part of overall harmonization efforts.
+
+Beyond that, many clarifications, improvements in definitions and documentation, enhanced installation information and enhanced Python support, including provisioning of Python packages on PyPI are key improvements in this release.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/21?closed=1[Content/Changes]*
+
+- Add beam ID to LidarDetection.
+- Update release.yml.
+- Add osi_trafficcommandupdate.proto to CMakeLists.
+- Make CMAKE_CXX_STANDARD overridable (fix #741).
+- Update build workflow for modular protobuf version support.
+- Workflow: Update Python and Actions + Black formatting Python files.
+- feat: New OSI message osi_route.
+- Add orientation rate to PedestrianAttributes::Bone.
+- Define mandatory field with checker rules.
+- Removal of the historical .txt trace file format and related scripts.
+- Fix typos in proto files.
+- Add new message for sub-bounding boxes.
+- Update github actions for release workflow.
+- Add check that all proto files are included in build.
+- feat: Add virtual detection area.
+- Modernize python build setup, protoc dependency.
+- Remove OSC todo comment from source_reference.
+- Fix documentation on FeatureData messages.
+- Feature/proj offset.
+- Add system time to sensor data.
+- Add pyspelling html filter.
+- Deprecate various car types in favor of new alias TYPE_CAR.
+- Fix streaming principle image reference.
+- Logical Traffic Rules and Speed Limit.

@@ -4,4 +4,4 @@ include::{root-path}_config.adoc[]
 endif::[]
 = What has changed
 
-include::../appendix/releases/v03.04.adoc[tag=content]
+include::../appendix/releases/v03.07.adoc[tag=content]
