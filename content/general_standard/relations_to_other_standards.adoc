@@ -19,4 +19,6 @@ Combining all three standards provides a scenario-driven description of traffic 
 
 * DIN ISO 8855:2013-11: Road vehicles - Vehicle dynamics and road-holding ability - Vocabulary cite:[iso8855]
 * ISO 23150: Road vehicles — Data communication between sensors and data fusion unit for automated driving functions — Logical interface cite:[iso23150]
-* FMI 2.0: https://svn.modelica.org/fmi/branches/public/specifications/v2.0/FMI_for_ModelExchange_and_CoSimulation_v2.0.pdf[Functional Mock-up Interface for Model Exchange and Co-Simulation] cite:[fmi2.0]
+* FMI 2.0: https://github.com/modelica/fmi-standard/releases/download/v2.0.4/FMI-Specification-2.0.4.pdf[Functional Mock-up Interface for Model Exchange and Co-Simulation 2.0.4] cite:[fmi2.0]
+* FMI 3.0: https://fmi-standard.org/docs/3.0.1/[Functional Mock-up Interface Specification 3.0.1] cite:[fmi3.0]
+* SSP 1.0: https://ssp-standard.org/publications/SSP101/SystemStructureAndParameterization101.pdf[System Structure and Parameterization 1.0.1] cite:[ssp1.0]
