@@ -3,7 +3,7 @@ ifndef::include-only-once[]
 include::{root-path}_config.adoc[]
 endif::[]
 ifdef::use-antora-rules[]
-:reftext: v3.7.0 - OSI "Hard-fighting Hunt"
+:reftext: v3.7.0 - OSI "Jolly Jones"
 = https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.7.0[{reftext}]
 endif::[]
 ifndef::use-antora-rules[]
