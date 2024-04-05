@@ -14,6 +14,7 @@ Ambr(OSI)al Features!
 
 *Purpose*
 
+//tag::content[]
 This minor release contains a number of incremental enhancements and improvements:
 
 - Sub-bounding boxes can be provided for ground truth objects to model e.g. concave non-rectangular objects in more realistic ways without resorting to full 3D models.
@@ -53,3 +54,4 @@ Beyond that, many clarifications, improvements in definitions and documentation,
 - Deprecate various car types in favor of new alias TYPE_CAR.
 - Fix streaming principle image reference.
 - Logical Traffic Rules and Speed Limit.
+//end::content[]

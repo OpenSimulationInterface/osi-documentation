@@ -14,6 +14,7 @@ Limitless P(OSI)bilities!
 
 *Purpose*
 
+//tag::content[]
 In this minor release, a new streaming update interface message has been added for low-latency applications, as well as a HAD function output interface message.
 
 The additions of detailed pedestrian skeleton information, host vehicle kinematics, lane road name information, an enhanced lane reference line ST definition, enhanced traffic sign variability information, added radial velocity and echo pulse width information in sensor detection data, and pixel_order information for camera sensor view data are further enhancements of this release.
@@ -49,3 +50,4 @@ Beyond that, many clarifications, improvements in definitions and documentation,
 - Added radial_velocity to LidarDetection.
 - Streaming Interface.
 - Add detailed pedestrian description to MovingObject.
+//end::content[]
