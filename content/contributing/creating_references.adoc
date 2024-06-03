@@ -7,6 +7,19 @@ endif::[]
 
 When citing literature in the reference documentation, adhere to the following guidelines:
 
+* All sources shall be primary sources.
+Sources like Wikipedia are not allowed.
+* In the text, sources are cited using `cite:[<Key>]`, with <Key> being the unique key defined in the bibliography.bib.
+* Refer to
+//#TODO add link to latest version when available xref:https://internal.pages.asam.net/asam-editorial-guide/editorial-guide-generator/editorialguide-asciidoc/latest/Editorial_guide.html[
+rule ASM-22 of the ASAM Editorial Guide
+//]
+for detailed guidelines.
+
+//Replaced by ASM-22, see #75
+////
+When citing literature in the reference documentation, adhere to the following guidelines:
+
 * All sources shall be primary sources. Sources like Wikipedia are not allowed.
 * OSI uses _APA style_ references from the American Psychological Association.
 * In the text, sources are cited using numbers in brackets.
@@ -69,3 +82,4 @@ More sample templates are available at https://apastyle.apa.org.
     optional double atmospheric_pressure = 1;
 }
 ----
+////
