@@ -16,6 +16,7 @@ This is an official ASAM release of OSI. The standard can also be downloaded on 
 
 *Purpose*
 
+//tag::content[]
 In this minor release, several interface messages have been updated and extended to better ensure consistency within the standard itself and harmonization with other OpenX-Standards like ASAM OpenDRIVE or OpenScenario.
 In this context the extension of GroundTruth by logical lane information - to empower a better traffic participant modelling - was one of the key achievements for this release.
 
@@ -35,3 +36,4 @@ In this context the extension of GroundTruth by logical lane information - to em
 - Doxygen: Improved output.
 - CI: Moved to current protobuf release.
 - Updated documentation of coordinate systems and their transformations.
+//end::content[]

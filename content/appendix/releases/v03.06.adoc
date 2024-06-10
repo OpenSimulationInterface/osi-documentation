@@ -1,0 +1,53 @@
+ifndef::include-only-once[]
+:root-path: ../../
+include::{root-path}_config.adoc[]
+endif::[]
+ifdef::use-antora-rules[]
+:reftext: v3.6.0 - OSI "Inspiring Irvine"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.6.0[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.6.0[v3.6.0 - OSI "Inspiring Irvine"]
+endif::[]
+
+Limitless P(OSI)bilities!
+
+*Purpose*
+
+//tag::content[]
+In this minor release, a new streaming update interface message has been added for low-latency applications, as well as a HAD function output interface message.
+
+The additions of detailed pedestrian skeleton information, host vehicle kinematics, lane road name information, an enhanced lane reference line ST definition, enhanced traffic sign variability information, added radial velocity and echo pulse width information in sensor detection data, and pixel_order information for camera sensor view data are further enhancements of this release.
+
+Beyond that, many clarifications, improvements in definitions and documentation, enhanced installation information and enhanced/fixed flatbuffer support are key improvements in this release.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/20?closed=1[Content/Changes]*
+
+- Build: Create base Antora setup.
+- Fix path to asciidoc-resources.
+- Added one more missing step.
+- Build/master branch naming.
+- Never trigger antora builds for PRs from forks.
+- Fix traffic sign variability attribute description.
+- Fixing title of Fig. 10 with coordinate systems.
+- Add new traffic sign variability types.
+- Add new enum Type in vehicle classification for stand-up scooters.
+- Adapt ReferenceLine ST definition to avoid transformation ambiguity and discontinuities.
+- Add DAY to TrafficSign-Value-Unit and change DAY to WEEKDAY.
+- Update host vehicle data with kinematics data.
+- Adding the missing field for echo pulse width to logical detections.
+- Logical lanes: add street name.
+- Add sensor-specific data to detected stationary objects.
+- Feature/tp/had output.
+- Build: Create a release pipeline that replaces the manual creation of a deliverable package.
+- (feat SensorModelling) add pixel_order field.
+- Links in README and example moved to docu.
+- Fix sensordata reference frame definitions.
+- Fix documentation on coordinate systems and transformations.
+- Clean README and enhanced install instructions for protobuf in Docu.
+- Move missing vcpkg information to prerequisites.
+- Fix flatbuffer builds for upcoming release.
+- Added radial_velocity to LidarDetection.
+- Streaming Interface.
+- Add detailed pedestrian description to MovingObject.
+//end::content[]

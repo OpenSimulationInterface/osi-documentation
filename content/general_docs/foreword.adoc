@@ -8,7 +8,7 @@ The {THIS_STANDARD} (Open Simulation Interface) is a specification for interface
 OSI is strongly focused on the environmental perception of automated driving functions.
 
 The complexity of automated driving functions is rapidly increasing, which means the requirements for testing and development methods are growing too.
-Testing in virtual environments makes it possible to control and reproduce environment conditions.
+Testing in virtual environments makes it possible to control and reproduce environmental conditions.
 
 To enable the widespread use of driving simulators for developers of functions, generic and standardized interfaces are needed for the  connection between the function-development framework and the simulation environment.
 OSI permits easy and straight-forward compatibility between automated driving functions and the variety of driving-simulation frameworks that are available.
