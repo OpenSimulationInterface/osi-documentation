@@ -1,22 +1,24 @@
 = OSI Documentation
 
 This repo hosts the AsciiDoc-based part of the documentation. 
-It contains generals parts of the content and a CI-pipeline that renders the document with Asciidoctor and deploys it to the https://opensimulationinterface.github.io/osi-documentation/[gh-pages of this repo].
+It contains generals parts of the content and a CI-pipeline that renders the document with Antora.
 
 // TODO: Update if Asciidoctor is completely dropped!
 
 == ASAM OSI (R) official documentation
 
-See the documentation https://opensimulationinterface.github.io/osi-documentation/[here].
+See the documentation https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/specification/index.html[here].
 
 
 == Build pipeline 
-=== Asciidoctor pipeline
+// === Asciidoctor pipeline
 
-image::https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml/badge.svg[link=https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml]
+// The Asciidoctor pipline is no longer active, see Antora pipeline.
 
-The pipeline collects the documentation from both https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface] and https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging] and integrates it into skeleton of this repo. 
-As with all ASAM Asciidoctor projects, the complete document structure is described in the mapping file https://github.com/OpenSimulationInterface/osi-documentation/blob/master/index.adoc[index.adoc].
+// image::https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml/badge.svg[link=https://github.com/OpenSimulationInterface/osi-documentation/actions/workflows/asciidoc-build.yml]
+
+// The pipeline collects the documentation from both https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface] and https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging] and integrates it into skeleton of this repo. 
+// As with all ASAM Asciidoctor projects, the complete document structure is described in the mapping file https://github.com/OpenSimulationInterface/osi-documentation/blob/master/index.adoc[index.adoc].
 
 === Antora pipeline 
 image::https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml/badge.svg?branch=main[link=https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml]
