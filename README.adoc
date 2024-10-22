@@ -1,6 +1,6 @@
 = OSI Documentation
 
-This repo contains most of the AsciiDoc-based part of the documentation.
+This repo contains most of the general AsciiDoc-based part of the documentation.
 It contains generals parts of the content and a CI-pipeline that renders the document with Antora.
 
 NOTE: The actual hosting has been moved to the generator repository (see link below).
