@@ -11,10 +11,14 @@ OSI and its supporting tools are developed publicly on GitHub.
 The source code and documentation for OSI and OSI-related tools are spread over several repositories:
 
 https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface]::
-Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts. Hosts the .proto files as well as the https://opensimulationinterface.github.io/open-simulation-interface/[Doxygen reference documentation].
+Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.
+Hosts the .proto files.
 
-https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the OSI user guide sources and hosts the https://opensimulationinterface.github.io/osi-documentation/[{THIS_STANDARD} user guide].
+https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the OSI user guide sources.
 
 https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
 https://github.com/OpenSimulationInterface/proto2cpp[proto2cpp]:: Doxygen filter for creating the reference documentation from OSI .proto files.
+
+https://github.com/OpenSimulationInterface/osi-antora-generator[osi-antora-generator]:: Contains the Antora generator and the relevant pipeline.
+This repository is responsible for both building and hosting the https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/specification/index.html/[{THIS_STANDARD} Specification^] as well as the https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/gen/index.html[{THIS_STANDARD} Reference Documentation^].
