@@ -18,4 +18,4 @@ Add @mentions of the person or team responsible for reviewing proposed changes.
 - [ ] I have performed a self-review of my own code/documentation.
 - [ ] My documentation changes are related to another repository in the organization. Here is the link to the issue/repo.
 - [ ] My changes generate no new warnings during the documentation generation.
-- [ ] The existing travis ci which pushes the documentation to gh-pages passes with my changes.
+- [ ] The Antora pipeline which pushes the documentation to gh-pages on the downstream repository passes with my changes.
