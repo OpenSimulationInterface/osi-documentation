@@ -14,7 +14,7 @@ https://github.com/OpenSimulationInterface/open-simulation-interface[open-simula
 Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.
 Hosts the .proto files.
 
-https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the OSI user guide sources.
+https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the AsciiDoc files used to compile the general chapters of the OSI documentation.
 
 https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
