@@ -10,15 +10,39 @@ OSI and its supporting tools are developed publicly on GitHub.
 
 The source code and documentation for OSI and OSI-related tools are spread over several repositories:
 
+
+== Interface and Specifications
+
 https://github.com/OpenSimulationInterface/open-simulation-interface[open-simulation-interface]::
-Main repository containing the interface description based on Google's Protocol Buffers, including helper scripts and test scripts.
-Hosts the .proto files.
+Main repository containing the interface description based on Google's Protocol Buffers. Hosts the .proto files.
 
-https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: Source for the AsciiDoc files used to compile the general chapters of the OSI documentation.
+https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: 
+Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
-https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[osi-sensor-model-packaging]:: Packaging specification for OSI models used in FMI 2.0 cite:[fmi2.0] simulation environments, including examples.
 
-https://github.com/OpenSimulationInterface/proto2cpp[proto2cpp]:: Doxygen filter for creating the reference documentation from OSI .proto files.
+== Language Bindings
 
-https://github.com/OpenSimulationInterface/osi-antora-generator[osi-antora-generator]:: Contains the Antora generator and the relevant pipeline.
+https://github.com/OpenSimulationInterface/osi-cpp[osi-cpp]::
+C\++ bindings for OSI. Provides generated C++ classes for working with OSI data structures defined in the `.proto` files.
+
+https://github.com/OpenSimulationInterface/osi-python[osi-python]::
+Python bindings for OSI. Provides generated Python classes as well as utility modules for reading OSI trace files.
+
+
+== Tools and Utilities
+
+https://github.com/OpenSimulationInterface/qc-osi-trace[qc-osi-trace]:: 
+A OSI trace files quality checker as part of the https://github.com/asam-ev/qc-framework[ASAM Quality Checker] project.
+
+
+== Documentation and Generation Infrastructure
+
+https://github.com/OpenSimulationInterface/osi-documentation[osi-documentation]:: 
+Source for the AsciiDoc files used to compile the general chapters of the OSI documentation.
+
+https://github.com/OpenSimulationInterface/proto2cpp[proto2cpp]:: 
+Doxygen filter for creating the reference documentation from OSI .proto files.
+
+https://github.com/OpenSimulationInterface/osi-antora-generator[osi-antora-generator]:: 
+Contains the Antora generator and the relevant pipeline.
 This repository is responsible for both building and hosting the https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/specification/index.html/[{THIS_STANDARD} Specification^] as well as the https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/gen/index.html[{THIS_STANDARD} Reference Documentation^].

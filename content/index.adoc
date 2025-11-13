@@ -50,13 +50,6 @@ include::{doc_open_simulation_interface}open-simulation-interface_user_guide.ado
 include::{doc_osi-sensor-model-packaging}osi-sensor-model-packaging_spec.adoc[leveloffset=+1]
 
 :imagesdir: ./images
-// osi-validation and osi-visualizer are considered supplementary tooling that is not normative. They are therefore not part of the ASAM standard release.
-// include::./osi-validation/doc/osi-validator_user_guide.adoc[leveloffset=+1,opts=optional]
-
-// include::./osi-visualizer/doc/osi-visualizer_user_guide.adoc[leveloffset=+1,opts=optional]
-
-// proto2cpp is an tooling that is internally used to create the DOXYGEN documentation. It doc shall not the part of the OSI specification.
-// include::./proto2cpp/doc/proto2ccp_user_guide.adoc[leveloffset=+1]
 
 // END: including the documentation of other osi repositories
 
