@@ -1,0 +1,62 @@
+ifndef::include-only-once[]
+:root-path: ../../
+include::{root-path}_config.adoc[]
+endif::[]
+ifdef::use-antora-rules[]
+:reftext: v3.8.0 - OSI "Krisp Kobayashi"
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-prerc1[{reftext}]
+endif::[]
+ifndef::use-antora-rules[]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-prerc1[v3.8.0 - OSI "Krisp Kobayashi"]
+endif::[]
+
+Pole P(OSI)tion!
+
+*Purpose*
+
+//tag::content[]
+
+## Pole P(OSI)tion!
+
+This is a release candidate of OSI, not an official release. If no final changes are needed, it might be promoted to an official release upon confirmation by the ASAM TSC.
+
+## Purpose
+
+This minor release contains a number of incremental enhancements and improvements:
+
+- The core OSI protobuf definitions and the language-specific bindings and modules have been split out to separate repositories, allowing easier maintenance and evolution of language-specific features.
+- New multi-channel trace file format based on MCAP for easier data storage and interchange
+- Adopted the ASAM OpenX harmonized vehicle types
+- Added tail light to vehicle classification/light state
+- Added model_reference attribute to RoadMarking
+- Added road type to logical lanes
+- Improved python bindings via pyi_out option of protoc
+- Various improvements to OSI rule definitions for new qc-osi-trace checker bundle
+- Improved specification of BaseMoving reference system
+- Added documentation of Tait-Bryan convention and quaternion formula
+
+Beyond that, many clarifications, improvements in definitions and documentation, enhanced installation information and enhanced Python support, including provisioning of Python packages on PyPI are key improvements in this release.
+
+*https://github.com/OpenSimulationInterface/open-simulation-interface/milestone/23?closed=1[Content/Changes]*
+
+- Consolidate hosted osi documentation sources
+- Added missing pages and linked them in navigation
+- Fix open_simulation_interface-config.cmake.in
+- Add tail light to vehicle classification/light state
+- Add pyi_out option to protoc command in the setup.py
+- Initial multi channel trace file format specification
+- Add Tait-Bryan convention and quaternion formula to documentation
+- Add bibliography reference for MCAP
+- Adapt vehicle types from openx harmonization
+- Fix incorrect reference system documentation for detected objects in BaseMoving
+- Fix multiple rule bugs
+- Fix orientation3d formatting bug
+- Add new allowable rules minimum/maximum_length
+- Fix detection object reference rule
+- Update refers_to rule regex
+- Clarify protobuf version descriptions in documentation
+- Repository Split
+- Add model_reference attribute to RoadMarking
+- explain c++ and python repo split in documentation
+- Logical lanes: add road type
+//end::content[]
