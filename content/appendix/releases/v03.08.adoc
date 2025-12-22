@@ -4,10 +4,10 @@ include::{root-path}_config.adoc[]
 endif::[]
 ifdef::use-antora-rules[]
 :reftext: v3.8.0 - OSI "Krisp Kobayashi"
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-prerc1[{reftext}]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-rc1[{reftext}]
 endif::[]
 ifndef::use-antora-rules[]
-= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-prerc1[v3.8.0 - OSI "Krisp Kobayashi"]
+= https://github.com/OpenSimulationInterface/open-simulation-interface/releases/tag/v3.8.0-rc1[v3.8.0 - OSI "Krisp Kobayashi"]
 endif::[]
 
 Pole P(OSI)tion!
