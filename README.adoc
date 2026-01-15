@@ -12,7 +12,7 @@ See the documentation https://opensimulationinterface.github.io/osi-antora-gener
 == License
 
 The documentation was originally licensed under the link:LICENSE-CC-BY-3.0[CC-BY-3.0] license.
-Starting with OSI version 3.8.0, it is additionally dual-licensed under the link:LICENSE-MPL-2.0[MPL-2.0] license to ensure harmonization.
+Starting with OSI version 3.8.0, it is additionally dual-licensed under the link:LICENSE[MPL-2.0] license used by all other parts of OSI to ensure harmonization.
 With the release of the major version OSI 4.0.0, the CC BY 3.0 license will be discontinued and removed.
 
 == Antora build pipeline
