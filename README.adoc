@@ -9,6 +9,11 @@ NOTE: The actual hosting has been moved to the generator repository (see link be
 
 See the documentation https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/specification/index.html[here].
 
+== License
+
+The documentation was originally licensed under the link:LICENSE-CC-BY-3.0[CC-BY-3.0] license.
+Starting with OSI version 3.8.0, it is additionally dual-licensed under the link:LICENSE[MPL-2.0] license used by all other parts of OSI to ensure harmonization.
+With the release of the major version OSI 4.0.0, the CC BY 3.0 license will be discontinued and removed.
 
 == Antora build pipeline
 image::https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml/badge.svg?branch=main[link=https://github.com/OpenSimulationInterface/osi-antora-generator/actions/workflows/site-build.yml]

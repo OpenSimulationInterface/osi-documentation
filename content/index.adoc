@@ -6,8 +6,7 @@ include::{root-path}_config.adoc[]
 .Disclaimer
 ====
 This document is the copyrighted property of its respective copyright holders.
-Any use is limited to the scope described in the respective license terms: https://raw.githubusercontent.com/OpenSimulationInterface/open-simulation-interface/refs/heads/master/LICENSE[OSI LICENSE] and https://raw.githubusercontent.com/OpenSimulationInterface/osi-documentation/refs/heads/master/LICENSE[OSI Documentation LICENSE]
-Note that the set of licenses this release will be published under for the official release is still under discussion.
+Any use is limited to the scope described in the governing license terms: xref:../LICENSE[OSI LICENSE].
 ====
 
 ifndef::use-antora-rules[]
